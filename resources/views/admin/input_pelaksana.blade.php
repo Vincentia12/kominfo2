@@ -407,52 +407,6 @@
                             </div>
                         </div>
                     </table>
-                    {{-- <form method="POST" action="{{ url('pelaksana/update', $pl->id) }}"> --}}
-                    {{-- <form method="POST" action="">
-                        @csrf
-                        {{-- @method('PUT') --}}
-                        {{-- <div class="mb-4">
-                            <label for="message-text" class="col-form-label">Nama CV Pelaksana</label>
-                            <input type="text" class="form-control" id="pt_pelaksana" name="pt_pelaksana" value="{{ $plk->pt_pelaksana }}" placeholder="CV Pelaksana">
-                            <small class="text-danger">{{ $errors->first('pt_pelaksana') }}</small>
-                        </div>
-                        <div class="mb-4">
-                            <label for="message-text" class="col-form-label">Alamat</label>
-                            <input type="text" class="form-control" id="alamat" name="alamat" value="{{ $plk->alamat }}" placeholder="Alamat">
-                            <small class="text-danger">{{ $errors->first('alamat') }}</small>
-                        </div>
-                        <div class="mb-4">
-                            <label for="message-text" class="col-form-label">Nama Penanggung Jawab Pelaksana</label>
-                            <input type="text" class="form-control" id="nama_pelaksana" name="nama_pelaksana" value="{{ $plk->nama_pelaksana }}" placeholder="Nama Pelaksana">
-                            <small class="text-danger">{{ $errors->first('nama_pelaksana') }}</small>
-                        </div>
-                        <div class="mb-4">
-                            <label for="message-text" class="col-form-label">Jabatan Penanggung Jawab Pelaksana</label>
-                            <input type="text" class="form-control" id="jabatan_pelaksana" name="jabatan_pelaksana" value="{{ $plk->jabatan_pelaksana }}" placeholder="Jabatan Pelaksana">
-                            <small class="text-danger">{{ $errors->first('jabatan_pelaksana') }}</small>
-                        </div>
-                        <div class="mb-4">
-                            <label for="message-text" class="col-form-label">Kode Rekening</label>
-                            <input type="text" class="form-control" id="kode_rekening" name="kode_rekening" value="{{ $plk->kode_rekening }}" placeholder="Kode Rekening">
-                            <small class="text-danger">{{ $errors->first('kode_rekening') }}</small>
-                        </div>
-                        <div class="mb-4">
-                            <label for="message-text" class="col-form-label">NPWP</label>
-                            <input type="text" class="form-control" id="npwp" name="npwp" value="{{ $plk->npwp }}" placeholder="NPWP">
-                            <small class="text-danger">{{ $errors->first('npwp') }}</small>
-                        </div>
-                        <div class="mb-4">
-                            <label for="message-text" class="col-form-label">Telephone</label>
-                            <input type="text" class="form-control" id="tlp" name="tlp" value="{{ $plk->tlp }}" placeholder="Telephone">
-                            <small class="text-danger">{{ $errors->first('tlp') }}</small>
-                        </div>
-
-
-                        <div class="modal-footer mt-3">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
-                            <button type="submit" class="btn btn-primary ">Simpan <i class="fa fa-save"></i></button>
-                        </div>
-                    </form> --}}
                 </div>
                 <div class="modal-footer mt-3">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>

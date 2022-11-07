@@ -3,14 +3,14 @@
 @section('input-data-collapse', 'collapsed')
 @section('input-sudah', 'active')
 @section('content')
-<!-- @section('judul')
+{{-- <!-- @section('judul')
 {{'Input Data / Belum Tersertifikasi'}}
 @endsection -->
 <!-- @section('title')
 {{'Input Data yang Belum Tersertifikasi'}}
 @endsection -->
 
-<!-- Content Row -->
+<!-- Content Row --> --}}
 
 @if ($errors->any())
 <div class="alert alert-danger">
@@ -23,103 +23,9 @@
 </div>
 @endif
 
-<!-- <div class="col-12 grid-margin stretch-card">
-  <div class="card shadow">
-    <div class="card-body">
-      <h4 class="card-title">Data Masukan Pengadaan</h4>
-
-      <div class="row ">
-        <div class="col-md-8 mb-4">
-          <div class="justify-content-between ">
-            <h2 class="col-10">Data Masukan Pengadaan</h2>
-          </div>
-        </div>
-        <div class="col-md-4 mb-4">
-          <div class="text-right ">
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalPengadaan">
-              Tambah Data Pengadaan
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <form action="postpengadaan" method="POST">
-        @csrf
-        {{-- <div class="row"> --}}
-        <table class="" style="margin:20px auto;" id="dataTable" width="100%" cellspacing="0">
-          {{-- <div class="col-md-12"> --}}
-          {{-- <div class="form-group row"> --}}
-          <div class="col-xs-12 col-sm-12 col-md-12">
-
-            <label for="exampleInputName1" class="col-sm-9 col-form-label">Pelaksana/Nama Perusahaan</label>
-            <div class="col-sm-12">
-              {{-- <select class="form-control" name="pelaksana_id" > --}}
-              <select class="form-control select2-multiple" name="pelaksana_id">
-                <option> Pilih PT </option>
-                @foreach ($pelaksana as $get)
-                {{-- <option > {{$get->pt_pelaksana}}</option> --}}
-                <option value="{{$get->id}}">{{ $get->pt_pelaksana }} </option>
-                @endforeach
-              </select>
-            </div>
-
-            {{-- <div class="col-sm-9">
-                <label class="col-sm-3 col-form-label">Tanggal Pelaksanaan</label>
-                <input class="form-control" type="date" name="" placeholder="dd/mm/yyyy" />
-              </div> --}}
-            <label for="exampleTextarea1" class="col-sm-9 col-form-label">Jenis Pengadaan</label>
-            <div class="col-sm-12">
-              <input type="text" class="form-control" name="jenis_pengadaan" placeholder="Pengadaan .....">
-            </div>
-
-            <label for="exampleTextarea1" class="col-sm-9 col-form-label">Biaya HPS (Harga Perkiraan Sendiri)</label>
-            <div class="col-sm-12">
-              <input type="text" class="form-control" name="total_hps" placeholder="10000000">
-            </div>
-
-            <label for="exampleTextarea1" class="col-sm-9 col-form-label">Deskripsi HPS (Harga Perkiraan Sendiri)</label>
-            <div class="col-sm-12">
-              <input type="text" class="form-control" name="deskripsi_hps" placeholder="Sepuluh Juta Rupiah">
-            </div>
-
-            <label for="exampleTextarea1" class="col-sm-9 col-form-label">Harga Penawaran</label>
-            <div class="col-sm-12">
-              <input type="text" class="form-control" name="harga_penawaran" placeholder="10000000">
-            </div>
-
-            <label for="exampleTextarea1" class="col-sm-9 col-form-label">Deskripsi Harga Penawaran </label>
-            <div class="col-sm-12">
-              <input type="text" class="form-control" name="deskripsi_penawaran" placeholder="Sepuluh Juta Rupiah">
-            </div>
-
-            <label for="exampleTextarea1" class="col-sm-9 col-form-label">Nilai Negosiasi</label>
-            <div class="col-sm-12">
-              <input type="text" class="form-control" name="nilai_negosiasi" placeholder="10000000">
-            </div>
-
-            <label for="exampleTextarea1" class="col-sm-9 col-form-label">Deskripsi Negosiasi</label>
-            <div class="col-sm-12">
-              <input type="text" class="form-control" name="deskripsi_negosiasi" placeholder="Sepuluh Juta Rupiah">
-            </div>
-            {{-- </div> --}}
-            {{-- </div> --}}
-          </div>
-        </table>
-
-        <a href="/home" class="btn btn-light">Batal</a>
-        <button type="submit" class="btn btn-primary mr-2">Selanjutnya</button>
-        <a href="/input_jadwal" class="btn btn-light">NEXT</a>
-
-<<<<<<< HEAD
-        
-=======
->>>>>>> a85de726d9267ab57a6a2d1babd16294d56b28a6
-      </form>
-    </div>
-  </div>
-</div> -->
 
 
+{{-- Tabel Pengadaan --}}
 <div class="col-12 grid-margin stretch-card">
   <div class="card shadow">
     <div class="card-body">
@@ -160,41 +66,31 @@
             </tr>
           </thead>
           <tbody>
-            <!-- @foreach ($pengadaan as $pengadaan) -->
+            @foreach ($pengadaan as $p)
             <tr>
-              <!-- <td>{{ $pengadaan->jenis_pengadaan }}</td>
-              <td>{{ $pengadaan->alamat }}</td>
-              <td>{{ $pengadaan->tlp}}</td>
-              <td>
-
-                <form action="{{ route('pengadaan.destroy',$pengadaan->id) }}" method="POST">
-
-                  <a class="btn btn-info btn-lg" href="{{ route('pengadaan.show',$pengadaan->id) }}">
-
+              <td>{{ $p->pt_pelaksana }}</td>
+              <td>{{ $p->jenis_pengadaan }}</td>
+              <td>{{ $p->nilai_negosiasi}}</td>
+               <td>
+                
+                 <form action="{{ route('pengadaan.destroy',$p->id) }}" method="POST">
+                  <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modalDetailPengadaan{{$p->id}}">
                     Detail
+                  </button>
 
-                  </a>
-                  <a class="btn btn-primary" href="{{ route('pengadaan.edit',$pengadaan->id) }}">
-
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalEditPelaksana{{$p->id}}">
                     Edit
+                  </button>
 
-                  </a>
                   @csrf
                   @method('DELETE')
-
                   <button type="submit" class="btn btn-danger btn-lg">
-
                     Hapus
-
                   </button>
-                </form>
-              </td> -->
-              <td>COba ges</td>
-              <td>COba ges</td>
-              <td>COba ges</td>
-              <td>COba ges</td>
+                </form> 
+              </td>
             </tr>
-            <!-- @endforeach -->
+            @endforeach
           </tbody>
         </table>
       </div>
@@ -213,6 +109,7 @@
   </div>
 </div>
 
+{{-- Modal Tambah Penadaan --}}
 <div class="modal fade" id="modalPengadaan" tabindex="-1" role="dialog" aria-labelledby="modalPengadaanLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-scrollable" role="document">
     <div class="modal-content">
@@ -290,9 +187,208 @@
   </div>
 </div>
 
+{{-- Modal Edit pengadaan --}}
+@foreach ( $pengadaan as $pgn )
+    <div class="modal fade" id="modalEditPelaksana{{$pgn->id}}" tabindex="-1" role="dialog" aria-labelledby="modalEditPelaksanaLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title"><b>Edit Data Pengadaan</b></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    @csrf
+                    @if (session()->has('message'))
+                    <div class="alert alert-success">
+                        {{ session()->get('message') }}
+                    </div>
+                    @endif
+                    {{-- <form method="POST" action="{{ url('pengadaan/update', $pgn->id) }}" id="postpengadaan"> --}}
+                    <form method="POST" action="{{ url('pengadaan/update', $pgn->id) }}">
+                      @csrf
+                      <div class="mb-4">
+                        <label for="message-text" class="col-form-label">Pelaksana/Nama Perusahaan</label>
+            
+                        <select class="form-control" name="pelaksana_id">
+                          <option value="{{$pgn->pelaksana_id}}">{{ $pgn->pt_pelaksana }} </option>
+                          <option><br></option>
+
+                          <option value="">Pilih PT</option>
+                          @foreach ($pelaksana as $get)
+                          <option value="{{$get->id}}">-{{ $get->pt_pelaksana }} </option>
+                          @endforeach
+                        </select>
+                        <small class="text-danger">{{ $errors->first('pt_pelaksana') }}</small>
+            
+                      </div>
+                      <div class="mb-4">
+                        <label for="message-text" class="col-form-label">Jenis Pengadaan</label>
+                        <input type="text" class="form-control" id="jenis_pengadaan" name="jenis_pengadaan" value="{{ $pgn->jenis_pengadaan }}" placeholder="Pengadaan ...">
+                        <small class="text-danger">{{ $errors->first('jenis_pengadaan') }}</small>
+                      </div>
+                      <div class="mb-4">
+                        <label for="message-text" class="col-form-label">Biaya HPS (Harga Perkiraan Sendiri)</label>
+                        <input type="text" class="form-control" id="total_hps" name="total_hps" value="{{ $pgn->total_hps }}" placeholder="10000000">
+                        <small class="text-danger">{{ $errors->first('total_hps') }}</small>
+                      </div>
+                      <div class="mb-4">
+                        <label for="message-text" class="col-form-label">Deskripsi HPS (Harga Perkiraan Sendiri)</label>
+                        <input type="text" class="form-control" id="deskripsi_hps" name="deskripsi_hps" value="{{ $pgn->deskripsi_hps }}" placeholder="Sepuluh Juta Rupiah">
+                        <small class="text-danger">{{ $errors->first('deskripsi_hps') }}</small>
+                      </div>
+                      <div class="mb-4">
+                        <label for="message-text" class="col-form-label">Harga Penawaran</label>
+                        <input type="text" class="form-control" id="harga_penawaran" name="harga_penawaran" value="{{ $pgn->harga_penawaran }}" placeholder="10000000">
+                        <small class="text-danger">{{ $errors->first('harga_penawaran') }}</small>
+                      </div>
+                      <div class="mb-4">
+                        <label for="message-text" class="col-form-label">Deskripsi Harga Penawaran</label>
+                        <input type="text" class="form-control" id="deskripsi_penawaran" name="deskripsi_penawaran" value="{{ $pgn->deskripsi_penawaran }}" placeholder="Sepuluh Juta Rupiah">
+                        <small class="text-danger">{{ $errors->first('deskripsi_penawaran') }}</small>
+                      </div>
+                      <div class="mb-4">
+                        <label for="message-text" class="col-form-label">Nilai Negosiasi</label>
+                        <input type="text" class="form-control" id="nilai_negosiasi" name="nilai_negosiasi" value="{{ $pgn->nilai_negosiasi }}" placeholder="10000000">
+                        <small class="text-danger">{{ $errors->first('nilai_negosiasi') }}</small>
+                      </div>
+                      <div class="mb-4">
+                        <label for="message-text" class="col-form-label">Deskripsi Negosiasi</label>
+                        <input type="text" class="form-control" id="deskripsi_negosiasi" name="deskripsi_negosiasi" value="{{ $pgn->deskripsi_negosiasi }}" placeholder="Sepuluh Juta Rupiah">
+                        <small class="text-danger">{{ $errors->first('deskripsi_negosiasi') }}</small>
+                      </div>
+            
+            
+                      <div class="modal-footer mt-3">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                        <button type="submit" class="btn btn-primary ">Simpan <i class="fa fa-save"></i></button>
+                      </div>
+                    </form>
+
+
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+@endforeach
+
+{{-- Modal Detail Pelaksana --}}
+@foreach ( $pengadaan as $pg )
+    <div class="modal fade" id="modalDetailPengadaan{{$pg->id}}" tabindex="-1" role="dialog" aria-labelledby="modalEditPelaksanaLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title"><b>Detail Data Pelaksana</b></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    @csrf
+                    @if (session()->has('message'))
+                    <div class="alert alert-success">
+                        {{ session()->get('message') }}
+                    </div>
+                    @endif
+                    <table class="" style="margin:20px auto;" id="dataTable" width="100%" cellspacing="0">
+                        {{-- <div class="col-xs-12 col-sm-12 col-md-12"> --}}
+                        <div class="mb-4">
+                            <div class="form-group">
+                                <tr>
+                                    <td>Pelaksana/Nama Perusahaan</td>
+                                    <td>:</td>
+                                    <td>{{ $pg->pt_pelaksana }}</td>
+                                </tr>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-12">
+                            <div class="form-group">
+                                <tr>
+                                    <td>Jenis Pengadaan</td>
+                                    <td>:</td>
+                                    <td>{{ $pg->jenis_pengadaan }}</td>
+                                </tr>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-12">
+                            <div class="form-group">
+                                <tr>
+                                    <td>Biaya HPS (Harga Perkiraan Sendiri)</td>
+                                    <td>:</td>
+                                    <td>{{ $pg->total_hps }}</td>
+                                </tr>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-12">
+                            <div class="form-group">
+                                <tr>
+                                    <td>Deskripsi HPS (Harga Perkiraan Sendiri)</td>
+                                    <td>:</td>
+                                    <td>{{ $pg->deskripsi_hps }}</td>
+                                </tr>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-12">
+                            <div class="form-group">
+                                <tr>
+                                    <td>Deskripsi HPS (Harga Perkiraan Sendiri)</td>
+                                    <td>:</td>
+                                    <td>{{ $pg->deskripsi_hps }}</td>
+                                </tr>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-12">
+                            <div class="form-group">
+                                <tr>
+                                    <td>Harga Penawaran</td>
+                                    <td>:</td>
+                                    <td>{{ $pg->harga_penawaran }}</td>
+                                </tr>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-12">
+                            <div class="form-group">
+                                <tr>
+                                    <td>Deskripsi Harga Penawaran</td>
+                                    <td>:</td>
+                                    <td>{{ $pg->deskripsi_penawaran }}</td>
+                                </tr>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-12">
+                            <div class="form-group">
+                                <tr>
+                                    <td>Nilai Negosiasi</td>
+                                    <td>:</td>
+                                    <td>{{ $pg->nilai_negosiasi }}</td>
+                                </tr>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-12">
+                            <div class="form-group">
+                                <tr>
+                                    <td>Deskripsi Negosiasi</td>
+                                    <td>:</td>
+                                    <td>{{ $pg->deskripsi_negosiasi }}</td>
+                                </tr>
+                            </div>
+                        </div>
+                    </table>
+                </div>
+                <div class="modal-footer mt-3">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                    {{-- <button type="submit" class="btn btn-primary ">Simpan <i class="fa fa-save"></i></button> --}}
+                </div>
+            </div>
+        </div>
+    </div>
+@endforeach
+
 @endsection
 
-<style>
+{{-- <style>
   li {
     list-style-type: none;
   }
@@ -404,4 +500,4 @@
       }
     });
   }
-</script>
+</script> --}}

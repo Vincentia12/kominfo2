@@ -98,11 +98,12 @@ Route::post('/postbarang', [BarangController::class, 'store']);
 Route::resource('/barang', BarangController::class);
 
 //Pengadaan
+Route::resource('/pengadaan', PengadaanController::class);
 Route::get('/input_pengadaan', [PengadaanController::class, 'index']);
 Route::post('/postpengadaan', [PengadaanController::class, 'store']);
+Route::post('/pengadaan/update/{id}', [PengadaanController::class, 'update']);
 
 // Route::get('/input_pengadaan', [PengadaanController::class, 'index']);
-Route::resource('/pengadaan', PengadaanController::class);
 // Route::resource('/pengadaan2', PengadaanController::class);
 
 Route::get('/pengadaan1', [PengadaanController::class, 'index1']);

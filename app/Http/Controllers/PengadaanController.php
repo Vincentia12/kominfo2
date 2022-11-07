@@ -19,7 +19,11 @@ class PengadaanController extends Controller
      */
     public function index()
     {
-        $pengadaan = Pengadaan::all();
+        $pengadaan = DB::table('pengadaans')
+            ->join('pelaksanas', 'pelaksana_id', '=', 'pelaksanas.id')
+            ->select('pengadaans.*', 'pelaksanas.pt_pelaksana',)
+            ->get();
+        // $pengadaan = Pengadaan::all();
         $pelaksana = Pelaksana::all();
         // $barang = Barang::all();
         // $jadwals = Jadwal::all();
@@ -110,7 +114,9 @@ class PengadaanController extends Controller
 
         Pengadaan::create($request->post());
 
-        return redirect()->to('input_jadwal');
+        return redirect()->route('pengadaan.index')
+            ->with('success', 'Data Pelaksana Berhasil Ditambahkan');
+        // return redirect()->to('input_jadwal');
         // return redirect()->route('home')
         //                 ->with('success','Aset Berhasil Dihapus!');
 
@@ -156,7 +162,8 @@ class PengadaanController extends Controller
      */
     public function show(Pengadaan $pengadaan)
     {
-        return view('admin.input_pengadaan', compact('pengadaan'));
+        // return view('admin.input_pengadaan', compact('pengadaan'));
+        return view('pengadaan.index', compact('pengadaan'));
     }
 
     /**
@@ -168,9 +175,9 @@ class PengadaanController extends Controller
     public function edit(Pengadaan $pengadaan)
     {
 
-        $pengadaan = Pengadaan::where('id', $pengadaan)->first();
-        return view('admin.edit', compact('pengadaan'));
-        // return view('m');
+        // $pengadaan = Pengadaan::where('id', $pengadaan)->first();
+        // return view('admin.edit', compact('pengadaan'));
+        return view('admin.input_pengadaan', compact('pengdaan'));
     }
 
     /**
@@ -180,26 +187,31 @@ class PengadaanController extends Controller
      * @param  \App\Models\pengadaan  $pengadaan
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, pengadaan $pengadaan)
+    // public function update(Request $request, pengadaan $pengadaan)
+    public function update(Request $request, $id)
     {
-        $pengadaan = Pengadaan::where('id', $pengadaan)->first();
-        // $pengadaan->
-        // $pengadaan
-        $request->validate([
-            // 'id' => 'required',
-            'pelaksana_id' => 'required',
-            'jenis_pengadaan' => 'required',
-            'total_hps' => 'required',
-            'deskripsi_hps' => 'required',
-            'harga_penawaran' => 'required',
-            'deskripsi_penawaran' => 'required',
-            'nilai_negosiasi' => 'required',
-            'deskripsi_negosiasi' => 'required'
-        ]);
+        $pengadaan = Pengadaan::find($id)->update($request->all()); 
 
-        Pengadaan::create($request->post());
+        return back()->with('success',' Data telah diperbaharui!');
 
-        return redirect()->to('input_jadwal');
+        // $pengadaan = Pengadaan::where('id', $pengadaan)->first();
+        // // $pengadaan->
+        // // $pengadaan
+        // $request->validate([
+        //     // 'id' => 'required',
+        //     'pelaksana_id' => 'required',
+        //     'jenis_pengadaan' => 'required',
+        //     'total_hps' => 'required',
+        //     'deskripsi_hps' => 'required',
+        //     'harga_penawaran' => 'required',
+        //     'deskripsi_penawaran' => 'required',
+        //     'nilai_negosiasi' => 'required',
+        //     'deskripsi_negosiasi' => 'required'
+        // ]);
+
+        // Pengadaan::create($request->post());
+
+        // return redirect()->to('input_jadwal');
 
 
         // $pengadaan =   Pelaksana::updating($request->except([
@@ -238,7 +250,7 @@ class PengadaanController extends Controller
     {
         $pengadaan->delete();
 
-        return redirect()->route('pengadaans.index')
-            ->with('success', 'Aset Berhasil Dihapus!');
+        return redirect()->route('pengadaan.index')
+            ->with('success', 'Pengadaan Berhasil Dihapus!');
     }
 }
