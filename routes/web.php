@@ -44,8 +44,8 @@ Route::get('/verified-create', function () {
 });
 
 // route untuk input data yg belum terverifikasi
-Route::get('/create', function () {
-    return view('admin.create');
+Route::get('/show', function () {
+    return view('no-admin.show');
 });
 Route::get('/tambah', function () {
     return view('admin.pemilik');

@@ -30,6 +30,7 @@
                             <tr>
                                 <td>No Sertifikat</td>
                                 <td>:</td>
+                                {{-- <td>{{ $aset->no_sertifikat }}</td> --}}
                                 <td>{{ $aset->no_sertifikat }}</td>
                             </tr>
                         </div>
