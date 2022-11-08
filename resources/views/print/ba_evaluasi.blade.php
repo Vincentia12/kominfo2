@@ -38,6 +38,7 @@
                                 <font size="3">Website : http://www.jatimprov.go.id </font><br>
                                 <font size="2">Email:kominfo@jatimprov.go.id</font><br>
                                 <font size="3">S U R A B A Y A-60235</font><br>
+                                <font size="3">S U R A B A Y A-60235</font><br>
                     </td>
                 </tr>
                 <tr>
