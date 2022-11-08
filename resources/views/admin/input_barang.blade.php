@@ -46,7 +46,7 @@
                     <div class="mb-4">
                         <label for="recipient-name" class="col-form-label">Jenis Pengadaan</label>
                         <select class="form-control" name="pengadaan_id" id="pengadaan_id" placeholder="Pilih Pengadaan">
-                            <option value="">Pilih PT</option>
+                            <option value="">Pilih Jenis Pengadaan</option>
                             @foreach ($pengadaan as $item)
                             <option value="{{$item->id}}">{{ $item->jenis_pengadaan }}</option>
                             @endforeach
