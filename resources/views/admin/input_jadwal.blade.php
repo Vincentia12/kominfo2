@@ -53,6 +53,7 @@
         <table id="data1" class="table table-bordered" cellspacing="0">
           <thead>
             <tr>
+              <th>Jenis Pengadaan</th>
               <th>Kegiatan/th</th>
               <th>Alokasi</th>
               <th>Hari</th>
@@ -66,6 +67,7 @@
           <tbody>
             @foreach ($jadwal as $list)
             <tr>
+              <td>{{ $list->jenis_pengadaan }}</td>
               <td>{{ $list->kegiatan }}</td>
               <td>{{ $list->alokasi }}</td>
               <td>{{ $list->hari }}</td>
