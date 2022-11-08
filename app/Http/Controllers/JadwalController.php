@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\jadwal;
 use App\Models\pengadaan;
+use Illuminate\Support\Facades\DB;
 
 use Illuminate\Http\Request;
 
@@ -17,7 +18,12 @@ class JadwalController extends Controller
     public function index()
     {
         // $pengadaan = Pengadaan::all();
-        $jadwal = Jadwal::all();
+        // $jadwal = Jadwal::all();
+        $jadwal = DB::table('jadwals')
+            ->join('pengadaans', 'pengadaan_id', '=', 'pengadaans.id')
+            ->select('jadwals.*', 'pengadaans.jenis_pengadaan',)
+            ->get();
+
         $pengadaan = Pengadaan::all();
 
         // $pengadaan = Pengadaan::all();
@@ -30,9 +36,16 @@ class JadwalController extends Controller
 
         return view(
             'admin.input_jadwal',
+            // 'admin.input_pengadaan',
             ['jadwal' => $jadwal],
-            ['pengadaan' => $pengadaan],
+            ['pengadaan' => $pengadaan]
         );
+
+        // return view(
+        //     'admin.input_jadwal',
+        //     ['jadwal' => $jadwal],
+        //     ['pengadaan' => $pengadaan],
+        // );
         // $jadwal = Jadwal::all();
 
         // return view('admin.input_jadwal', ['jadwal'=>$jadwal]);
@@ -45,7 +58,7 @@ class JadwalController extends Controller
      */
     public function create()
     {
-        return view('admin.input_pelaksana');
+        return view('admin.input_jadwal');
     }
 
     /**
@@ -69,7 +82,9 @@ class JadwalController extends Controller
 
         Jadwal::create($request->post());
 
-        return redirect()->to('input_barang');
+        return redirect()->route('jadwal.index')
+            ->with('success', 'Data Jadwal Berhasil Ditambahkan');
+        // return redirect()->to('input_barang');
     }
 
     /**
@@ -80,7 +95,7 @@ class JadwalController extends Controller
      */
     public function show(Jadwal $jadwal)
     {
-        return view('admin.input_jadwal', compact('jadwal'));
+        return view('jadwal.index', compact('jadwal'));
         //
     }
 
@@ -92,6 +107,7 @@ class JadwalController extends Controller
      */
     public function edit(jadwal $jadwal)
     {
+        return view('admin.input_jadwal', compact('jadwal'));
         //
     }
 
@@ -102,8 +118,11 @@ class JadwalController extends Controller
      * @param  \App\Models\jadwal  $jadwal
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, jadwal $jadwal)
+    public function update(Request $request, $id)
     {
+        $jadwal = Jadwal::find($id)->update($request->all());
+
+        return back()->with('success', ' Data telah diperbaharui!');
         //
     }
 
@@ -115,6 +134,10 @@ class JadwalController extends Controller
      */
     public function destroy(jadwal $jadwal)
     {
+        $jadwal->delete();
+
+        return redirect()->route('jadwal.index')
+            ->with('success', 'Jadwal Berhasil Dihapus!');
         //
     }
 }
