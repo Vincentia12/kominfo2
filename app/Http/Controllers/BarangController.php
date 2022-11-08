@@ -7,6 +7,7 @@ use App\Models\pengadaan;
 use App\Models\pelaksana;
 use App\Models\jadwal;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class BarangController extends Controller
 {
@@ -17,14 +18,25 @@ class BarangController extends Controller
      */
     public function index()
     {
-        $barang = Barang::all();
+        $barang = DB::table('barangs')
+            ->join('pengadaans', 'pengadaan_id', '=', 'pengadaans.id')
+            ->select('barangs.*', 'pengadaans.jenis_pengadaan',)
+            ->get();
+        // $barang = Barang::all();
         $pengadaan = Pengadaan::all();
 
         return view(
             'admin.input_barang',
+            // 'admin.input_pengadaan',
             ['barang' => $barang],
-            ['pengadaan' => $pengadaan],
-        )->with('i', (request()->input('page', 1) - 1) * 5);
+            ['pengadaan' => $pengadaan]
+        );
+
+        // return view(
+        //     'admin.input_barang',
+        //     ['barang' => $barang],
+        //     ['pengadaan' => $pengadaan],
+        // )->with('i', (request()->input('page', 1) - 1) * 5);
 
         // $pengadaans = pengadaan::all();
         // $pelaksanas = Pelaksana::all();
@@ -66,7 +78,9 @@ class BarangController extends Controller
 
         Barang::create($request->post());
 
-        return redirect()->to('input_barang');
+        return redirect()->route('barang.index')
+            ->with('success', 'Data Barang Berhasil Ditambahkan');
+        // return redirect()->to('input_barang');
         // $pengadaans =   pengadaan::create($request->except([
 
 
@@ -96,7 +110,8 @@ class BarangController extends Controller
      */
     public function show(Barang $barang)
     {
-        return view('admin.input_barang', compact('barang'));
+        // return view('admin.input_barang', compact('barang'));
+        return view('barang.index', compact('barang'));
     }
 
     /**
@@ -107,7 +122,7 @@ class BarangController extends Controller
      */
     public function edit(barang $barang)
     {
-        return view('admin.lihat', compact('barang'));
+        return view('admin.input_barang', compact('barang'));
     }
 
     /**
@@ -117,8 +132,11 @@ class BarangController extends Controller
      * @param  \App\Models\barang  $barang
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, barang $barang)
+    public function update(Request $request, $id)
     {
+        $barang = Barang::find($id)->update($request->all());
+
+        return back()->with('success', ' Data telah diperbaharui!');
         //
     }
 
