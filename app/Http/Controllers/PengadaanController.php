@@ -43,7 +43,7 @@ class PengadaanController extends Controller
     {
         // $pengadaan1 = Pengadaan::select('select * where nilai_negosiasi <= 10000000');
         $pengadaan1 = DB::table('pengadaans')
-            ->where('nilai_negosiasi', '<=', 50000000)
+            ->where('nilai_negosiasi', '<=', 50)
             ->join('pelaksanas', 'pelaksana_id', '=', 'pelaksanas.id')
             ->select('pengadaans.*', 'pelaksanas.pt_pelaksana',)
             ->get();
@@ -53,7 +53,7 @@ class PengadaanController extends Controller
 
         return view(
             'admin.pengadaan1',
-            ['pengadaan' => $pengadaan1],
+            ['pengadaan1' => $pengadaan1],
             // ['pengadaan' => $pengadaan],
             // ['pelaksana' => $pelaksana]
         );
@@ -65,14 +65,14 @@ class PengadaanController extends Controller
     {
         // $pengadaan2 = Pengadaan::select('select * where nilai_negosiasi > 10000000');
         $pengadaan2 = DB::table('pengadaans')
-            ->where('nilai_negosiasi', '>', 50000000)
+            ->where('nilai_negosiasi', '>', 50)
             ->join('pelaksanas', 'pelaksana_id', '=', 'pelaksanas.id')
             ->select('pengadaans.*', 'pelaksanas.pt_pelaksana',)
             ->get();
 
         return view(
             'admin.pengadaan2',
-            ['pengadaan' => $pengadaan2]
+            ['pengadaan2' => $pengadaan2]
         );
     }
 
@@ -253,4 +253,11 @@ class PengadaanController extends Controller
         return redirect()->route('pengadaan.index')
             ->with('success', 'Pengadaan Berhasil Dihapus!');
     }
+    // public function destroy1(pengadaan $pengadaan1)
+    // {
+    //     $pengadaan1->delete();
+
+    //     return redirect()->route('pengadaan.index1')
+    //         ->with('success', 'Pengadaan Berhasil Dihapus!');
+    // }
 }

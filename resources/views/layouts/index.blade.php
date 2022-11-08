@@ -126,6 +126,23 @@
             </a>
           </li>
 
+          {{-- Inputan --}}
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#input" aria-expanded="false" aria-controls="input">
+              <i class="icon-layout menu-icon"></i>
+              <span class="menu-title">Input</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="input">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="/input_pelaksana">Input Pelaksana</a></li>
+                <li class="nav-item"> <a class="nav-link" href="/input_pengadaan">Input Pengadaan</a></li>
+                <li class="nav-item"> <a class="nav-link" href="/input_barang">Input Barang</a></li>
+                <li class="nav-item"> <a class="nav-link" href="/input_jadwal">Input Jadwal</a></li>
+              </ul>
+            </div>
+          </li>
+
           {{-- Pengadaan --}}
           <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
@@ -206,6 +223,7 @@
           </div>
 
         @yield('content')
+        
       </div>
     </div>
   </div>

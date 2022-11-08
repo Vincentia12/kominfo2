@@ -88,17 +88,20 @@ Route::post('/pelaksana/update/{id}', [PelaksanaController::class, 'update']);
 // Route::delete('/pengadaan/{id}', 'PengadaanController@destroy');
 
 //jadwal
+Route::resource('/jadwal', JadwalController::class);
 Route::get('/input_jadwal', [JadwalController::class, 'index']);
 Route::post('/postjadwal', [JadwalController::class, 'store']);
+Route::post('/jadwal/update/{id}', [JadwalController::class, 'update']);
 
 //barang
+Route::resource('/barang', BarangController::class);
 Route::get('/input_barang', [BarangController::class, 'index']);
 Route::post('/postbarang', [BarangController::class, 'store']);
-
-Route::resource('/barang', BarangController::class);
+Route::post('/barang/update/{id}', [BarangController::class, 'update']);
 
 //Pengadaan
 Route::resource('/pengadaan', PengadaanController::class);
+Route::resource('/pengadaan1', PengadaanController::class);
 Route::get('/input_pengadaan', [PengadaanController::class, 'index']);
 Route::post('/postpengadaan', [PengadaanController::class, 'store']);
 Route::post('/pengadaan/update/{id}', [PengadaanController::class, 'update']);

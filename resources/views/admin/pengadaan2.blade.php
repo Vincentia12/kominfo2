@@ -83,27 +83,30 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($pengadaan as $pengadaan)
+                            @foreach ($pengadaan2 as $p2)
                             <tr>
                                 {{-- <td>{{ ++$i }}</td> --}}
-                                <td>{{ $pengadaan->jenis_pengadaan}}</td>
-                                <td>{{ $pengadaan->pt_pelaksana }}</td>
-                                <td>{{ $pengadaan->nilai_negosiasi }}</td>
+                                <td>{{ $p2->jenis_pengadaan}}</td>
+                                <td>{{ $p2->pt_pelaksana }}</td>
+                                <td>{{ $p2->nilai_negosiasi }}</td>
                                 {{-- <td>{{ $aset->alamat_aset }}</td>
                                 <td>{{ $aset->status_aset }}</td> --}}
 
                                 {{-- <td>{{ $aset->keterangan_aset }}</td> --}}
                                 <td>
 
-                                    <form action="{{ route('pengadaan.destroy',$pengadaan->id) }}" method="POST">
+                                    {{-- <form action="{{ route('pengadaan.destroy1',$p2->id) }}" method="POST"> --}}
 
-                                        <a class="btn btn-info" href="{{ route('pengadaan.show',$pengadaan->id) }}">Detail</a>
-                                        <a class="btn btn-primary" href="{{ route('pengadaan.edit',$pengadaan->id) }}">Edit</a>
+                                        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modalDetailPengadaan2{{$p2->id}}">
+                                            Detail
+                                        </button>
+                                        {{-- <a class="btn btn-info" href="{{ route('pengadaan.show',$pengadaan->id) }}">Detail</a>
+                                        <a class="btn btn-primary" href="{{ route('pengadaan.edit',$pengadaan->id) }}">Edit</a> --}}
                                         @csrf
                                         @method('DELETE')
 
-                                        <button type="submit" class="btn btn-danger">Delete</button>
-                                    </form>
+                                        {{-- <button type="submit" class="btn btn-danger">Delete</button> --}}
+                                    {{-- </form> --}}
                                 </td>
                             </tr>
                             @endforeach
@@ -115,4 +118,7 @@
         </div>
     </div>
 </div>
+
+
+
 @endsection
