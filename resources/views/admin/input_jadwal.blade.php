@@ -135,13 +135,13 @@
         <div class="row ">
           <div class="col-md-8 mb-4">
             <div class="justify-content-between ">
-              <h2 class="col-10">Data Masukan Barang</h2>
+              <h2 class="col-10">Data Masukan Jadwal</h2>
             </div>
           </div>
           <div class="col-md-4 mb-4">
             <div class="text-right ">
-              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalBarang">
-                Tambah Data Barang
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalJadwal">
+                Tambah Data Jadwal
               </button>
             </div>
           </div>
