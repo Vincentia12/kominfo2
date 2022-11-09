@@ -101,7 +101,7 @@ Route::post('/barang/update/{id}', [BarangController::class, 'update']);
 
 //Pengadaan
 Route::resource('/pengadaan', PengadaanController::class);
-Route::resource('/pengadaan1', PengadaanController::class);
+// Route::resource('/pengadaan1', PengadaanController::class);
 Route::get('/input_pengadaan', [PengadaanController::class, 'index']);
 Route::post('/postpengadaan', [PengadaanController::class, 'store']);
 Route::post('/pengadaan/update/{id}', [PengadaanController::class, 'update']);
@@ -109,9 +109,11 @@ Route::post('/pengadaan/update/{id}', [PengadaanController::class, 'update']);
 // Route::get('/input_pengadaan', [PengadaanController::class, 'index']);
 // Route::resource('/pengadaan2', PengadaanController::class);
 
+// Route::get('/pengadaan1', [PengadaanController::class, 'index1'], [JadwalController::class, 'index1']);
 Route::get('/pengadaan1', [PengadaanController::class, 'index1']);
 Route::get('/pengadaan2', [PengadaanController::class, 'index2']);
 
+// Route::get('/pengadaan1', [JadwalController::class, 'index1']);
 //pejabat
 // Route::get('/pejabat/edit/{id}', [PejabatController::class, 'edit']);
 Route::post('/pejabat/update/{id}', [PejabatController::class, 'update']);

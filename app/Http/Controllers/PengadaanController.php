@@ -43,18 +43,45 @@ class PengadaanController extends Controller
     {
         // $pengadaan1 = Pengadaan::select('select * where nilai_negosiasi <= 10000000');
         $pengadaan1 = DB::table('pengadaans')
-            ->where('nilai_negosiasi', '<=', 50)
-            ->join('pelaksanas', 'pelaksana_id', '=', 'pelaksanas.id')
-            ->select('pengadaans.*', 'pelaksanas.pt_pelaksana',)
-            ->get();
+        ->join('pelaksanas', 'pelaksana_id', '=', 'pelaksanas.id')
+        ->join('jadwals', 'pengadaan_id', '=', 'pengadaans.id')
+        // ->join('barangs', 'pengadaan_id', '=', 'pengadaans.id')
+        ->select('pengadaans.*', 'pelaksanas.pt_pelaksana', 'pelaksanas.alamat', 'pelaksanas.nama_pelaksana', 'pelaksanas.jabatan_pelaksana', 'pelaksanas.kode_rekening', 'pelaksanas.npwp', 'pelaksanas.tlp',
+        'jadwals.kegiatan', 'jadwals.alokasi', 'jadwals.hari', 'jadwals.tanggal', 'jadwals.nomor', 'jadwals.deskripsi_tgl',
+        // 'barangs.barang', 'barangs.jumlah_barang', 'barangs.satuan', 'barangs.harga_satuan'
+        )
 
-        // $pengadaan = Pengadaan::all();
+        // ->where('pengadaans.nilai_negosiasi', '<=', 50)
+        ->where('nilai_negosiasi', '<=', 50)
+        ->get();
+
+
+        // $pengadaan1 = Pengadaan::join('jadwals', 'jadwals.pengadaan_id', '=', 'pengadaans.id')
+        //       ->join('pelaksanas', 'pengadaans.pelaksana_id', '=', 'pelaksanas.id')
+        //       ->where('nilai_negosiasi', '<=', 50)
+        //       ->get(['pengadaans.*', 'pelaksanas.pt_pelaksana', 'pelaksanas.alamat', 'pelaksanas.nama_pelaksana', 'pelaksanas.jabatan_pelaksana', 'pelaksanas.kode_rekening', 'pelaksanas.npwp', 'pelaksanas.tlp',
+        //       'jadwals.kegiatan', 'jadwals.alokasi', 'jadwals.hari', 'jadwals.tanggal', 'jadwals.nomor', 'jadwals.deskripsi_tgl',
+        //       // 'barangs.barang', 'barangs.jumlah_barang', 'barangs.satuan', 'barangs.harga_satuan'
+        //       ]);
+
+        // $jadwal1 = DB::table('jadwals')
+        //     ->where('nilai_negosiasi', '<=', 50)
+        //     ->join('pelaksanas', 'pelaksana_id', '=', 'pelaksanas.id')
+        //     ->join('jadwals', 'pengadaan_id', '=', 'pengadaans.id')
+        //     // ->join('barangs', 'pengadaan_id', '=', 'pengadaans.id')
+        //     ->select('pengadaans.*', 'pelaksanas.pt_pelaksana', 'pelaksanas.alamat', 'pelaksanas.nama_pelaksana', 'pelaksanas.jabatan_pelaksana', 'pelaksanas.kode_rekening', 'pelaksanas.npwp', 'pelaksanas.tlp',
+        //         'jadwals.kegiatan', 'jadwals.alokasi', 'jadwals.hari', 'jadwals.tanggal', 'jadwals.nomor', 'jadwals.deskripsi_tgl',
+        //         // 'barangs.barang', 'barangs.jumlah_barang', 'barangs.satuan', 'barangs.harga_satuan'
+        //         )
+        //     ->get();
+
+        $jadwal = Jadwal::all();
         // $pelaksana = Pelaksana::all();
 
         return view(
             'admin.pengadaan1',
             ['pengadaan1' => $pengadaan1],
-            // ['pengadaan' => $pengadaan],
+            ['jadwal' => $jadwal],
             // ['pelaksana' => $pelaksana]
         );
 
@@ -67,7 +94,10 @@ class PengadaanController extends Controller
         $pengadaan2 = DB::table('pengadaans')
             ->where('nilai_negosiasi', '>', 50)
             ->join('pelaksanas', 'pelaksana_id', '=', 'pelaksanas.id')
-            ->select('pengadaans.*', 'pelaksanas.pt_pelaksana',)
+            ->join('jadwals', 'pengadaan_id', '=', 'jadwals.id')
+            ->select('pengadaans.*', 'pelaksanas.pt_pelaksana', 'pelaksanas.alamat', 'pelaksanas.nama_pelaksana', 'pelaksanas.jabatan_pelaksana', 'pelaksanas.kode_rekening', 'pelaksanas.npwp', 'pelaksanas.tlp',
+                'jadwals.kegiatan', 'jadwals.alokasi', 'jadwals.hari', 'jadwals.tanggal', 'jadwals.nomor', 'jadwals.deskripsi_tgl',
+                'barangs.barang', 'barangs.jumlah_barang', 'barangs.satuan', 'barangs.harga_satuan')
             ->get();
 
         return view(

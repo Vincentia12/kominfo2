@@ -78,27 +78,33 @@
                                 <th>Tahun Kepemilikan</th>
                                 <th>Tahun Pembangunan</th>
                                 <th>Tahun Rehab</th> --}}
-                                {{-- <th>Keterangan</th> --}}
+                                <th>Kegiatan</th>
                                 <th width="280px">Action</th>
                             </tr>
                         </thead>
                         <tbody>
                             {{-- @if(count($pengadaan)<=50) --}}
                             @foreach ($pengadaan1 as $p1)
+                            {{-- @foreach ($jadwal1 as $jd1) --}}
                             <tr>
                                 {{-- <td>{{ ++$i }}</td> --}}
+                                <td>{{ $p1->kegiatan}}</td>
+                                {{-- <td>{{ $jd1->jenis_pengadaan}}</td> --}}
                                 <td>{{ $p1->jenis_pengadaan}}</td>
+                                {{-- <td>{{ $jd1->pt_pelaksana}}</td> --}}
                                 <td>{{ $p1->pt_pelaksana}}</td>
                                 {{-- @foreach ($pelaksana as $pelaksana)
                                     <td>{{ $pelaksana->pt_pelaksana }}</td>
                                 @endforeach --}}
+                                {{-- <td>{{ $jd1->nilai_negosiasi }}</td> --}}
                                 <td>{{ $p1->nilai_negosiasi }}</td>
 
                                 <td>
 
                                     {{-- <form action="{{ route('pengadaan.destroy1',$p1->id) }}" method="POST"> --}}
 
-                                        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modalDetailPengadaan1{{$p1->id}}">
+                                        {{-- <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modalDetailPengadaan1-{{$jd1->pengadaan_id}}"> --}}
+                                        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modalDetailPengadaan1-{{$p1->id}}">
                                             Detail
                                         </button>
                                         {{-- <a class="btn btn-info" href="{{ route('pengadaan.show',$pengadaan->id) }}">Detail</a>
@@ -121,10 +127,13 @@
 </div>
 
 {{-- MODAL --}}
-{{-- Modal Detail Pelaksana1 --}}
+{{-- Modal Detail Pengadaan1 --}}
 @foreach ( $pengadaan1 as $pg )
-    <div class="modal fade" id="modalDetailPengadaan1{{$pg->id}}" tabindex="-1" role="dialog" aria-labelledby="modalEditPelaksanaLabel" aria-hidden="true">
-        <div class="modal-dialog modal-xl-dialog-centered" role="document">
+{{-- @foreach ( $jadwal1 as $jd ) --}}
+    <div class="modal fade" id="modalDetailPengadaan1-{{$pg->id}}" tabindex="-1" role="dialog" aria-labelledby="modalEditPelaksanaLabel" aria-hidden="true">
+    {{-- <div class="modal fade" id="modalDetailPengadaan1-{{$jd->pengadaan_id}}" tabindex="-1" role="dialog" aria-labelledby="modalEditPelaksanaLabel" aria-hidden="true"> --}}
+        {{-- <div class="modal-dialog modal-xl-dialog-centered" role="document"> --}}
+        <div class=" modal-body modal-xl-dialog-centered" role="document">
             <div class="modal-content ">
                 <div class="modal-header">
                     <h5 class="modal-title"><b>Detail Data Pelaksana</b></h5>
@@ -139,8 +148,8 @@
                         {{ session()->get('message') }}
                     </div>
                     @endif
-                    <h3>{{ $pg->pt_pelaksana}}</h3>
-                    <h3>{{ $pg->jenis_pengadaan}}</h3>
+                    {{-- <h3>{{ $pg->pt_pelaksana}}</h3>
+                    <h3>{{ $pg->jenis_pengadaan}}</h3> --}}
                     <table id="data1" class="table table-bordered" cellspacing="0">
                         {{-- <table id="data1" class="table table-bordered" cellspacing="0" width="100%"> --}}
                         {{-- <table class="table table-bordered " id="data1" style="width:100%"> --}}
@@ -148,7 +157,7 @@
                     <br>    
                         <thead>
                             <tr>
-                                <th>Kegiatan/th>
+                                <th>Kegiatan</th>
                                 <th>Alokasi</th>
                                 <th>Hari</th>
                                 <th>Tanggal</th>
@@ -159,17 +168,24 @@
                             </tr>
                         </thead>
                         <tbody>
-                            {{-- @foreach ($barang as $barang) --}}
+                            @foreach ($jadwal as $jd)
                             <tr>
                                 {{-- <td>{{ ++$i }}</td> --}}
                                 {{-- <td>{{ $brg->id}}</td> --}}
-                                {{-- <td>{{ $pg->kegiatan }}</td>
-                                <td>{{ $pg->alokasi }}</td>
-                                <td>{{ $pg->hari }}</td>
-                                <td>{{ $pg->tanggal }}</td>
-                                <td>{{ $pg->nomor }}</td>
-                                <td>{{ $pg->deskripsi_tgl }}</td> --}}
-    
+                                {{-- <td>{{ $pg->jadwal->kegiatan }}</td>
+                                <td>{{ $pg->jadwal->alokasi }}</td>
+                                <td>{{ $pg->jadwal->hari }}</td>
+                                <td>{{ $pg->jadwal->tanggal }}</td>
+                                <td>{{ $pg->jadwal->nomor }}</td>
+                                <td>{{ $pg->jadwal->deskripsi_tgl }}</td> --}}
+                                <td>{{ $jd->kegiatan }}</td>
+                                {{-- <td>{{ $jd->kegiatan }}</td>
+                                <td>{{ $jd->alokasi }}</td>
+                                <td>{{ $jd->hari }}</td>
+                                <td>{{ $jd->tanggal }}</td>
+                                <td>{{ $jd->nomor }}</td>
+                                <td>{{ $jd->deskripsi_tgl }}</td>
+     --}}
                                 <td>
     
                                     {{-- <form action="{{ route('barang.destroy',$barang->id) }}" method="POST"> --}}
@@ -195,7 +211,7 @@
                                     {{-- </form> --}}
                                 </td>
                             </tr>
-                            {{-- @endforeach --}}
+                            @endforeach
                         </tbody>
                     </table>
 
