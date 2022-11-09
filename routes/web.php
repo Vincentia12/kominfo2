@@ -47,12 +47,15 @@ Route::get('/verified-create', function () {
 Route::get('/show', function () {
     return view('no-admin.show');
 });
-Route::get('/tambah', function () {
-    return view('admin.pemilik');
-});
+
+
 // Route::get('/editpemilik', function () {
 //     return view('admin.editpemilik');
 // });
+Route::get('/lihat', function () {
+    return view('admin.lihat');
+});
+
 Route::get('/lihat', function () {
     return view('admin.lihat');
 });
@@ -179,6 +182,24 @@ Route::get('/undangan_persiapan', function () {
 });
 Route::get('/pakta_integritas', function () {
     return view('print.pakta_integritas');
+});
+Route::get('/undangan_penawaran', function () {
+    return view('print.undangan_penawaran');
+});
+Route::get('/ba_pekerjaan', function () {
+    return view('print.ba_pekerjaan');
+});
+Route::get('/ba_penawaran', function () {
+    return view('print.ba_penawaran');
+});
+Route::get('/undangan_nego', function () {
+    return view('print.undangan_nego');
+});
+Route::get('/ba_nego', function () {
+    return view('print.ba_nego');
+});
+Route::get('/nota_dinas3', function () {
+    return view('print.nota_dinas3');
 });
 // Route::resource('/getusr',[App\Http\Controllers\AdminController::class, 'index']);
 
