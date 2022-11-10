@@ -114,6 +114,7 @@ Route::post('/pengadaan/update/{id}', [PengadaanController::class, 'update']);
 
 // Route::get('/pengadaan1', [PengadaanController::class, 'index1'], [JadwalController::class, 'index1']);
 Route::get('/pengadaan1', [PengadaanController::class, 'index1']);
+// Route::get('/pengadaan1/detail/{id}', [PengadaanController::class, 'dt1']);
 Route::get('/pengadaan2', [PengadaanController::class, 'index2']);
 
 // Route::get('/pengadaan1', [JadwalController::class, 'index1']);

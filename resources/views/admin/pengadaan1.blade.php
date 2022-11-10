@@ -65,6 +65,7 @@
                     <table class="table table-bordered" id="data1" style="width:100%">
                         <thead>
                             <tr>
+                                <th>Id Pengadaan</th>
                                 {{-- <th>NO</th> --}}
                                 <th>Nama Pengadaan</th>
                                 <th>Nama Perusahaan</th>
@@ -78,7 +79,7 @@
                                 <th>Tahun Kepemilikan</th>
                                 <th>Tahun Pembangunan</th>
                                 <th>Tahun Rehab</th> --}}
-                                <th>Kegiatan</th>
+                                {{-- <th>Kegiatan</th> --}}
                                 <th width="280px">Action</th>
                             </tr>
                         </thead>
@@ -87,17 +88,18 @@
                             @foreach ($pengadaan1 as $p1)
                             {{-- @foreach ($jadwal1 as $jd1) --}}
                             <tr>
+                                <td>{{ $p1->pengadaan_id }}</td>
                                 {{-- <td>{{ ++$i }}</td> --}}
-                                <td>{{ $p1->kegiatan}}</td>
                                 {{-- <td>{{ $jd1->jenis_pengadaan}}</td> --}}
                                 <td>{{ $p1->jenis_pengadaan}}</td>
                                 {{-- <td>{{ $jd1->pt_pelaksana}}</td> --}}
                                 <td>{{ $p1->pt_pelaksana}}</td>
                                 {{-- @foreach ($pelaksana as $pelaksana)
                                     <td>{{ $pelaksana->pt_pelaksana }}</td>
-                                @endforeach --}}
-                                {{-- <td>{{ $jd1->nilai_negosiasi }}</td> --}}
+                                    @endforeach --}}
+                                    {{-- <td>{{ $jd1->nilai_negosiasi }}</td> --}}
                                 <td>{{ $p1->nilai_negosiasi }}</td>
+                                {{-- <td>{{ $p1->kegiatan}}</td> --}}
 
                                 <td>
 
@@ -107,8 +109,8 @@
                                         <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modalDetailPengadaan1-{{$p1->id}}">
                                             Detail
                                         </button>
-                                        {{-- <a class="btn btn-info" href="{{ route('pengadaan.show',$pengadaan->id) }}">Detail</a>
-                                        <a class="btn btn-primary" href="{{ route('pengadaan.edit',$pengadaan->id) }}">Edit</a> --}}
+                                        {{-- <a class="btn btn-info" href="{{ route('pengadaan.show',$p1->id) }}">Detail</a> --}}
+                                        {{-- <a class="btn btn-primary" href="{{ route('pengadaan.edit',$pengadaan->id) }}">Edit</a> --}}
                                         @csrf
                                         @method('DELETE')
 
@@ -129,7 +131,7 @@
 {{-- MODAL --}}
 {{-- Modal Detail Pengadaan1 --}}
 @foreach ( $pengadaan1 as $pg )
-{{-- @foreach ( $jadwal1 as $jd ) --}}
+{{-- @foreach ( $jadwal as $jd ) --}}
     <div class="modal fade" id="modalDetailPengadaan1-{{$pg->id}}" tabindex="-1" role="dialog" aria-labelledby="modalEditPelaksanaLabel" aria-hidden="true">
     {{-- <div class="modal fade" id="modalDetailPengadaan1-{{$jd->pengadaan_id}}" tabindex="-1" role="dialog" aria-labelledby="modalEditPelaksanaLabel" aria-hidden="true"> --}}
         {{-- <div class="modal-dialog modal-xl-dialog-centered" role="document"> --}}
@@ -148,8 +150,13 @@
                         {{ session()->get('message') }}
                     </div>
                     @endif
-                    {{-- <h3>{{ $pg->pt_pelaksana}}</h3>
-                    <h3>{{ $pg->jenis_pengadaan}}</h3> --}}
+                    <h3>pelaksana : </h3>
+                    {{-- <h3>{{ $jd->pt_pelaksana}}</h3> --}}
+                    <h3>{{ $pg->pt_pelaksana}}</h3>
+                    <h3>pengadaan :</h3> 
+                    {{-- <h3>{{ $jd->jenis_pengadaan}}</h3>  --}}
+                    <h3>{{ $pg->jenis_pengadaan}}</h3>
+                    {{-- <form method="POST" action="{{ url('pelaksana/detail', $pg->id) }}"> --}}
                     <table id="data1" class="table table-bordered" cellspacing="0">
                         {{-- <table id="data1" class="table table-bordered" cellspacing="0" width="100%"> --}}
                         {{-- <table class="table table-bordered " id="data1" style="width:100%"> --}}
@@ -157,6 +164,7 @@
                     <br>    
                         <thead>
                             <tr>
+                                <th>Id Pengadaan</th>
                                 <th>Kegiatan</th>
                                 <th>Alokasi</th>
                                 <th>Hari</th>
@@ -172,20 +180,28 @@
                             <tr>
                                 {{-- <td>{{ ++$i }}</td> --}}
                                 {{-- <td>{{ $brg->id}}</td> --}}
+                                <td>{{ $jd->pengadaan_id }}</td>
+                                <td>{{ $jd->kegiatan }}</td>
+                                <td>{{ $jd->alokasi }}</td>
+                                <td>{{ $jd->hari }}</td>
+                                <td>{{ $jd->tanggal }}</td>
+                                <td>{{ $jd->nomor }}</td>
+                                <td>{{ $jd->deskripsi_tgl }}</td>
                                 {{-- <td>{{ $pg->jadwal->kegiatan }}</td>
                                 <td>{{ $pg->jadwal->alokasi }}</td>
                                 <td>{{ $pg->jadwal->hari }}</td>
                                 <td>{{ $pg->jadwal->tanggal }}</td>
                                 <td>{{ $pg->jadwal->nomor }}</td>
                                 <td>{{ $pg->jadwal->deskripsi_tgl }}</td> --}}
+                                {{-- <td>{{ $jd->kegiatan }}</td> --}}
+                                {{-- <td>{{ $jd->pengadaan_id }}</td>
                                 <td>{{ $jd->kegiatan }}</td>
-                                {{-- <td>{{ $jd->kegiatan }}</td>
                                 <td>{{ $jd->alokasi }}</td>
                                 <td>{{ $jd->hari }}</td>
                                 <td>{{ $jd->tanggal }}</td>
                                 <td>{{ $jd->nomor }}</td>
-                                <td>{{ $jd->deskripsi_tgl }}</td>
-     --}}
+                                <td>{{ $jd->deskripsi_tgl }}</td> --}}
+    
                                 <td>
     
                                     {{-- <form action="{{ route('barang.destroy',$barang->id) }}" method="POST"> --}}
