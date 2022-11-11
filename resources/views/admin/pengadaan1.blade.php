@@ -61,15 +61,84 @@
                         <p>{{ $message }}</p>
                     </div>
                     @endif
+                    <form class="form" method="get" action="{{ route('cari1') }}">
+                        <div class="form-group w-100 mb-3">
+                            <label for="cari" class="d-block mr-2">Pencarian</label>
+                            {{-- <input type="text" name="cari" class="form-control w-75 d-inline" id="cari" placeholder="Masukkan keyword"> --}}
+                            <select class="form-control" name="cari" id="cari">
+                                <option> Pilih Pengadaan </option>
+                                @foreach ($pengadaan1 as $pd1)
+                                <option value="{{$pd1->pengadaan_id}}">{{ $pd1->jenis_pengadaan }}</option>
+                                @endforeach
+                            </select>
+                            <button type="submit" class="btn btn-primary mb-1">Cari</button>
+                        </div>
+                    </form>
+                    <div class="mb-4">
+                        {{-- @if (Route::has('cari'))
+      
+                        <div class="form-group">
+                            <tr>
+                                <td>Nama CV Pelaksana</td>
+                                <td>:</td>
+                                <td>{{ $pd1->pt_pelaksana }}</td>
+                            </tr>
+                        </div>
+                @endif
 
-                    <table class="table table-bordered" id="data1" style="width:100%">
+                @else
+                <div class="form-group">
+                    <tr>
+                        <td>Nama CV Pelaksana</td>
+                        <td>:</td>
+                        <td>{{ Auth::pengadaan()->pd1 }}</td>
+                    </tr>
+                </div> --}}
+                {{-- <div class="col-12 col-xl-8 mb-4 mb-xl-0">
+                  <h3 class="font-weight-bold">Welcome {{ Auth::user()->name }}</h3>
+                  <h6 class="font-weight-normal mb-0">Selamat Datang di Sistem Informasi Keuangan Bidang Data dan Statistik <br> Dinas Komunikasi dan Informatika Provinsi Jawa Timur
+                    {{-- <span class="text-primary">3 unread alerts!</span> --}}
+                  {{-- </h6>
+                </div> --}}
+
+                {{-- @endguest --}}
+
+
+                            {{-- <div class="form-group">
+                                <tr>
+                                    <td>Nama CV Pelaksana</td>
+                                    <td>:</td>
+                                    <td>{{ $pd1->pt_pelaksana }}</td>
+                                </tr>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <div class="form-group">
+                                <tr>
+                                    <td>Jenis Pengadaan</td>
+                                    <td>:</td>
+                                    <td>{{ $pd1->jenis_pengadaan }}</td>
+                                </tr>
+                            </div>
+                        </div> --}}
+                    {{-- <table class="table table-bordered" id="data1" style="width:100%"> --}}
+                    <table class="table table-bordered" id="" style="width:100%">
+                        
                         <thead>
                             <tr>
-                                <th>Id Pengadaan</th>
+                                <th>Pelaksana</th>
+                                <th>Pengadaan</th>
+                                <th>Kegiatan</th>
+                                <th>Alokasi</th>
+                                <th>Hari</th>
+                                <th>Tanggal</th>
+                                <th>Nomor</th>
+                                <th>Deskripsi Tanggal</th>
                                 {{-- <th>NO</th> --}}
+                                {{-- <th>Id Pengadaan</th>
                                 <th>Nama Pengadaan</th>
                                 <th>Nama Perusahaan</th>
-                                <th>Harga Kontrak</th>
+                                <th>Harga Kontrak</th> --}}
                                 {{-- <th>Alamat</th>
                                 <th>Status Aset</th> --}}
                                 {{-- <th>Luas Aset</th> --}}
@@ -88,26 +157,35 @@
                             @foreach ($pengadaan1 as $p1)
                             {{-- @foreach ($jadwal1 as $jd1) --}}
                             <tr>
-                                <td>{{ $p1->pengadaan_id }}</td>
+                                <td>{{ $p1->pt_pelaksana }}</td>
+                                <td>{{ $p1->jenis_pengadaan }}</td>
+                                {{-- <td>{{ $p1->pengadaan_id }}</td> --}}
+                                <td>{{ $p1->kegiatan }}</td>
+                                <td>{{ $p1->alokasi }}</td>
+                                <td>{{ $p1->hari }}</td>
+                                <td>{{ $p1->tanggal }}</td>
+                                <td>{{ $p1->nomor }}</td>
+                                <td>{{ $p1->deskripsi_tgl }}</td>
+                                {{-- <td>{{ $p1->pengadaan_id }}</td> --}}
                                 {{-- <td>{{ ++$i }}</td> --}}
                                 {{-- <td>{{ $jd1->jenis_pengadaan}}</td> --}}
-                                <td>{{ $p1->jenis_pengadaan}}</td>
+                                {{-- <td>{{ $p1->jenis_pengadaan}}</td> --}}
                                 {{-- <td>{{ $jd1->pt_pelaksana}}</td> --}}
-                                <td>{{ $p1->pt_pelaksana}}</td>
+                                {{-- <td>{{ $p1->pt_pelaksana}}</td> --}}
                                 {{-- @foreach ($pelaksana as $pelaksana)
                                     <td>{{ $pelaksana->pt_pelaksana }}</td>
                                     @endforeach --}}
                                     {{-- <td>{{ $jd1->nilai_negosiasi }}</td> --}}
-                                <td>{{ $p1->nilai_negosiasi }}</td>
+                                {{-- <td>{{ $p1->nilai_negosiasi }}</td> --}}
                                 {{-- <td>{{ $p1->kegiatan}}</td> --}}
 
                                 <td>
 
                                     {{-- <form action="{{ route('pengadaan.destroy1',$p1->id) }}" method="POST"> --}}
-
+                                        {{-- <a href="#" value="{{ action() }}" class="btn btn-xs btn-info modalMd" title="Show Data" data-toggle="modal" data-target="#modalMd"><span class="glyphicon glyphicon-eye-open"></span></a> --}}
                                         {{-- <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modalDetailPengadaan1-{{$jd1->pengadaan_id}}"> --}}
                                         <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modalDetailPengadaan1-{{$p1->id}}">
-                                            Detail
+                                            print
                                         </button>
                                         {{-- <a class="btn btn-info" href="{{ route('pengadaan.show',$p1->id) }}">Detail</a> --}}
                                         {{-- <a class="btn btn-primary" href="{{ route('pengadaan.edit',$pengadaan->id) }}">Edit</a> --}}
@@ -129,117 +207,6 @@
 </div>
 
 {{-- MODAL --}}
-{{-- Modal Detail Pengadaan1 --}}
-@foreach ( $pengadaan1 as $pg )
-{{-- @foreach ( $jadwal as $jd ) --}}
-    <div class="modal fade" id="modalDetailPengadaan1-{{$pg->id}}" tabindex="-1" role="dialog" aria-labelledby="modalEditPelaksanaLabel" aria-hidden="true">
-    {{-- <div class="modal fade" id="modalDetailPengadaan1-{{$jd->pengadaan_id}}" tabindex="-1" role="dialog" aria-labelledby="modalEditPelaksanaLabel" aria-hidden="true"> --}}
-        {{-- <div class="modal-dialog modal-xl-dialog-centered" role="document"> --}}
-        <div class=" modal-body modal-xl-dialog-centered" role="document">
-            <div class="modal-content ">
-                <div class="modal-header">
-                    <h5 class="modal-title"><b>Detail Data Pelaksana</b></h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    @csrf
-                    @if (session()->has('message'))
-                    <div class="alert alert-success">
-                        {{ session()->get('message') }}
-                    </div>
-                    @endif
-                    <h3>pelaksana : </h3>
-                    {{-- <h3>{{ $jd->pt_pelaksana}}</h3> --}}
-                    <h3>{{ $pg->pt_pelaksana}}</h3>
-                    <h3>pengadaan :</h3> 
-                    {{-- <h3>{{ $jd->jenis_pengadaan}}</h3>  --}}
-                    <h3>{{ $pg->jenis_pengadaan}}</h3>
-                    {{-- <form method="POST" action="{{ url('pelaksana/detail', $pg->id) }}"> --}}
-                    <table id="data1" class="table table-bordered" cellspacing="0">
-                        {{-- <table id="data1" class="table table-bordered" cellspacing="0" width="100%"> --}}
-                        {{-- <table class="table table-bordered " id="data1" style="width:100%"> --}}
-                        {{-- <table class="table table-bordered" id="example"> --}}
-                    <br>    
-                        <thead>
-                            <tr>
-                                <th>Id Pengadaan</th>
-                                <th>Kegiatan</th>
-                                <th>Alokasi</th>
-                                <th>Hari</th>
-                                <th>Tanggal</th>
-                                <th>Nomor</th>
-                                <th>Deskripsi Tanggal</th>
-                                <th>Action</th>
-    
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @foreach ($jadwal as $jd)
-                            <tr>
-                                {{-- <td>{{ ++$i }}</td> --}}
-                                {{-- <td>{{ $brg->id}}</td> --}}
-                                <td>{{ $jd->pengadaan_id }}</td>
-                                <td>{{ $jd->kegiatan }}</td>
-                                <td>{{ $jd->alokasi }}</td>
-                                <td>{{ $jd->hari }}</td>
-                                <td>{{ $jd->tanggal }}</td>
-                                <td>{{ $jd->nomor }}</td>
-                                <td>{{ $jd->deskripsi_tgl }}</td>
-                                {{-- <td>{{ $pg->jadwal->kegiatan }}</td>
-                                <td>{{ $pg->jadwal->alokasi }}</td>
-                                <td>{{ $pg->jadwal->hari }}</td>
-                                <td>{{ $pg->jadwal->tanggal }}</td>
-                                <td>{{ $pg->jadwal->nomor }}</td>
-                                <td>{{ $pg->jadwal->deskripsi_tgl }}</td> --}}
-                                {{-- <td>{{ $jd->kegiatan }}</td> --}}
-                                {{-- <td>{{ $jd->pengadaan_id }}</td>
-                                <td>{{ $jd->kegiatan }}</td>
-                                <td>{{ $jd->alokasi }}</td>
-                                <td>{{ $jd->hari }}</td>
-                                <td>{{ $jd->tanggal }}</td>
-                                <td>{{ $jd->nomor }}</td>
-                                <td>{{ $jd->deskripsi_tgl }}</td> --}}
-    
-                                <td>
-    
-                                    {{-- <form action="{{ route('barang.destroy',$barang->id) }}" method="POST"> --}}
-    
-                                        {{-- <a class="btn btn-info btn-lg" href="{{ route('barang.show',$barang->id) }}">
-                                            <!-- <a href="{{ route('barang.show',$barang->id) }}"> -->
-                                            Detail
-                                            <!-- <i class="mdi mdi-account-card-details"></i> -->
-                                        </a>
-                                        <a class="btn btn-primary" href="{{ route('barang.edit',$barang->id) }}">
-                                            <!-- <a href="{{ route('barang.edit',$barang->id) }}"> -->
-                                            Edit
-                                            <!-- <i class="mdi mdi-table-edit"></i> -->
-                                        </a>
-                                        @csrf
-                                        @method('DELETE')
-    
-                                        <button type="submit" class="btn btn-danger btn-lg">
-                                            <!-- <button type="submit" class="button-red"> -->
-                                            Hapus
-                                            <!-- <i class="mdi mdi-delete"></i> -->
-                                        </button> --}}
-                                    {{-- </form> --}}
-                                </td>
-                            </tr>
-                            @endforeach
-                        </tbody>
-                    </table>
-
-                </div>
-                <div class="modal-footer mt-3">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
-                    {{-- <button type="submit" class="btn btn-primary ">Simpan <i class="fa fa-save"></i></button> --}}
-                </div>
-            </div>
-        </div>
-    </div>
-@endforeach
 
 
 @endsection
