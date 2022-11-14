@@ -147,7 +147,7 @@
           <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
               <i class="icon-layout menu-icon"></i>
-              <span class="menu-title">Pengadaan</span>
+              <span class="menu-title">Cetak Pengadaan</span>
               <i class="menu-arrow"></i>
             </a>
             <div class="collapse" id="ui-basic">
@@ -159,7 +159,7 @@
           </li>
 
           {{-- Anggaran --}}
-          <li class="nav-item">
+          {{-- <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#form-elements" aria-expanded="false" aria-controls="form-elements">
               <i class="icon-columns menu-icon"></i>
               <span class="menu-title">Anggaran</span>
@@ -171,7 +171,7 @@
                 <li class="nav-item"><a class="nav-link" href="#">Penyerapan</a></li>
               </ul>
             </div>
-          </li>
+          </li> --}}
 
           {{-- User Pages --}}
           <li class="nav-item">

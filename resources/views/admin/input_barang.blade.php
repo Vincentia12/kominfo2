@@ -182,9 +182,19 @@
                     <div class="mb-4">
                         <div class="form-group">
                             <tr>
+                                <td>Pelaksana</td>
+                                <td>:</td>
+                                <td>{{ $detail->pengadaan->pelaksana->pt_pelaksana }}</td>
+                            </tr>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <div class="form-group">
+                            <tr>
                                 <td>Jenis Pengadaan</td>
                                 <td>:</td>
-                                <td>{{ $detail->jenis_pengadaan }}</td>
+                                <td>{{ $detail->pengadaan->jenis_pengadaan }}</td>
+                                {{-- <td>{{ $detail->pengadaan->nilai_negosiasi }}</td> --}}
                             </tr>
                         </div>
                     </div>
@@ -298,7 +308,7 @@
                     <tbody>
                         @foreach ($barang as $brng)
                         <tr>
-                            <td>{{ $brng->jenis_pengadaan }}</td>
+                            <td>{{ $brng->pengadaan->jenis_pengadaan }}</td>
                             <td>{{ $brng->barang }}</td>
                             <td>{{ $brng->jumlah_barang }}</td>
                             <td>{{ $brng->satuan }}</td>

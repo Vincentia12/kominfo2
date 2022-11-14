@@ -4,9 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Models\jadwal;
 use App\Models\pengadaan;
-use Illuminate\Support\Facades\DB;
+// use Illuminate\Support\Facades\DB;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class JadwalController extends Controller
 {
@@ -18,12 +19,12 @@ class JadwalController extends Controller
     public function index()
     {
         // $pengadaan = Pengadaan::all();
-        // $jadwal = Jadwal::all();
-        $jadwal = DB::table('jadwals')
-            ->join('pengadaans', 'pengadaan_id', '=', 'pengadaans.id')
-            ->select('jadwals.*', 'pengadaans.jenis_pengadaan',)
-            ->get();
-
+        $jadwal = Jadwal::all();
+        // $jadwal = DB::table('jadwals')
+        //     ->join('pengadaans', 'pengadaan_id', '=', 'pengadaans.id')
+        //     ->select('jadwals.*', 'pengadaans.jenis_pengadaan',)
+        //     ->get();
+        
         $pengadaan = Pengadaan::all();
 
         // $pengadaan = Pengadaan::all();
@@ -46,6 +47,60 @@ class JadwalController extends Controller
         //     ['jadwal' => $jadwal],
         //     ['pengadaan' => $pengadaan],
         // );
+        // $jadwal = Jadwal::all();
+
+        // return view('admin.input_jadwal', ['jadwal'=>$jadwal]);
+    }
+
+    public function index1()
+    {
+        // $pengadaan = Pengadaan::all();
+        // $jadwal1 = Jadwal::all();
+        $jadwal1 = DB::table('jadwals')
+            ->join('pengadaans', function ($join) {
+                $join->on('pengadaans.id', '=', 'jadwals.pengadaan_id');
+                    // ->where('jadwals.pengadaan_id', '<=', 10);
+                    // ->where('pengadaans.nilai_negosiasi', '<=', 50);
+            })
+            ->join('pelaksanas', function ($join) {
+                $join->on('pelaksanas.id', '=', 'pengadaans.pelaksana_id');
+                    // ->where('pengadaans.pelaksana_id', '<=', 50);
+            })
+            // ->join('pengadaans', 'pengadaan_id', '=', 'pengadaans.id')
+            // // ->where('pengadaans.nilai_negosiasi', '<=', 50)
+            // ->join('pelaksanas', 'pelaksana_id', '=', 'pelaksanas.id')
+            // // ->join('barangs', 'pengadaan_id', '=', 'pengadaans.id')
+            ->select('jadwals.*', 
+            'pelaksanas.pt_pelaksana', 'pelaksanas.alamat', 'pelaksanas.nama_pelaksana', 'pelaksanas.jabatan_pelaksana', 'pelaksanas.kode_rekening', 'pelaksanas.npwp', 'pelaksanas.tlp',
+            'pengadaans.jenis_pengadaan', 'pengadaans.total_hps', 'pengadaans.deskripsi_hps', 'pengadaans.harga_penawaran', 'pengadaans.deskripsi_penawaran', 'pengadaans.nilai_negosiasi', 'pengadaans.deskripsi_negosiasi',
+            // 'barangs.barang', 'barangs.jumlah_barang', 'barangs.satuan', 'barangs.harga_satuan'
+            )
+        ->get();
+        
+        // $pengadaan1 = DB::table('pengadaans')
+        //     ->where('nilai_negosiasi', '<=', 50)
+        //     ->join('pelaksanas', 'pelaksana_id', '=', 'pelaksanas.id')
+        //     // ->join('jadwals', 'pengadaan_id', '=', 'pengadaans.id')
+        //     // ->join('barangs', 'pengadaan_id', '=', 'pengadaans.id')
+        //     ->select('pengadaans.*', 'pelaksanas.pt_pelaksana', 'pelaksanas.alamat', 'pelaksanas.nama_pelaksana', 'pelaksanas.jabatan_pelaksana', 'pelaksanas.kode_rekening', 'pelaksanas.npwp', 'pelaksanas.tlp',
+        //         // 'jadwals.kegiatan', 'jadwals.alokasi', 'jadwals.hari', 'jadwals.tanggal', 'jadwals.nomor', 'jadwals.deskripsi_tgl',
+        //         // 'barangs.barang', 'barangs.jumlah_barang', 'barangs.satuan', 'barangs.harga_satuan'
+        //         )
+        //     ->get();
+
+        // $pengadaan = Pengadaan::all();
+        // $pelaksanas = pelaksana::orderBy('id','desc')->paginate(5);
+        // return view('pelaksanas.index', compact('pelaksanas'));
+        // $getmodel = new pelaksana()
+
+        // $pelaksana = Pelaksana::select('*')
+        //                 ->get();
+
+        return view(
+            'admin.pengadaan1',
+            ['jadwal1' => $jadwal1],
+            // ['pengadaan1' => $pengadaan1],
+        );
         // $jadwal = Jadwal::all();
 
         // return view('admin.input_jadwal', ['jadwal'=>$jadwal]);

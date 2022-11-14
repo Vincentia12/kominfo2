@@ -6,7 +6,7 @@ use App\Models\Pengadaan;
 use App\Models\pelaksana;
 use App\Models\barang;
 use App\Models\jadwal;
-
+use App\Models\Pejabat;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -19,61 +19,129 @@ class PengadaanController extends Controller
      */
     public function index()
     {
-        $pengadaan = DB::table('pengadaans')
-            ->join('pelaksanas', 'pelaksana_id', '=', 'pelaksanas.id')
-            ->select('pengadaans.*', 'pelaksanas.pt_pelaksana',)
-            ->get();
-        // $pengadaan = Pengadaan::all();
+        // $pengadaan = DB::table('pengadaans')
+        //     ->join('pelaksanas', 'pelaksana_id', '=', 'pelaksanas.id')
+        //     ->select('pengadaans.*', 'pelaksanas.pt_pelaksana',)
+        //     ->get();
         $pelaksana = Pelaksana::all();
+        $pengadaan = Pengadaan::all();
         // $barang = Barang::all();
         // $jadwals = Jadwal::all();
 
         return view(
             'admin.input_pengadaan',
             // 'admin.input_pengadaan',
+            ['pelaksana' => $pelaksana],
             ['pengadaan' => $pengadaan],
-            ['pelaksana' => $pelaksana]
+            // ['barang' => $barang],
         );
 
         // return view('admin.input_pengadaan',compact('pengadaans'))
         // ->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
+    // pengadaan1
     public function index1()
     {
-        // $pengadaan1 = Pengadaan::select('select * where nilai_negosiasi <= 10000000');
+        
+        // $pengadaan1 = DB::table('pelaksanas')
         $pengadaan1 = DB::table('pengadaans')
-            ->where('nilai_negosiasi', '<=', 50)
+            // ->select('*')
+            // ->join('pengadaans', 'pelaksanas.id', '=', 'pengadaans.pelaksana_id')
             ->join('pelaksanas', 'pelaksana_id', '=', 'pelaksanas.id')
-            ->select('pengadaans.*', 'pelaksanas.pt_pelaksana',)
-            ->get();
+            ->where('nilai_negosiasi', '<=', 50)
+            ->join('jadwals', 'pengadaans.id', '=', 'jadwals.pengadaan_id')
+            ->groupBy('jadwals.pengadaan_id')
+        // ->get();
+        // ->paginate(10);
+        ->paginate();
 
-        // $pengadaan = Pengadaan::all();
-        // $pelaksana = Pelaksana::all();
+        // $pejabat = Pejabat::all();
 
         return view(
             'admin.pengadaan1',
             ['pengadaan1' => $pengadaan1],
-            // ['pengadaan' => $pengadaan],
+            // ['pejabat' => $pejabat]
+            // ['jadwal' => $jadwal],
             // ['pelaksana' => $pelaksana]
         );
-
-        // return redirect()->route('pengadaan.index');
+// dd($pengadaan1);
     }
 
+    public function Cari1(Request $request)
+    {
+         // menangkap data pencarian
+        $cari1 = $request->cari1;
+        
+        // mengambil data dari table pegawai sesuai pencarian data
+        $pengadaan1 = Jadwal::where('pengadaan_id','like',"%".$cari1."%")
+        ->join('pengadaans', 'pengadaan_id', '=', 'pengadaans.id')
+        ->join('pelaksanas', 'pelaksana_id', '=', 'pelaksanas.id')
+        ->paginate();
+        
+        // $pejabat = Pejabat::all();
+            // mengirim data pegawai ke view index
+        // return view('admin.pengadaan1',['pengadaan1' => $pengadaan1]);
+        return view('admin.pengadaan1', compact('pengadaan1'));
+        // dd($pengadaan1, $pejabat);
+    }
+
+    //pengadaan2
     public function index2()
     {
-        // $pengadaan2 = Pengadaan::select('select * where nilai_negosiasi > 10000000');
         $pengadaan2 = DB::table('pengadaans')
-            ->where('nilai_negosiasi', '>', 50)
+            // ->select('*')
+            // ->join('pengadaans', 'pelaksanas.id', '=', 'pengadaans.pelaksana_id')
             ->join('pelaksanas', 'pelaksana_id', '=', 'pelaksanas.id')
-            ->select('pengadaans.*', 'pelaksanas.pt_pelaksana',)
-            ->get();
+            ->where('nilai_negosiasi', '>', 50)
+            ->join('jadwals', 'pengadaans.id', '=', 'jadwals.pengadaan_id')
+            ->groupBy('jadwals.pengadaan_id')
+        // ->get();
+        // ->paginate(10);
+        ->paginate();
+
+        // $pejabat = Pejabat::all();
 
         return view(
             'admin.pengadaan2',
-            ['pengadaan2' => $pengadaan2]
+            ['pengadaan2' => $pengadaan2],
+            // ['pejabat' => $pejabat]
+            // ['jadwal' => $jadwal],
+            // ['pelaksana' => $pelaksana]
         );
+// dd($pengadaan1);
+
+        // $pengadaan2 = Pengadaan::select('select * where nilai_negosiasi > 10000000');
+        // $pengadaan2 = DB::table('pengadaans')
+        //     ->where('nilai_negosiasi', '>', 50)
+        //     ->join('pelaksanas', 'pelaksana_id', '=', 'pelaksanas.id')
+        //     ->join('jadwals', 'pengadaan_id', '=', 'jadwals.id')
+        //     ->select('pengadaans.*', 'pelaksanas.pt_pelaksana', 'pelaksanas.alamat', 'pelaksanas.nama_pelaksana', 'pelaksanas.jabatan_pelaksana', 'pelaksanas.kode_rekening', 'pelaksanas.npwp', 'pelaksanas.tlp',
+        //         'jadwals.kegiatan', 'jadwals.alokasi', 'jadwals.hari', 'jadwals.tanggal', 'jadwals.nomor', 'jadwals.deskripsi_tgl',
+        //         'barangs.barang', 'barangs.jumlah_barang', 'barangs.satuan', 'barangs.harga_satuan')
+        //     ->get();
+
+        // return view(
+        //     'admin.pengadaan2',
+        //     ['pengadaan2' => $pengadaan2]
+        // );
+    }
+     public function Cari2(Request $request)
+    {
+         // menangkap data pencarian
+        $cari2 = $request->cari2;
+        
+        // mengambil data dari table pegawai sesuai pencarian data
+        $pengadaan2 = Jadwal::where('pengadaan_id','like',"%".$cari2."%")
+        ->join('pengadaans', 'pengadaan_id', '=', 'pengadaans.id')
+        ->join('pelaksanas', 'pelaksana_id', '=', 'pelaksanas.id')
+        ->paginate();
+        
+        // $pejabat = Pejabat::all();
+            // mengirim data pegawai ke view index
+        // return view('admin.pengadaan1',['pengadaan1' => $pengadaan1]);
+        return view('admin.pengadaan2', compact('pengadaan2'));
+        // dd($pengadaan1, $pejabat);
     }
 
     /**
@@ -160,10 +228,15 @@ class PengadaanController extends Controller
      * @param  \App\Models\pengadaan  $pengadaan
      * @return \Illuminate\Http\Response
      */
-    public function show(Pengadaan $pengadaan)
+    // public function show(Pengadaan $pengadaan)
+    public function show(Request $request,$id)
     {
         // return view('admin.input_pengadaan', compact('pengadaan'));
-        return view('pengadaan.index', compact('pengadaan'));
+        // return view('admin.detail', compact('pengadaan'));
+        $pengadaan1 = Pengadaan::find($id);
+        return view('admin.pengadaan1',compact('pengadaans'))
+        // ->renderSections()['content']
+        ;
     }
 
     /**
@@ -250,8 +323,14 @@ class PengadaanController extends Controller
     {
         $pengadaan->delete();
 
-        return redirect()->route('pengadaan.index')
-            ->with('success', 'Pengadaan Berhasil Dihapus!');
+        // return redirect()->route('pengadaan.index')
+        //     ->with('success', 'Pengadaan Berhasil Dihapus!');
+        return view(
+            'admin.input_pengadaan',
+            // 'admin.input_pengadaan',
+            // ['pelaksana' => $pelaksana],
+            ['pengadaan' => $pengadaan],
+        )->with('success', 'Pengadaan Berhasil Dihapus!');
     }
     // public function destroy1(pengadaan $pengadaan1)
     // {

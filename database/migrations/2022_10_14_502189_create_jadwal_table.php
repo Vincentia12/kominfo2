@@ -26,6 +26,7 @@ return new class extends Migration
 
             $table->id();
             $table->foreignId('pengadaan_id')->constrained();
+            // $table->foreignId('pelaksana_id')->constrained();
             $table->string('kegiatan');
             $table->string('alokasi');
             $table->string('hari');

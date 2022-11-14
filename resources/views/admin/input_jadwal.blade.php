@@ -53,6 +53,7 @@
         <table id="data1" class="table table-bordered" cellspacing="0">
           <thead>
             <tr>
+              {{-- <th>Pelaksana</th> --}}
               <th>Jenis Pengadaan</th>
               <th>Kegiatan/th</th>
               <th>Alokasi</th>
@@ -67,7 +68,8 @@
           <tbody>
             @foreach ($jadwal as $list)
             <tr>
-              <td>{{ $list->jenis_pengadaan }}</td>
+              {{-- <td>{{ $list->pengadaan->pelaksana->pt_pelaksana }}</td> --}}
+              <td>{{ $list->pengadaan->jenis_pengadaan }}</td>
               <td>{{ $list->kegiatan }}</td>
               <td>{{ $list->alokasi }}</td>
               <td>{{ $list->hari }}</td>
@@ -135,9 +137,39 @@
             <small class="text-danger">{{ $errors->first('jenis_pengadaan') }}</small>
           </div>
           <div class="mb-4">
-            <label for="message-text" class="col-form-label">Kegiatan/th</label>
-            <input type="text" class="form-control" id="kegiatan" name="kegiatan" placeholder="Nama Barang">
-            <small class="text-danger">{{ $errors->first('kegiatan') }}</small>
+            <label for="exampleInputName1" class="col-sm-3 col-form-label">Kegiatan</label>
+              <div class="col-sm-9">
+                <select class="form-control" name="kegiatan">
+                  <option>Pilih Pengadaan</option>
+                  <option>Nota Dinas dari KPA ke PPK</option>
+                  <option>Nota Dinas dari PPK ke Pejabat Pengadaan + </option>
+                  {{--  <option>Lampiran OE (HPS)</option>  --}}
+                  <option>Surat Undangan, Pengambilan Dokumen Kualifikasi dan Dokumen Pengadaan Langsung kepada Penyedia Barang/Jasa</option>
+                  {{--  <option>PAKTA  INTEGRITAS</option>
+                  <option>Surat Pernyataan Minat</option>
+                  <option>Pemasukan Dokumen Kualifikasi</option>
+                  <option>Daftar Hadir Pengembalian Dokumen Prakualifikasi</option>  --}}
+                  <option>BA. Evaluasi Dokumen Prakualifikasi</option>
+                  {{--  <option>Lampiran BA. Evaluasi Dokumen Prakualifikasi</option>  --}}
+                  <option>Surat Undangan Permintaan Penawaran Harga</option>
+                  <option>BA. Penjelasan Pekerjaan</option>
+                  {{--  <option>Pemasukan Penawaran</option>  --}}
+                  <option>BA. Pembukaan Penawaran</option>
+                  <option>Surat Undangan Klarifikasi/Negosiasi</option>
+                  <option>BA. Klarifikasi/Negosiasi</option>
+                  {{--  <option>Lampiran BA. Klarifikasi/Negosiasi</option>  --}}
+                  <option>BA. Hasil Pengadaan Langsung</option>
+                  <option>Nota Dinas dari Pejabat Pengadaan ke PPK</option>
+                  {{--  <option>Penetapan Penyedia Jasa</option>  --}}
+                  <option>Penunjukan Penyedia Barang/Jasa</option>
+                  <option>Surat Perintah Kerja</option>
+                  <option>Surat Perintah Mulai Kerja (SPMK)</option>
+                  <option>BA. Serah Terima Hasil Pekerjaan</option>
+                  <option>BA. Penyerahan Barang/Jasa</option>
+                  <option>BA. Hasil Pemeriksaan Administratif</option>
+                  <option>BA. Hasil Pembayaran</option>
+                </select>
+              </div>
           </div>
           <div class="mb-4">
             <label for="message-text" class="col-form-label">Alokasi</label>
@@ -275,9 +307,18 @@
           <div class="mb-4">
             <div class="form-group">
               <tr>
+                <td>Pelaksana</td>
+                <td>:</td>
+                <td>{{ $jd->pengadaan->pelaksana->pt_pelaksana }}</td>
+              </tr>
+            </div>
+          </div>
+          <div class="mb-4">
+            <div class="form-group">
+              <tr>
                 <td>Jenis Pengadaan</td>
                 <td>:</td>
-                <td>{{ $jd->jenis_pengadaan }}</td>
+                <td>{{ $jd->pengadaan->jenis_pengadaan }}</td>
               </tr>
             </div>
           </div>

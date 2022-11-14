@@ -55,20 +55,99 @@
             <div class="card-body">
                 <h3>Data Pengadaan <i class="fa-solid fa-less-than-equal "></i> 50 juta</h3>
                 <br>
+                <form class="form" method="get" action="{{ route('cari1') }}">
+                    <div class="form-group w-100 mb-9 mx-sm-3">
+                        <label for="cari" class="d-block mr-2 ">Pencarian</label>
+                        {{-- <input type="text" name="cari" class="form-control w-75 d-inline" id="cari" placeholder="Masukkan keyword"> --}}
+                        <select class="form-control w-25 mb-4 d-inline" name="cari1" id="cari1">
+                            <option> Pilih Pengadaan </option>
+                            @foreach ($pengadaan1 as $pd1)
+                            <option value="{{$pd1->pengadaan_id}}">{{ $pd1->jenis_pengadaan }}</option>
+                            @endforeach
+                        </select>
+                        <button type="submit" class="btn btn-primary mb-1">Cari</button>
+                    </div>
+                </form>
                 <div class="table-responsive">
                     @if ($message = Session::get('success'))
                     <div class="alert alert-success">
                         <p>{{ $message }}</p>
                     </div>
                     @endif
+                    
+                    {{-- <form class="form-inline">
+                        <div class="form-group mx-sm-3 mb-2">
+                          <label for="inputPassword2" class="sr-only">Pencarian</label>
+                          <input type="password" class="form-control" id="inputPassword2" placeholder="Password">
+                        </div>
+                        <button type="submit" class="btn btn-primary mb-2">Cari</button>
+                      </form> --}}
+                    <div class="mb-4">
+                        {{-- @if (Route::has('cari'))
+      
+                        <div class="form-group">
+                            <tr>
+                                <td>Nama CV Pelaksana</td>
+                                <td>:</td>
+                                <td>{{ $pd1->pt_pelaksana }}</td>
+                            </tr>
+                        </div>
+                @endif
 
-                    <table class="table table-bordered" id="data1" style="width:100%">
+                @else
+                <div class="form-group">
+                    <tr>
+                        <td>Nama CV Pelaksana</td>
+                        <td>:</td>
+                        <td>{{ Auth::pengadaan()->pd1 }}</td>
+                    </tr>
+                </div> --}}
+                {{-- <div class="col-12 col-xl-8 mb-4 mb-xl-0">
+                  <h3 class="font-weight-bold">Welcome {{ Auth::user()->name }}</h3>
+                  <h6 class="font-weight-normal mb-0">Selamat Datang di Sistem Informasi Keuangan Bidang Data dan Statistik <br> Dinas Komunikasi dan Informatika Provinsi Jawa Timur
+                    {{-- <span class="text-primary">3 unread alerts!</span> --}}
+                  {{-- </h6>
+                </div> --}}
+
+                {{-- @endguest --}}
+
+
+                            {{-- <div class="form-group">
+                                <tr>
+                                    <td>Nama CV Pelaksana</td>
+                                    <td>:</td>
+                                    <td>{{ $pd1->pt_pelaksana }}</td>
+                                </tr>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <div class="form-group">
+                                <tr>
+                                    <td>Jenis Pengadaan</td>
+                                    <td>:</td>
+                                    <td>{{ $pd1->jenis_pengadaan }}</td>
+                                </tr>
+                            </div>
+                        </div> --}}
+                    {{-- <table class="table table-bordered" id="data1" style="width:100%"> --}}
+                    <table class="table table-bordered" id="" style="width:100%">
+                        
                         <thead>
                             <tr>
+                                <th>Pelaksana</th>
+                                <th>Pengadaan</th>
+                                <th>Nilai Negosiasi</th>
+                                <th>Kegiatan</th>
+                                <th>Alokasi</th>
+                                <th>Hari</th>
+                                <th>Tanggal</th>
+                                <th>Nomor</th>
+                                <th>Deskripsi Tanggal</th>
                                 {{-- <th>NO</th> --}}
+                                {{-- <th>Id Pengadaan</th>
                                 <th>Nama Pengadaan</th>
                                 <th>Nama Perusahaan</th>
-                                <th>Harga Kontrak</th>
+                                <th>Harga Kontrak</th> --}}
                                 {{-- <th>Alamat</th>
                                 <th>Status Aset</th> --}}
                                 {{-- <th>Luas Aset</th> --}}
@@ -78,31 +157,47 @@
                                 <th>Tahun Kepemilikan</th>
                                 <th>Tahun Pembangunan</th>
                                 <th>Tahun Rehab</th> --}}
-                                {{-- <th>Keterangan</th> --}}
+                                {{-- <th>Kegiatan</th> --}}
                                 <th width="280px">Action</th>
                             </tr>
                         </thead>
                         <tbody>
                             {{-- @if(count($pengadaan)<=50) --}}
                             @foreach ($pengadaan1 as $p1)
+                            {{-- @foreach ($jadwal1 as $jd1) --}}
                             <tr>
+                                <td>{{ $p1->pt_pelaksana }}</td>
+                                <td>{{ $p1->jenis_pengadaan }}</td>
+                                <td>{{ $p1->nilai_negosiasi }}</td>
+                                <td>{{ $p1->kegiatan }}</td>
+                                <td>{{ $p1->alokasi }}</td>
+                                <td>{{ $p1->hari }}</td>
+                                <td>{{ $p1->tanggal }}</td>
+                                <td>{{ $p1->nomor }}</td>
+                                <td>{{ $p1->deskripsi_tgl }}</td>
+                                {{-- <td>{{ $p1->pengadaan_id }}</td> --}}
                                 {{-- <td>{{ ++$i }}</td> --}}
-                                <td>{{ $p1->jenis_pengadaan}}</td>
-                                <td>{{ $p1->pt_pelaksana}}</td>
+                                {{-- <td>{{ $jd1->jenis_pengadaan}}</td> --}}
+                                {{-- <td>{{ $p1->jenis_pengadaan}}</td> --}}
+                                {{-- <td>{{ $jd1->pt_pelaksana}}</td> --}}
+                                {{-- <td>{{ $p1->pt_pelaksana}}</td> --}}
                                 {{-- @foreach ($pelaksana as $pelaksana)
                                     <td>{{ $pelaksana->pt_pelaksana }}</td>
-                                @endforeach --}}
-                                <td>{{ $p1->nilai_negosiasi }}</td>
+                                    @endforeach --}}
+                                    {{-- <td>{{ $jd1->nilai_negosiasi }}</td> --}}
+                                {{-- <td>{{ $p1->nilai_negosiasi }}</td> --}}
+                                {{-- <td>{{ $p1->kegiatan}}</td> --}}
 
                                 <td>
 
                                     {{-- <form action="{{ route('pengadaan.destroy1',$p1->id) }}" method="POST"> --}}
-
-                                        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modalDetailPengadaan1{{$p1->id}}">
-                                            Detail
+                                        {{-- <a href="#" value="{{ action() }}" class="btn btn-xs btn-info modalMd" title="Show Data" data-toggle="modal" data-target="#modalMd"><span class="glyphicon glyphicon-eye-open"></span></a> --}}
+                                        {{-- <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modalDetailPengadaan1-{{$jd1->pengadaan_id}}"> --}}
+                                        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modalprint-{{$p1->id}}">
+                                            print
                                         </button>
-                                        {{-- <a class="btn btn-info" href="{{ route('pengadaan.show',$pengadaan->id) }}">Detail</a>
-                                        <a class="btn btn-primary" href="{{ route('pengadaan.edit',$pengadaan->id) }}">Edit</a> --}}
+                                        {{-- <a class="btn btn-info" href="{{ route('pengadaan.show',$p1->id) }}">Detail</a> --}}
+                                        {{-- <a class="btn btn-primary" href="{{ route('pengadaan.edit',$pengadaan->id) }}">Edit</a> --}}
                                         @csrf
                                         @method('DELETE')
 
@@ -121,93 +216,15 @@
 </div>
 
 {{-- MODAL --}}
-{{-- Modal Detail Pelaksana1 --}}
-@foreach ( $pengadaan1 as $pg )
-    <div class="modal fade" id="modalDetailPengadaan1{{$pg->id}}" tabindex="-1" role="dialog" aria-labelledby="modalEditPelaksanaLabel" aria-hidden="true">
+{{-- Modal Detail Pelaksana --}}
+@foreach ( $pengadaan1 as $pl )
+    <div class="modal fade" id="modalprint-{{$pl->id}}" tabindex="-1" role="dialog" aria-labelledby="modalEditPelaksanaLabel" aria-hidden="true">
         <div class="modal-dialog modal-xl-dialog-centered" role="document">
-            <div class="modal-content ">
-                <div class="modal-header">
-                    <h5 class="modal-title"><b>Detail Data Pelaksana</b></h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    @csrf
-                    @if (session()->has('message'))
-                    <div class="alert alert-success">
-                        {{ session()->get('message') }}
-                    </div>
-                    @endif
-                    <h3>{{ $pg->pt_pelaksana}}</h3>
-                    <h3>{{ $pg->jenis_pengadaan}}</h3>
-                    <table id="data1" class="table table-bordered" cellspacing="0">
-                        {{-- <table id="data1" class="table table-bordered" cellspacing="0" width="100%"> --}}
-                        {{-- <table class="table table-bordered " id="data1" style="width:100%"> --}}
-                        {{-- <table class="table table-bordered" id="example"> --}}
-                    <br>    
-                        <thead>
-                            <tr>
-                                <th>Kegiatan/th>
-                                <th>Alokasi</th>
-                                <th>Hari</th>
-                                <th>Tanggal</th>
-                                <th>Nomor</th>
-                                <th>Deskripsi Tanggal</th>
-                                <th>Action</th>
-    
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {{-- @foreach ($barang as $barang) --}}
-                            <tr>
-                                {{-- <td>{{ ++$i }}</td> --}}
-                                {{-- <td>{{ $brg->id}}</td> --}}
-                                {{-- <td>{{ $pg->kegiatan }}</td>
-                                <td>{{ $pg->alokasi }}</td>
-                                <td>{{ $pg->hari }}</td>
-                                <td>{{ $pg->tanggal }}</td>
-                                <td>{{ $pg->nomor }}</td>
-                                <td>{{ $pg->deskripsi_tgl }}</td> --}}
-    
-                                <td>
-    
-                                    {{-- <form action="{{ route('barang.destroy',$barang->id) }}" method="POST"> --}}
-    
-                                        {{-- <a class="btn btn-info btn-lg" href="{{ route('barang.show',$barang->id) }}">
-                                            <!-- <a href="{{ route('barang.show',$barang->id) }}"> -->
-                                            Detail
-                                            <!-- <i class="mdi mdi-account-card-details"></i> -->
-                                        </a>
-                                        <a class="btn btn-primary" href="{{ route('barang.edit',$barang->id) }}">
-                                            <!-- <a href="{{ route('barang.edit',$barang->id) }}"> -->
-                                            Edit
-                                            <!-- <i class="mdi mdi-table-edit"></i> -->
-                                        </a>
-                                        @csrf
-                                        @method('DELETE')
-    
-                                        <button type="submit" class="btn btn-danger btn-lg">
-                                            <!-- <button type="submit" class="button-red"> -->
-                                            Hapus
-                                            <!-- <i class="mdi mdi-delete"></i> -->
-                                        </button> --}}
-                                    {{-- </form> --}}
-                                </td>
-                            </tr>
-                            {{-- @endforeach --}}
-                        </tbody>
-                    </table>
-
-                </div>
-                <div class="modal-footer mt-3">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
-                    {{-- <button type="submit" class="btn btn-primary ">Simpan <i class="fa fa-save"></i></button> --}}
-                </div>
+            <div class="modal-content">
+                @yield('content')
             </div>
         </div>
     </div>
 @endforeach
-
 
 @endsection
