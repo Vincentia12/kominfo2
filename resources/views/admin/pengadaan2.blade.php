@@ -55,6 +55,19 @@
             <div class="card-body">
                 <h3>Data Pengadaan <i class="fa-solid fa-greater-than "></i> 50 juta</h3>
                 <br>
+                <form class="form" method="get" action="{{ route('cari1') }}">
+                    <div class="form-group w-100 mb-9 mx-sm-3">
+                        <label for="cari" class="d-block mr-2 ">Pencarian</label>
+                        {{-- <input type="text" name="cari" class="form-control w-75 d-inline" id="cari" placeholder="Masukkan keyword"> --}}
+                        <select class="form-control w-25 mb-4 d-inline" name="cari1" id="cari2">
+                            <option> Pilih Pengadaan </option>
+                            @foreach ($pengadaan2 as $pd2)
+                            <option value="{{$pd2->pengadaan_id}}">{{ $pd2->jenis_pengadaan }}</option>
+                            @endforeach
+                        </select>
+                        <button type="submit" class="btn btn-primary mb-1">Cari</button>
+                    </div>
+                </form>
                 <div class="table-responsive">
                     @if ($message = Session::get('success'))
                     <div class="alert alert-success">
@@ -62,13 +75,22 @@
                     </div>
                     @endif
 
-                    <table class="table table-bordered" id="data1" style="width:100%">
+                    <table class="table table-bordered" id="" style="width:100%">
                         <thead>
                             <tr>
+                                <th>Pelaksana</th>
+                                <th>Pengadaan</th>
+                                <th>Nilai Negosiasi</th>
+                                <th>Kegiatan</th>
+                                <th>Alokasi</th>
+                                <th>Hari</th>
+                                <th>Tanggal</th>
+                                <th>Nomor</th>
+                                <th>Deskripsi Tanggal</th>
                                 {{-- <th>NO</th> --}}
-                                <th>Nama Pengadaan</th>
+                                {{-- <th>Nama Pengadaan</th>
                                 <th>Nama Perusahaan</th>
-                                <th>Harga Kontrak</th>
+                                <th>Harga Kontrak</th> --}}
                                 {{-- <th>Alamat</th>
                                 <th>Status Aset</th> --}}
                                 {{-- <th>Luas Aset</th> --}}
@@ -85,10 +107,19 @@
                         <tbody>
                             @foreach ($pengadaan2 as $p2)
                             <tr>
-                                {{-- <td>{{ ++$i }}</td> --}}
-                                <td>{{ $p2->jenis_pengadaan}}</td>
                                 <td>{{ $p2->pt_pelaksana }}</td>
+                                <td>{{ $p2->jenis_pengadaan }}</td>
                                 <td>{{ $p2->nilai_negosiasi }}</td>
+                                <td>{{ $p2->kegiatan }}</td>
+                                <td>{{ $p2->alokasi }}</td>
+                                <td>{{ $p2->hari }}</td>
+                                <td>{{ $p2->tanggal }}</td>
+                                <td>{{ $p2->nomor }}</td>
+                                <td>{{ $p2->deskripsi_tgl }}</td>
+                                {{-- <td>{{ ++$i }}</td> --}}
+                                {{-- <td>{{ $p2->jenis_pengadaan}}</td>
+                                <td>{{ $p2->pt_pelaksana }}</td>
+                                <td>{{ $p2->nilai_negosiasi }}</td> --}}
                                 {{-- <td>{{ $aset->alamat_aset }}</td>
                                 <td>{{ $aset->status_aset }}</td> --}}
 

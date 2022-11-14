@@ -68,7 +68,7 @@
           <tbody>
             @foreach ($pengadaan as $p)
             <tr>
-              <td>{{ $p->pt_pelaksana }}</td>
+              <td>{{ $p->pelaksana->pt_pelaksana }}</td>
               <td>{{ $p->jenis_pengadaan }}</td>
               <td>{{ $p->nilai_negosiasi}}</td>
               <td>

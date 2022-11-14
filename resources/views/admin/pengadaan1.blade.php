@@ -55,25 +55,33 @@
             <div class="card-body">
                 <h3>Data Pengadaan <i class="fa-solid fa-less-than-equal "></i> 50 juta</h3>
                 <br>
+                <form class="form" method="get" action="{{ route('cari1') }}">
+                    <div class="form-group w-100 mb-9 mx-sm-3">
+                        <label for="cari" class="d-block mr-2 ">Pencarian</label>
+                        {{-- <input type="text" name="cari" class="form-control w-75 d-inline" id="cari" placeholder="Masukkan keyword"> --}}
+                        <select class="form-control w-25 mb-4 d-inline" name="cari1" id="cari1">
+                            <option> Pilih Pengadaan </option>
+                            @foreach ($pengadaan1 as $pd1)
+                            <option value="{{$pd1->pengadaan_id}}">{{ $pd1->jenis_pengadaan }}</option>
+                            @endforeach
+                        </select>
+                        <button type="submit" class="btn btn-primary mb-1">Cari</button>
+                    </div>
+                </form>
                 <div class="table-responsive">
                     @if ($message = Session::get('success'))
                     <div class="alert alert-success">
                         <p>{{ $message }}</p>
                     </div>
                     @endif
-                    <form class="form" method="get" action="{{ route('cari1') }}">
-                        <div class="form-group w-100 mb-3">
-                            <label for="cari" class="d-block mr-2">Pencarian</label>
-                            {{-- <input type="text" name="cari" class="form-control w-75 d-inline" id="cari" placeholder="Masukkan keyword"> --}}
-                            <select class="form-control" name="cari" id="cari">
-                                <option> Pilih Pengadaan </option>
-                                @foreach ($pengadaan1 as $pd1)
-                                <option value="{{$pd1->pengadaan_id}}">{{ $pd1->jenis_pengadaan }}</option>
-                                @endforeach
-                            </select>
-                            <button type="submit" class="btn btn-primary mb-1">Cari</button>
+                    
+                    {{-- <form class="form-inline">
+                        <div class="form-group mx-sm-3 mb-2">
+                          <label for="inputPassword2" class="sr-only">Pencarian</label>
+                          <input type="password" class="form-control" id="inputPassword2" placeholder="Password">
                         </div>
-                    </form>
+                        <button type="submit" class="btn btn-primary mb-2">Cari</button>
+                      </form> --}}
                     <div class="mb-4">
                         {{-- @if (Route::has('cari'))
       
@@ -128,6 +136,7 @@
                             <tr>
                                 <th>Pelaksana</th>
                                 <th>Pengadaan</th>
+                                <th>Nilai Negosiasi</th>
                                 <th>Kegiatan</th>
                                 <th>Alokasi</th>
                                 <th>Hari</th>
@@ -159,7 +168,7 @@
                             <tr>
                                 <td>{{ $p1->pt_pelaksana }}</td>
                                 <td>{{ $p1->jenis_pengadaan }}</td>
-                                {{-- <td>{{ $p1->pengadaan_id }}</td> --}}
+                                <td>{{ $p1->nilai_negosiasi }}</td>
                                 <td>{{ $p1->kegiatan }}</td>
                                 <td>{{ $p1->alokasi }}</td>
                                 <td>{{ $p1->hari }}</td>
@@ -184,7 +193,7 @@
                                     {{-- <form action="{{ route('pengadaan.destroy1',$p1->id) }}" method="POST"> --}}
                                         {{-- <a href="#" value="{{ action() }}" class="btn btn-xs btn-info modalMd" title="Show Data" data-toggle="modal" data-target="#modalMd"><span class="glyphicon glyphicon-eye-open"></span></a> --}}
                                         {{-- <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modalDetailPengadaan1-{{$jd1->pengadaan_id}}"> --}}
-                                        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modalDetailPengadaan1-{{$p1->id}}">
+                                        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modalprint-{{$p1->id}}">
                                             print
                                         </button>
                                         {{-- <a class="btn btn-info" href="{{ route('pengadaan.show',$p1->id) }}">Detail</a> --}}
@@ -207,6 +216,15 @@
 </div>
 
 {{-- MODAL --}}
-
+{{-- Modal Detail Pelaksana --}}
+@foreach ( $pengadaan1 as $pl )
+    <div class="modal fade" id="modalprint-{{$pl->id}}" tabindex="-1" role="dialog" aria-labelledby="modalEditPelaksanaLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl-dialog-centered" role="document">
+            <div class="modal-content">
+                @yield('content')
+            </div>
+        </div>
+    </div>
+@endforeach
 
 @endsection

@@ -19,12 +19,12 @@ class JadwalController extends Controller
     public function index()
     {
         // $pengadaan = Pengadaan::all();
-        // $jadwal = Jadwal::all();
-        $jadwal = DB::table('jadwals')
-            ->join('pengadaans', 'pengadaan_id', '=', 'pengadaans.id')
-            ->select('jadwals.*', 'pengadaans.jenis_pengadaan',)
-            ->get();
-
+        $jadwal = Jadwal::all();
+        // $jadwal = DB::table('jadwals')
+        //     ->join('pengadaans', 'pengadaan_id', '=', 'pengadaans.id')
+        //     ->select('jadwals.*', 'pengadaans.jenis_pengadaan',)
+        //     ->get();
+        
         $pengadaan = Pengadaan::all();
 
         // $pengadaan = Pengadaan::all();

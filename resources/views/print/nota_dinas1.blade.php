@@ -1,17 +1,19 @@
-@extends('layouts/index')
-@section('input-data', 'active')
+@extends('admin/pengadaan1')
+{{-- @section('input-data', 'active')
 @section('input-data-collapse', 'collapsed')
-@section('input-sudah', 'active')
+@section('input-sudah', 'active') --}}
 @section('content')
-@section('judul')
+{{-- @section('print') --}}
+{{-- @section('judul')
 {{'Input Data / Belum Tersertifikasi'}}
 @endsection
 <!-- @section('title')
 {{'Input Data yang Belum Tersertifikasi'}}
-@endsection -->
+@endsection --> --}}
 
 <!-- Content Row -->
-
+{{-- @extends('admi/pengad')
+@section('print') --}}
 @if ($errors->any())
 <div class="alert alert-danger">
     <strong>Whoops!</strong> There were some problems with your input.<br><br>
@@ -172,6 +174,7 @@
                 <tr>
                     <td width="300"> </td>
                     <td>NIP. 19650909 199403 2 006</td>
+                    {{-- <td>NIP. {{ $pejabat-> }}</td> --}}
                     <td width="50"> </td>
                 </tr>
             </table>

@@ -18,11 +18,11 @@ class BarangController extends Controller
      */
     public function index()
     {
-        $barang = DB::table('barangs')
-            ->join('pengadaans', 'pengadaan_id', '=', 'pengadaans.id')
-            ->select('barangs.*', 'pengadaans.jenis_pengadaan',)
-            ->get();
-        // $barang = Barang::all();
+        // $barang = DB::table('barangs')
+        //     ->join('pengadaans', 'pengadaan_id', '=', 'pengadaans.id')
+        //     ->select('barangs.*', 'pengadaans.jenis_pengadaan',)
+        //     ->get();
+        $barang = Barang::all();
         $pengadaan = Pengadaan::all();
 
         return view(
