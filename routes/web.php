@@ -181,6 +181,12 @@ Route::get('/undangan_persiapan', function () {
 Route::get('/pakta_integritas', function () {
     return view('print.pakta_integritas');
 });
+Route::get('/daftar_hadir', function () {
+    return view('print.daftar_hadir');
+});
+Route::get('/ba_evaluasi', function () {
+    return view('print.ba_evaluasi');
+});
 Route::get('/undangan_penawaran', function () {
     return view('print.undangan_penawaran');
 });
@@ -196,8 +202,17 @@ Route::get('/undangan_nego', function () {
 Route::get('/ba_nego', function () {
     return view('print.ba_nego');
 });
-Route::get('/nota_dinas3', function () {
-    return view('print.nota_dinas3');
+Route::get('/nota_dinas4', function () {
+    return view('print.nota_dinas4');
+});
+Route::get('/penetapan_penyedia', function () {
+    return view('print.penetapan_penyedia');
+});
+Route::get('/undangan_penyedia', function () {
+    return view('print.undangan_penyedia');
+});
+Route::get('/kuitansi_kontrak', function () {
+    return view('print.kuitansi_kontrak');
 });
 // Route::resource('/getusr',[App\Http\Controllers\AdminController::class, 'index']);
 

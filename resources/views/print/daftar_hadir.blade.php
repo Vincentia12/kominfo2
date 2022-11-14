@@ -70,7 +70,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr align="center">
+                    <tr height="100">
                         <th scope="row">1</th>
                         <td>CV. PATRIA NUGRAHA</td>
                         <td>Jl. Kanwa No. 22-A, Surabaya</td>

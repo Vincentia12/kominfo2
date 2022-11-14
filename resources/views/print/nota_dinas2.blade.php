@@ -111,7 +111,7 @@
             <br>
             <table width="565px" border="1" align="center">
                 <thead>
-                    <tr>
+                    <tr align="center">
                         <th width="50px" scope="col">No</th>
                         <th width="265px" scope="col">Belanja Alat/Bahan Untuk Kegiatan Kantor </th>
                         <th width="100px" scope="col">Jumlah Barang</th>
@@ -122,20 +122,20 @@
                     <tr>
                         <th scope="row">1</th>
                         <td>Toner Printer Tinta Printer Epson L-1300</td>
-                        <td>2</td>
-                        <td>Buah</td>
+                        <td align="center">2</td>
+                        <td align="center">Buah</td>
                     </tr>
                     <tr>
                         <th scope="row">2</th>
                         <td>Toner Printer Tinta Printer Epson L-1800</td>
-                        <td>1</td>
-                        <td>Buah</td>
+                        <td align="center">1</td>
+                        <td align="center">Buah</td>
                     </tr>
                     <tr>
                         <th scope="row">3</th>
                         <td>Toner Printer Tinta Printer Epson L-6160</td>
-                        <td>1</td>
-                        <td>Buah</td>
+                        <td align="center">1</td>
+                        <td align="center">Buah</td>
                     </tr>
                 </tbody>
             </table>

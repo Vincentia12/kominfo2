@@ -47,7 +47,7 @@
             <table border="0" align="center">
                 <tr>
                     <td width="300"> </td>
-                    <td>Surabaya, 22 Agustus 2022</td>
+                    <td>Surabaya, 8 September 2022</td>
                     <td width="50"> </td>
                 </tr>
                 <tr>
@@ -61,7 +61,7 @@
                 <tr>
                     <td width="80">Nomor</td>
                     <td>:</td>
-                    <td width="175">020/654.5/114.6/2022</td>
+                    <td width="175">020/654.13/114.6/2022</td>
                     <td>Yth. Sdr. Direktur CV. PATRIA NUGRAHA</td>
                 </tr>
             </table>
@@ -87,7 +87,7 @@
                 <tr>
                     <td width="80">Perihal</td>
                     <td>:</td>
-                    <td width="335">Undangan Permintaan </td>
+                    <td width="335">Penunjukan Penyedia</td>
                     <td width="140">SURABAYA</td>
                 </tr>
             </table>
@@ -95,112 +95,72 @@
                 <tr>
                     <td width="80"> </td>
                     <td width="5"> </td>
-                    <td width="475">Penawaran Harga</td>
+                    <td width="475">Barang/Jasa</td>
                 </tr>
             </table>
             <br>
             <table border="0" align="center" font-size="2">
                 <tr>
-                    <td width="560">Bahwa dalam rangka pelaksanaan proses pengadaan langsung, untuk :</td>
+                    <td width="560">Sesuai dengan Surat Penawaran Saudara tanggal 24 Agustus 2022 Nomor : 233/PEN/PN/IX/2022 dan Nota Dinas tanggal 5 September 2022 Nomor : 020/654.10/114.6/2022 perihal Penyampaian Berita Acara Proses Pengadaan Langsung maka Pekerjaan Pengadaan Belanja Alat/Bahan Kapasitas Kelembagaan Statistik Sektoral Tiner Printer kami menunjuk :</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
                 <tr>
-                    <td width="150">Paket Pekerjaan</td>
-                    <td>:</td>
-                    <td width="405">Belanja Alat/Bahan Kapasitas Kelembagaan Statistik</td>
+                    <td width="190">Nama Perusahaan</td>
+                    <td width="10">:</td>
+                    <td width="360">CV. PATRIA NUGRAHA</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
                 <tr>
-                    <td width="155"> </td>
-                    <td> </td>
-                    <td width="405">Sektoral Toner Printer</td>
+                    <td width="190">Nama Penanggung Jawab</td>
+                    <td width="10">:</td>
+                    <td width="360">MANUHUTU ARMAND FX</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
                 <tr>
-                    <td width="150">Lingkup pekerjaan</td>
-                    <td>:</td>
-                    <td width="405">PK melalui Pejabat Pengadaan mengundang Penyedia</td>
+                    <td width="190">Alamat Perusahaan</td>
+                    <td width="10">:</td>
+                    <td width="360">Jalan  Kanwa No. 22-A Surabaya</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
                 <tr>
-                    <td width="155"> </td>
-                    <td> </td>
-                    <td width="405"> Barang untuk menyampaikan penawaran atas paket pengadaan barang yang tercantum dalam Spesifikasi Teknis, Daftar Kuantitas dan Harga serta nomor pekerjaan yang tercantum dalam LDP. Penyedia Barang yang ditunjuk berkewajiban untuk menyelesaikan pekerjaan dalam jangka waktu dan perkiraan batas akhir waktu penyelesaian yang tercantum dalam LDP.</td>
+                    <td width="190">Nomor Pokok Wajib Pajak</td>
+                    <td width="10">:</td>
+                    <td width="360">01.510.544.8-609.000</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
                 <tr>
-                    <td width="150">Sumber Dana</td>
-                    <td>:</td>
-                    <td width="405">APBD Provinsi Jawa Timur Tahun Anggaran 2022</td>
+                    <td width="190">Harga Penawaran</td>
+                    <td width="10">:</td>
+                    <td width="360">Rp. 5.546.670,- (Lima Juta Lima Ratus Empat</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
                 <tr>
-                    <td width="150">Nilai HPS</td>
-                    <td>:</td>
-                    <td width="405">Rp. 5.688.750,-</td>
-                </tr>
-            </table>
-            <table border="0" align="center" font-size="2">
-                <tr>
-                    <td width="155"> </td>
-                    <td> </td>
-                    <td width="405">(Lima Juta Enam Ratus Delapan Puluh Delapan Ribu Tujuh Ratus Lima Puluh Rupiah)</td>
+                    <td width="190">Setelah Negosiasi</td>
+                    <td width="10"> </td>
+                    <td width="360">Puluh Enam Ribu Enam Ratus Tujuh Puluh Rupiah)</td>
                 </tr>
             </table>
             <br>
             <table border="0" align="center" font-size="2">
                 <tr>
-                    <td width="560">Diharap saudara untuk menyampaikan dokumen penawaran paling lambat pada :</td>
+                    <td width="560">Dengan ketentuan bahwa, pekerjaan dimaksud dilaksanakan terhitung sejak ditandatangani Surat Perintah Mulai Kerja.</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
                 <tr>
-                    <td width="100">Hari/Tanggal</td>
-                    <td>:</td>
-                    <td width="455">Selasa/16 Agustus 2022</td>
-                </tr>
-            </table>
-            <table border="0" align="center" font-size="2">
-                <tr>
-                    <td width="100">Jam</td>
-                    <td>:</td>
-                    <td width="455">10.00 WIB</td>
-                </tr>
-            </table>
-            <table border="0" align="center" font-size="2">
-                <tr>
-                    <td width="100">Tempat</td>
-                    <td>:</td>
-                    <td width="455">Ruang Argopuro lt.II Dinas Komunikasi Dan Informatika</td>
-                </tr>
-            </table>
-            <table border="0" align="center" font-size="2">
-                <tr>
-                    <td width="105"> </td>
-                    <td> </td>
-                    <td width="455">Provinsi Jawa Timur Jl. Ahmad Yani 242 - 244 Surabaya</td>
-                </tr>
-            </table>
-            <table border="0" align="center" font-size="2">
-                <tr>
-                    <td width="560">Sebelum batas waktu penyampaian dokumen penawaran apabila dalam dokumen Pengadaan Langsung sebagaimana terlampir terdapat hal yang tidak jelas atau perlu penjelasan maka dapat ditanyakan kepada Pejabat Pengadaan.</td>
-                </tr>
-            </table>
-            <table border="0" align="center" font-size="2">
-                <tr>
-                    <td width="560">Demikian disampaikan atas perhatian dan partisipasi Saudara diucapkan terima kasih.</td>
+                    <td width="560">Demikian untuk menjadi maklum.</td>
                 </tr>
             </table>
             <table border="0" align="center">
                 <tr>
                     <td width="300"> </td>
-                    <td>PEJABAT PENGADAAN</td>
+                    <td>PEJABAT PEMBUAT KOMITMEN</td>
                     <td width="50"> </td>
                 </tr>
             </table>
@@ -210,12 +170,12 @@
             <table border="0" align="center">
                 <tr>
                     <td width="300"> </td>
-                    <td>ADI KURNIAWAN.S.Kom.,M.Kom</td>
+                    <td>I WAYAN RUDY ARTHA, S.Kom</td>
                     <td width="50"> </td>
                 </tr>
                 <tr>
                     <td width="300"> </td>
-                    <td>NIP. 19890618 201403 1 002</td>
+                    <td>NIP. 19770517 200901 1 005</td>
                     <td width="50"> </td>
                 </tr>
             </table>
