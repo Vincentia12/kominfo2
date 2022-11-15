@@ -127,6 +127,9 @@ Route::get('/pengadaan2cari', [PengadaanController::class, 'cari2'])->name('cari
 // Route::get('/pejabat/edit/{id}', [PejabatController::class, 'edit']);
 Route::post('/pejabat/update/{id}', [PejabatController::class, 'update']);
 
+//print
+Route::get('notadinas1', [PdfController::class, 'index']);
+Route::get('print_notadinas1', [PdfController::class, 'nota_dinas1']);
 
 // Route::get('/input_jadwal', function () {
 //     return view('admin.input_jadwal');
