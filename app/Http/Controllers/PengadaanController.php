@@ -238,6 +238,28 @@ class PengadaanController extends Controller
         // ->renderSections()['content']
         ;
     }
+    public function show1(Pengadaan $pengadaan)
+    // public function show(Request $request,$id)
+    {
+        // return view('admin.input_pengadaan', compact('pengadaan'));
+        // return view('admin.detail', compact('pengadaan'));
+        // $pengadaan1 = Pengadaan::find($id);
+        // return view('admin.pengadaan1',compact('pengadaans'))
+        return view('print.nota_dinas2',compact('pengadaan'))
+        // ->renderSections()['content']
+        ;
+    }
+    public function show2(Pengadaan $pengadaan)
+    // public function show(Request $request,$id)
+    {
+        // return view('admin.input_pengadaan', compact('pengadaan'));
+        // return view('admin.detail', compact('pengadaan'));
+        // $pengadaan1 = Pengadaan::find($id);
+        // return view('admin.pengadaan1',compact('pengadaans'))
+        return view('print.undangan_nego',compact('pengadaan'))
+        // ->renderSections()['content']
+        ;
+    }
 
     /**
      * Show the form for editing the specified resource.
