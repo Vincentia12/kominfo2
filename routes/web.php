@@ -225,6 +225,12 @@ Route::get('/undangan_penyedia', function () {
 Route::get('/kuitansi_kontrak', function () {
     return view('print.kuitansi_kontrak');
 });
+Route::get('/evaluasi_dok', function () {
+    return view('print.evaluasi_dok');
+});
+Route::get('/surat_perintah_kerja', function () {
+    return view('print.surat_perintah_kerja');
+});
 // Route::resource('/getusr',[App\Http\Controllers\AdminController::class, 'index']);
 
 // Route::get('/editpejabat/{}')

@@ -268,4 +268,11 @@
     </div>
 </div>
 
+<div class="col-12 grid-margin stretch-card">
+    <div class="card shadow">
+        <div class="card-body">
+        
+        </div>
+    </div>
+</div>
 @endsection
