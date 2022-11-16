@@ -20,6 +20,7 @@ class PdfController extends Controller
             ->join('barangs', 'pengadaans.id', '=', 'barangs.pengadaan_id')
             // ->select('pengadaans.*', 'pelaksanas.pt_pelaksana',)
             ->select('pengadaans.*', 'pelaksanas.*', 'jadwals.*', 'barangs.*')
+            // ->where('jadwals.kegiatan', '=', 'Nota Dinas dari KPA ke PPK')
             ->get();
         // $pengadaan = DB::table('pengadaans')
         //     // ->select('*')
@@ -44,15 +45,18 @@ class PdfController extends Controller
 
     public function nota_dinas1() 
     {
-        $pengadaan = DB::table('pengadaans')
-            // ->select('*')
-            // ->join('pengadaans', 'pelaksanas.id', '=', 'pengadaans.pelaksana_id')
-            ->join('pelaksanas', 'pelaksana_id', '=', 'pelaksanas.id')
-            ->join('jadwals', 'pengadaans.id', '=', 'jadwals.pengadaan_id')
-            ->join('barangs', 'pengadaans.id', '=', 'barangs.pengadaan_id')
-            // ->groupBy('jadwals.pengadaan_id')
-            // ->get();
-            // ->paginate(10);
+        // $pengadaan = DB::table('pengadaans')
+        //     // ->select('*')
+        //     // ->join('pengadaans', 'pelaksanas.id', '=', 'pengadaans.pelaksana_id')
+        //     ->join('pelaksanas', 'pelaksana_id', '=', 'pelaksanas.id')
+        //     ->join('jadwals', 'pengadaans.id', '=', 'jadwals.pengadaan_id')
+        //     ->join('barangs', 'pengadaans.id', '=', 'barangs.pengadaan_id')
+        //     // ->groupBy('jadwals.pengadaan_id')
+        //     // ->get();
+        //     // ->paginate(10);
+        // ->paginate();
+        // $pengadaan = Jadwal::where('kegiatan', '=', 'Nota Dinas dari KPA ke PPK')
+        $pengadaan = Jadwal::where('jadwals.kegiatan','like',"%".'Nota Dinas dari KPA ke PPK'."%")
         ->paginate();
         $pejabat = Pejabat::all();
 
@@ -67,7 +71,7 @@ class PdfController extends Controller
 
         $pdf = PDF::loadview(
         // $pdf = word::loadview(
-            'print.nota_dinas1',
+            'cetak.nota_dinas1',
             // ['notadinas1' => $notadinas1],
             ['pengadaan' => $pengadaan],
             ['pejabat' => $pejabat]

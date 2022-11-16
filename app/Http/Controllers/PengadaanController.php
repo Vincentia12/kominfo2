@@ -65,9 +65,8 @@ class PengadaanController extends Controller
             // ['jadwal' => $jadwal],
             // ['pelaksana' => $pelaksana]
         );
-// dd($pengadaan1);
+        // dd($pengadaan1);
     }
-
     public function Cari1(Request $request)
     {
          // menangkap data pencarian
@@ -79,7 +78,7 @@ class PengadaanController extends Controller
         ->join('pelaksanas', 'pelaksana_id', '=', 'pelaksanas.id')
         ->paginate();
         
-        // $pejabat = Pejabat::all();
+        $pejabat = Pejabat::all();
             // mengirim data pegawai ke view index
         // return view('admin.pengadaan1',['pengadaan1' => $pengadaan1]);
         return view('admin.pengadaan1', compact('pengadaan1'));
@@ -109,7 +108,7 @@ class PengadaanController extends Controller
             // ['jadwal' => $jadwal],
             // ['pelaksana' => $pelaksana]
         );
-// dd($pengadaan1);
+        // dd($pengadaan1);
 
         // $pengadaan2 = Pengadaan::select('select * where nilai_negosiasi > 10000000');
         // $pengadaan2 = DB::table('pengadaans')
@@ -126,7 +125,7 @@ class PengadaanController extends Controller
         //     ['pengadaan2' => $pengadaan2]
         // );
     }
-     public function Cari2(Request $request)
+    public function Cari2(Request $request)
     {
          // menangkap data pencarian
         $cari2 = $request->cari2;
@@ -228,13 +227,14 @@ class PengadaanController extends Controller
      * @param  \App\Models\pengadaan  $pengadaan
      * @return \Illuminate\Http\Response
      */
-    // public function show(Pengadaan $pengadaan)
-    public function show(Request $request,$id)
+    public function show(Pengadaan $pengadaan)
+    // public function show(Request $request,$id)
     {
         // return view('admin.input_pengadaan', compact('pengadaan'));
         // return view('admin.detail', compact('pengadaan'));
-        $pengadaan1 = Pengadaan::find($id);
-        return view('admin.pengadaan1',compact('pengadaans'))
+        // $pengadaan1 = Pengadaan::find($id);
+        // return view('admin.pengadaan1',compact('pengadaans'))
+        return view('print.nota_dinas1',compact('pengadaan'))
         // ->renderSections()['content']
         ;
     }

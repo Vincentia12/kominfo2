@@ -14,6 +14,8 @@ use App\Http\Controllers\BarangController;
 
 use App\Http\Controllers\PejabatController;
 
+use App\Http\Controllers\PdfController;
+
 use Illuminate\Contracts\Cache\Store;
 use Illuminate\Contracts\View\View as ViewView;
 use Illuminate\Support\Facades\Auth;
@@ -112,7 +114,7 @@ Route::post('/pengadaan/update/{id}', [PengadaanController::class, 'update']);
 
 
 // Route::get('/input_pengadaan', [PengadaanController::class, 'index']);
-// Route::resource('/pengadaan2', PengadaanController::class);
+Route::resource('/pengadaan1', PengadaanController::class);
 
 // Route::get('/pengadaan1', [PengadaanController::class, 'index1'], [JadwalController::class, 'index1']);
 Route::get('/pengadaan1', [PengadaanController::class, 'index1']);
