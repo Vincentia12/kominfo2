@@ -137,7 +137,7 @@ Route::post('/pejabat/update/{id}', [PejabatController::class, 'update']);
 Route::get('notadinas1', [PdfController::class, 'index']);
 Route::get('print_notadinas1', [PdfController::class, 'nota_dinas1']);
 Route::get('print_notadinas2', [PdfController::class, 'nota_dinas2']);
-Route::get('undangan_nego', [PdfController::class, 'undangan_nego']);
+Route::get('print_notadinas4', [PdfController::class, 'nota_dinas4']);
 
 // Route::get('/input_jadwal', function () {
 //     return view('admin.input_jadwal');
@@ -194,6 +194,7 @@ Route::get('/nota_dinas1', function () {
 Route::get('/nota_dinas2', function () {
     return view('print.nota_dinas2');
 });
+
 Route::get('/undangan_persiapan', function () {
     return view('print.undangan_persiapan');
 });
