@@ -1,8 +1,8 @@
-@extends('admin/pengadaan1')
+{{-- @extends('admin/pengadaan1') --}}
 {{-- @section('input-data', 'active')
 @section('input-data-collapse', 'collapsed')
 @section('input-sudah', 'active') --}}
-@section('content')
+{{-- @section('content') --}}
 {{-- @section('print') --}}
 {{-- @section('judul')
 {{'Input Data / Belum Tersertifikasi'}}
@@ -12,8 +12,9 @@
 @endsection --> --}}
 
 <!-- Content Row -->
-{{-- @extends('admi/pengad')
-@section('print') --}}
+{{-- @extends('admi/pengadaan1') --}}
+@extends('layouts.index')
+@section('content')
 @if ($errors->any())
 <div class="alert alert-danger">
     <strong>Whoops!</strong> There were some problems with your input.<br><br>
@@ -181,5 +182,10 @@
         </div>
     </div>
 </div>
-
+<div class="col-12 grid-margin stretch-card">
+    <div class="modal-footer mt-3">
+        <button type="back" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+        <a type="submit" class="btn btn-primary " href="{{ url('/print_notadinas1')  }}" >Cetak PDF <i class="fa fa-save"></i></a>
+      </div>
+</div>
 @endsection

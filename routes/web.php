@@ -14,6 +14,8 @@ use App\Http\Controllers\BarangController;
 
 use App\Http\Controllers\PejabatController;
 
+use App\Http\Controllers\PdfController;
+
 use Illuminate\Contracts\Cache\Store;
 use Illuminate\Contracts\View\View as ViewView;
 use Illuminate\Support\Facades\Auth;
@@ -112,7 +114,11 @@ Route::post('/pengadaan/update/{id}', [PengadaanController::class, 'update']);
 
 
 // Route::get('/input_pengadaan', [PengadaanController::class, 'index']);
-// Route::resource('/pengadaan2', PengadaanController::class);
+Route::resource('/pengadaan1', PengadaanController::class);
+// Route::get('/pengadaan1/{id}', [PengadaanController::class, 'show'])->name('show');
+Route::get('/pengadaan1/show1/{id}', [PengadaanController::class, 'show1'])->name('pengadaan1.show1');
+Route::get('/pengadaan1/show2/{id}', [PengadaanController::class, 'show2'])->name('pengadaan1.show2');
+// Route::get('/lihat', PengadaanController::class, 'show1')->name('show1');
 
 // Route::get('/pengadaan1', [PengadaanController::class, 'index1'], [JadwalController::class, 'index1']);
 Route::get('/pengadaan1', [PengadaanController::class, 'index1']);
@@ -130,6 +136,8 @@ Route::post('/pejabat/update/{id}', [PejabatController::class, 'update']);
 //print
 Route::get('notadinas1', [PdfController::class, 'index']);
 Route::get('print_notadinas1', [PdfController::class, 'nota_dinas1']);
+Route::get('print_notadinas2', [PdfController::class, 'nota_dinas2']);
+Route::get('print_notadinas4', [PdfController::class, 'nota_dinas4']);
 
 // Route::get('/input_jadwal', function () {
 //     return view('admin.input_jadwal');
@@ -186,6 +194,7 @@ Route::get('/nota_dinas1', function () {
 Route::get('/nota_dinas2', function () {
     return view('print.nota_dinas2');
 });
+
 Route::get('/undangan_persiapan', function () {
     return view('print.undangan_persiapan');
 });

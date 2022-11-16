@@ -1,18 +1,20 @@
-{{-- @extends('layouts/index')
-@section('input-data', 'active')
+{{-- @extends('admin/pengadaan1') --}}
+{{-- @section('input-data', 'active')
 @section('input-data-collapse', 'collapsed')
-@section('input-sudah', 'active')
-@section('content')
-@section('judul')
+@section('input-sudah', 'active') --}}
+{{-- @section('content') --}}
+{{-- @section('print') --}}
+{{-- @section('judul')
 {{'Input Data / Belum Tersertifikasi'}}
 @endsection
 <!-- @section('title')
 {{'Input Data yang Belum Tersertifikasi'}}
 @endsection --> --}}
 
-@extends('layouts.index')
-@section('content')
 <!-- Content Row -->
+{{-- @extends('admi/pengadaan1') --}}
+{{-- @extends('layouts.index')
+@section('content') --}}
 @if ($errors->any())
 <div class="alert alert-danger">
     <strong>Whoops!</strong> There were some problems with your input.<br><br>
@@ -44,7 +46,7 @@
                 <tr>
                     <td width="80">Kepada</td>
                     <td>:</td>
-                    <td width="475">Yth. Sdr. Panitia Pengadaan Dinas Komunikasi dan</td>
+                    <td width="475">Yth. Sdr. Pejabat Pembuat Komitmen Dinas Komunikasi dan</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
@@ -58,21 +60,21 @@
                 <tr>
                     <td width="80">Dari</td>
                     <td>:</td>
-                    <td width="475">Pejabat Pembuat Komitmen</td>
+                    <td width="475">Kuasa Pengguna Anggaran</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
                 <tr>
                     <td width="80">Tanggal</td>
                     <td>:</td>
-                    <td width="475">12 Agustus 2022</td>
+                    <td width="475">11 Agustus 2022</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
                 <tr>
                     <td width="80">Nomor</td>
                     <td>:</td>
-                    <td width="475">020/654.2/114.6/2022</td>
+                    <td width="475">020/654.1/114.6/2022</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
@@ -93,14 +95,14 @@
                 <tr>
                     <td width="80">Perihal</td>
                     <td>:</td>
-                    <td width="475">Pemrosesan Administrasi Pengadaan Belanja Alat/Bahan</td>
+                    <td width="475">Kapasitas Kelembagaan Statistik Sektoral Toner Printer</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
                 <tr>
                     <td width="80"> </td>
                     <td width="5"> </td>
-                    <td width="475">Kapasitas Kelembagaan Statistik Sektoral Toner Printer</td>
+                    <td width="475">Informatika Provinsi Jawa Timur</td>
                 </tr>
             </table>
             <br>
@@ -143,7 +145,7 @@
             <br>
             <table border="0" align="center" font-size="2">
                 <tr>
-                    <td width="565">Sehubungan dengan hal tersebut diatas, untuk penyedia Barang/Jasa ditunjuk  CV. PATRIA NUGRAHA, JL. Kanwa No. 22-A Kota Surabaya. Untuk itu diminta bantuannya untuk segera diproses sesuai prosedur yang berlaku.</td>
+                    <td width="565">Untuk itu diminta bantuannya untuk segera diproses sesuai prosedur yang berlaku.</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
@@ -155,7 +157,7 @@
             <table border="0" align="center">
                 <tr>
                     <td width="300"> </td>
-                    <td>PEJABAT PEMBUAT KOMITMEN</td>
+                    <td>KUASA PENGGUNA ANGGARAN</td>
                     <td width="50"> </td>
                 </tr>
             </table>
@@ -165,25 +167,25 @@
             <table border="0" align="center">
                 <tr>
                     <td width="300"> </td>
-                    <td>I WAYAN RUDY ARTHA, S.Kom</td>
+                    <td>Dra. Ec. NIRMALA DEWI, M.M</td>
                     <td width="50"> </td>
                 </tr>
             </table>
             <table border="0" align="center">
                 <tr>
                     <td width="300"> </td>
-                    <td>NIP. 19770517 200901 1 005</td>
+                    <td>NIP. 19650909 199403 2 006</td>
+                    {{-- <td>NIP. {{ $pejabat-> }}</td> --}}
                     <td width="50"> </td>
                 </tr>
             </table>
         </div>
     </div>
 </div>
-<div class="col-12 grid-margin stretch-card">
+{{-- <div class="col-12 grid-margin stretch-card">
     <div class="modal-footer mt-3">
         <button type="back" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
-        <a type="submit" class="btn btn-primary " href="{{ url('/print_notadinas2')  }}" >Cetak PDF <i class="fa fa-save"></i></a>
+        <a type="submit" class="btn btn-primary " href="{{ url('/print_notadinas1')  }}" >Cetak PDF <i class="fa fa-save"></i></a>
       </div>
-</div>
-
-@endsection
+</div> --}}
+{{-- @endsection --}}
