@@ -26,16 +26,16 @@ class Pengadaan extends Model
 
     public function barang()
     {
-        return $this->belongsTo(barang::class);
+        return $this->belongsToMany(barang::class);
     }
     public function jadwal()
     {
-        return $this->belongsTo(jadwal::class);
+        return $this->belongsToMany(jadwal::class);
     }
 
 
     public function pelaksana()
     {
-        return $this->belongsTo(pelaksana::class);
+        return $this->belongsToMany(pelaksana::class);
     }
 }

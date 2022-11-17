@@ -135,7 +135,7 @@ Route::post('/pejabat/update/{id}', [PejabatController::class, 'update']);
 
 //print
 Route::get('notadinas1', [PdfController::class, 'index']);
-Route::get('print_notadinas1', [PdfController::class, 'nota_dinas1']);
+Route::get('print_notadinas1/{id}', [PdfController::class, 'nota_dinas1']);
 Route::get('print_notadinas2', [PdfController::class, 'nota_dinas2']);
 Route::get('undangan_nego', [PdfController::class, 'undangan_nego']);
 

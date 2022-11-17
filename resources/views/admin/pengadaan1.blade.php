@@ -130,7 +130,7 @@
                             </div>
                         </div> --}}
                     {{-- <table class="table table-bordered" id="data1" style="width:100%"> --}}
-                    <table class="table table-bordered" id="" style="width:100%">
+                    <table class="table table-bordered" id="data1" style="width:100%">
                         
                         <thead>
                             <tr>
@@ -177,8 +177,14 @@
                                 <td>{{ $p1->deskripsi_tgl }}</td>
                                 <td>
                                     @if ($p1->kegiatan == 'Nota Dinas dari KPA ke PPK')
+                                    {{-- <form action="{{ route('pengadaan1.destroy',$p1->id) }}" method="POST"> --}}
+   
                                         <a class="btn btn-info" href="{{ route('pengadaan1.show',$p1->id) }}">Detail</a>
+                                        {{-- <a type="submit" class="btn btn-primary " href="{{ url('/print_notadinas2',$p1->id)  }}" >Cetak PDF <i class="fa fa-save"></i></a> --}}
+                                        <a class="btn btn-primary " href="{{ url('/print_notadinas2',$p1->id)  }}" >Cetak PDF <i class="fa fa-save"></i></a>
+                                        {{-- <a class="btn btn-info" href="{{ route('pengadaan1.show',$p1->id) }}">Detail</a> --}}
                                         {{-- <a class="btn btn-info" href="{{ route('show',$p1->id) }}">Detail</a> --}}
+                                    {{-- </form> --}}
                                     @elseif($p1->kegiatan == 'Nota Dinas dari PPK ke Pejabat Pengadaan +')
                                         {{-- <a class="btn btn-info" href="{{ route('show1',$p1->id) }}">Detail</a> --}}
                                         <a class="btn btn-info" href="{{ route('pengadaan1.show1',$p1->id) }}">Detail</a>
@@ -186,7 +192,7 @@
                                         {{-- url('/print_notadinas1') --}}
                                     @elseif($p1->kegiatan == 'Surat Undangan, Pengambilan Dokumen Kualifikasi dan Dokumen Pengadaan Langsung kepada Penyedia Barang/Jasa')
                                         {{-- <a class="btn btn-info" href="{{ route('show1',$p1->id) }}">Detail</a> --}}
-                                        <a class="btn btn-info" href="{{ route('pengadaan1.show2',$p1->id) }}">Detail</a>
+                                        {{-- <a class="btn btn-info" href="{{ route('pengadaan1.show2',$p1->id) }}">Detail</a> --}}
                                         {{-- <a class="btn btn-info" name="show1">Detail</a> --}}
                                         {{-- url('/print_notadinas1') --}}
                                     @else
