@@ -11,7 +11,7 @@ class Barang extends Model
 
     protected $table = "barangs";
     protected $primarykay = "id";
-    
+
     protected $fillable = [
         // 'id', 
         'pengadaan_id',
@@ -20,10 +20,9 @@ class Barang extends Model
         'satuan',
         'harga_satuan'
     ];
- 
+
     public function pengadaan()
     {
-    	return $this->belongsToMany(pengadaan::class);
+        return $this->belongsTo(pengadaan::class);
     }
-
 }
