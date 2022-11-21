@@ -140,6 +140,7 @@
                             <hr>
                         </td>
                     </tr>
+<<<<<<< HEAD
             </table>
             <br>
             <table border="0" align="center" font-size="2">
@@ -201,6 +202,69 @@
                 </tr>
             </table>
             {{-- <table border="0" align="center" font-size="2">
+=======
+                </table>
+                <br>
+                <table border="0" align="center" font-size="2">
+                    <tr>
+                        <td width="80">Kepada</td>
+                        <td>:</td>
+                        <td width="475">Yth. Sdr. Pejabat Pembuat Komitmen Dinas Komunikasi dan</td>
+                    </tr>
+                </table>
+                <table border="0" align="center" font-size="2">
+                    <tr>
+                        <td width="80"> </td>
+                        <td width="5"> </td>
+                        <td width="475">Informatika Provinsi Jawa Timur</td>
+                    </tr>
+                </table>
+                <table border="0" align="center" font-size="2">
+                    <tr>
+                        <td width="80">Dari</td>
+                        <td>:</td>
+                        <td width="475">Kuasa Pengguna Anggaran</td>
+                    </tr>
+                </table>
+                <table border="0" align="center" font-size="2">
+                    <tr>
+                        <td width="80">Tanggal</td>
+                        <td>:</td>
+                        <td width="475">11 Agustus 2022</td>
+                    </tr>
+                </table>
+                <table border="0" align="center" font-size="2">
+                    <tr>
+                        <td width="80">Nomor</td>
+                        <td>:</td>
+                        <td width="475">020/654.1/114.6/2022</td>
+                    </tr>
+                </table>
+                <table border="0" align="center" font-size="2">
+                    <tr>
+                        <td width="80">Sifat</td>
+                        <td>:</td>
+                        <td width="475">Segera</td>
+                    </tr>
+                </table>
+                <table border="0" align="center" font-size="2">
+                    <tr>
+                        <td width="80">Lampiran</td>
+                        <td>:</td>
+                        <td width="475">1 (satu) berkas</td>
+                    </tr>
+                </table>
+                <table border="0" align="center" font-size="2">
+                    <tr>
+                        <td width="80">Perihal</td>
+                        <td>:</td>
+                        {{-- <td width="475">Pemrosesan Administrasi Pengadaan</td> --}}
+                        <td width="475">Pemrosesan Administrasi Pengadaan {{ $jadwal->pengadaan->jenis_pengadaan}}</td>
+                        {{-- <td width="475">Pemrosesan Administrasi Pengadaan {{ $pengadaan->jenis_pengadaan}}</td> --}}
+                    </tr>
+                </table>
+                {{-- <table border="0" align="center" font-size="2">
+>>>>>>> 46a6761052d4a8a752c3a3659618126fcece2b38
                     <tr>
                         <td width="80"> </td>
                         <td width="5"> </td>

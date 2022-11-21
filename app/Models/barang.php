@@ -23,6 +23,10 @@ class Barang extends Model
 
     public function pengadaan()
     {
+<<<<<<< HEAD
         return $this->belongsTo(pengadaan::class);
+=======
+    	return $this->belongsTo(pengadaan::class);
+>>>>>>> 46a6761052d4a8a752c3a3659618126fcece2b38
     }
 }

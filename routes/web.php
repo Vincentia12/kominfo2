@@ -84,6 +84,8 @@ Route::post('/postdata', [PelaksanaController::class, 'store']);
 Route::post('/pelaksana/update/{id}', [PelaksanaController::class, 'update']);
 
 
+// 
+// Route::get(/)
 
 // Route::get('/{id}/edit', 'PengadaanController@edit');
 // Route::post('/update/{id}', 'PengadaanController@update');
@@ -116,14 +118,15 @@ Route::post('/pengadaan/update/{id}', [PengadaanController::class, 'update']);
 // Route::get('/input_pengadaan', [PengadaanController::class, 'index']);
 Route::resource('/pengadaan1', PengadaanController::class);
 // Route::get('/pengadaan1/{id}', [PengadaanController::class, 'show'])->name('show');
-Route::get('/pengadaan1/show1/{id}', [PengadaanController::class, 'show1'])->name('pengadaan1.show1');
+Route::get('/pengadaan1/show1/{id}', [JadwalController::class, 'show1'])->name('pengadaan1.show1');
 Route::get('/pengadaan1/show2/{id}', [PengadaanController::class, 'show2'])->name('pengadaan1.show2');
 // Route::get('/lihat', PengadaanController::class, 'show1')->name('show1');
 
 // Route::get('/pengadaan1', [PengadaanController::class, 'index1'], [JadwalController::class, 'index1']);
 Route::get('/pengadaan1', [PengadaanController::class, 'index1']);
 // Route::get('/pengadaan1/detail/{id}', [PengadaanController::class, 'dt1']);
-Route::get('/pengadaan1cari', [PengadaanController::class, 'cari1'])->name('cari1');
+// Route::get('/pengadaan1cari', [PengadaanController::class, 'cari1'])->name('cari1');
+Route::get('/pengadaan1cari', [JadwalController::class, 'cari1'])->name('cari1');
 
 Route::get('/pengadaan2', [PengadaanController::class, 'index2']);
 Route::get('/pengadaan2cari', [PengadaanController::class, 'cari2'])->name('cari2');
