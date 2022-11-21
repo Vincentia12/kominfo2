@@ -29,10 +29,11 @@
             <table border="0" align="center">
                 <tr>
                     <td>
-                        <center><font size="3"><b>PAKTA INTEGRITAS</b></font><br>
+                        <center>
+                            <font size="3"><b>PAKTA INTEGRITAS</b></font><br>
                     </td>
                 </tr>
-                {{--  <tr>
+                {{-- <tr>
                     <td width="555" colspan="2"><hr></td>
                 </tr>  --}}
             </table>
@@ -67,7 +68,7 @@
                     <td width="535">Dalam proses pengadaan ini, berjanji akan melaksanakan tugas secara</td>
                 </tr>
             </table>
-            	<table border="0" align="center" font-size="2">
+            <table border="0" align="center" font-size="2">
                 <tr>
                     <td width="30"> </td>
                     <td width="535">bersih, transparan, dan profesional dalam arti akan mengerahkan segala</td>
@@ -166,8 +167,15 @@
                     <td width="280"> </td>
                 </tr>
             </table>
-            
+
         </div>
+    </div>
+</div>
+
+<div class="col-12 grid-margin stretch-card">
+    <div class="modal-footer mt-3">
+        <button type="back" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+        <a type="submit" class="btn btn-primary " href="{{ url('/print_notadinas4')  }}">Cetak PDF <i class="fa fa-save"></i></a>
     </div>
 </div>
 

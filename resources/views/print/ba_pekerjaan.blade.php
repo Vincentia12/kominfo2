@@ -32,28 +32,42 @@
                         <img src="{{asset('img/logo_jatim.png')}}" width="70" height="70">
                     </td>
                     <td>
-                        <center><font size="3"><b>PEMERINTAH PROVINSI JAWA TIMUR</b></font><br>
-                                <font size="3">DINAS KOMUNIKASI DAN INFORMATIKA</font><br>
-                                <font size="3">Jl. Ahmad Yani 242-244 Telp. (031) 8294608 Fax. (031) 8294517</font><br>
-                                <font size="3">Website : http://www.jatimprov.go.id </font><br>
-                                <font size="2">Email:kominfo@jatimprov.go.id</font><br>
-                                <font size="3">S U R A B A Y A-60235</font><br>
+                        <center>
+                            <font size="3"><b>PEMERINTAH PROVINSI JAWA TIMUR</b></font><br>
+                            <font size="3">DINAS KOMUNIKASI DAN INFORMATIKA</font><br>
+                            <font size="3">Jl. Ahmad Yani 242-244 Telp. (031) 8294608 Fax. (031) 8294517</font><br>
+                            <font size="3">Website : http://www.jatimprov.go.id </font><br>
+                            <font size="2">Email:kominfo@jatimprov.go.id</font><br>
+                            <font size="3">S U R A B A Y A-60235</font><br>
                     </td>
                 </tr>
                 <tr>
-                    <td colspan="2"><hr></td>
+                    <td colspan="2">
+                        <hr>
+                    </td>
                 </tr>
             </table>
             <table border="0" align="center">
                 <tr>
-                    <td width="560"><center><b>BERITA ACARA EVALUASI DOKUMEN PRAKUALIFIKASI</b></td>
+                    <td width="560">
+                        <center><b>BERITA ACARA EVALUASI DOKUMEN PRAKUALIFIKASI</b>
+                    </td>
                 <tr>
             </table>
             <table border="0" align="center">
                 <tr>
-                    <td width="50"><center><font size="2">Nomor</font></td>
-                    <td><center><font size="2">:</font></td>
-                    <td width="150"><center><font size="2">020/654.6 /114.6/2022</font></td>
+                    <td width="50">
+                        <center>
+                            <font size="2">Nomor</font>
+                    </td>
+                    <td>
+                        <center>
+                            <font size="2">:</font>
+                    </td>
+                    <td width="150">
+                        <center>
+                            <font size="2">020/654.6 /114.6/2022</font>
+                    </td>
                 <tr>
             </table>
             <br>
@@ -100,12 +114,16 @@
             <br>
             <table border="0" align="center">
                 <tr>
-                    <td width="560"><center><b>DOKUMEN PENGADAAN</b></td>
+                    <td width="560">
+                        <center><b>DOKUMEN PENGADAAN</b>
+                    </td>
                 <tr>
             </table>
             <table border="0" align="center">
                 <tr>
-                    <td width="560"><center><b>BAB I  INSTRUKSI KEPADA PESERTA PENGADAAN (LKPP)</b></td>
+                    <td width="560">
+                        <center><b>BAB I INSTRUKSI KEPADA PESERTA PENGADAAN (LKPP)</b>
+                    </td>
                 <tr>
             </table>
             <br>
@@ -258,13 +276,15 @@
         <div class="card-body">
             <table border="0" align="center">
                 <tr>
-                    <td width="560">Demikian Berita Acara Penjelasan dalam rangka Pengadaan Langsung untuk pengadaan Belanja Alat/Bahan Kapasitas Kelembagaan Statistik Sektoral Toner Printer keperluan Dinas Komunikasi dan Informatika Provinsi Jawa Timur  Jl. Ahmad Yani 242 - 244 Surabaya, dibuat dengan sesungguhnya sebagai pertemuan Pejabat Pengadaan dengan peserta Pengadaan Langsung dan merupakan kelengkapan yang tidak terpisahkan dari Dokumen Pengadaan pekerjaan ini.</td>
+                    <td width="560">Demikian Berita Acara Penjelasan dalam rangka Pengadaan Langsung untuk pengadaan Belanja Alat/Bahan Kapasitas Kelembagaan Statistik Sektoral Toner Printer keperluan Dinas Komunikasi dan Informatika Provinsi Jawa Timur Jl. Ahmad Yani 242 - 244 Surabaya, dibuat dengan sesungguhnya sebagai pertemuan Pejabat Pengadaan dengan peserta Pengadaan Langsung dan merupakan kelengkapan yang tidak terpisahkan dari Dokumen Pengadaan pekerjaan ini.</td>
                 <tr>
             </table>
             <br>
             <table border="0" align="center">
                 <tr>
-                    <td width="560"><center><b>PIHAK PEJABAT PEMBUAT KOMITMEN</b></td>
+                    <td width="560">
+                        <center><b>PIHAK PEJABAT PEMBUAT KOMITMEN</b>
+                    </td>
                 <tr>
             </table>
             <table width="565px" border="1" align="center">
@@ -288,7 +308,9 @@
             <br>
             <table border="0" align="center">
                 <tr>
-                    <td width="560"><center><b>PIHAK PEJABAT PENGADAAN</b></td>
+                    <td width="560">
+                        <center><b>PIHAK PEJABAT PENGADAAN</b>
+                    </td>
                 <tr>
             </table>
             <table width="565px" border="1" align="center">
@@ -312,7 +334,9 @@
             <br>
             <table border="0" align="center">
                 <tr>
-                    <td width="560"><center><b>PIHAK PENYEDIA BARANG/JASA</b></td>
+                    <td width="560">
+                        <center><b>PIHAK PENYEDIA BARANG/JASA</b>
+                    </td>
                 <tr>
             </table>
             <table width="565px" border="1" align="center">
@@ -335,6 +359,13 @@
             </table>
             <br>
         </div>
+    </div>
+</div>
+
+<div class="col-12 grid-margin stretch-card">
+    <div class="modal-footer mt-3">
+        <button type="back" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+        <a type="submit" class="btn btn-primary " href="{{ url('/print_notadinas4')  }}">Cetak PDF <i class="fa fa-save"></i></a>
     </div>
 </div>
 

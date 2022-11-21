@@ -32,16 +32,19 @@
                         <img src="{{asset('img/logo_jatim.png')}}" width="70" height="70">
                     </td>
                     <td>
-                        <center><font size="3"><b>PEMERINTAH PROVINSI JAWA TIMUR</b></font><br>
-                                <font size="3">DINAS KOMUNIKASI DAN INFORMATIKA</font><br>
-                                <font size="3">Jl. Ahmad Yani 242-244 Telp. (031) 8294608 Fax. (031) 8294517</font><br>
-                                <font size="3">Website : http://www.jatimprov.go.id </font><br>
-                                <font size="2">Email:kominfo@jatimprov.go.id</font><br>
-                                <font size="3">S U R A B A Y A-60235</font><br>
+                        <center>
+                            <font size="3"><b>PEMERINTAH PROVINSI JAWA TIMUR</b></font><br>
+                            <font size="3">DINAS KOMUNIKASI DAN INFORMATIKA</font><br>
+                            <font size="3">Jl. Ahmad Yani 242-244 Telp. (031) 8294608 Fax. (031) 8294517</font><br>
+                            <font size="3">Website : http://www.jatimprov.go.id </font><br>
+                            <font size="2">Email:kominfo@jatimprov.go.id</font><br>
+                            <font size="3">S U R A B A Y A-60235</font><br>
                     </td>
                 </tr>
                 <tr>
-                    <td colspan="2"><hr></td>
+                    <td colspan="2">
+                        <hr>
+                    </td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
@@ -72,7 +75,8 @@
             <table border="0" align="center">
                 <tr>
                     <td>
-                        <center><font size="3"><b>KUITANSI KONTRAK</b></font><br>
+                        <center>
+                            <font size="3"><b>KUITANSI KONTRAK</b></font><br>
                     </td>
                 </tr>
             </table>
@@ -81,7 +85,7 @@
                 <tr>
                     <td width="150">Sudah Terima Dari</td>
                     <td width="10">:</td>
-                    <td width="390">Pejabat Pembuat Komitmen Diskominfo  Prov. Jatim</td>
+                    <td width="390">Pejabat Pembuat Komitmen Diskominfo Prov. Jatim</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
@@ -193,15 +197,15 @@
             <table width="585px" border="1" align="center">
                 <thead>
                     <tr align="right">
-                        <th width="500">TOTAL HARGA  </th>
+                        <th width="500">TOTAL HARGA </th>
                         <th width="80">4.997.000,-</th>
                     </tr>
                     <tr align="right">
-                        <th width="500">PPn 11 %  </th>
+                        <th width="500">PPn 11 % </th>
                         <th width="80">549.670,-</th>
                     </tr>
                     <tr align="right">
-                        <th width="500">TOTAL HARGA  </th>
+                        <th width="500">TOTAL HARGA </th>
                         <th width="80">5.546.670,-</th>
                     </tr>
                 </thead>
@@ -224,7 +228,7 @@
             <table border="0" align="center" font-size="2">
                 <tr>
                     <td width="40">2.</td>
-                    <td width="520">Jangka Waktu Pelaksanaan 7 (Tujuh) hari kalender, tanggal pelaksanaan yaitu Tanggal  13 September – 20 September 2022</td>
+                    <td width="520">Jangka Waktu Pelaksanaan 7 (Tujuh) hari kalender, tanggal pelaksanaan yaitu Tanggal 13 September – 20 September 2022</td>
                 </tr>
             </table>
             <br>
@@ -269,10 +273,19 @@
 </div>
 
 <div class="col-12 grid-margin stretch-card">
+<<<<<<< HEAD
+    <div class="modal-footer mt-3">
+        <button type="back" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+        <a type="submit" class="btn btn-primary " href="{{ url('/print_notadinas4')  }}">Cetak PDF <i class="fa fa-save"></i></a>
+    </div>
+</div>
+
+=======
     <div class="card shadow">
         <div class="card-body">
         
         </div>
     </div>
 </div>
+>>>>>>> 8d92791253f559d59d569976e89755838d055564
 @endsection

@@ -29,13 +29,16 @@
             <table border="0" align="center">
                 <tr>
                     <td>
-                        <center><font size="3"><b>DINAS KOMUNIKASI DAN INFORMATIKA</b></font><br>
-                                <font size="3"><b>PROVINSI JAWA TIMUR<b/></font><br>
-                                <font size="3"><u>NOTA DINAS<u/></font><br>
+                        <center>
+                            <font size="3"><b>DINAS KOMUNIKASI DAN INFORMATIKA</b></font><br>
+                            <font size="3"><b>PROVINSI JAWA TIMUR<b /></font><br>
+                            <font size="3"><u>NOTA DINAS<u /></font><br>
                     </td>
                 </tr>
                 <tr>
-                    <td width="555" colspan="2"><hr></td>
+                    <td width="555" colspan="2">
+                        <hr>
+                    </td>
                 </tr>
             </table>
             <br>
@@ -98,7 +101,7 @@
             <br>
             <table border="0" align="center" font-size="2">
                 <tr>
-                    <td width="565">Sesuai dengan Berita Acara Hasil Pengadaan Langsung Nomor : 020/    654.10/114.6/2022 tanggal 20 Juli 2022 untuk pengadaan Belanja Alat/Bahan Kapasitas Kelembagaan Statistik Sektoral Toner Printer maka bersama ini kami sampaikan administrasi proses pengadaan langsung yang telah selesai dilaksanakan terhadap :</td>
+                    <td width="565">Sesuai dengan Berita Acara Hasil Pengadaan Langsung Nomor : 020/ 654.10/114.6/2022 tanggal 20 Juli 2022 untuk pengadaan Belanja Alat/Bahan Kapasitas Kelembagaan Statistik Sektoral Toner Printer maka bersama ini kami sampaikan administrasi proses pengadaan langsung yang telah selesai dilaksanakan terhadap :</td>
                 </tr>
             </table>
             <br>
@@ -181,6 +184,12 @@
                 </tr>
             </table>
         </div>
+    </div>
+</div>
+<div class="col-12 grid-margin stretch-card">
+    <div class="modal-footer mt-3">
+        <button type="back" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+        <a type="submit" class="btn btn-primary " href="{{ url('/print_notadinas4')  }}">Cetak PDF <i class="fa fa-save"></i></a>
     </div>
 </div>
 

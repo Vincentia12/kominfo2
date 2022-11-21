@@ -177,24 +177,24 @@
               <option>Pilih Pengadaan</option>
               <option>Nota Dinas dari KPA ke PPK</option>
               <option>Nota Dinas dari PPK ke Pejabat Pengadaan + </option>
-              <!-- {{--  <option>Lampiran OE (HPS)</option>  --}} -->
+              <option>Lampiran OE (HPS)</option>
               <option>Surat Undangan, Pengambilan Dokumen Kualifikasi dan Dokumen Pengadaan Langsung kepada Penyedia Barang/Jasa</option>
-              <!-- {{--  <option>PAKTA  INTEGRITAS</option> -->
+              <option>PAKTA INTEGRITAS</option>
               <option>Surat Pernyataan Minat</option>
               <option>Pemasukan Dokumen Kualifikasi</option>
-              <option>Daftar Hadir Pengembalian Dokumen Prakualifikasi</option> --}}
+              <option>Daftar Hadir Pengembalian Dokumen Prakualifikasi</option>
               <option>BA. Evaluasi Dokumen Prakualifikasi</option>
-              <!-- {{--  <option>Lampiran BA. Evaluasi Dokumen Prakualifikasi</option>  --}} -->
+              <option>Lampiran BA. Evaluasi Dokumen Prakualifikasi</option>
               <option>Surat Undangan Permintaan Penawaran Harga</option>
               <option>BA. Penjelasan Pekerjaan</option>
-              <!-- {{--  <option>Pemasukan Penawaran</option>  --}} -->
+              <option>Pemasukan Penawaran</option>
               <option>BA. Pembukaan Penawaran</option>
               <option>Surat Undangan Klarifikasi/Negosiasi</option>
               <option>BA. Klarifikasi/Negosiasi</option>
-              <!-- {{--  <option>Lampiran BA. Klarifikasi/Negosiasi</option>  --}} -->
+              <option>Lampiran BA. Klarifikasi/Negosiasi</option>
               <option>BA. Hasil Pengadaan Langsung</option>
               <option>Nota Dinas dari Pejabat Pengadaan ke PPK</option>
-              <!-- {{--  <option>Penetapan Penyedia Jasa</option>  --}} -->
+              <option>Penetapan Penyedia Jasa</option>
               <option>Penunjukan Penyedia Barang/Jasa</option>
               <option>Surat Perintah Kerja</option>
               <option>Surat Perintah Mulai Kerja (SPMK)</option>

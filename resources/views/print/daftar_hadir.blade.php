@@ -29,13 +29,16 @@
             <table border="0" align="center">
                 <tr>
                     <td>
-                        <center><font size="3"><b>PEJABAT PENGADAAN BARANG/JASA DILINGKUNGAN</b></font><br>
-                                <font size="3"><b>DINAS KOMUNIKASI DAN INFORMATIKA PROVINSI JAWA TIMUR</b></font><br>
-                                <font size="3"><b>PROVINSI JAWA TIMUR</b></font><br>                                
+                        <center>
+                            <font size="3"><b>PEJABAT PENGADAAN BARANG/JASA DILINGKUNGAN</b></font><br>
+                            <font size="3"><b>DINAS KOMUNIKASI DAN INFORMATIKA PROVINSI JAWA TIMUR</b></font><br>
+                            <font size="3"><b>PROVINSI JAWA TIMUR</b></font><br>
                     </td>
                 </tr>
                 <tr>
-                    <td width="555" colspan="2"><hr></td>
+                    <td width="555" colspan="2">
+                        <hr>
+                    </td>
                 </tr>
             </table>
             <br>
@@ -43,10 +46,11 @@
             <table border="0" align="center">
                 <tr>
                     <td>
-                        <center><font size="3"><b>DAFTAR HADIR</b></font><br><br>
-                                <font size="3"><b>PENGEMBALIAN DOKUMEN PRAKUALIFIKASI</b></font><br>
-                                <font size="2"><b>Pengadaan Belanja Alat/Bahan Kapasitas Kelembagaan</b></font><br>
-                                <font size="2"><b>Statistik Sektoral Toner Printer</b></font><br>
+                        <center>
+                            <font size="3"><b>DAFTAR HADIR</b></font><br><br>
+                            <font size="3"><b>PENGEMBALIAN DOKUMEN PRAKUALIFIKASI</b></font><br>
+                            <font size="2"><b>Pengadaan Belanja Alat/Bahan Kapasitas Kelembagaan</b></font><br>
+                            <font size="2"><b>Statistik Sektoral Toner Printer</b></font><br>
                     </td>
                 </tr>
             </table>
@@ -112,6 +116,13 @@
             </table>
             <br>
         </div>
+    </div>
+</div>
+
+<div class="col-12 grid-margin stretch-card">
+    <div class="modal-footer mt-3">
+        <button type="back" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+        <a type="submit" class="btn btn-primary " href="{{ url('/print_notadinas4')  }}">Cetak PDF <i class="fa fa-save"></i></a>
     </div>
 </div>
 
