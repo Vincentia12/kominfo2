@@ -138,6 +138,15 @@ Route::get('notadinas1', [PdfController::class, 'index']);
 Route::get('print_notadinas1', [PdfController::class, 'nota_dinas1']);
 Route::get('print_notadinas2', [PdfController::class, 'nota_dinas2']);
 Route::get('print_notadinas4', [PdfController::class, 'nota_dinas4']);
+Route::get('ba_evaluasi', [PdfController::class, 'ba_evaluasi']);
+Route::get('ba_nego', [PdfController::class, 'ba_nego']);
+Route::get('ba_pekerjaan', [PdfController::class, 'ba_pekerjaan']);
+Route::get('daftar_hadir', [PdfController::class, 'daftar_hadir']);
+Route::get('pakta_integritas', [PdfController::class, 'pakta_integritas']);
+Route::get('penetapan_penyedia', [PdfController::class, 'penetapan_penyedia']);
+Route::get('undangan_nego', [PdfController::class, 'undangan_nego']);
+Route::get('undangan_penawaran', [PdfController::class, 'undangan_penawaran']);
+Route::get('undangan_penawaran', [PdfController::class, 'undangan_penyedia']);
 
 // Route::get('/input_jadwal', function () {
 //     return view('admin.input_jadwal');

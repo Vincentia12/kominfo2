@@ -260,6 +260,62 @@ class PengadaanController extends Controller
             // ->renderSections()['content']
         ;
     }
+    public function show3(Pengadaan $pengadaan)
+    // public function show(Request $request,$id)
+    {
+        // return view('admin.input_pengadaan', compact('pengadaan'));
+        // return view('admin.detail', compact('pengadaan'));
+        // $pengadaan1 = Pengadaan::find($id);
+        // return view('admin.pengadaan1',compact('pengadaans'))
+        return view('print.ba_evaluasi', compact('pengadaan'))
+            // ->renderSections()['content']
+        ;
+    }
+
+    public function show4(Pengadaan $pengadaan) // public function show(Request $request,$id)
+    {
+        return view('print.ba_nego', compact('pengadaan'));
+    }
+
+    public function show5(Pengadaan $pengadaan) // public function show(Request $request,$id)
+    {
+        return view('print.ba_pekerjaan', compact('pengadaan'));
+    }
+
+    public function show6(Pengadaan $pengadaan) // public function show(Request $request,$id)
+    {
+        return view('print.ba_penawaran', compact('pengadaan'));
+    }
+
+    public function show7(Pengadaan $pengadaan) // public function show(Request $request,$id)
+    {
+        return view('print.daftar_hadir', compact('pengadaan'));
+    }
+
+    public function show8(Pengadaan $pengadaan) // public function show(Request $request,$id)
+    {
+        return view('print.pakta_integritas', compact('pengadaan'));
+    }
+
+    public function show9(Pengadaan $pengadaan) // public function show(Request $request,$id)
+    {
+        return view('print.penetapan_penyedia', compact('pengadaan'));
+    }
+
+    public function show10(Pengadaan $pengadaan) // public function show(Request $request,$id)
+    {
+        return view('print.undangan_nego', compact('pengadaan'));
+    }
+
+    public function show11(Pengadaan $pengadaan) // public function show(Request $request,$id)
+    {
+        return view('print.undangan_penawaran', compact('pengadaan'));
+    }
+
+    public function show12(Pengadaan $pengadaan) // public function show(Request $request,$id)
+    {
+        return view('print.undangan_penyedia', compact('pengadaan'));
+    }
 
     /**
      * Show the form for editing the specified resource.

@@ -32,28 +32,42 @@
                         <img src="{{asset('img/logo_jatim.png')}}" width="70" height="70">
                     </td>
                     <td>
-                        <center><font size="3"><b>PEMERINTAH PROVINSI JAWA TIMUR</b></font><br>
-                                <font size="3">DINAS KOMUNIKASI DAN INFORMATIKA</font><br>
-                                <font size="3">Jl. Ahmad Yani 242-244 Telp. (031) 8294608 Fax. (031) 8294517</font><br>
-                                <font size="3">Website : http://www.jatimprov.go.id </font><br>
-                                <font size="2">Email:kominfo@jatimprov.go.id</font><br>
-                                <font size="3">S U R A B A Y A-60235</font><br>
+                        <center>
+                            <font size="3"><b>PEMERINTAH PROVINSI JAWA TIMUR</b></font><br>
+                            <font size="3">DINAS KOMUNIKASI DAN INFORMATIKA</font><br>
+                            <font size="3">Jl. Ahmad Yani 242-244 Telp. (031) 8294608 Fax. (031) 8294517</font><br>
+                            <font size="3">Website : http://www.jatimprov.go.id </font><br>
+                            <font size="2">Email:kominfo@jatimprov.go.id</font><br>
+                            <font size="3">S U R A B A Y A-60235</font><br>
                     </td>
                 </tr>
                 <tr>
-                    <td colspan="2"><hr></td>
+                    <td colspan="2">
+                        <hr>
+                    </td>
                 </tr>
             </table>
             <table border="0" align="center">
                 <tr>
-                    <td width="560"><center><b>BERITA ACARA EVALUASI DOKUMEN PRAKUALIFIKASI</b></td>
+                    <td width="560">
+                        <center><b>BERITA ACARA EVALUASI DOKUMEN PRAKUALIFIKASI</b>
+                    </td>
                 <tr>
             </table>
             <table border="0" align="center">
                 <tr>
-                    <td width="50"><center><font size="2">Nomor</font></td>
-                    <td><center><font size="2">:</font></td>
-                    <td width="150"><center><font size="2">020/654.6 /114.6/2022</font></td>
+                    <td width="50">
+                        <center>
+                            <font size="2">Nomor</font>
+                    </td>
+                    <td>
+                        <center>
+                            <font size="2">:</font>
+                    </td>
+                    <td width="150">
+                        <center>
+                            <font size="2">020/654.6 /114.6/2022</font>
+                    </td>
                 <tr>
             </table>
             <br>
@@ -65,7 +79,7 @@
             <br>
             <table border="0" align="center" font-size="2">
                 <tr>
-                    <td width="560">Melakukan klarifikasi dan negosiasi terhadap penawaran yang diajukan oleh : CV. PATRIA NUGRAHA Jalan  Kanwa No. 22-A, S U R A B A Y A  dengan hasil terlampir.</td>
+                    <td width="560">Melakukan klarifikasi dan negosiasi terhadap penawaran yang diajukan oleh : CV. PATRIA NUGRAHA Jalan Kanwa No. 22-A, S U R A B A Y A dengan hasil terlampir.</td>
                 </tr>
             </table>
             <br>
@@ -92,7 +106,7 @@
                 <tr>
                     <td width="190">Alamat Perusahaan</td>
                     <td width="10">:</td>
-                    <td width="360">Jalan  Kanwa No. 22-A Surabaya</td>
+                    <td width="360">Jalan Kanwa No. 22-A Surabaya</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
@@ -188,14 +202,14 @@
                 <tbody>
                     <tr>
                         <td width="258px" scope="col">PEKERJAAN : Belanja Belanja Alat/Bahan Kapasitas Kelembagaan Statistik Sektoral Toner Printer</td>
-                        <td width="258px" scope="col">Nomor 	: 	020/654.10/114.6/2022 Tanggal	:	5 September 2022</td>
+                        <td width="258px" scope="col">Nomor : 020/654.10/114.6/2022 Tanggal : 5 September 2022</td>
                     </tr>
                 </tbody>
             </table>
             <br>
             <table border="0" align="center" font-size="2">
                 <tr>
-                    <td width="565">Pada hari ini Senin, Tanggal Lima, Bulan September, Tahun Dua Ribu Dua Puluh Dua, dimulai pukul                     10.00 WIB sampai dengan selesai, dengan mengambil tempat di Ruang Argopuro Dinas Komunikasi Dan Informatika Provinsi Jawa Timur telah disusun Berita Acara Hasil Pengadaan Langsung untuk Pekerjaan tersebut diatas.</td>
+                    <td width="565">Pada hari ini Senin, Tanggal Lima, Bulan September, Tahun Dua Ribu Dua Puluh Dua, dimulai pukul 10.00 WIB sampai dengan selesai, dengan mengambil tempat di Ruang Argopuro Dinas Komunikasi Dan Informatika Provinsi Jawa Timur telah disusun Berita Acara Hasil Pengadaan Langsung untuk Pekerjaan tersebut diatas.</td>
                 </tr>
             </table>
             <br>
@@ -230,7 +244,7 @@
                     <td width="65"> </td>
                     <td width="200">Alamat</td>
                     <td>:</td>
-                    <td width="300">Jalan  Kanwa No. 22-A Surabaya</td>
+                    <td width="300">Jalan Kanwa No. 22-A Surabaya</td>
                 </tr>
             </table>
             <table border="0" align="center">
@@ -264,7 +278,7 @@
                     <td width="530">1.</td>
                 </tr>
             </table>
-            
+
             <table border="0" align="center" font-size="2">
                 <tr>
                     <td width="35"> </td>
@@ -459,7 +473,7 @@
                 <tr>
                     <td>
                         <center><b>PEJABAT PENGADAAN DI LINGKUNGAN</b><br>
-                                <b>DINAS KOMUNIKASI DAN INFORMATIKA PROVINSI JAWA TIMUR</b><br>
+                            <b>DINAS KOMUNIKASI DAN INFORMATIKA PROVINSI JAWA TIMUR</b><br>
                     </td>
                 </tr>
             </table>
@@ -483,6 +497,13 @@
                 </tbody>
             </table>
         </div>
+    </div>
+</div>
+
+<div class="col-12 grid-margin stretch-card">
+    <div class="modal-footer mt-3">
+        <button type="back" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+        <a type="submit" class="btn btn-primary " href="{{ url('/print_notadinas4')  }}">Cetak PDF <i class="fa fa-save"></i></a>
     </div>
 </div>
 @endsection
