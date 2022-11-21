@@ -93,13 +93,13 @@
                         <td width="475">1 (satu) berkas</td>
                     </tr>
                 </table>
-                <table border="0" align="center" id="data1" font-size="2">
+                <table border="0" align="center" font-size="2">
                     <tr>
                         <td width="80">Perihal</td>
                         <td>:</td>
-                        <td width="475">Pemrosesan Administrasi Pengadaan</td>
-                        {{-- <td width="475">Pemrosesan Administrasi Pengadaan {{ $jadwal->pengadaan->jenis_barang}}</td> --}}
-                        {{-- <td width="475">Pemrosesan Administrasi Pengadaan {{ $pengadaan->pt_pelaksana}}</td> --}}
+                        {{-- <td width="475">Pemrosesan Administrasi Pengadaan</td> --}}
+                        <td width="475">Pemrosesan Administrasi Pengadaan {{ $jadwal->pengadaan->jenis_pengadaan}}</td>
+                        {{-- <td width="475">Pemrosesan Administrasi Pengadaan {{ $pengadaan->jenis_pengadaan}}</td> --}}
                     </tr>
                 </table>
                 {{-- <table border="0" align="center" font-size="2">

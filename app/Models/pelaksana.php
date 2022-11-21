@@ -26,7 +26,7 @@ class Pelaksana extends Model
  
     public function pengadaan()
     {
-    	return $this->hasOne(Pengadaan::class);
+    	return $this->belongsTo(Pengadaan::class);
     }
 
 }
