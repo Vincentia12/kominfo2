@@ -135,7 +135,7 @@ Route::post('/pejabat/update/{id}', [PejabatController::class, 'update']);
 
 //print
 Route::get('notadinas1', [PdfController::class, 'index']);
-Route::get('print_notadinas1', [PdfController::class, 'nota_dinas1']);
+Route::get('print_notadinas1/{id}', [PdfController::class, 'nota_dinas1']);
 Route::get('print_notadinas2', [PdfController::class, 'nota_dinas2']);
 Route::get('print_notadinas4', [PdfController::class, 'nota_dinas4']);
 Route::get('ba_evaluasi', [PdfController::class, 'ba_evaluasi']);
@@ -242,6 +242,12 @@ Route::get('/undangan_penyedia', function () {
 });
 Route::get('/kuitansi_kontrak', function () {
     return view('print.kuitansi_kontrak');
+});
+Route::get('/evaluasi_dok', function () {
+    return view('print.evaluasi_dok');
+});
+Route::get('/surat_perintah_kerja', function () {
+    return view('print.surat_perintah_kerja');
 });
 // Route::resource('/getusr',[App\Http\Controllers\AdminController::class, 'index']);
 

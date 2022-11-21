@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\jadwal;
+use App\Models\Pelaksana;
 use App\Models\pengadaan;
 // use Illuminate\Support\Facades\DB;
 
@@ -35,21 +36,22 @@ class JadwalController extends Controller
         // $pelaksana = Pelaksana::select('*')
         //                 ->get();
 
-        return view(
-            'admin.input_jadwal',
-            // 'admin.input_pengadaan',
-            ['jadwal' => $jadwal],
-            ['pengadaan' => $pengadaan]
-        );
-
         // return view(
         //     'admin.input_jadwal',
+        //     // 'admin.input_pengadaan',
         //     ['jadwal' => $jadwal],
-        //     ['pengadaan' => $pengadaan],
+        //     ['pengadaan' => $pengadaan]
         // );
+        // return view('admin.input_jadwal', compact('jadwal'));
+        return view(
+            'admin.input_jadwal',
+            ['jadwal' => $jadwal],
+            ['pengadaan' => $pengadaan],
+        );
         // $jadwal = Jadwal::all();
 
         // return view('admin.input_jadwal', ['jadwal'=>$jadwal]);
+        // dd($jadwal);
     }
 
     public function index1()
@@ -152,6 +154,25 @@ class JadwalController extends Controller
     {
         return view('jadwal.index', compact('jadwal'));
         //
+    }
+    public function show1(Jadwal $jadwal)
+    // public function show(Request $request,$id)
+    {
+        // $pengadaan = Pengadaan::all();
+        // $jadwal = Jadwal::all();
+        // $jadwal = $jadwal = DB::table('jadwals')
+        // ->join('pengadaans', 'pengadaan_id', '=', 'pengadaans.id')
+        // ->select('jadwals.*', 'pengadaans.jenis_pengadaan',)
+        // ->get();
+        // return view('admin.input_pengadaan', compact('pengadaan'));
+        // return view('admin.detail', compact('pengadaan'));
+        // $pengadaan1 = Pengadaan::find($id);
+        // return view('admin.pengadaan1',compact('pengadaans'))
+        return view('print.nota_dinas2',compact('jadwal'))
+        // ->renderSections()['content']
+        ;
+        // dd($pengadaan);
+        // dd($jadwal);
     }
 
     /**

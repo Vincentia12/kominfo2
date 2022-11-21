@@ -25,6 +25,6 @@ class Jadwal extends Model
 
     public function pengadaan()
     {
-        return $this->belongsTo(pengadaan::class);
+        return $this->belongsToMany(pengadaan::class);
     }
 }

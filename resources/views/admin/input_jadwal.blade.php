@@ -138,6 +138,40 @@
           </div>
           <div class="mb-4">
             <label for="exampleInputName1" class="col-sm-3 col-form-label">Kegiatan</label>
+<<<<<<< HEAD
+              {{-- <div class="col-sm-9"> --}}
+                <select class="form-control" name="kegiatan">
+                  <option>-----Pilih Pengadaan-----</option>
+                  <option>Nota Dinas dari KPA ke PPK</option>
+                  <option>Nota Dinas dari PPK ke Pejabat Pengadaan + </option>
+                  <option>Lampiran OE (HPS)</option> 
+                  <option>Surat Undangan, Pengambilan Dokumen Kualifikasi dan Dokumen Pengadaan Langsung kepada Penyedia Barang/Jasa</option>
+                  <option>PAKTA  INTEGRITAS</option>
+                  <option>Surat Pernyataan Minat</option>
+                  <option>Pemasukan Dokumen Kualifikasi</option>
+                  <option>Daftar Hadir Pengembalian Dokumen Prakualifikasi</option> 
+                  <option>BA. Evaluasi Dokumen Prakualifikasi</option>
+                  <option>Lampiran BA. Evaluasi Dokumen Prakualifikasi</option> 
+                  <option>Surat Undangan Permintaan Penawaran Harga</option>
+                  <option>BA. Penjelasan Pekerjaan</option>
+                  <option>Pemasukan Penawaran</option> 
+                  <option>BA. Pembukaan Penawaran</option>
+                  <option>Surat Undangan Klarifikasi/Negosiasi</option>
+                  <option>BA. Klarifikasi/Negosiasi</option>
+                  <option>Lampiran BA. Klarifikasi/Negosiasi</option> 
+                  <option>BA. Hasil Pengadaan Langsung</option>
+                  <option>Nota Dinas dari Pejabat Pengadaan ke PPK</option>
+                  <option>Penetapan Penyedia Jasa</option> 
+                  <option>Penunjukan Penyedia Barang/Jasa</option>
+                  <option>Surat Perintah Kerja</option>
+                  <option>Surat Perintah Mulai Kerja (SPMK)</option>
+                  <option>BA. Serah Terima Hasil Pekerjaan</option>
+                  <option>BA. Penyerahan Barang/Jasa</option>
+                  <option>BA. Hasil Pemeriksaan Administratif</option>
+                  <option>BA. Hasil Pembayaran</option>
+                </select>
+              {{-- </div> --}}
+=======
             <!-- <div class="col-sm-9"> -->
             <select class="form-control" name="kegiatan">
               <option>Pilih Pengadaan</option>
@@ -170,6 +204,7 @@
               <option>BA. Hasil Pembayaran</option>
             </select>
             <!-- </div> -->
+>>>>>>> c7e187cfde62d132f4253d58505ab3dceef273ca
           </div>
           <div class="mb-4">
             <label for="message-text" class="col-form-label">Alokasi</label>

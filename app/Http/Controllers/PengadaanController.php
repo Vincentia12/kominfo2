@@ -71,6 +71,34 @@ class PengadaanController extends Controller
     {
         // menangkap data pencarian
         $cari1 = $request->cari1;
+<<<<<<< HEAD
+        
+        $pengadaan1 = DB::table('jadwals')->where('jadwals.pengadaan_id','like',"%".$cari1."%")
+        ->join('pengadaans', 'pengadaan_id', '=', 'pengadaans.id')
+            // ->select('*')
+            // ->join('pengadaans', 'pelaksanas.id', '=', 'pengadaans.pelaksana_id')
+            ->join('pelaksanas', 'pelaksana_id', '=', 'pelaksanas.id')
+            // ->where('nilai_negosiasi', '<=', 50)
+            // ->join('jadwals', 'pengadaans.id', '=', 'jadwals.pengadaan_id')
+            
+            ->join('barangs', 'pengadaans.id', '=', 'barangs.pengadaan_id')
+        ->get();
+        // ->paginate(10);
+        // ->paginate();
+        // mengambil data dari table pegawai sesuai pencarian data
+        // $pengadaan1 = Jadwal::where('pengadaan_id','like',"%".$cari1."%")
+        // ->join('pengadaans', 'pengadaan_id', '=', 'pengadaans.id')
+        // //->join('barangs', 'pengadaans.id', '=', 'barangs.pengadaan_id')
+        // ->join('pelaksanas', 'pelaksana_id', '=', 'pelaksanas.id')
+        // ->select('jadwals.*', 'pengadaans.*', 'pelaksanas.*', 
+        // // 'barangs.*' 
+        // )
+        // ->get();
+        // ->paginate();
+        
+        // $pejabat = Pejabat::all();
+            // mengirim data pegawai ke view index
+=======
 
         // mengambil data dari table pegawai sesuai pencarian data
         $pengadaan1 = Jadwal::where('pengadaan_id', 'like', "%" . $cari1 . "%")
@@ -80,9 +108,10 @@ class PengadaanController extends Controller
 
         $pejabat = Pejabat::all();
         // mengirim data pegawai ke view index
+>>>>>>> c7e187cfde62d132f4253d58505ab3dceef273ca
         // return view('admin.pengadaan1',['pengadaan1' => $pengadaan1]);
-        return view('admin.pengadaan1', compact('pengadaan1'));
-        // dd($pengadaan1, $pejabat);
+        // return view('admin.pengadaan1', compact('pengadaan1'));
+        dd($pengadaan1);
     }
 
     //pengadaan2
@@ -230,17 +259,35 @@ class PengadaanController extends Controller
     public function show(Pengadaan $pengadaan)
     // public function show(Request $request,$id)
     {
+        $pengadaan = DB::table('pengadaans')
+        // ->join('pengadaans', 'pelaksanas.id', '=', 'pengadaans.pelaksana_id')
+        ->join('pelaksanas', 'pelaksana_id', '=', 'pelaksanas.id')
+        ->join('jadwals', 'pengadaans.id', '=', 'jadwals.pengadaan_id')
+        ->join('barangs', 'pengadaans.id', '=', 'barangs.pengadaan_id')
+        ->select('*')
+        ->get();
+        // ->paginate(10);
+        // ->paginate();
         // return view('admin.input_pengadaan', compact('pengadaan'));
         // return view('admin.detail', compact('pengadaan'));
         // $pengadaan1 = Pengadaan::find($id);
         // return view('admin.pengadaan1',compact('pengadaans'))
+<<<<<<< HEAD
+        return view('print.nota_dinas1',compact('pengadaan'));
+        
+        // ->renderSections()['content']
+        // return view('print.nota_dinas1',['pengadaan1' => $pengadaan1])
+=======
         return view('print.nota_dinas1', compact('pengadaan'))
             // ->renderSections()['content']
         ;
+>>>>>>> c7e187cfde62d132f4253d58505ab3dceef273ca
     }
     public function show1(Pengadaan $pengadaan)
     // public function show(Request $request,$id)
     {
+        $pengadaan = Pengadaan::all();
+
         // return view('admin.input_pengadaan', compact('pengadaan'));
         // return view('admin.detail', compact('pengadaan'));
         // $pengadaan1 = Pengadaan::find($id);
@@ -248,6 +295,7 @@ class PengadaanController extends Controller
         return view('print.nota_dinas2', compact('pengadaan'))
             // ->renderSections()['content']
         ;
+        // dd($pengadaan);
     }
     public function show2(Pengadaan $pengadaan)
     // public function show(Request $request,$id)
@@ -259,6 +307,7 @@ class PengadaanController extends Controller
         return view('print.nota_dinas4', compact('pengadaan'))
             // ->renderSections()['content']
         ;
+        // dd($pengadaan);
     }
     public function show3(Pengadaan $pengadaan)
     // public function show(Request $request,$id)
@@ -401,14 +450,14 @@ class PengadaanController extends Controller
     {
         $pengadaan->delete();
 
-        // return redirect()->route('pengadaan.index')
-        //     ->with('success', 'Pengadaan Berhasil Dihapus!');
-        return view(
-            'admin.input_pengadaan',
-            // 'admin.input_pengadaan',
-            // ['pelaksana' => $pelaksana],
-            ['pengadaan' => $pengadaan],
-        )->with('success', 'Pengadaan Berhasil Dihapus!');
+        return redirect()->route('pengadaan.index')
+            ->with('success', 'Pengadaan Berhasil Dihapus!');
+        // return view(
+        //     'admin.input_pengadaan',
+        //     // 'admin.input_pengadaan',
+        //     // ['pelaksana' => $pelaksana],
+        //     ['pengadaan' => $pengadaan],)
+        // ->with('success', 'Pengadaan Berhasil Dihapus!');
     }
     // public function destroy1(pengadaan $pengadaan1)
     // {

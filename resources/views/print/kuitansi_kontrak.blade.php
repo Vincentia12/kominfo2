@@ -273,10 +273,19 @@
 </div>
 
 <div class="col-12 grid-margin stretch-card">
+<<<<<<< HEAD
     <div class="modal-footer mt-3">
         <button type="back" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
         <a type="submit" class="btn btn-primary " href="{{ url('/print_notadinas4')  }}">Cetak PDF <i class="fa fa-save"></i></a>
     </div>
 </div>
 
+=======
+    <div class="card shadow">
+        <div class="card-body">
+        
+        </div>
+    </div>
+</div>
+>>>>>>> 8d92791253f559d59d569976e89755838d055564
 @endsection

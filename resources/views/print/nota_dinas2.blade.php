@@ -30,10 +30,21 @@
             <table border="0" align="center">
                 <tr>
                     <td>
+<<<<<<< HEAD
                         <center>
                             <font size="3"><b>DINAS KOMUNIKASI DAN INFORMATIKA</b></font><br>
                             <font size="3"><b>PROVINSI JAWA TIMUR<b /></font><br>
                             <font size="3"><u>NOTA DINAS<u /></font><br>
+=======
+                        {{-- <center><font size="3"><b>DINAS KOMUNIKASI DAN INFORMATIKA</b></font><br>
+                                <font size="3"><b>PROVINSI JAWA TIMUR<b/></font><br>
+                                <font size="3"><u>NOTA DINAS<u/></font><br> --}}
+                        <center>
+                            <font size="3"><b>DINAS KOMUNIKASI DAN INFORMATIKA</b></font><br>
+                            <font size="3"><b>PROVINSI JAWA TIMUR</b></font><br>
+                            <font size="3"><b><b><u>NOTA DINAS</u></b></b></font><br>
+                        </center>
+>>>>>>> 8d92791253f559d59d569976e89755838d055564
                     </td>
                 </tr>
                 <tr>
@@ -68,7 +79,7 @@
                 <tr>
                     <td width="80">Tanggal</td>
                     <td>:</td>
-                    <td width="475">12 Agustus 2022</td>
+                    {{-- <td width="475">{{ $jadwal->tanggal }}</td> --}}
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
@@ -96,14 +107,15 @@
                 <tr>
                     <td width="80">Perihal</td>
                     <td>:</td>
-                    <td width="475">Pemrosesan Administrasi Pengadaan Belanja Alat/Bahan</td>
+                    <td width="475">Pemrosesan Administrasi Pengadaan {{ $pengadaan->jenis_pengadaan }}</td>
+                    {{-- <td width="475">Pemrosesan Administrasi Pengadaan {{ $jadwal->jenis_pengadaan }}</td> --}}
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
                 <tr>
                     <td width="80"> </td>
                     <td width="5"> </td>
-                    <td width="475">Kapasitas Kelembagaan Statistik Sektoral Toner Printer</td>
+                    {{-- <td width="475">Kapasitas Kelembagaan Statistik Sektoral Toner Printer</td> --}}
                 </tr>
             </table>
             <br>
