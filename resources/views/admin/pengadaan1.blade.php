@@ -61,7 +61,7 @@
                     {{-- <input type="text" name="cari" class="form-control w-75 d-inline" id="cari" placeholder="Masukkan keyword"> --}}
                     <select class="form-control w-25 mb-4 d-inline" name="cari1" id="cari1">
                         <option> Pilih Pengadaan </option>
-                        @foreach ($pengadaan as $pd1)
+                        @foreach ($pengadaan1 as $pd1)
                         <option value="{{$pd1->pengadaan_id}}">{{ $pd1->jenis_pengadaan }}</option>
                         @endforeach
                     </select>
@@ -131,7 +131,7 @@
             </div>
         </div> --}}
         {{-- <table class="table table-bordered" id="data1" style="width:100%"> --}}
-        <table class="table table-bordered" id="" style="width:100%">
+        {{-- <table class="table table-bordered" id="" style="width:100%">
 
             <thead>
                 <tr>
@@ -143,7 +143,7 @@
                     <th>Hari</th>
                     <th>Tanggal</th>
                     <th>Nomor</th>
-                    <th>Deskripsi Tanggal</th>
+                    <th>Deskripsi Tanggal</th> --}}
                     {{-- <th>NO</th> --}}
                     {{-- <th>Id Pengadaan</th>
                                 <th>Nama Pengadaan</th>
@@ -158,8 +158,7 @@
                                 <th>Tahun Kepemilikan</th>
                                 <th>Tahun Pembangunan</th>
                                 <th>Tahun Rehab</th> --}}
-=======
-                                </tr>
+                                {{-- </tr>
                             </div>
                         </div>
                         <div class="mb-4">
@@ -172,7 +171,7 @@
                             </div>
                         </div> --}}
                     {{-- <table class="table table-bordered" id="data1" style="width:100%"> --}}
-                    <table class="table table-bordered" style="width:100%">
+                    <table class="table table-bordered"  style="width:100%">
                         
                         <thead>
                             <tr>
@@ -188,53 +187,6 @@
                                 {{-- <th>NO</th> --}}
                                 {{-- <th>Id Pengadaan</th> --}}
                             
-                                {{-- <th>Kegiatan</th> --}}
-                                <th width="280px">Action</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {{-- @if(count($pengadaan)<=50) --}}
-                            {{-- @foreach ($pengadaan1 as $p1) --}}
-                            @foreach ($pengadaan as $p1)
-                            {{-- @foreach ($jadwal1 as $jd1) --}}
-                            <tr>
-                                <td>{{ $p1->pt_pelaksana }}</td>
-                                <td>{{ $p1->jenis_pengadaan }}</td>
-                                <td>{{ $p1->nilai_negosiasi }}</td>
-                                <td>{{ $p1->kegiatan }}</td>
-                                <td>{{ $p1->alokasi }}</td>
-                                <td>{{ $p1->hari }}</td>
-                                <td>{{ $p1->tanggal }}</td>
-                                <td>{{ $p1->nomor }}</td>
-                                <td>{{ $p1->deskripsi_tgl }}</td>
-                                <td>
-                                    @if ($p1->kegiatan == 'Nota Dinas dari KPA ke PPK')
-                                    {{-- <form action="{{ route('pengadaan1.destroy',$p1->id) }}" method="POST"> --}}
-   
-                                        <a class="btn btn-info" href="{{ route('pengadaan1.show1',$p1->id) }}">Detail</a>
-                                        {{-- <a type="submit" class="btn btn-primary " href="{{ url('/print_notadinas2',$p1->id)  }}" >Cetak PDF <i class="fa fa-save"></i></a> --}}
-                                        <a class="btn btn-primary " href="{{ url('/print_notadinas2',$p1->id)  }}" >Cetak PDF <i class="fa fa-save"></i></a>
-                                        {{-- <a class="btn btn-info" href="{{ route('pengadaan1.show',$p1->id) }}">Detail</a> --}}
-                                        {{-- <a class="btn btn-info" href="{{ route('show',$p1->id) }}">Detail</a> --}}
-                                    {{-- </form> --}}
-                                    @elseif($p1->kegiatan == 'Nota Dinas dari PPK ke Pejabat Pengadaan +')
-                                        {{-- <a class="btn btn-info" href="{{ route('show1',$p1->id) }}">Detail</a> --}}
-                                        <a class="btn btn-info" href="{{ route('pengadaan1.show1',$p1->id) }}">Detail</a>
-                                        {{-- <a class="btn btn-info" name="show1">Detail</a> --}}
-                                        {{-- url('/print_notadinas1') --}}
-                                    @elseif($p1->kegiatan == 'Surat Undangan, Pengambilan Dokumen Kualifikasi dan Dokumen Pengadaan Langsung kepada Penyedia Barang/Jasa')
-                                        {{-- <a class="btn btn-info" href="{{ route('show1',$p1->id) }}">Detail</a> --}}
-                                        {{-- <a class="btn btn-info" href="{{ route('pengadaan1.show2',$p1->id) }}">Detail</a> --}}
-                                        {{-- <a class="btn btn-info" name="show1">Detail</a> --}}
-                                        {{-- url('/print_notadinas1') --}}
-                                    @else
-                                        You don't have a post!
-                                    @endif
-                                    {{-- <form action="{{ route('pengadaan.destroy1',$p1->id) }}" method="POST"> --}}
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 46a6761052d4a8a752c3a3659618126fcece2b38
                     {{-- <th>Kegiatan</th> --}}
                     <th width="280px">Action</th>
                 </tr>
@@ -255,8 +207,8 @@
                     <td>{{ $p1->deskripsi_tgl }}</td>
                     <td>
                         @if ($p1->kegiatan == 'Nota Dinas dari KPA ke PPK')
-                        <a class="btn btn-info" href="{{ route('pengadaan.show',$p1->id) }}">Detail</a>
-                        <!-- {{-- <a class="btn btn-info" href="{{ route('show',$p1->id) }}">Detail</a> --}} -->
+                            <a class="btn btn-info" href="{{ route('pengadaan1.show',$p1->id) }}">Detail</a>
+                            {{-- <a class="btn btn-info" href="{{ route('show',$p1->id) }}">Detail</a> --}}
                         @elseif($p1->kegiatan == 'Nota Dinas dari PPK ke Pejabat Pengadaan +')
                         <!-- {{-- <a class="btn btn-info" href="{{ route('show1',$p1->id) }}">Detail</a> --}} -->
                         <a class="btn btn-info" href="{{ route('pengadaan1.show1',$p1->id) }}">Detail</a>
@@ -298,12 +250,6 @@
                         @else
                         You don't have a post!
                         @endif
-                        <!-- {{-- <form action="{{ route('pengadaan.destroy1',$p1->id) }}" method="POST"> --}}
-<<<<<<< HEAD
-=======
->>>>>>> c7e187cfde62d132f4253d58505ab3dceef273ca
->>>>>>> 1199d04ee17492220f9d87209b6f3466ec59cfd3
->>>>>>> 46a6761052d4a8a752c3a3659618126fcece2b38
                                         {{-- <a href="#" value="{{ action() }}" class="btn btn-xs btn-info modalMd" title="Show Data" data-toggle="modal" data-target="#modalMd"><span class="glyphicon glyphicon-eye-open"></span></a> --}}
                                         {{-- <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modalDetailPengadaan1-{{$jd1->pengadaan_id}}"> --}}
                                         {{-- <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modalprint-{{$p1->id}}">

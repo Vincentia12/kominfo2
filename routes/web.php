@@ -116,8 +116,9 @@ Route::post('/pengadaan/update/{id}', [PengadaanController::class, 'update']);
 
 
 // Route::get('/input_pengadaan', [PengadaanController::class, 'index']);
-Route::resource('/pengadaan1', PengadaanController::class);
+// Route::resource('/pengadaan1', PengadaanController::class);
 // Route::get('/pengadaan1/{id}', [PengadaanController::class, 'show'])->name('show');
+Route::get('/pengadaan1/show/{id}', [PengadaanController::class, 'show'])->name('pengadaan1.show');
 Route::get('/pengadaan1/show1/{id}', [JadwalController::class, 'show1'])->name('pengadaan1.show1');
 Route::get('/pengadaan1/show2/{id}', [PengadaanController::class, 'show2'])->name('pengadaan1.show2');
 // Route::get('/lihat', PengadaanController::class, 'show1')->name('show1');

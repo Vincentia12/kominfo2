@@ -32,7 +32,7 @@
     <div class="card shadow">
         <div class="card-body">
             <table border="0" align="center">
-                <tr>
+                {{-- <tr>
                     <td>
                         <center>
                             <font size="3"><b>DINAS KOMUNIKASI DAN INFORMATIKA</b></font><br>
@@ -118,14 +118,7 @@
             </table>
             <br>
             <table width="565px" border="1" align="center">
-                <thead>
-                    <tr align="center">
-                        <th width="50px" scope="col">No</th>
-                        <th width="265px" scope="col">Belanja Alat/Bahan Untuk Kegiatan Kantor </th>
-                        <th width="100px" scope="col">Jumlah Barang</th>
-                        <th width="100px" scope="col">Satuan</th>
-                    </tr>
-                </thead>
+                < --}}
                 <tbody>
                     <tr>
                         <td>
@@ -140,69 +133,6 @@
                             <hr>
                         </td>
                     </tr>
-<<<<<<< HEAD
-            </table>
-            <br>
-            <table border="0" align="center" font-size="2">
-                <tr>
-                    <td width="80">Kepada</td>
-                    <td>:</td>
-                    <td width="475">Yth. Sdr. Pejabat Pembuat Komitmen Dinas Komunikasi dan</td>
-                </tr>
-            </table>
-            <table border="0" align="center" font-size="2">
-                <tr>
-                    <td width="80"> </td>
-                    <td width="5"> </td>
-                    <td width="475">Informatika Provinsi Jawa Timur</td>
-                </tr>
-            </table>
-            <table border="0" align="center" font-size="2">
-                <tr>
-                    <td width="80">Dari</td>
-                    <td>:</td>
-                    <td width="475">Kuasa Pengguna Anggaran</td>
-                </tr>
-            </table>
-            <table border="0" align="center" font-size="2">
-                <tr>
-                    <td width="80">Tanggal</td>
-                    <td>:</td>
-                    <td width="475">11 Agustus 2022</td>
-                </tr>
-            </table>
-            <table border="0" align="center" font-size="2">
-                <tr>
-                    <td width="80">Nomor</td>
-                    <td>:</td>
-                    <td width="475">020/654.1/114.6/2022</td>
-                </tr>
-            </table>
-            <table border="0" align="center" font-size="2">
-                <tr>
-                    <td width="80">Sifat</td>
-                    <td>:</td>
-                    <td width="475">Segera</td>
-                </tr>
-            </table>
-            <table border="0" align="center" font-size="2">
-                <tr>
-                    <td width="80">Lampiran</td>
-                    <td>:</td>
-                    <td width="475">1 (satu) berkas</td>
-                </tr>
-            </table>
-            <table border="0" align="center" id="data1" font-size="2">
-                <tr>
-                    <td width="80">Perihal</td>
-                    <td>:</td>
-                    <td width="475">Pemrosesan Administrasi Pengadaan</td>
-                    {{-- <td width="475">Pemrosesan Administrasi Pengadaan {{ $jadwal->pengadaan->jenis_barang}}</td> --}}
-                    {{-- <td width="475">Pemrosesan Administrasi Pengadaan {{ $pengadaan->pt_pelaksana}}</td> --}}
-                </tr>
-            </table>
-            {{-- <table border="0" align="center" font-size="2">
-=======
                 </table>
                 <br>
                 <table border="0" align="center" font-size="2">
@@ -230,14 +160,16 @@
                     <tr>
                         <td width="80">Tanggal</td>
                         <td>:</td>
-                        <td width="475">11 Agustus 2022</td>
+                        <td width="475">{{ $pengadaan1->tanggal}}</td>
+                        {{-- <td width="475">{{ $pengadaan1->tanggal}}</td> --}}
+                        {{-- <td width="475">11 Agustus 2022</td> --}}
                     </tr>
                 </table>
                 <table border="0" align="center" font-size="2">
                     <tr>
                         <td width="80">Nomor</td>
                         <td>:</td>
-                        <td width="475">020/654.1/114.6/2022</td>
+                        <td width="475">020/{{$pengadaan1->nomor}}/114.6/2022</td>
                     </tr>
                 </table>
                 <table border="0" align="center" font-size="2">
@@ -259,12 +191,11 @@
                         <td width="80">Perihal</td>
                         <td>:</td>
                         {{-- <td width="475">Pemrosesan Administrasi Pengadaan</td> --}}
-                        <td width="475">Pemrosesan Administrasi Pengadaan {{ $jadwal->pengadaan->jenis_pengadaan}}</td>
+                        <td width="475">Pemrosesan Administrasi Pengadaan {{ $pengadaan1->pengadaan->jenis_pengadaan}}</td>
                         {{-- <td width="475">Pemrosesan Administrasi Pengadaan {{ $pengadaan->jenis_pengadaan}}</td> --}}
                     </tr>
                 </table>
                 {{-- <table border="0" align="center" font-size="2">
->>>>>>> 46a6761052d4a8a752c3a3659618126fcece2b38
                     <tr>
                         <td width="80"> </td>
                         <td width="5"> </td>
@@ -281,20 +212,26 @@
             <table width="565px" border="1" align="center">
                 <thead>
                     <tr align="center">
-                        <th width="50px" scope="col">No</th>
+                        <th width="50px" scope="col">id pengadaan</th>
+                        {{-- <th width="50px" scope="col">No</th> --}}
                         <th width="265px" scope="col">Belanja Alat/Bahan Untuk Kegiatan Kantor </th>
                         <th width="100px" scope="col">Jumlah Barang</th>
                         <th width="100px" scope="col">Satuan</th>
+                        <th width="100px" scope="col">Harga Satuan</th>
                     </tr>
                 </thead>
                 <tbody>
+                    @foreach ($barang as $brg)
+                        
                     <tr>
-                        <th scope="row">1</th>
-                        <td>Toner Printer Tinta Printer Epson L-1300</td>
-                        <td align="center">2</td>
-                        <td align="center">Buah</td>
+                        <th scope="row">{{$brg->pengadaan_id}}</th>
+                        <td>{{$brg->barang}}</td>
+                        <td align="center">{{$brg->jumlah_barang}}<//td>
+                        <td align="center">{{$brg->satuan}}</td>
+                        <td align="center">{{$brg->harga_satuan}}</td>
                     </tr>
-                    <tr>
+                    @endforeach
+                    {{-- <tr>
                         <th scope="row">2</th>
                         <td>Toner Printer Tinta Printer Epson L-1800</td>
                         <td align="center">1</td>
@@ -305,7 +242,7 @@
                         <td>Toner Printer Tinta Printer Epson L-6160</td>
                         <td align="center">1</td>
                         <td align="center">Buah</td>
-                    </tr>
+                    </tr> --}}
                 </tbody>
             </table>
             <br>
@@ -340,8 +277,11 @@
             <table border="0" align="center">
                 <tr>
                     <td width="300"> </td>
-                    <td>NIP. 19650909 199403 2 006</td>
-                    {{-- <td>NIP. {{ $pejabat-> }}</td> --}}
+                    {{-- <td>NIP. 19650909 199403 2 006</td> --}}
+                    {{-- @foreach ($pejabat as $p)
+                        
+                    <td>NIP. {{ $p->nip_kuasa_pengguna }}</td>
+                    @endforeach --}}
                     <td width="50"> </td>
                 </tr>
             </table>
@@ -354,7 +294,7 @@
         <a type="submit" class="btn btn-primary " href="{{ url('/print_notadinas1')  }}">Cetak PDF <i class="fa fa-save"></i></a>
     </div>
 </div>
-<<<<<<< HEAD </div>
+</div>
 
     <div class="col-12 grid-margin stretch-card">
         <div class="modal-footer mt-3">
@@ -362,6 +302,5 @@
             <a type="submit" class="btn btn-primary " href="{{ url('/print_notadinas1')  }}">Cetak PDF <i class="fa fa-save"></i></a>
         </div>
     </div>
-    =======
-    >>>>>>> 8d92791253f559d59d569976e89755838d055564
+
     @endsection
