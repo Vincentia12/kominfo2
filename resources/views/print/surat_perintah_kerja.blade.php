@@ -184,4 +184,99 @@
     </div>
 </div>
 
+<div class="col-12 grid-margin stretch-card">
+    <div class="card shadow">
+        <div class="card-body">
+            <br>
+            <table width="565px" border="1" align="center">
+                <thead>
+                    <tr align="center">
+                        <th width="30px" scope="col">NO</th>
+                        <th width="120" scope="col">JENIS BARANG / PEKERJAAN</th>
+                        <th width="83" scope="col">SPESIFIKASI</th>
+                        <th width="83" scope="col">KUANTITAS</th>
+                        <th width="83" scope="col">SATUAN</th>
+                        <th width="83" scope="col">HARGA SATUAN ( Rp.)</th>
+                        <th width="83" scope="col">JUMLAH HARGA (Rp.)</th>
+                    </tr>
+                    <tr align="center">
+                        <th width="30px" scope="col">1</th>
+                        <th width="120" scope="col">2</th>
+                        <th width="83" scope="col">3</th>
+                        <th width="83" scope="col">4</th>
+                        <th width="83" scope="col">5</th>
+                        <th width="83" scope="col">6</th>
+                        <th width="83" scope="col">7</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{--  <tr>
+                        <td width="565px">PENGADAAN BELANJA ALAT/BAHAN UNTUK KEGIATAN KANTOR</td>
+                    </tr>  --}}
+                    <tr>
+                        <td align="center">1.</td>
+                        <td>Belanja Alat/Bahan Kapasitas Kelembagaan Statistik Sektoral Toner Printer</td>
+                        <td>Toner Printer</td>
+                        <td> </td>
+                        <td> </td>
+                        <td> </td>
+                        <td> </td>
+                    </tr>
+                    <tr>
+                        <td align="center"> </td>
+                        <td> </td>
+                        <td>Tinta Printer Epson L-1300-(2) hitam,cyan,magenta, yellow</td>
+                        <td align="center">2</td>
+                        <td align="center">buah</td>
+                        <td>1.245.000</td>
+                        <td>2.490.000</td>
+                    </tr>
+                    <tr>
+                        <td align="center"> </td>
+                        <td> </td>
+                        <td>Tinta Printer Epson L-1800-(2)hitam, cyan,magenta, yellow,lighcyan,lightmagenta</td>
+                        <td align="center">1</td>
+                        <td align="center">buah</td>
+                        <td>1.257.000</td>
+                        <td>1.257.000</td>
+                    </tr>
+                    <tr>
+                        <td align="center"> </td>
+                        <td> </td>
+                        <td>Tinta Printer Epson L-6160-(2)hitam,cyan,magenta, yellow</td>
+                        <td align="center">1</td>
+                        <td align="center">buah</td>
+                        <td>1.250.000</td>
+                        <td>1.250.000</td>
+                    </tr>
+                    <tr height="20">
+                        <td> </td>
+                        <td> </td>
+                        <td> </td>
+                        <td> </td>
+                        <td> </td>
+                        <td> </td>
+                        <td> </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table width="600px" border="1" align="center">
+                <thead>
+                    <tr align="right">
+                        <th width="517">Total</th>
+                        <th width="83">4.997.000,-</th>
+                    </tr>
+                    <tr align="right">
+                        <th width="517">PPn 11 %  </th>
+                        <th width="83">549.670,-</th>
+                    </tr>
+                    <tr align="right">
+                        <th width="517">Jumlah Total</th>
+                        <th width="83">5.546.670,-</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+</div>
 @endsection
