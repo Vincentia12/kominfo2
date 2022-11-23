@@ -252,7 +252,8 @@ class PengadaanController extends Controller
      * @param  \App\Models\pengadaan  $pengadaan
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    //Nota Dinas 1
+    public function show1($id)
     // public function show(Request $request,$id)
     {
         $pengadaan1 = Jadwal::find($id);
@@ -275,8 +276,8 @@ class PengadaanController extends Controller
         // dd($pengadaan1, $barang, $pejabat, );
         
     }
-    
-    public function show1($id)
+    //Nota Dinas 2
+    public function show2($id)
     // public function show(Request $request,$id)
     {
         $pengadaan1 = Jadwal::find($id);
@@ -298,20 +299,31 @@ class PengadaanController extends Controller
         );
         // dd($pengadaan1, $barang, $pejabat, );
     }
-    public function show2($id)
+    //Nota Dinas 3
+    public function show3($id)
     // public function show(Request $request,$id)
     {
         $pengadaan1 = Jadwal::find($id);
-        // return view('admin.input_pengadaan', compact('pengadaan'));
-        // return view('admin.detail', compact('pengadaan'));
-        // $pengadaan1 = Pengadaan::find($id);
-        // return view('admin.pengadaan1',compact('pengadaans'))
-        return view('print.nota_dinas4', compact('pengadaan1'))
-            // ->renderSections()['content']
-        ;
-        // dd($pengadaan);
+        $barang = DB::table('barangs')
+            ->where('barangs.pengadaan_id', 'like', "%" . $pengadaan1->pengadaan_id . "%")
+        ->get();
+        $pejabat = DB::table('pejabats')
+            ->where('id', '=', 1)
+        ->get();
+
+        // $pejabat = Pejabat::all();
+        
+        
+        return view(
+            'print.nota_dinas4',
+            ['pengadaan1' => $pengadaan1],
+            ['barang'=>$barang],
+            ['pejabat' => $pejabat],
+        );
+        // dd($pengadaan1, $barang, $pejabat, );
     }
-    public function show3($id)
+
+    public function show4($id)
     // public function show(Request $request,$id)
     {
         $pengadaan1 = Jadwal::find($id);
@@ -324,47 +336,48 @@ class PengadaanController extends Controller
         ;
     }
 
-    public function show4(Pengadaan $pengadaan) // public function show(Request $request,$id)
+    public function show5(Pengadaan $pengadaan) 
+    // public function show(Request $request,$id)
     {
         return view('print.ba_nego', compact('pengadaan'));
     }
 
-    public function show5(Pengadaan $pengadaan) // public function show(Request $request,$id)
+    public function show6(Pengadaan $pengadaan) // public function show(Request $request,$id)
     {
         return view('print.ba_pekerjaan', compact('pengadaan'));
     }
 
-    public function show6(Pengadaan $pengadaan) // public function show(Request $request,$id)
+    public function show7(Pengadaan $pengadaan) // public function show(Request $request,$id)
     {
         return view('print.ba_penawaran', compact('pengadaan'));
     }
 
-    public function show7(Pengadaan $pengadaan) // public function show(Request $request,$id)
+    public function show8(Pengadaan $pengadaan) // public function show(Request $request,$id)
     {
         return view('print.daftar_hadir', compact('pengadaan'));
     }
 
-    public function show8(Pengadaan $pengadaan) // public function show(Request $request,$id)
+    public function show9(Pengadaan $pengadaan) // public function show(Request $request,$id)
     {
         return view('print.pakta_integritas', compact('pengadaan'));
     }
 
-    public function show9(Pengadaan $pengadaan) // public function show(Request $request,$id)
+    public function show10(Pengadaan $pengadaan) // public function show(Request $request,$id)
     {
         return view('print.penetapan_penyedia', compact('pengadaan'));
     }
 
-    public function show10(Pengadaan $pengadaan) // public function show(Request $request,$id)
+    public function show11(Pengadaan $pengadaan) // public function show(Request $request,$id)
     {
         return view('print.undangan_nego', compact('pengadaan'));
     }
 
-    public function show11(Pengadaan $pengadaan) // public function show(Request $request,$id)
+    public function show12(Pengadaan $pengadaan) // public function show(Request $request,$id)
     {
         return view('print.undangan_penawaran', compact('pengadaan'));
     }
 
-    public function show12(Pengadaan $pengadaan) // public function show(Request $request,$id)
+    public function show13(Pengadaan $pengadaan) // public function show(Request $request,$id)
     {
         return view('print.undangan_penyedia', compact('pengadaan'));
     }

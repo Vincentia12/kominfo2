@@ -95,6 +95,10 @@ Route::get('/input_barang', [BarangController::class, 'index']);
 Route::post('/postbarang', [BarangController::class, 'store']);
 Route::post('/barang/update/{id}', [BarangController::class, 'update']);
 
+//pejabat
+// Route::get('/pejabat/edit/{id}', [PejabatController::class, 'edit']);
+Route::post('/pejabat/update/{id}', [PejabatController::class, 'update']);
+
 //Pengadaan
 Route::resource('/pengadaan', PengadaanController::class);
 // Route::resource('/pengadaan1', PengadaanController::class);
@@ -107,9 +111,9 @@ Route::post('/pengadaan/update/{id}', [PengadaanController::class, 'update']);
 // Route::get('/input_pengadaan', [PengadaanController::class, 'index']);
 // Route::resource('/pengadaan1', PengadaanController::class);
 // Route::get('/pengadaan1/{id}', [PengadaanController::class, 'show'])->name('show');
-Route::get('/pengadaan1/show/{id}', [PengadaanController::class, 'show'])->name('pengadaan1.show');
 Route::get('/pengadaan1/show1/{id}', [PengadaanController::class, 'show1'])->name('pengadaan1.show1');
 Route::get('/pengadaan1/show2/{id}', [PengadaanController::class, 'show2'])->name('pengadaan1.show2');
+Route::get('/pengadaan1/show3/{id}', [PengadaanController::class, 'show3'])->name('pengadaan1.show3');
 // Route::get('/lihat', PengadaanController::class, 'show1')->name('show1');
 
 // Route::get('/pengadaan1', [PengadaanController::class, 'index1'], [JadwalController::class, 'index1']);
@@ -122,14 +126,11 @@ Route::get('/pengadaan2', [PengadaanController::class, 'index2']);
 Route::get('/pengadaan2cari', [PengadaanController::class, 'cari2'])->name('cari2');
 
 // Route::get('/pengadaan1', [JadwalController::class, 'index1']);
-//pejabat
-// Route::get('/pejabat/edit/{id}', [PejabatController::class, 'edit']);
-Route::post('/pejabat/update/{id}', [PejabatController::class, 'update']);
 
 //print
 Route::get('print', [PdfController::class, 'index']);
-Route::get('pengadaan1/notadinas1/{id}', [PdfController::class, 'nota_dinas1'])->name('pengadaan1.print');
-// Route::get('print_notadinas1/{id}', [PdfController::class, 'nota_dinas1'])->name('print1');
+Route::get('pengadaan1/print1/{id}', [PdfController::class, 'nota_dinas1'])->name('pengadaan1.print1');
+Route::get('pengadaan1/print2/{id}', [PdfController::class, 'nota_dinas2'])->name('pengadaan1.print2');
 Route::get('print_notadinas2', [PdfController::class, 'nota_dinas2']);
 Route::get('print_notadinas4', [PdfController::class, 'nota_dinas4']);
 Route::get('ba_evaluasi', [PdfController::class, 'ba_evaluasi']);
@@ -197,6 +198,9 @@ Route::get('/nota_dinas1', function () {
 Route::get('/nota_dinas2', function () {
     return view('print.nota_dinas2');
 });
+Route::get('/nota_dinas4', function () {
+    return view('print.nota_dinas4');
+});
 
 Route::get('/undangan_persiapan', function () {
     return view('print.undangan_persiapan');
@@ -224,9 +228,6 @@ Route::get('/undangan_nego', function () {
 });
 Route::get('/ba_nego', function () {
     return view('print.ba_nego');
-});
-Route::get('/nota_dinas4', function () {
-    return view('print.nota_dinas4');
 });
 Route::get('/penetapan_penyedia', function () {
     return view('print.penetapan_penyedia');
