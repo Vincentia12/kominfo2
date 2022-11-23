@@ -83,17 +83,6 @@ Route::get('/input_pelaksana', [PelaksanaController::class, 'index']);
 Route::post('/postdata', [PelaksanaController::class, 'store']);
 Route::post('/pelaksana/update/{id}', [PelaksanaController::class, 'update']);
 
-
-// 
-// Route::get(/)
-
-// Route::get('/{id}/edit', 'PengadaanController@edit');
-// Route::post('/update/{id}', 'PengadaanController@update');
-// Route::delete('{id}/hapus', 'PengadaanController@destroy');
-// Route::get('/pengadaan/{id}/edit', 'PengadaanController@edit');
-// Route::patch('/pengadaan/{id}', 'PengadaanController@update');
-// Route::delete('/pengadaan/{id}', 'PengadaanController@destroy');
-
 //jadwal
 Route::resource('/jadwal', JadwalController::class);
 Route::get('/input_jadwal', [JadwalController::class, 'index']);
@@ -119,7 +108,7 @@ Route::post('/pengadaan/update/{id}', [PengadaanController::class, 'update']);
 // Route::resource('/pengadaan1', PengadaanController::class);
 // Route::get('/pengadaan1/{id}', [PengadaanController::class, 'show'])->name('show');
 Route::get('/pengadaan1/show/{id}', [PengadaanController::class, 'show'])->name('pengadaan1.show');
-Route::get('/pengadaan1/show1/{id}', [JadwalController::class, 'show1'])->name('pengadaan1.show1');
+Route::get('/pengadaan1/show1/{id}', [PengadaanController::class, 'show1'])->name('pengadaan1.show1');
 Route::get('/pengadaan1/show2/{id}', [PengadaanController::class, 'show2'])->name('pengadaan1.show2');
 // Route::get('/lihat', PengadaanController::class, 'show1')->name('show1');
 
@@ -138,8 +127,9 @@ Route::get('/pengadaan2cari', [PengadaanController::class, 'cari2'])->name('cari
 Route::post('/pejabat/update/{id}', [PejabatController::class, 'update']);
 
 //print
-Route::get('notadinas1', [PdfController::class, 'index']);
-Route::get('print_notadinas1/{id}', [PdfController::class, 'nota_dinas1']);
+Route::get('print', [PdfController::class, 'index']);
+Route::get('pengadaan1/notadinas1/{id}', [PdfController::class, 'nota_dinas1'])->name('pengadaan1.print');
+// Route::get('print_notadinas1/{id}', [PdfController::class, 'nota_dinas1'])->name('print1');
 Route::get('print_notadinas2', [PdfController::class, 'nota_dinas2']);
 Route::get('print_notadinas4', [PdfController::class, 'nota_dinas4']);
 Route::get('ba_evaluasi', [PdfController::class, 'ba_evaluasi']);

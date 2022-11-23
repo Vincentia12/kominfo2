@@ -31,6 +31,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         \App\Models\Pejabat::create([
+            'id' => '0',
             'tahun_sk' => '2022',
             'tanggal_sk' => '2022-01-3',
             'nomor_sk' => '188/19/114.1/2022',

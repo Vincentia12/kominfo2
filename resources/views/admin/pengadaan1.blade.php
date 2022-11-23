@@ -208,6 +208,8 @@
                     <td>
                         @if ($p1->kegiatan == 'Nota Dinas dari KPA ke PPK')
                             <a class="btn btn-info" href="{{ route('pengadaan1.show',$p1->id) }}">Detail</a>
+                            {{-- <a class="btn btn-info" href="pengadaan1/notadinas1/">Print</a> --}}
+                            <a class="btn btn-danger " href="{{route('pengadaan1.print',$p1->id)}}">Print</a>
                             {{-- <a class="btn btn-info" href="{{ route('show',$p1->id) }}">Detail</a> --}}
                         @elseif($p1->kegiatan == 'Nota Dinas dari PPK ke Pejabat Pengadaan +')
                         <!-- {{-- <a class="btn btn-info" href="{{ route('show1',$p1->id) }}">Detail</a> --}} -->
@@ -267,6 +269,10 @@
                 @endforeach
                 {{-- @endif --}}
             </tbody>
+            {{-- @foreach ($pejabat as $p)
+                
+            <p>{{ $p->nip_kuasa_pengguna }}</p>
+            @endforeach --}}
         </table>
     </div>
 </div>

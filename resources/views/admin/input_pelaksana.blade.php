@@ -236,11 +236,11 @@
                         <input type="text" class="form-control" id="npwp" name="npwp" value="{{ old('npwp') }}" placeholder="NPWP">
                         <small class="text-danger">{{ $errors->first('npwp') }}</small>
                     </div>
-                    <div class="mb-4">
+                    {{-- <div class="mb-4">
                         <label for="message-text" class="col-form-label">Telephone</label>
                         <input type="text" class="form-control" id="tlp" name="tlp" value="{{ old('tlp') }}" placeholder="Telephone">
                         <small class="text-danger">{{ $errors->first('tlp') }}</small>
-                    </div>
+                    </div> --}}
 
 
                     <div class="modal-footer mt-3">

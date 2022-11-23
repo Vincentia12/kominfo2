@@ -9,6 +9,7 @@ use App\Models\jadwal;
 use App\Models\Pejabat;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use PDF;
 
 class PengadaanController extends Controller
 {
@@ -75,16 +76,17 @@ class PengadaanController extends Controller
             // ->groupBy('jadwals.pengadaan_id')
         ->paginate();
 
-        // $pejabat = Pejabat::all();
+        $pejabat = Pejabat::all();
 
         return view(
             'admin.pengadaan1',
             ['pengadaan1' => $pengadaan1],
             // ['pejabat' => $pejabat],
-            // ['pejabat' => $pejabat]
+            ['pejabat' => $pejabat]
 
         );
-        // dd($pengadaan1);
+        // dd($pengadaan1, $pejabat);
+
     }
 
     public function Cari1(Request $request)
@@ -250,78 +252,51 @@ class PengadaanController extends Controller
      * @param  \App\Models\pengadaan  $pengadaan
      * @return \Illuminate\Http\Response
      */
-    public function show(request $request, $id)
+    public function show($id)
     // public function show(Request $request,$id)
     {
         $pengadaan1 = Jadwal::find($id);
-        
-        // $barang = Barang::find($id);
-        // $barang = Barang::all();
-        // $pejabat = Pejabat::find(1, ['nip_kuasa_pengguna'])->toarray();
-        // $pejabats = [$pejabat];
-        // $pejabat = Pejabat::find(1);
-        // mengambil data dari table pegawai sesuai pencarian data
-        // $pengadaan1 = DB::table('jadwals')
         $barang = DB::table('barangs')
-        // ->join('pengadaans', 'barangs.pengadaan_id', '=', 'pengadaans.id')
-        // ->join('pelaksanas', 'pelaksana_id', '=', 'pelaksanas.id')
-        // ->join('barangs', 'barangs.pengadaan_id', '=', 'pengadaans.id')
-        // ->where('id', '=', $id_barang)
-        ->where('barangs.pengadaan_id', 'like', "%" . $pengadaan1->pengadaan_id . "%")
-            ->get();
-        // ->paginate();
+            ->where('barangs.pengadaan_id', 'like', "%" . $pengadaan1->pengadaan_id . "%")
+        ->get();
+        $pejabat = DB::table('pejabats')
+            ->where('id', '=', 1)
+        ->get();
 
-        // $barang = DB::table('jadwals')
-        // ->join('pengadaans', 'pengadaan_id', '=', 'pengadaans.id')
-        // ->where('pengadaans.id', '=', 'pengadaan_id')
-        // // ->where('pengadaans', 'pengadaan_id', '=', 'pengadaans.id')
-        //     // ->join('pelaksanas', 'pelaksana_id', '=', 'pelaksanas.id')
-
-        //     ->paginate();
-
-        $pejabat = Pejabat::all();
-        // mengirim data pegawai ke view index
-        // return view('admin.pengadaan1',['pengadaan1' => $pengadaan1]);
-        // return view('print.nota_dinas1', compact('pengadaan1'));
-        // $pengadaan = DB::table('pengadaans')
-        //     // ->join('pengadaans', 'pelaksanas.id', '=', 'pengadaans.pelaksana_id')
-        //     ->join('pelaksanas', 'pelaksana_id', '=', 'pelaksanas.id')
-        //     ->join('jadwals', 'pengadaans.id', '=', 'jadwals.pengadaan_id')
-        //     ->join('barangs', 'pengadaans.id', '=', 'barangs.pengadaan_id')
-        //     ->select('*')
-        //     ->get();
-        // // ->paginate(10);
-        // // ->paginate();
-        // // return view('admin.input_pengadaan', compact('pengadaan'));
-        // // return view('admin.detail', compact('pengadaan'));
-        // // $pengadaan1 = Pengadaan::find($id);
-        // // return view('admin.pengadaan1',compact('pengadaans'))
-        // return view('print.nota_dinas1', compact('pengadaan1','barang', 'pejabat'));
-
-        // ->renderSections()['content']
+        // $pejabat = Pejabat::all();
+        
+        
         return view(
             'print.nota_dinas1',
             ['pengadaan1' => $pengadaan1],
             ['barang'=>$barang],
-            ['pejabat'=>$pejabat]
+            ['pejabat' => $pejabat],
         );
-        // dd($pengadaan1, $pejabat, );
+        // dd($pengadaan1, $barang, $pejabat, );
         
     }
+    
     public function show1($id)
     // public function show(Request $request,$id)
     {
         $pengadaan1 = Jadwal::find($id);
-            // $pengadaan = Pengadaan::all();
+        $barang = DB::table('barangs')
+            ->where('barangs.pengadaan_id', 'like', "%" . $pengadaan1->pengadaan_id . "%")
+        ->get();
+        $pejabat = DB::table('pejabats')
+            ->where('id', '=', 1)
+        ->get();
 
-            // return view('admin.input_pengadaan', compact('pengadaan'));
-            // return view('admin.detail', compact('pengadaan'));
-            // $pengadaan1 = Pengadaan::find($id);
-            // return view('admin.pengadaan1',compact('pengadaans'))
-            // return view('print.nota_dinas2', compact('pengadaan1'))
-            // ->renderSections()['content']
-        ;
-        dd($pengadaan1);
+        // $pejabat = Pejabat::all();
+        
+        
+        return view(
+            'print.nota_dinas2',
+            ['pengadaan1' => $pengadaan1],
+            ['barang'=>$barang],
+            ['pejabat' => $pejabat],
+        );
+        // dd($pengadaan1, $barang, $pejabat, );
     }
     public function show2($id)
     // public function show(Request $request,$id)

@@ -24,12 +24,7 @@ class Pejabat extends Model
         'nip_bpp'
     ];
 
-    protected $table = "pejabats";
-    protected $primarykay = "id";
+    // protected $table = "pejabats";
+    // protected $primarykay = "id";
     
- 
-    // public function pemilik()
-    // {
-    // 	return $this->hasOne(pemilik::class);
-    // }
 }
