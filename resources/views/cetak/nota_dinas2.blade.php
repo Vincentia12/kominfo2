@@ -1,18 +1,3 @@
-{{-- @extends('layouts/index')
-@section('input-data', 'active')
-@section('input-data-collapse', 'collapsed')
-@section('input-sudah', 'active')
-@section('content')
-@section('judul')
-{{'Input Data / Belum Tersertifikasi'}}
-@endsection
-<!-- @section('title')
-{{'Input Data yang Belum Tersertifikasi'}}
-@endsection --> --}}
-
-{{-- @extends('layouts.index')
-@section('content') --}}
-<!-- Content Row -->
 @if ($errors->any())
 <div class="alert alert-danger">
     <strong>Whoops!</strong> There were some problems with your input.<br><br>
@@ -25,158 +10,123 @@
 @endif
 
 <div class="col-12 grid-margin stretch-card">
-    <div class="card shadow">
-        <div class="card-body">
-            <table border="0" align="center">
-                <tr>
-                    <td>
-                        <center><font size="3"><b>DINAS KOMUNIKASI DAN INFORMATIKA</b></font><br>
-                                <font size="3"><b>PROVINSI JAWA TIMUR<b/></font><br>
-                                <font size="3"><u>NOTA DINAS<u/></font><br>
-                    </td>
+    <div style="text-align: center" >
+        <font color="black"> 
+            <p align="center"><b> DINAS KOMUNIKASI DAN INFORMATIKA </b></p>
+            <p align="center"><b> PROVINSI JAWA TIMUR </b></p>
+        </font>
+        <hr>
+            <p align="center"><u><b> NOTA DINAS </b></u></p>
+    </div>
+    <div class="row" style="font-family: Arial;">
+        <table >
+            <tr >
+                {{-- <td style="text-indent: 45px;">Kepada</td> --}}
+                <td>Kepada</td>
+                <td>:</td>
+                <td>Yth. Sdr. Pejabat Pembuat Komitmen Dinas Komunikasi dan Informatika Provinsi Jawa Timur</td>
+            </tr>
+            
+            <tr>
+                <td >Dari</td>
+                <td>:</td>
+                <td >Kuasa Pengguna Anggaran</td>
+            </tr>
+            <tr>
+                <td>Tanggal</td>
+                <td>:</td>
+                <td>{{ $pengadaan1->tanggal}}</td>
+                {{-- <td width="475">11 Agustus 2022</td> --}}
+            </tr>
+            <tr>
+                <td>Nomor</td>
+                <td>:</td>
+                <td>020/{{$pengadaan1->nomor}}/114.6/2022</td>
+            </tr>
+            <tr>
+                <td>Sifat</td>
+                <td>:</td>
+                <td>Segera</td>
+            </tr>
+            <tr>
+                <td>Lampiran</td>
+                <td>:</td>
+                <td>1 (satu) berkas</td>
+            </tr>
+            <tr>
+                <td>Perihal</td>
+                <td>:</td>
+                {{-- <td width="475">Pemrosesan Administrasi Pengadaan</td> --}}
+                <td>Pemrosesan Administrasi Pengadaan {{ $pengadaan1->pengadaan->jenis_pengadaan}}</td>
+                {{-- <td width="475">Pemrosesan Administrasi Pengadaan {{ $pengadaan->jenis_pengadaan}}</td> --}}
+            </tr>
+        </table>
+        <br>
+    </div>
+    <hr>
+    <div class="row">
+        <br>
+        <table font-size="2">
+            <tr>
+                <td style="text-indent: 45px;">Bersama ini ini diberitahukan, bahwa DPA-SKPD Bagian Data dan Statistik pada Dinas Komunikasi dan Informatika Provinsi Jawa Timur Tahun Anggaran {{ $pengadaan1->tanggal}}, kode rekening {{ $pengadaan1->pengadaan->pelaksana->kode_rekening}} pengadaan {{ $pengadaan1->pengadaan->jenis_pengadaan}} keperluan Dinas Komunikasi dan Informatika Provinsi Jawa Timur dengan rincian sebagai berikut :</td>
+            </tr>
+        </table>
+    </div>
+    <br>
+    <div class="row">
+        <table width="565px" border="1" align="center">
+            <thead>
+                <tr align="center">
+                    <th width="50px" scope="col">id pengadaan</th>
+                    {{-- <th width="50px" scope="col">No</th> --}}
+                    <th width="265px" scope="col">Belanja Alat/Bahan Untuk Kegiatan Kantor </th>
+                    <th width="100px" scope="col">Jumlah Barang</th>
+                    <th width="100px" scope="col">Satuan</th>
+                    <th width="100px" scope="col">Harga Satuan</th>
                 </tr>
+            </thead>
+            <tbody>
+                @foreach ($barang as $brg)
+                    
                 <tr>
-                    <td width="555" colspan="2"><hr></td>
+                    <th scope="row">{{$brg->pengadaan_id}}</th>
+                    <td>{{$brg->barang}}</td>
+                    <td align="center">{{$brg->jumlah_barang}}<//td>
+                    <td align="center">{{$brg->satuan}}</td>
+                    <td align="center">{{$brg->harga_satuan}}</td>
                 </tr>
-            </table>
-            <br>
-            <table border="0" align="center" font-size="2">
-                <tr>
-                    <td width="80">Kepada</td>
-                    <td>:</td>
-                    <td width="475">Yth. Sdr. Panitia Pengadaan Dinas Komunikasi dan</td>
-                </tr>
-            </table>
-            <table border="0" align="center" font-size="2">
-                <tr>
-                    <td width="80"> </td>
-                    <td width="5"> </td>
-                    <td width="475">Informatika Provinsi Jawa Timur</td>
-                </tr>
-            </table>
-            <table border="0" align="center" font-size="2">
-                <tr>
-                    <td width="80">Dari</td>
-                    <td>:</td>
-                    <td width="475">Pejabat Pembuat Komitmen</td>
-                </tr>
-            </table>
-            <table border="0" align="center" font-size="2">
-                <tr>
-                    <td width="80">Tanggal</td>
-                    <td>:</td>
-                    <td width="475">12 Agustus 2022</td>
-                </tr>
-            </table>
-            <table border="0" align="center" font-size="2">
-                <tr>
-                    <td width="80">Nomor</td>
-                    <td>:</td>
-                    <td width="475">020/654.2/114.6/2022</td>
-                </tr>
-            </table>
-            <table border="0" align="center" font-size="2">
-                <tr>
-                    <td width="80">Sifat</td>
-                    <td>:</td>
-                    <td width="475">Segera</td>
-                </tr>
-            </table>
-            <table border="0" align="center" font-size="2">
-                <tr>
-                    <td width="80">Lampiran</td>
-                    <td>:</td>
-                    <td width="475">1 (satu) berkas</td>
-                </tr>
-            </table>
-            <table border="0" align="center" font-size="2">
-                <tr>
-                    <td width="80">Perihal</td>
-                    <td>:</td>
-                    <td width="475">Pemrosesan Administrasi Pengadaan Belanja Alat/Bahan</td>
-                </tr>
-            </table>
-            <table border="0" align="center" font-size="2">
-                <tr>
-                    <td width="80"> </td>
-                    <td width="5"> </td>
-                    <td width="475">Kapasitas Kelembagaan Statistik Sektoral Toner Printer</td>
-                </tr>
-            </table>
-            <br>
-            <table border="0" align="center" font-size="2">
-                <tr>
-                    <td width="565">Bersama ini ini diberitahukan, bahwa DPA-SKPD Bagian Data dan Statistik pada Dinas Komunikasi dan Informatika Provinsi Jawa Timur Tahun Anggaran 2022, kode rekening 2.20.02.1.01.5.1.02.01.01.0029 pengadaan Belanja Alat/Bahan Kapasitas Kelembagaan Statistik Sektoral Toner Printer keperluan Dinas Komunikasi dan Informatika Provinsi Jawa Timur dengan rincian sebagai berikut :</td>
-                </tr>
-            </table>
-            <br>
-            <table width="565px" border="1" align="center">
-                <thead>
-                    <tr align="center">
-                        <th width="50px" scope="col">No</th>
-                        <th width="265px" scope="col">Belanja Alat/Bahan Untuk Kegiatan Kantor </th>
-                        <th width="100px" scope="col">Jumlah Barang</th>
-                        <th width="100px" scope="col">Satuan</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Toner Printer Tinta Printer Epson L-1300</td>
-                        <td align="center">2</td>
-                        <td align="center">Buah</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Toner Printer Tinta Printer Epson L-1800</td>
-                        <td align="center">1</td>
-                        <td align="center">Buah</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>Toner Printer Tinta Printer Epson L-6160</td>
-                        <td align="center">1</td>
-                        <td align="center">Buah</td>
-                    </tr>
-                </tbody>
-            </table>
-            <br>
-            <table border="0" align="center" font-size="2">
-                <tr>
-                    <td width="565">Sehubungan dengan hal tersebut diatas, untuk penyedia Barang/Jasa ditunjuk  CV. PATRIA NUGRAHA, JL. Kanwa No. 22-A Kota Surabaya. Untuk itu diminta bantuannya untuk segera diproses sesuai prosedur yang berlaku.</td>
-                </tr>
-            </table>
-            <table border="0" align="center" font-size="2">
-                <tr>
-                    <td width="565">Demikian untuk pelaksanaannya.</td>
-                </tr>
-            </table>
-            <br>
-            <table border="0" align="center">
-                <tr>
-                    <td width="300"> </td>
-                    <td>PEJABAT PEMBUAT KOMITMEN</td>
-                    <td width="50"> </td>
-                </tr>
-            </table>
-            <br>
-            <br>
-            <br>
-            <table border="0" align="center">
-                <tr>
-                    <td width="300"> </td>
-                    <td>I WAYAN RUDY ARTHA, S.Kom</td>
-                    <td width="50"> </td>
-                </tr>
-            </table>
-            <table border="0" align="center">
-                <tr>
-                    <td width="300"> </td>
-                    <td>NIP. 19770517 200901 1 005</td>
-                    <td width="50"> </td>
-                </tr>
-            </table>
-        </div>
+                @endforeach
+            </tbody>
+        </table>
+    </div>
+    <br>
+    <div>
+        <table font-size="2">
+            <tr>
+                <td style="text-indent: 45px;">Sehubungan dengan hal tersebut diatas, untuk penyedia Barang/Jasa ditunjuk  {{$pengadaan1->pengadaan->pelaksana->pt_pelaksana}}, {{$pengadaan1->pengadaan->pelaksana->alamat}}. Untuk itu diminta bantuannya untuk segera diproses sesuai prosedur yang berlaku. Demikian untuk pelaksanaannya.</td>
+            </tr>
+        </table>
+        <br>
+    </div>
+    <div style="text-align: center">
+        <table style="width: 50%; text-align: left; float: right;">
+            <tr>
+                <td>PEJABAT PEMBUAT KOMITMEN</td>
+            </tr>
+        </table>
+        <br>
+        <br>
+        <br>
+        <br>
+        <table style="width: 50%; text-align: left; float: right;">
+            <tr>
+                <td>
+                    I WAYAN RUDY ARTHA, S.Kom
+                    <br>
+                    NIP. 19770517 200901 1 005
+                </td>
+            </tr>
+        </table>
     </div>
 </div>
 

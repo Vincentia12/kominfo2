@@ -1,5 +1,3 @@
-@extends('layouts/index')
-@section('content')
 @if ($errors->any())
 <div class="alert alert-danger">
     <strong>Whoops!</strong> There were some problems with your input.<br><br>
@@ -127,6 +125,18 @@
                         <td align="center">{{$brg->harga_satuan}}</td>
                     </tr>
                     @endforeach
+                    {{-- <tr>
+                        <th scope="row">2</th>
+                        <td>Toner Printer Tinta Printer Epson L-1800</td>
+                        <td align="center">1</td>
+                        <td align="center">Buah</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Toner Printer Tinta Printer Epson L-6160</td>
+                        <td align="center">1</td>
+                        <td align="center">Buah</td>
+                    </tr> --}}
                 </tbody>
             </table>
             <br>
@@ -161,15 +171,23 @@
             <table border="0" align="center">
                 <tr>
                     <td width="300"> </td>
-                    {{-- <td>NIP. 19650909 199403 2 006</td> --}}
-                    <td>NIP. {{ $pejabat->nip_kuasa_pengguna }}</td> 
+                    <td>NIP. 19650909 199403 2 006</td>
+                    {{-- @foreach ($pejabat as $p) --}}
+                        
+                    {{-- <td>NIP. {{ $pejabat->nip_kuasa_pengguna }}</td> --}}
+                    {{-- <td>NIP. {{ $pejabat['nip_kuasa_pengguna'] }}</td> --}}
+                    {{-- @endforeach --}}
                     <td width="50"> </td>
+                    {{-- @foreach ($pejabat as $p)
+                
+            <p>{{ $p->nip_kuasa_pengguna }}</p>
+            @endforeach --}}
                 </tr>
             </table>
         </div>
     </div>
 </div>
-<div class="col-12 grid-margin stretch-card">
+{{-- <div class="col-12 grid-margin stretch-card">
     <div class="modal-footer mt-3">
         <button type="back" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
         <a type="submit" class="btn btn-primary " href="{{ url('/print_notadinas1')  }}">Cetak PDF <i class="fa fa-save"></i></a>
@@ -182,6 +200,4 @@
             <button type="back" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
             <a type="submit" class="btn btn-primary " href="{{ url('/print_notadinas1')  }}">Cetak PDF <i class="fa fa-save"></i></a>
         </div>
-    </div>
-
-    @endsection
+    </div> --}}

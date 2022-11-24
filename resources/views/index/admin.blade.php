@@ -7,8 +7,8 @@
 {{'Dashboard'}}
 @endsection
 <!-- Content Row -->
-
 {{-- Inputan --}}
+{{-- <iframe src="/uploads/media/default/0001/01/540cb75550adf33f281f29132dddd14fded85bfc.pdf" width="100%" height="500px"> --}}
 <div class="row ">
     <div class="col-md-6 mb-4 stretch-card transparent">
         <div class="card card-tale">

@@ -112,7 +112,7 @@
                         <label for="message-text" class="col-form-label">Jenis Pengadaan</label>
 
                         <select class="form-control" name="pengadaan_id">
-                            <option value="{{$br->pengadaan_id}}">{{ $br->jenis_pengadaan }} </option>
+                            <option value="{{$br->pengadaan_id}}">{{ $br->pengadaan->jenis_pengadaan }} </option>
                             <option><br></option>
 
                             <option value="">Pilih PT</option>

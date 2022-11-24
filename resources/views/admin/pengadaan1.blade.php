@@ -214,40 +214,81 @@
                         @elseif($p1->kegiatan == 'Nota Dinas dari PPK ke Pejabat Pengadaan + Lampiran OE (HPS)')
                         <!-- {{-- <a class="btn btn-info" href="{{ route('show1',$p1->id) }}">Detail</a> --}} -->
                             <a class="btn btn-info" href="{{ route('pengadaan1.show2',$p1->id) }}">Detail</a>
-                            <a class="btn btn-danger" href="{{route('pengadaan1.print1',$p1->id)}}">Print</a>
+                            <a class="btn btn-danger" href="{{route('pengadaan1.print2',$p1->id)}}">Print</a>
                         <!-- {{-- <a class="btn btn-info" name="show1">Detail</a> --}} -->
                         <!-- {{-- url('/print_notadinas1') --}} -->
-                        @elseif($p1->kegiatan == 'Nota Dinas dari Pejabat Pengadaan ke PPK')
+                        @elseif($p1->kegiatan == 'Surat Undangan, Pengambilan Dokumen Kualifikasi dan Dokumen Pengadaan Langsung kepada Penyedia Barang/Jasa')
                         <!-- {{-- <a class="btn btn-info" href="{{ route('show1',$p1->id) }}">Detail</a> --}} -->
                         <a class="btn btn-info" href="{{ route('pengadaan1.show3',$p1->id) }}">Detail</a>
 
-                        @elseif($p1->kegiatan == 'Lampiran BA. Evaluasi Dokumen Prakualifikasi')
+                        @elseif($p1->kegiatan == 'PAKTA INTEGRITAS')
                         <a class="btn btn-info" href="{{ route('pengadaan1.show4',$p1->id) }}">Detail</a>
 
-                        @elseif($p1->kegiatan == 'BA. Klarifikasi/Negosiasi')
-                        <a class="btn btn-info" href="{{ route('peng adaan1.show5',$p1->id) }}">Detail</a>
-
-
-
-
-
-                        @elseif($p1->kegiatan == 'Daftar Hadir Pengembalian Dokumen Prakualifikasi')
+                        @elseif($p1->kegiatan == 'Surat Pernyataan Minat')
+                        <a class="btn btn-info" href="{{ route('pengadaan1.show5',$p1->id) }}">Detail</a>
+                        
+                        @elseif($p1->kegiatan == 'Pemasukan Dokumen Kualifikasi')
                         <a class="btn btn-info" href="{{ route('pengadaan1.show6',$p1->id) }}">Detail</a>
 
-                        @elseif($p1->kegiatan == 'PAKTA INTEGRITAS')
+                        @elseif($p1->kegiatan == 'Daftar Hadir Pengembalian Dokumen Prakualifikasi')
                         <a class="btn btn-info" href="{{ route('pengadaan1.show7',$p1->id) }}">Detail</a>
 
-                        @elseif($p1->kegiatan == 'Penetapan Penyedia Jasa')
+                        @elseif($p1->kegiatan == 'BA. Evaluasi Dokumen Prakualifikasi')
                         <a class="btn btn-info" href="{{ route('pengadaan1.show8',$p1->id) }}">Detail</a>
 
-                        @elseif($p1->kegiatan == 'Surat Undangan Klarifikasi/Negosiasi')
+                        @elseif($p1->kegiatan == 'Lampiran BA. Evaluasi Dokumen Prakualifikasi')
                         <a class="btn btn-info" href="{{ route('pengadaan1.show9',$p1->id) }}">Detail</a>
 
-                        @elseif($p1->kegiatan == 'Surat Undangan Permintaan Penawaran')
+                        @elseif($p1->kegiatan == 'Surat Undangan Permintaan Penawaran Harga')
                         <a class="btn btn-info" href="{{ route('pengadaan1.show10',$p1->id) }}">Detail</a>
 
-                        @elseif($p1->kegiatan == 'Penunjuk Penyedia Barang/Jasa')
+                        @elseif($p1->kegiatan == 'BA. Penjelasan Pekerjaan')
                         <a class="btn btn-info" href="{{ route('pengadaan1.show11',$p1->id) }}">Detail</a>
+
+                        @elseif($p1->kegiatan == 'Pemasukan Penawaran')
+                        <a class="btn btn-info" href="{{ route('pengadaan1.show12',$p1->id) }}">Detail</a>
+                        
+                        @elseif($p1->kegiatan == 'BA. Pembukaan Penawaran')
+                        <a class="btn btn-info" href="{{ route('pengadaan1.show13',$p1->id) }}">Detail</a>
+                        
+                        @elseif($p1->kegiatan == 'Surat Undangan Klarifikasi/Negosiasi')
+                        <a class="btn btn-info" href="{{ route('pengadaan1.show14',$p1->id) }}">Detail</a>
+                        
+                        @elseif($p1->kegiatan == 'BA. Klarifikasi/Negosiasi')
+                        <a class="btn btn-info" href="{{ route('pengadaan1.show15',$p1->id) }}">Detail</a>
+                        
+                        @elseif($p1->kegiatan == 'Lampiran BA. Klarifikasi/Negosiasi')
+                        <a class="btn btn-info" href="{{ route('pengadaan1.show16',$p1->id) }}">Detail</a>
+                        
+                        @elseif($p1->kegiatan == 'BA. Hasil Pengadaan Langsung')
+                        <a class="btn btn-info" href="{{ route('pengadaan1.show17',$p1->id) }}">Detail</a>
+                        
+                        @elseif($p1->kegiatan == 'Nota Dinas dari Pejabat Pengadaan ke PPK')
+                        <a class="btn btn-info" href="{{ route('pengadaan1.show18',$p1->id) }}">Detail</a>
+                        
+                        @elseif($p1->kegiatan == 'Penetapan Penyedia Jasa')
+                        <a class="btn btn-info" href="{{ route('pengadaan1.show19',$p1->id) }}">Detail</a>
+                        
+                        @elseif($p1->kegiatan == 'Penunjukan Penyedia Barang/Jasa')
+                        <a class="btn btn-info" href="{{ route('pengadaan1.show20',$p1->id) }}">Detail</a>
+                        
+                        @elseif($p1->kegiatan == 'Surat Perintah Kerja')
+                        <a class="btn btn-info" href="{{ route('pengadaan1.show21',$p1->id) }}">Detail</a>
+                        
+                        @elseif($p1->kegiatan == 'Surat Perintah Mulai Kerja (SPMK)')
+                        <a class="btn btn-info" href="{{ route('pengadaan1.show22',$p1->id) }}">Detail</a>
+                        
+                        @elseif($p1->kegiatan == 'BA. Serah Terima Hasil Pekerjaan')
+                        <a class="btn btn-info" href="{{ route('pengadaan1.show23',$p1->id) }}">Detail</a>
+                        
+                        @elseif($p1->kegiatan == 'BA. Penyerahan Barang/Jasa')
+                        <a class="btn btn-info" href="{{ route('pengadaan1.show24',$p1->id) }}">Detail</a>
+                        
+                        @elseif($p1->kegiatan == 'BA. Hasil Pemeriksaan Administratif')
+                        <a class="btn btn-info" href="{{ route('pengadaan1.show25',$p1->id) }}">Detail</a>
+                        
+                        @elseif($p1->kegiatan == 'BA. Hasil Pembayaran')
+                        <a class="btn btn-info" href="{{ route('pengadaan1.show26',$p1->id) }}">Detail</a>
                         <!-- {{-- <a class="btn btn-info" name="show1">Detail</a> --}} -->
                         <!-- {{-- url('/print_notadinas1') --}} -->
                         @else

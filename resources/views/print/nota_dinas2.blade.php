@@ -1,15 +1,3 @@
-{{-- @extends('layouts/index')
-@section('input-data', 'active')
-@section('input-data-collapse', 'collapsed')
-@section('input-sudah', 'active')
-@section('content')
-@section('judul')
-{{'Input Data / Belum Tersertifikasi'}}
-@endsection
-<!-- @section('title')
-{{'Input Data yang Belum Tersertifikasi'}}
-@endsection --> --}}
-
 @extends('layouts.index')
 @section('content')
 <!-- Content Row -->

@@ -54,7 +54,7 @@ class PdfController extends Controller
             'cetak/nota_dinas1',
             ['pengadaan1' => $pengadaan1],
             ['barang'=>$barang],
-            // ['pejabat' => $pejabat],
+            ['pejabat' => $pejabat],
         // );
         )->setPaper('a4', 'potrait');
         return $pdf->download('NotaDinas1.pdf');

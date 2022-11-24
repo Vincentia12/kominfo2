@@ -28,6 +28,7 @@
   <link rel="stylesheet" href="{{ asset('template1/css/vertical-layout-light/style.css') }}">
   <!-- endinject -->
   <link rel="shortcut icon" href="{{ asset('template1/images/favicon.png') }}" />
+  
 </head>
 
 <body id="page-top">
@@ -319,6 +320,7 @@
   });
   });
 </script>
+
 
 </body>
 

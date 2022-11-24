@@ -212,7 +212,7 @@
             <label for="message-text" class="col-form-label">Pelaksana/Nama Perusahaan</label>
 
             <select class="form-control" name="pelaksana_id">
-              <option value="{{$pgn->pelaksana_id}}">{{ $pgn->pt_pelaksana }} </option>
+              <option value="{{$pgn->pelaksana_id}}">{{ $pgn->pelaksana->pt_pelaksana }} </option>
               <option><br></option>
 
               <option value="">Pilih PT</option>
