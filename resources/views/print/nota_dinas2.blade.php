@@ -89,13 +89,13 @@
                     {{-- <td width="475">Pemrosesan Administrasi Pengadaan {{ $jadwal->jenis_pengadaan }}</td> --}}
                 </tr>
             </table>
-            <table border="0" align="center" font-size="2">
+            <!-- <table border="0" align="center" font-size="2">
                 <tr>
                     <td width="80"> </td>
                     <td width="5"> </td>
                     {{-- <td width="475">Kapasitas Kelembagaan Statistik Sektoral Toner Printer</td> --}}
                 </tr>
-            </table>
+            </table> -->
             <br>
             <table border="0" align="center" font-size="2">
                 <tr>
@@ -119,7 +119,7 @@
                     <tr>
                         <th scope="row">{{$brg->pengadaan_id}}</th>
                         <td>{{$brg->barang}}</td>
-                        <td align="center">{{$brg->jumlah_barang}}<//td>
+                        <td align="center">{{$brg->jumlah_barang}}</ /td>
                         <td align="center">{{$brg->satuan}}</td>
                         <td align="center">{{$brg->harga_satuan}}</td>
                     </tr>

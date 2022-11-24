@@ -50,6 +50,7 @@
             <table border="0" align="center">
                 <tr>
                     <td width="300"> </td>
+                    <!-- diubah. menggunakan kolom craete at tapi aku blm bisa ngubahnya -->
                     <td>Surabaya, 15 Agustus 2022</td>
                     <td width="50"> </td>
                 </tr>
@@ -64,8 +65,10 @@
                 <tr>
                     <td width="80">Nomor</td>
                     <td>:</td>
-                    <td width="175">020/654.3/114.6/2022</td>
-                    <td>Yth. Sdr. Direktur CV. PATRIA NUGRAHA</td>
+                    <!-- diubah -->
+                    <td width="175">020/{{$pengadaan1->nomor}}/114.6/2022</td>
+                    <!-- diubah -->
+                    <td>Yth. Sdr. {{$pengadaan1->pengadaan->pelaksana->jabatan_pelaksana}} {{$pengadaan1->pengadaan->pelaksana->pt_pelaksana}}</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
@@ -74,7 +77,8 @@
                     <td>:</td>
                     <td width="175">Segera</td>
                     <td width="160"> </td>
-                    <td>Jl. Kanwa No. 22-A</td>
+                    <!-- diubah -->
+                    <td>{{$pengadaan1->pengadaan->pelaksana->alamat}}</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
@@ -111,14 +115,8 @@
                 <tr>
                     <td width="150">Paket Pekerjaan</td>
                     <td>:</td>
-                    <td width="405">Belanja Alat/Bahan Kapasitas Kelembagaan Statistik</td>
-                </tr>
-            </table>
-            <table border="0" align="center" font-size="2">
-                <tr>
-                    <td width="155"> </td>
-                    <td> </td>
-                    <td width="405">Sektoral Toner Printer</td>
+                    <!-- diubah -->
+                    <td width="405">{{ $pengadaan1->pengadaan->jenis_pengadaan }}</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
@@ -146,14 +144,16 @@
                 <tr>
                     <td width="150">Nilai HPS</td>
                     <td>:</td>
-                    <td width="405">Rp. 5.688.750,-</td>
+                    <!-- diubah -->
+                    <td width="405">Rp. {{$pengadaan1->pengadaan->total_hps}},-</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
                 <tr>
                     <td width="155"> </td>
                     <td> </td>
-                    <td width="405">(Lima Juta Enam Ratus Delapan Puluh Delapan Ribu Tujuh Ratus Lima Puluh Rupiah)</td>
+                    <!-- diubah -->
+                    <td width="405">($pengadaan1->pengadaan->deskripsi_hps)</td>
                 </tr>
             </table>
             <br>
@@ -166,7 +166,8 @@
                 <tr>
                     <td width="100">Hari/Tanggal</td>
                     <td>:</td>
-                    <td width="455">Selasa/16 Agustus 2022</td>
+                    <!-- diubah -->
+                    <td width="455">{{ $pengadaan1->hari }}/{{ $pengadaan1->tanggal }}</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">

@@ -49,8 +49,8 @@
                         <center>
                             <font size="3"><b>DAFTAR HADIR</b></font><br><br>
                             <font size="3"><b>PENGEMBALIAN DOKUMEN PRAKUALIFIKASI</b></font><br>
-                            <font size="2"><b>Pengadaan Belanja Alat/Bahan Kapasitas Kelembagaan</b></font><br>
-                            <font size="2"><b>Statistik Sektoral Toner Printer</b></font><br>
+                            <font size="2"><b>{{$pengadaan1->pengadaan->jenis_pengadaan}}</b></font><br>
+                            <!-- <font size="2"><b>Statistik Sektoral Toner Printer</b></font><br> -->
                     </td>
                 </tr>
             </table>
@@ -76,9 +76,9 @@
                 <tbody>
                     <tr height="100">
                         <th scope="row">1</th>
-                        <td>CV. PATRIA NUGRAHA</td>
-                        <td>Jl. Kanwa No. 22-A, Surabaya</td>
-                        <td>16 Agustus 2022</td>
+                        <td>{{$pengadaan1->pengadaan->pelaksana->pt_pelaksana}}</td>
+                        <td>{{$pengadaan1->pengadaan->pelaksana->alamat}}</td>
+                        <td>{{$pengadaan1->tanggal}}</td>
                         <td> </td>
                     </tr>
                 </tbody>
@@ -88,7 +88,7 @@
             <table border="0" align="center">
                 <tr>
                     <td width="300"> </td>
-                    <td>Surabaya, 16 Agustus 2022</td>
+                    <td>Surabaya, {{$pengadaan1->tanggal}}</td>
                     <td width="50"> </td>
                 </tr>
             </table>

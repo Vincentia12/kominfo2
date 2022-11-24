@@ -20,7 +20,7 @@ class PdfController extends Controller
             // ->join('barangs', 'pengadaans.id', '=', 'barangs.pengadaan_id')
             ->join('jadwals', 'pengadaans.id', '=', 'jadwals.pengadaan_id')
             // ->groupBy('jadwals.pengadaan_id')
-        ->paginate();
+            ->paginate();
 
         $pejabat = Pejabat::all();
 
@@ -39,23 +39,29 @@ class PdfController extends Controller
         $pengadaan1 = Jadwal::find($id);
         $barang = DB::table('barangs')
             ->where('barangs.pengadaan_id', 'like', "%" . $pengadaan1->pengadaan_id . "%")
-        ->get();
+            ->get();
         $pejabat = DB::table('pejabats')
             ->where('id', '=', 1)
-        ->get();
+            ->get();
 
         // $pejabat = Pejabat::all();
-        
-        
-        
+
+
+
         // dd($pengadaan1, $barang );
         $pdf = PDF::loadview(
             // $pdf = word::loadview(
             'cetak/nota_dinas1',
             ['pengadaan1' => $pengadaan1],
+<<<<<<< HEAD
             ['barang'=>$barang],
             ['pejabat' => $pejabat],
         // );
+=======
+            ['barang' => $barang],
+            // ['pejabat' => $pejabat],
+            // );
+>>>>>>> 9351f422342ddb9afad1fb2790395fdefb37cf2d
         )->setPaper('a4', 'potrait');
         return $pdf->download('NotaDinas1.pdf');
         // dd($pdf);
@@ -66,31 +72,58 @@ class PdfController extends Controller
         $pengadaan1 = Jadwal::find($id);
         $barang = DB::table('barangs')
             ->where('barangs.pengadaan_id', 'like', "%" . $pengadaan1->pengadaan_id . "%")
-        ->get();
+            ->get();
         // $pejabat = DB::table('pejabats')
         //     ->where('id', '=', 1)
         // ->get();
 
         // $pejabat = Pejabat::all();
-        
-        
-        
+
+
+
         // dd($pengadaan1, $barang );
         $pdf = PDF::loadview(
             // $pdf = word::loadview(
             'cetak/nota_dinas2',
             ['pengadaan1' => $pengadaan1],
-            ['barang'=>$barang],
+            ['barang' => $barang],
             // ['pejabat' => $pejabat],
-        // );
+            // );
         )->setPaper('a4', 'potrait');
         return $pdf->download('NotaDinas2.pdf');
         // dd($pdf);
     }
 
+    public function undangan_persiapan(Request $request, $id)
+    {
+        $pengadaan1 = Jadwal::find($id);
+        $barang = DB::table('barangs')
+            ->where('barangs.pengadaan_id', 'like', "%" . $pengadaan1->pengadaan_id . "%")
+            ->get();
+        // $pejabat = DB::table('pejabats')
+        //     ->where('id', '=', 1)
+        // ->get();
+
+        // $pejabat = Pejabat::all();
+
+
+
+        // dd($pengadaan1, $barang );
+        $pdf = PDF::loadview(
+            // $pdf = word::loadview(
+            'cetak/undangan_persiapan',
+            ['pengadaan1' => $pengadaan1],
+            ['barang' => $barang],
+            // ['pejabat' => $pejabat],
+            // );
+        )->setPaper('a4', 'potrait');
+        return $pdf->download('UndanganPersiapan.pdf');
+        // dd($pdf);
+    }
+
     public function nota_dinas3()
     {
-        
+
         $pdf = PDF::loadview(
             // $pdf = word::loadview(
             'cetak.nota_dinas4',
