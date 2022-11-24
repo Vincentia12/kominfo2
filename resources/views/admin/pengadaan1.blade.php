@@ -211,43 +211,43 @@
                             {{-- <a class="btn btn-info" href="pengadaan1/notadinas1/">Print</a> --}}
                             <a class="btn btn-danger " href="{{route('pengadaan1.print1',$p1->id)}}">Print</a>
                             {{-- <a class="btn btn-info" href="{{ route('show',$p1->id) }}">Detail</a> --}}
-                        @elseif($p1->kegiatan == 'Nota Dinas dari PPK ke Pejabat Pengadaan +')
+                        @elseif($p1->kegiatan == 'Nota Dinas dari PPK ke Pejabat Pengadaan + Lampiran OE (HPS)')
                         <!-- {{-- <a class="btn btn-info" href="{{ route('show1',$p1->id) }}">Detail</a> --}} -->
-                            <a class="btn btn-info" href="{{ route('pengadaan1.show1',$p1->id) }}">Detail</a>
+                            <a class="btn btn-info" href="{{ route('pengadaan1.show2',$p1->id) }}">Detail</a>
                             <a class="btn btn-danger" href="{{route('pengadaan1.print1',$p1->id)}}">Print</a>
                         <!-- {{-- <a class="btn btn-info" name="show1">Detail</a> --}} -->
                         <!-- {{-- url('/print_notadinas1') --}} -->
                         @elseif($p1->kegiatan == 'Nota Dinas dari Pejabat Pengadaan ke PPK')
                         <!-- {{-- <a class="btn btn-info" href="{{ route('show1',$p1->id) }}">Detail</a> --}} -->
-                        <a class="btn btn-info" href="{{ route('pengadaan1.show2',$p1->id) }}">Detail</a>
-
-                        @elseif($p1->kegiatan == 'Lampiran BA. Evaluasi Dokumen Prakualifikasi')
                         <a class="btn btn-info" href="{{ route('pengadaan1.show3',$p1->id) }}">Detail</a>
 
+                        @elseif($p1->kegiatan == 'Lampiran BA. Evaluasi Dokumen Prakualifikasi')
+                        <a class="btn btn-info" href="{{ route('pengadaan1.show4',$p1->id) }}">Detail</a>
+
                         @elseif($p1->kegiatan == 'BA. Klarifikasi/Negosiasi')
-                        <a class="btn btn-info" href="{{ route('peng adaan1.show4',$p1->id) }}">Detail</a>
+                        <a class="btn btn-info" href="{{ route('peng adaan1.show5',$p1->id) }}">Detail</a>
 
 
 
 
 
                         @elseif($p1->kegiatan == 'Daftar Hadir Pengembalian Dokumen Prakualifikasi')
-                        <a class="btn btn-info" href="{{ route('pengadaan1.show7',$p1->id) }}">Detail</a>
+                        <a class="btn btn-info" href="{{ route('pengadaan1.show6',$p1->id) }}">Detail</a>
 
                         @elseif($p1->kegiatan == 'PAKTA INTEGRITAS')
-                        <a class="btn btn-info" href="{{ route('pengadaan1.show8',$p1->id) }}">Detail</a>
+                        <a class="btn btn-info" href="{{ route('pengadaan1.show7',$p1->id) }}">Detail</a>
 
                         @elseif($p1->kegiatan == 'Penetapan Penyedia Jasa')
-                        <a class="btn btn-info" href="{{ route('pengadaan1.show9',$p1->id) }}">Detail</a>
+                        <a class="btn btn-info" href="{{ route('pengadaan1.show8',$p1->id) }}">Detail</a>
 
                         @elseif($p1->kegiatan == 'Surat Undangan Klarifikasi/Negosiasi')
-                        <a class="btn btn-info" href="{{ route('pengadaan1.show10',$p1->id) }}">Detail</a>
+                        <a class="btn btn-info" href="{{ route('pengadaan1.show9',$p1->id) }}">Detail</a>
 
                         @elseif($p1->kegiatan == 'Surat Undangan Permintaan Penawaran')
-                        <a class="btn btn-info" href="{{ route('pengadaan1.show11',$p1->id) }}">Detail</a>
+                        <a class="btn btn-info" href="{{ route('pengadaan1.show10',$p1->id) }}">Detail</a>
 
                         @elseif($p1->kegiatan == 'Penunjuk Penyedia Barang/Jasa')
-                        <a class="btn btn-info" href="{{ route('pengadaan1.show12',$p1->id) }}">Detail</a>
+                        <a class="btn btn-info" href="{{ route('pengadaan1.show11',$p1->id) }}">Detail</a>
                         <!-- {{-- <a class="btn btn-info" name="show1">Detail</a> --}} -->
                         <!-- {{-- url('/print_notadinas1') --}} -->
                         @else

@@ -50,7 +50,7 @@
             <table border="0" align="center">
                 <tr>
                     <td width="560">
-                        <center><b>BERITA ACARA EVALUASI DOKUMEN PRAKUALIFIKASI</b>
+                        <center><b>BERITA ACARA PENJELASAN PEKERJAAN</b>
                     </td>
                 <tr>
             </table>

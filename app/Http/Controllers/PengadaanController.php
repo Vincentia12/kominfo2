@@ -252,7 +252,7 @@ class PengadaanController extends Controller
      * @param  \App\Models\pengadaan  $pengadaan
      * @return \Illuminate\Http\Response
      */
-    //Nota Dinas 1
+    // Nota Dinas1/ Nota Dinas dari KPA ke PPK
     public function show1($id)
     // public function show(Request $request,$id)
     {
@@ -276,7 +276,7 @@ class PengadaanController extends Controller
         // dd($pengadaan1, $barang, $pejabat, );
         
     }
-    //Nota Dinas 2
+    // Nota Dinas2/Nota Dinas dari PPK ke Pejabat Pengadaan + Lampiran OE (HPS)
     public function show2($id)
     // public function show(Request $request,$id)
     {
@@ -299,7 +299,7 @@ class PengadaanController extends Controller
         );
         // dd($pengadaan1, $barang, $pejabat, );
     }
-    //Nota Dinas 3
+    //Surat Undangan, Pengambilan Dokumen Kualifikasi dan Dokumen Pengadaan Langsung kepada Penyedia Barang/Jasa
     public function show3($id)
     // public function show(Request $request,$id)
     {
@@ -315,69 +315,247 @@ class PengadaanController extends Controller
         
         
         return view(
-            'print.nota_dinas4',
+            'print.print.undangan_persiapan',
             ['pengadaan1' => $pengadaan1],
             ['barang'=>$barang],
             ['pejabat' => $pejabat],
         );
         // dd($pengadaan1, $barang, $pejabat, );
     }
-
+    //PAKTA  INTEGRITAS
     public function show4($id)
     // public function show(Request $request,$id)
     {
         $pengadaan1 = Jadwal::find($id);
-        // return view('admin.input_pengadaan', compact('pengadaan'));
-        // return view('admin.detail', compact('pengadaan'));
-        // $pengadaan1 = Pengadaan::find($id);
-        // return view('admin.pengadaan1',compact('pengadaans'))
-        return view('print.ba_evaluasi', compact('pengadaan'))
-            // ->renderSections()['content']
-        ;
-    }
+        $barang = DB::table('barangs')
+            ->where('barangs.pengadaan_id', 'like', "%" . $pengadaan1->pengadaan_id . "%")
+        ->get();
+        $pejabat = DB::table('pejabats')
+            ->where('id', '=', 1)
+        ->get();
 
-    public function show5(Pengadaan $pengadaan) 
+        // $pejabat = Pejabat::all();
+        
+        
+        return view(
+            'print.pakta_integritas',
+            ['pengadaan1' => $pengadaan1],
+            ['barang'=>$barang],
+            ['pejabat' => $pejabat],
+        );
+        // dd($pengadaan1, $barang, $pejabat, );
+    }
+    //Surat Pernyataan Minat
+    public function show5(Pengadaan $pengadaan)
+    // public function show(Request $request,$id)
+    {
+        // $pengadaan1 = Jadwal::find($id);
+        // $barang = DB::table('barangs')
+        //     ->where('barangs.pengadaan_id', 'like', "%" . $pengadaan1->pengadaan_id . "%")
+        // ->get();
+        // $pejabat = DB::table('pejabats')
+        //     ->where('id', '=', 1)
+        // ->get();
+
+        // // $pejabat = Pejabat::all();
+        
+        
+        // return view(
+        //     'print.',
+        //     ['pengadaan1' => $pengadaan1],
+        //     ['barang'=>$barang],
+        //     ['pejabat' => $pejabat],
+        // );
+        // // dd($pengadaan1, $barang, $pejabat, );
+    }
+    //Pemasukan Dokumen Kualifikasi
+    public function show6(Pengadaan $pengadaan) 
     // public function show(Request $request,$id)
     {
         return view('print.ba_nego', compact('pengadaan'));
     }
-
-    public function show6(Pengadaan $pengadaan) // public function show(Request $request,$id)
+    // Daftar Hadir Pengembalian Dokumen Prakualifikasi
+    public function show7($id) // public function show(Request $request,$id)
     {
-        return view('print.ba_pekerjaan', compact('pengadaan'));
-    }
+        $pengadaan1 = Jadwal::find($id);
+        $barang = DB::table('barangs')
+            ->where('barangs.pengadaan_id', 'like', "%" . $pengadaan1->pengadaan_id . "%")
+        ->get();
+        $pejabat = DB::table('pejabats')
+            ->where('id', '=', 1)
+        ->get();
 
-    public function show7(Pengadaan $pengadaan) // public function show(Request $request,$id)
+        // $pejabat = Pejabat::all();
+        
+        
+        return view(
+            'print.daftar_hadir',
+            ['pengadaan1' => $pengadaan1],
+            ['barang'=>$barang],
+            ['pejabat' => $pejabat],
+        );
+        // dd($pengadaan1, $barang, $pejabat, );
+    }
+    // BA. Evaluasi Dokumen Prakualifikasi
+    public function show8($id) // public function show(Request $request,$id)
     {
-        return view('print.ba_penawaran', compact('pengadaan'));
-    }
+        $pengadaan1 = Jadwal::find($id);
+        $barang = DB::table('barangs')
+            ->where('barangs.pengadaan_id', 'like', "%" . $pengadaan1->pengadaan_id . "%")
+        ->get();
+        $pejabat = DB::table('pejabats')
+            ->where('id', '=', 1)
+        ->get();
 
-    public function show8(Pengadaan $pengadaan) // public function show(Request $request,$id)
+        // $pejabat = Pejabat::all();
+        
+        
+        return view(
+            'print.ba_evaluasi',
+            ['pengadaan1' => $pengadaan1],
+            ['barang'=>$barang],
+            ['pejabat' => $pejabat],
+        );
+        // dd($pengadaan1, $barang, $pejabat, );
+    }
+    // Lampiran BA. Evaluasi Dokumen Prakualifikasi
+    public function show9($id) // public function show(Request $request,$id)
     {
-        return view('print.daftar_hadir', compact('pengadaan'));
-    }
+        $pengadaan1 = Jadwal::find($id);
+        $barang = DB::table('barangs')
+            ->where('barangs.pengadaan_id', 'like', "%" . $pengadaan1->pengadaan_id . "%")
+        ->get();
+        $pejabat = DB::table('pejabats')
+            ->where('id', '=', 1)
+        ->get();
 
-    public function show9(Pengadaan $pengadaan) // public function show(Request $request,$id)
+        // $pejabat = Pejabat::all();
+        
+        
+        return view(
+            'print.evaluasi_dok',
+            ['pengadaan1' => $pengadaan1],
+            ['barang'=>$barang],
+            ['pejabat' => $pejabat],
+        );
+        // dd($pengadaan1, $barang, $pejabat, );
+    }
+    // Surat Undangan Permintaan Penawaran Harga
+    public function show10($id) // public function show(Request $request,$id)
     {
-        return view('print.pakta_integritas', compact('pengadaan'));
-    }
+        $pengadaan1 = Jadwal::find($id);
+        $barang = DB::table('barangs')
+            ->where('barangs.pengadaan_id', 'like', "%" . $pengadaan1->pengadaan_id . "%")
+        ->get();
+        $pejabat = DB::table('pejabats')
+            ->where('id', '=', 1)
+        ->get();
 
-    public function show10(Pengadaan $pengadaan) // public function show(Request $request,$id)
+        // $pejabat = Pejabat::all();
+        
+        
+        return view(
+            'print.undangan_penawaran',
+            ['pengadaan1' => $pengadaan1],
+            ['barang'=>$barang],
+            ['pejabat' => $pejabat],
+        );
+        // dd($pengadaan1, $barang, $pejabat, );
+    }
+    // BA. Penjelasan Pekerjaan
+    public function show11($id) // public function show(Request $request,$id)
     {
-        return view('print.penetapan_penyedia', compact('pengadaan'));
-    }
+        $pengadaan1 = Jadwal::find($id);
+        $barang = DB::table('barangs')
+            ->where('barangs.pengadaan_id', 'like', "%" . $pengadaan1->pengadaan_id . "%")
+        ->get();
+        $pejabat = DB::table('pejabats')
+            ->where('id', '=', 1)
+        ->get();
 
-    public function show11(Pengadaan $pengadaan) // public function show(Request $request,$id)
+        // $pejabat = Pejabat::all();
+        
+        
+        return view(
+            'print.ba_pekerjaan',
+            ['pengadaan1' => $pengadaan1],
+            ['barang'=>$barang],
+            ['pejabat' => $pejabat],
+        );
+        // dd($pengadaan1, $barang, $pejabat, );
+    }
+    // Pemasukan Penawaran
+    public function show12(Pengadaan $pengadaan) // public function show(Request $request,$id)
     {
         return view('print.undangan_nego', compact('pengadaan'));
     }
-
-    public function show12(Pengadaan $pengadaan) // public function show(Request $request,$id)
+    // BA. Pembukaan Penawaran
+    public function show13(Pengadaan $pengadaan) // public function show(Request $request,$id)
     {
         return view('print.undangan_penawaran', compact('pengadaan'));
     }
-
-    public function show13(Pengadaan $pengadaan) // public function show(Request $request,$id)
+    // Surat Undangan Klarifikasi/Negosiasi
+    public function show14(Pengadaan $pengadaan) // public function show(Request $request,$id)
+    {
+        return view('print.undangan_penyedia', compact('pengadaan'));
+    }
+    // BA. Klarifikasi/Negosiasi
+    public function show15(Pengadaan $pengadaan) // public function show(Request $request,$id)
+    {
+        return view('print.undangan_penyedia', compact('pengadaan'));
+    }
+    // Lampiran BA. Klarifikasi/Negosiasi
+    public function show16(Pengadaan $pengadaan) // public function show(Request $request,$id)
+    {
+        return view('print.undangan_penyedia', compact('pengadaan'));
+    }
+    // BA. Hasil Pengadaan Langsung
+    public function show17(Pengadaan $pengadaan) // public function show(Request $request,$id)
+    {
+        return view('print.undangan_penyedia', compact('pengadaan'));
+    }
+    // Nota Dinas3/ Nota Dinas dari Pejabat Pengadaan ke PPK
+    public function show18(Pengadaan $pengadaan) // public function show(Request $request,$id)
+    {
+        return view('print.undangan_penyedia', compact('pengadaan'));
+    }
+    // Penetapan Penyedia Jasa
+    public function show19(Pengadaan $pengadaan) // public function show(Request $request,$id)
+    {
+        return view('print.undangan_penyedia', compact('pengadaan'));
+    }
+    // Penunjukan Penyedia Barang/Jasa
+    public function show20(Pengadaan $pengadaan) // public function show(Request $request,$id)
+    {
+        return view('print.undangan_penyedia', compact('pengadaan'));
+    }
+    // Surat Perintah Kerja
+    public function show21(Pengadaan $pengadaan) // public function show(Request $request,$id)
+    {
+        return view('print.undangan_penyedia', compact('pengadaan'));
+    }
+    // Surat Perintah Mulai Kerja (SPMK)
+    public function show22(Pengadaan $pengadaan) // public function show(Request $request,$id)
+    {
+        return view('print.undangan_penyedia', compact('pengadaan'));
+    }
+    // BA. Serah Terima Hasil Pekerjaan
+    public function show23(Pengadaan $pengadaan) // public function show(Request $request,$id)
+    {
+        return view('print.undangan_penyedia', compact('pengadaan'));
+    }
+    // BA. Penyerahan Barang/Jasa
+    public function show24(Pengadaan $pengadaan) // public function show(Request $request,$id)
+    {
+        return view('print.undangan_penyedia', compact('pengadaan'));
+    }
+    // BA. Hasil Pemeriksaan Administratif
+    public function show25(Pengadaan $pengadaan) // public function show(Request $request,$id)
+    {
+        return view('print.undangan_penyedia', compact('pengadaan'));
+    }
+    // BA. Hasil Pembayaran
+    public function show26(Pengadaan $pengadaan) // public function show(Request $request,$id)
     {
         return view('print.undangan_penyedia', compact('pengadaan'));
     }

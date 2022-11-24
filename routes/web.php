@@ -114,6 +114,29 @@ Route::post('/pengadaan/update/{id}', [PengadaanController::class, 'update']);
 Route::get('/pengadaan1/show1/{id}', [PengadaanController::class, 'show1'])->name('pengadaan1.show1');
 Route::get('/pengadaan1/show2/{id}', [PengadaanController::class, 'show2'])->name('pengadaan1.show2');
 Route::get('/pengadaan1/show3/{id}', [PengadaanController::class, 'show3'])->name('pengadaan1.show3');
+Route::get('/pengadaan1/show4/{id}', [PengadaanController::class, 'show4'])->name('pengadaan1.show4');
+Route::get('/pengadaan1/show5/{id}', [PengadaanController::class, 'show5'])->name('pengadaan1.show5');
+Route::get('/pengadaan1/show6/{id}', [PengadaanController::class, 'show6'])->name('pengadaan1.show6');
+Route::get('/pengadaan1/show7/{id}', [PengadaanController::class, 'show7'])->name('pengadaan1.show7');
+Route::get('/pengadaan1/show8/{id}', [PengadaanController::class, 'show8'])->name('pengadaan1.show8');
+Route::get('/pengadaan1/show9/{id}', [PengadaanController::class, 'show9'])->name('pengadaan1.show9');
+Route::get('/pengadaan1/show10/{id}', [PengadaanController::class, 'show10'])->name('pengadaan1.show10');
+Route::get('/pengadaan1/show11/{id}', [PengadaanController::class, 'show11'])->name('pengadaan1.show11');
+Route::get('/pengadaan1/show12/{id}', [PengadaanController::class, 'show11'])->name('pengadaan1.show12');
+Route::get('/pengadaan1/show13/{id}', [PengadaanController::class, 'show11'])->name('pengadaan1.show13');
+Route::get('/pengadaan1/show14/{id}', [PengadaanController::class, 'show11'])->name('pengadaan1.show14');
+Route::get('/pengadaan1/show15/{id}', [PengadaanController::class, 'show11'])->name('pengadaan1.show15');
+Route::get('/pengadaan1/show16/{id}', [PengadaanController::class, 'show16'])->name('pengadaan1.show16');
+Route::get('/pengadaan1/show17/{id}', [PengadaanController::class, 'show17'])->name('pengadaan1.show17');
+Route::get('/pengadaan1/show18/{id}', [PengadaanController::class, 'show18'])->name('pengadaan1.show18');
+Route::get('/pengadaan1/show19/{id}', [PengadaanController::class, 'show19'])->name('pengadaan1.show19');
+Route::get('/pengadaan1/show20/{id}', [PengadaanController::class, 'show20'])->name('pengadaan1.show20');
+Route::get('/pengadaan1/show21/{id}', [PengadaanController::class, 'show21'])->name('pengadaan1.show21');
+Route::get('/pengadaan1/show22/{id}', [PengadaanController::class, 'show22'])->name('pengadaan1.show22');
+Route::get('/pengadaan1/show23/{id}', [PengadaanController::class, 'show23'])->name('pengadaan1.show23');
+Route::get('/pengadaan1/show24/{id}', [PengadaanController::class, 'show24'])->name('pengadaan1.show24');
+Route::get('/pengadaan1/show25/{id}', [PengadaanController::class, 'show25'])->name('pengadaan1.show25');
+Route::get('/pengadaan1/show26/{id}', [PengadaanController::class, 'show26'])->name('pengadaan1.show26');
 // Route::get('/lihat', PengadaanController::class, 'show1')->name('show1');
 
 // Route::get('/pengadaan1', [PengadaanController::class, 'index1'], [JadwalController::class, 'index1']);
@@ -192,58 +215,75 @@ Route::resource('/pemilik', PemilikController::class);
 // Route::resource('/save', App\Http\Controllers\view::class,'save');
 
 //print
+//1
 Route::get('/nota_dinas1', function () {
     return view('print.nota_dinas1');
 });
+//2
 Route::get('/nota_dinas2', function () {
     return view('print.nota_dinas2');
 });
+//3
 Route::get('/nota_dinas4', function () {
     return view('print.nota_dinas4');
 });
-
+//4
 Route::get('/undangan_persiapan', function () {
     return view('print.undangan_persiapan');
 });
+//5
 Route::get('/pakta_integritas', function () {
     return view('print.pakta_integritas');
 });
+//6
 Route::get('/daftar_hadir', function () {
     return view('print.daftar_hadir');
 });
+//7
 Route::get('/ba_evaluasi', function () {
     return view('print.ba_evaluasi');
 });
+//8
 Route::get('/undangan_penawaran', function () {
     return view('print.undangan_penawaran');
 });
+//9
 Route::get('/ba_pekerjaan', function () {
     return view('print.ba_pekerjaan');
 });
+//10
 Route::get('/ba_penawaran', function () {
     return view('print.ba_penawaran');
 });
+//11
 Route::get('/undangan_nego', function () {
     return view('print.undangan_nego');
 });
+//12
 Route::get('/ba_nego', function () {
     return view('print.ba_nego');
 });
+//13
 Route::get('/penetapan_penyedia', function () {
     return view('print.penetapan_penyedia');
 });
+//14
 Route::get('/undangan_penyedia', function () {
     return view('print.undangan_penyedia');
 });
+//15
 Route::get('/kuitansi_kontrak', function () {
     return view('print.kuitansi_kontrak');
 });
+//16
 Route::get('/evaluasi_dok', function () {
     return view('print.evaluasi_dok');
 });
+//17
 Route::get('/surat_perintah_kerja', function () {
     return view('print.surat_perintah_kerja');
 });
+
 // Route::resource('/getusr',[App\Http\Controllers\AdminController::class, 'index']);
 
 // Route::get('/editpejabat/{}')
