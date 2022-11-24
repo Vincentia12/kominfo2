@@ -30,13 +30,16 @@
             <table border="0" align="center">
                 <tr>
                     <td>
-                        <center><font size="3"><b>DINAS KOMUNIKASI DAN INFORMATIKA</b></font><br>
-                                <font size="3"><b>PROVINSI JAWA TIMUR<b/></font><br>
-                                <font size="3"><u>NOTA DINAS<u/></font><br>
+                        <center>
+                            <font size="3"><b>DINAS KOMUNIKASI DAN INFORMATIKA</b></font><br>
+                            <font size="3"><b>PROVINSI JAWA TIMUR<b /></font><br>
+                            <font size="3"><u>NOTA DINAS<u /></font><br>
                     </td>
                 </tr>
                 <tr>
-                    <td width="555" colspan="2"><hr></td>
+                    <td width="555" colspan="2">
+                        <hr>
+                    </td>
                 </tr>
             </table>
             <br>
@@ -65,14 +68,14 @@
                 <tr>
                     <td width="80">Tanggal</td>
                     <td>:</td>
-                    <td width="475">12 Agustus 2022</td>
+                    <td width="475">{{ $pengadaan1->tanggal}}</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
                 <tr>
                     <td width="80">Nomor</td>
                     <td>:</td>
-                    <td width="475">020/654.2/114.6/2022</td>
+                    <td width="475">020/{{$pengadaan1->nomor}}/114.6/2022</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
@@ -93,57 +96,49 @@
                 <tr>
                     <td width="80">Perihal</td>
                     <td>:</td>
-                    <td width="475">Pemrosesan Administrasi Pengadaan Belanja Alat/Bahan</td>
+                    <td width="475">Pemrosesan Administrasi Pengadaan {{ $pengadaan1->pengadaan->jenis_pengadaan }}</td>
                 </tr>
             </table>
-            <table border="0" align="center" font-size="2">
+            <!-- <table border="0" align="center" font-size="2">
                 <tr>
                     <td width="80"> </td>
                     <td width="5"> </td>
                     <td width="475">Kapasitas Kelembagaan Statistik Sektoral Toner Printer</td>
                 </tr>
-            </table>
+            </table> -->
             <br>
             <table border="0" align="center" font-size="2">
                 <tr>
-                    <td width="565">Bersama ini ini diberitahukan, bahwa DPA-SKPD Bagian Data dan Statistik pada Dinas Komunikasi dan Informatika Provinsi Jawa Timur Tahun Anggaran 2022, kode rekening 2.20.02.1.01.5.1.02.01.01.0029 pengadaan Belanja Alat/Bahan Kapasitas Kelembagaan Statistik Sektoral Toner Printer keperluan Dinas Komunikasi dan Informatika Provinsi Jawa Timur dengan rincian sebagai berikut :</td>
+                    <td width="565">Bersama ini ini diberitahukan, bahwa DPA-SKPD Bagian Data dan Statistik pada Dinas Komunikasi dan Informatika Provinsi Jawa Timur Tahun Anggaran {{ $pengadaan1->tanggal}}, kode rekening {{$pengadaan1->pengadaan->pelaksana->kode_rekening}} pengadaan {{$pengadaan1->pengadaan->jenis_pengadaan}} keperluan Dinas Komunikasi dan Informatika Provinsi Jawa Timur dengan rincian sebagai berikut :</td>
                 </tr>
             </table>
             <br>
             <table width="565px" border="1" align="center">
                 <thead>
                     <tr align="center">
-                        <th width="50px" scope="col">No</th>
+                        <th width="50px" scope="col">id pengadaan</th>
                         <th width="265px" scope="col">Belanja Alat/Bahan Untuk Kegiatan Kantor </th>
                         <th width="100px" scope="col">Jumlah Barang</th>
                         <th width="100px" scope="col">Satuan</th>
+                        <th width="100px" scope="col">Harga Satuan</th>
                     </tr>
                 </thead>
                 <tbody>
+                    @foreach ($barang as $brg)
                     <tr>
-                        <th scope="row">1</th>
-                        <td>Toner Printer Tinta Printer Epson L-1300</td>
-                        <td align="center">2</td>
-                        <td align="center">Buah</td>
+                        <th scope="row">{{$brg->pengadaan_id}}</th>
+                        <td>{{$brg->barang}}</td>
+                        <td align="center">{{$brg->jumlah_barang}}</td>
+                        <td align="center">{{$brg->satuan}}</td>
+                        <td align="center">{{$brg->harga_satuan}}</td>
                     </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Toner Printer Tinta Printer Epson L-1800</td>
-                        <td align="center">1</td>
-                        <td align="center">Buah</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>Toner Printer Tinta Printer Epson L-6160</td>
-                        <td align="center">1</td>
-                        <td align="center">Buah</td>
-                    </tr>
+                    @endforeach
                 </tbody>
             </table>
             <br>
             <table border="0" align="center" font-size="2">
                 <tr>
-                    <td width="565">Sehubungan dengan hal tersebut diatas, untuk penyedia Barang/Jasa ditunjuk  CV. PATRIA NUGRAHA, JL. Kanwa No. 22-A Kota Surabaya. Untuk itu diminta bantuannya untuk segera diproses sesuai prosedur yang berlaku.</td>
+                    <td width="565">Sehubungan dengan hal tersebut diatas, untuk penyedia Barang/Jasa ditunjuk {{$pengadaan1->pengadaan->pelaksana->pt_pelaksana}}, {{$pengadaan1->pengadaan->pelaksana->alamat}}. Untuk itu diminta bantuannya untuk segera diproses sesuai prosedur yang berlaku.</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">

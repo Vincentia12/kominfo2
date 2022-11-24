@@ -74,7 +74,7 @@ class PengadaanController extends Controller
             // ->join('barangs', 'pengadaans.id', '=', 'barangs.pengadaan_id')
             ->join('jadwals', 'pengadaans.id', '=', 'jadwals.pengadaan_id')
             // ->groupBy('jadwals.pengadaan_id')
-        ->paginate();
+            ->paginate();
 
         $pejabat = Pejabat::all();
 
@@ -259,23 +259,24 @@ class PengadaanController extends Controller
         $pengadaan1 = Jadwal::find($id);
         $barang = DB::table('barangs')
             ->where('barangs.pengadaan_id', 'like', "%" . $pengadaan1->pengadaan_id . "%")
-        ->get();
+            ->get();
         $pejabat = DB::table('pejabats')
             ->where('id', '=', 1)
-        ->get();
+            ->get();
 
         // $pejabat = Pejabat::all();
-        
-        
+
+
         return view(
             'print.nota_dinas1',
             ['pengadaan1' => $pengadaan1],
-            ['barang'=>$barang],
+            ['barang' => $barang],
             ['pejabat' => $pejabat],
         );
         // dd($pengadaan1, $barang, $pejabat, );
-        
+
     }
+
     // Nota Dinas2/Nota Dinas dari PPK ke Pejabat Pengadaan + Lampiran OE (HPS)
     public function show2($id)
     // public function show(Request $request,$id)
@@ -283,22 +284,23 @@ class PengadaanController extends Controller
         $pengadaan1 = Jadwal::find($id);
         $barang = DB::table('barangs')
             ->where('barangs.pengadaan_id', 'like', "%" . $pengadaan1->pengadaan_id . "%")
-        ->get();
+            ->get();
         $pejabat = DB::table('pejabats')
             ->where('id', '=', 1)
-        ->get();
+            ->get();
 
         // $pejabat = Pejabat::all();
-        
-        
+
+
         return view(
             'print.nota_dinas2',
             ['pengadaan1' => $pengadaan1],
-            ['barang'=>$barang],
+            ['barang' => $barang],
             ['pejabat' => $pejabat],
         );
         // dd($pengadaan1, $barang, $pejabat, );
     }
+
     //Surat Undangan, Pengambilan Dokumen Kualifikasi dan Dokumen Pengadaan Langsung kepada Penyedia Barang/Jasa
     public function show3($id)
     // public function show(Request $request,$id)
@@ -306,22 +308,23 @@ class PengadaanController extends Controller
         $pengadaan1 = Jadwal::find($id);
         $barang = DB::table('barangs')
             ->where('barangs.pengadaan_id', 'like', "%" . $pengadaan1->pengadaan_id . "%")
-        ->get();
+            ->get();
         $pejabat = DB::table('pejabats')
             ->where('id', '=', 1)
-        ->get();
+            ->get();
 
         // $pejabat = Pejabat::all();
-        
-        
+
+
         return view(
-            'print.print.undangan_persiapan',
+            'print.undangan_persiapan',
             ['pengadaan1' => $pengadaan1],
-            ['barang'=>$barang],
+            ['barang' => $barang],
             ['pejabat' => $pejabat],
         );
         // dd($pengadaan1, $barang, $pejabat, );
     }
+
     //PAKTA  INTEGRITAS
     public function show4($id)
     // public function show(Request $request,$id)
@@ -329,22 +332,23 @@ class PengadaanController extends Controller
         $pengadaan1 = Jadwal::find($id);
         $barang = DB::table('barangs')
             ->where('barangs.pengadaan_id', 'like', "%" . $pengadaan1->pengadaan_id . "%")
-        ->get();
+            ->get();
         $pejabat = DB::table('pejabats')
             ->where('id', '=', 1)
-        ->get();
+            ->get();
 
         // $pejabat = Pejabat::all();
-        
-        
+
+
         return view(
             'print.pakta_integritas',
             ['pengadaan1' => $pengadaan1],
-            ['barang'=>$barang],
+            ['barang' => $barang],
             ['pejabat' => $pejabat],
         );
         // dd($pengadaan1, $barang, $pejabat, );
     }
+
     //Surat Pernyataan Minat
     public function show5(Pengadaan $pengadaan)
     // public function show(Request $request,$id)
@@ -358,8 +362,8 @@ class PengadaanController extends Controller
         // ->get();
 
         // // $pejabat = Pejabat::all();
-        
-        
+
+
         // return view(
         //     'print.',
         //     ['pengadaan1' => $pengadaan1],
@@ -368,192 +372,325 @@ class PengadaanController extends Controller
         // );
         // // dd($pengadaan1, $barang, $pejabat, );
     }
+
     //Pemasukan Dokumen Kualifikasi
-    public function show6(Pengadaan $pengadaan) 
+    public function show6(Pengadaan $pengadaan)
     // public function show(Request $request,$id)
     {
         return view('print.ba_nego', compact('pengadaan'));
     }
+
     // Daftar Hadir Pengembalian Dokumen Prakualifikasi
     public function show7($id) // public function show(Request $request,$id)
     {
         $pengadaan1 = Jadwal::find($id);
         $barang = DB::table('barangs')
             ->where('barangs.pengadaan_id', 'like', "%" . $pengadaan1->pengadaan_id . "%")
-        ->get();
+            ->get();
         $pejabat = DB::table('pejabats')
             ->where('id', '=', 1)
-        ->get();
+            ->get();
 
         // $pejabat = Pejabat::all();
-        
-        
+
+
         return view(
             'print.daftar_hadir',
             ['pengadaan1' => $pengadaan1],
-            ['barang'=>$barang],
+            ['barang' => $barang],
             ['pejabat' => $pejabat],
         );
         // dd($pengadaan1, $barang, $pejabat, );
     }
+
     // BA. Evaluasi Dokumen Prakualifikasi
     public function show8($id) // public function show(Request $request,$id)
     {
         $pengadaan1 = Jadwal::find($id);
         $barang = DB::table('barangs')
             ->where('barangs.pengadaan_id', 'like', "%" . $pengadaan1->pengadaan_id . "%")
-        ->get();
+            ->get();
         $pejabat = DB::table('pejabats')
             ->where('id', '=', 1)
-        ->get();
+            ->get();
 
         // $pejabat = Pejabat::all();
-        
-        
+
+
         return view(
             'print.ba_evaluasi',
             ['pengadaan1' => $pengadaan1],
-            ['barang'=>$barang],
+            ['barang' => $barang],
             ['pejabat' => $pejabat],
         );
         // dd($pengadaan1, $barang, $pejabat, );
     }
+
     // Lampiran BA. Evaluasi Dokumen Prakualifikasi
     public function show9($id) // public function show(Request $request,$id)
     {
         $pengadaan1 = Jadwal::find($id);
         $barang = DB::table('barangs')
             ->where('barangs.pengadaan_id', 'like', "%" . $pengadaan1->pengadaan_id . "%")
-        ->get();
+            ->get();
         $pejabat = DB::table('pejabats')
             ->where('id', '=', 1)
-        ->get();
+            ->get();
 
         // $pejabat = Pejabat::all();
-        
-        
+
+
         return view(
             'print.evaluasi_dok',
             ['pengadaan1' => $pengadaan1],
-            ['barang'=>$barang],
+            ['barang' => $barang],
             ['pejabat' => $pejabat],
         );
         // dd($pengadaan1, $barang, $pejabat, );
     }
+
     // Surat Undangan Permintaan Penawaran Harga
     public function show10($id) // public function show(Request $request,$id)
     {
         $pengadaan1 = Jadwal::find($id);
         $barang = DB::table('barangs')
             ->where('barangs.pengadaan_id', 'like', "%" . $pengadaan1->pengadaan_id . "%")
-        ->get();
+            ->get();
         $pejabat = DB::table('pejabats')
             ->where('id', '=', 1)
-        ->get();
+            ->get();
 
         // $pejabat = Pejabat::all();
-        
-        
+
+
         return view(
             'print.undangan_penawaran',
             ['pengadaan1' => $pengadaan1],
-            ['barang'=>$barang],
+            ['barang' => $barang],
             ['pejabat' => $pejabat],
         );
         // dd($pengadaan1, $barang, $pejabat, );
     }
+
     // BA. Penjelasan Pekerjaan
     public function show11($id) // public function show(Request $request,$id)
     {
         $pengadaan1 = Jadwal::find($id);
         $barang = DB::table('barangs')
             ->where('barangs.pengadaan_id', 'like', "%" . $pengadaan1->pengadaan_id . "%")
-        ->get();
+            ->get();
         $pejabat = DB::table('pejabats')
             ->where('id', '=', 1)
-        ->get();
+            ->get();
 
         // $pejabat = Pejabat::all();
-        
-        
+
+
         return view(
             'print.ba_pekerjaan',
             ['pengadaan1' => $pengadaan1],
-            ['barang'=>$barang],
+            ['barang' => $barang],
             ['pejabat' => $pejabat],
         );
         // dd($pengadaan1, $barang, $pejabat, );
     }
+
     // Pemasukan Penawaran
     public function show12(Pengadaan $pengadaan) // public function show(Request $request,$id)
     {
-        return view('print.undangan_nego', compact('pengadaan'));
+        // $pengadaan1 = Jadwal::find($id);
+        // $barang = DB::table('barangs')
+        //     ->where('barangs.pengadaan_id', 'like', "%" . $pengadaan1->pengadaan_id . "%")
+        //     ->get();
+        // $pejabat = DB::table('pejabats')
+        //     ->where('id', '=', 1)
+        //     ->get();
+
+        // // $pejabat = Pejabat::all();
+
+
+        // return view(
+        //     'print.ba_pekerjaan',
+        //     ['pengadaan1' => $pengadaan1],
+        //     ['barang' => $barang],
+        //     ['pejabat' => $pejabat],
+        // );
     }
+
     // BA. Pembukaan Penawaran
-    public function show13(Pengadaan $pengadaan) // public function show(Request $request,$id)
+    public function show13($id) // public function show(Request $request,$id)
     {
-        return view('print.undangan_penawaran', compact('pengadaan'));
+        $pengadaan1 = Jadwal::find($id);
+        $barang = DB::table('barangs')
+            ->where('barangs.pengadaan_id', 'like', "%" . $pengadaan1->pengadaan_id . "%")
+            ->get();
+        $pejabat = DB::table('pejabats')
+            ->where('id', '=', 1)
+            ->get();
+
+        // $pejabat = Pejabat::all();
+
+
+        return view(
+            'print.ba_penawaran',
+            ['pengadaan1' => $pengadaan1],
+            ['barang' => $barang],
+            ['pejabat' => $pejabat],
+        );
     }
+
     // Surat Undangan Klarifikasi/Negosiasi
-    public function show14(Pengadaan $pengadaan) // public function show(Request $request,$id)
+    public function show14($id) // public function show(Request $request,$id)
     {
-        return view('print.undangan_penyedia', compact('pengadaan'));
+        $pengadaan1 = Jadwal::find($id);
+        $barang = DB::table('barangs')
+            ->where('barangs.pengadaan_id', 'like', "%" . $pengadaan1->pengadaan_id . "%")
+            ->get();
+        $pejabat = DB::table('pejabats')
+            ->where('id', '=', 1)
+            ->get();
+
+        // $pejabat = Pejabat::all();
+
+
+        return view(
+            'print.undangan_nego',
+            ['pengadaan1' => $pengadaan1],
+            ['barang' => $barang],
+            ['pejabat' => $pejabat],
+        );
     }
+
     // BA. Klarifikasi/Negosiasi
-    public function show15(Pengadaan $pengadaan) // public function show(Request $request,$id)
+    public function show15($id) // public function show(Request $request,$id)
     {
-        return view('print.undangan_penyedia', compact('pengadaan'));
+        $pengadaan1 = Jadwal::find($id);
+        $barang = DB::table('barangs')
+            ->where('barangs.pengadaan_id', 'like', "%" . $pengadaan1->pengadaan_id . "%")
+            ->get();
+        $pejabat = DB::table('pejabats')
+            ->where('id', '=', 1)
+            ->get();
+
+        // $pejabat = Pejabat::all();
+
+
+        return view(
+            'print.ba_nego',
+            ['pengadaan1' => $pengadaan1],
+            ['barang' => $barang],
+            ['pejabat' => $pejabat],
+        );
     }
+
     // Lampiran BA. Klarifikasi/Negosiasi
     public function show16(Pengadaan $pengadaan) // public function show(Request $request,$id)
     {
         return view('print.undangan_penyedia', compact('pengadaan'));
     }
+
     // BA. Hasil Pengadaan Langsung
     public function show17(Pengadaan $pengadaan) // public function show(Request $request,$id)
     {
         return view('print.undangan_penyedia', compact('pengadaan'));
     }
+
     // Nota Dinas3/ Nota Dinas dari Pejabat Pengadaan ke PPK
-    public function show18(Pengadaan $pengadaan) // public function show(Request $request,$id)
+    public function show18($id) // public function show(Request $request,$id)
     {
-        return view('print.undangan_penyedia', compact('pengadaan'));
+        $pengadaan1 = Jadwal::find($id);
+        $barang = DB::table('barangs')
+            ->where('barangs.pengadaan_id', 'like', "%" . $pengadaan1->pengadaan_id . "%")
+            ->get();
+        $pejabat = DB::table('pejabats')
+            ->where('id', '=', 1)
+            ->get();
+
+        // $pejabat = Pejabat::all();
+
+
+        return view(
+            'print.nota_dinas3',
+            ['pengadaan1' => $pengadaan1],
+            ['barang' => $barang],
+            ['pejabat' => $pejabat],
+        );
     }
+
     // Penetapan Penyedia Jasa
-    public function show19(Pengadaan $pengadaan) // public function show(Request $request,$id)
+    public function show19($id) // public function show(Request $request,$id)
     {
-        return view('print.undangan_penyedia', compact('pengadaan'));
+        $pengadaan1 = Jadwal::find($id);
+        $barang = DB::table('barangs')
+            ->where('barangs.pengadaan_id', 'like', "%" . $pengadaan1->pengadaan_id . "%")
+            ->get();
+        $pejabat = DB::table('pejabats')
+            ->where('id', '=', 1)
+            ->get();
+
+        // $pejabat = Pejabat::all();
+
+
+        return view(
+            'print.penetapan_penyedia',
+            ['pengadaan1' => $pengadaan1],
+            ['barang' => $barang],
+            ['pejabat' => $pejabat],
+        );
     }
+
     // Penunjukan Penyedia Barang/Jasa
     public function show20(Pengadaan $pengadaan) // public function show(Request $request,$id)
     {
         return view('print.undangan_penyedia', compact('pengadaan'));
     }
+
     // Surat Perintah Kerja
-    public function show21(Pengadaan $pengadaan) // public function show(Request $request,$id)
+    public function show21($id) // public function show(Request $request,$id)
     {
-        return view('print.undangan_penyedia', compact('pengadaan'));
+        $pengadaan1 = Jadwal::find($id);
+        $barang = DB::table('barangs')
+            ->where('barangs.pengadaan_id', 'like', "%" . $pengadaan1->pengadaan_id . "%")
+            ->get();
+        $pejabat = DB::table('pejabats')
+            ->where('id', '=', 1)
+            ->get();
+
+        // $pejabat = Pejabat::all();
+
+
+        return view(
+            'print.surat_perintah_kerja',
+            ['pengadaan1' => $pengadaan1],
+            ['barang' => $barang],
+            ['pejabat' => $pejabat],
+        );
     }
+
     // Surat Perintah Mulai Kerja (SPMK)
     public function show22(Pengadaan $pengadaan) // public function show(Request $request,$id)
     {
         return view('print.undangan_penyedia', compact('pengadaan'));
     }
+
     // BA. Serah Terima Hasil Pekerjaan
     public function show23(Pengadaan $pengadaan) // public function show(Request $request,$id)
     {
         return view('print.undangan_penyedia', compact('pengadaan'));
     }
+
     // BA. Penyerahan Barang/Jasa
     public function show24(Pengadaan $pengadaan) // public function show(Request $request,$id)
     {
         return view('print.undangan_penyedia', compact('pengadaan'));
     }
+
     // BA. Hasil Pemeriksaan Administratif
     public function show25(Pengadaan $pengadaan) // public function show(Request $request,$id)
     {
         return view('print.undangan_penyedia', compact('pengadaan'));
     }
+
     // BA. Hasil Pembayaran
     public function show26(Pengadaan $pengadaan) // public function show(Request $request,$id)
     {
@@ -661,14 +798,14 @@ class PengadaanController extends Controller
     //         ->with('success', 'Pengadaan Berhasil Dihapus!');
     // }
 
-        // public function lihat($request)
-        // {
-        //     // $cari1 = $request->cari1;
-        //     $pengadaannew = DB::table('pengadaans')
-        //         ->join('pengadaans', 'pengadaan_id', '=', 'pengadaans.id')
-        //         ->join('pelaksanas', 'pelaksana_id', '=', 'pelaksanas.id')
-        //         // ->paginate();
-        //         ->get();
-        //     return view('print.nota_dinas1', compact('pengadaannew'));
-        // }
+    // public function lihat($request)
+    // {
+    //     // $cari1 = $request->cari1;
+    //     $pengadaannew = DB::table('pengadaans')
+    //         ->join('pengadaans', 'pengadaan_id', '=', 'pengadaans.id')
+    //         ->join('pelaksanas', 'pelaksana_id', '=', 'pelaksanas.id')
+    //         // ->paginate();
+    //         ->get();
+    //     return view('print.nota_dinas1', compact('pengadaannew'));
+    // }
 }

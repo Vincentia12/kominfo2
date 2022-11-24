@@ -117,8 +117,7 @@
                                     <td>Nama CV Pelaksana</td>
                                     <td>:</td>
                                     <td>{{ $pd1->pt_pelaksana }}</td>
-<<<<<<< HEAD
-                    </tr>
+                    <<<<<<< HEAD </tr>
             </div>
         </div>
         <div class="mb-4">
@@ -144,21 +143,21 @@
                     <th>Tanggal</th>
                     <th>Nomor</th>
                     <th>Deskripsi Tanggal</th> --}}
-                    {{-- <th>NO</th> --}}
-                    {{-- <th>Id Pengadaan</th>
+        {{-- <th>NO</th> --}}
+        {{-- <th>Id Pengadaan</th>
                                 <th>Nama Pengadaan</th>
                                 <th>Nama Perusahaan</th>
                                 <th>Harga Kontrak</th> --}}
-                    {{-- <th>Alamat</th>
+        {{-- <th>Alamat</th>
                                 <th>Status Aset</th> --}}
-                    {{-- <th>Luas Aset</th> --}}
-                    {{-- <th>Kondisi Aset</th>
+        {{-- <th>Luas Aset</th> --}}
+        {{-- <th>Kondisi Aset</th>
                                 <th>Kondisi Geografis</th>
                                 <th>Asal Usul</th>
                                 <th>Tahun Kepemilikan</th>
                                 <th>Tahun Pembangunan</th>
                                 <th>Tahun Rehab</th> --}}
-                                {{-- </tr>
+        {{-- </tr>
                             </div>
                         </div>
                         <div class="mb-4">
@@ -167,115 +166,156 @@
                                     <td>Jenis Pengadaan</td>
                                     <td>:</td>
                                     <td>{{ $pd1->jenis_pengadaan }}</td>
-                                </tr>
-                            </div>
-                        </div> --}}
-                    {{-- <table class="table table-bordered" id="data1" style="width:100%"> --}}
-                    <table class="table table-bordered"  style="width:100%">
-                        
-                        <thead>
-                            <tr>
-                                <th>Pelaksana</th>
-                                <th>Pengadaan</th>
-                                <th>Nilai Negosiasi</th>
-                                <th>Kegiatan</th>
-                                <th>Alokasi</th>
-                                <th>Hari</th>
-                                <th>Tanggal</th>
-                                <th>Nomor</th>
-                                <th>Deskripsi Tanggal</th>
-                                {{-- <th>NO</th> --}}
-                                {{-- <th>Id Pengadaan</th> --}}
-                            
-                    {{-- <th>Kegiatan</th> --}}
-                    <th width="280px">Action</th>
-                </tr>
-            </thead>
-            <tbody>
-                {{-- @if(count($pengadaan)<=50) --}}
-                @foreach ($pengadaan1 as $p1)
-                {{-- @foreach ($jadwal1 as $jd1) --}}
-                <tr>
-                    <td>{{ $p1->pt_pelaksana }}</td>
-                    <td>{{ $p1->jenis_pengadaan }}</td>
-                    <td>{{ $p1->nilai_negosiasi }}</td>
-                    <td>{{ $p1->kegiatan }}</td>
-                    <td>{{ $p1->alokasi }}</td>
-                    <td>{{ $p1->hari }}</td>
-                    <td>{{ $p1->tanggal }}</td>
-                    <td>{{ $p1->nomor }}</td>
-                    <td>{{ $p1->deskripsi_tgl }}</td>
-                    <td>
-                        @if ($p1->kegiatan == 'Nota Dinas dari KPA ke PPK')
-                            <a class="btn btn-info" href="{{ route('pengadaan1.show1',$p1->id) }}">Detail</a>
-                            {{-- <a class="btn btn-info" href="pengadaan1/notadinas1/">Print</a> --}}
-                            <a class="btn btn-danger " href="{{route('pengadaan1.print1',$p1->id)}}">Print</a>
-                            {{-- <a class="btn btn-info" href="{{ route('show',$p1->id) }}">Detail</a> --}}
-                        @elseif($p1->kegiatan == 'Nota Dinas dari PPK ke Pejabat Pengadaan + Lampiran OE (HPS)')
-                        <!-- {{-- <a class="btn btn-info" href="{{ route('show1',$p1->id) }}">Detail</a> --}} -->
-                            <a class="btn btn-info" href="{{ route('pengadaan1.show2',$p1->id) }}">Detail</a>
-                            <a class="btn btn-danger" href="{{route('pengadaan1.print1',$p1->id)}}">Print</a>
-                        <!-- {{-- <a class="btn btn-info" name="show1">Detail</a> --}} -->
-                        <!-- {{-- url('/print_notadinas1') --}} -->
-                        @elseif($p1->kegiatan == 'Nota Dinas dari Pejabat Pengadaan ke PPK')
-                        <!-- {{-- <a class="btn btn-info" href="{{ route('show1',$p1->id) }}">Detail</a> --}} -->
-                        <a class="btn btn-info" href="{{ route('pengadaan1.show3',$p1->id) }}">Detail</a>
+        </tr>
+    </div>
+</div> --}}
+{{-- <table class="table table-bordered" id="data1" style="width:100%"> --}}
+<table class="table table-bordered" style="width:100%">
 
-                        @elseif($p1->kegiatan == 'Lampiran BA. Evaluasi Dokumen Prakualifikasi')
-                        <a class="btn btn-info" href="{{ route('pengadaan1.show4',$p1->id) }}">Detail</a>
+    <thead>
+        <tr>
+            <th>Pelaksana</th>
+            <th>Pengadaan</th>
+            <th>Nilai Negosiasi</th>
+            <th>Kegiatan</th>
+            <th>Alokasi</th>
+            <th>Hari</th>
+            <th>Tanggal</th>
+            <th>Nomor</th>
+            <th>Deskripsi Tanggal</th>
+            {{-- <th>NO</th> --}}
+            {{-- <th>Id Pengadaan</th> --}}
 
-                        @elseif($p1->kegiatan == 'BA. Klarifikasi/Negosiasi')
-                        <a class="btn btn-info" href="{{ route('peng adaan1.show5',$p1->id) }}">Detail</a>
+            {{-- <th>Kegiatan</th> --}}
+            <th width="280px">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{-- @if(count($pengadaan)<=50) --}}
+        @foreach ($pengadaan1 as $p1)
+        {{-- @foreach ($jadwal1 as $jd1) --}}
+        <tr>
+            <td>{{ $p1->pt_pelaksana }}</td>
+            <td>{{ $p1->jenis_pengadaan }}</td>
+            <td>{{ $p1->nilai_negosiasi }}</td>
+            <td>{{ $p1->kegiatan }}</td>
+            <td>{{ $p1->alokasi }}</td>
+            <td>{{ $p1->hari }}</td>
+            <td>{{ $p1->tanggal }}</td>
+            <td>{{ $p1->nomor }}</td>
+            <td>{{ $p1->deskripsi_tgl }}</td>
+            <td>
+                @if ($p1->kegiatan == 'Nota Dinas dari KPA ke PPK')
+                <a class="btn btn-info" href="{{ route('pengadaan1.show1',$p1->id) }}">Detail</a>
+                {{-- <a class="btn btn-info" href="pengadaan1/notadinas1/">Print</a> --}}
+                <a class="btn btn-danger " href="{{route('pengadaan1.print1',$p1->id)}}">Print</a>
+                {{-- <a class="btn btn-info" href="{{ route('show',$p1->id) }}">Detail</a> --}}
+                @elseif($p1->kegiatan == 'Nota Dinas dari PPK ke Pejabat Pengadaan + Lampiran OE (HPS)')
+                <!-- {{-- <a class="btn btn-info" href="{{ route('show1',$p1->id) }}">Detail</a> --}} -->
+                <a class="btn btn-info" href="{{ route('pengadaan1.show2',$p1->id) }}">Detail</a>
+                <a class="btn btn-danger" href="{{route('pengadaan1.print2',$p1->id)}}">Print</a>
+                <!-- {{-- <a class="btn btn-info" name="show1">Detail</a> --}} -->
+                <!-- {{-- url('/print_notadinas1') --}} -->
+                @elseif($p1->kegiatan == 'Surat Undangan, Pengambilan Dokumen Kualifikasi dan Dokumen Pengadaan Langsung kepada Penyedia Barang/Jasa')
+                <a class="btn btn-info" href="{{ route('pengadaan1.show3',$p1->id) }}">Detail</a>
+                <!-- <a class="btn btn-danger" href="{{route('pengadaan1.print3',$p1->id)}}">Print</a> -->
 
+                @elseif($p1->kegiatan == 'PAKTA INTEGRITAS')
+                <a class="btn btn-info" href="{{ route('pengadaan1.show4',$p1->id) }}">Detail</a>
 
+                @elseif($p1->kegiatan == 'Surat Pernyataan Minat')
+                <a class="btn btn-info" href="{{ route('pengadaan1.show5',$p1->id) }}">Detail</a>
 
+                @elseif($p1->kegiatan == 'Pemasukan Dokumen Kualifikasi')
+                <a class="btn btn-info" href="{{ route('pengadaan1.show6',$p1->id) }}">Detail</a>
 
+                @elseif($p1->kegiatan == 'Daftar Hadir Pengembalian Dokumen Prakualifikasi')
+                <a class="btn btn-info" href="{{ route('pengadaan1.show7',$p1->id) }}">Detail</a>
 
-                        @elseif($p1->kegiatan == 'Daftar Hadir Pengembalian Dokumen Prakualifikasi')
-                        <a class="btn btn-info" href="{{ route('pengadaan1.show6',$p1->id) }}">Detail</a>
+                @elseif($p1->kegiatan == 'BA. Evaluasi Dokumen Prakualifikasi')
+                <a class="btn btn-info" href="{{ route('pengadaan1.show8',$p1->id) }}">Detail</a>
 
-                        @elseif($p1->kegiatan == 'PAKTA INTEGRITAS')
-                        <a class="btn btn-info" href="{{ route('pengadaan1.show7',$p1->id) }}">Detail</a>
+                @elseif($p1->kegiatan == 'Lampiran BA. Evaluasi Dokumen Prakualifikasi')
+                <a class="btn btn-info" href="{{ route('pengadaan1.show9',$p1->id) }}">Detail</a>
 
-                        @elseif($p1->kegiatan == 'Penetapan Penyedia Jasa')
-                        <a class="btn btn-info" href="{{ route('pengadaan1.show8',$p1->id) }}">Detail</a>
+                @elseif($p1->kegiatan == 'Surat Undangan Permintaan Penawaran Harga')
+                <a class="btn btn-info" href="{{ route('pengadaan1.show10',$p1->id) }}">Detail</a>
 
-                        @elseif($p1->kegiatan == 'Surat Undangan Klarifikasi/Negosiasi')
-                        <a class="btn btn-info" href="{{ route('pengadaan1.show9',$p1->id) }}">Detail</a>
+                @elseif($p1->kegiatan == 'BA. Penjelasan Pekerjaan')
+                <a class="btn btn-info" href="{{ route('pengadaan1.show11',$p1->id) }}">Detail</a>
 
-                        @elseif($p1->kegiatan == 'Surat Undangan Permintaan Penawaran')
-                        <a class="btn btn-info" href="{{ route('pengadaan1.show10',$p1->id) }}">Detail</a>
+                @elseif($p1->kegiatan == 'Pemasukan Penawaran')
+                <a class="btn btn-info" href="{{ route('pengadaan1.show12',$p1->id) }}">Detail</a>
 
-                        @elseif($p1->kegiatan == 'Penunjuk Penyedia Barang/Jasa')
-                        <a class="btn btn-info" href="{{ route('pengadaan1.show11',$p1->id) }}">Detail</a>
-                        <!-- {{-- <a class="btn btn-info" name="show1">Detail</a> --}} -->
-                        <!-- {{-- url('/print_notadinas1') --}} -->
-                        @else
-                        You don't have a post!
-                        @endif
-                                        {{-- <a href="#" value="{{ action() }}" class="btn btn-xs btn-info modalMd" title="Show Data" data-toggle="modal" data-target="#modalMd"><span class="glyphicon glyphicon-eye-open"></span></a> --}}
-                                        {{-- <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modalDetailPengadaan1-{{$jd1->pengadaan_id}}"> --}}
-                                        {{-- <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modalprint-{{$p1->id}}">
-                                            print
-                                        </button> --}}
-                        <!-- {{-- <a class="btn btn-info" href="{{ route('pengadaan1.show',$p1->id) }}">Detail</a> --}} -->
-                        <!-- {{-- <a class="btn btn-primary" href="{{ route('pengadaan.edit',$pengadaan->id) }}">Edit</a> --}} -->
-                        @csrf
-                        @method('DELETE')
+                @elseif($p1->kegiatan == 'BA. Pembukaan Penawaran')
+                <a class="btn btn-info" href="{{ route('pengadaan1.show13',$p1->id) }}">Detail</a>
 
-                        {{-- <button type="submit" class="btn btn-danger">Delete</button> --}}
-                        {{-- </form> --}}
-                    </td>
-                </tr>
-                @endforeach
-                {{-- @endif --}}
-            </tbody>
-            {{-- @foreach ($pejabat as $p)
+                @elseif($p1->kegiatan == 'Surat Undangan Klarifikasi/Negosiasi')
+                <a class="btn btn-info" href="{{ route('pengadaan1.show14',$p1->id) }}">Detail</a>
+
+                @elseif($p1->kegiatan == 'BA. Klarifikasi/Negosiasi')
+                <a class="btn btn-info" href="{{ route('pengadaan1.show15',$p1->id) }}">Detail</a>
+
+                @elseif($p1->kegiatan == 'Lampiran BA. Klarifikasi/Negosiasi')
+                <a class="btn btn-info" href="{{ route('pengadaan1.show16',$p1->id) }}">Detail</a>
+
+                @elseif($p1->kegiatan == 'BA. Hasil Pengadaan Langsung')
+                <a class="btn btn-info" href="{{ route('pengadaan1.show17',$p1->id) }}">Detail</a>
+
+                @elseif($p1->kegiatan == 'Nota Dinas dari Pejabat Pengadaan ke PPK')
+                <a class="btn btn-info" href="{{ route('pengadaan1.show18',$p1->id) }}">Detail</a>
+
+                @elseif($p1->kegiatan == 'Penetapan Penyedia Jasa')
+                <a class="btn btn-info" href="{{ route('pengadaan1.show19',$p1->id) }}">Detail</a>
+
+                @elseif($p1->kegiatan == 'Penunjuk Penyedia Barang/Jasa')
+                <a class="btn btn-info" href="{{ route('pengadaan1.show20',$p1->id) }}">Detail</a>
+
+                @elseif($p1->kegiatan == 'Surat Perintah Kerja')
+                <a class="btn btn-info" href="{{ route('pengadaan1.show21',$p1->id) }}">Detail</a>
+
+                @elseif($p1->kegiatan == 'Surat Perintah Mulai Kerja (SPMK)')
+                <a class="btn btn-info" href="{{ route('pengadaan1.show22',$p1->id) }}">Detail</a>
+
+                @elseif($p1->kegiatan == 'BA. Serah Terima Hasil Pekerjaan')
+                <a class="btn btn-info" href="{{ route('pengadaan1.show23',$p1->id) }}">Detail</a>
+
+                @elseif($p1->kegiatan == 'BA. Penyerahan Barang/Jasa')
+                <a class="btn btn-info" href="{{ route('pengadaan1.show24',$p1->id) }}">Detail</a>
+
+                @elseif($p1->kegiatan == 'BA. Hasil Pemeriksaan Administratif')
+                <a class="btn btn-info" href="{{ route('pengadaan1.show25',$p1->id) }}">Detail</a>
+
+                @elseif($p1->kegiatan == 'BA. Hasil Pembayaran')
+                <a class="btn btn-info" href="{{ route('pengadaan1.show26',$p1->id) }}">Detail</a>
+                <!-- {{-- <a class="btn btn-info" name="show1">Detail</a> --}} -->
+                <!-- {{-- url('/print_notadinas1') --}} -->
+                @else
+                You don't have a post!
+                @endif
+                {{-- <a href="#" value="{{ action() }}" class="btn btn-xs btn-info modalMd" title="Show Data" data-toggle="modal" data-target="#modalMd"><span class="glyphicon glyphicon-eye-open"></span></a> --}}
+                {{-- <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modalDetailPengadaan1-{{$jd1->pengadaan_id}}"> --}}
+                {{-- <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modalprint-{{$p1->id}}">
+                print
+                </button> --}}
+                <!-- {{-- <a class="btn btn-info" href="{{ route('pengadaan1.show',$p1->id) }}">Detail</a> --}} -->
+                <!-- {{-- <a class="btn btn-primary" href="{{ route('pengadaan.edit',$pengadaan->id) }}">Edit</a> --}} -->
+                @csrf
+                @method('DELETE')
+
+                {{-- <button type="submit" class="btn btn-danger">Delete</button> --}}
+                {{-- </form> --}}
+            </td>
+        </tr>
+        @endforeach
+        {{-- @endif --}}
+    </tbody>
+    {{-- @foreach ($pejabat as $p)
                 
             <p>{{ $p->nip_kuasa_pengguna }}</p>
-            @endforeach --}}
-        </table>
-    </div>
+    @endforeach --}}
+</table>
+</div>
 </div>
 </div>
 </div>
