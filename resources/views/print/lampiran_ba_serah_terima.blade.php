@@ -66,12 +66,43 @@
             </table>
             <table width="800px" border="1" align="center">
                 <thead>
+                    <tr>
+                        <td width="30px" align="center">1.</td>
+                        <td width="570px">Belanja Alat/Bahan Kapasitas Kelembagaan Statistik Sektoral Toner Printer</td>
+                        <td width="100px" scope="col"> </td>
+                        <td width="100px" scope="col"> </td>
+                    </tr>
+                </thead>
+            </table>
+            <table width="800px" border="1" align="center">
+                <thead>
                     <tr align="center">
-                        <th width="30px" scope="col">No</th>
-                        <th width="100px" scope="col">Banyaknya</th>
-                        <th width="470px" scope="col">Uraian Spesifikasi</th>
-                        <th width="100px" scope="col">Harga Satuan (Rp.)</th>
-                        <th width="100px" scope="col">Total Harga (Rp.)</th>
+                        <td width="30px" scope="col"> </td>
+                        <td width="50px" scope="col">2</td>
+                        <td width="50px" scope="col">buah</td>
+                        <td width="470px" scope="col">Tinta Printer Epson L-1300 -(2)hitam, cyan,magenta,yellow</td>
+                        <td width="100px" scope="col">1.245.000,-</td>
+                        <td width="100px" scope="col">2.490.000,-</td>
+                    </tr>
+                </thead>
+                <thead>
+                    <tr align="center">
+                        <td width="30px" scope="col"> </td>
+                        <td width="50px" scope="col">1</td>
+                        <td width="50px" scope="col">buah</td>
+                        <td width="470px" scope="col">Tinta Printer Epson L-1800 -(2)hitam,cyan,magenta,yellow,lightcyan, lightmagenta</td>
+                        <td width="100px" scope="col">1.257.000,-</td>
+                        <td width="100px" scope="col">1.257.000,-</td>
+                    </tr>
+                </thead>
+                <thead>
+                    <tr align="center">
+                        <td width="30px" scope="col"> </td>
+                        <td width="50px" scope="col">1</td>
+                        <td width="50px" scope="col">buah</td>
+                        <td width="470px" scope="col">Tinta Printer Epson L-6160 -(2)hitam,cyan,magenta,yellow</td>
+                        <td width="100px" scope="col">1.250.000,-</td>
+                        <td width="100px" scope="col">1.250.000,-</td>
                     </tr>
                 </thead>
             </table>
