@@ -54,7 +54,7 @@
     </div>
     {{-- <br> --}}
     <div style="text-align:center ;">
-        <table class="table" border="1" align="center" font-size="1">
+        <table class="table" border="0" align="center" font-size="1">
             <tr>
                 <td width="80">Nomor</td>
                 <td>:</td>
@@ -185,7 +185,6 @@
                 <td>PEJABAT PENGADAAN</td>
                 {{-- <td width="50"> </td> --}}
             </tr>    
-            <br>
             <br>
             <br>
             <br>
