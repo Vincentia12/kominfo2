@@ -37,6 +37,132 @@
         <hr>
     </div>
 
+    <div class="row">
+        <br>
+        <table border="0" align="center">
+            <tr>
+                <td style="text-align: center">
+                    <u><b>BERITA ACARA EVALUASI DOKUMEN PRAKUALIFIKASI</b></u>
+                </td>
+            <tr>
+        </table>
+    </div>
+
+    <div class="row">
+        <table border="0" align="center">
+            <tr>
+                <td style="text-align: center">
+                    <font size="3">Nomor</font>
+                </td>
+                <td style="text-align: center">
+                    <font size="3">:</font>
+                </td>
+                <td style="text-align: center">
+                    <font size="3">020/654.6 /114.6/2022</font>
+                </td>
+                </td>
+            <tr>
+        </table>
+    </div>
+
+    <br><br>
+    <div class="row">
+        <table>
+            <tr>
+                <td width="8"></td>
+                <td style="text-align: left ;text-align: justify; text-indent: 45px;">Pada hari ini Kamis Tanggal Delapan Belas, Bulan Agustus Tahun Dua Ribu Dua Puluh Dua, bertempat di Ruang Argopuro Dinas Komunikasi Dan Informatika Provinsi Jawa Timur, kami yang bertanda tangan dibawah ini adalah Pejabat Pengadaan di Lingkungan Dinas Komunikasi Dan Informatika Provinsi Jawa Timur Tahun Anggaran 2022 yang dibentuk dengan Keputusan Kepala Dinas Komunikasi Dan Informatika Provinsi Jawa Timur tanggal 3 Januari 2022 Nomor : 188/19/114.1/2022, telah melakukan penilaian dokumen prakualifikasi penunjukan langsung Belanja Alat/Bahan Kapasitas Kelembagaan Statistik Sektoral Toner Printer , dibiayai dari dana APBD Tahun Anggaran 2022 pada DPA Dinas Komunikasi dan Informatika Provinsi Jawa Timur Kode Rekening 2.20.02.1.01.5.1.02.01.01.0029 yang telah diserahkan oleh :</td>
+            </tr>
+        </table>
+    </div>
+
+    <br>
+    <div>
+        <table border="0" align="center">
+            <tr>
+                <td width="8"></td>
+                <td width="180">NAMA PERUSAHAAN</td>
+                <td>:</td>
+                <td width="370">{{$pengadaan1->pengadaan->pelaksana->pt_pelaksana}}</td>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <table border="0" align="center">
+            <tr>
+                <td width="8"></td>
+                <td width="180">ALAMAT</td>
+                <td>:</td>
+                <td width="370">{{$pengadaan1->pengadaan->pelaksana->alamat}}</td>
+            </tr>
+        </table>
+    </div>
+
+    <div>
+        <table border="0" align="center">
+            <tr>
+                <td width="8"></td>
+                <td width="180">NOMOR POKOK WAJIB PAJAK</td>
+                <td>:</td>
+                <td width="370">{{$pengadaan1->pengadaan->pelaksana->npwp}}</td>
+            </tr>
+        </table>
+    </div>
+
+    <br><br>
+    <div>
+        <table border="0" align="center" font-size="2">
+            <tr>
+                <td width="8"></td>
+                <td width="560">Dengan hasil sebagai berikut :</td>
+            </tr>
+        </table>
+    </div>
+    <div class="row">
+        <table>
+            <tr>
+                <td width="8"></td>
+                <td style="text-align: left ;text-align: justify;">Setelah mengadakan penelitian dan penilaian secara seksama terhadap dokumen prakualifikasi yang diserahkan penyedia barang/jasa, maka Pejabat Pengadaan Barang/Jasa di Lingkungan Dinas Komunikasi dan Informatika provinsi Jawa Timur memutuskan bahwa calon penyedia barang/jasa tersebut memenuhi syarat untuk melanjutkan kegiatan penunjukan langsung selanjutnya.</td>
+            </tr>
+        </table>
+    </div>
+
+    <br>
+    <div class="row">
+        <table>
+            <tr>
+                <td width="8"></td>
+                <td style="text-align: left ;text-align: justify; text-indent: 45px;">Demikian Berita Acara evaluasi dokumen prakualifikasi ini dibuat untuk dipergunakan sebagai bahan pertimbangan dalam pelaksanaan selanjutnya.</td>
+            </tr>
+        </table>
+    </div>
+
+    <br><br>
+    <div style="text-align:center ;">
+        <table style="text-align: center" border="0" font-size="0">
+            <tr>
+                <td width="300"> </td>
+                <td>PEJABAT PENGADAAN</td>
+                {{-- <td width="50"> </td> --}}
+            </tr>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <tr>
+                <td width="300"> </td>
+                <td width="250"><u>ADI KURNIAWAN.S.Kom.,M.Kom</u></td>
+                {{-- <td width="50"> </td> --}}
+            </tr>
+            <tr>
+                <td width="300"> </td>
+                <td>NIP. 19890618 201403 1 002</td>
+                {{-- <td width="50"> </td> --}}
+            </tr>
+        </table>
+    </div>
+
+
 </div>
 <!-- <div class="col-12 grid-margin stretch-card">
     <div class="card shadow">

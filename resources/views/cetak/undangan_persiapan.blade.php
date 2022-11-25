@@ -11,17 +11,17 @@
 </div>
 @endif
 
-<div >
+<div>
     {{-- //kopsurat --}}
-    <div >
+    <div>
         <table class="table" border="0" align="center">
             <tr>
-                <td >
-                    <a href='https://postimages.org/' target='_blank'><img src='https://i.postimg.cc/J4hg9c94/logo-jatim.jpg' width="90" height="110" alt=''/></a>
+                <td>
+                    <a href='https://postimages.org/' target='_blank'><img src='https://i.postimg.cc/J4hg9c94/logo-jatim.jpg' width="90" height="110" alt='' /></a>
                 </td>
                 <td width="40"> </td>
                 <td style="text-align: center" width="500px">
-                    <font color="black"> 
+                    <font color="black">
                         <p align="center">
                             <b>PEMERINTAH PROVINSI JAWA TIMUR</b>
                             <br> DINAS KOMUNIKASI DAN INFORMATIKA
@@ -37,8 +37,8 @@
         <hr>
     </div>
 
-    <div >
-        <table >
+    <div>
+        <table>
             <tr>
                 <td width="280"> </td>
                 <!-- diubah. menggunakan kolom craete at tapi aku blm bisa ngubahnya -->
@@ -76,8 +76,8 @@
                 <td width="80">Lampiran</td>
                 <td>:</td>
                 <td width="175">-</td>
-                <td > </td>
-                <td >di</td>
+                <td> </td>
+                <td>di</td>
             </tr>
             <tr>
                 <td width="80">Perihal</td>
@@ -125,14 +125,14 @@
                 <td width="8"></td>
                 <td width="50">Sumber Dana</td>
                 <td>:</td>
-                <td >APBD Provinsi Jawa Timur Tahun Anggaran 2022</td>
+                <td>APBD Provinsi Jawa Timur Tahun Anggaran 2022</td>
             </tr>
             <tr>
                 <td width="8"></td>
                 <td width="50">Nilai HPS</td>
                 <td>:</td>
                 <!-- diubah -->
-                <td >Rp. {{$pengadaan1->pengadaan->total_hps}},- ({{$pengadaan1->pengadaan->deskripsi_hps}})</td>
+                <td>Rp. {{$pengadaan1->pengadaan->total_hps}},- ({{$pengadaan1->pengadaan->deskripsi_hps}})</td>
             </tr>
         </table>
     </div>
@@ -157,13 +157,13 @@
                 <td width="8"></td>
                 <td width="100">Jam</td>
                 <td>:</td>
-                <td >10.00 WIB</td>
+                <td>10.00 WIB</td>
             </tr>
             <tr>
                 <td width="8"></td>
                 <td width="100">Tempat</td>
                 <td>:</td>
-                <td >Ruang Argopuro lt.II Dinas Komunikasi Dan Informatika Provinsi Jawa Timur Jl. Ahmad Yani 242 - 244 Surabaya</td>
+                <td>Ruang Argopuro lt.II Dinas Komunikasi Dan Informatika Provinsi Jawa Timur Jl. Ahmad Yani 242 - 244 Surabaya</td>
             </tr>
         </table>
         <table border="0" align="center" font-size="1">
@@ -184,7 +184,7 @@
                 <td width="300"> </td>
                 <td>PEJABAT PENGADAAN</td>
                 {{-- <td width="50"> </td> --}}
-            </tr>    
+            </tr>
             <br>
             <br>
             <br>
@@ -200,6 +200,6 @@
                 <td>NIP. 19890618 201403 1 002</td>
                 {{-- <td width="50"> </td> --}}
             </tr>
-        </table> 
+        </table>
     </div>
 </div>
