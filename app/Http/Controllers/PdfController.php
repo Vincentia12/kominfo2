@@ -162,6 +162,30 @@ class PdfController extends Controller
         return $pdf->download('Daftar_Hadir.pdf');
     }
 
+    public function ba_evaluasi(Request $request, $id)
+    {
+        $pengadaan1 = Jadwal::find($id);
+        // $barang = DB::table('barangs')
+        //     ->where('barangs.pengadaan_id', 'like', "%" . $pengadaan1->pengadaan_id . "%")
+        //     ->get();
+        // $pejabat = DB::table('pejabats')
+        //     ->where('id', '=', 1)
+        // ->get();
+
+        // $pejabat = Pejabat::all();
+
+
+
+        // dd($pengadaan1, $barang );
+        // dd($pdf);
+        $pdf = PDF::loadview(
+            'cetak/ba_evaluasi',
+            ['pengadaan1' => $pengadaan1],
+        );
+        return $pdf->download('Berita_Acara_Evaluasi.pdf');
+    }
+
+
     public function nota_dinas3()
     {
 
@@ -175,41 +199,6 @@ class PdfController extends Controller
         return $pdf->download('NotaDinas4.pdf');
     }
 
-    public function ba_evaluasi()
-    {
-        // $pengadaan = DB::table('pengadaans')
-        //     // ->select('*')
-        //     // ->join('pengadaans', 'pelaksanas.id', '=', 'pengadaans.pelaksana_id')
-        //     ->join('pelaksanas', 'pelaksana_id', '=', 'pelaksanas.id')
-        //     ->join('jadwals', 'pengadaans.id', '=', 'jadwals.pengadaan_id')
-        //     ->join('barangs', 'pengadaans.id', '=', 'barangs.pengadaan_id')
-        //     // ->groupBy('jadwals.pengadaan_id')
-        //     // ->get();
-        //     // ->paginate(10);
-        // ->paginate();
-        // $pengadaan = Jadwal::where('kegiatan', '=', 'Nota Dinas dari KPA ke PPK')
-        // $pengadaan = Jadwal::where('jadwals.kegiatan','like',"%".'Nota Dinas dari KPA ke PPK'."%")
-        // ->paginate();
-        // $pejabat = Pejabat::all();
-
-        // $data = [
-        //     // 'title' => 'Welcome to Tutsmake.com',
-        //     // 'date' => date('m/d/Y')
-        //     'notadinas1' => $notadinas1
-        // ];
-
-        // $pdf = PDF::loadView('print.nota_dinas1', $data);
-        // $pdf = Pengadaan::View('print.nota_dinas1', $data);
-
-        $pdf = PDF::loadview(
-            // $pdf = word::loadview(
-            'cetak.ba_evaluasi',
-            // ['notadinas1' => $notadinas1],
-            // ['pengadaan' => $pengadaan],
-            // ['pejabat' => $pejabat]
-        );
-        return $pdf->download('BAEvaluasi.pdf');
-    }
 
     public function ba_nego()
     {
