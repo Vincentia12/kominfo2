@@ -101,6 +101,7 @@
 
                                         @elseif($p1->kegiatan == 'Surat Undangan Permintaan Penawaran Harga')
                                         <a class="btn btn-info" href="{{ route('pengadaan1.show10',$p1->id) }}">Detail</a>
+                                        <a class="btn btn-danger " href="{{route('pengadaan1.print10',$p1->id)}}">Print</a>
 
                                         @elseif($p1->kegiatan == 'BA. Penjelasan Pekerjaan')
                                         <a class="btn btn-info" href="{{ route('pengadaan1.show11',$p1->id) }}">Detail</a>

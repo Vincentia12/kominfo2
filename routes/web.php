@@ -167,8 +167,8 @@ Route::get('pengadaan1/print7/{id}', [PdfController::class, 'daftar_hadir'])->na
 Route::get('pengadaan1/print8/{id}', [PdfController::class, 'ba_evaluasi'])->name('pengadaan1.print8');
 Route::get('penetapan_penyedia', [PdfController::class, 'penetapan_penyedia']);
 Route::get('undangan_nego', [PdfController::class, 'undangan_nego']);
-Route::get('undangan_penawaran', [PdfController::class, 'undangan_penawaran']);
-Route::get('undangan_penawaran', [PdfController::class, 'undangan_penyedia']);
+
+
 
 // Route::get('/input_jadwal', function () {
 //     return view('admin.input_jadwal');

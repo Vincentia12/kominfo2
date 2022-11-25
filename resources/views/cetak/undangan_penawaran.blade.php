@@ -42,7 +42,7 @@
             <tr>
                 <td width="280"> </td>
                 <!-- diubah. menggunakan kolom craete at tapi aku blm bisa ngubahnya -->
-                <td>Surabaya, 15 Agustus 2022</td>
+                <td>Surabaya, 22 Agustus 2022</td>
                 <td width="50"> </td>
             </tr>
             <tr>
@@ -82,20 +82,20 @@
             <tr>
                 <td width="80">Perihal</td>
                 <td>:</td>
-                <td width="175">Undangan Persiapan <br><u> Pengadaan Langsung</u></td>
+                <td width="175">Undangan Permintaan <br><u> Penawaran Harga</u></td>
                 <td></td>
                 <td><u>SURABAYA</u></td>
             </tr>
         </table>
     </div>
-    {{-- <br> --}}
-    {{-- <div > --}}
-    <div style="text-align:center ; ">
-        <table class="table" border="0" align="center" font-size="1">
+
+    <br>
+    <div>
+        <table class="table" border="0" align="" font-size="1">
             <tr>
                 <td width="8"></td>
-                <td style="text-align: left ;text-align: justify; text-indent: 45px;">Diberitahukan bahwa SKPD Dinas Komunikasi Dan Informatika Provinsi Jawa Timur akan melaksanakan Pengadaan Langsung, untuk :</td>
-                {{-- <td width="23"></td> --}}
+                <td style="text-align: left ;text-align: justify;">Bahwa dalam rangka pelaksanaan proses pengadaan langsung, untuk :</td>
+
             </tr>
         </table>
     </div>
@@ -136,11 +136,12 @@
             </tr>
         </table>
     </div>
-    <div style="text-align:center ;">
-        <table class="table" border="0" align="center" font-size="1">
+    <br>
+    <div>
+        <table class="table" border="0" align="" font-size="1">
             <tr>
                 <td width="8"></td>
-                <td style="text-align: left ; text-align: justify; text-indent: 45px;">Apabila saudara berminat untuk mengikuti paket pengadaan langsung tersebut diharap untuk menyerahkan formulir kualifikasi sebagaimana terlampir yang diisi dengan jelas dan benar, Formulir Kualifikasi tersebut paling lambat diserahkan pada :</td>
+                <td style="text-align: left ; text-align: justify;">Diharap saudara untuk menyampaikan dokumen penawaran paling lambat pada :</td>
             </tr>
         </table>
     </div>
@@ -166,17 +167,20 @@
                 <td>Ruang Argopuro lt.II Dinas Komunikasi Dan Informatika Provinsi Jawa Timur Jl. Ahmad Yani 242 - 244 Surabaya</td>
             </tr>
         </table>
+        <br>
         <table border="0" align="center" font-size="1">
             <tr>
                 <td width="8"></td>
-                <td style="text-align: left ; text-align: justify; text-indent: 45px;">Apabila sampai dengan jam tersebut diatas saudara tidak menyampaikan formulir prakualifikasi tersebut maka dianggap tidak berminat mengikuti pengadaan langsung. Apabila perusahaan saudara dianggap mampu maka akan diundang mengikuti proses pengadaan langsung untuk pekerjaan tersebut diatas.</td>
+                <td style="text-align: left ; text-align: justify;">Sebelum batas waktu penyampaian dokumen penawaran apabila dalam dokumen Pengadaan Langsung sebagaimana terlampir terdapat hal yang tidak jelas atau perlu penjelasan maka dapat ditanyakan kepada Pejabat Pengadaan.</td>
             </tr>
+            <br>
             <tr>
                 <td width="8"></td>
-                <td style="text-align: left ; text-align: justify;">Demikian disampaikan atas perhatian dan partisipasi Saudara diucapkan terima kasih.</td>
+                <td style="text-align: left ; text-align: justify; ">Demikian disampaikan atas perhatian dan partisipasi Saudara diucapkan terima kasih.</td>
             </tr>
         </table>
     </div>
+    <br>
     <br>
     <div style="text-align:center ;">
         <table style="text-align: center" border="0" font-size="0">

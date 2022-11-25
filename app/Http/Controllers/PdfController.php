@@ -185,6 +185,30 @@ class PdfController extends Controller
         return $pdf->download('Berita_Acara_Evaluasi.pdf');
     }
 
+    public function undangan_penawaran(Request $request, $id)
+    {
+
+        $pengadaan1 = Jadwal::find($id);
+        // $barang = DB::table('barangs')
+        //     ->where('barangs.pengadaan_id', 'like', "%" . $pengadaan1->pengadaan_id . "%")
+        //     ->get();
+        // $pejabat = DB::table('pejabats')
+        //     ->where('id', '=', 1)
+        // ->get();
+
+        // $pejabat = Pejabat::all();
+
+
+
+        // dd($pengadaan1, $barang );
+        // dd($pdf);
+        $pdf = PDF::loadview(
+            'cetak/undangan_penawaran',
+            ['pengadaan1' => $pengadaan1],
+        );
+        return $pdf->download('UndanganPenawaran.pdf');
+    }
+
 
     public function nota_dinas3()
     {
@@ -248,14 +272,7 @@ class PdfController extends Controller
         return $pdf->download('UndanganNegosiasi.pdf');
     }
 
-    public function undangan_penawaran()
-    {
 
-        $pdf = PDF::loadview(
-            'cetak.undangan_penawaran',
-        );
-        return $pdf->download('UndanganPenawaran.pdf');
-    }
 
     public function undangan_penyedia()
     {
