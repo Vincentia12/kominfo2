@@ -76,36 +76,97 @@
             </table>
             <table width="800px" border="1" align="center">
                 <thead>
-                    <tr align="center">
+                    <tr>
                         <td width="30px" scope="col"> </td>
-                        <td width="50px" scope="col">2</td>
-                        <td width="50px" scope="col">buah</td>
-                        <td width="470px" scope="col">Tinta Printer Epson L-1300 -(2)hitam, cyan,magenta,yellow</td>
+                        <td width="50px" scope="col" align="center">2</td>
+                        <td width="50px" scope="col" align="center">buah</td>
+                        <td width="470px" scope="col">Tinta Printer Epson L-1300 -(2)hitam, cyan, magenta, yellow</td>
                         <td width="100px" scope="col">1.245.000,-</td>
                         <td width="100px" scope="col">2.490.000,-</td>
                     </tr>
                 </thead>
                 <thead>
-                    <tr align="center">
+                    <tr>
                         <td width="30px" scope="col"> </td>
-                        <td width="50px" scope="col">1</td>
-                        <td width="50px" scope="col">buah</td>
-                        <td width="470px" scope="col">Tinta Printer Epson L-1800 -(2)hitam,cyan,magenta,yellow,lightcyan, lightmagenta</td>
+                        <td width="50px" scope="col" align="center">1</td>
+                        <td width="50px" scope="col" align="center">buah</td>
+                        <td width="470px" scope="col">Tinta Printer Epson L-1800 -(2)hitam, cyan, magenta, yellow, lightcyan, lightmagenta</td>
                         <td width="100px" scope="col">1.257.000,-</td>
                         <td width="100px" scope="col">1.257.000,-</td>
                     </tr>
                 </thead>
                 <thead>
-                    <tr align="center">
+                    <tr>
                         <td width="30px" scope="col"> </td>
-                        <td width="50px" scope="col">1</td>
-                        <td width="50px" scope="col">buah</td>
-                        <td width="470px" scope="col">Tinta Printer Epson L-6160 -(2)hitam,cyan,magenta,yellow</td>
+                        <td width="50px" scope="col" align="center">1</td>
+                        <td width="50px" scope="col" align="center">buah</td>
+                        <td width="470px" scope="col">Tinta Printer Epson L-6160 -(2)hitam, cyan, magenta, yellow</td>
                         <td width="100px" scope="col">1.250.000,-</td>
                         <td width="100px" scope="col">1.250.000,-</td>
                     </tr>
                 </thead>
+                <thead>
+                    <tr height="25">
+                        <td width="30px" scope="col"> </td>
+                        <td width="50px" scope="col"> </td>
+                        <td width="50px" scope="col"> </td>
+                        <td width="470px" scope="col"> </td>
+                        <td width="100px" scope="col"> </td>
+                        <td width="100px" scope="col"> </td>
+                    </tr>
+                </thead>
             </table>
+            <table width="800px" border="1" align="center">
+                <thead>
+                    <tr>
+                        <th width="600px">Jumlah</th>
+                        <th width="100px" scope="col"> </th>
+                        <th width="100px" scope="col">4.997.000,-</th>
+                    </tr>
+                </thead>
+                <thead>
+                    <tr>
+                        <th width="600px">PPn 11%</th>
+                        <th width="100px" scope="col"> </th>
+                        <th width="100px" scope="col">549.670,-</th>
+                    </tr>
+                </thead>
+                <thead>
+                    <tr>
+                        <th width="600px">Jumlah Harga</th>
+                        <th width="100px" scope="col"> </th>
+                        <th width="100px" scope="col">5.546.670,-</th>
+                    </tr>
+                </thead>
+            </table>
+            <table width="800px" border="1" align="center">
+                <thead>
+                    <td>Terbilang : == Lima Juta Lima Ratus Empat Puluh Enam Ribu Enam Ratus Tujuh Puluh Rupiah==</td>
+                </thead>
+            </table>
+            <br>
+            <table border="0" align="center" font-size="2">
+                <tr align="center">
+                    <td width="280">PIHAK KEDUA</td>
+                    <td width="280">PIHAK KESATU</td>
+                </tr>
+            </table>
+            <br>
+            <br>
+            <br>
+            <table border="0" align="center" font-size="2">
+                <tr align="center">
+                    <td width="280">MANUHUTU ARMAND FX</td>
+                    <td width="280">I WAYAN RUDY ARTHA, S.Kom</td>
+                </tr>
+            </table>
+            <table border="0" align="center" font-size="2">
+                <tr align="center">
+                    <td width="280">Direktur</td>
+                    <td width="280">NIP. 19770517 200901 1 005</td>
+                </tr>
+            </table>
+            <br>
         </div>
     </div>
 </div>
