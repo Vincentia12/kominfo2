@@ -276,6 +276,118 @@
                     </tr>
                 </thead>
             </table>
+            <br>
+            <table border="0" align="center" font-size="2">
+                <tr>
+                    <td width="30">6.</td>
+                    <td width="530">Pembayaran dengan Sumber Dana APBD Provinsi Jawa Timur Tahun Anggaran 2022, dibebankan pada DPA - SKPD Dinas Komunikasi dan Informatika Provinsi Jawa Timur Tahun Anggaran 2022, Kode Rekening 2.20.02.1.01.5.1.02.01.01.0029</td>
+                </tr>
+            </table>
+            <table border="0" align="center" font-size="2">
+                <tr>
+                    <td width="30">7.</td>
+                    <td width="530">Jangka Waktu Pelaksanaan 7 (Tujuh) hari kalender, tanggal pelaksanaan yaitu Tanggal 13 September – 20 September 2022</td>
+                </tr>
+            </table>
+            <table border="0" align="center" font-size="2">
+                <tr>
+                    <td width="30">8.</td>
+                    <td width="530">Instruksi kepada PIHAK KEDUA :</td>
+                </tr>
+            </table>
+            <table border="0" align="center" font-size="2">
+                <tr>
+                    <td width="35"> </td>
+                    <td width="30">a.</td>
+                    <td width="500">Penagihan hanya dapat dilakukan setelah penyelesaian pekerjaan yang diperintahkan dalam SPK ini dan dibuktikan dengan Berita Acara Serah Terima.</td>
+                </tr>
+            </table>
+            <table border="0" align="center" font-size="2">
+                <tr>
+                    <td width="35"> </td>
+                    <td width="30">b.</td>
+                    <td width="500">Jika pekerjaan tidak dapat diselesaikan dalam jangka waktu pelaksanaan pekerjaan karena kesalahan atau kelalaian penyedia maka penyedia berkewajiban untuk membayar denda kepada PPK sebesar 1/1000 (satu per seribu) dari nilai SPK sebelum PPn setiap hari kalender keterlambatan.</td>
+                </tr>
+            </table>
+            <table border="0" align="center" font-size="2">
+                <tr>
+                    <td width="35"> </td>
+                    <td width="30">c.</td>
+                    <td width="500">Selain tunduk kepada ketentuan dalam SPK ini, penyedia berkewajiban untuk mematuhi Standar Ketentuan dan Syarat Umum SPK terlampir.</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="col-12 grid-margin stretch-card">
+    <div class="card shadow">
+        <div class="card-body">
+            <br>
+            <table border="0" align="center">
+                <tr>
+                    <td width="560">Demikian Surat Perintah Kerja ini dibuat dengan sebenarnya pada hari, tanggal dan bulan tersebut diatas dalam rangkap 4 (empat), 2 lembar dibubuhi materai yang cukup dan mempunyai kekuatan hukum yang sama.</td>
+                <tr>
+            </table>
+            <br>
+            <table border="0" align="center" font-size="2">
+                <tr align="center">
+                    <td width="280">PIHAK KEDUA</td>
+                    <td width="280">Menyetujui :</td>
+                </tr>
+            </table>
+            <table border="0" align="center" font-size="2">
+                <tr align="center">
+                    <td width="280">Penyedia Barang/Jasa</td>
+                    <td width="280">PIHAK KESATU</td>
+                </tr>
+            </table>
+            <table border="0" align="center" font-size="2">
+                <tr align="center">
+                    <td width="280">CV. PATRIA NUGRAHA</td>
+                    <td width="280">PEJABAT PEMBUAT KOMITMEN</td>
+                </tr>
+            </table>
+            <br>
+            <br>
+            <br>
+            <table border="0" align="center" font-size="2">
+                <tr align="center">
+                    <td width="280">MANUHUTU ARMAND FX</td>
+                    <td width="280">I WAYAN RUDY ARTHA, S.Kom</td>
+                </tr>
+            </table>
+            <table border="0" align="center" font-size="2">
+                <tr align="center">
+                    <td width="280">Direktur</td>
+                    <td width="280">NIP. 19770517 200901 1 005</td>
+                </tr>
+            </table>
+            <br>
+            <table border="0" align="center" font-size="2">
+                <tr align="center">
+                    <td width="560">Mengetahui :</td>
+                <tr>
+            </table>
+            <table border="0" align="center" font-size="2">
+                <tr align="center">
+                    <td width="560">KUASA PENGGUNA ANGGARAN</td>
+                <tr>
+            </table>
+            <br>
+            <br>
+            <br>
+            <table border="0" align="center" font-size="2">
+                <tr align="center">
+                    <td width="560">Dra. Ec. NIRMALA DEWI, MM</td>
+                <tr>
+            </table>
+            <table border="0" align="center" font-size="2">
+                <tr align="center">
+                    <td width="560">NIP. 19650909 199403 2 006</td>
+                <tr>
+            </table>
+            <br>
         </div>
     </div>
 </div>
