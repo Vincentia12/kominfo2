@@ -1,14 +1,5 @@
 @extends('layouts/index')
-@section('input-data', 'active')
-@section('input-data-collapse', 'collapsed')
-@section('input-sudah', 'active')
 @section('content')
-@section('judul')
-{{'Input Data / Belum Tersertifikasi'}}
-@endsection
-<!-- @section('title')
-{{'Input Data yang Belum Tersertifikasi'}}
-@endsection -->
 
 <!-- Content Row -->
 
@@ -143,6 +134,9 @@
                     <td width="280"> </td>
                 </tr>
             </table>
+            <br>
+            <br>
+            <br>
             <table border="0" align="center">
                 <tr>
                     <td width="25">2.</td>
@@ -151,6 +145,9 @@
                     <td width="280">Pejabat Pengadaan Barang/Jasa ...........</td>
                 </tr>
             </table>
+            <br>
+            <br>
+            <br>
             <table border="0" align="center">
                 <tr>
                     <td width="25">3.</td>
@@ -167,7 +164,9 @@
                     <td width="280"> </td>
                 </tr>
             </table>
-
+            <br>
+            <br>
+            <br>
         </div>
     </div>
 </div>
