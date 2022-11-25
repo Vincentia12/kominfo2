@@ -26,7 +26,7 @@
 <div class="col-12 grid-margin stretch-card">
     <div class="card shadow">
         <div class="card-body">
-            <table border="0" align="center">
+            {{-- <table border="0" align="center">
                 <tr>
                     <td>
                         <img src="{{asset('img/logo_jatim.png')}}" width="70" height="70">
@@ -46,6 +46,23 @@
                         <hr>
                     </td>
                 </tr>
+            </table> --}}
+            <table border="0" align="center">
+                <tbody>
+                    <tr>
+                        <td>
+                            <center>
+                                <font size="3"><b>DINAS KOMUNIKASI DAN INFORMATIKA</b></font><br>
+                                <font size="3"><b>PROVINSI JAWA TIMUR<b /></font><br>
+                                <font size="3"><u>NOTA DINAS<u /></font><br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="555" colspan="2">
+                            <hr>
+                        </td>
+                    </tr>
+                </tbody>
             </table>
             <table border="0" align="center">
                 <tr>

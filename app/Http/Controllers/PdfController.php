@@ -57,7 +57,7 @@ class PdfController extends Controller
             ['barang' => $barang],
             // ['pejabat' => $pejabat],
             // );
-        )->setPaper('a4', 'potrait');
+        )->setPaper('f4', 'potrait');
         return $pdf->download('NotaDinas1.pdf');
         // dd($pdf);
     }
@@ -244,12 +244,15 @@ class PdfController extends Controller
     }
 
     // BA. Penjelasan Pekerjaan
-    public function ba_pekerjaan()
+    public function ba_pekerjaan(Request $request, $id)
     {
+        $pengadaan1 = Jadwal::find($id);
 
         $pdf = PDF::loadview(
-            'cetak.ba_pekerjaan',
-        );
+            'cetak/ba_pekerjaan',
+            ['pengadaan1' => $pengadaan1],
+        )->setPaper('f4', 'potrait');
+        // )->setPaper('f4', 'legal');
         return $pdf->download('BAPekerjaan.pdf');
     }
 

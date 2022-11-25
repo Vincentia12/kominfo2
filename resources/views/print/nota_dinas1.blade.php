@@ -21,7 +21,7 @@
                             <center>
                                 <font size="3"><b>DINAS KOMUNIKASI DAN INFORMATIKA</b></font><br>
                                 <font size="3"><b>PROVINSI JAWA TIMUR<b /></font><br>
-                                <font size="3"><u>NOTA DINAS<u /></font><br>
+                            </center>
                         </td>
                     </tr>
                     <tr>
@@ -30,8 +30,10 @@
                         </td>
                     </tr>
                 </table>
-                <br>
+                {{-- <br> --}}
                 <table border="0" align="center" font-size="2">
+                    <center><font size="3"><u>NOTA DINAS</u></font><br></center>
+                    <br>
                     <tr>
                         <td width="80">Kepada</td>
                         <td>:</td>
@@ -161,8 +163,8 @@
             <table border="0" align="center">
                 <tr>
                     <td width="300"> </td>
-                    {{-- <td>NIP. 19650909 199403 2 006</td> --}}
-                    <td>NIP. {{ $pejabat->nip_kuasa_pengguna }}</td> 
+                    <td>NIP. 19650909 199403 2 006</td>
+                    {{-- <td>NIP. {{ $pejabat->nip_kuasa_pengguna }}</td>  --}}
                     <td width="50"> </td>
                 </tr>
             </table>

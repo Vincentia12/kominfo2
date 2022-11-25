@@ -162,6 +162,7 @@ Route::get('pengadaan1/print7/{id}', [PdfController::class, 'daftar_hadir'])->na
 Route::get('pengadaan1/print8/{id}', [PdfController::class, 'ba_evaluasi'])->name('pengadaan1.print8');
 Route::get('pengadaan1/print9/{id}', [PdfController::class, 'lampiran_ba_evaluasi'])->name('pengadaan1.print9');
 Route::get('pengadaan1/print10/{id}', [PdfController::class, 'undangan_penawaran'])->name('pengadaan1.print10');
+Route::get('pengadaan1/print11/{id}', [PdfController::class, 'ba_pekerjaan'])->name('pengadaan1.print11');
 Route::get('print_notadinas4', [PdfController::class, 'nota_dinas4']);
 Route::get('ba_nego', [PdfController::class, 'ba_nego']);
 Route::get('ba_pekerjaan', [PdfController::class, 'ba_pekerjaan']);
