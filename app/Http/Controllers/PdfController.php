@@ -53,15 +53,9 @@ class PdfController extends Controller
             // $pdf = word::loadview(
             'cetak/nota_dinas1',
             ['pengadaan1' => $pengadaan1],
-<<<<<<< HEAD
             ['barang'=>$barang],
-            ['pejabat' => $pejabat],
-        // );
-=======
-            ['barang' => $barang],
             // ['pejabat' => $pejabat],
-            // );
->>>>>>> 9351f422342ddb9afad1fb2790395fdefb37cf2d
+        // );
         )->setPaper('a4', 'potrait');
         return $pdf->download('NotaDinas1.pdf');
         // dd($pdf);
@@ -97,9 +91,9 @@ class PdfController extends Controller
     public function undangan_persiapan(Request $request, $id)
     {
         $pengadaan1 = Jadwal::find($id);
-        $barang = DB::table('barangs')
-            ->where('barangs.pengadaan_id', 'like', "%" . $pengadaan1->pengadaan_id . "%")
-            ->get();
+        // $barang = DB::table('barangs')
+        //     ->where('barangs.pengadaan_id', 'like', "%" . $pengadaan1->pengadaan_id . "%")
+        //     ->get();
         // $pejabat = DB::table('pejabats')
         //     ->where('id', '=', 1)
         // ->get();
@@ -113,12 +107,35 @@ class PdfController extends Controller
             // $pdf = word::loadview(
             'cetak/undangan_persiapan',
             ['pengadaan1' => $pengadaan1],
-            ['barang' => $barang],
+            // ['barang' => $barang],
             // ['pejabat' => $pejabat],
             // );
-        )->setPaper('a4', 'potrait');
+        );
         return $pdf->download('UndanganPersiapan.pdf');
         // dd($pdf);
+    }
+
+    public function pakta_integritas(Request $request, $id)
+    {
+        $pengadaan1 = Jadwal::find($id);
+        // $barang = DB::table('barangs')
+        //     ->where('barangs.pengadaan_id', 'like', "%" . $pengadaan1->pengadaan_id . "%")
+        //     ->get();
+        // $pejabat = DB::table('pejabats')
+        //     ->where('id', '=', 1)
+        // ->get();
+
+        // $pejabat = Pejabat::all();
+
+
+
+        // dd($pengadaan1, $barang );
+        // dd($pdf);
+        $pdf = PDF::loadview(
+            'cetak/pakta_integritas',
+            ['pengadaan1' => $pengadaan1],
+        );
+        return $pdf->download('PaktaIntegritas.pdf');
     }
 
     public function nota_dinas3()
@@ -206,14 +223,6 @@ class PdfController extends Controller
         return $pdf->download('DaftarHadir.pdf');
     }
 
-    public function pakta_integritas()
-    {
-
-        $pdf = PDF::loadview(
-            'cetak.pakta_integritas',
-        );
-        return $pdf->download('PaktaIntegritas.pdf');
-    }
 
     public function penetapan_penyedia()
     {

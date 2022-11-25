@@ -1,6 +1,3 @@
-@extends('layouts/index')
-@section('content')
-
 <!-- Content Row -->
 
 @if ($errors->any())
@@ -170,12 +167,3 @@
         </div>
     </div>
 </div>
-
-<div class="col-12 grid-margin stretch-card">
-    <div class="modal-footer mt-3">
-        <button type="back" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
-        <a type="submit" class="btn btn-primary " href="{{ url('/print_notadinas4')  }}">Cetak PDF <i class="fa fa-save"></i></a>
-    </div>
-</div>
-
-@endsection
