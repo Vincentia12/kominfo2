@@ -157,11 +157,10 @@ Route::get('pengadaan1/print2/{id}', [PdfController::class, 'nota_dinas2'])->nam
 Route::get('pengadaan1/print3/{id}', [PdfController::class, 'undangan_persiapan'])->name('pengadaan1.print3');
 Route::get('pengadaan1/print4/{id}', [PdfController::class, 'pakta_integritas'])->name('pengadaan1.print4');
 Route::get('print_notadinas4', [PdfController::class, 'nota_dinas4']);
-Route::get('ba_evaluasi', [PdfController::class, 'ba_evaluasi']);
 Route::get('ba_nego', [PdfController::class, 'ba_nego']);
 Route::get('ba_pekerjaan', [PdfController::class, 'ba_pekerjaan']);
 Route::get('pengadaan1/print7/{id}', [PdfController::class, 'daftar_hadir'])->name('pengadaan1.print7');
-Route::get('pakta_integritas', [PdfController::class, 'pakta_integritas']);
+Route::get('pengadaan1/print8/{id}', [PdfController::class, 'ba_evaluasi'])->name('pengadaan1.print8');
 Route::get('penetapan_penyedia', [PdfController::class, 'penetapan_penyedia']);
 Route::get('undangan_nego', [PdfController::class, 'undangan_nego']);
 Route::get('undangan_penawaran', [PdfController::class, 'undangan_penawaran']);

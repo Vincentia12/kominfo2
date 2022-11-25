@@ -1,15 +1,3 @@
-<!-- @extends('layouts/index')
-@section('input-data', 'active')
-@section('input-data-collapse', 'collapsed')
-@section('input-sudah', 'active')
-@section('content')
-@section('judul')
-{{'Input Data / Belum Tersertifikasi'}}
-@endsection -->
-<!-- @section('title')
-{{'Input Data yang Belum Tersertifikasi'}}
-@endsection -->
-
 <!-- Content Row -->
 
 @if ($errors->any())
@@ -23,7 +11,34 @@
 </div>
 @endif
 
-<div class="col-12 grid-margin stretch-card">
+<div>
+    <!-- Kop Surat -->
+    <div>
+        <table class="table" border="0" align="center">
+            <tr>
+                <td>
+                    <a href='https://postimages.org/' target='_blank'><img src='https://i.postimg.cc/J4hg9c94/logo-jatim.jpg' width="90" height="110" alt='' /></a>
+                </td>
+                <td width="40"> </td>
+                <td style="text-align: center" width="500px">
+                    <font color="black">
+                        <p align="center">
+                            <b>PEMERINTAH PROVINSI JAWA TIMUR</b>
+                            <br> DINAS KOMUNIKASI DAN INFORMATIKA
+                            <br> Jl. Ahmad Yani 242-244 Telp. (031) 8294608 Fax. (031) 8294517
+                            <br> Website : http://www.jatimprov.go.id
+                            <br> Email:kominfo@jatimprov.go.id
+                            <br> S U R A B A Y A-60235
+                        </p>
+                    </font>
+                </td>
+            </tr>
+        </table>
+        <hr>
+    </div>
+
+</div>
+<!-- <div class="col-12 grid-margin stretch-card">
     <div class="card shadow">
         <div class="card-body">
             <table border="0" align="center">
@@ -146,6 +161,4 @@
             </table>
         </div>
     </div>
-</div>
-
-<!-- @endsection -->
+</div> -->

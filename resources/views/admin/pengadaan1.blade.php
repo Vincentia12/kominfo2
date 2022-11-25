@@ -94,6 +94,7 @@
 
                                         @elseif($p1->kegiatan == 'BA. Evaluasi Dokumen Prakualifikasi')
                                         <a class="btn btn-info" href="{{ route('pengadaan1.show8',$p1->id) }}">Detail</a>
+                                        <a class="btn btn-danger " href="{{route('pengadaan1.print8',$p1->id)}}">Print</a>
 
                                         @elseif($p1->kegiatan == 'Lampiran BA. Evaluasi Dokumen Prakualifikasi')
                                         <a class="btn btn-info" href="{{ route('pengadaan1.show9',$p1->id) }}">Detail</a>
