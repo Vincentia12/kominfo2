@@ -215,7 +215,7 @@ class PdfController extends Controller
         $pdf = PDF::loadview(
             'cetak/lampiran_ba_evaluasi',
             ['pengadaan1' => $pengadaan1],
-            )->setPaper('f4', 'landscape');
+        )->setPaper('f4', 'landscape');
             return $pdf->download('lampiran_Berita_Acara_Evaluasi.pdf');
     }
 
