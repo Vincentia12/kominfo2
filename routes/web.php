@@ -165,15 +165,12 @@ Route::get('ba_nego', [PdfController::class, 'ba_nego']);
 Route::get('ba_pekerjaan', [PdfController::class, 'ba_pekerjaan']);
 Route::get('pengadaan1/print7/{id}', [PdfController::class, 'daftar_hadir'])->name('pengadaan1.print7');
 Route::get('pengadaan1/print8/{id}', [PdfController::class, 'ba_evaluasi'])->name('pengadaan1.print8');
-<<<<<<< HEAD
-=======
-=======
->>>>>>> e19ee66700599a499a6b02b656a77ce7f543bc15
->>>>>>> bb5e0fc9fcff98f62ee16f9c7886447300314993
+//9
+Route::get('pengadaan1/print10/{id}', [PdfController::class, 'undangan_penawaran'])->name('pengadaan1.print10');
 Route::get('penetapan_penyedia', [PdfController::class, 'penetapan_penyedia']);
 Route::get('undangan_nego', [PdfController::class, 'undangan_nego']);
-Route::get('undangan_penawaran', [PdfController::class, 'undangan_penawaran']);
-Route::get('undangan_penawaran', [PdfController::class, 'undangan_penyedia']);
+
+
 
 // Route::get('/input_jadwal', function () {
 //     return view('admin.input_jadwal');
