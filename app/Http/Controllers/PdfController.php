@@ -185,6 +185,29 @@ class PdfController extends Controller
         return $pdf->download('Berita_Acara_Evaluasi.pdf');
     }
 
+    public function lampiran_ba_evaluasi(Request $request, $id)
+    {
+        $pengadaan1 = Jadwal::find($id);
+        // $barang = DB::table('barangs')
+        //     ->where('barangs.pengadaan_id', 'like', "%" . $pengadaan1->pengadaan_id . "%")
+        //     ->get();
+        // $pejabat = DB::table('pejabats')
+        //     ->where('id', '=', 1)
+        // ->get();
+
+        // $pejabat = Pejabat::all();
+
+
+
+        // dd($pengadaan1, $barang );
+        // dd($pdf);
+        $pdf = PDF::loadview(
+            'cetak/lampiran_ba_evaluasi',
+            ['pengadaan1' => $pengadaan1],
+        )->setPaper('f4', 'landscape');
+        return $pdf->download('lampiran_Berita_Acara_Evaluasi.pdf');
+    }
+
 
     public function nota_dinas3()
     {

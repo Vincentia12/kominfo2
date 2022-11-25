@@ -160,6 +160,7 @@ Route::get('pengadaan1/print4/{id}', [PdfController::class, 'pakta_integritas'])
 //6
 Route::get('pengadaan1/print7/{id}', [PdfController::class, 'daftar_hadir'])->name('pengadaan1.print7');
 Route::get('pengadaan1/print8/{id}', [PdfController::class, 'ba_evaluasi'])->name('pengadaan1.print8');
+Route::get('pengadaan1/print9/{id}', [PdfController::class, 'lampiran_ba_evaluasi'])->name('pengadaan1.print9');
 Route::get('print_notadinas4', [PdfController::class, 'nota_dinas4']);
 Route::get('ba_nego', [PdfController::class, 'ba_nego']);
 Route::get('ba_pekerjaan', [PdfController::class, 'ba_pekerjaan']);

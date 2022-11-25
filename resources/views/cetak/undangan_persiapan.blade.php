@@ -178,6 +178,7 @@
         </table>
     </div>
     <br>
+    {{-- //ttd pejabat --}}
     <div style="text-align:center ;">
         <table style="text-align: center" border="0" font-size="0">
             <tr>
