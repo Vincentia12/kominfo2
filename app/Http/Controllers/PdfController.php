@@ -34,6 +34,7 @@ class PdfController extends Controller
         // dd($pengadaan1, $pejabat);
     }
 
+    // Nota Dinas1/ Nota Dinas dari KPA ke PPK
     public function nota_dinas1(Request $request, $id)
     {
         $pengadaan1 = Jadwal::find($id);
@@ -61,6 +62,7 @@ class PdfController extends Controller
         // dd($pdf);
     }
 
+    // Nota Dinas2/Nota Dinas dari PPK ke Pejabat Pengadaan + Lampiran OE (HPS)
     public function nota_dinas2(Request $request, $id)
     {
         $pengadaan1 = Jadwal::find($id);
@@ -88,6 +90,7 @@ class PdfController extends Controller
         // dd($pdf);
     }
 
+    //Surat Undangan, Pengambilan Dokumen Kualifikasi dan Dokumen Pengadaan Langsung kepada Penyedia Barang/Jasa
     public function undangan_persiapan(Request $request, $id)
     {
         $pengadaan1 = Jadwal::find($id);
@@ -115,6 +118,7 @@ class PdfController extends Controller
         // dd($pdf);
     }
 
+    //PAKTA  INTEGRITAS
     public function pakta_integritas(Request $request, $id)
     {
         $pengadaan1 = Jadwal::find($id);
@@ -138,6 +142,10 @@ class PdfController extends Controller
         return $pdf->download('PaktaIntegritas.pdf');
     }
 
+    //Surat Pernyataan Minat
+    //Pemasukan Dokumen Kualifikasi
+
+    // Daftar Hadir Pengembalian Dokumen Prakualifikasi
     public function daftar_hadir(Request $request, $id)
     {
 
@@ -162,6 +170,7 @@ class PdfController extends Controller
         return $pdf->download('Daftar_Hadir.pdf');
     }
 
+    // BA. Evaluasi Dokumen Prakualifikasi
     public function ba_evaluasi(Request $request, $id)
     {
         $pengadaan1 = Jadwal::find($id);
@@ -185,14 +194,10 @@ class PdfController extends Controller
         return $pdf->download('Berita_Acara_Evaluasi.pdf');
     }
 
-<<<<<<< HEAD
+    // Lampiran BA. Evaluasi Dokumen Prakualifikasi
     public function lampiran_ba_evaluasi(Request $request, $id)
     {
-=======
-    public function undangan_penawaran(Request $request, $id)
-    {
-
->>>>>>> 79b16f8b85c95ca64101c25b28dc20795e036a4e
+        
         $pengadaan1 = Jadwal::find($id);
         // $barang = DB::table('barangs')
         //     ->where('barangs.pengadaan_id', 'like', "%" . $pengadaan1->pengadaan_id . "%")
@@ -200,28 +205,91 @@ class PdfController extends Controller
         // $pejabat = DB::table('pejabats')
         //     ->where('id', '=', 1)
         // ->get();
-
+        
         // $pejabat = Pejabat::all();
-
-
-
+        
+        
+        
         // dd($pengadaan1, $barang );
         // dd($pdf);
         $pdf = PDF::loadview(
-<<<<<<< HEAD
             'cetak/lampiran_ba_evaluasi',
             ['pengadaan1' => $pengadaan1],
-        )->setPaper('f4', 'landscape');
-        return $pdf->download('lampiran_Berita_Acara_Evaluasi.pdf');
-=======
+            )->setPaper('f4', 'landscape');
+            return $pdf->download('lampiran_Berita_Acara_Evaluasi.pdf');
+    }
+
+    // Surat Undangan Permintaan Penawaran Harga
+    public function undangan_penawaran(Request $request, $id)
+    {
+        $pengadaan1 = Jadwal::find($id);
+        // $barang = DB::table('barangs')
+        //     ->where('barangs.pengadaan_id', 'like', "%" . $pengadaan1->pengadaan_id . "%")
+        //     ->get();
+        // $pejabat = DB::table('pejabats')
+        //     ->where('id', '=', 1)
+        // ->get();
+        
+        // $pejabat = Pejabat::all();
+        
+        
+        
+        // dd($pengadaan1, $barang );
+        // dd($pdf);
+        $pdf = PDF::loadview(
             'cetak/undangan_penawaran',
             ['pengadaan1' => $pengadaan1],
         );
         return $pdf->download('UndanganPenawaran.pdf');
->>>>>>> 79b16f8b85c95ca64101c25b28dc20795e036a4e
     }
 
+    // BA. Penjelasan Pekerjaan
+    public function ba_pekerjaan()
+    {
 
+        $pdf = PDF::loadview(
+            'cetak.ba_pekerjaan',
+        );
+        return $pdf->download('BAPekerjaan.pdf');
+    }
+
+    // Pemasukan Penawaran
+
+    // BA. Pembukaan Penawaran
+    public function ba_penawaran()
+    {
+
+        $pdf = PDF::loadview(
+            'cetak.ba_penawaran',
+        );
+        return $pdf->download('BAPenawaran.pdf');
+    }
+
+    // Surat Undangan Klarifikasi/Negosiasi
+    public function undangan_nego()
+    {
+
+        $pdf = PDF::loadview(
+            'cetak.undangan_nego',
+        );
+        return $pdf->download('UndanganNegosiasi.pdf');
+    }
+
+    // BA. Klarifikasi/Negosiasi
+    public function ba_nego()
+    {
+
+        $pdf = PDF::loadview(
+            'cetak.ba_nego',
+        );
+        return $pdf->download('BANego.pdf');
+    }
+
+    // Lampiran BA. Klarifikasi/Negosiasi
+
+    // BA. Hasil Pengadaan Langsung
+
+    // Nota Dinas3/ Nota Dinas dari Pejabat Pengadaan ke PPK
     public function nota_dinas3()
     {
 
@@ -235,37 +303,7 @@ class PdfController extends Controller
         return $pdf->download('NotaDinas4.pdf');
     }
 
-
-    public function ba_nego()
-    {
-
-        $pdf = PDF::loadview(
-            'cetak.ba_nego',
-        );
-        return $pdf->download('BANego.pdf');
-    }
-
-    public function ba_pekerjaan()
-    {
-
-        $pdf = PDF::loadview(
-            'cetak.ba_pekerjaan',
-        );
-        return $pdf->download('BAPekerjaan.pdf');
-    }
-
-    public function ba_penawaran()
-    {
-
-        $pdf = PDF::loadview(
-            'cetak.ba_penawaran',
-        );
-        return $pdf->download('BAPenawaran.pdf');
-    }
-
-
-
-
+    // Penetapan Penyedia Jasa
     public function penetapan_penyedia()
     {
 
@@ -275,17 +313,7 @@ class PdfController extends Controller
         return $pdf->download('PenetapanPenyedia.pdf');
     }
 
-    public function undangan_nego()
-    {
-
-        $pdf = PDF::loadview(
-            'cetak.undangan_nego',
-        );
-        return $pdf->download('UndanganNegosiasi.pdf');
-    }
-
-
-
+    // Penunjukan Penyedia Barang/Jasa
     public function undangan_penyedia()
     {
 
@@ -294,4 +322,15 @@ class PdfController extends Controller
         );
         return $pdf->download('UndanganPenyedia.pdf');
     }
+
+    // Surat Perintah Kerja
+
+    // Surat Perintah Mulai Kerja (SPMK)
+
+    // BA. Serah Terima Hasil Pekerjaan
+
+    // BA. Hasil Pemeriksaan Administratif
+
+    // BA. Hasil Pembayaran
+    
 }
