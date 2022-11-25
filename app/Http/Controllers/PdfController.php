@@ -53,9 +53,9 @@ class PdfController extends Controller
             // $pdf = word::loadview(
             'cetak/nota_dinas1',
             ['pengadaan1' => $pengadaan1],
-            ['barang'=>$barang],
+            ['barang' => $barang],
             // ['pejabat' => $pejabat],
-        // );
+            // );
         )->setPaper('a4', 'potrait');
         return $pdf->download('NotaDinas1.pdf');
         // dd($pdf);
@@ -138,6 +138,30 @@ class PdfController extends Controller
         return $pdf->download('PaktaIntegritas.pdf');
     }
 
+    public function daftar_hadir(Request $request, $id)
+    {
+
+        $pengadaan1 = Jadwal::find($id);
+        // $barang = DB::table('barangs')
+        //     ->where('barangs.pengadaan_id', 'like', "%" . $pengadaan1->pengadaan_id . "%")
+        //     ->get();
+        // $pejabat = DB::table('pejabats')
+        //     ->where('id', '=', 1)
+        // ->get();
+
+        // $pejabat = Pejabat::all();
+
+
+
+        // dd($pengadaan1, $barang );
+        // dd($pdf);
+        $pdf = PDF::loadview(
+            'cetak/daftar_hadir',
+            ['pengadaan1' => $pengadaan1],
+        );
+        return $pdf->download('Daftar_Hadir.pdf');
+    }
+
     public function nota_dinas3()
     {
 
@@ -214,14 +238,7 @@ class PdfController extends Controller
         return $pdf->download('BAPenawaran.pdf');
     }
 
-    public function daftar_hadir()
-    {
 
-        $pdf = PDF::loadview(
-            'cetak.daftar_hadir',
-        );
-        return $pdf->download('DaftarHadir.pdf');
-    }
 
 
     public function penetapan_penyedia()
