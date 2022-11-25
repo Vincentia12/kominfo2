@@ -164,10 +164,12 @@ Route::get('pengadaan1/print9/{id}', [PdfController::class, 'lampiran_ba_evaluas
 Route::get('print_notadinas4', [PdfController::class, 'nota_dinas4']);
 Route::get('ba_nego', [PdfController::class, 'ba_nego']);
 Route::get('ba_pekerjaan', [PdfController::class, 'ba_pekerjaan']);
+Route::get('pengadaan1/print7/{id}', [PdfController::class, 'daftar_hadir'])->name('pengadaan1.print7');
+Route::get('pengadaan1/print8/{id}', [PdfController::class, 'ba_evaluasi'])->name('pengadaan1.print8');
 Route::get('penetapan_penyedia', [PdfController::class, 'penetapan_penyedia']);
 Route::get('undangan_nego', [PdfController::class, 'undangan_nego']);
-Route::get('undangan_penawaran', [PdfController::class, 'undangan_penawaran']);
-Route::get('undangan_penawaran', [PdfController::class, 'undangan_penyedia']);
+
+
 
 // Route::get('/input_jadwal', function () {
 //     return view('admin.input_jadwal');
@@ -298,6 +300,15 @@ Route::get('/ba_serah_terima', function () {
 Route::get('/lampiran_ba_serah_terima', function () {
     return view('print.lampiran_ba_serah_terima');
 });
+//21
+Route::get('/lap_proses_pengadaan', function () {
+    return view('print.lap_proses_pengadaan');
+});
+//22
+Route::get('/lampiran_lap_proses_peng', function () {
+    return view('print.lampiran_lap_proses_peng');
+});
+
 // Route::resource('/getusr',[App\Http\Controllers\AdminController::class, 'index']);
 
 // Route::get('/editpejabat/{}')
