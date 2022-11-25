@@ -14,7 +14,7 @@
 <div >
     {{-- //kopsurat --}}
     <div >
-        <table class="table" border="1" align="center">
+        <table class="table" border="0" align="center">
             <tr>
                 <td >
                     <a href='https://postimages.org/' target='_blank'><img src='https://i.postimg.cc/J4hg9c94/logo-jatim.jpg' width="90" height="110" alt=''/></a>
@@ -54,7 +54,7 @@
     </div>
     {{-- <br> --}}
     <div style="text-align:center ;">
-        <table class="table" border="1" align="center" font-size="1">
+        <table class="table" border="0" align="center" font-size="1">
             <tr>
                 <td width="80">Nomor</td>
                 <td>:</td>
@@ -91,7 +91,7 @@
     {{-- <br> --}}
     {{-- <div > --}}
     <div style="text-align:center ; ">
-        <table class="table" border="1" align="center" font-size="1">
+        <table class="table" border="0" align="center" font-size="1">
             <tr>
                 <td width="8"></td>
                 <td style="text-align: left ;text-align: justify; text-indent: 45px;">Diberitahukan bahwa SKPD Dinas Komunikasi Dan Informatika Provinsi Jawa Timur akan melaksanakan Pengadaan Langsung, untuk :</td>
@@ -101,7 +101,7 @@
     </div>
     {{-- <br> --}}
     <div style="text-align:center ;">
-        <table class="table" border="1" align="center" font-size="1">
+        <table class="table" border="0" align="center" font-size="1">
             <tr>
                 <td width="8"></td>
                 <td width="100">Paket Pekerjaan</td>
@@ -137,7 +137,7 @@
         </table>
     </div>
     <div style="text-align:center ;">
-        <table class="table" border="1" align="center" font-size="1">
+        <table class="table" border="0" align="center" font-size="1">
             <tr>
                 <td width="8"></td>
                 <td style="text-align: left ; text-align: justify; text-indent: 45px;">Apabila saudara berminat untuk mengikuti paket pengadaan langsung tersebut diharap untuk menyerahkan formulir kualifikasi sebagaimana terlampir yang diisi dengan jelas dan benar, Formulir Kualifikasi tersebut paling lambat diserahkan pada :</td>
@@ -145,7 +145,7 @@
         </table>
     </div>
     <div style="text-align:center ;">
-        <table class="table" border="1" align="center" font-size="1">
+        <table class="table" border="0" align="center" font-size="1">
             <tr>
                 <td width="8"></td>
                 <td width="100">Hari/Tanggal</td>
@@ -166,7 +166,7 @@
                 <td >Ruang Argopuro lt.II Dinas Komunikasi Dan Informatika Provinsi Jawa Timur Jl. Ahmad Yani 242 - 244 Surabaya</td>
             </tr>
         </table>
-        <table border="1" align="center" font-size="1">
+        <table border="0" align="center" font-size="1">
             <tr>
                 <td width="8"></td>
                 <td style="text-align: left ; text-align: justify; text-indent: 45px;">Apabila sampai dengan jam tersebut diatas saudara tidak menyampaikan formulir prakualifikasi tersebut maka dianggap tidak berminat mengikuti pengadaan langsung. Apabila perusahaan saudara dianggap mampu maka akan diundang mengikuti proses pengadaan langsung untuk pekerjaan tersebut diatas.</td>
@@ -177,13 +177,16 @@
             </tr>
         </table>
     </div>
-    <div>
-        <table style="text-align: center" border="1" font-size="0">
+    <br>
+    <div style="text-align:center ;">
+        <table style="text-align: center" border="0" font-size="0">
             <tr>
                 <td width="300"> </td>
                 <td>PEJABAT PENGADAAN</td>
                 {{-- <td width="50"> </td> --}}
             </tr>    
+            <br>
+            <br>
             <br>
             <br>
             <br>
