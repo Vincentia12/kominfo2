@@ -54,15 +54,15 @@
     </div>
     {{-- <br> --}}
     <div style="text-align:center ;">
-        <table class="table" border="0" align="center" font-size="1">
+        <table class="table" border="1" align="center" font-size="1">
             <tr>
                 <td width="80">Nomor</td>
                 <td>:</td>
                 <!-- diubah -->
                 <td width="175">020/{{$pengadaan1->nomor}}/114.6/2022</td>
-                <td>Yth. Sdr. </td>
+                <td width="50">Yth. Sdr. </td>
                 <!-- diubah -->
-                <td>{{$pengadaan1->pengadaan->pelaksana->jabatan_pelaksana}} {{$pengadaan1->pengadaan->pelaksana->pt_pelaksana}}</td>
+                <td width="175">{{$pengadaan1->pengadaan->pelaksana->jabatan_pelaksana}} {{$pengadaan1->pengadaan->pelaksana->pt_pelaksana}}</td>
             </tr>
             <tr>
                 <td width="80">Sifat</td>
