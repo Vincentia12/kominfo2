@@ -185,14 +185,8 @@ class PdfController extends Controller
         return $pdf->download('Berita_Acara_Evaluasi.pdf');
     }
 
-<<<<<<< HEAD
     public function lampiran_ba_evaluasi(Request $request, $id)
     {
-=======
-    public function undangan_penawaran(Request $request, $id)
-    {
-
->>>>>>> 79b16f8b85c95ca64101c25b28dc20795e036a4e
         $pengadaan1 = Jadwal::find($id);
         // $barang = DB::table('barangs')
         //     ->where('barangs.pengadaan_id', 'like', "%" . $pengadaan1->pengadaan_id . "%")
@@ -208,17 +202,33 @@ class PdfController extends Controller
         // dd($pengadaan1, $barang );
         // dd($pdf);
         $pdf = PDF::loadview(
-<<<<<<< HEAD
             'cetak/lampiran_ba_evaluasi',
             ['pengadaan1' => $pengadaan1],
         )->setPaper('f4', 'landscape');
         return $pdf->download('lampiran_Berita_Acara_Evaluasi.pdf');
-=======
+    }
+
+    public function undangan_penawaran(Request $request, $id)
+    {
+        $pengadaan1 = Jadwal::find($id);
+        // $barang = DB::table('barangs')
+        //     ->where('barangs.pengadaan_id', 'like', "%" . $pengadaan1->pengadaan_id . "%")
+        //     ->get();
+        // $pejabat = DB::table('pejabats')
+        //     ->where('id', '=', 1)
+        // ->get();
+
+        // $pejabat = Pejabat::all();
+
+
+
+        // dd($pengadaan1, $barang );
+        // dd($pdf);
+        $pdf = PDF::loadview(
             'cetak/undangan_penawaran',
             ['pengadaan1' => $pengadaan1],
         );
         return $pdf->download('UndanganPenawaran.pdf');
->>>>>>> 79b16f8b85c95ca64101c25b28dc20795e036a4e
     }
 
 
