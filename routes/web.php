@@ -286,7 +286,18 @@ Route::get('/evaluasi_dok', function () {
 Route::get('/surat_perintah_kerja', function () {
     return view('print.surat_perintah_kerja');
 });
-
+//18
+Route::get('/surat_perintah_mulai_kerja', function () {
+    return view('print.surat_perintah_mulai_kerja');
+});
+//19
+Route::get('/ba_serah_terima', function () {
+    return view('print.ba_serah_terima');
+});
+//20
+Route::get('/lampiran_ba_serah_terima', function () {
+    return view('print.lampiran_ba_serah_terima');
+});
 // Route::resource('/getusr',[App\Http\Controllers\AdminController::class, 'index']);
 
 // Route::get('/editpejabat/{}')
