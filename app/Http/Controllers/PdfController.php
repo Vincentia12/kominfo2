@@ -197,7 +197,7 @@ class PdfController extends Controller
     // Lampiran BA. Evaluasi Dokumen Prakualifikasi
     public function lampiran_ba_evaluasi(Request $request, $id)
     {
-        
+
         $pengadaan1 = Jadwal::find($id);
         // $barang = DB::table('barangs')
         //     ->where('barangs.pengadaan_id', 'like', "%" . $pengadaan1->pengadaan_id . "%")
@@ -205,18 +205,18 @@ class PdfController extends Controller
         // $pejabat = DB::table('pejabats')
         //     ->where('id', '=', 1)
         // ->get();
-        
+
         // $pejabat = Pejabat::all();
-        
-        
-        
+
+
+
         // dd($pengadaan1, $barang );
         // dd($pdf);
         $pdf = PDF::loadview(
             'cetak/lampiran_ba_evaluasi',
             ['pengadaan1' => $pengadaan1],
         )->setPaper('f4', 'landscape');
-            return $pdf->download('lampiran_Berita_Acara_Evaluasi.pdf');
+        return $pdf->download('lampiran_Berita_Acara_Evaluasi.pdf');
     }
 
     // Surat Undangan Permintaan Penawaran Harga
@@ -229,11 +229,11 @@ class PdfController extends Controller
         // $pejabat = DB::table('pejabats')
         //     ->where('id', '=', 1)
         // ->get();
-        
+
         // $pejabat = Pejabat::all();
-        
-        
-        
+
+
+
         // dd($pengadaan1, $barang );
         // dd($pdf);
         $pdf = PDF::loadview(
@@ -269,13 +269,17 @@ class PdfController extends Controller
     }
 
     // Surat Undangan Klarifikasi/Negosiasi
-    public function undangan_nego()
+    public function undangan_nego(Request $request, $id)
     {
 
+        $pengadaan1 = Jadwal::find($id);
+
         $pdf = PDF::loadview(
-            'cetak.undangan_nego',
-        );
-        return $pdf->download('UndanganNegosiasi.pdf');
+            'cetak/undangan_nego',
+            ['pengadaan1' => $pengadaan1],
+        )->setPaper('f4', 'potrait');
+        // )->setPaper('f4', 'legal');
+        return $pdf->download('UndanganNego.pdf');
     }
 
     // BA. Klarifikasi/Negosiasi
@@ -335,5 +339,5 @@ class PdfController extends Controller
     // BA. Hasil Pemeriksaan Administratif
 
     // BA. Hasil Pembayaran
-    
+
 }
