@@ -36,12 +36,12 @@
                 <tr>
                     <td width="100">Nomor</td>
                     <td width="30">:</td>
-                    <td width="430">020/ 654.18/114.6/2022</td>
+                    <td width="430">020/654.18/114.6/2022</td>
                 <tr>
                 <tr>
                     <td width="100">Tanggal</td>
                     <td width="30">:</td>
-                    <td width="430">20 September 2022</td>
+                    <td width="430">{{ $pengadaan1->tanggal}}</td>
                 <tr>
             </table>
             <br>

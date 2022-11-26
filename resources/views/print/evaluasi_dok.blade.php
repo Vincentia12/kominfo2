@@ -38,7 +38,7 @@
                 <tr>
                     <td width="120">PEKERJAAN</td>
                     <td width="30">:</td>
-                    <td width="750">Belanja Alat/Bahan Kapasitas Kelembagaan Statistik Sektoral Toner Printer</td>
+                    <td width="750">{{ $pengadaan1->pengadaan->jenis_pengadaan}}</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
@@ -52,11 +52,34 @@
                 <tr>
                     <td width="120">TANGGAL</td>
                     <td width="30">:</td>
-                    <td width="750">18 Agustus 2022</td>
+                    <td width="750">{{ $pengadaan1->tanggal}}</td>
                 </tr>
             </table>
             <br>
-            
+            <table width="800px" border="1" align="center">
+                <thead>
+                    <tr align="center">
+                        <th width="30px" scope="col">NO</th>
+                        <th width="400px" scope="col">Nama Perusahaan</th>
+                        <th width="100px" scope="col">Surat Pernyataan Minat</th>
+                        <th width="70px" scope="col">Pakta Integritas</th>
+                        <th width="100px" scope="col"></th>
+                        <th width="100px" scope="col"></th>
+                    </tr>
+                </thead>
+            </table>
+            <table width="800px" border="1" align="center">
+                <thead>
+                    <tr height="25">
+                        <td width="30px" scope="col"> </td>
+                        <td width="400px" scope="col"> </td>
+                        <td width="100px" scope="col"> </td>
+                        <td width="70px" scope="col"> </td>
+                        <td width="100px" scope="col"> </td>
+                        <td width="100px" scope="col"> </td>
+                    </tr>
+                </thead>
+            </table>
         </div>
     </div>
 </div>

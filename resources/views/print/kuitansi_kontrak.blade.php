@@ -60,7 +60,7 @@
                     <td width="100"> </td>
                     <td width="150">Nomor Bukti</td>
                     <td width="10">:</td>
-                    <td width="310">020/654.14/114.6/2022</td>
+                    <td width="310">020/{{$pengadaan1->nomor}}/114.6/2022</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
@@ -106,7 +106,7 @@
                 <tr>
                     <td width="150">Untuk Pembayaran</td>
                     <td width="10">:</td>
-                    <td width="390">Belanja Alat/Bahan Kapasitas Kelembagaan Statistik Sektoral Toner Printer</td>
+                    <td width="390">{{ $pengadaan1->pengadaan->jenis_pengadaan}}</td>
                 </tr>
             </table>
             <br>
@@ -242,7 +242,7 @@
             <table border="0" align="center" font-size="2">
                 <tr align="center">
                     <td width="280"> </td>
-                    <td width="280">Surabaya, 9 September 2022</td>
+                    <td width="280">Surabaya, {{ $pengadaan1->tanggal}}</td>
                 </tr>
             </table>
             <br>
@@ -273,19 +273,10 @@
 </div>
 
 <div class="col-12 grid-margin stretch-card">
-<<<<<<< HEAD
     <div class="modal-footer mt-3">
         <button type="back" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
         <a type="submit" class="btn btn-primary " href="{{ url('/print_notadinas4')  }}">Cetak PDF <i class="fa fa-save"></i></a>
     </div>
 </div>
 
-=======
-    <div class="card shadow">
-        <div class="card-body">
-        
-        </div>
-    </div>
-</div>
->>>>>>> 8d92791253f559d59d569976e89755838d055564
 @endsection

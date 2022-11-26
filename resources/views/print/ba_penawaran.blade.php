@@ -66,14 +66,14 @@
                     </td>
                     <td width="150">
                         <center>
-                            <font size="2">020/654.7 /114.6/2022</font>
+                            <font size="2">020/{{$pengadaan1->nomor}}/114.6/2022</font>
                     </td>
                 <tr>
             </table>
             <br>
             <table border="0" align="center" font-size="2">
                 <tr>
-                    <td width="560">Pada hari ini Jum’at, Tanggal Dua Puluh Enam, Bulan Agustus Tahun Dua Ribu Dua Puluh Dua kami yang bertanda tangan dibawah ini adalah Pejabat Pengadaan di Lingkungan Dinas Komunikasi Dan Informatika Provinsi Jawa Timur yang dibentuk dengan Keputusan Kepala Dinas Komunikasi Dan Informatika Provinsi Jawa Timur selaku Pengguna Anggaran tanggal 3 Januari 2022 Nomor : 188/19/114.1/2022, melaksanakan Pembukaan Penawaran untuk pelaksanaan Belanja Belanja Alat/Bahan Kapasitas Kelembagaan Statistik Sektoral Toner Printer , dibiayai dari dana APBD Tahun Anggaran 2022 pada DPA Dinas Komunikasi dan Informatika Provinsi Jawa Timur Kode Rekening 2.20.02.1.01.5.1.02.01.01.0029 dengan Harga Perkiraan Sendiri (HPS) sebesar Rp. 5.688.750,- (Lima Juta Enam Ratus Delapan Puluh Delapan Ribu Tujuh Ratus Lima Puluh Rupiah).</td>
+                    <td width="560">Pada hari ini Jum’at, Tanggal Dua Puluh Enam, Bulan Agustus Tahun Dua Ribu Dua Puluh Dua kami yang bertanda tangan dibawah ini adalah Pejabat Pengadaan di Lingkungan Dinas Komunikasi Dan Informatika Provinsi Jawa Timur yang dibentuk dengan Keputusan Kepala Dinas Komunikasi Dan Informatika Provinsi Jawa Timur selaku Pengguna Anggaran tanggal {{ $pengadaan1->tanggal}} Nomor : 188/19/114.1/2022, melaksanakan Pembukaan Penawaran untuk pelaksanaan Belanja Belanja Alat/Bahan Kapasitas Kelembagaan Statistik Sektoral Toner Printer , dibiayai dari dana APBD Tahun Anggaran 2022 pada DPA Dinas Komunikasi dan Informatika Provinsi Jawa Timur Kode Rekening 2.20.02.1.01.5.1.02.01.01.0029 dengan Harga Perkiraan Sendiri (HPS) sebesar Rp. 5.688.750,- (Lima Juta Enam Ratus Delapan Puluh Delapan Ribu Tujuh Ratus Lima Puluh Rupiah).</td>
                 </tr>
             </table>
             <br>

@@ -182,7 +182,7 @@
             <table border="0" align="center">
                 <tr>
                     <td width="300"> </td>
-                    <td>Surabaya, 20 September 2022</td>
+                    <td>Surabaya, {{ $pengadaan1->tanggal}}</td>
                     <td width="50"> </td>
                 </tr>
             </table>
