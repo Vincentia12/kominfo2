@@ -166,8 +166,8 @@ Route::get('pengadaan1/print11/{id}', [PdfController::class, 'ba_pekerjaan'])->n
 //12
 //13
 Route::get('pengadaan1/print14/{id}', [PdfController::class, 'undangan_nego'])->name('pengadaan1.print14');
+Route::get('pengadaan1/print15/{id}', [PdfController::class, 'ba_nego'])->name('pengadaan1.print15');
 Route::get('print_notadinas4', [PdfController::class, 'nota_dinas4']);
-Route::get('ba_nego', [PdfController::class, 'ba_nego']);
 Route::get('ba_pekerjaan', [PdfController::class, 'ba_pekerjaan']);
 Route::get('penetapan_penyedia', [PdfController::class, 'penetapan_penyedia']);
 

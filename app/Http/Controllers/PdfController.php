@@ -283,13 +283,17 @@ class PdfController extends Controller
     }
 
     // BA. Klarifikasi/Negosiasi
-    public function ba_nego()
+    public function ba_nego(Request $request, $id)
     {
 
+        $pengadaan1 = Jadwal::find($id);
+
         $pdf = PDF::loadview(
-            'cetak.ba_nego',
-        );
-        return $pdf->download('BANego.pdf');
+            'cetak/ba_nego',
+            ['pengadaan1' => $pengadaan1],
+        )->setPaper('f4', 'potrait');
+        // )->setPaper('f4', 'legal');
+        return $pdf->download('BA_Nego.pdf');
     }
 
     // Lampiran BA. Klarifikasi/Negosiasi

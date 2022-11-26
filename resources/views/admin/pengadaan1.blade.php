@@ -120,6 +120,7 @@
 
                                         @elseif($p1->kegiatan == 'BA. Klarifikasi/Negosiasi')
                                         <a class="btn btn-info" href="{{ route('pengadaan1.show15',$p1->id) }}">Detail</a>
+                                        <a class="btn btn-danger " href="{{route('pengadaan1.print15',$p1->id)}}">Print</a>
 
                                         @elseif($p1->kegiatan == 'Lampiran BA. Klarifikasi/Negosiasi')
                                         <a class="btn btn-info" href="{{ route('pengadaan1.show16',$p1->id) }}">Detail</a>
