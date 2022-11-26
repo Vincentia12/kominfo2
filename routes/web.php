@@ -311,6 +311,18 @@ Route::get('/lap_proses_pengadaan', function () {
 Route::get('/lampiran_lap_proses_peng', function () {
     return view('print.lampiran_lap_proses_peng');
 });
+//23
+Route::get('/ba_peny_barang', function () {
+    return view('print.ba_peny_barang');
+});
+//24
+Route::get('/lampiran_ba_barang', function () {
+    return view('print.lampiran_ba_barang');
+});
+//25
+Route::get('/ba_pembayaran', function () {
+    return view('print.ba_pembayaran');
+});
 
 // Route::resource('/getusr',[App\Http\Controllers\AdminController::class, 'index']);
 
