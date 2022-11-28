@@ -303,26 +303,30 @@ class PdfController extends Controller
     // BA. Hasil Pengadaan Langsung
 
     // Nota Dinas3/ Nota Dinas dari Pejabat Pengadaan ke PPK
-    public function nota_dinas3()
+    public function nota_dinas3(Request $request, $id)
     {
 
+        $pengadaan1 = Jadwal::find($id);
+
         $pdf = PDF::loadview(
-            // $pdf = word::loadview(
-            'cetak.nota_dinas4',
-            // ['notadinas1' => $notadinas1],
-            // ['pengadaan' => $pengadaan],
-            // ['pejabat' => $pejabat]
-        );
-        return $pdf->download('NotaDinas4.pdf');
+            'cetak/nota_dinas3',
+            ['pengadaan1' => $pengadaan1],
+        )->setPaper('f4', 'potrait');
+        // )->setPaper('f4', 'legal');
+        return $pdf->download('NotaDinas3.pdf');
     }
 
     // Penetapan Penyedia Jasa
-    public function penetapan_penyedia()
+    public function penetapan_penyedia(Request $request, $id)
     {
 
+        $pengadaan1 = Jadwal::find($id);
+
         $pdf = PDF::loadview(
-            'cetak.penetapan_penyedia',
-        );
+            'cetak/penetapan_penyedia',
+            ['pengadaan1' => $pengadaan1],
+        )->setPaper('f4', 'potrait');
+        // )->setPaper('f4', 'legal');
         return $pdf->download('PenetapanPenyedia.pdf');
     }
 

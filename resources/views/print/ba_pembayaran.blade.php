@@ -31,7 +31,7 @@
                     <td width="560"><center><b><u>BERITA ACARA PEMBAYARAN</u></b></td>
                 <tr>
                 <tr>
-                    <td width="560"><center>Nomor : 020/ 654.18/114.6/2022</td>
+                    <td width="560"><center>Nomor : 020/{{$pengadaan1->nomor}}/114.6/2022</td>
                 <tr>
             </table>
             <br>
@@ -210,7 +210,7 @@
                     <td width="20">f.</td>
                     <td width="100">Kwitansi</td>
                     <td width="10">:</td>
-                    <td width="410">Nomor : 020/ 654.14/114.6/2022</td>
+                    <td width="410">Nomor : 020/{{$pengadaan1->nomor}}/114.6/2022</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
@@ -219,7 +219,7 @@
                     <td width="20"> </td>
                     <td width="100">Kontrak</td>
                     <td width="10"> </td>
-                    <td width="410">Tanggal : 9 September 2022</td>
+                    <td width="410">Tanggal : {{ $pengadaan1->tanggal}}</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">

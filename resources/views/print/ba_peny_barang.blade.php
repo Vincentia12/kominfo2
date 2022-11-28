@@ -30,8 +30,12 @@
                 <tr>
                     <td width="560"><center><b><u>BERITA ACARA PENYERAHAN BARANG/JASA</u></b></td>
                 <tr>
-                <tr>
-                    <td width="560"><center>Nomor : 020/                            /114.6/2022</td>
+            </table>
+            <table border="0" align="center">
+                <tr align="center">
+                    <td width="280" text-align="right">Nomor : 020/</td>
+                    <td width="10" text-align="left"> </td>
+                    <td width="270" text-align="left">/114.6/2022</td>
                 <tr>
             </table>
             <br>
@@ -118,7 +122,7 @@
             <table border="0" align="center" font-size="2">
                 <tr>
                     <td width="15"> </td>
-                    <td width="550">Belanja Alat/Bahan Kapasitas Kelembagaan Statistik Sektoral Tiner Printer hasil pekerjaan sesuai dengan Kwitansi Kontrak nomor : 020/654.14/114.6/2022, Tanggal  9 September  2022;</td>
+                    <td width="550">Belanja Alat/Bahan Kapasitas Kelembagaan Statistik Sektoral Tiner Printer hasil pekerjaan sesuai dengan Kwitansi Kontrak nomor : 020/{{$pengadaan1->nomor}}/114.6/2022, Tanggal  {{ $pengadaan1->tanggal}};</td>
                 </tr>
             </table>
             <br>

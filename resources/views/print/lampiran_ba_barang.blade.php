@@ -34,14 +34,18 @@
             </table>
             <table border="0" align="center">
                 <tr>
-                    <td width="100">Nomor</td>
+                    <td width="110">Nomor</td>
                     <td width="30">:</td>
-                    <td width="430">020/                  /114.6/2022</td>
+                    <td width="30">020/</td>
+                    <td width="30"> </td>
+                    <td width="360">/114.6/2022</td>
                 <tr>
+            </table>
+            <table border="0" align="center">
                 <tr>
-                    <td width="100">Tanggal</td>
+                    <td width="110">Tanggal</td>
                     <td width="30">:</td>
-                    <td width="430">20 September 2022</td>
+                    <td width="430">{{ $pengadaan1->tanggal}}</td>
                 <tr>
             </table>
             <br>
