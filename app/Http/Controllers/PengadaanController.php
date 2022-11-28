@@ -640,9 +640,25 @@ class PengadaanController extends Controller
     }
 
     // Penunjukan Penyedia Barang/Jasa
-    public function show20(Pengadaan $pengadaan) // public function show(Request $request,$id)
+    public function show20($id) // public function show(Request $request,$id)
     {
-        return view('print.undangan_penyedia', compact('pengadaan'));
+        $pengadaan1 = Jadwal::find($id);
+        $barang = DB::table('barangs')
+            ->where('barangs.pengadaan_id', 'like', "%" . $pengadaan1->pengadaan_id . "%")
+            ->get();
+        $pejabat = DB::table('pejabats')
+            ->where('id', '=', 1)
+            ->get();
+
+        // $pejabat = Pejabat::all();
+
+
+        return view(
+            'print.undangan_penyedia',
+            ['pengadaan1' => $pengadaan1],
+            ['barang' => $barang],
+            ['pejabat' => $pejabat],
+        );
     }
 
     // Surat Perintah Kerja

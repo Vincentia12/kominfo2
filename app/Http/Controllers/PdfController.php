@@ -331,12 +331,16 @@ class PdfController extends Controller
     }
 
     // Penunjukan Penyedia Barang/Jasa
-    public function undangan_penyedia()
+    public function undangan_penyedia(Request $request, $id)
     {
 
+        $pengadaan1 = Jadwal::find($id);
+
         $pdf = PDF::loadview(
-            'cetak.undangan_penyedia',
-        );
+            'cetak/undangan_penyedia',
+            ['pengadaan1' => $pengadaan1],
+        )->setPaper('f4', 'potrait');
+        // )->setPaper('f4', 'legal');
         return $pdf->download('UndanganPenyedia.pdf');
     }
 
@@ -364,6 +368,18 @@ class PdfController extends Controller
         return $pdf->download('surat perintah kerja.pdf');
     }
     // Surat Perintah Mulai Kerja (SPMK)
+    public function surat_perintah_mulai_kerja(Request $request, $id)
+    {
+
+        $pengadaan1 = Jadwal::find($id);
+
+        $pdf = PDF::loadview(
+            'cetak/surat_perintah_mulai_kerja',
+            ['pengadaan1' => $pengadaan1],
+        )->setPaper('f4', 'potrait');
+        // )->setPaper('f4', 'legal');
+        return $pdf->download('SPMK.pdf');
+    }
 
     // BA. Serah Terima Hasil Pekerjaan
 
