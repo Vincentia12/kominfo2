@@ -36,12 +36,12 @@
                 <tr>
                     <td width="100">Nomor</td>
                     <td width="30">:</td>
-                    <td width="430">020/654.18/114.6/2022</td>
+                    <td width="430">020/{{$pengadaan1->nomor}}/114.6/2022</td>
                 <tr>
                 <tr>
                     <td width="100">Tanggal</td>
                     <td width="30">:</td>
-                    <td width="430">{{ $pengadaan1->tanggal}}</td>
+                    <td width="430">{{$pengadaan1->tanggal}}</td>
                 <tr>
             </table>
             <br>
@@ -81,14 +81,14 @@
                 <thead>
                     <tr height="25">
                         <td width="30px" scope="col"> </td>
-                        <td width="400px" scope="col">Belanja Alat/Bahan Kapasitas Kelembagaan Statistik Sektoral Toner Printer</td>
+                        <td width="400px" scope="col">{{$pengadaan1->pengadaan->jenis_pengadaan}}</td>
                         <td width="100px" scope="col"> </td>
                         <td width="70px" scope="col"> </td>
                         <td width="100px" scope="col"> </td>
                         <td width="100px" scope="col"> </td>
                     </tr>
                 </thead>
-                <thead>
+                {{--  <thead>
                     <tr height="25">
                         <td width="30px" scope="col" align="center">1.</td>
                         <td width="400px" scope="col">Toner Printer</td>
@@ -97,18 +97,19 @@
                         <td width="100px" scope="col"> </td>
                         <td width="100px" scope="col"> </td>
                     </tr>
-                </thead>
+                </thead>  --}}
                 <thead>
                     <tr height="25">
                         <td width="31px" scope="col" align="center"> </td>
-                        <td width="400px" scope="col">Tinta Printer Epson L-1300-(2)hitam, cyan, magenta, yellow</td>
-                        <td width="100px" scope="col" align="center">2</td>
-                        <td width="70px" scope="col" align="center">buah</td>
-                        <td width="100px" scope="col">1.245.000,-</td>
+                        <td width="400px" scope="col">{{$brg->barang}}</td>
+                        <td width="100px" scope="col" align="center">{{$brg->jumlah_barang}}</td>
+                        <td width="70px" scope="col" align="center">{{$brg->satuan}}</td>
+                        <td width="100px" scope="col">{{$brg->harga_satuan}},-</td>
+                        //total harga barang
                         <td width="100px" scope="col">2.490.000,-</td>
                     </tr>
                 </thead>
-                <thead>
+                {{--  <thead>
                     <tr height="25">
                         <td width="31px" scope="col" align="center"> </td>
                         <td width="400px" scope="col">Tinta Printer Epson L-1800-(2)hitam, cyan, magenta, yellow, lightcyan, lightmagenta</td>
@@ -127,7 +128,7 @@
                         <td width="100px" scope="col">1.250.000,-</td>
                         <td width="100px" scope="col">1.250.000,-</td>
                     </tr>
-                </thead>
+                </thead>  --}}
                 <thead>
                     <tr height="25">
                         <td width="30px" scope="col"> </td>
@@ -149,6 +150,7 @@
                     </tr>
                 </thead>
             </table>
+            //total harga barang
             <table width="800px" border="1" align="center">
                 <thead>
                     <tr height="25">

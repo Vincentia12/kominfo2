@@ -73,7 +73,7 @@
             <br>
             <table border="0" align="center" font-size="2">
                 <tr>
-                    <td width="560">Pada hari ini Jum’at, Tanggal Dua Puluh Enam, Bulan Agustus Tahun Dua Ribu Dua Puluh Dua kami yang bertanda tangan dibawah ini adalah Pejabat Pengadaan di Lingkungan Dinas Komunikasi Dan Informatika Provinsi Jawa Timur yang dibentuk dengan Keputusan Kepala Dinas Komunikasi Dan Informatika Provinsi Jawa Timur selaku Pengguna Anggaran tanggal {{ $pengadaan1->tanggal}} Nomor : 188/19/114.1/2022, melaksanakan Pembukaan Penawaran untuk pelaksanaan Belanja Belanja Alat/Bahan Kapasitas Kelembagaan Statistik Sektoral Toner Printer , dibiayai dari dana APBD Tahun Anggaran 2022 pada DPA Dinas Komunikasi dan Informatika Provinsi Jawa Timur Kode Rekening 2.20.02.1.01.5.1.02.01.01.0029 dengan Harga Perkiraan Sendiri (HPS) sebesar Rp. 5.688.750,- (Lima Juta Enam Ratus Delapan Puluh Delapan Ribu Tujuh Ratus Lima Puluh Rupiah).</td>
+                    <td width="560">Pada hari ini {{$pengadaan1->deskripsi_tanggal}} kami yang bertanda tangan dibawah ini adalah Pejabat Pengadaan di Lingkungan Dinas Komunikasi Dan Informatika Provinsi Jawa Timur yang dibentuk dengan Keputusan Kepala Dinas Komunikasi Dan Informatika Provinsi Jawa Timur selaku Pengguna Anggaran tanggal {{ $pengadaan1->tanggal}} Nomor : 188/19/114.1/2022, melaksanakan Pembukaan Penawaran untuk pelaksanaan {{$pengadaan1->pengadaan->jenis_pengadaan}}, dibiayai dari dana APBD Tahun Anggaran 2022 pada DPA Dinas Komunikasi dan Informatika Provinsi Jawa Timur Kode Rekening {{$pengadaan1->pengadaan->pelaksana->kode_rekening}} dengan Harga Perkiraan Sendiri (HPS) sebesar Rp. {{$pengadaan1->pengadaan->total_hps}},- ({{$pengadaan1->pengadaan->deskripsi_hps}}).</td>
                 </tr>
             </table>
             <br>
@@ -154,9 +154,9 @@
                 <tr>
                     <td width="35"> </td>
                     <td width="30"> </td>
-                    <td width="250">CV. PATRIA NUGRAHA</td>
+                    <td width="250">{{$pengadaan1->pengadaan->pelaksana->pt_pelaksana}}</td>
                     <td>:</td>
-                    <td width="250">MANUHUTU ARMAND FX</td>
+                    <td width="250">{{$pengadaan1->pengadaan->pelaksana->nama_pelaksana}}</td>
                 </tr>
             </table>
             <br>
@@ -178,8 +178,8 @@
                 </thead>
                 <tbody>
                     <tr align="center" height="100">
-                        <th scope="row">1</th>
-                        <td>CV. PATRIA NUGRAHA</td>
+                        <td scope="row">1</td>
+                        <td>{{$pengadaan1->pengadaan->pelaksana->pt_pelaksana}}</td>
                         <td>Ada</td>
                         <td>Ada</td>
                         <td>Lengkap</td>

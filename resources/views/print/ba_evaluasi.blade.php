@@ -73,7 +73,7 @@
             <br>
             <table border="0" align="center" font-size="2">
                 <tr>
-                    <td width="560">Pada hari ini Selasa Tanggal Dua Puluh Tiga Bulan Agustus Tahun Dua Ribu Dua Puluh Dua, dimulai pukul 10.00 WIB sampai dengan selesai, Pejabat Pengadaan di Lingkungan Dinas Komunikasi dan Informatika Provinsi Jawa Timur yang dibentuk dengan Keputusan Kepala Dinas Komunikasi Dan Informatika Provinsi Jawa Timur tanggal {{ $pengadaan1->tanggal}} Nomor : 188/19/114.1/2022, telah mengadakan rapat penjelasan untuk pengadaan Belanja Alat/Bahan Kapasitas Kelembagaan Statistik Sektoral Toner Printer keperluan Dinas Komunikasi dan Informatika Provinsi Jawa Timur.</td>
+                    <td width="560">Pada hari ini {{$pengadaan1->deskripsi_tanggal}}, dimulai pukul 10.00 WIB sampai dengan selesai, Pejabat Pengadaan di Lingkungan Dinas Komunikasi dan Informatika Provinsi Jawa Timur yang dibentuk dengan Keputusan Kepala Dinas Komunikasi Dan Informatika Provinsi Jawa Timur tanggal {{ $pengadaan1->tanggal}} Nomor : 188/19/114.1/2022, telah mengadakan rapat penjelasan untuk pengadaan Belanja Alat/Bahan Kapasitas Kelembagaan Statistik Sektoral Toner Printer keperluan Dinas Komunikasi dan Informatika Provinsi Jawa Timur.</td>
                 </tr>
             </table>
             <br>
@@ -81,28 +81,28 @@
                 <tr>
                     <td width="200">NAMA PERUSAHAAN</td>
                     <td>:</td>
-                    <td width="355">CV. PATRIA NUGRAHA</td>
+                    <td width="355">{{$pengadaan1->pengadaan->pelaksana->pt_pelaksana}}</td>
                 </tr>
             </table>
             <table border="0" align="center">
                 <tr>
                     <td width="200">ALAMAT</td>
                     <td>:</td>
-                    <td width="355">Jalan Jl. Kanwa No. 22-A, Kel. Bandar Kidul, Kec.</td>
+                    <td width="355">{{$pengadaan1->pengadaan->pelaksana->alamat}}</td>
                 </tr>
             </table>
-            <table border="0" align="center">
+            {{--  <table border="0" align="center">
                 <tr>
                     <td width="205"> </td>
                     <td> </td>
                     <td width="355">Mojoroto, S U R A B A Y A – Jawa Timur</td>
                 </tr>
-            </table>
+            </table>  --}}
             <table border="0" align="center">
                 <tr>
                     <td width="200">NOMOR POKOK WAJIB PAJAK</td>
                     <td>:</td>
-                    <td width="355">01.510.544.8-609.000</td>
+                    <td width="355">{{$pengadaan1->pengadaan->pelaksana->npwp}}</td>
                 </tr>
             </table>
             <br>

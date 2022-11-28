@@ -50,7 +50,7 @@
             <table border="0" align="center">
                 <tr>
                     <td width="300"> </td>
-                    <td>Surabaya, 22 Agustus 2022</td>
+                    <td>Surabaya, {{$pengadaan1->tanggal}}</td>
                     <td width="50"> </td>
                 </tr>
                 <tr>
@@ -64,8 +64,8 @@
                 <tr>
                     <td width="80">Nomor</td>
                     <td>:</td>
-                    <td width="175">020/654.5/114.6/2022</td>
-                    <td>Yth. Sdr. Direktur CV. PATRIA NUGRAHA</td>
+                    <td width="175">020/{{$pengadaan1->nomor}}/114.6/2022</td>
+                    <td>Yth. Sdr. {{$pengadaan1->pengadaan->pelaksana->jabatan_pelaksana}} {{$pengadaan1->pengadaan->pelaksana->pt_pelaksana}}</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
@@ -74,7 +74,7 @@
                     <td>:</td>
                     <td width="175">Segera</td>
                     <td width="160"> </td>
-                    <td>Jl. Kanwa No. 22-A</td>
+                    <td>{{$pengadaan1->pengadaan->pelaksana->alamat}}</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
@@ -111,16 +111,16 @@
                 <tr>
                     <td width="150">Paket Pekerjaan</td>
                     <td>:</td>
-                    <td width="405">Belanja Alat/Bahan Kapasitas Kelembagaan Statistik</td>
+                    <td width="405">{{$pengadaan1->pengadaan->jenis_pengadaan}}</td>
                 </tr>
             </table>
-            <table border="0" align="center" font-size="2">
+            {{--  <table border="0" align="center" font-size="2">
                 <tr>
                     <td width="155"> </td>
                     <td> </td>
                     <td width="405">Sektoral Toner Printer</td>
                 </tr>
-            </table>
+            </table>  --}}
             <table border="0" align="center" font-size="2">
                 <tr>
                     <td width="150">Lingkup pekerjaan</td>
@@ -146,14 +146,14 @@
                 <tr>
                     <td width="150">Nilai HPS</td>
                     <td>:</td>
-                    <td width="405">Rp. 5.688.750,-</td>
+                    <td width="405">Rp. {{$pengadaan1->pengadaan->total_hps}},-</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
                 <tr>
                     <td width="155"> </td>
                     <td> </td>
-                    <td width="405">(Lima Juta Enam Ratus Delapan Puluh Delapan Ribu Tujuh Ratus Lima Puluh Rupiah)</td>
+                    <td width="405">({{$pengadaan1->pengadaan->deskripsi_hps}})</td>
                 </tr>
             </table>
             <br>
@@ -162,6 +162,7 @@
                     <td width="560">Diharap saudara untuk menyampaikan dokumen penawaran paling lambat pada :</td>
                 </tr>
             </table>
+            //memanggil tanggal dan no.pengadaan
             <table border="0" align="center" font-size="2">
                 <tr>
                     <td width="100">Hari/Tanggal</td>

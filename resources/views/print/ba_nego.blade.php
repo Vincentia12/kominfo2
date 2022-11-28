@@ -73,13 +73,13 @@
             <br>
             <table border="0" align="center" font-size="2">
                 <tr>
-                    <td width="560">Pada hari ini Kamis, Tanggal Satu, Bulan September Tahun Dua Ribu Dua Puluh Dua kami yang bertanda tangan dibawah ini adalah Pejabat Pengadaan di Lingkungan Dinas Komunikasi Dan Informatika Provinsi Jawa Timur yang dibentuk dengan Keputusan Kepala Dinas Komunikasi Dan Informatika Provinsi Jawa Timur selaku Pengguna Anggaran tanggal {{ $pengadaan1->tanggal}} Nomor : 188/19/114.1/2022, melaksanakan klarifikasi dan negosiasi untuk pelaksanaan Belanja Alat/Bahan Kapasitas Kelembagaan Statistik Sektoral Toner Printer , dibiayai dari dana APBD Tahun Anggaran 2022 pada DPA Dinas Komunikasi dan Informatika Provinsi Jawa Timur Kode Rekening 2.20.02.1.01.5.1.02.01.01.0029 dengan Harga Perkiraan Sendiri (HPS) sebesar Rp. 5.688.750,- (Lima Juta Enam Ratus Delapan Puluh Delapan Ribu Tujuh Ratus Lima Puluh Rupiah).</td>
+                    <td width="560">Pada hari ini {{$pengadaan1->deskripsi_tanggal}} kami yang bertanda tangan dibawah ini adalah Pejabat Pengadaan di Lingkungan Dinas Komunikasi Dan Informatika Provinsi Jawa Timur yang dibentuk dengan Keputusan Kepala Dinas Komunikasi Dan Informatika Provinsi Jawa Timur selaku Pengguna Anggaran tanggal {{ $pengadaan1->tanggal}} Nomor : 188/19/114.1/2022, melaksanakan klarifikasi dan negosiasi untuk pelaksanaan {{ $pengadaan1->pengadaan->jenis_pengadaan}} , dibiayai dari dana APBD Tahun Anggaran 2022 pada DPA Dinas Komunikasi dan Informatika Provinsi Jawa Timur Kode Rekening {{$pengadaan1->pengadaan->pelaksana->kode_rekening}} dengan Harga Perkiraan Sendiri (HPS) sebesar Rp. {{$pengadaan1->pengadaan->total_hps}},- ({{$pengadaan1->pengadaan->deskripsi_hps}}).</td>
                 </tr>
             </table>
             <br>
             <table border="0" align="center" font-size="2">
                 <tr>
-                    <td width="560">Melakukan klarifikasi dan negosiasi terhadap penawaran yang diajukan oleh : CV. PATRIA NUGRAHA Jalan Kanwa No. 22-A, S U R A B A Y A dengan hasil terlampir.</td>
+                    <td width="560">Melakukan klarifikasi dan negosiasi terhadap penawaran yang diajukan oleh : {{$pengadaan1->pengadaan->pt_pelaksana}} {{$pengadaan1->pengadaan->pelaksana->alamat}} dengan hasil terlampir.</td>
                 </tr>
             </table>
             <br>
@@ -92,56 +92,56 @@
                 <tr>
                     <td width="190">Nama Perusahaan</td>
                     <td width="10">:</td>
-                    <td width="360">CV. PATRIA NUGRAHA</td>
+                    <td width="360">{{$pengadaan1->pengadaan->pt_pelaksana}}</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
                 <tr>
                     <td width="190">Nama Penanggung Jawab</td>
                     <td width="10">:</td>
-                    <td width="360">MANUHUTU ARMAND FX</td>
+                    <td width="360">{{$pengadaan1->pengadaan->pelaksana->nama_pelaksana}}</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
                 <tr>
                     <td width="190">Alamat Perusahaan</td>
                     <td width="10">:</td>
-                    <td width="360">Jalan Kanwa No. 22-A Surabaya</td>
+                    <td width="360">{{$pengadaan1->pengadaan->pelaksana->alamat}}</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
                 <tr>
                     <td width="190">Nomor Pokok Wajib Pajak</td>
                     <td width="10">:</td>
-                    <td width="360">01.510.544.8-609.000</td>
+                    <td width="360">{{$pengadaan1->pengadaan->pelaksana->npwp}}</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
                 <tr>
                     <td width="190">Pekerjaan</td>
                     <td width="10">:</td>
-                    <td width="360">Belanja Belanja Alat/Bahan Kapasitas</td>
+                    <td width="360">{{ $pengadaan1->pengadaan->jenis_pengadaan}}</td>
                 </tr>
             </table>
-            <table border="0" align="center" font-size="2">
+            {{--  <table border="0" align="center" font-size="2">
                 <tr>
                     <td width="190"> </td>
                     <td width="10"> </td>
                     <td width="360">Kelembagaan Statistik Sektoral Toner Printer</td>
                 </tr>
-            </table>
+            </table>  --}}
             <table border="0" align="center" font-size="2">
                 <tr>
                     <td width="190">Dengan Harga</td>
                     <td width="10">:</td>
-                    <td width="360">Rp. 5.546.670,- (Lima Juta Lima Ratus Empat</td>
+                    <td width="360">Rp. {{$pengadaan1->pengadaan->total_hps}},-</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
                 <tr>
                     <td width="190"> </td>
                     <td width="10"> </td>
-                    <td width="360">Puluh Enam Ribu Enam Ratus Tujuh Puluh Rupiah)</td>
+                    <td width="360">({{$pengadaan1->pengadaan->deskripsi_hps}})</td>
                 </tr>
             </table>
             <br>
@@ -201,7 +201,7 @@
             <table width="565px" border="1" align="center">
                 <tbody>
                     <tr>
-                        <td width="258px" scope="col">PEKERJAAN : Belanja Belanja Alat/Bahan Kapasitas Kelembagaan Statistik Sektoral Toner Printer</td>
+                        <td width="258px" scope="col">PEKERJAAN : {{ $pengadaan1->pengadaan->jenis_pengadaan}}</td>
                         <td width="258px" scope="col">Nomor : 020/{{$pengadaan1->nomor}}/114.6/2022 Tanggal : {{ $pengadaan1->tanggal}}</td>
                     </tr>
                 </tbody>
@@ -209,26 +209,26 @@
             <br>
             <table border="0" align="center" font-size="2">
                 <tr>
-                    <td width="565">Pada hari ini Senin, Tanggal Lima, Bulan September, Tahun Dua Ribu Dua Puluh Dua, dimulai pukul 10.00 WIB sampai dengan selesai, dengan mengambil tempat di Ruang Argopuro Dinas Komunikasi Dan Informatika Provinsi Jawa Timur telah disusun Berita Acara Hasil Pengadaan Langsung untuk Pekerjaan tersebut diatas.</td>
+                    <td width="565">Pada hari ini {{$pengadaan1->deskripsi_tanggal}}, dimulai pukul 10.00 WIB sampai dengan selesai, dengan mengambil tempat di Ruang Argopuro Dinas Komunikasi Dan Informatika Provinsi Jawa Timur telah disusun Berita Acara Hasil Pengadaan Langsung untuk Pekerjaan tersebut diatas.</td>
                 </tr>
             </table>
             <br>
             <table border="0" align="center">
                 <tr>
                     <td width="30">I.</td>
-                    <td width="530">Bahwa dalam proses Pengadaan Langsung pengadaan Belanja Belanja</td>
+                    <td width="530">Bahwa dalam proses Pengadaan Langsung pengadaan</td>
                 <tr>
             </table>
             <table border="0" align="center">
                 <tr>
                     <td width="30"> </td>
-                    <td width="530">Alat/Bahan Kapasitas Kelembagaan Statistik Sektoral Toner</td>
+                    <td width="530">{{ $pengadaan1->pengadaan->jenis_pengadaan}}</td>
                 <tr>
             </table>
             <table border="0" align="center">
                 <tr>
                     <td width="30"> </td>
-                    <td width="530">Printer telah diundang calon penyedia yaitu :</td>
+                    <td width="530">telah diundang calon penyedia yaitu :</td>
                 <tr>
             </table>
             <table border="0" align="center" font-size="2">
@@ -236,7 +236,7 @@
                     <td width="65"> </td>
                     <td width="200">Nama Perusahaan</td>
                     <td>:</td>
-                    <td width="300">CV. PATRIA NUGRAHA</td>
+                    <td width="300">{{$pengadaan1->pengadaan->pelaksana->pt_pelaksana}}</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
@@ -244,7 +244,7 @@
                     <td width="65"> </td>
                     <td width="200">Alamat</td>
                     <td>:</td>
-                    <td width="300">Jalan Kanwa No. 22-A Surabaya</td>
+                    <td width="300">{{$pengadaan1->pengadaan->pelaksana->alamat}}</td>
                 </tr>
             </table>
             <table border="0" align="center">
@@ -285,7 +285,7 @@
                     <td width="30">2.</td>
                     <td width="200">Harga Penawaran</td>
                     <td>:</td>
-                    <td width="300">Rp. 5.611.050,-</td>
+                    <td width="300">Rp. {{$pengadaan1->pengadaan->harga_penawaran}},-</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
@@ -294,7 +294,7 @@
                     <td width="30"> </td>
                     <td width="200"> </td>
                     <td> </td>
-                    <td width="300">(Lima Juta Enam Ratus Sebelas Ribu Lima Puluh Rupiah)</td>
+                    <td width="300">{{$pengadaan1->pengadaan->deskripsi_penawaran}}</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
@@ -303,7 +303,7 @@
                     <td width="30"> </td>
                     <td width="200">Harga Penawaran setelah Koreksi Aritmatik</td>
                     <td>:</td>
-                    <td width="300">Rp. 5.611.050,-</td>
+                    <td width="300">Rp. {{$pengadaan1->pengadaan->harga_penawaran}},-</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
@@ -312,7 +312,7 @@
                     <td width="30"> </td>
                     <td width="200"> </td>
                     <td> </td>
-                    <td width="300">(Lima Juta Enam Ratus Sebelas Ribu Lima Puluh Rupiah)</td>
+                    <td width="300">{{$pengadaan1->pengadaan->deskripsi_penawaran}}</td>
                 </tr>
             </table>
             <br>
@@ -426,7 +426,7 @@
                     <td width="30">-</td>
                     <td width="200">Harga Penawaran</td>
                     <td>:</td>
-                    <td width="300">Rp. 5.611.050,-</td>
+                    <td width="300">Rp. {{$pengadaan1->pengadaan->harga_penawaran}},-</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
@@ -435,7 +435,7 @@
                     <td width="30"> </td>
                     <td width="200"> </td>
                     <td> </td>
-                    <td width="300">(Lima Juta Enam Ratus Sebelas Ribu Lima Puluh Rupiah)</td>
+                    <td width="300">({{$pengadaan1->pengadaan->deskripsi_penawaran}})</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
@@ -444,7 +444,7 @@
                     <td width="30">-</td>
                     <td width="200">Harga Penawaran setelah Negosiasi</td>
                     <td>:</td>
-                    <td width="300">Rp. 5.546.670,-</td>
+                    <td width="300">Rp. {{$pengadaan1->pengadaan->nilai_negosiasi}},-</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
@@ -453,7 +453,7 @@
                     <td width="30"> </td>
                     <td width="200"> </td>
                     <td> </td>
-                    <td width="300">(Lima Juta Lima Ratus Empat Puluh Enam Rupiah)</td>
+                    <td width="300">({{$pengadaan1->pengadaan->deskripsi_negosiasi}})</td>
                 </tr>
             </table>
             <br>

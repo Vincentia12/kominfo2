@@ -66,56 +66,57 @@
                     </td>
                     <td width="150">
                         <center>
-                            <font size="2">020/654.12/114.6/2022</font>
+                            <font size="2">020/{{$pengadaan1->nomor}}/114.6/2022</font>
                     </td>
                 <tr>
             </table>
             <br>
             <table border="0" align="center" font-size="2">
                 <tr>
-                    <td width="560">Berdasarkan Berita Acara Evaluasi Dokumen Prakualifikasi Tanggal 18 Agustus 2022 Nomor : 020/654.4/114.6/2022 dan Berita Acara Klarifikasi/Negosiasi Penawaran Tanggal 1 September 2022 Nomor : 020/654.9/114.6/2022, Pekerjaan Pengadaan Belanja Alat/Bahan Kapasitas Kelembagaan Statistik Sektoral Toner Printer , dengan ini Pejabat Pengadaan Dinas Komunikasi dan Informatika Provinsi Jawa Timur menetapkan penyedia jasa tersebut di bawah ini untuk sebagai Penyedia Barang/Jasa dengan nilai HPS sebesar Rp. 5.688.750,- (Tujuh Puluh Sembilan Juta Sembilan Ratus Tiga Puluh Tujuh Ribu Delapan Ratus Rupiah) :</td>
+                    //memanggil tanggal dan no.pengadaan
+                    <td width="560">Berdasarkan Berita Acara Evaluasi Dokumen Prakualifikasi Tanggal {{$pengadaan1->deskripsi_tanggal}} Nomor : 020/{{$pengadaan1->nomor}}/114.6/2022 dan Berita Acara Klarifikasi/Negosiasi Penawaran Tanggal 1 September 2022 Nomor : 020/654.9/114.6/2022, Pekerjaan Pengadaan {{$pengadaan1->pengadaan->jenis_pengadaan}}, dengan ini Pejabat Pengadaan Dinas Komunikasi dan Informatika Provinsi Jawa Timur menetapkan penyedia jasa tersebut di bawah ini untuk sebagai Penyedia Barang/Jasa dengan nilai HPS sebesar Rp. {{$pengadaan1->pengadaan->total_hps}},- ({{$pengadaan1->pengadaan->deskripsi_hps}}) :</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
                 <tr>
                     <td width="190">Nama Perusahaan</td>
                     <td width="10">:</td>
-                    <td width="360">CV. PATRIA NUGRAHA</td>
+                    <td width="360">{{$pengadaan1->pengadaan->pelaksana->pt_pelaksana}}</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
                 <tr>
                     <td width="190">Nama Penanggung Jawab</td>
                     <td width="10">:</td>
-                    <td width="360">MANUHUTU ARMAND FX</td>
+                    <td width="360">{{$pengadaan1->pengadaan->pelaksana->nama_pelaksana}}</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
                 <tr>
                     <td width="190">Alamat Perusahaan</td>
                     <td width="10">:</td>
-                    <td width="360">Jalan Kanwa No. 22-A Surabaya</td>
+                    <td width="360">{{$pengadaan1->pengadaan->pelaksana->alamat}}</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
                 <tr>
                     <td width="190">Nomor Pokok Wajib Pajak</td>
                     <td width="10">:</td>
-                    <td width="360">01.510.544.8-609.000</td>
+                    <td width="360">{{$pengadaan1->pengadaan->pelaksana->npwp}}</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
                 <tr>
                     <td width="190">Harga Penawaran</td>
                     <td width="10">:</td>
-                    <td width="360">Rp. 5.546.670,- (Lima Juta Lima Ratus Empat</td>
+                    <td width="360">Rp. {{$pengadaan1->pengadaan->nilai_negosiasi}},-</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
                 <tr>
                     <td width="190">Setelah Negosiasi</td>
                     <td width="10"> </td>
-                    <td width="360">Puluh Enam Ribu Enam Ratus Tujuh Puluh Rupiah)</td>
+                    <td width="360">({{$pengadaan1->pengadaan->deskripsi_negosiasi}})</td>
                 </tr>
             </table>
             <br>
@@ -128,7 +129,7 @@
             <table border="0" align="center">
                 <tr>
                     <td width="300"> </td>
-                    <td>Surabaya, 7 September 2022</td>
+                    <td>Surabaya, {{$pengadaan1->tanggal}}</td>
                     <td width="50"> </td>
                 </tr>
             </table>

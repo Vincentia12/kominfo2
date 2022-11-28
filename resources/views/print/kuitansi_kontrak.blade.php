@@ -92,21 +92,21 @@
                 <tr>
                     <td width="150">Jumlah uang</td>
                     <td width="10">:</td>
-                    <td width="390">Rp. 5.546.670,-</td>
+                    <td width="390">Rp. {{$pengadaan1->pengadaan->nilai_negosiasi}},-</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
                 <tr>
                     <td width="150">Terbilang</td>
                     <td width="10">:</td>
-                    <td width="390">(Lima Juta Lima Ratus Empat Puluh Enam Ribu Enam Ratus Tujuh Puluh Rupiah)</td>
+                    <td width="390">({{$pengadaan1->pengadaan->deskripsi_negosiasi}})</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
                 <tr>
                     <td width="150">Untuk Pembayaran</td>
                     <td width="10">:</td>
-                    <td width="390">{{ $pengadaan1->pengadaan->jenis_pengadaan}}</td>
+                    <td width="390">{{$pengadaan1->pengadaan->jenis_pengadaan}}</td>
                 </tr>
             </table>
             <br>
@@ -138,21 +138,22 @@
                 <tbody>
                     <tr>
                         <th scope="row"> </th>
-                        <td>Belanja Alat/Bahan Kapasitas Kelembagaan Statistik Sektoral Toner Printer</td>
+                        <td>{{$pengadaan1->pengadaan->jenis_pengadaan}}</td>
                         <td> </td>
                         <td> </td>
                         <td> </td>
                         <td> </td>
                     </tr>
                     <tr>
-                        <th scope="row">1</th>
-                        <td>Toner Printer</td>
-                        <td> </td>
-                        <td> </td>
-                        <td> </td>
+                        <th scope="row">{{$brg->pengadaan_id}}</th>
+                        <td>{{$brg->barang}}</td>
+                        <td>{{$brg->jumlah_barang}}</td>
+                        <td>{{$brg->satuan}}</td>
+                        <td>{{$brg->harga_satuan}}</td>
+                        //total harga barang
                         <td> </td>
                     </tr>
-                    <tr>
+                    {{--  <tr>
                         <th scope="row"> </th>
                         <td>Tinta Printer Epson L-1300-(2)hitam, cyan, magenta,yellow</td>
                         <td align="center">2</td>
@@ -175,7 +176,7 @@
                         <td align="center">buah</td>
                         <td>1.250.000,-</td>
                         <td>1.250.000,-</td>
-                    </tr>
+                    </tr>  --}}
                     <tr height="20">
                         <th scope="row"> </th>
                         <td> </td>
@@ -194,6 +195,7 @@
                     </tr>
                 </tbody>
             </table>
+            //total harga barang
             <table width="585px" border="1" align="center">
                 <thead>
                     <tr align="right">
@@ -222,13 +224,13 @@
             <table border="0" align="center" font-size="2">
                 <tr>
                     <td width="40">1.</td>
-                    <td width="520">Pembayaran dengan Sumber Dana APBD Provinsi Jawa Timur Tahun Anggaran 2022, dibebankan pada DP A - SKPD Dinas Komunikasi dan Informatika Provinsi Jawa Timur Tahun Anggaran 2022 Kode Rekening 2.20.02.1.01.5.1.02.01.01.0029</td>
+                    <td width="520">Pembayaran dengan Sumber Dana APBD Provinsi Jawa Timur Tahun Anggaran 2022, dibebankan pada DP A - SKPD Dinas Komunikasi dan Informatika Provinsi Jawa Timur Tahun Anggaran 2022 Kode Rekening {{$pengadaan1->pengadaan->pelaksana->kode_rekening}}</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
                 <tr>
                     <td width="40">2.</td>
-                    <td width="520">Jangka Waktu Pelaksanaan 7 (Tujuh) hari kalender, tanggal pelaksanaan yaitu Tanggal 13 September – 20 September 2022</td>
+                    <td width="520">Jangka Waktu Pelaksanaan {{$pengadaan1->alokasi}} hari kalender, tanggal pelaksanaan yaitu Tanggal {{$pengadaan1->tanggal}}</td>
                 </tr>
             </table>
             <br>
@@ -242,7 +244,7 @@
             <table border="0" align="center" font-size="2">
                 <tr align="center">
                     <td width="280"> </td>
-                    <td width="280">Surabaya, {{ $pengadaan1->tanggal}}</td>
+                    <td width="280">Surabaya, {{$pengadaan1->tanggal}}</td>
                 </tr>
             </table>
             <br>

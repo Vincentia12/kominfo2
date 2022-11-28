@@ -52,13 +52,13 @@
             </table>
             <table border="0" align="center">
                 <tr>
-                    <td width="560"><center><font size="2"><b>Nomor : 020/654.15/114.6/2022</font></b></td>
+                    <td width="560"><center><font size="2"><b>Nomor : 020/{{$pengadaan1->nomor}}/114.6/2022</font></b></td>
                 <tr>
             </table>
             <br>
             <table border="0" align="center" font-size="2">
                 <tr>
-                    <td width="560">Pada hari ini Senin Tanggal Dua Belas,  Bulan September Tahun Dua Ribu Dua Puluh Dua. Kami yang bertanda tangan dibawah ini :</td>
+                    <td width="560">Pada hari ini {{$pengadaan1->deskripsi_tanggal}}. Kami yang bertanda tangan dibawah ini :</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
@@ -105,7 +105,7 @@
                     <td width="10">2.</td>
                     <td width="70">Nama</td>
                     <td>:</td>
-                    <td width="480">MANUHUTU ARMAND FX</td>
+                    <td width="480">{{$pengadaan1->pengadaan->pelaksana->nama_pelaksana}}</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
@@ -113,7 +113,7 @@
                     <td width="15"> </td>
                     <td width="70">Jabatan</td>
                     <td>:</td>
-                    <td width="480">Direktur</td>
+                    <td width="480">{{$pengadaan1->pengadaan->pelaksana->jabatan_pelaksana}}</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
@@ -121,7 +121,7 @@
                     <td width="15"> </td>
                     <td width="150">Nama Perusahaan</td>
                     <td>:</td>
-                    <td width="400">CV. PATRIA NUGRAHA</td>
+                    <td width="400">{{$pengadaan1->pengadaan->pelaksana->pt_pelaksana}}</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
@@ -129,13 +129,13 @@
                     <td width="15"> </td>
                     <td width="150">Alamat Kantor</td>
                     <td>:</td>
-                    <td width="400">Jalan Kanwa No. 22-A, SURABAYA</td>
+                    <td width="400">{{$pengadaan1->pengadaan->pelaksana->alamat}}</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
                 <tr>
                     <td width="15"> </td>
-                    <td width="555">Bertindak untuk dan atas nama Perusahaan CV. PATRIA NUGRAHA selanjutnya disebut <b>PIHAK KEDUA</b></td>
+                    <td width="555">Bertindak untuk dan atas nama Perusahaan {{$pengadaan1->pengadaan->pelaksana->pt_pelaksana}} selanjutnya disebut <b>PIHAK KEDUA</b></td>
                 </tr>
             </table>
             <br>
@@ -147,24 +147,28 @@
             <table border="0" align="center" font-size="2">
                 <tr>
                     <td width="30">1.</td>
+                    //memanggil tanggal dan no.pengadaan
                     <td width="530">Surat Permintaan Penawaran Nomor : 020/654.5/114.6/2022 Tanggal 22 Agustus 2022</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
                 <tr>
                     <td width="30">2.</td>
+                    //memanggil tanggal dan no.pengadaan
                     <td width="530">Surat Penawaran Harga Nomor  : 233/PEN/PN/IX/2022 Tanggal 24 Agustus 2022</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
                 <tr>
                     <td width="30">3.</td>
+                    //memanggil tanggal dan no.pengadaan
                     <td width="530">Berita Acara Hasil Klarifikasi dan Negosiasi Nomor : 020/654.9/114.6/2022 Tanggal 1 September 2022</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
                 <tr>
                     <td width="30">4.</td>
+                    //memanggil tanggal dan no.pengadaan
                     <td width="530">Berita Acara Hasil Pengadaan Langsung Nomor : 020/654.10/114.6/2022 Tanggal 5 September 2022</td>
                 </tr>
             </table>
@@ -213,25 +217,26 @@
                     {{--  <tr>
                         <td width="565px">PENGADAAN BELANJA ALAT/BAHAN UNTUK KEGIATAN KANTOR</td>
                     </tr>  --}}
+                    {{--  <tr>
+                        <td align="center">{{$brg->pengadaan_id}}</td>
+                        <td>{{$pengadaan1->pengadaan->jenis_pengadaan}}</td>
+                        <td>{{$pengadaan1->pengadaan->barang}}</td>
+                        <td> </td>
+                        <td> </td>
+                        <td> </td>
+                        <td> </td>
+                    </tr>  --}}
                     <tr>
-                        <td align="center">1.</td>
-                        <td>Belanja Alat/Bahan Kapasitas Kelembagaan Statistik Sektoral Toner Printer</td>
-                        <td>Toner Printer</td>
-                        <td> </td>
-                        <td> </td>
-                        <td> </td>
-                        <td> </td>
-                    </tr>
-                    <tr>
-                        <td align="center"> </td>
-                        <td> </td>
-                        <td>Tinta Printer Epson L-1300-(2) hitam,cyan,magenta, yellow</td>
-                        <td align="center">2</td>
-                        <td align="center">buah</td>
-                        <td>1.245.000</td>
+                        <td align="center">{{$brg->pengadaan_id}}</td>
+                        <td>{{$pengadaan1->pengadaan->jenis_pengadaan}}</td>
+                        <td>{{$pengadaan1->pengadaan->barang}}</td>
+                        <td align="center">{{$pengadaan1->pengadaan->jumlah_barang}}</td>
+                        <td align="center">{{$pengadaan1->pengadaan->satuan}}</td>
+                        <td>{{$pengadaan1->pengadaan->harga_satuan}}</td>
+                        //total harga barang
                         <td>2.490.000</td>
                     </tr>
-                    <tr>
+                    {{--  <tr>
                         <td align="center"> </td>
                         <td> </td>
                         <td>Tinta Printer Epson L-1800-(2)hitam, cyan,magenta, yellow,lighcyan,lightmagenta</td>
@@ -248,7 +253,7 @@
                         <td align="center">buah</td>
                         <td>1.250.000</td>
                         <td>1.250.000</td>
-                    </tr>
+                    </tr>  --}}
                     <tr height="20">
                         <td> </td>
                         <td> </td>
@@ -260,6 +265,7 @@
                     </tr>
                 </tbody>
             </table>
+            //total harga barang
             <table width="600px" border="1" align="center">
                 <thead>
                     <tr align="right">
@@ -280,13 +286,14 @@
             <table border="0" align="center" font-size="2">
                 <tr>
                     <td width="30">6.</td>
-                    <td width="530">Pembayaran dengan Sumber Dana APBD Provinsi Jawa Timur Tahun Anggaran 2022, dibebankan pada DPA - SKPD Dinas Komunikasi dan Informatika Provinsi Jawa Timur Tahun Anggaran 2022, Kode Rekening 2.20.02.1.01.5.1.02.01.01.0029</td>
+                    <td width="530">Pembayaran dengan Sumber Dana APBD Provinsi Jawa Timur Tahun Anggaran 2022, dibebankan pada DPA - SKPD Dinas Komunikasi dan Informatika Provinsi Jawa Timur Tahun Anggaran 2022, Kode Rekening {{$pengadaan1->pengadaan->pelaksana->kode_rekening}}</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
                 <tr>
                     <td width="30">7.</td>
-                    <td width="530">Jangka Waktu Pelaksanaan 7 (Tujuh) hari kalender, tanggal pelaksanaan yaitu Tanggal 13 September – 20 September 2022</td>
+                    //memanggil tanggal dan no.pengadaan
+                    <td width="530">Jangka Waktu Pelaksanaan {{$pengadaan1->alokasi}} hari kalender, tanggal pelaksanaan yaitu Tanggal 13 September – 20 September 2022</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
@@ -344,7 +351,7 @@
             </table>
             <table border="0" align="center" font-size="2">
                 <tr align="center">
-                    <td width="280">CV. PATRIA NUGRAHA</td>
+                    <td width="280">{{$pengadaan1->pengadaan->pelaksana->pt_pelaksana}}</td>
                     <td width="280">PEJABAT PEMBUAT KOMITMEN</td>
                 </tr>
             </table>
@@ -353,13 +360,13 @@
             <br>
             <table border="0" align="center" font-size="2">
                 <tr align="center">
-                    <td width="280">MANUHUTU ARMAND FX</td>
+                    <td width="280">{{$pengadaan1->pengadaan->pelaksana->nama_pelaksana}}</td>
                     <td width="280">I WAYAN RUDY ARTHA, S.Kom</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
                 <tr align="center">
-                    <td width="280">Direktur</td>
+                    <td width="280">{{$pengadaan1->pengadaan->pelaksana->jabatan_pelaksana}}</td>
                     <td width="280">NIP. 19770517 200901 1 005</td>
                 </tr>
             </table>

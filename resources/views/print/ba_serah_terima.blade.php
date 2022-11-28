@@ -37,7 +37,7 @@
             <br>
             <table border="0" align="center">
                 <tr>
-                    <td width="560">Pada hari ini Selasa Tanggal Dua Puluh Bulan September Tahun Dua Ribu Dua Puluh Dua, kami yang bertanda tangan dibawah ini :</td>
+                    <td width="560">Pada hari ini {{$pengadaan1->deskripsi_tanggal}}, kami yang bertanda tangan dibawah ini :</td>
                 <tr>
             </table>
             <br>
@@ -93,7 +93,7 @@
                     <td width="10">II.</td>
                     <td width="150">Nama</td>
                     <td>:</td>
-                    <td width="400">MANUHUTU ARMAND FX</td>
+                    <td width="400">{{$pengadaan1->pengadaan->pelaksana->nama_pelaksana}}</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
@@ -101,7 +101,7 @@
                     <td width="15"> </td>
                     <td width="150">Jabatan</td>
                     <td>:</td>
-                    <td width="400">Direktur</td>
+                    <td width="400">{{$pengadaan1->pengadaan->pelaksana->jabatan_pelaksana}}</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
@@ -109,7 +109,7 @@
                     <td width="15"> </td>
                     <td width="150">Alamat</td>
                     <td>:</td>
-                    <td width="400">Jalan Kanwa No. 22-A, SURABAYA</td>
+                    <td width="400">{{$pengadaan1->pengadaan->pelaksana->alamat}}</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
@@ -142,20 +142,20 @@
                     <td width="15"> </td>
                     <td width="200">Tanggal</td>
                     <td>:</td>
-                    <td width="350">{{ $pengadaan1->tanggal}}</td>
+                    <td width="350">{{$pengadaan1->tanggal}}</td>
                 </tr>
                 <tr>
                     <td width="15"> </td>
                     <td width="200">Pekerjaan</td>
                     <td>:</td>
-                    <td width="350">Belanja Alat/Bahan Kapasitas Kelembagaan</td>
+                    <td width="350">{{$pengadaan1->pengadaan->jenis_pengadaan}}</td>
                 </tr>
-                <tr>
+                {{--  <tr>
                     <td width="15"> </td>
                     <td width="200"> </td>
                     <td></td>
                     <td width="350">Statistik Sektoral Toner Printer</td>
-                </tr>
+                </tr>  --}}
             </table>
             <br>
             <table border="0" align="center" font-size="2">
@@ -213,7 +213,7 @@
             <table border="0" align="center">
                 <tr>
                     <td width="300"> </td>
-                    <td>Surabaya, 20 September 2022</td>
+                    <td>{{$pengadaan1->tanggal}}</td>
                     <td width="50"> </td>
                 </tr>
             </table>

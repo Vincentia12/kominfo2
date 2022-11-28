@@ -50,7 +50,7 @@
             <table border="0" align="center">
                 <tr>
                     <td width="300"> </td>
-                    <td>Surabaya, 22 Agustus 2022</td>
+                    <td>Surabaya, {{$pengadaan1->tanggal}}</td>
                     <td width="50"> </td>
                 </tr>
                 <tr>
@@ -64,8 +64,8 @@
                 <tr>
                     <td width="80">Nomor</td>
                     <td>:</td>
-                    <td width="175">020/654.8/114.6/2022</td>
-                    <td>Yth. Sdr. Direktur CV. PATRIA NUGRAHA</td>
+                    <td width="175">020/{{$pengadaan1->nomor}}/114.6/2022</td>
+                    <td>Yth. Sdr. {{$pengadaan1->pengadaan->pelaksana->jabatan_pelaksana}} {{$pengadaan1->pengadaan->pelaksana->pt_pelaksana}}</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
@@ -74,7 +74,7 @@
                     <td>:</td>
                     <td width="175">Penting</td>
                     <td width="160"> </td>
-                    <td>Jl. Kanwa No. 22-A</td>
+                    <td>{{$pengadaan1->pengadaan->pelaksana->alamat}}</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
@@ -104,10 +104,11 @@
             <br>
             <table border="0" align="center" font-size="2">
                 <tr>
-                    <td width="560">Mengharap dengan hormat kehadiran Saudara dalam acara Klarifikasi dan Negosiasi pengadaan Belanja Alat/Bahan Kapasitas Kelembagaan Statistik Sektoral Tiner Printer yang akan diadakan pada :</td>
+                    <td width="560">Mengharap dengan hormat kehadiran Saudara dalam acara Klarifikasi dan Negosiasi pengadaan {{$pengadaan1->pengadaan->jenis_pengadaan}} yang akan diadakan pada :</td>
                 </tr>
             </table>
             <br>
+            //memanggil tanggal dan no.pengadaan
             <table border="0" align="center" font-size="2">
                 <tr>
                     <td width="100">Hari</td>

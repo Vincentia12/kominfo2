@@ -37,7 +37,7 @@
             <br>
             <table border="0" align="center">
                 <tr>
-                    <td width="560">Pada hari ini Selasa Tanggal Dua Puluh Bulan September Tahun Dua Ribu Dua Puluh Dua, kami yang bertanda tangan dibawah ini :</td>
+                    <td width="560">Pada hari ini {{$pengadaan1->deskripsi_tanggal}}, kami yang bertanda tangan dibawah ini :</td>
                 <tr>
             </table>
             <br>
@@ -85,7 +85,7 @@
                     <td width="10">II.</td>
                     <td width="150">Nama</td>
                     <td>:</td>
-                    <td width="400">MANUHUTU ARMAND FX</td>
+                    <td width="400">{{$pengadaan1->pengadaan->pelaksana->nama_pelaksana}}</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
@@ -93,7 +93,7 @@
                     <td width="15"> </td>
                     <td width="150">Jabatan</td>
                     <td>:</td>
-                    <td width="400">Direktur CV. PATRIA NUGRAHA</td>
+                    <td width="400">{{$pengadaan1->pengadaan->pelaksana->jabatan_pelaksana}} {{$pengadaan1->pengadaan->pelaksana->pt_pelaksana}}</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
@@ -101,7 +101,7 @@
                     <td width="15"> </td>
                     <td width="150">Alamat</td>
                     <td>:</td>
-                    <td width="400">Jalan Jl. Kanwa No. 22-A S U R A B A Y A</td>
+                    <td width="400">{{$pengadaan1->pengadaan->pelaksana->alamat}}</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
@@ -129,10 +129,10 @@
                     <td width="20">a.</td>
                     <td width="100">Pekerjaan</td>
                     <td width="10">:</td>
-                    <td width="410">Belanja Belanja Alat/Bahan Kapasitas Kelembagaan</td>
+                    <td width="410">{{$pengadaan1->pengadaan->jenis_pengadaan}}</td>
                 </tr>
             </table>
-            <table border="0" align="center" font-size="2">
+            {{--  <table border="0" align="center" font-size="2">
                 <tr>
                     <td width="25"> </td>
                     <td width="20"> </td>
@@ -140,7 +140,7 @@
                     <td width="10"> </td>
                     <td width="410">Statistik Sektoral Toner Printer</td>
                 </tr>
-            </table>
+            </table>  --}}
             <table border="0" align="center" font-size="2">
                 <tr>
                     <td width="25"> </td>
@@ -228,7 +228,7 @@
                     <td width="20">g.</td>
                     <td width="100">Nilai</td>
                     <td width="10">:</td>
-                    <td width="410">Rp.5.546.670,-</td>
+                    <td width="410">Rp.{{$pengadaan1->pengadaan->nilai_negosiasi}},-</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
@@ -244,13 +244,13 @@
             <table border="0" align="center" font-size="2">
                 <tr>
                     <td width="20">2.</td>
-                    <td width="540">PIHAK KEDUA telah mencapai kemajuan Hasil Belanja Belanja Alat/Bahan</td>
+                    <td width="540">PIHAK KEDUA telah mencapai kemajuan Hasil {{$pengadaan1->pengadaan->jenis_pengadaan}}</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
                 <tr>
                     <td width="25"> </td>
-                    <td width="540">Kapasitas Kelembagaan Statistik Sektoral Toner Printer , dengan perhitungan nilai kontrak sebagai berikut :</td>
+                    <td width="540">, dengan perhitungan nilai kontrak sebagai berikut :</td>
                 </tr>
             </table>
             <br>
@@ -260,7 +260,7 @@
                     <td width="20">a.</td>
                     <td width="400">Nilai Kontrak Pekerjaan</td>
                     <td width="10">:</td>
-                    <td width="110">Rp.5.546.670,-</td>
+                    <td width="110">Rp.{{$pengadaan1->pengadaan->nilai_negosiasi}},-</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
@@ -289,7 +289,7 @@
                     <td width="20">d.</td>
                     <td width="400">Pembayaran termin saat ini</td>
                     <td width="10">:</td>
-                    <td width="110">Rp.5.546.670,-</td>
+                    <td width="110">Rp.{{$pengadaan1->pengadaan->nilai_negosiasi}},-</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
@@ -312,7 +312,7 @@
             <table border="0" align="center" font-size="2">
                 <tr>
                     <td width="25"> </td>
-                    <td width="540">Rp. 5.546.670,- (Terbilang : Lima Juta Lima Ratus Empat Puluh Enam Ribu Enam Ratus Tujuh Puluh Rupiah)</td>
+                    <td width="540">Rp. {{$pengadaan1->pengadaan->nilai_negosiasi}},- (Terbilang : {{$pengadaan1->pengadaan->deskripsi_negosiasi}})</td>
                 </tr>
             </table>
             <br>
