@@ -107,10 +107,10 @@
                                         @elseif($p1->kegiatan == 'BA. Penjelasan Pekerjaan')
                                         <a class="btn btn-info" href="{{ route('pengadaan1.show11',$p1->id) }}">Detail</a>
                                         <a class="btn btn-danger " href="{{route('pengadaan1.print11',$p1->id)}}">Print</a>
-                                        
+
                                         @elseif($p1->kegiatan == 'Pemasukan Penawaran')
                                         <a class="btn btn-info" href="{{ route('pengadaan1.show12',$p1->id) }}">Detail</a>
-                                        
+
                                         @elseif($p1->kegiatan == 'BA. Pembukaan Penawaran')
                                         <a class="btn btn-info" href="{{ route('pengadaan1.show13',$p1->id) }}">Detail</a>
                                         <a class="btn btn-danger " href="{{route('pengadaan1.print13',$p1->id)}}">Print</a>
@@ -139,6 +139,7 @@
 
                                         @elseif($p1->kegiatan == 'Penunjukan Penyedia Barang/Jasa')
                                         <a class="btn btn-info" href="{{ route('pengadaan1.show20',$p1->id) }}">Detail</a>
+                                        <a class="btn btn-danger " href="{{route('pengadaan1.print20',$p1->id)}}">Print</a>
 
                                         @elseif($p1->kegiatan == 'Surat Perintah Kerja')
                                         <a class="btn btn-info" href="{{ route('pengadaan1.show21',$p1->id) }}">Detail</a>

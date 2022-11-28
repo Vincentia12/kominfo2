@@ -331,12 +331,16 @@ class PdfController extends Controller
     }
 
     // Penunjukan Penyedia Barang/Jasa
-    public function undangan_penyedia()
+    public function undangan_penyedia(Request $request, $id)
     {
 
+        $pengadaan1 = Jadwal::find($id);
+
         $pdf = PDF::loadview(
-            'cetak.undangan_penyedia',
-        );
+            'cetak/undangan_penyedia',
+            ['pengadaan1' => $pengadaan1],
+        )->setPaper('f4', 'potrait');
+        // )->setPaper('f4', 'legal');
         return $pdf->download('UndanganPenyedia.pdf');
     }
 
