@@ -171,7 +171,6 @@ Route::get('pengadaan1/print15/{id}', [PdfController::class, 'ba_nego'])->name('
 //17
 Route::get('pengadaan1/print18/{id}', [PdfController::class, 'nota_dinas3'])->name('pengadaan1.print18');
 Route::get('pengadaan1/print19/{id}', [PdfController::class, 'penetapan_penyedia'])->name('pengadaan1.print19');
-//20
 Route::get('pengadaan1/print20/{id}', [PdfController::class, 'undangan_penyedia'])->name('pengadaan1.print20');
 Route::get('pengadaan1/print21/{id}', [PdfController::class, 'surat_perintah_kerja'])->name('pengadaan1.print21');
 Route::get('pengadaan1/print22/{id}', [PdfController::class, 'surat_perintah_mulai_kerja'])->name('pengadaan1.print22');
