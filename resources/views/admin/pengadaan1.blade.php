@@ -133,6 +133,7 @@
 
                                         @elseif($p1->kegiatan == 'Penetapan Penyedia Jasa')
                                         <a class="btn btn-info" href="{{ route('pengadaan1.show19',$p1->id) }}">Detail</a>
+                                        <a class="btn btn-danger " href="{{route('pengadaan1.print19',$p1->id)}}">Print</a>
 
                                         @elseif($p1->kegiatan == 'Penunjukan Penyedia Barang/Jasa')
                                         <a class="btn btn-info" href="{{ route('pengadaan1.show20',$p1->id) }}">Detail</a>

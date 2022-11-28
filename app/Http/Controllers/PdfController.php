@@ -315,12 +315,16 @@ class PdfController extends Controller
     }
 
     // Penetapan Penyedia Jasa
-    public function penetapan_penyedia()
+    public function penetapan_penyedia(Request $request, $id)
     {
 
+        $pengadaan1 = Jadwal::find($id);
+
         $pdf = PDF::loadview(
-            'cetak.penetapan_penyedia',
-        );
+            'cetak/penetapan_penyedia',
+            ['pengadaan1' => $pengadaan1],
+        )->setPaper('f4', 'potrait');
+        // )->setPaper('f4', 'legal');
         return $pdf->download('PenetapanPenyedia.pdf');
     }
 
