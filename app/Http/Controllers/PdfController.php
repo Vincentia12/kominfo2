@@ -341,7 +341,28 @@ class PdfController extends Controller
     }
 
     // Surat Perintah Kerja
+    public function surat_perintah_kerja(Request $request, $id)
+    {
 
+        $pengadaan1 = Jadwal::find($id);
+        $barang = DB::table('barangs')
+        // ->join('pengadaans.id', '=', 'barangs.pengadaan_id')
+        // ->join('pelaksanas.pelaksana_id', '=', 'pelaksanas.id')
+            ->where('barangs.pengadaan_id', 'like', "%" . $pengadaan1->pengadaan_id . "%")
+            ->get();
+        $pejabat = DB::table('pejabats')
+            ->where('id', '=', 1)
+            ->get();
+
+        $pdf = PDF::loadview(
+            'cetak/surat_perintah_kerja',
+            ['pengadaan1' => $pengadaan1],
+            ['barang' => $barang],
+            // ['pejabat' => $pejabat],
+        )->setPaper('f4', 'potrait');
+        // )->setPaper('f4', 'legal');
+        return $pdf->download('surat perintah kerja.pdf');
+    }
     // Surat Perintah Mulai Kerja (SPMK)
 
     // BA. Serah Terima Hasil Pekerjaan
