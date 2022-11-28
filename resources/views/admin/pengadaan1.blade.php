@@ -146,6 +146,7 @@
 
                                         @elseif($p1->kegiatan == 'Surat Perintah Mulai Kerja (SPMK)')
                                         <a class="btn btn-info" href="{{ route('pengadaan1.show22',$p1->id) }}">Detail</a>
+                                        <a class="btn btn-danger " href="{{route('pengadaan1.print22',$p1->id)}}">Print</a>
 
                                         @elseif($p1->kegiatan == 'BA. Serah Terima Hasil Pekerjaan')
                                         <a class="btn btn-info" href="{{ route('pengadaan1.show23',$p1->id) }}">Detail</a>
