@@ -169,7 +169,7 @@ Route::get('pengadaan1/print14/{id}', [PdfController::class, 'undangan_nego'])->
 Route::get('pengadaan1/print15/{id}', [PdfController::class, 'ba_nego'])->name('pengadaan1.print15');
 //16
 //17
-//18
+Route::get('pengadaan1/print18/{id}', [PdfController::class, 'nota_dinas3'])->name('pengadaan1.print18');
 Route::get('pengadaan1/print19/{id}', [PdfController::class, 'penetapan_penyedia'])->name('pengadaan1.print19');
 Route::get('print_notadinas4', [PdfController::class, 'nota_dinas4']);
 Route::get('ba_pekerjaan', [PdfController::class, 'ba_pekerjaan']);

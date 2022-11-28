@@ -1,3 +1,5 @@
+<!-- Content Row -->
+
 @if ($errors->any())
 <div class="alert alert-danger">
     <strong>Whoops!</strong> There were some problems with your input.<br><br>
@@ -30,7 +32,7 @@
             <tr>
                 <td>Dari</td>
                 <td>:</td>
-                <td>Kuasa Pengguna Anggaran</td>
+                <td>Pejabat Pengadaan</td>
             </tr>
             <tr>
                 <td>Tanggal</td>
@@ -56,79 +58,84 @@
             <tr>
                 <td>Perihal</td>
                 <td>:</td>
-                {{-- <td width="475">Pemrosesan Administrasi Pengadaan</td> --}}
-                <td>Pemrosesan Administrasi Pengadaan {{ $pengadaan1->pengadaan->jenis_pengadaan}}</td>
-                {{-- <td width="475">Pemrosesan Administrasi Pengadaan {{ $pengadaan->jenis_pengadaan}}</td> --}}
+                <td>Penyampaian Berita Acara Proses Pengadaan Langsung</td>
             </tr>
         </table>
         <br>
     </div>
     <hr>
-    <div class="row">
-        <br>
-        <table font-size="2">
-            <tr>
-                <td style="text-indent: 45px;">Bersama ini ini diberitahukan, bahwa DPA-SKPD Bagian Data dan Statistik pada Dinas Komunikasi dan Informatika Provinsi Jawa Timur Tahun Anggaran {{ $pengadaan1->tanggal}}, kode rekening {{ $pengadaan1->pengadaan->pelaksana->kode_rekening}} pengadaan {{ $pengadaan1->pengadaan->jenis_pengadaan}} keperluan Dinas Komunikasi dan Informatika Provinsi Jawa Timur dengan rincian sebagai berikut :</td>
-            </tr>
-        </table>
-    </div>
-    <br>
-    <div class="row">
-        <table width="565px" border="1" align="center">
-            <thead>
-                <tr align="center">
-                    <th width="50px" scope="col">id pengadaan</th>
-                    {{-- <th width="50px" scope="col">No</th> --}}
-                    <th width="265px" scope="col">Belanja Alat/Bahan Untuk Kegiatan Kantor </th>
-                    <th width="100px" scope="col">Jumlah Barang</th>
-                    <th width="100px" scope="col">Satuan</th>
-                    <th width="100px" scope="col">Harga Satuan</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach ($barang as $brg)
 
-                <tr>
-                    <th scope="row">{{$brg->pengadaan_id}}</th>
-                    <td>{{$brg->barang}}</td>
-                    <td align="center">{{$brg->jumlah_barang}}</ /td>
-                    <td align="center">{{$brg->satuan}}</td>
-                    <td align="center">{{$brg->harga_satuan}}</td>
-                </tr>
-                @endforeach
-            </tbody>
-        </table>
-    </div>
     <br>
-    <div>
-        <table font-size="2">
+    <div class="row">
+        <table>
             <tr>
-                <td style="text-indent: 45px;">Sehubungan dengan hal tersebut diatas, untuk penyedia Barang/Jasa ditunjuk {{$pengadaan1->pengadaan->pelaksana->pt_pelaksana}}, {{$pengadaan1->pengadaan->pelaksana->alamat}}. Untuk itu diminta bantuannya untuk segera diproses sesuai prosedur yang berlaku. Demikian untuk pelaksanaannya.</td>
-            </tr>
-        </table>
-        <br>
-    </div>
-    <div style="text-align: center">
-        <table style="width: 50%; text-align: left; float: right;">
-            <tr>
-                <td>PEJABAT PEMBUAT KOMITMEN</td>
-            </tr>
-        </table>
-        <br>
-        <br>
-        <br>
-        <br>
-        <table style="width: 50%; text-align: left; float: right;">
-            <tr>
-                <td>
-                    I WAYAN RUDY ARTHA, S.Kom
-                    <br>
-                    NIP. 19770517 200901 1 005
-                </td>
+                <td width="8"></td>
+                <td style="text-align: left ;text-align: justify; text-indent: 45px;">Sesuai dengan Berita Acara Hasil Pengadaan Langsung Nomor : 020/ 654.10/114.6/2022 tanggal 20 Juli 2022 untuk pengadaan{{$pengadaan1->pengadaan->jenis_pengadaan}} Printer maka bersama ini kami sampaikan administrasi proses pengadaan langsung yang telah selesai dilaksanakan terhadap :</td>
             </tr>
         </table>
     </div>
+
+    <br>
+    <div style="text-align:center ;">
+        <table class="table" border="0" align="center" font-size="1">
+            <tr>
+                <td width="120">Nama Perusahaan</td>
+                <td>:</td>
+                <!-- diubah -->
+                <td>{{ $pengadaan1->pengadaan->pelaksana->pt_pelaksana }}</td>
+            </tr>
+            <tr>
+                <td width="120">Alamat</td>
+                <td>:</td>
+                <td>{{ $pengadaan1->pengadaan->pelaksana->alamat }}</td>
+            </tr>
+            <tr>
+                <td width="120">NPWP</td>
+                <td>:</td>
+                <td>{{ $pengadaan1->pengadaan->pelaksana->npwp }}</td>
+            </tr>
+            <tr>
+                <td width="120">Harga Penawaran Setelah Negosiasi</td>
+                <td>:</td>
+                <td>Rp. {{ $pengadaan1->pengadaan->nilai_negosiasi}},-({{ $pengadaan1->pengadaan->deskripsi_negosiasi}})</td>
+            </tr>
+        </table>
+    </div>
+
+    <br>
+    <div class="row">
+        <table class="table" border="0" align="" font-size="1">
+            <tr>
+                <td width="42"></td>
+                <td>Demikian atas perhatiannya diucapkan terima kasih.</td>
+            </tr>
+        </table>
+    </div>
+
+    <br>
+    <br><br>
+    <div style="text-align:center ;">
+        <table style="text-align: center" border="0" font-size="0">
+            <tr>
+                <td width="300"> </td>
+                <td>PEJABAT PENGADAAN</td>
+                {{-- <td width="50"> </td> --}}
+            </tr>
+            <br>
+            <br>
+            <br>
+            <br>
+            <tr>
+                <td width="300"> </td>
+                <td width="250">ADI KURNIAWAN.S.Kom.,M.Kom</td>
+                {{-- <td width="50"> </td> --}}
+            </tr>
+            <tr>
+                <td width="300"> </td>
+                <td>NIP. 19890618 201403 1 002</td>
+                {{-- <td width="50"> </td> --}}
+            </tr>
+        </table>
+    </div>
+
 </div>
-
-
-{{-- @endsection --}}
