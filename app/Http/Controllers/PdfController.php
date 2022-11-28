@@ -85,7 +85,7 @@ class PdfController extends Controller
             ['barang' => $barang],
             // ['pejabat' => $pejabat],
             // );
-        )->setPaper('a4', 'potrait');
+        )->setPaper('f4', 'potrait');
         return $pdf->download('NotaDinas2.pdf');
         // dd($pdf);
     }
@@ -113,7 +113,7 @@ class PdfController extends Controller
             // ['barang' => $barang],
             // ['pejabat' => $pejabat],
             // );
-        );
+        )->setPaper('f4', 'potrait');
         return $pdf->download('UndanganPersiapan.pdf');
         // dd($pdf);
     }
@@ -138,7 +138,7 @@ class PdfController extends Controller
         $pdf = PDF::loadview(
             'cetak/pakta_integritas',
             ['pengadaan1' => $pengadaan1],
-        );
+        )->setPaper('f4', 'potrait');
         return $pdf->download('PaktaIntegritas.pdf');
     }
 
@@ -166,7 +166,7 @@ class PdfController extends Controller
         $pdf = PDF::loadview(
             'cetak/daftar_hadir',
             ['pengadaan1' => $pengadaan1],
-        );
+        )->setPaper('f4', 'potrait');
         return $pdf->download('Daftar_Hadir.pdf');
     }
 
@@ -190,7 +190,7 @@ class PdfController extends Controller
         $pdf = PDF::loadview(
             'cetak/ba_evaluasi',
             ['pengadaan1' => $pengadaan1],
-        );
+        )->setPaper('f4', 'potrait');
         return $pdf->download('Berita_Acara_Evaluasi.pdf');
     }
 
@@ -239,7 +239,7 @@ class PdfController extends Controller
         $pdf = PDF::loadview(
             'cetak/undangan_penawaran',
             ['pengadaan1' => $pengadaan1],
-        );
+        )->setPaper('f4', 'potrait');
         return $pdf->download('UndanganPenawaran.pdf');
     }
 
@@ -259,12 +259,14 @@ class PdfController extends Controller
     // Pemasukan Penawaran
 
     // BA. Pembukaan Penawaran
-    public function ba_penawaran()
+    public function ba_penawaran(Request $request, $id)
     {
+        $pengadaan1 = Jadwal::find($id);
 
         $pdf = PDF::loadview(
-            'cetak.ba_penawaran',
-        );
+            'cetak/ba_penawaran',
+            ['pengadaan1' => $pengadaan1],
+        )->setPaper('f4', 'potrait');
         return $pdf->download('BAPenawaran.pdf');
     }
 
