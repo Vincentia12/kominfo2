@@ -399,6 +399,20 @@ class PdfController extends Controller
         return $pdf->download('BeritaAcara_SerahTerima.pdf');
     }
 
+    // BA. Penyerahan Barang/Jasa
+    public function ba_peny_barang(Request $request, $id)
+    {
+
+        $pengadaan1 = Jadwal::find($id);
+
+        $pdf = PDF::loadview(
+            'cetak/ba_peny_barang',
+            ['pengadaan1' => $pengadaan1],
+        )->setPaper('f4', 'potrait');
+        // )->setPaper('f4', 'legal');
+        return $pdf->download('BeritaAcara_PenyerahanBarang/Jasa.pdf');
+    }
+
     // BA. Hasil Pemeriksaan Administratif
 
     // BA. Hasil Pembayaran
