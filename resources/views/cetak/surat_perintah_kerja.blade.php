@@ -48,7 +48,7 @@
     </div>
 
     {{-- isi --}}
-    <div style="text-align: center;">
+    <div>
         <div>
             <table font-size="1" border="0">
                 <tr>
@@ -163,9 +163,7 @@
                 </thead>
                     {{-- </td> --}}
                 <tbody>
-                    @php
-			$no = 1;	
-		@endphp
+                    @php $no = 1; @endphp
                     @foreach ($barang as $brg)
                         <tr>
                             <td>{{$no++}}</td>
@@ -174,12 +172,20 @@
                             <td>{{$brg->jumlah_barang}}</td>
                             <td>{{$brg->satuan}}</td>
                             <td>{{$brg->harga_satuan}}</td>
-                            <td></td>
+                            @php
+                            // $jumlahbarang = $barang["jumlah_barang"];
+                            $jumlahbarang = $brg->jumlah_barang;
+                                $hargabarang = $brg->harga_satuan;
+                                // $hargabarang = $barang["harga_barang"];
+
+                                $total = $jumlahbarang + $hargabarang;
+                            @endphp
+                            <td>{{$total}}</td>
                         </tr>
                     @endforeach
                 </tbody>
             </table>
-            <table border="0">
+            <table>
                 <tr>
                     <td>6.</td>
                     <td colspan="2">Pembayaran dengan Sumber Dana APBD Provinsi Jawa Timur Tahun Anggaran 2022, dibebankan pada DPA - SKPD Dinas Komunikasi dan Informatika Provinsi Jawa Timur Tahun Anggaran 2022, Kode Rekening {{$pengadaan1->pengadaan->pelaksana->kode_rekening}}</td>

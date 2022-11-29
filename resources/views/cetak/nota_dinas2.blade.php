@@ -77,8 +77,8 @@
         <table width="565px" border="1" align="center">
             <thead>
                 <tr align="center">
-                    <th width="50px" scope="col">id pengadaan</th>
-                    {{-- <th width="50px" scope="col">No</th> --}}
+                    {{-- <th width="50px" scope="col">id pengadaan</th> --}}
+                    <th width="50px" scope="col">No</th>
                     <th width="265px" scope="col">Belanja Alat/Bahan Untuk Kegiatan Kantor </th>
                     <th width="100px" scope="col">Jumlah Barang</th>
                     <th width="100px" scope="col">Satuan</th>
@@ -86,10 +86,12 @@
                 </tr>
             </thead>
             <tbody>
+                @php $no = 1; @endphp
                 @foreach ($barang as $brg)
                     
                 <tr>
-                    <th scope="row">{{$brg->pengadaan_id}}</th>
+                    <th>{{$no++}}</th>
+                    {{-- <th scope="row">{{$brg->pengadaan_id}}</th> --}}
                     <td>{{$brg->barang}}</td>
                     <td align="center">{{$brg->jumlah_barang}}<//td>
                     <td align="center">{{$brg->satuan}}</td>

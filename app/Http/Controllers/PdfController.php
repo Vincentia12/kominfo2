@@ -353,15 +353,19 @@ class PdfController extends Controller
         // ->join('pengadaans.id', '=', 'barangs.pengadaan_id')
         // ->join('pelaksanas.pelaksana_id', '=', 'pelaksanas.id')
             ->where('barangs.pengadaan_id', 'like', "%" . $pengadaan1->pengadaan_id . "%")
+            // ->select('barangs.harga_satuan', '*', 'barangs.jumlah_barang')
             ->get();
         $pejabat = DB::table('pejabats')
             ->where('id', '=', 1)
             ->get();
+        // $total = DB::table('barangs')
+        // ->get();
 
         $pdf = PDF::loadview(
             'cetak/surat_perintah_kerja',
             ['pengadaan1' => $pengadaan1],
             ['barang' => $barang],
+            // ['total' => $total],
             // ['pejabat' => $pejabat],
         )->setPaper('f4', 'potrait');
         // )->setPaper('f4', 'legal');
