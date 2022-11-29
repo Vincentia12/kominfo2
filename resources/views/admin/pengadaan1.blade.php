@@ -8,7 +8,7 @@
             <div class="card-body">
                 <h3>Data Pengadaan <i class="fa-solid fa-less-than-equal "></i> 50 juta</h3>
                 <br>
-                <form class="form" method="get" action="{{ route('cari1') }}">
+                <!-- <form class="form" method="get" action="{{ route('cari1') }}">
                     <div class="form-group w-100 mb-9 mx-sm-3">
                         <label for="cari" class="d-block mr-2 ">Pencarian</label>
                         {{-- <input type="text" name="cari" class="form-control w-75 d-inline" id="cari" placeholder="Masukkan keyword"> --}}
@@ -20,7 +20,7 @@
                         </select>
                         <button type="submit" class="btn btn-primary mb-1">Cari</button>
                     </div>
-                </form>
+                </form> -->
                 <div class="table-responsive">
                     @if ($message = Session::get('success'))
                     <div class="alert alert-success">
@@ -28,7 +28,7 @@
                     </div>
                     @endif
                     <div class="mb-4">
-                        <table class="table table-bordered" style="width:100%">
+                        <table id="data1" class="table table-bordered" style="width:100%">
                             <thead>
                                 <tr>
                                     <th>Pelaksana</th>
@@ -151,6 +151,7 @@
 
                                         @elseif($p1->kegiatan == 'BA. Serah Terima Hasil Pekerjaan')
                                         <a class="btn btn-info" href="{{ route('pengadaan1.show23',$p1->id) }}">Detail</a>
+                                        <a class="btn btn-danger " href="{{route('pengadaan1.print23',$p1->id)}}">Print</a>
 
                                         @elseif($p1->kegiatan == 'BA. Penyerahan Barang/Jasa')
                                         <a class="btn btn-info" href="{{ route('pengadaan1.show24',$p1->id) }}">Detail</a>

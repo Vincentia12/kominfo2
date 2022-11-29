@@ -350,8 +350,8 @@ class PdfController extends Controller
 
         $pengadaan1 = Jadwal::find($id);
         $barang = DB::table('barangs')
-        // ->join('pengadaans.id', '=', 'barangs.pengadaan_id')
-        // ->join('pelaksanas.pelaksana_id', '=', 'pelaksanas.id')
+            // ->join('pengadaans.id', '=', 'barangs.pengadaan_id')
+            // ->join('pelaksanas.pelaksana_id', '=', 'pelaksanas.id')
             ->where('barangs.pengadaan_id', 'like', "%" . $pengadaan1->pengadaan_id . "%")
             // ->select('barangs.harga_satuan', '*', 'barangs.jumlah_barang')
             ->get();
@@ -386,6 +386,18 @@ class PdfController extends Controller
     }
 
     // BA. Serah Terima Hasil Pekerjaan
+    public function ba_serah_terima(Request $request, $id)
+    {
+
+        $pengadaan1 = Jadwal::find($id);
+
+        $pdf = PDF::loadview(
+            'cetak/ba_serah_terima',
+            ['pengadaan1' => $pengadaan1],
+        )->setPaper('f4', 'potrait');
+        // )->setPaper('f4', 'legal');
+        return $pdf->download('BeritaAcara_SerahTerima.pdf');
+    }
 
     // BA. Hasil Pemeriksaan Administratif
 
