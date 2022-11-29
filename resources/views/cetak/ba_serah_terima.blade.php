@@ -279,7 +279,7 @@
             <tr>
                 <td width="20"> </td>
                 <td width="250"><u>{{$pengadaan1->pengadaan->pelaksana->nama_pelaksana}}</u></td>
-                <td width="250"><u>ADI KURNIAWAN.S.Kom.,M.Kom</u></td>
+                <td width="250"><u>I WAYAN RUDY ARTHA, S.Kom</u></td>
                 <td width="20"> </td>
             </tr>
         </table>
@@ -289,7 +289,7 @@
             <tr>
                 <td width="20"> </td>
                 <td width="250">{{$pengadaan1->pengadaan->pelaksana->jabatan_pelaksana}} </td>
-                <td width="250">NIP. 19890618 201403 1 002</td>
+                <td width="250">NIP. 19770517 200901 1 005</td>
                 <td width="20"> </td>
             </tr>
         </table>
