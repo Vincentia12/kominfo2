@@ -416,5 +416,16 @@ class PdfController extends Controller
     // BA. Hasil Pemeriksaan Administratif
 
     // BA. Hasil Pembayaran
+    public function ba_pembayaran(Request $request, $id)
+    {
 
+        $pengadaan1 = Jadwal::find($id);
+
+        $pdf = PDF::loadview(
+            'cetak/ba_pembayaran',
+            ['pengadaan1' => $pengadaan1],
+        )->setPaper('f4', 'potrait');
+        // )->setPaper('f4', 'legal');
+        return $pdf->download('BeritaAcara_HasilPembayaran.pdf');
+    }
 }

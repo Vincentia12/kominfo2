@@ -162,6 +162,7 @@
 
                                         @elseif($p1->kegiatan == 'BA. Hasil Pembayaran')
                                         <a class="btn btn-info" href="{{ route('pengadaan1.show26',$p1->id) }}">Detail</a>
+                                        <a class="btn btn-danger " href="{{route('pengadaan1.print26',$p1->id)}}">Print</a>
                                         <!-- {{-- <a class="btn btn-info" name="show1">Detail</a> --}} -->
                                         <!-- {{-- url('/print_notadinas1') --}} -->
                                         @else

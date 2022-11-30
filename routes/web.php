@@ -176,6 +176,8 @@ Route::get('pengadaan1/print21/{id}', [PdfController::class, 'surat_perintah_ker
 Route::get('pengadaan1/print22/{id}', [PdfController::class, 'surat_perintah_mulai_kerja'])->name('pengadaan1.print22');
 Route::get('pengadaan1/print23/{id}', [PdfController::class, 'ba_serah_terima'])->name('pengadaan1.print23');
 Route::get('pengadaan1/print24/{id}', [PdfController::class, 'ba_peny_barang'])->name('pengadaan1.print24');
+//25
+Route::get('pengadaan1/print26/{id}', [PdfController::class, 'ba_pembayaran'])->name('pengadaan1.print26');
 Route::get('print_notadinas4', [PdfController::class, 'nota_dinas4']);
 Route::get('ba_pekerjaan', [PdfController::class, 'ba_pekerjaan']);
 
