@@ -139,6 +139,32 @@ Route::get('/pengadaan1/show25/{id}', [PengadaanController::class, 'show25'])->n
 Route::get('/pengadaan1/show26/{id}', [PengadaanController::class, 'show26'])->name('pengadaan1.show26');
 // Route::get('/lihat', PengadaanController::class, 'show1')->name('show1');
 
+Route::get('/pengadaan2/show1/{id}', [PengadaanController::class, 'show1'])->name('pengadaan2.show1');
+Route::get('/pengadaan2/show2/{id}', [PengadaanController::class, 'show2'])->name('pengadaan2.show2');
+Route::get('/pengadaan2/show3/{id}', [PengadaanController::class, 'show3'])->name('pengadaan2.show3');
+Route::get('/pengadaan2/show4/{id}', [PengadaanController::class, 'show4'])->name('pengadaan2.show4');
+Route::get('/pengadaan2/show5/{id}', [PengadaanController::class, 'show5'])->name('pengadaan2.show5');
+Route::get('/pengadaan2/show6/{id}', [PengadaanController::class, 'show6'])->name('pengadaan2.show6');
+Route::get('/pengadaan2/show7/{id}', [PengadaanController::class, 'show7'])->name('pengadaan2.show7');
+Route::get('/pengadaan2/show8/{id}', [PengadaanController::class, 'show8'])->name('pengadaan2.show8');
+Route::get('/pengadaan2/show9/{id}', [PengadaanController::class, 'show9'])->name('pengadaan2.show9');
+Route::get('/pengadaan2/show10/{id}', [PengadaanController::class, 'show10'])->name('pengadaan2.show10');
+Route::get('/pengadaan2/show11/{id}', [PengadaanController::class, 'show11'])->name('pengadaan2.show11');
+Route::get('/pengadaan2/show12/{id}', [PengadaanController::class, 'show11'])->name('pengadaan2.show12');
+Route::get('/pengadaan2/show13/{id}', [PengadaanController::class, 'show11'])->name('pengadaan2.show13');
+Route::get('/pengadaan2/show14/{id}', [PengadaanController::class, 'show11'])->name('pengadaan2.show14');
+Route::get('/pengadaan2/show15/{id}', [PengadaanController::class, 'show11'])->name('pengadaan2.show15');
+Route::get('/pengadaan2/show16/{id}', [PengadaanController::class, 'show16'])->name('pengadaan2.show16');
+Route::get('/pengadaan2/show17/{id}', [PengadaanController::class, 'show17'])->name('pengadaan2.show17');
+Route::get('/pengadaan2/show18/{id}', [PengadaanController::class, 'show18'])->name('pengadaan2.show18');
+Route::get('/pengadaan2/show19/{id}', [PengadaanController::class, 'show19'])->name('pengadaan2.show19');
+Route::get('/pengadaan2/show20/{id}', [PengadaanController::class, 'show20'])->name('pengadaan2.show20');
+Route::get('/pengadaan2/show21/{id}', [PengadaanController::class, 'show21'])->name('pengadaan2.show21');
+Route::get('/pengadaan2/show22/{id}', [PengadaanController::class, 'show22'])->name('pengadaan2.show22');
+Route::get('/pengadaan2/show23/{id}', [PengadaanController::class, 'show23'])->name('pengadaan2.show23');
+Route::get('/pengadaan2/show24/{id}', [PengadaanController::class, 'show24'])->name('pengadaan2.show24');
+Route::get('/pengadaan2/show25/{id}', [PengadaanController::class, 'show25'])->name('pengadaan2.show25');
+Route::get('/pengadaan2/show26/{id}', [PengadaanController::class, 'show26'])->name('pengadaan2.show26');
 // Route::get('/pengadaan1', [PengadaanController::class, 'index1'], [JadwalController::class, 'index1']);
 Route::get('/pengadaan1', [PengadaanController::class, 'index1']);
 // Route::get('/pengadaan1/detail/{id}', [PengadaanController::class, 'dt1']);
@@ -176,8 +202,35 @@ Route::get('pengadaan1/print21/{id}', [PdfController::class, 'surat_perintah_ker
 Route::get('pengadaan1/print22/{id}', [PdfController::class, 'surat_perintah_mulai_kerja'])->name('pengadaan1.print22');
 Route::get('pengadaan1/print23/{id}', [PdfController::class, 'ba_serah_terima'])->name('pengadaan1.print23');
 Route::get('pengadaan1/print24/{id}', [PdfController::class, 'ba_peny_barang'])->name('pengadaan1.print24');
-Route::get('print_notadinas4', [PdfController::class, 'nota_dinas4']);
-Route::get('ba_pekerjaan', [PdfController::class, 'ba_pekerjaan']);
+// Route::get('print_notadinas4', [PdfController::class, 'nota_dinas4']);
+Route::get('print', [PdfController::class, 'index']);
+
+
+Route::get('pengadaan2/print1/{id}', [PdfController::class, 'print1'])->name('pengadaan2.print1');
+Route::get('pengadaan2/print2/{id}', [PdfController::class, 'nota_dinas2'])->name('pengadaan2.print2');
+Route::get('pengadaan2/print3/{id}', [PdfController::class, 'undangan_persiapan'])->name('pengadaan2.print3');
+Route::get('pengadaan2/print4/{id}', [PdfController::class, 'pakta_integritas'])->name('pengadaan2.print4');
+//5
+//6
+Route::get('pengadaan2/print7/{id}', [PdfController::class, 'daftar_hadir'])->name('pengadaan2.print7');
+Route::get('pengadaan2/print8/{id}', [PdfController::class, 'ba_evaluasi'])->name('pengadaan.print8');
+Route::get('pengadaan2/print9/{id}', [PdfController::class, 'lampiran_ba_evaluasi'])->name('pengadaan2.print9');
+Route::get('pengadaan2/print10/{id}', [PdfController::class, 'undangan_penawaran'])->name('pengadaan2.print10');
+Route::get('pengadaan2/print11/{id}', [PdfController::class, 'ba_pekerjaan'])->name('pengadaan2.print11');
+//12
+Route::get('pengadaan2/print13/{id}', [PdfController::class, 'ba_penawaran'])->name('pengadaan2.print13');
+Route::get('pengadaan2/print14/{id}', [PdfController::class, 'undangan_nego'])->name('pengadaan2.print14');
+Route::get('pengadaan2/print15/{id}', [PdfController::class, 'ba_nego'])->name('pengadaan2.print15');
+//16
+//17
+Route::get('pengadaan2/print18/{id}', [PdfController::class, 'nota_dinas3'])->name('pengadaan2.print18');
+Route::get('pengadaan2/print19/{id}', [PdfController::class, 'penetapan_penyedia'])->name('pengadaan2.print19');
+Route::get('pengadaan2/print20/{id}', [PdfController::class, 'undangan_penyedia'])->name('pengadaan2.print20');
+Route::get('pengadaan2/print21/{id}', [PdfController::class, 'surat_perintah_kerja'])->name('pengadaan2.print21');
+Route::get('pengadaan2/print22/{id}', [PdfController::class, 'surat_perintah_mulai_kerja'])->name('pengadaan2.print22');
+Route::get('pengadaan2/print23/{id}', [PdfController::class, 'ba_serah_terima'])->name('pengadaan2.print23');
+Route::get('pengadaan2/print24/{id}', [PdfController::class, 'ba_peny_barang'])->name('pengadaan2.print24');
+// Route::get('ba_pekerjaan', [PdfController::class, 'ba_pekerjaan']);
 
 
 

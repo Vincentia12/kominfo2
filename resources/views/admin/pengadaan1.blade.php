@@ -1,11 +1,23 @@
 @extends('layouts/index')
-
+@section('input-data', 'active')
+@section('input-data-collapse', 'collapsed')
+@section('input-sudah', 'active')
 @section('content')
 
-<div class="row">
-    <div class="col-lg-12 grid-margin stretch-card">
-        <div class="card shadow">
-            <div class="card-body">
+@if ($errors->any())
+<div class="alert alert-danger">
+  <strong>Whoops!</strong> There were some problems with your input.<br><br>
+  <ul>
+    @foreach ($errors->all() as $error)
+    <li>{{ $error }}</li>
+    @endforeach
+  </ul>
+</div>
+@endif
+<div class="col-lg-12 grid-margin stretch-card">
+    <div class="card shadow">
+        <div class="card-body">
+            <div class="table-responsive">
                 <h3>Data Pengadaan <i class="fa-solid fa-less-than-equal "></i> 50 juta</h3>
                 <br>
                 <!-- <form class="form" method="get" action="{{ route('cari1') }}">
@@ -14,21 +26,23 @@
                         {{-- <input type="text" name="cari" class="form-control w-75 d-inline" id="cari" placeholder="Masukkan keyword"> --}}
                         <select class="form-control w-25 mb-4 d-inline" name="cari1" id="cari1">
                             <option> Pilih Pengadaan </option>
-                            @foreach ($pengadaan1 as $pd1)
-                            <option value="{{$pd1->pengadaan_id}}">{{ $pd1->jenis_pengadaan }}</option>
-                            @endforeach
-                        </select>
-                        <button type="submit" class="btn btn-primary mb-1">Cari</button>
-                    </div>
-                </form> -->
-                <div class="table-responsive">
+                            {{-- @foreach ($pengadaan1 as $pd1)
+                                <option value="{{$pd1->pengadaan_id}}">{{ $pd1->jenis_pengadaan }}</option>
+                                @endforeach --}}
+                            </select>
+                            <button type="submit" class="btn btn-primary mb-1">Cari</button>
+                        </div>
+                    </form> -->
+                    {{-- <div class="row"> --}}
                     @if ($message = Session::get('success'))
                     <div class="alert alert-success">
                         <p>{{ $message }}</p>
                     </div>
                     @endif
-                    <div class="mb-4">
-                        <table id="data1" class="table table-bordered" style="width:100%">
+                    {{-- <div class="mb-4"> --}}
+                        {{-- <table id="datatable1" class="table table-bordered" style="width:100%"> --}}
+                            {{-- <table id="data1" class="table table-bordered" cellspacing="0"> --}}
+                            <table id="datatable1" class="table table-bordered" cellspacing="0">
                             <thead>
                                 <tr>
                                     <th>Pelaksana</th>
@@ -185,10 +199,37 @@
                                 {{-- @endif --}}
                             </tbody>
                         </table>
-                    </div>
-                </div>
+                    {{-- </div> --}}
+                {{-- </div> --}}
             </div>
         </div>
     </div>
 
     @endsection
+
+    <script>
+        $(document).ready(function() {
+        // DataTable initialisation
+        $('#datatable1').DataTable({
+            "paging": true,
+            "autoWidth": true,
+            "columnDefs": [
+            {
+                "targets": 3,
+                "render": function(data, type, full, meta) {
+                var cellText = $(data).text(); //Stripping html tags !!!
+                if (type === 'display' &&  (cellText == "Done" || data=='Done')) {
+                    var rowIndex = meta.row+1;
+                    var colIndex = meta.col+1;
+                    $('#example tbody tr:nth-child('+rowIndex+')').addClass('lightRed');
+                    $('#example tbody tr:nth-child('+rowIndex+') td:nth-child('+colIndex+')').addClass('red');
+                    return data;
+                } else {
+                    return data;
+                }
+                }
+            }
+            ]
+        });
+        });
+      </script>

@@ -35,13 +35,13 @@
             <tr>
                 <td>Tanggal</td>
                 <td>:</td>
-                <td>{{ $pengadaan1->tanggal}}</td>
+                <td>{{ $pengadaan2->tanggal}}</td>
                 {{-- <td width="475">11 Agustus 2022</td> --}}
             </tr>
             <tr>
                 <td>Nomor</td>
                 <td>:</td>
-                <td>020/{{$pengadaan1->nomor}}/114.6/2022</td>
+                <td>020/{{$pengadaan2->nomor}}/114.6/2022</td>
             </tr>
             <tr>
                 <td>Sifat</td>
@@ -57,7 +57,7 @@
                 <td>Perihal</td>
                 <td>:</td>
                 {{-- <td width="475">Pemrosesan Administrasi Pengadaan</td> --}}
-                <td>Pemrosesan Administrasi Pengadaan {{ $pengadaan1->pengadaan->jenis_pengadaan}}</td>
+                <td>Pemrosesan Administrasi Pengadaan {{ $pengadaan2->pengadaan->jenis_pengadaan}}</td>
                 {{-- <td width="475">Pemrosesan Administrasi Pengadaan {{ $pengadaan->jenis_pengadaan}}</td> --}}
             </tr>
         </table>
@@ -68,7 +68,7 @@
         <br>
         <table font-size="2">
             <tr>
-                <td style="text-indent: 45px;">Bersama ini ini diberitahukan, bahwa DPA-SKPD Bagian Data dan Statistik pada Dinas Komunikasi dan Informatika Provinsi Jawa Timur Tahun Anggaran {{ $pengadaan1->tanggal}}, kode rekening {{ $pengadaan1->pengadaan->pelaksana->kode_rekening}} pengadaan {{ $pengadaan1->pengadaan->jenis_pengadaan}} keperluan Dinas Komunikasi dan Informatika Provinsi Jawa Timur dengan rincian sebagai berikut :</td>
+                <td style="text-indent: 45px;">Bersama ini ini diberitahukan, bahwa DPA-SKPD Bagian Data dan Statistik pada Dinas Komunikasi dan Informatika Provinsi Jawa Timur Tahun Anggaran {{ $pengadaan2->tanggal}}, kode rekening {{ $pengadaan2->pengadaan->pelaksana->kode_rekening}} pengadaan {{ $pengadaan2->pengadaan->jenis_pengadaan}} keperluan Dinas Komunikasi dan Informatika Provinsi Jawa Timur dengan rincian sebagai berikut :</td>
             </tr>
         </table>
     </div>

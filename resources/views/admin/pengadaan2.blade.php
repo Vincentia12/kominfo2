@@ -59,12 +59,12 @@
                     <div class="form-group w-100 mb-9 mx-sm-3">
                         <label for="cari" class="d-block mr-2 ">Pencarian</label>
                         {{-- <input type="text" name="cari" class="form-control w-75 d-inline" id="cari" placeholder="Masukkan keyword"> --}}
-                        <select class="form-control w-25 mb-4 d-inline" name="cari2" id="cari2">
+                        {{-- <select class="form-control w-25 mb-4 d-inline" name="cari2" id="cari2">
                             <option> Pilih Pengadaan </option>
                             @foreach ($pengadaan2 as $pd2)
                             <option value="{{$pd2->pengadaan_id}}">{{ $pd2->jenis_pengadaan }}</option>
                             @endforeach
-                        </select>
+                        </select> --}}
                         <button type="submit" class="btn btn-primary mb-1">Cari</button>
                     </div>
                 </form>
@@ -87,20 +87,6 @@
                                 <th>Tanggal</th>
                                 <th>Nomor</th>
                                 <th>Deskripsi Tanggal</th>
-                                {{-- <th>NO</th> --}}
-                                {{-- <th>Nama Pengadaan</th>
-                                <th>Nama Perusahaan</th>
-                                <th>Harga Kontrak</th> --}}
-                                {{-- <th>Alamat</th>
-                                <th>Status Aset</th> --}}
-                                {{-- <th>Luas Aset</th> --}}
-                                {{-- <th>Kondisi Aset</th>
-                                <th>Kondisi Geografis</th>
-                                <th>Asal Usul</th>
-                                <th>Tahun Kepemilikan</th>
-                                <th>Tahun Pembangunan</th>
-                                <th>Tahun Rehab</th> --}}
-                                {{-- <th>Keterangan</th> --}}
                                 <th width="280px">Action</th>
                             </tr>
                         </thead>
@@ -116,6 +102,113 @@
                                 <td>{{ $p2->tanggal }}</td>
                                 <td>{{ $p2->nomor }}</td>
                                 <td>{{ $p2->deskripsi_tgl }}</td>
+                                <td>
+                                    @if ($p2->kegiatan == 'Nota Dinas dari KPA ke PPK')
+                                    <a class="btn btn-info" href="{{ route('pengadaan2.show1',$p2->id) }}">Detail</a>
+                                    {{-- <a class="btn btn-info" href="pengadaan2/notadinas1/">Print</a> --}}
+                                    <a class="btn btn-danger " href="{{route('pengadaan2.print1',$p2->id)}}">Print</a>
+                                    {{-- <a class="btn btn-info" href="{{ route('show',$p2->id) }}">Detail</a> --}}
+                                    @elseif($p2->kegiatan == 'Nota Dinas dari PPK ke Pejabat Pengadaan + Lampiran OE (HPS)')
+                                    <!-- {{-- <a class="btn btn-info" href="{{ route('show1',$p2->id) }}">Detail</a> --}} -->
+                                    <a class="btn btn-info" href="{{ route('pengadaan2.show2',$p2->id) }}">Detail</a>
+                                    <a class="btn btn-danger" href="{{route('pengadaan2.print2',$p2->id)}}">Print</a>
+                                    <!-- {{-- <a class="btn btn-info" name="show1">Detail</a> --}} -->
+                                    <!-- {{-- url('/print_notadinas1') --}} -->
+                                    @elseif($p2->kegiatan == 'Surat Undangan, Pengambilan Dokumen Kualifikasi dan Dokumen Pengadaan Langsung kepada Penyedia Barang/Jasa')
+                                    <!-- {{-- <a class="btn btn-info" href="{{ route('show1',$p2->id) }}">Detail</a> --}} -->
+                                    <a class="btn btn-info" href="{{ route('pengadaan2.show3',$p2->id) }}">Detail</a>
+                                    <a class="btn btn-danger " href="{{route('pengadaan2.print3',$p2->id)}}">Print</a>
+
+                                    @elseif($p2->kegiatan == 'PAKTA INTEGRITAS')
+                                    <a class="btn btn-info" href="{{ route('pengadaan2.show4',$p2->id) }}">Detail</a>
+                                    <a class="btn btn-danger " href="{{route('pengadaan2.print4',$p2->id)}}">Print</a>
+
+                                    @elseif($p2->kegiatan == 'Surat Pernyataan Minat')
+                                    <a class="btn btn-info" href="{{ route('pengadaan2.show5',$p2->id) }}">Detail</a>
+
+                                    @elseif($p2->kegiatan == 'Pemasukan Dokumen Kualifikasi')
+                                    <a class="btn btn-info" href="{{ route('pengadaan2.show6',$p2->id) }}">Detail</a>
+
+                                    @elseif($p2->kegiatan == 'Daftar Hadir Pengembalian Dokumen Prakualifikasi')
+                                    <a class="btn btn-info" href="{{ route('pengadaan2.show7',$p2->id) }}">Detail</a>
+                                    <a class="btn btn-danger " href="{{route('pengadaan2.print7',$p2->id)}}">Print</a>
+
+                                    @elseif($p2->kegiatan == 'BA. Evaluasi Dokumen Prakualifikasi')
+                                    <a class="btn btn-info" href="{{ route('pengadaan2.show8',$p2->id) }}">Detail</a>
+                                    <a class="btn btn-danger " href="{{route('pengadaan2.print8',$p2->id)}}">Print</a>
+
+                                    @elseif($p2->kegiatan == 'Lampiran BA. Evaluasi Dokumen Prakualifikasi')
+                                    <a class="btn btn-info" href="{{ route('pengadaan2.show9',$p2->id) }}">Detail</a>
+                                    <a class="btn btn-danger " href="{{route('pengadaan2.print9',$p2->id)}}">Print</a>
+
+                                    @elseif($p2->kegiatan == 'Surat Undangan Permintaan Penawaran Harga')
+                                    <a class="btn btn-info" href="{{ route('pengadaan2.show10',$p2->id) }}">Detail</a>
+                                    <a class="btn btn-danger " href="{{route('pengadaan2.print10',$p2->id)}}">Print</a>
+
+                                    @elseif($p2->kegiatan == 'BA. Penjelasan Pekerjaan')
+                                    <a class="btn btn-info" href="{{ route('pengadaan2.show11',$p2->id) }}">Detail</a>
+                                    <a class="btn btn-danger " href="{{route('pengadaan2.print11',$p2->id)}}">Print</a>
+
+                                    @elseif($p2->kegiatan == 'Pemasukan Penawaran')
+                                    <a class="btn btn-info" href="{{ route('pengadaan2.show12',$p2->id) }}">Detail</a>
+
+                                    @elseif($p2->kegiatan == 'BA. Pembukaan Penawaran')
+                                    <a class="btn btn-info" href="{{ route('pengadaan2.show13',$p2->id) }}">Detail</a>
+                                    <a class="btn btn-danger " href="{{route('pengadaan2.print13',$p2->id)}}">Print</a>
+
+                                    @elseif($p2->kegiatan == 'Surat Undangan Klarifikasi/Negosiasi')
+                                    <a class="btn btn-info" href="{{ route('pengadaan2.show14',$p2->id) }}">Detail</a>
+                                    <a class="btn btn-danger " href="{{route('pengadaan2.print14',$p2->id)}}">Print</a>
+
+                                    @elseif($p2->kegiatan == 'BA. Klarifikasi/Negosiasi')
+                                    <a class="btn btn-info" href="{{ route('pengadaan2.show15',$p2->id) }}">Detail</a>
+                                    <a class="btn btn-danger " href="{{route('pengadaan2.print15',$p2->id)}}">Print</a>
+
+                                    @elseif($p2->kegiatan == 'Lampiran BA. Klarifikasi/Negosiasi')
+                                    <a class="btn btn-info" href="{{ route('pengadaan2.show16',$p2->id) }}">Detail</a>
+
+                                    @elseif($p2->kegiatan == 'BA. Hasil Pengadaan Langsung')
+                                    <a class="btn btn-info" href="{{ route('pengadaan2.show17',$p2->id) }}">Detail</a>
+
+                                    @elseif($p2->kegiatan == 'Nota Dinas dari Pejabat Pengadaan ke PPK')
+                                    <a class="btn btn-info" href="{{ route('pengadaan2.show18',$p2->id) }}">Detail</a>
+                                    <a class="btn btn-danger " href="{{route('pengadaan2.print18',$p2->id)}}">Print</a>
+
+                                    @elseif($p2->kegiatan == 'Penetapan Penyedia Jasa')
+                                    <a class="btn btn-info" href="{{ route('pengadaan2.show19',$p2->id) }}">Detail</a>
+                                    <a class="btn btn-danger " href="{{route('pengadaan2.print19',$p2->id)}}">Print</a>
+
+                                    @elseif($p2->kegiatan == 'Penunjukan Penyedia Barang/Jasa')
+                                    <a class="btn btn-info" href="{{ route('pengadaan2.show20',$p2->id) }}">Detail</a>
+                                    <a class="btn btn-danger " href="{{route('pengadaan2.print20',$p2->id)}}">Print</a>
+
+                                    @elseif($p2->kegiatan == 'Surat Perintah Kerja')
+                                    <a class="btn btn-info" href="{{ route('pengadaan2.show21',$p2->id) }}">Detail</a>
+                                    <a class="btn btn-danger " href="{{route('pengadaan2.print21',$p2->id)}}">Print</a>
+
+                                    @elseif($p2->kegiatan == 'Surat Perintah Mulai Kerja (SPMK)')
+                                    <a class="btn btn-info" href="{{ route('pengadaan2.show22',$p2->id) }}">Detail</a>
+                                    <a class="btn btn-danger " href="{{route('pengadaan2.print22',$p2->id)}}">Print</a>
+
+                                    @elseif($p2->kegiatan == 'BA. Serah Terima Hasil Pekerjaan')
+                                    <a class="btn btn-info" href="{{ route('pengadaan2.show23',$p2->id) }}">Detail</a>
+                                    <a class="btn btn-danger " href="{{route('pengadaan2.print23',$p2->id)}}">Print</a>
+
+                                    @elseif($p2->kegiatan == 'BA. Penyerahan Barang/Jasa')
+                                    <a class="btn btn-info" href="{{ route('pengadaan2.show24',$p2->id) }}">Detail</a>
+                                    <a class="btn btn-danger " href="{{route('pengadaan2.print24',$p2->id)}}">Print</a>
+
+                                    @elseif($p2->kegiatan == 'BA. Hasil Pemeriksaan Administratif')
+                                    <a class="btn btn-info" href="{{ route('pengadaan2.show25',$p2->id) }}">Detail</a>
+
+                                    @elseif($p2->kegiatan == 'BA. Hasil Pembayaran')
+                                    <a class="btn btn-info" href="{{ route('pengadaan2.show26',$p2->id) }}">Detail</a>
+                                    <!-- {{-- <a class="btn btn-info" name="show1">Detail</a> --}} -->
+                                    <!-- {{-- url('/print_notadinas1') --}} -->
+                                    @else
+                                    You don't have a post!
+                                    @endif
+                                </td>
                                 {{-- <td>{{ ++$i }}</td> --}}
                                 {{-- <td>{{ $p2->jenis_pengadaan}}</td>
                                 <td>{{ $p2->pt_pelaksana }}</td>
@@ -124,13 +217,13 @@
                                 <td>{{ $aset->status_aset }}</td> --}}
 
                                 {{-- <td>{{ $aset->keterangan_aset }}</td> --}}
-                                <td>
+                                {{-- <td> --}}
 
                                     {{-- <form action="{{ route('pengadaan.destroy1',$p2->id) }}" method="POST"> --}}
 
-                                        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modalDetailPengadaan2{{$p2->id}}">
+                                        {{-- <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modalDetailPengadaan2{{$p2->id}}">
                                             Detail
-                                        </button>
+                                        </button> --}}
                                         {{-- <a class="btn btn-info" href="{{ route('pengadaan.show',$pengadaan->id) }}">Detail</a>
                                         <a class="btn btn-primary" href="{{ route('pengadaan.edit',$pengadaan->id) }}">Edit</a> --}}
                                         @csrf
@@ -138,7 +231,7 @@
 
                                         {{-- <button type="submit" class="btn btn-danger">Delete</button> --}}
                                     {{-- </form> --}}
-                                </td>
+                                {{-- </td> --}}
                             </tr>
                             @endforeach
                         </tbody>

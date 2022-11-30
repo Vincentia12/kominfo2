@@ -61,6 +61,33 @@ class PdfController extends Controller
         return $pdf->download('NotaDinas1.pdf');
         // dd($pdf);
     }
+    // Nota Dinas1/ Nota Dinas dari KPA ke PPK
+    public function print1(Request $request, $id)
+    {
+        $pengadaan2 = Jadwal::find($id);
+        $barang = DB::table('barangs')
+            ->where('barangs.pengadaan_id', 'like', "%" . $pengadaan2->pengadaan_id . "%")
+            ->get();
+        $pejabat = DB::table('pejabats')
+            ->where('id', '=', 1)
+            ->get();
+
+        // $pejabat = Pejabat::all();
+
+
+
+        dd($pengadaan2, $barang );
+        // $pdf = PDF::loadview(
+        //     // $pdf = word::loadview(
+        //     'atas50/nota_dinas1',
+        //     ['pengadaan2' => $pengadaan2],
+        //     ['barang' => $barang],
+        //     // ['pejabat' => $pejabat],
+        //     // );
+        // )->setPaper('f4', 'potrait');
+        // return $pdf->download('NotaDinas1.pdf');
+        // dd($pdf);
+    }
 
     // Nota Dinas2/Nota Dinas dari PPK ke Pejabat Pengadaan + Lampiran OE (HPS)
     public function nota_dinas2(Request $request, $id)

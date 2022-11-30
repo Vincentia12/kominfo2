@@ -73,7 +73,8 @@ class BarangController extends Controller
             'barang' => 'required',
             'jumlah_barang' => 'required',
             'satuan' => 'required',
-            'harga_satuan' => 'required'
+            'harga_satuan' => 'required',
+            // 'harga_total' => 
         ]);
 
         Barang::create($request->post());

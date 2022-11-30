@@ -114,7 +114,6 @@
                 </tr>
             </table>
         </div>
-        <br>
         <div>
             <table border="0">
                 <tr>
@@ -153,20 +152,40 @@
                 <thead>
                     <tr>
                         <td>NO</td>
-                        {{-- <td>JENIS BARANG / PEKERJAAN</td> --}}
+                        <td>JENIS BARANG / PEKERJAAN</td>
                         <td>SPESIFIKASI</td>
                         <td>KUANTITAS</td>
                         <td>SATUAN</td>
                         <td>HARGA SATUAN (Rp.)</td>
                         <td>JUMLAH HARGA (Rp.)</td>
                     </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>5</td>
+                        <td>6</td>
+                        <td>7</td>
+                    </tr>
+                    <tr colspan="7">PENGADAAN BELANJA ALAT/BAHAN UNTUK KEGIATAN KANTOR</tr>
                 </thead>
-                    {{-- </td> --}}
+                <tr>
+                    <td>1</td>
+                    <td>{{$pengadaan1->pengadaan->jenis_pengadaan}}</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
                 <tbody>
                     @php $no = 1; @endphp
                     @foreach ($barang as $brg)
                         <tr>
-                            <td>{{$no++}}</td>
+                            {{-- <td>{{$no++}}</td> --}}
+                            <td></td>
+                            <td></td>
                             {{-- <td>{{$brg->pengadaan->jenis_pengadaan}}</td> --}}
                             <td>{{$brg->barang}}</td>
                             <td>{{$brg->jumlah_barang}}</td>
@@ -178,11 +197,36 @@
                                 $hargabarang = $brg->harga_satuan;
                                 // $hargabarang = $barang["harga_barang"];
 
-                                $total = $jumlahbarang + $hargabarang;
+                                $total = $jumlahbarang * $hargabarang;
                             @endphp
                             <td>{{$total}}</td>
                         </tr>
-                    @endforeach
+                        @endforeach
+                        <tr>
+                            <td style="text-align:right" colspan="6">Total</td>
+                            {{-- @php
+                            use App\Models\Jadwal;
+
+                                // $sum = Jadwal::sum('harga_satuan');
+                                $sum = sum($total);
+                            @endphp
+                            <td>{{$sum}}</td> --}}
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align:right" colspan="6">PPN 11%</td>
+                            {{-- @php
+                            $nilainego = $pengadaan1->pengadaan->nilai_negosiasi;
+                            $nilaippn = 11%;
+                                $ppn = $nilainego - $nilaippn;
+                            @endphp
+                            <td>{{$ppn}}</td> --}}
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align:right" colspan="6">Jumlah Total</td>
+                            <td>{{$pengadaan1->pengadaan->nilai_negosiasi}}</td>
+                        </tr>
                 </tbody>
             </table>
             <table>
