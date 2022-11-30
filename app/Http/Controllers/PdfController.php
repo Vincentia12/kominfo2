@@ -76,16 +76,16 @@ class PdfController extends Controller
 
 
 
-        dd($pengadaan2, $barang );
-        // $pdf = PDF::loadview(
-        //     // $pdf = word::loadview(
-        //     'atas50/nota_dinas1',
-        //     ['pengadaan2' => $pengadaan2],
-        //     ['barang' => $barang],
-        //     // ['pejabat' => $pejabat],
-        //     // );
-        // )->setPaper('f4', 'potrait');
-        // return $pdf->download('NotaDinas1.pdf');
+        // dd($pengadaan1, $barang );
+        $pdf = PDF::loadview(
+            // $pdf = word::loadview(
+            'atas50/nota_dinas1',
+            ['pengadaan2' => $pengadaan2],
+            ['barang' => $barang],
+            // ['pejabat' => $pejabat],
+            // );
+        )->setPaper('f4', 'potrait');
+        return $pdf->download('NotaDinas1.pdf');
         // dd($pdf);
     }
 
