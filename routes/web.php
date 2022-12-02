@@ -208,7 +208,32 @@ Route::get('print_notadinas4', [PdfController::class, 'nota_dinas4']);
 Route::get('ba_pekerjaan', [PdfController::class, 'ba_pekerjaan']);
 
 //print pengadaan2
-Route::get('pengadaan2/print1/{id}', [PdfController::class, 'print1'])->name('pengadaan2.print1');
+Route::get('pengadaan2/print1/{id}', [PdfController::class, 'nota_dinas1'])->name('pengadaan2.print1');
+Route::get('pengadaan2/print2/{id}', [PdfController::class, 'nota_dinas2'])->name('pengadaan2.print2');
+Route::get('pengadaan2/print3/{id}', [PdfController::class, 'undangan_persiapan'])->name('pengadaan2.print3');
+Route::get('pengadaan2/print4/{id}', [PdfController::class, 'pakta_integritas'])->name('pengadaan2.print4');
+//5
+//6
+Route::get('pengadaan2/print7/{id}', [PdfController::class, 'daftar_hadir'])->name('pengadaan2.print7');
+Route::get('pengadaan2/print8/{id}', [PdfController::class, 'ba_evaluasi'])->name('pengadaan2.print8');
+Route::get('pengadaan2/print9/{id}', [PdfController::class, 'lampiran_ba_evaluasi'])->name('pengadaan2.print9');
+Route::get('pengadaan2/print10/{id}', [PdfController::class, 'undangan_penawaran'])->name('pengadaan2.print10');
+Route::get('pengadaan2/print11/{id}', [PdfController::class, 'ba_pekerjaan'])->name('pengadaan2.print11');
+//12
+Route::get('pengadaan2/print13/{id}', [PdfController::class, 'ba_penawaran'])->name('pengadaan2.print13');
+Route::get('pengadaan2/print14/{id}', [PdfController::class, 'undangan_nego'])->name('pengadaan2.print14');
+Route::get('pengadaan2/print15/{id}', [PdfController::class, 'ba_nego'])->name('pengadaan2.print15');
+//16
+//17
+Route::get('pengadaan2/print18/{id}', [PdfController::class, 'nota_dinas3'])->name('pengadaan2.print18');
+Route::get('pengadaan2/print19/{id}', [PdfController::class, 'penetapan_penyedia'])->name('pengadaan2.print19');
+Route::get('pengadaan2/print20/{id}', [PdfController::class, 'undangan_penyedia'])->name('pengadaan2.print20');
+Route::get('pengadaan2/print21/{id}', [PdfController::class, 'surat_perintah_kerja'])->name('pengadaan2.print21');
+Route::get('pengadaan2/print22/{id}', [PdfController::class, 'surat_perintah_mulai_kerja'])->name('pengadaan2.print22');
+Route::get('pengadaan2/print23/{id}', [PdfController::class, 'ba_serah_terima'])->name('pengadaan2.print23');
+Route::get('pengadaan2/print24/{id}', [PdfController::class, 'ba_peny_barang'])->name('pengadaan2.print24');
+//25
+Route::get('pengadaan2/print26/{id}', [PdfController::class, 'ba_pembayaran'])->name('pengadaan1.print26');
 
 
 

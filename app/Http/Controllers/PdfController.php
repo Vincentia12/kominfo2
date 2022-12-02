@@ -37,9 +37,9 @@ class PdfController extends Controller
     // Nota Dinas1/ Nota Dinas dari KPA ke PPK
     public function nota_dinas1(Request $request, $id)
     {
-        $pengadaan1 = Jadwal::find($id);
+        $pengadaan = Jadwal::find($id);
         $barang = DB::table('barangs')
-            ->where('barangs.pengadaan_id', 'like', "%" . $pengadaan1->pengadaan_id . "%")
+            ->where('barangs.pengadaan_id', 'like', "%" . $pengadaan->pengadaan_id . "%")
             ->get();
         $pejabat = DB::table('pejabats')
             ->where('id', '=', 1)
@@ -53,7 +53,7 @@ class PdfController extends Controller
         $pdf = PDF::loadview(
             // $pdf = word::loadview(
             'cetak/nota_dinas1',
-            ['pengadaan1' => $pengadaan1],
+            ['pengadaan' => $pengadaan],
             ['barang' => $barang],
             // ['pejabat' => $pejabat],
             // );

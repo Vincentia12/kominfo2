@@ -91,7 +91,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($pengadaan2 as $p2)
+                        @foreach ($pengadaan as $p2)
                         <tr>
                             <td>{{ $p2->pt_pelaksana }}</td>
                             <td>{{ $p2->jenis_pengadaan }}</td>

@@ -58,8 +58,8 @@
                     <tr>
                         <td width="80">Tanggal</td>
                         <td>:</td>
-                        <td width="475">{{ $pengadaan1->tanggal}}</td>
-                        {{-- <td width="475">{{ $pengadaan1->tanggal}}</td> --}}
+                        <td width="475">{{ $pengadaan->tanggal}}</td>
+                        {{-- <td width="475">{{ $pengadaan->tanggal}}</td> --}}
                         {{-- <td width="475">11 Agustus 2022</td> --}}
                     </tr>
                 </table>
@@ -67,7 +67,7 @@
                     <tr>
                         <td width="80">Nomor</td>
                         <td>:</td>
-                        <td width="475">020/{{$pengadaan1->nomor}}/114.6/2022</td>
+                        <td width="475">020/{{$pengadaan->nomor}}/114.6/2022</td>
                     </tr>
                 </table>
                 <table border="0" align="center" font-size="2">
@@ -89,7 +89,7 @@
                         <td width="80">Perihal</td>
                         <td>:</td>
                         {{-- <td width="475">Pemrosesan Administrasi Pengadaan</td> --}}
-                        <td width="475">Pemrosesan Administrasi Pengadaan {{ $pengadaan1->pengadaan->jenis_pengadaan}}</td>
+                        <td width="475">Pemrosesan Administrasi Pengadaan {{ $pengadaan->pengadaan->jenis_pengadaan}}</td>
                         {{-- <td width="475">Pemrosesan Administrasi Pengadaan {{ $pengadaan->jenis_pengadaan}}</td> --}}
                     </tr>
                 </table>
@@ -103,7 +103,7 @@
             <br>
             <table border="0" align="center" font-size="2">
                 <tr>
-                    <td width="565">Bersama ini ini diberitahukan, bahwa DPA-SKPD Bagian Data dan Statistik pada Dinas Komunikasi dan Informatika Provinsi Jawa Timur Tahun Anggaran {{ $pengadaan1->tanggal}}, kode rekening {{ $pengadaan1->pengadaan->pelaksana->kode_rekening}} pengadaan {{ $pengadaan1->pengadaan->jenis_pengadaan}} keperluan Dinas Komunikasi dan Informatika Provinsi Jawa Timur dengan rincian sebagai berikut :</td>
+                    <td width="565">Bersama ini ini diberitahukan, bahwa DPA-SKPD Bagian Data dan Statistik pada Dinas Komunikasi dan Informatika Provinsi Jawa Timur Tahun Anggaran {{ $pengadaan->tanggal}}, kode rekening {{ $pengadaan->pengadaan->pelaksana->kode_rekening}} pengadaan {{ $pengadaan->pengadaan->jenis_pengadaan}} keperluan Dinas Komunikasi dan Informatika Provinsi Jawa Timur dengan rincian sebagai berikut :</td>
                 </tr>
             </table>
             <br>
@@ -174,16 +174,10 @@
 <div class="col-12 grid-margin stretch-card">
     <div class="modal-footer mt-3">
         <button type="back" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
-        <a type="submit" class="btn btn-primary " href="{{ url('/print_notadinas1')  }}">Cetak PDF <i class="fa fa-save"></i></a>
     </div>
-</div>
 </div>
 
-    <div class="col-12 grid-margin stretch-card">
-        <div class="modal-footer mt-3">
-            <button type="back" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
-            <a type="submit" class="btn btn-primary " href="{{ url('/print_notadinas1')  }}">Cetak PDF <i class="fa fa-save"></i></a>
-        </div>
-    </div>
+
+    
 
     @endsection

@@ -63,7 +63,7 @@
                             </thead>
                             <tbody>
                                 {{-- @if(count($pengadaan)<=50) --}}
-                                @foreach ($pengadaan1 as $p1)
+                                @foreach ($pengadaan as $p1)
                                 {{-- @foreach ($jadwal1 as $jd1) --}}
                                 <tr>
                                     <td>{{ $p1->pt_pelaksana }}</td>
