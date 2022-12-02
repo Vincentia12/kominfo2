@@ -41,50 +41,64 @@ class PengadaanController extends Controller
     }
 
     // pengadaan dibawa 50juta
+    // public function index1(Request $request)
     public function index1()
-    {
+    {            
         $pengadaan = DB::table('pengadaans')
             ->join('pelaksanas', 'pelaksana_id', '=', 'pelaksanas.id')
             ->where('nilai_negosiasi', '<=', 50)
             // ->join('barangs', 'pengadaans.id', '=', 'barangs.pengadaan_id')
             ->join('jadwals', 'pengadaans.id', '=', 'jadwals.pengadaan_id')
             // ->groupBy('jadwals.pengadaan_id')
-            ->paginate();
+        ->paginate();
+        // }
+
+        // $pilihan = Pengadaan::all();
+        // $pilihan = DB::table('pengadaans')
+        $pilihan = DB::table('pelaksanas')
+        // ->join('pelaksanas', 'pelaksana_id', '=', 'pelaksanas.id')
+            ->join('pengadaans', 'pengadaans.pelaksana_id', '=', 'pelaksanas.id')
+            ->where('pengadaans.nilai_negosiasi', '<=', 50)
+        ->paginate();
 
         $pejabat = Pejabat::all();
 
         return view(
             'admin.pengadaan1',
             ['pengadaan' => $pengadaan],
+            ['pilihan' => $pilihan],
             // ['pejabat' => $pejabat],
             ['pejabat' => $pejabat]
         );
         // )->with('i', (request()->input('page', 1) - 1) * 5);
-        // dd($pengadaan, $pejabat);
+        // dd($pengadaan, $pilihan);
 
     }
 
-    // public function Cari1(Request $request)
-    // {
-    //     // menangkap data pencarian
-    //     $cari1 = $request->cari1;
+    public function Cari1(Request $request)
+    {
+        $cari1 = $request->cari1;
 
-    //     // mengambil data dari table pegawai sesuai pencarian data
-    //     $pengadaan = Jadwal::where('pengadaan_id', 'like', "%" . $cari1 . "%")
-    //         ->join('pengadaans', 'pengadaan_id', '=', 'pengadaans.id')
-    //         ->join('pelaksanas', 'pelaksana_id', '=', 'pelaksanas.id')
-    //         ->select('jadwals.*', 'pengadaans.*', 'pelaksana.*')
+        $pengadaan = Jadwal::where('pengadaan_id', 'like', "%" . $cari1 . "%")
+            ->join('pengadaans', 'jadwals.pengadaan_id', '=', 'pengadaans.id')
+            ->join('pelaksanas', 'pengadaans.pelaksana_id', '=', 'pelaksanas.id')
+        ->paginate();
+            // ->get();
+        $pilihan = DB::table('pelaksanas')
+            // ->join('pelaksanas', 'pelaksana_id', '=', 'pelaksanas.id')
+            ->join('pengadaans', 'pengadaans.pelaksana_id', '=', 'pelaksanas.id')
+                ->where('pengadaans.nilai_negosiasi', '<=', 50)
+        ->paginate();
 
-    //         // ->paginate();
-    //         ->get();
-
-    //     // $pejabat = Pejabat::all();
-    //     // mengirim data pegawai ke view index
-    //     // return view('admin.pengadaan',['pengadaan' => $pengadaan]);
-    //     return view('admin.pengadaan', compact('pengadaan'));
-
-    //     //pengadaan2
-    // }
+        // $pejabat = Pejabat::all();
+        // mengirim data pegawai ke view index
+        return view('admin.pengadaan1',
+        ['pengadaan' => $pengadaan],
+        ['pilihan' => $pilihan],
+        );
+        // return view('admin.pengadaan', compact('pengadaan'));
+        // dd($pengadaan);
+    }
 
     public function index2()
     {
@@ -94,7 +108,7 @@ class PengadaanController extends Controller
             // ->join('barangs', 'pengadaans.id', '=', 'barangs.pengadaan_id')
             ->join('jadwals', 'pengadaans.id', '=', 'jadwals.pengadaan_id')
             // ->groupBy('jadwals.pengadaan_id')
-            ->paginate();
+        ->paginate();
         // $pengadaan2 = DB::table('pengadaans')
         //     // ->select('*')
         //     // ->join('pengadaans', 'pelaksanas.id', '=', 'pengadaans.pelaksana_id')
@@ -106,34 +120,51 @@ class PengadaanController extends Controller
         //     // ->paginate(10);
         //     ->paginate();
 
+        $pilihan = DB::table('pelaksanas')
+        // ->join('pelaksanas', 'pelaksana_id', '=', 'pelaksanas.id')
+            ->join('pengadaans', 'pengadaans.pelaksana_id', '=', 'pelaksanas.id')
+            ->where('pengadaans.nilai_negosiasi', '>', 50)
+        ->paginate();
+
         $pejabat = Pejabat::all();
 
         return view(
             'admin.pengadaan2',
             ['pengadaan' => $pengadaan],
-            ['pejabat' => $pejabat]
+            ['pilihan' => $pilihan],
+            ['pejabat' => $pejabat],
             // ['jadwal' => $jadwal],
             // ['pelaksana' => $pelaksana]
         );
         // dd($pengadaan);
     }
-    // public function Cari2(Request $request)
-    // {
-    //     // menangkap data pencarian
-    //     $cari2 = $request->cari2;
+    public function cari2(Request $request)
+    {
+        // menangkap data pencarian
+        $cari2 = $request->cari2;
 
-    //     // mengambil data dari table pegawai sesuai pencarian data
-    //     $pengadaan2 = Jadwal::where('pengadaan_id', 'like', "%" . $cari2 . "%")
-    //         ->join('pengadaans', 'pengadaan_id', '=', 'pengadaans.id')
-    //         ->join('pelaksanas', 'pelaksana_id', '=', 'pelaksanas.id')
-    //         ->paginate();
+        // mengambil data dari table pegawai sesuai pencarian data
+        $pengadaan = Jadwal::where('pengadaan_id', 'like', "%" . $cari2 . "%")
+            ->join('pengadaans', 'jadwals.pengadaan_id', '=', 'pengadaans.id')
+            ->join('pelaksanas', 'pengadaans.pelaksana_id', '=', 'pelaksanas.id')
+        ->paginate();
 
-    //     // $pejabat = Pejabat::all();
-    //     // mengirim data pegawai ke view index
-    //     // return view('admin.pengadaan',['pengadaan' => $pengadaan]);
-    //     return view('admin.pengadaan2', compact('pengadaan2'));
-    //     // dd($pengadaan, $pejabat);
-    // }
+        $pilihan = DB::table('pelaksanas')
+        // ->join('pelaksanas', 'pelaksana_id', '=', 'pelaksanas.id')
+            ->join('pengadaans', 'pengadaans.pelaksana_id', '=', 'pelaksanas.id')
+            ->where('pengadaans.nilai_negosiasi', '>', 50)
+        ->paginate();
+
+        // $pejabat = Pejabat::all();
+        // mengirim data pegawai ke view index
+        return view(
+            'admin.pengadaan2',
+            ['pengadaan' => $pengadaan],
+            ['pilihan' => $pilihan],
+        );
+        // return view('admin.pengadaan2', compact('pengadaan2'));
+        // dd($pengadaan, $pejabat);
+    }
 
     /**
      * Show the form for creating a new resource.

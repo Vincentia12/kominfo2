@@ -55,16 +55,18 @@
         <div class="card-body">
             <h3>Data Pengadaan <i class="fa-solid fa-greater-than "></i> 50 juta</h3>
             <br>
-            <form class="form" method="get" action="{{ route('cari2') }}">
-                <div class="form-group w-100 mb-9 mx-sm-3">
-                    <label for="cari" class="d-block mr-2 ">Pencarian</label>
-                    {{-- <input type="text" name="cari" class="form-control w-75 d-inline" id="cari" placeholder="Masukkan keyword"> --}}
-                    {{-- <select class="form-control w-25 mb-4 d-inline" name="cari2" id="cari2">
-                            <option> Pilih Pengadaan </option>
-                            @foreach ($pengadaan2 as $pd2)
-                            <option value="{{$pd2->pengadaan_id}}">{{ $pd2->jenis_pengadaan }}</option>
-                    @endforeach
-                    </select> --}}
+            <div class="form-group w-100 mb-9 mx-sm-1">
+                <form class="form" method="get" action="{{ route('cari2') }}">
+                    <select class="form-control w-auto mb-6 d-inline" name="cari1" id="cari1">
+                        {{-- <option value="{{$pengadaan->pengadaan_id}}">{{$pengadaan->jenis_pengadaan}}</option> --}}
+                            
+                        <option value=""> Pilih Pengadaan </option>
+                        <option value="">   </option>
+                        @foreach ($pilihan as $pilih)
+                            <option value="{{$pilih->id}}"><b>{{$pilih->pt_pelaksana}}</b> Pengadaan <b>{{ $pilih->jenis_pengadaan }}</b></option>
+                            {{-- <option value="{{$pilih->id}}">{{$pilih->id}}</option> --}}
+                        @endforeach
+                    </select>
                     <button type="submit" class="btn btn-primary mb-1">Cari</button>
                 </div>
             </form>
