@@ -41,8 +41,8 @@
         {{-- judul --}}
         <div style="text-align: center">
             {{-- <font color="black">  --}}
-                <p align="center"><u><b> BERITA ACARA PENJELASAN PEKERJAAN </b></u> <br>
-                    Nomor : 020/{{$pengadaan1->nomor}}/114.6/2022 </p>
+            <p align="center"><u><b> BERITA ACARA PENJELASAN PEKERJAAN </b></u> <br>
+                Nomor : 020/{{$pengadaan->nomor}}/114.6/2022 </p>
             {{-- </font> --}}
         </div>
     </div>
@@ -53,10 +53,10 @@
             <table font-size="1">
                 <tr>
                     <td style="text-indent: 45px;  text-align:justify">
-                        Pada hari ini {{$pengadaan1->hari}} {{$pengadaan1->deskripsi_tgl}}, dimulai pukul 10.00 WIB sampai dengan selesai, Pejabat Pengadaan di Lingkungan Dinas Komunikasi dan Informatika Provinsi Jawa Timur yang dibentuk dengan Keputusan Kepala Dinas Komunikasi Dan Informatika Provinsi Jawa Timur 
+                        Pada hari ini {{$pengadaan->tanggal->isoFormat('dddd')}} {{$pengadaan->deskripsi_tgl}}, dimulai pukul 10.00 WIB sampai dengan selesai, Pejabat Pengadaan di Lingkungan Dinas Komunikasi dan Informatika Provinsi Jawa Timur yang dibentuk dengan Keputusan Kepala Dinas Komunikasi Dan Informatika Provinsi Jawa Timur
                         {{-- dari tabel pejabat --}}
-                        tanggal 3 Januari 2022 Nomor : 188/19/114.1/2022, 
-                        telah mengadakan rapat penjelasan untuk pengadaan {{$pengadaan1->pengadaan->jenis_pengadaan}} keperluan Dinas Komunikasi dan Informatika Provinsi Jawa Timur.
+                        tanggal 3 Januari 2022 Nomor : 188/19/114.1/2022,
+                        telah mengadakan rapat penjelasan untuk pengadaan {{$pengadaan->pengadaan->jenis_pengadaan}} keperluan Dinas Komunikasi dan Informatika Provinsi Jawa Timur.
                     </td>
                 </tr>
             </table>
@@ -77,7 +77,7 @@
                 </tr>
                 <tr>
                     <td>3.</td>
-                    <td>Nilai HPS/OE untuk pekerjaan ini adalah Rp. {{$pengadaan1->pengadaan->total_hps}},- ({{$pengadaan1->pengadaan->deskripsi_hps}}).</td>
+                    <td>Nilai HPS/OE untuk pekerjaan ini adalah Rp. {{$pengadaan->pengadaan->total_hps}},- ({{$pengadaan->pengadaan->deskripsi_hps}}).</td>
                 </tr>
                 <tr>
                     <td colspan="2">Pokok-Pokok Penjelasan lainnya antara lain sebagai berikut :</td>
@@ -85,22 +85,22 @@
             </table>
         </div>
         <br>
-        <div style="text-align: center;" >
+        <div style="text-align: center;">
             <table border="0">
                 <tr>
-                    <td colspan="3" style="text-align: center;" >
-                    <font color="black"> 
-                {{-- <p align="center"> --}}
-                        <b> DOKUMEN PENGADAAN <br>BAB I  INSTRUKSI KEPADA PESERTA PENGADAAN (LKPP) </b>
-                {{-- </p> --}}
-                    </font>
+                    <td colspan="3" style="text-align: center;">
+                        <font color="black">
+                            {{-- <p align="center"> --}}
+                            <b> DOKUMEN PENGADAAN <br>BAB I INSTRUKSI KEPADA PESERTA PENGADAAN (LKPP) </b>
+                            {{-- </p> --}}
+                        </font>
                     </td>
                 </tr>
                 <br>
                 {{-- A --}}
                 <tr>
                     <td width="8">A.</td>
-                    <td colspan="2" >UMUM</td>
+                    <td colspan="2">UMUM</td>
                 </tr>
                 <tr>
                     <td>1.</td>
@@ -130,7 +130,7 @@
                 {{-- B --}}
                 <tr>
                     <td>B.</td>
-                    <td colspan="2" >DOKUMEN PENGADAAN</td>
+                    <td colspan="2">DOKUMEN PENGADAAN</td>
                 </tr>
                 <tr>
                     <td>1.</td>
@@ -165,7 +165,7 @@
                 {{-- C --}}
                 <tr>
                     <td>C.</td>
-                    <td colspan="2" >PEMASUKAN DOKUMEN PENAWARAN</td>
+                    <td colspan="2">PEMASUKAN DOKUMEN PENAWARAN</td>
                 </tr>
                 <tr>
                     <td>1.</td>
@@ -185,7 +185,7 @@
                 {{-- D --}}
                 <tr>
                     <td>D.</td>
-                    <td colspan="2" >PEMBUKAAN DAN EVALUASI PENAWARAN</td>
+                    <td colspan="2">PEMBUKAAN DAN EVALUASI PENAWARAN</td>
                 </tr>
                 <tr>
                     <td>1.</td>
@@ -203,21 +203,21 @@
         <div>
             <table border="0">
                 <tr>
-                    <td style="text-align: justify; text-indent: 45px;">Demikian Berita Acara Penjelasan dalam rangka Pengadaan Langsung untuk pengadaan {{$pengadaan1->pengadaan->jenis_pengadaan}} keperluan Dinas Komunikasi dan Informatika Provinsi Jawa Timur  Jl. Ahmad Yani 242 - 244 Surabaya, dibuat dengan sesungguhnya sebagai pertemuan Pejabat Pengadaan dengan peserta Pengadaan Langsung dan merupakan kelengkapan yang tidak terpisahkan dari Dokumen Pengadaan pekerjaan ini</td>
+                    <td style="text-align: justify; text-indent: 45px;">Demikian Berita Acara Penjelasan dalam rangka Pengadaan Langsung untuk pengadaan {{$pengadaan->pengadaan->jenis_pengadaan}} keperluan Dinas Komunikasi dan Informatika Provinsi Jawa Timur Jl. Ahmad Yani 242 - 244 Surabaya, dibuat dengan sesungguhnya sebagai pertemuan Pejabat Pengadaan dengan peserta Pengadaan Langsung dan merupakan kelengkapan yang tidak terpisahkan dari Dokumen Pengadaan pekerjaan ini</td>
                 </tr>
             </table>
         </div>
         <br>
         {{-- Pejabat 1 --}}
-        <div  >
-            <table >
+        <div>
+            <table>
                 <tr style="text-align: center;">
                     <td width="550">
                         <b> PIHAK PEJABAT PEMBUAT KOMITMEN </b>
                     </td>
                 </tr>
             </table>
-            <table  border="1">
+            <table border="1">
                 <tr style="text-align: center;">
                     <td>NO</td>
                     <td width="200">Nama</td>
@@ -234,15 +234,15 @@
         </div>
         <br>
         {{-- Pejabat 2 --}}
-        <div >
-            <table >
+        <div>
+            <table>
                 <tr style="text-align: center;">
                     <td width="550">
                         <b> PIHAK PEJABAT PEMBUAT KOMITMEN </b>
                     </td>
                 </tr>
             </table>
-                <table border="1">
+            <table border="1">
                 <tr style="text-align: center;">
                     <td>NO</td>
                     <td width="200">Nama</td>
@@ -259,8 +259,8 @@
         </div>
         <br>
         {{-- Pejabat 3 --}}
-        <div >
-            <table >
+        <div>
+            <table>
                 <tr style="text-align: center;">
                     <td width="550">
                         <b> PIHAK PENYEDIA BARANG/JASA </b>
@@ -276,8 +276,8 @@
                 </tr>
                 <tr>
                     <td height="100">1</td>
-                    <td>{{$pengadaan1->pengadaan->pelaksana->nama_pelaksana}}</td>
-                    <td>{{$pengadaan1->pengadaan->pelaksana->pt_pelaksana}}</td>
+                    <td>{{$pengadaan->pengadaan->pelaksana->nama_pelaksana}}</td>
+                    <td>{{$pengadaan->pengadaan->pelaksana->pt_pelaksana}}</td>
                     <td></td>
                 </tr>
             </table>

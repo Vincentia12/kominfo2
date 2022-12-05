@@ -41,7 +41,7 @@
             <tr>
                 <td>Nomor</td>
                 <td>:</td>
-                <td>020/{{$pengadaan->nomor}}/114.6/2022</td>
+                <td>020/{{$pengadaan->nomor}}/114.6/{{$pengadaan->tanggal->isoFormat('Y')}}</td>
             </tr>
             <tr>
                 <td>Sifat</td>
@@ -68,7 +68,7 @@
         <br>
         <table font-size="2">
             <tr>
-                <td style="text-indent: 45px;">Bersama ini ini diberitahukan, bahwa DPA-SKPD Bagian Data dan Statistik pada Dinas Komunikasi dan Informatika Provinsi Jawa Timur Tahun Anggaran {{ $pengadaan->tanggal}}, kode rekening {{ $pengadaan->pengadaan->pelaksana->kode_rekening}} pengadaan {{ $pengadaan->pengadaan->jenis_pengadaan}} keperluan Dinas Komunikasi dan Informatika Provinsi Jawa Timur dengan rincian sebagai berikut :</td>
+                <td style="text-indent: 45px;">Bersama ini ini diberitahukan, bahwa DPA-SKPD Bagian Data dan Statistik pada Dinas Komunikasi dan Informatika Provinsi Jawa Timur Tahun Anggaran {{$pengadaan->tanggal->isoFormat('Y')}}, kode rekening {{ $pengadaan->pengadaan->pelaksana->kode_rekening}} pengadaan {{ $pengadaan->pengadaan->jenis_pengadaan}} keperluan Dinas Komunikasi dan Informatika Provinsi Jawa Timur dengan rincian sebagai berikut :</td>
             </tr>
         </table>
     </div>
@@ -105,7 +105,10 @@
     <div>
         <table font-size="2">
             <tr>
-                <td style="text-indent: 45px;">Sehubungan dengan hal tersebut diatas, untuk penyedia Barang/Jasa ditunjuk {{$pengadaan->pengadaan->pelaksana->pt_pelaksana}}, {{$pengadaan->pengadaan->pelaksana->alamat}}. Untuk itu diminta bantuannya untuk segera diproses sesuai prosedur yang berlaku. Demikian untuk pelaksanaannya.</td>
+                <td style="text-indent: 45px;">Sehubungan dengan hal tersebut diatas, untuk penyedia Barang/Jasa ditunjuk {{$pengadaan->pengadaan->pelaksana->pt_pelaksana}}, {{$pengadaan->pengadaan->pelaksana->alamat}}. Untuk itu diminta bantuannya untuk segera diproses sesuai prosedur yang berlaku.</td>
+            </tr>
+            <tr>
+                <td style="text-indent: 45px;">Demikian untuk pelaksanaannya.</td>
             </tr>
         </table>
         <br>
@@ -116,6 +119,7 @@
                 <td>PEJABAT PEMBUAT KOMITMEN</td>
             </tr>
         </table>
+        <br>
         <br>
         <br>
         <br>

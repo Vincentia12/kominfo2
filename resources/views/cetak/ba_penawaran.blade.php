@@ -41,8 +41,8 @@
         {{-- judul --}}
         <div style="text-align: center">
             {{-- <font color="black">  --}}
-                <p align="center"><u><b> BERITA ACARA  PEMBUKAAN PENAWARA </b></u> <br>
-                    Nomor : 020/{{$pengadaan1->nomor}}/114.6/2022 </p>
+            <p align="center"><u><b> BERITA ACARA PEMBUKAAN PENAWARAN </b></u> <br>
+                Nomor : 020/{{$pengadaan->nomor}}/114.6/{{$pengadaan->tanggal->isoFormat('Y')}} </p>
             {{-- </font> --}}
         </div>
     </div>
@@ -53,10 +53,7 @@
             <table font-size="1">
                 <tr>
                     <td style="text-indent: 45px;  text-align:justify">
-                        Pada hari ini {{$pengadaan1->hari}} {{$pengadaan1->deskripsi_tgl}}, dimulai pukul 10.00 WIB sampai dengan selesai, Pejabat Pengadaan di Lingkungan Dinas Komunikasi dan Informatika Provinsi Jawa Timur yang dibentuk dengan Keputusan Kepala Dinas Komunikasi Dan Informatika Provinsi Jawa Timur 
-                        {{-- dari tabel pejabat --}}
-                        tanggal 3 Januari 2022 Nomor : 188/19/114.1/2022, 
-                        telah mengadakan rapat penjelasan untuk pengadaan {{$pengadaan1->pengadaan->jenis_pengadaan}} keperluan Dinas Komunikasi dan Informatika Provinsi Jawa Timur.
+                        Pada hari ini {{$pengadaan->tanggal->isoFormat('dddd')}}, Tanggal {{$pengadaan->deskripsi_tgl}} kami yang bertanda tangan dibawah ini adalah Pejabat Pengadaan di Lingkungan Dinas Komunikasi Dan Informatika Provinsi Jawa Timur yang dibentuk dengan Keputusan Kepala Dinas Komunikasi Dan Informatika Provinsi Jawa Timur selaku Pengguna Anggaran tanggal 3 Januari 2022 Nomor : 188/19/114.1/2022, melaksanakan Pembukaan Penawaran untuk pelaksanaan {{$pengadaan->pengadaan->jenis_pengadaan}} , dibiayai dari dana APBD Tahun Anggaran {{$pengadaan->tanggal->isoFormat('Y')}} pada DPA Dinas Komunikasi dan Informatika Provinsi Jawa Timur Kode Rekening 2.20.02.1.01.5.1.02.01.01.0029 dengan Harga Perkiraan Sendiri (HPS) sebesar Rp. {{$pengadaan->pengadaan->total_hps}},- ({{$pengadaan->pengadaan->deskripsi_hps}}).
                     </td>
                 </tr>
             </table>
@@ -77,12 +74,13 @@
                 <tr>
                     <td>Jabatan</td>
                     <td>:</td>
-                    <td>Pejabat Pengadaan Barang/Jasa di lingkungan Dinas Komunikasi dan Informatika Provinsi Jawa Timur Tahun Anggaran 2022</td>
+                    <td>Pejabat Pengadaan Barang/Jasa di lingkungan Dinas Komunikasi dan Informatika Provinsi Jawa Timur Tahun Anggaran {{$pengadaan->tanggal->isoFormat('Y')}}</td>
                 </tr>
             </table>
             <table border="0">
                 <tr>
-                    <td> </td><td> </td>
+                    <td> </td>
+                    <td> </td>
                     <td colspan="4">dan dihadiri oleh :</td>
                 </tr>
             </table>
@@ -99,7 +97,7 @@
                     <td></td>
                     <td width="180">I WAYAN RUDY ARTHA, S.Kom</td>
                     <td>:</td>
-                    <td>Pejabat Pembuat Komitmen di lingkungan Dinas Komunikasi dan Informatika Provinsi Jawa Timur Tahun Anggaran 2022	</td>
+                    <td>Pejabat Pembuat Komitmen di lingkungan Dinas Komunikasi dan Informatika Provinsi Jawa Timur Tahun Anggaran {{$pengadaan->tanggal->isoFormat('Y')}} </td>
                 </tr>
                 <tr>
                     <td>B.</td>
@@ -109,9 +107,9 @@
                 </tr>
                 <tr>
                     <td></td>
-                    <td>{{$pengadaan1->pengadaan->pelaksana->pt_pelaksana}}</td>
+                    <td>{{$pengadaan->pengadaan->pelaksana->pt_pelaksana}}</td>
                     <td>:</td>
-                    <td>{{$pengadaan1->pengadaan->pelaksana->nama_pelaksana}}</td>
+                    <td>{{$pengadaan->pengadaan->pelaksana->nama_pelaksana}}</td>
                 </tr>
             </table>
         </div>
@@ -134,7 +132,7 @@
                 </tr>
                 <tr>
                     <td>1.</td>
-                    <td style="text-align:left">{{$pengadaan1->pengadaan->pelaksana->pt_pelaksana}}</td>
+                    <td style="text-align:left">{{$pengadaan->pengadaan->pelaksana->pt_pelaksana}}</td>
                     <td>Ada</td>
                     <td>Ada</td>
                     <td>Lengkap</td>
@@ -158,7 +156,7 @@
                 </tr>
             </table>
 
-            <br><br><br><br><br><br>
+            <br><br><br><br>
 
             <table border="0" align="center">
                 <tr>
@@ -182,4 +180,4 @@
             </table>
         </div>
     </div>
-</div> 
+</div>

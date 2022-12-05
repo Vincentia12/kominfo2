@@ -145,21 +145,22 @@
               <option value="Nota Dinas dari KPA ke PPK">Nota Dinas dari KPA ke PPK</option>
               <option value="Nota Dinas dari PPK ke Pejabat Pengadaan + Lampiran OE (HPS)">Nota Dinas dari PPK ke Pejabat Pengadaan + Lampiran OE (HPS)</option>
               <option value="Surat Undangan, Pengambilan Dokumen Kualifikasi dan Dokumen Pengadaan Langsung kepada Penyedia Barang/Jasa">Surat Undangan, Pengambilan Dokumen Kualifikasi dan Dokumen Pengadaan Langsung kepada Penyedia Barang/Jasa</option>
-              <option value="PAKTA  INTEGRITAS">PAKTA  INTEGRITAS</option>
+              <option value="PAKTA  INTEGRITAS">PAKTA INTEGRITAS</option>
               <option value="Surat Pernyataan Minat">Surat Pernyataan Minat</option>
               <option value="Pemasukan Dokumen Kualifikasi">Pemasukan Dokumen Kualifikasi</option>
-              <option value="Daftar Hadir Pengembalian Dokumen Prakualifikasi">Daftar Hadir Pengembalian Dokumen Prakualifikasi</option> 
+              <option value="Daftar Hadir Pengembalian Dokumen Prakualifikasi">Daftar Hadir Pengembalian Dokumen Prakualifikasi</option>
               <option value="BA. Evaluasi Dokumen Prakualifikasi">BA. Evaluasi Dokumen Prakualifikasi</option>
-              <option value="Lampiran BA. Evaluasi Dokumen Prakualifikasi">Lampiran BA. Evaluasi Dokumen Prakualifikasi</option> 
+              <option value="Lampiran BA. Evaluasi Dokumen Prakualifikasi">Lampiran BA. Evaluasi Dokumen Prakualifikasi</option>
               <option value="Surat Undangan Permintaan Penawaran Harga">Surat Undangan Permintaan Penawaran Harga</option>
               <option value="BA. Penjelasan Pekerjaan">BA. Penjelasan Pekerjaan</option>
-              <option value="Pemasukan Penawaran">Pemasukan Penawaran</option> 
+              <option value="Pemasukan Penawaran">Pemasukan Penawaran</option>
               <option value="BA. Pembukaan Penawaran">BA. Pembukaan Penawaran</option>
-              <option value="Surat Undangan Klarifikasi/Negosias">Surat Undangan Klarifikasi/Negosiasi</option>                  <option value="BA. Klarifikasi/Negosiasi">BA. Klarifikasi/Negosiasi</option>
-              <option value="Lampiran BA. Klarifikasi/Negosiasi">Lampiran BA. Klarifikasi/Negosiasi</option> 
+              <option value="Surat Undangan Klarifikasi/Negosiasi">Surat Undangan Klarifikasi/Negosiasi</option>
+              <option value="BA. Klarifikasi/Negosiasi">BA. Klarifikasi/Negosiasi</option>
+              <option value="Lampiran BA. Klarifikasi/Negosiasi">Lampiran BA. Klarifikasi/Negosiasi</option>
               <option value="BA. Hasil Pengadaan Langsung">BA. Hasil Pengadaan Langsung</option>
               <option value="Nota Dinas dari Pejabat Pengadaan ke PPK">Nota Dinas dari Pejabat Pengadaan ke PPK</option>
-              <option value="Penetapan Penyedia Jasa">Penetapan Penyedia Jasa</option> 
+              <option value="Penetapan Penyedia Jasa">Penetapan Penyedia Jasa</option>
               <option value="Penunjukan Penyedia Barang/Jasa">Penunjukan Penyedia Barang/Jasa</option>
               <option value="Surat Perintah Kerja">Surat Perintah Kerja</option>
               <option value="Surat Perintah Mulai Kerja (SPMK)">Surat Perintah Mulai Kerja (SPMK)</option>
@@ -255,27 +256,28 @@
             <select class="form-control" name="kegiatan" id="kegiatan" placeholder="Pilih Kegiatan">
               <option value="{{$jdwl->kegiatan}}">-{{ $jdwl->kegiatan }} </option>
               <option value=""></option>
-              
+
               <option value="">Pilih Pengadaan</option>
               <option value=""></option>
               <option value="Nota Dinas dari KPA ke PPK">Nota Dinas dari KPA ke PPK</option>
               <option value="Nota Dinas dari PPK ke Pejabat Pengadaan + Lampiran OE (HPS)">Nota Dinas dari PPK ke Pejabat Pengadaan + Lampiran OE (HPS)</option>
               <option value="Surat Undangan, Pengambilan Dokumen Kualifikasi dan Dokumen Pengadaan Langsung kepada Penyedia Barang/Jasa">Surat Undangan, Pengambilan Dokumen Kualifikasi dan Dokumen Pengadaan Langsung kepada Penyedia Barang/Jasa</option>
-              <option value="PAKTA  INTEGRITAS">PAKTA  INTEGRITAS</option>
+              <option value="PAKTA INTEGRITAS">PAKTA INTEGRITAS</option>
               <option value="Surat Pernyataan Minat">Surat Pernyataan Minat</option>
               <option value="Pemasukan Dokumen Kualifikasi">Pemasukan Dokumen Kualifikasi</option>
-              <option value="Daftar Hadir Pengembalian Dokumen Prakualifikasi">Daftar Hadir Pengembalian Dokumen Prakualifikasi</option> 
+              <option value="Daftar Hadir Pengembalian Dokumen Prakualifikasi">Daftar Hadir Pengembalian Dokumen Prakualifikasi</option>
               <option value="BA. Evaluasi Dokumen Prakualifikasi">BA. Evaluasi Dokumen Prakualifikasi</option>
-              <option value="Lampiran BA. Evaluasi Dokumen Prakualifikasi">Lampiran BA. Evaluasi Dokumen Prakualifikasi</option> 
+              <option value="Lampiran BA. Evaluasi Dokumen Prakualifikasi">Lampiran BA. Evaluasi Dokumen Prakualifikasi</option>
               <option value="Surat Undangan Permintaan Penawaran Harga">Surat Undangan Permintaan Penawaran Harga</option>
               <option value="BA. Penjelasan Pekerjaan">BA. Penjelasan Pekerjaan</option>
-              <option value="Pemasukan Penawaran">Pemasukan Penawaran</option> 
+              <option value="Pemasukan Penawaran">Pemasukan Penawaran</option>
               <option value="BA. Pembukaan Penawaran">BA. Pembukaan Penawaran</option>
-              <option value="Surat Undangan Klarifikasi/Negosias">Surat Undangan Klarifikasi/Negosiasi</option>                  <option value="BA. Klarifikasi/Negosiasi">BA. Klarifikasi/Negosiasi</option>
-              <option value="Lampiran BA. Klarifikasi/Negosiasi">Lampiran BA. Klarifikasi/Negosiasi</option> 
+              <option value="Surat Undangan Klarifikasi/Negosias">Surat Undangan Klarifikasi/Negosiasi</option>
+              <option value="BA. Klarifikasi/Negosiasi">BA. Klarifikasi/Negosiasi</option>
+              <option value="Lampiran BA. Klarifikasi/Negosiasi">Lampiran BA. Klarifikasi/Negosiasi</option>
               <option value="BA. Hasil Pengadaan Langsung">BA. Hasil Pengadaan Langsung</option>
               <option value="Nota Dinas dari Pejabat Pengadaan ke PPK">Nota Dinas dari Pejabat Pengadaan ke PPK</option>
-              <option value="Penetapan Penyedia Jasa">Penetapan Penyedia Jasa</option> 
+              <option value="Penetapan Penyedia Jasa">Penetapan Penyedia Jasa</option>
               <option value="Penunjukan Penyedia Barang/Jasa">Penunjukan Penyedia Barang/Jasa</option>
               <option value="Surat Perintah Kerja">Surat Perintah Kerja</option>
               <option value="Surat Perintah Mulai Kerja (SPMK)">Surat Perintah Mulai Kerja (SPMK)</option>

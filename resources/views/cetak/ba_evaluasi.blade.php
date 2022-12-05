@@ -58,7 +58,7 @@
                     <font size="3">:</font>
                 </td>
                 <td style="text-align: center">
-                    <font size="3">020/654.6 /114.6/2022</font>
+                    <font size="3">020/654.6 /114.6/{{$pengadaan->tanggal->isoFormat('Y')}}</font>
                 </td>
                 </td>
             <tr>
@@ -70,7 +70,7 @@
         <table>
             <tr>
                 <td width="8"></td>
-                <td style="text-align: left ;text-align: justify; text-indent: 45px;">Pada hari ini Kamis Tanggal Delapan Belas, Bulan Agustus Tahun Dua Ribu Dua Puluh Dua, bertempat di Ruang Argopuro Dinas Komunikasi Dan Informatika Provinsi Jawa Timur, kami yang bertanda tangan dibawah ini adalah Pejabat Pengadaan di Lingkungan Dinas Komunikasi Dan Informatika Provinsi Jawa Timur Tahun Anggaran 2022 yang dibentuk dengan Keputusan Kepala Dinas Komunikasi Dan Informatika Provinsi Jawa Timur tanggal 3 Januari 2022 Nomor : 188/19/114.1/2022, telah melakukan penilaian dokumen prakualifikasi penunjukan langsung Belanja Alat/Bahan Kapasitas Kelembagaan Statistik Sektoral Toner Printer , dibiayai dari dana APBD Tahun Anggaran 2022 pada DPA Dinas Komunikasi dan Informatika Provinsi Jawa Timur Kode Rekening 2.20.02.1.01.5.1.02.01.01.0029 yang telah diserahkan oleh :</td>
+                <td style="text-align: left ;text-align: justify; text-indent: 45px;">Pada hari ini {{$pengadaan->tanggal->isoFormat('dddd')}} Tanggal Delapan Belas, Bulan Agustus Tahun Dua Ribu Dua Puluh Dua, bertempat di Ruang Argopuro Dinas Komunikasi Dan Informatika Provinsi Jawa Timur, kami yang bertanda tangan dibawah ini adalah Pejabat Pengadaan di Lingkungan Dinas Komunikasi Dan Informatika Provinsi Jawa Timur Tahun Anggaran {{$pengadaan->tanggal->isoFormat('Y')}} yang dibentuk dengan Keputusan Kepala Dinas Komunikasi Dan Informatika Provinsi Jawa Timur tanggal 3 Januari 2022 Nomor : 188/19/114.1/{{$pengadaan->tanggal->isoFormat('Y')}}, telah melakukan penilaian dokumen prakualifikasi penunjukan langsung Belanja Alat/Bahan Kapasitas Kelembagaan Statistik Sektoral Toner Printer , dibiayai dari dana APBD Tahun Anggaran {{$pengadaan->tanggal->isoFormat('Y')}} pada DPA Dinas Komunikasi dan Informatika Provinsi Jawa Timur Kode Rekening 2.20.02.1.01.5.1.02.01.01.0029 yang telah diserahkan oleh :</td>
             </tr>
         </table>
     </div>
@@ -82,7 +82,7 @@
                 <td width="8"></td>
                 <td width="180">NAMA PERUSAHAAN</td>
                 <td>:</td>
-                <td width="370">{{$pengadaan1->pengadaan->pelaksana->pt_pelaksana}}</td>
+                <td width="370">{{$pengadaan->pengadaan->pelaksana->pt_pelaksana}}</td>
             </tr>
         </table>
     </div>
@@ -92,7 +92,7 @@
                 <td width="8"></td>
                 <td width="180">ALAMAT</td>
                 <td>:</td>
-                <td width="370">{{$pengadaan1->pengadaan->pelaksana->alamat}}</td>
+                <td width="370">{{$pengadaan->pengadaan->pelaksana->alamat}}</td>
             </tr>
         </table>
     </div>
@@ -103,7 +103,7 @@
                 <td width="8"></td>
                 <td width="180">NOMOR POKOK WAJIB PAJAK</td>
                 <td>:</td>
-                <td width="370">{{$pengadaan1->pengadaan->pelaksana->npwp}}</td>
+                <td width="370">{{$pengadaan->pengadaan->pelaksana->npwp}}</td>
             </tr>
         </table>
     </div>

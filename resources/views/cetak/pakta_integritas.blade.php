@@ -22,7 +22,7 @@
         <br>
         <table font-size="2">
             <tr>
-                <td style="text-align: justify;">Saya yang bertandatangan di bawah ini, dalam rangka pengadaan {{$pengadaan1->pengadaan->jenis_pengadaan}} keperluan Dinas Komunikasi Dan Informatika Provinsi Jawa Timur pada Satuan Kerja Perangkat Daerah Dinas Komunikasi Dan Informatika Provinsi Jawa Timur Tahun Anggaran 2022, dengan ini menyatakan bahwa saya :</td>
+                <td style="text-align: justify;">Saya yang bertandatangan di bawah ini, dalam rangka pengadaan {{$pengadaan->pengadaan->jenis_pengadaan}} keperluan Dinas Komunikasi Dan Informatika Provinsi Jawa Timur pada Satuan Kerja Perangkat Daerah Dinas Komunikasi Dan Informatika Provinsi Jawa Timur Tahun Anggaran {{$pengadaan->tanggal->isoFormat('Y')}}, dengan ini menyatakan bahwa saya :</td>
             </tr>
         </table>
     </div>
@@ -70,7 +70,7 @@
         <div style="text-align: center">
             <table font-size="3" style="width: 35%; text-align: left; float: right;">
                 <tr>
-                    <td>Surabaya, {{$pengadaan1->tanggal}}</td>
+                    <td>Surabaya, {{$pengadaan->tanggal->isoFormat('D MMMM Y')}}</td>
                 </tr>
             </table>
         </div>

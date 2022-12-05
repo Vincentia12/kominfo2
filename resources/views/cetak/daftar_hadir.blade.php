@@ -29,7 +29,7 @@
                     <center>
                         <font size="4"><b>DAFTAR HADIR</b></font><br><br>
                         <font size="3"><b>PENGEMBALIAN DOKUMEN PRAKUALIFIKASI</b></font><br>
-                        <font size="3" style="text-transform: uppercase;"><b>{{$pengadaan1->pengadaan->jenis_pengadaan}}</b></font><br>
+                        <font size="3" style="text-transform: uppercase;"><b>{{$pengadaan->pengadaan->jenis_pengadaan}}</b></font><br>
                 </td>
             </tr>
         </table>
@@ -57,9 +57,9 @@
             <tbody>
                 <tr height="100">
                     <th scope="row">1</th>
-                    <td>{{$pengadaan1->pengadaan->pelaksana->pt_pelaksana}}</td>
-                    <td>{{$pengadaan1->pengadaan->pelaksana->alamat}}</td>
-                    <td>{{$pengadaan1->tanggal}}</td>
+                    <td>{{$pengadaan->pengadaan->pelaksana->pt_pelaksana}}</td>
+                    <td>{{$pengadaan->pengadaan->pelaksana->alamat}}</td>
+                    <td>{{$pengadaan->tanggal->isoFormat('D MMMM Y')}}</td>
                     <td> </td>
                 </tr>
             </tbody>
@@ -69,9 +69,9 @@
     <br><br><br>
     <div class="row">
         <div style="text-align: center">
-            <table font-size="3" style="width: 33%; text-align: left; float: right;">
+            <table font-size="3" style="width: 36%; text-align: left; float: right;">
                 <tr>
-                    <td>Surabaya, {{$pengadaan1->tanggal}}</td>
+                    <td>Surabaya, {{$pengadaan->tanggal->isoFormat('D MMMM Y')}}</td>
                 </tr>
             </table>
         </div>

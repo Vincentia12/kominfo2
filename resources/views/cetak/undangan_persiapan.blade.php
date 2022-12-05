@@ -42,7 +42,7 @@
             <tr>
                 <td width="280"> </td>
                 <!-- diubah. menggunakan kolom craete at tapi aku blm bisa ngubahnya -->
-                <td>Surabaya, 15 Agustus 2022</td>
+                <td>Surabaya, {{$pengadaan->tanggal->isoFormat('D MMMM Y')}}</td>
                 <td width="50"> </td>
             </tr>
             <tr>
@@ -59,10 +59,10 @@
                 <td width="80">Nomor</td>
                 <td>:</td>
                 <!-- diubah -->
-                <td width="175">020/{{$pengadaan1->nomor}}/114.6/2022</td>
+                <td width="175">020/{{$pengadaan->nomor}}/114.6/{{$pengadaan->tanggal->isoFormat('Y')}}</td>
                 <td width="50">Yth. Sdr. </td>
                 <!-- diubah -->
-                <td width="175">{{$pengadaan1->pengadaan->pelaksana->jabatan_pelaksana}} {{$pengadaan1->pengadaan->pelaksana->pt_pelaksana}}</td>
+                <td width="175">{{$pengadaan->pengadaan->pelaksana->jabatan_pelaksana}} {{$pengadaan->pengadaan->pelaksana->pt_pelaksana}}</td>
             </tr>
             <tr>
                 <td width="80">Sifat</td>
@@ -70,7 +70,7 @@
                 <td width="175">Segera</td>
                 <td> </td>
                 <!-- diubah -->
-                <td>{{$pengadaan1->pengadaan->pelaksana->alamat}}</td>
+                <td>{{$pengadaan->pengadaan->pelaksana->alamat}}</td>
             </tr>
             <tr>
                 <td width="80">Lampiran</td>
@@ -107,7 +107,7 @@
                 <td width="100">Paket Pekerjaan</td>
                 <td>:</td>
                 <!-- diubah -->
-                <td>{{ $pengadaan1->pengadaan->jenis_pengadaan }}</td>
+                <td>{{ $pengadaan->pengadaan->jenis_pengadaan }}</td>
             </tr>
             <tr>
                 <td width="8"></td>
@@ -125,14 +125,14 @@
                 <td width="8"></td>
                 <td width="50">Sumber Dana</td>
                 <td>:</td>
-                <td>APBD Provinsi Jawa Timur Tahun Anggaran 2022</td>
+                <td>APBD Provinsi Jawa Timur Tahun Anggaran {{$pengadaan->tanggal->isoFormat('Y')}}</td>
             </tr>
             <tr>
                 <td width="8"></td>
                 <td width="50">Nilai HPS</td>
                 <td>:</td>
                 <!-- diubah -->
-                <td>Rp. {{$pengadaan1->pengadaan->total_hps}},- ({{$pengadaan1->pengadaan->deskripsi_hps}})</td>
+                <td>Rp. {{$pengadaan->pengadaan->total_hps}},- ({{$pengadaan->pengadaan->deskripsi_hps}})</td>
             </tr>
         </table>
     </div>
@@ -151,7 +151,7 @@
                 <td width="100">Hari/Tanggal</td>
                 <td>:</td>
                 <!-- diubah -->
-                <td>{{ $pengadaan1->hari }}/{{ $pengadaan1->tanggal }}</td>
+                <td>{{$pengadaan->tanggal->isoFormat('dddd')}} / {{$pengadaan->tanggal->isoFormat('D MMMM Y')}}</td>
             </tr>
             <tr>
                 <td width="8"></td>
@@ -189,10 +189,9 @@
             <br>
             <br>
             <br>
-            <br>
             <tr>
                 <td width="300"> </td>
-                <td width="250">ADI KURNIAWAN.S.Kom.,M.Kom</td>
+                <td width="250"><u>ADI KURNIAWAN.S.Kom.,M.Kom</u></td>
                 {{-- <td width="50"> </td> --}}
             </tr>
             <tr>

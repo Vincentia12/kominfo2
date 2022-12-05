@@ -15,7 +15,7 @@
 @endif
 
 <div class="col-12 grid-margin stretch-card">
-    <div >
+    <div>
         <table border="0" align="center">
             <tr>
                 <td width="100">DAFTAR</td>
@@ -25,7 +25,7 @@
             <tr>
                 <td width="100">PEKERJAAN</td>
                 <td width="30">:</td>
-                <td width="430">{{$pengadaan1->pengadaan->jenis_pengadaan}}</td>
+                <td width="430">{{$pengadaan->pengadaan->jenis_pengadaan}}</td>
             <tr>
             <tr>
                 <td width="100">KEPERLUAN</td>
@@ -35,7 +35,7 @@
             <tr>
                 <td width="100">Tanggal</td>
                 <td width="30">:</td>
-                <td width="430">{{$pengadaan1->tanggal}}</td>
+                <td width="430">{{$pengadaan->tanggal->isoFormat('D MMMM Y')}}</td>
             <tr>
         </table>
     </div>
@@ -43,18 +43,18 @@
     <div>
         <table style="text-align: center" border="1" font-size="0">
             <tr>
-                <td rowspan="3" > NO </td>
-                <td rowspan="3" > Nama Perusahaan </td>
-                <td rowspan="3" > Surat Pernyataan Minat </td>
-                <td rowspan="3" > Pakta Integritas </td>
-                <td colspan="8" > Formulir Isian Penilaian Kualifikasi </td>
-                <td rowspan="3" > Keterangan </td>
+                <td rowspan="3"> NO </td>
+                <td rowspan="3"> Nama Perusahaan </td>
+                <td rowspan="3"> Surat Pernyataan Minat </td>
+                <td rowspan="3"> Pakta Integritas </td>
+                <td colspan="8"> Formulir Isian Penilaian Kualifikasi </td>
+                <td rowspan="3"> Keterangan </td>
             </tr>
             <tr>
-                <td rowspan="2" > Data Administras </td>
-                <td rowspan="2" > Ijin Usaha </td>
-                <td rowspan="2" > Landasan Hukum Pendirian BU </td>
-                <td rowspan="2" > Pengurus </td>
+                <td rowspan="2"> Data Administras </td>
+                <td rowspan="2"> Ijin Usaha </td>
+                <td rowspan="2"> Landasan Hukum Pendirian BU </td>
+                <td rowspan="2"> Pengurus </td>
                 <td colspan="4"> P a j a k </td>
             </tr>
             <tr>
@@ -79,19 +79,19 @@
                 <td> 13 </td>
             </tr>
             <tr>
-                <td rowspan="2" > 1 </td>
-                <td rowspan="2" > {{$pengadaan1->pengadaan->pelaksana->pt_pelaksana}} </td>
-                <td rowspan="2" > <a href='https://postimages.org/' target='_blank'><img src='https://i.postimg.cc/tCSLJGtT/check.jpg' width="50" height="30" border='0' alt='check'/></a> </td>
-                <td rowspan="2" > <a href='https://postimages.org/' target='_blank'><img src='https://i.postimg.cc/tCSLJGtT/check.jpg' width="50" height="30" border='0' alt='check'/></a> </td>
-                <td rowspan="2" > <a href='https://postimages.org/' target='_blank'><img src='https://i.postimg.cc/tCSLJGtT/check.jpg' width="50" height="30" border='0' alt='check'/></a> </td>
-                <td rowspan="2" > <a href='https://postimages.org/' target='_blank'><img src='https://i.postimg.cc/tCSLJGtT/check.jpg' width="50" height="30" border='0' alt='check'/></a> </td>
-                <td rowspan="2" > <a href='https://postimages.org/' target='_blank'><img src='https://i.postimg.cc/tCSLJGtT/check.jpg' width="50" height="30" border='0' alt='check'/></a> </td>
-                <td rowspan="2" > <a href='https://postimages.org/' target='_blank'><img src='https://i.postimg.cc/tCSLJGtT/check.jpg' width="50" height="30" border='0' alt='check'/></a> </td>
-                <td rowspan="2" > <a href='https://postimages.org/' target='_blank'><img src='https://i.postimg.cc/tCSLJGtT/check.jpg' width="50" height="30" border='0' alt='check'/></a> </td>
-                <td rowspan="2" > <a href='https://postimages.org/' target='_blank'><img src='https://i.postimg.cc/tCSLJGtT/check.jpg' width="50" height="30" border='0' alt='check'/></a> </td>
-                <td rowspan="2" > <a href='https://postimages.org/' target='_blank'><img src='https://i.postimg.cc/tCSLJGtT/check.jpg' width="50" height="30" border='0' alt='check'/></a> </td>
-                <td rowspan="2" > <a href='https://postimages.org/' target='_blank'><img src='https://i.postimg.cc/tCSLJGtT/check.jpg' width="50" height="30" border='0' alt='check'/></a> </td>
-                <td rowspan="2" > LULUS </td>
+                <td rowspan="2"> 1 </td>
+                <td rowspan="2"> {{$pengadaan->pengadaan->pelaksana->pt_pelaksana}} </td>
+                <td rowspan="2"> <a href='https://postimages.org/' target='_blank'><img src='https://i.postimg.cc/tCSLJGtT/check.jpg' width="50" height="30" border='0' alt='check' /></a> </td>
+                <td rowspan="2"> <a href='https://postimages.org/' target='_blank'><img src='https://i.postimg.cc/tCSLJGtT/check.jpg' width="50" height="30" border='0' alt='check' /></a> </td>
+                <td rowspan="2"> <a href='https://postimages.org/' target='_blank'><img src='https://i.postimg.cc/tCSLJGtT/check.jpg' width="50" height="30" border='0' alt='check' /></a> </td>
+                <td rowspan="2"> <a href='https://postimages.org/' target='_blank'><img src='https://i.postimg.cc/tCSLJGtT/check.jpg' width="50" height="30" border='0' alt='check' /></a> </td>
+                <td rowspan="2"> <a href='https://postimages.org/' target='_blank'><img src='https://i.postimg.cc/tCSLJGtT/check.jpg' width="50" height="30" border='0' alt='check' /></a> </td>
+                <td rowspan="2"> <a href='https://postimages.org/' target='_blank'><img src='https://i.postimg.cc/tCSLJGtT/check.jpg' width="50" height="30" border='0' alt='check' /></a> </td>
+                <td rowspan="2"> <a href='https://postimages.org/' target='_blank'><img src='https://i.postimg.cc/tCSLJGtT/check.jpg' width="50" height="30" border='0' alt='check' /></a> </td>
+                <td rowspan="2"> <a href='https://postimages.org/' target='_blank'><img src='https://i.postimg.cc/tCSLJGtT/check.jpg' width="50" height="30" border='0' alt='check' /></a> </td>
+                <td rowspan="2"> <a href='https://postimages.org/' target='_blank'><img src='https://i.postimg.cc/tCSLJGtT/check.jpg' width="50" height="30" border='0' alt='check' /></a> </td>
+                <td rowspan="2"> <a href='https://postimages.org/' target='_blank'><img src='https://i.postimg.cc/tCSLJGtT/check.jpg' width="50" height="30" border='0' alt='check' /></a> </td>
+                <td rowspan="2"> LULUS </td>
             </tr>
         </table>
     </div>
@@ -102,32 +102,32 @@
                 <td><b>:</b></td>
             </tr>
             <tr>
-                <td><a href='https://postimages.org/' target='_blank'><img src='https://i.postimg.cc/tCSLJGtT/check.jpg' width="50" height="30" border='0' alt='check'/></a></td>
+                <td><a href='https://postimages.org/' target='_blank'><img src='https://i.postimg.cc/tCSLJGtT/check.jpg' width="50" height="30" border='0' alt='check' /></a></td>
                 <td>.............</td>
                 <td>Persyaratan dipenuhi</td>
             </tr>
             <tr>
-                <td><a href='https://postimages.org/' target='_blank'><img src='https://i.postimg.cc/3JTQq0gH/minus.jpg' width="50" height="30" border='0' alt='minus'/></a></td>
+                <td><a href='https://postimages.org/' target='_blank'><img src='https://i.postimg.cc/3JTQq0gH/minus.jpg' width="50" height="30" border='0' alt='minus' /></a></td>
                 <td>.............</td>
                 <td>Persyaratan belum dipenuhi</td>
             </tr>
         </table>
     </div>
     <br>
-    <div >
+    <div>
         <table style="text-align: center;" border="0" font-size="0">
             <tr>
                 <td width="400"> </td>
                 <td style="text-indent: 45px;">PEJABAT PENGADAAN</td>
                 {{-- <td width="50"> </td> --}}
-            </tr>    
+            </tr>
             <br>
             <br>
             <br>
             <br>
             <tr>
                 <td width="400"> </td>
-                <td width="250" style="text-indent: 45px;">ADI KURNIAWAN.S.Kom.,M.Kom</td>
+                <td width="250" style="text-indent: 45px;"><u>ADI KURNIAWAN.S.Kom.,M.Kom</u></td>
                 {{-- <td width="50"> </td> --}}
             </tr>
             <tr>
@@ -135,6 +135,6 @@
                 <td style="text-indent: 45px;">NIP. 19890618 201403 1 002</td>
                 {{-- <td width="50"> </td> --}}
             </tr>
-        </table> 
+        </table>
     </div>
 </div>

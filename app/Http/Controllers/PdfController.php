@@ -14,7 +14,7 @@ class PdfController extends Controller
 {
     public function index()
     {
-        $pengadaan1 = DB::table('pengadaans')
+        $pengadaan = DB::table('pengadaans')
             ->join('pelaksanas', 'pelaksana_id', '=', 'pelaksanas.id')
             ->where('nilai_negosiasi', '<=', 50)
             // ->join('barangs', 'pengadaans.id', '=', 'barangs.pengadaan_id')
@@ -25,13 +25,13 @@ class PdfController extends Controller
         $pejabat = Pejabat::all();
 
         return view(
-            'admin.pengadaan1',
-            ['pengadaan1' => $pengadaan1],
+            'admin.pengadaan',
+            ['pengadaan' => $pengadaan],
             // ['pejabat' => $pejabat],
             ['pejabat' => $pejabat]
 
         );
-        // dd($pengadaan1, $pejabat);
+        // dd($pengadaan, $pejabat);
     }
 
     // Nota Dinas1/ Nota Dinas dari KPA ke PPK
@@ -49,7 +49,7 @@ class PdfController extends Controller
 
 
 
-        // dd($pengadaan1, $barang );
+        // dd($pengadaan, $barang );
         $pdf = PDF::loadview(
             // $pdf = word::loadview(
             'cetak/nota_dinas1',
@@ -76,7 +76,7 @@ class PdfController extends Controller
 
 
 
-        // dd($pengadaan1, $barang );
+        // dd($pengadaan, $barang );
         $pdf = PDF::loadview(
             // $pdf = word::loadview(
             'atas50/nota_dinas1',
@@ -92,9 +92,9 @@ class PdfController extends Controller
     // Nota Dinas2/Nota Dinas dari PPK ke Pejabat Pengadaan + Lampiran OE (HPS)
     public function nota_dinas2(Request $request, $id)
     {
-        $pengadaan1 = Jadwal::find($id);
+        $pengadaan = Jadwal::find($id);
         $barang = DB::table('barangs')
-            ->where('barangs.pengadaan_id', 'like', "%" . $pengadaan1->pengadaan_id . "%")
+            ->where('barangs.pengadaan_id', 'like', "%" . $pengadaan->pengadaan_id . "%")
             ->get();
         // $pejabat = DB::table('pejabats')
         //     ->where('id', '=', 1)
@@ -104,11 +104,11 @@ class PdfController extends Controller
 
 
 
-        // dd($pengadaan1, $barang );
+        // dd($pengadaan, $barang );
         $pdf = PDF::loadview(
             // $pdf = word::loadview(
             'cetak/nota_dinas2',
-            ['pengadaan1' => $pengadaan1],
+            ['pengadaan' => $pengadaan],
             ['barang' => $barang],
             // ['pejabat' => $pejabat],
             // );
@@ -120,9 +120,9 @@ class PdfController extends Controller
     //Surat Undangan, Pengambilan Dokumen Kualifikasi dan Dokumen Pengadaan Langsung kepada Penyedia Barang/Jasa
     public function undangan_persiapan(Request $request, $id)
     {
-        $pengadaan1 = Jadwal::find($id);
+        $pengadaan = Jadwal::find($id);
         // $barang = DB::table('barangs')
-        //     ->where('barangs.pengadaan_id', 'like', "%" . $pengadaan1->pengadaan_id . "%")
+        //     ->where('barangs.pengadaan_id', 'like', "%" . $pengadaan->pengadaan_id . "%")
         //     ->get();
         // $pejabat = DB::table('pejabats')
         //     ->where('id', '=', 1)
@@ -132,11 +132,11 @@ class PdfController extends Controller
 
 
 
-        // dd($pengadaan1, $barang );
+        // dd($pengadaan, $barang );
         $pdf = PDF::loadview(
             // $pdf = word::loadview(
             'cetak/undangan_persiapan',
-            ['pengadaan1' => $pengadaan1],
+            ['pengadaan' => $pengadaan],
             // ['barang' => $barang],
             // ['pejabat' => $pejabat],
             // );
@@ -148,9 +148,9 @@ class PdfController extends Controller
     //PAKTA  INTEGRITAS
     public function pakta_integritas(Request $request, $id)
     {
-        $pengadaan1 = Jadwal::find($id);
+        $pengadaan = Jadwal::find($id);
         // $barang = DB::table('barangs')
-        //     ->where('barangs.pengadaan_id', 'like', "%" . $pengadaan1->pengadaan_id . "%")
+        //     ->where('barangs.pengadaan_id', 'like', "%" . $pengadaan->pengadaan_id . "%")
         //     ->get();
         // $pejabat = DB::table('pejabats')
         //     ->where('id', '=', 1)
@@ -160,11 +160,11 @@ class PdfController extends Controller
 
 
 
-        // dd($pengadaan1, $barang );
+        // dd($pengadaan, $barang );
         // dd($pdf);
         $pdf = PDF::loadview(
             'cetak/pakta_integritas',
-            ['pengadaan1' => $pengadaan1],
+            ['pengadaan' => $pengadaan],
         )->setPaper('f4', 'potrait');
         return $pdf->download('PaktaIntegritas.pdf');
     }
@@ -176,9 +176,9 @@ class PdfController extends Controller
     public function daftar_hadir(Request $request, $id)
     {
 
-        $pengadaan1 = Jadwal::find($id);
+        $pengadaan = Jadwal::find($id);
         // $barang = DB::table('barangs')
-        //     ->where('barangs.pengadaan_id', 'like', "%" . $pengadaan1->pengadaan_id . "%")
+        //     ->where('barangs.pengadaan_id', 'like', "%" . $pengadaan->pengadaan_id . "%")
         //     ->get();
         // $pejabat = DB::table('pejabats')
         //     ->where('id', '=', 1)
@@ -188,11 +188,11 @@ class PdfController extends Controller
 
 
 
-        // dd($pengadaan1, $barang );
+        // dd($pengadaan, $barang );
         // dd($pdf);
         $pdf = PDF::loadview(
             'cetak/daftar_hadir',
-            ['pengadaan1' => $pengadaan1],
+            ['pengadaan' => $pengadaan],
         )->setPaper('f4', 'potrait');
         return $pdf->download('Daftar_Hadir.pdf');
     }
@@ -200,9 +200,9 @@ class PdfController extends Controller
     // BA. Evaluasi Dokumen Prakualifikasi
     public function ba_evaluasi(Request $request, $id)
     {
-        $pengadaan1 = Jadwal::find($id);
+        $pengadaan = Jadwal::find($id);
         // $barang = DB::table('barangs')
-        //     ->where('barangs.pengadaan_id', 'like', "%" . $pengadaan1->pengadaan_id . "%")
+        //     ->where('barangs.pengadaan_id', 'like', "%" . $pengadaan->pengadaan_id . "%")
         //     ->get();
         // $pejabat = DB::table('pejabats')
         //     ->where('id', '=', 1)
@@ -212,11 +212,11 @@ class PdfController extends Controller
 
 
 
-        // dd($pengadaan1, $barang );
+        // dd($pengadaan, $barang );
         // dd($pdf);
         $pdf = PDF::loadview(
             'cetak/ba_evaluasi',
-            ['pengadaan1' => $pengadaan1],
+            ['pengadaan' => $pengadaan],
         )->setPaper('f4', 'potrait');
         return $pdf->download('Berita_Acara_Evaluasi.pdf');
     }
@@ -225,9 +225,9 @@ class PdfController extends Controller
     public function lampiran_ba_evaluasi(Request $request, $id)
     {
 
-        $pengadaan1 = Jadwal::find($id);
+        $pengadaan = Jadwal::find($id);
         // $barang = DB::table('barangs')
-        //     ->where('barangs.pengadaan_id', 'like', "%" . $pengadaan1->pengadaan_id . "%")
+        //     ->where('barangs.pengadaan_id', 'like', "%" . $pengadaan->pengadaan_id . "%")
         //     ->get();
         // $pejabat = DB::table('pejabats')
         //     ->where('id', '=', 1)
@@ -237,11 +237,11 @@ class PdfController extends Controller
 
 
 
-        // dd($pengadaan1, $barang );
+        // dd($pengadaan, $barang );
         // dd($pdf);
         $pdf = PDF::loadview(
             'cetak/lampiran_ba_evaluasi',
-            ['pengadaan1' => $pengadaan1],
+            ['pengadaan' => $pengadaan],
         )->setPaper('f4', 'landscape');
         return $pdf->download('lampiran_Berita_Acara_Evaluasi.pdf');
     }
@@ -249,9 +249,9 @@ class PdfController extends Controller
     // Surat Undangan Permintaan Penawaran Harga
     public function undangan_penawaran(Request $request, $id)
     {
-        $pengadaan1 = Jadwal::find($id);
+        $pengadaan = Jadwal::find($id);
         // $barang = DB::table('barangs')
-        //     ->where('barangs.pengadaan_id', 'like', "%" . $pengadaan1->pengadaan_id . "%")
+        //     ->where('barangs.pengadaan_id', 'like', "%" . $pengadaan->pengadaan_id . "%")
         //     ->get();
         // $pejabat = DB::table('pejabats')
         //     ->where('id', '=', 1)
@@ -261,11 +261,11 @@ class PdfController extends Controller
 
 
 
-        // dd($pengadaan1, $barang );
+        // dd($pengadaan, $barang );
         // dd($pdf);
         $pdf = PDF::loadview(
             'cetak/undangan_penawaran',
-            ['pengadaan1' => $pengadaan1],
+            ['pengadaan' => $pengadaan],
         )->setPaper('f4', 'potrait');
         return $pdf->download('UndanganPenawaran.pdf');
     }
@@ -273,11 +273,11 @@ class PdfController extends Controller
     // BA. Penjelasan Pekerjaan
     public function ba_pekerjaan(Request $request, $id)
     {
-        $pengadaan1 = Jadwal::find($id);
+        $pengadaan = Jadwal::find($id);
 
         $pdf = PDF::loadview(
             'cetak/ba_pekerjaan',
-            ['pengadaan1' => $pengadaan1],
+            ['pengadaan' => $pengadaan],
         )->setPaper('f4', 'potrait');
         // )->setPaper('f4', 'legal');
         return $pdf->download('BAPekerjaan.pdf');
@@ -288,11 +288,11 @@ class PdfController extends Controller
     // BA. Pembukaan Penawaran
     public function ba_penawaran(Request $request, $id)
     {
-        $pengadaan1 = Jadwal::find($id);
+        $pengadaan = Jadwal::find($id);
 
         $pdf = PDF::loadview(
             'cetak/ba_penawaran',
-            ['pengadaan1' => $pengadaan1],
+            ['pengadaan' => $pengadaan],
         )->setPaper('f4', 'potrait');
         return $pdf->download('BAPenawaran.pdf');
     }
@@ -301,11 +301,11 @@ class PdfController extends Controller
     public function undangan_nego(Request $request, $id)
     {
 
-        $pengadaan1 = Jadwal::find($id);
+        $pengadaan = Jadwal::find($id);
 
         $pdf = PDF::loadview(
             'cetak/undangan_nego',
-            ['pengadaan1' => $pengadaan1],
+            ['pengadaan' => $pengadaan],
         )->setPaper('f4', 'potrait');
         // )->setPaper('f4', 'legal');
         return $pdf->download('UndanganNego.pdf');
@@ -315,11 +315,11 @@ class PdfController extends Controller
     public function ba_nego(Request $request, $id)
     {
 
-        $pengadaan1 = Jadwal::find($id);
+        $pengadaan = Jadwal::find($id);
 
         $pdf = PDF::loadview(
             'cetak/ba_nego',
-            ['pengadaan1' => $pengadaan1],
+            ['pengadaan' => $pengadaan],
         )->setPaper('f4', 'potrait');
         // )->setPaper('f4', 'legal');
         return $pdf->download('BA_Nego.pdf');
@@ -333,11 +333,11 @@ class PdfController extends Controller
     public function nota_dinas3(Request $request, $id)
     {
 
-        $pengadaan1 = Jadwal::find($id);
+        $pengadaan = Jadwal::find($id);
 
         $pdf = PDF::loadview(
             'cetak/nota_dinas3',
-            ['pengadaan1' => $pengadaan1],
+            ['pengadaan' => $pengadaan],
         )->setPaper('f4', 'potrait');
         // )->setPaper('f4', 'legal');
         return $pdf->download('NotaDinas3.pdf');
@@ -347,11 +347,11 @@ class PdfController extends Controller
     public function penetapan_penyedia(Request $request, $id)
     {
 
-        $pengadaan1 = Jadwal::find($id);
+        $pengadaan = Jadwal::find($id);
 
         $pdf = PDF::loadview(
             'cetak/penetapan_penyedia',
-            ['pengadaan1' => $pengadaan1],
+            ['pengadaan' => $pengadaan],
         )->setPaper('f4', 'potrait');
         // )->setPaper('f4', 'legal');
         return $pdf->download('PenetapanPenyedia.pdf');
@@ -361,11 +361,11 @@ class PdfController extends Controller
     public function undangan_penyedia(Request $request, $id)
     {
 
-        $pengadaan1 = Jadwal::find($id);
+        $pengadaan = Jadwal::find($id);
 
         $pdf = PDF::loadview(
             'cetak/undangan_penyedia',
-            ['pengadaan1' => $pengadaan1],
+            ['pengadaan' => $pengadaan],
         )->setPaper('f4', 'potrait');
         // )->setPaper('f4', 'legal');
         return $pdf->download('UndanganPenyedia.pdf');
@@ -375,11 +375,11 @@ class PdfController extends Controller
     public function surat_perintah_kerja(Request $request, $id)
     {
 
-        $pengadaan1 = Jadwal::find($id);
+        $pengadaan = Jadwal::find($id);
         $barang = DB::table('barangs')
             // ->join('pengadaans.id', '=', 'barangs.pengadaan_id')
             // ->join('pelaksanas.pelaksana_id', '=', 'pelaksanas.id')
-            ->where('barangs.pengadaan_id', 'like', "%" . $pengadaan1->pengadaan_id . "%")
+            ->where('barangs.pengadaan_id', 'like', "%" . $pengadaan->pengadaan_id . "%")
             // ->select('barangs.harga_satuan', '*', 'barangs.jumlah_barang')
             ->get();
         $pejabat = DB::table('pejabats')
@@ -390,7 +390,7 @@ class PdfController extends Controller
 
         $pdf = PDF::loadview(
             'cetak/surat_perintah_kerja',
-            ['pengadaan1' => $pengadaan1],
+            ['pengadaan' => $pengadaan],
             ['barang' => $barang],
             // ['total' => $total],
             // ['pejabat' => $pejabat],
@@ -402,11 +402,11 @@ class PdfController extends Controller
     public function surat_perintah_mulai_kerja(Request $request, $id)
     {
 
-        $pengadaan1 = Jadwal::find($id);
+        $pengadaan = Jadwal::find($id);
 
         $pdf = PDF::loadview(
             'cetak/surat_perintah_mulai_kerja',
-            ['pengadaan1' => $pengadaan1],
+            ['pengadaan' => $pengadaan],
         )->setPaper('f4', 'potrait');
         // )->setPaper('f4', 'legal');
         return $pdf->download('SPMK.pdf');
@@ -416,11 +416,11 @@ class PdfController extends Controller
     public function ba_serah_terima(Request $request, $id)
     {
 
-        $pengadaan1 = Jadwal::find($id);
+        $pengadaan = Jadwal::find($id);
 
         $pdf = PDF::loadview(
             'cetak/ba_serah_terima',
-            ['pengadaan1' => $pengadaan1],
+            ['pengadaan' => $pengadaan],
         )->setPaper('f4', 'potrait');
         // )->setPaper('f4', 'legal');
         return $pdf->download('BeritaAcara_SerahTerima.pdf');
@@ -430,11 +430,11 @@ class PdfController extends Controller
     public function ba_peny_barang(Request $request, $id)
     {
 
-        $pengadaan1 = Jadwal::find($id);
+        $pengadaan = Jadwal::find($id);
 
         $pdf = PDF::loadview(
             'cetak/ba_peny_barang',
-            ['pengadaan1' => $pengadaan1],
+            ['pengadaan' => $pengadaan],
         )->setPaper('f4', 'potrait');
         // )->setPaper('f4', 'legal');
         return $pdf->download('BeritaAcara_PenyerahanBarang/Jasa.pdf');
@@ -446,11 +446,11 @@ class PdfController extends Controller
     public function ba_pembayaran(Request $request, $id)
     {
 
-        $pengadaan1 = Jadwal::find($id);
+        $pengadaan = Jadwal::find($id);
 
         $pdf = PDF::loadview(
             'cetak/ba_pembayaran',
-            ['pengadaan1' => $pengadaan1],
+            ['pengadaan' => $pengadaan],
         )->setPaper('f4', 'potrait');
         // )->setPaper('f4', 'legal');
         return $pdf->download('BeritaAcara_HasilPembayaran.pdf');
