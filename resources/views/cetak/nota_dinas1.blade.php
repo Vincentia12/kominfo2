@@ -10,32 +10,32 @@
 @endif
 {{-- {{$pejabat}} --}}
 <div class="col-12 grid-margin stretch-card">
-    <div style="text-align: center" >
-        <font color="black"> 
+    <div style="text-align: center">
+        <font color="black">
             <p align="center"><b> DINAS KOMUNIKASI DAN INFORMATIKA </b></p>
             <p align="center"><b> PROVINSI JAWA TIMUR </b></p>
         </font>
         <hr>
-            <p align="center"><u><b> NOTA DINAS </b></u></p>
+        <p align="center"><u><b> NOTA DINAS </b></u></p>
     </div>
     <div class="row" style="font-family: Arial;">
-        <table >
-            <tr >
+        <table>
+            <tr>
                 {{-- <td style="text-indent: 45px;">Kepada</td> --}}
                 <td>Kepada</td>
                 <td>:</td>
                 <td>Yth. Sdr. Pejabat Pembuat Komitmen Dinas Komunikasi dan Informatika Provinsi Jawa Timur</td>
             </tr>
-            
+
             <tr>
-                <td >Dari</td>
+                <td>Dari</td>
                 <td>:</td>
-                <td >Kuasa Pengguna Anggaran</td>
+                <td>Kuasa Pengguna Anggaran</td>
             </tr>
             <tr>
                 <td>Tanggal</td>
                 <td>:</td>
-                <td>{{$pengadaan->tanggal->format('D:d:m:Y')}}</td>
+                <td>{{$pengadaan->tanggal->isoFormat('D MMMM Y')}}</td>
                 {{-- <td>{{ $pengadaan->tanggal}}</td> --}}
                 {{-- <td width="475">11 Agustus 2022</td> --}}
             </tr>
@@ -88,10 +88,10 @@
             </thead>
             <tbody>
                 @php
-			$no = 1;	
-		@endphp
+                $no = 1;
+                @endphp
                 @foreach ($barang as $brg)
-                    
+
                 <tr>
                     {{-- <th>{{$no++}}</th> --}}
                     <th scope="row">{{$brg->pengadaan_id}}</th>
@@ -100,8 +100,8 @@
                     <td align="center">{{$brg->satuan}}</td>
                     <td align="center">{{$brg->harga_satuan}}</td>
                 </tr>
-             {{-- <i class="fa fa-xing 1" aria-hidden="true"></i>    --}}
-             @endforeach
+                {{-- <i class="fa fa-xing 1" aria-hidden="true"></i>    --}}
+                @endforeach
             </tbody>
         </table>
     </div>
@@ -109,15 +109,19 @@
     <div>
         <table font-size="2">
             <tr>
-                <td style="text-indent: 45px;">Untuk itu diminta bantuannya untuk segera diproses sesuai prosedur yang berlaku. Demikian untuk pelaksanaannya.</td>
+                <td style="text-indent: 45px;">Sehubungan dengan hal tersebut diatas, untuk penyedia Barang/Jasa ditunjuk {{$pengadaan->pengadaan->pelaksana->pt_pelaksana}} {{$pengadaan->pengadaan->pelaksana->alamat}} Yogyakarta. Untuk itu diminta bantuannya untuk segera diproses sesuai prosedur yang berlaku.</td>
+            </tr>
+            <tr>
+                <td style="text-indent: 45px;">Demikian untuk pelaksanaannya.</td>
             </tr>
         </table>
     </div>
     <br>
+    <br>
     <div style="text-align: center">
         <table style="width: 50%; text-align: left; float: right;">
             <tr>
-                <td >KUASA PENGGUNA ANGGARAN</td>
+                <td>KUASA PENGGUNA ANGGARAN</td>
             </tr>
         </table>
         <br>
