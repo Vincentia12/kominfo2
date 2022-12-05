@@ -46,6 +46,7 @@ class PelaksanaController extends Controller
             // 'id' => 'required',
             'pt_pelaksana' => 'required',
             'alamat' => 'required',
+            'kota' => 'required',
             'nama_pelaksana' => 'required',
             'jabatan_pelaksana' => 'required',
             'kode_rekening' => 'required',

@@ -35,13 +35,14 @@
             <tr>
                 <td>Tanggal</td>
                 <td>:</td>
-                <td>{{ $pengadaan->tanggal}}</td>
+                <td>{{$pengadaan->tanggal->format('D:d:m:Y')}}</td>
+                {{-- <td>{{ $pengadaan->tanggal}}</td> --}}
                 {{-- <td width="475">11 Agustus 2022</td> --}}
             </tr>
             <tr>
                 <td>Nomor</td>
                 <td>:</td>
-                <td>020/{{$pengadaan->nomor}}/114.6/2022</td>
+                <td>020/{{$pengadaan->nomor}}/114.6/{{$pengadaan->tanggal->format('Y')}}</td>
             </tr>
             <tr>
                 <td>Sifat</td>
@@ -68,7 +69,7 @@
         <br>
         <table font-size="2">
             <tr>
-                <td style="text-indent: 45px;">Bersama ini ini diberitahukan, bahwa DPA-SKPD Bagian Data dan Statistik pada Dinas Komunikasi dan Informatika Provinsi Jawa Timur Tahun Anggaran {{ $pengadaan->tanggal}}, kode rekening {{ $pengadaan->pengadaan->pelaksana->kode_rekening}} pengadaan {{ $pengadaan->pengadaan->jenis_pengadaan}} keperluan Dinas Komunikasi dan Informatika Provinsi Jawa Timur dengan rincian sebagai berikut :</td>
+                <td style="text-indent: 45px;">Bersama ini ini diberitahukan, bahwa DPA-SKPD Bagian Data dan Statistik pada Dinas Komunikasi dan Informatika Provinsi Jawa Timur Tahun Anggaran {{ $pengadaan->tanggal->format('Y')}}, kode rekening {{ $pengadaan->pengadaan->pelaksana->kode_rekening}} pengadaan {{ $pengadaan->pengadaan->jenis_pengadaan}} keperluan Dinas Komunikasi dan Informatika Provinsi Jawa Timur dengan rincian sebagai berikut :</td>
             </tr>
         </table>
     </div>
@@ -95,11 +96,12 @@
                     {{-- <th>{{$no++}}</th> --}}
                     <th scope="row">{{$brg->pengadaan_id}}</th>
                     <td>{{$brg->barang}}</td>
-                    <td align="center">{{$brg->jumlah_barang}}<//td>
+                    <td align="center">{{$brg->jumlah_barang}}</td>
                     <td align="center">{{$brg->satuan}}</td>
                     <td align="center">{{$brg->harga_satuan}}</td>
                 </tr>
-                @endforeach
+             {{-- <i class="fa fa-xing 1" aria-hidden="true"></i>    --}}
+             @endforeach
             </tbody>
         </table>
     </div>

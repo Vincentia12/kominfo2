@@ -27,13 +27,13 @@ return new class extends Migration
             $table->id();
             $table->string('pt_pelaksana');
             $table->string('alamat');
+            $table->string('kota');
             $table->string('nama_pelaksana');
             $table->string('jabatan_pelaksana');
             $table->string('kode_rekening');
             $table->string('npwp');
             $table->bigInteger('tlp');
             $table->timestamps();
-            // $table->integer('kode_rekening',20);
             // $table->integer('npwp',20);
             // $table->integer('tlp',20);
         });

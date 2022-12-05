@@ -3,12 +3,6 @@
 @section('input-data-collapse', 'collapsed')
 @section('input-sudah', 'active')
 @section('content')
-{{-- <!-- @section('judul')
-{{'Input Data / Belum Tersertifikasi'}}
-@endsection -->
-<!-- @section('title')
-{{'Input Data yang Belum Tersertifikasi'}}
-@endsection --> --}}
 
 <!-- Content Row -->
 
@@ -48,7 +42,7 @@
                         <select class="form-control" name="pengadaan_id" id="pengadaan_id" placeholder="Pilih Pengadaan">
                             <option value="">Pilih Jenis Pengadaan</option>
                             @foreach ($pengadaan as $item)
-                            <option value="{{$item->id}}">{{ $item->jenis_pengadaan }}</option>
+                            <option value="{{$item->id}}">{{$item->pelaksana->pt_pelaksana}} Pengadaan {{ $item->jenis_pengadaan }}</option>
                             @endforeach
                         </select>
                         <small class="text-danger">{{ $errors->first('jenis_pengadaan') }}</small>
@@ -112,12 +106,13 @@
                         <label for="message-text" class="col-form-label">Jenis Pengadaan</label>
 
                         <select class="form-control" name="pengadaan_id">
-                            <option value="{{$br->pengadaan_id}}">{{ $br->pengadaan->jenis_pengadaan }} </option>
+                            <option value="{{$item->id}}">{{$item->pelaksana->pt_pelaksana}} Pengadaan {{ $item->jenis_pengadaan }}</option>
+                            {{-- <option value="{{$br->pengadaan_id}}">{{ $br->pengadaan->jenis_pengadaan }} </option> --}}
                             <option><br></option>
 
                             <option value="">Pilih PT</option>
                             @foreach ($pengadaan as $item)
-                            <option value="{{$item->id}}">-{{ $item->jenis_pengadaan }} </option>
+                            <option value="{{$item->id}}">-{{$item->pelaksana->pt_pelaksana}} Pengadaan {{ $item->jenis_pengadaan }}</option>
                             @endforeach
                         </select>
                         <small class="text-danger">{{ $errors->first('jenis_pengadaan') }}</small>

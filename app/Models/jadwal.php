@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Carbon\Carbon;
 
 class Jadwal extends Model
 {
@@ -11,6 +12,7 @@ class Jadwal extends Model
 
     protected $table = "jadwals";
     protected $primarykay = "id";
+    protected $dates = ['tanggal'];
 
     protected $fillable = [
         // 'id', 

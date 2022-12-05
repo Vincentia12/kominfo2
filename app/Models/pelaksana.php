@@ -13,6 +13,7 @@ class Pelaksana extends Model
         // 'id',
         'pt_pelaksana',
         'alamat',
+        'kota',
         'nama_pelaksana',
         'jabatan_pelaksana',
         'kode_rekening',

@@ -217,6 +217,11 @@
                         <small class="text-danger">{{ $errors->first('alamat') }}</small>
                     </div>
                     <div class="mb-4">
+                        <label for="message-text" class="col-form-label">Kota</label>
+                        <input type="text" class="form-control" id="kota" name="kota" value="{{ old('kota') }}" placeholder="kota">
+                        <small class="text-danger">{{ $errors->first('kota') }}</small>
+                    </div>
+                    <div class="mb-4">
                         <label for="message-text" class="col-form-label">Nama Penanggung Jawab Pelaksana</label>
                         <input type="text" class="form-control" id="nama_pelaksana" name="nama_pelaksana" value="{{ old('nama_pelaksana') }}" placeholder="Nama Pelaksana">
                         <small class="text-danger">{{ $errors->first('nama_pelaksana') }}</small>

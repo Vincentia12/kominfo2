@@ -311,7 +311,7 @@
           </div>
           <div class="mb-4">
             <label for="message-text" class="col-form-label">Tanggal</label>
-            <input type="date" class="form-control" id="tanggal" name="tanggal" value="{{ $jdwl->tanggal }}" placeholder="10.000.000">
+            <input type="date" class="form-control" id="tanggal" name="tanggal" value="{{old("$jdwl->tanggal")}}" placeholder="10.000.000">
             <small class="text-danger">{{ $errors->first('tanggal') }}</small>
           </div>
           <div class="mb-4">
@@ -396,7 +396,8 @@
               <tr>
                 <td>Hari</td>
                 <td>:</td>
-                <td>{{ $jd->hari }}</td>
+                {{-- <td>{{ $jd->hari }}</td> --}}
+                <td>{{ $jd->tanggal->format('D')}}</td>
               </tr>
             </div>
           </div>
@@ -405,7 +406,9 @@
               <tr>
                 <td>Tanggal</td>
                 <td>:</td>
-                <td>{{ $jd->tanggal }}</td>
+                {{-- <td>{{ date_format($jd->tanggal "Y") }}</td> --}}
+                {{-- <td>{{ \Carbon\Carbon::parse($jd->tanggal)->format('D')}}</td> --}}
+                <td>{{ $jd->tanggal->format('d:m:Y')}}</td>
               </tr>
             </div>
           </div>

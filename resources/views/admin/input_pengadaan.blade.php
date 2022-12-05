@@ -132,22 +132,21 @@
             <label for="message-text" class="col-form-label">Pelaksana/Nama Perusahaan</label>
 
             <select class="form-control" name="pelaksana_id">
-              <option>Pilih PT</option>
+              <option value="">Pilih Pelaksana</option>
               @foreach ($pelaksana as $get)
-              <option value="{{$get->id}}">{{ $get->pt_pelaksana }} </option>
+              <option value="{{$get->id}}">-{{ $get->pt_pelaksana }} </option>
               @endforeach
             </select>
             <small class="text-danger">{{ $errors->first('pt_pelaksana') }}</small>
-
           </div>
           <div class="mb-4">
             <label for="message-text" class="col-form-label">Jenis Pengadaan</label>
-            <input type="text" class="form-control" id="jenis_pengadaan" name="jenis_pengadaan" value="{{ old('jenis_pengadaan') }}" placeholder="Pengadaan ...">
+            <input type="text" class="form-control" id="jenis_pengadaan" name="jenis_pengadaan" value="{{ old('jenis_pengadaan') }}" placeholder="Masukkan Pengadaan ...">
             <small class="text-danger">{{ $errors->first('jenis_pengadaan') }}</small>
           </div>
           <div class="mb-4">
             <label for="message-text" class="col-form-label">Biaya HPS (Harga Perkiraan Sendiri)</label>
-            <input type="text" class="form-control" id="total_hps" name="total_hps" value="{{ old('total_hps') }}" placeholder="10000000">
+            <input type="text" class="form-control" id="total_hps" name="total_hps" value="{{ old('total_hps') }}" placeholder="10.000.000">
             <small class="text-danger">{{ $errors->first('total_hps') }}</small>
           </div>
           <div class="mb-4">
@@ -157,7 +156,7 @@
           </div>
           <div class="mb-4">
             <label for="message-text" class="col-form-label">Harga Penawaran</label>
-            <input type="text" class="form-control" id="harga_penawaran" name="harga_penawaran" value="{{ old('harga_penawaran') }}" placeholder="10000000">
+            <input type="text" class="form-control" id="harga_penawaran" name="harga_penawaran" value="{{ old('harga_penawaran') }}" placeholder="10.000.000">
             <small class="text-danger">{{ $errors->first('harga_penawaran') }}</small>
           </div>
           <div class="mb-4">
@@ -167,7 +166,7 @@
           </div>
           <div class="mb-4">
             <label for="message-text" class="col-form-label">Nilai Negosiasi</label>
-            <input type="text" class="form-control" id="nilai_negosiasi" name="nilai_negosiasi" value="{{ old('nilai_negosiasi') }}" placeholder="10000000">
+            <input type="text" class="form-control" id="nilai_negosiasi" name="nilai_negosiasi" value="{{ old('nilai_negosiasi') }}" placeholder="10.000.000">
             <small class="text-danger">{{ $errors->first('nilai_negosiasi') }}</small>
           </div>
           <div class="mb-4">
@@ -175,7 +174,6 @@
             <input type="text" class="form-control" id="deskripsi_negosiasi" name="deskripsi_negosiasi" value="{{ old('deskripsi_negosiasi') }}" placeholder="Sepuluh Juta Rupiah">
             <small class="text-danger">{{ $errors->first('deskripsi_negosiasi') }}</small>
           </div>
-
 
           <div class="modal-footer mt-3">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
@@ -213,24 +211,23 @@
 
             <select class="form-control" name="pelaksana_id">
               <option value="{{$pgn->pelaksana_id}}">{{ $pgn->pelaksana->pt_pelaksana }} </option>
-              <option><br></option>
+              <option value=""></option>
 
-              <option value="">Pilih PT</option>
+              <option value="">Pilih Pelaksana</option>
               @foreach ($pelaksana as $get)
               <option value="{{$get->id}}">-{{ $get->pt_pelaksana }} </option>
               @endforeach
             </select>
             <small class="text-danger">{{ $errors->first('pt_pelaksana') }}</small>
-
           </div>
           <div class="mb-4">
             <label for="message-text" class="col-form-label">Jenis Pengadaan</label>
-            <input type="text" class="form-control" id="jenis_pengadaan" name="jenis_pengadaan" value="{{ $pgn->jenis_pengadaan }}" placeholder="Pengadaan ...">
+            <input type="text" class="form-control" id="jenis_pengadaan" name="jenis_pengadaan" value="{{ $pgn->jenis_pengadaan }}" placeholder="Masukkan Pengadaan ...">
             <small class="text-danger">{{ $errors->first('jenis_pengadaan') }}</small>
           </div>
           <div class="mb-4">
             <label for="message-text" class="col-form-label">Biaya HPS (Harga Perkiraan Sendiri)</label>
-            <input type="text" class="form-control" id="total_hps" name="total_hps" value="{{ $pgn->total_hps }}" placeholder="10000000">
+            <input type="text" class="form-control" id="total_hps" name="total_hps" value="{{ $pgn->total_hps }}" placeholder="10.000.000">
             <small class="text-danger">{{ $errors->first('total_hps') }}</small>
           </div>
           <div class="mb-4">
@@ -240,7 +237,7 @@
           </div>
           <div class="mb-4">
             <label for="message-text" class="col-form-label">Harga Penawaran</label>
-            <input type="text" class="form-control" id="harga_penawaran" name="harga_penawaran" value="{{ $pgn->harga_penawaran }}" placeholder="10000000">
+            <input type="text" class="form-control" id="harga_penawaran" name="harga_penawaran" value="{{ $pgn->harga_penawaran }}" placeholder="10.000.000">
             <small class="text-danger">{{ $errors->first('harga_penawaran') }}</small>
           </div>
           <div class="mb-4">
@@ -250,7 +247,7 @@
           </div>
           <div class="mb-4">
             <label for="message-text" class="col-form-label">Nilai Negosiasi</label>
-            <input type="text" class="form-control" id="nilai_negosiasi" name="nilai_negosiasi" value="{{ $pgn->nilai_negosiasi }}" placeholder="10000000">
+            <input type="text" class="form-control" id="nilai_negosiasi" name="nilai_negosiasi" value="{{ $pgn->nilai_negosiasi }}" placeholder="10.000.000">
             <small class="text-danger">{{ $errors->first('nilai_negosiasi') }}</small>
           </div>
           <div class="mb-4">
@@ -258,7 +255,6 @@
             <input type="text" class="form-control" id="deskripsi_negosiasi" name="deskripsi_negosiasi" value="{{ $pgn->deskripsi_negosiasi }}" placeholder="Sepuluh Juta Rupiah">
             <small class="text-danger">{{ $errors->first('deskripsi_negosiasi') }}</small>
           </div>
-
 
           <div class="modal-footer mt-3">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
@@ -296,7 +292,7 @@
               <tr>
                 <td>Pelaksana/Nama Perusahaan</td>
                 <td>:</td>
-                <td>{{ $pg->pt_pelaksana }}</td>
+                <td>{{ $pg->pelaksana->pt_pelaksana }}</td>
               </tr>
             </div>
           </div>
@@ -318,7 +314,7 @@
               </tr>
             </div>
           </div>
-          <div class="col-xs-12 col-sm-12 col-md-12">
+          {{-- <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
               <tr>
                 <td>Deskripsi HPS (Harga Perkiraan Sendiri)</td>
@@ -326,7 +322,7 @@
                 <td>{{ $pg->deskripsi_hps }}</td>
               </tr>
             </div>
-          </div>
+          </div> --}}
           <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
               <tr>

@@ -52,13 +52,13 @@
             </table>
             <table border="0" align="center">
                 <tr>
-                    <td width="560"><center><font size="2"><b>Nomor : 020/{{$pengadaan1->nomor}}/114.6/2022</font></b></td>
+                    <td width="560"><center><font size="2"><b>Nomor : 020/{{$pengadaan->nomor}}/114.6/2022</font></b></td>
                 <tr>
             </table>
             <br>
             <table border="0" align="center" font-size="2">
                 <tr>
-                    <td width="560">Pada hari ini {{$pengadaan1->deskripsi_tanggal}}. Kami yang bertanda tangan dibawah ini :</td>
+                    <td width="560">Pada hari ini {{$pengadaan->deskripsi_tanggal}}. Kami yang bertanda tangan dibawah ini :</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
@@ -105,7 +105,7 @@
                     <td width="10">2.</td>
                     <td width="70">Nama</td>
                     <td>:</td>
-                    <td width="480">{{$pengadaan1->pengadaan->pelaksana->nama_pelaksana}}</td>
+                    <td width="480">{{$pengadaan->pengadaan->pelaksana->nama_pelaksana}}</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
@@ -113,7 +113,7 @@
                     <td width="15"> </td>
                     <td width="70">Jabatan</td>
                     <td>:</td>
-                    <td width="480">{{$pengadaan1->pengadaan->pelaksana->jabatan_pelaksana}}</td>
+                    <td width="480">{{$pengadaan->pengadaan->pelaksana->jabatan_pelaksana}}</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
@@ -121,7 +121,7 @@
                     <td width="15"> </td>
                     <td width="150">Nama Perusahaan</td>
                     <td>:</td>
-                    <td width="400">{{$pengadaan1->pengadaan->pelaksana->pt_pelaksana}}</td>
+                    <td width="400">{{$pengadaan->pengadaan->pelaksana->pt_pelaksana}}</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
@@ -129,13 +129,13 @@
                     <td width="15"> </td>
                     <td width="150">Alamat Kantor</td>
                     <td>:</td>
-                    <td width="400">{{$pengadaan1->pengadaan->pelaksana->alamat}}</td>
+                    <td width="400">{{$pengadaan->pengadaan->pelaksana->alamat}}</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
                 <tr>
                     <td width="15"> </td>
-                    <td width="555">Bertindak untuk dan atas nama Perusahaan {{$pengadaan1->pengadaan->pelaksana->pt_pelaksana}} selanjutnya disebut <b>PIHAK KEDUA</b></td>
+                    <td width="555">Bertindak untuk dan atas nama Perusahaan {{$pengadaan->pengadaan->pelaksana->pt_pelaksana}} selanjutnya disebut <b>PIHAK KEDUA</b></td>
                 </tr>
             </table>
             <br>
@@ -219,20 +219,20 @@
                     </tr>  --}}
                     {{--  <tr>
                         <td align="center">{{$brg->pengadaan_id}}</td>
-                        <td>{{$pengadaan1->pengadaan->jenis_pengadaan}}</td>
-                        <td>{{$pengadaan1->pengadaan->barang}}</td>
+                        <td>{{$pengadaan->pengadaan->jenis_pengadaan}}</td>
+                        <td>{{$pengadaan->pengadaan->barang}}</td>
                         <td> </td>
                         <td> </td>
                         <td> </td>
                         <td> </td>
                     </tr>  --}}
                     <tr>
-                        <td align="center">{{$brg->pengadaan_id}}</td>
-                        <td>{{$pengadaan1->pengadaan->jenis_pengadaan}}</td>
-                        <td>{{$pengadaan1->pengadaan->barang}}</td>
-                        <td align="center">{{$pengadaan1->pengadaan->jumlah_barang}}</td>
-                        <td align="center">{{$pengadaan1->pengadaan->satuan}}</td>
-                        <td>{{$pengadaan1->pengadaan->harga_satuan}}</td>
+                        {{-- <td align="center">{{$pengadaan->pengadaan_id}}</td> --}}
+                        <td>{{$pengadaan->pengadaan->jenis_pengadaan}}</td>
+                        <td>{{$pengadaan->pengadaan->barang}}</td>
+                        <td align="center">{{$pengadaan->pengadaan->jumlah_barang}}</td>
+                        <td align="center">{{$pengadaan->pengadaan->satuan}}</td>
+                        <td>{{$pengadaan->pengadaan->harga_satuan}}</td>
                         //total harga barang
                         <td>2.490.000</td>
                     </tr>
@@ -286,14 +286,14 @@
             <table border="0" align="center" font-size="2">
                 <tr>
                     <td width="30">6.</td>
-                    <td width="530">Pembayaran dengan Sumber Dana APBD Provinsi Jawa Timur Tahun Anggaran 2022, dibebankan pada DPA - SKPD Dinas Komunikasi dan Informatika Provinsi Jawa Timur Tahun Anggaran 2022, Kode Rekening {{$pengadaan1->pengadaan->pelaksana->kode_rekening}}</td>
+                    <td width="530">Pembayaran dengan Sumber Dana APBD Provinsi Jawa Timur Tahun Anggaran 2022, dibebankan pada DPA - SKPD Dinas Komunikasi dan Informatika Provinsi Jawa Timur Tahun Anggaran 2022, Kode Rekening {{$pengadaan->pengadaan->pelaksana->kode_rekening}}</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
                 <tr>
                     <td width="30">7.</td>
                     //memanggil tanggal dan no.pengadaan
-                    <td width="530">Jangka Waktu Pelaksanaan {{$pengadaan1->alokasi}} hari kalender, tanggal pelaksanaan yaitu Tanggal 13 September – 20 September 2022</td>
+                    <td width="530">Jangka Waktu Pelaksanaan {{$pengadaan->alokasi}} hari kalender, tanggal pelaksanaan yaitu Tanggal 13 September – 20 September 2022</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
@@ -351,7 +351,7 @@
             </table>
             <table border="0" align="center" font-size="2">
                 <tr align="center">
-                    <td width="280">{{$pengadaan1->pengadaan->pelaksana->pt_pelaksana}}</td>
+                    <td width="280">{{$pengadaan->pengadaan->pelaksana->pt_pelaksana}}</td>
                     <td width="280">PEJABAT PEMBUAT KOMITMEN</td>
                 </tr>
             </table>
@@ -360,13 +360,13 @@
             <br>
             <table border="0" align="center" font-size="2">
                 <tr align="center">
-                    <td width="280">{{$pengadaan1->pengadaan->pelaksana->nama_pelaksana}}</td>
+                    <td width="280">{{$pengadaan->pengadaan->pelaksana->nama_pelaksana}}</td>
                     <td width="280">I WAYAN RUDY ARTHA, S.Kom</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
                 <tr align="center">
-                    <td width="280">{{$pengadaan1->pengadaan->pelaksana->jabatan_pelaksana}}</td>
+                    <td width="280">{{$pengadaan->pengadaan->pelaksana->jabatan_pelaksana}}</td>
                     <td width="280">NIP. 19770517 200901 1 005</td>
                 </tr>
             </table>
