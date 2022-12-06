@@ -134,7 +134,7 @@
             <select class="form-control" name="pelaksana_id">
               <option value="">Pilih Pelaksana</option>
               @foreach ($pelaksana as $get)
-              <option value="{{$get->id}}">-{{ $get->pt_pelaksana }} </option>
+              <option value="{{$get->id}}">- {{ $get->pt_pelaksana }} </option>
               @endforeach
             </select>
             <small class="text-danger">{{ $errors->first('pt_pelaksana') }}</small>
@@ -320,62 +320,62 @@
                 <td>Deskripsi HPS (Harga Perkiraan Sendiri)</td>
                 <td>:</td>
                 <td>{{ $pg->deskripsi_hps }}</td>
-              </tr>
-            </div>
-          </div> --}}
-          <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-              <tr>
-                <td>Deskripsi HPS (Harga Perkiraan Sendiri)</td>
-                <td>:</td>
-                <td>{{ $pg->deskripsi_hps }}</td>
-              </tr>
-            </div>
-          </div>
-          <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-              <tr>
-                <td>Harga Penawaran</td>
-                <td>:</td>
-                <td>{{ $pg->harga_penawaran }}</td>
-              </tr>
-            </div>
-          </div>
-          <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-              <tr>
-                <td>Deskripsi Harga Penawaran</td>
-                <td>:</td>
-                <td>{{ $pg->deskripsi_penawaran }}</td>
-              </tr>
-            </div>
-          </div>
-          <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-              <tr>
-                <td>Nilai Negosiasi</td>
-                <td>:</td>
-                <td>{{ $pg->nilai_negosiasi }}</td>
-              </tr>
-            </div>
-          </div>
-          <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-              <tr>
-                <td>Deskripsi Negosiasi</td>
-                <td>:</td>
-                <td>{{ $pg->deskripsi_negosiasi }}</td>
-              </tr>
-            </div>
-          </div>
-        </table>
+          </tr>
       </div>
-      <div class="modal-footer mt-3">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
-        {{-- <button type="submit" class="btn btn-primary ">Simpan <i class="fa fa-save"></i></button> --}}
+    </div> --}}
+    <div class="col-xs-12 col-sm-12 col-md-12">
+      <div class="form-group">
+        <tr>
+          <td>Deskripsi HPS (Harga Perkiraan Sendiri)</td>
+          <td>:</td>
+          <td>{{ $pg->deskripsi_hps }}</td>
+        </tr>
       </div>
     </div>
+    <div class="col-xs-12 col-sm-12 col-md-12">
+      <div class="form-group">
+        <tr>
+          <td>Harga Penawaran</td>
+          <td>:</td>
+          <td>{{ $pg->harga_penawaran }}</td>
+        </tr>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-12">
+      <div class="form-group">
+        <tr>
+          <td>Deskripsi Harga Penawaran</td>
+          <td>:</td>
+          <td>{{ $pg->deskripsi_penawaran }}</td>
+        </tr>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-12">
+      <div class="form-group">
+        <tr>
+          <td>Nilai Negosiasi</td>
+          <td>:</td>
+          <td>{{ $pg->nilai_negosiasi }}</td>
+        </tr>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-12">
+      <div class="form-group">
+        <tr>
+          <td>Deskripsi Negosiasi</td>
+          <td>:</td>
+          <td>{{ $pg->deskripsi_negosiasi }}</td>
+        </tr>
+      </div>
+    </div>
+    </table>
   </div>
+  <div class="modal-footer mt-3">
+    <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+    {{-- <button type="submit" class="btn btn-primary ">Simpan <i class="fa fa-save"></i></button> --}}
+  </div>
+</div>
+</div>
 </div>
 @endforeach
 

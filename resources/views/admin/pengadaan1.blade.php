@@ -54,7 +54,7 @@
                             <th>Nilai Negosiasi</th>
                             <th>Kegiatan</th>
                             <th>Alokasi</th>
-                            <th>Hari</th>
+                            <!-- <th>Hari</th> -->
                             <th>Tanggal</th>
                             <th>Nomor</th>
                             <th>Deskripsi Tanggal</th>
@@ -75,7 +75,6 @@
                             <td>{{ $p1->nilai_negosiasi }}</td>
                             <td>{{ $p1->kegiatan }}</td>
                             <td>{{ $p1->alokasi }}</td>
-                            <td>{{ $p1->hari }}</td>
                             <td>{{ $p1->tanggal }}</td>
                             <td>{{ $p1->nomor }}</td>
                             <td>{{ $p1->deskripsi_tgl }}</td>

@@ -93,8 +93,8 @@
                 @foreach ($barang as $brg)
 
                 <tr>
-                    {{-- <th>{{$no++}}</th> --}}
-                    <th scope="row">{{$brg->pengadaan_id}}</th>
+                    <th>{{$no++}}</th>
+                    <!-- <th scope="row">{{$brg->pengadaan_id}}</th> -->
                     <td>{{$brg->barang}}</td>
                     <td align="center">{{$brg->jumlah_barang}}</td>
                     <td align="center">{{$brg->satuan}}</td>
@@ -109,7 +109,7 @@
     <div>
         <table font-size="2">
             <tr>
-                <td style="text-indent: 45px;">Sehubungan dengan hal tersebut diatas, untuk penyedia Barang/Jasa ditunjuk {{$pengadaan->pengadaan->pelaksana->pt_pelaksana}} {{$pengadaan->pengadaan->pelaksana->alamat}} Yogyakarta. Untuk itu diminta bantuannya untuk segera diproses sesuai prosedur yang berlaku.</td>
+                <td style="text-indent: 45px;">Sehubungan dengan hal tersebut diatas, untuk penyedia Barang/Jasa ditunjuk {{$pengadaan->pengadaan->pelaksana->pt_pelaksana}} {{$pengadaan->pengadaan->pelaksana->alamat}} {{$pengadaan->pengadaan->pelaksana->kota}}. Untuk itu diminta bantuannya untuk segera diproses sesuai prosedur yang berlaku.</td>
             </tr>
             <tr>
                 <td style="text-indent: 45px;">Demikian untuk pelaksanaannya.</td>
@@ -131,7 +131,7 @@
         <table style="width: 50%; text-align: left; float: right;">
             <tr>
                 <td>
-                    Dra. Ec. NIRMALA DEWI, M.M
+                    <u> Dra. Ec. NIRMALA DEWI, M.M</u>
                     {{-- NIP. {{ $pejabat->kuasa_pengguna_anggaran }} --}}
                     <br>
                     NIP. 19650909 199403 2 006

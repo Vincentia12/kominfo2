@@ -19,7 +19,6 @@ class Jadwal extends Model
         'pengadaan_id',
         'kegiatan',
         'alokasi',
-        'hari',
         'tanggal',
         'nomor',
         'deskripsi_tgl'

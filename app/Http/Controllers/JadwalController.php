@@ -72,7 +72,6 @@ class JadwalController extends Controller
             'pengadaan_id' => 'required',
             'kegiatan' => 'required',
             'alokasi' => 'required',
-            'hari' => 'required',
             'tanggal' => 'required',
             'nomor' => 'required',
             'deskripsi_tgl' => 'required'
@@ -89,7 +88,7 @@ class JadwalController extends Controller
     {
         // menangkap data pencarian
         $cari1 = $request->cari1;
-        
+
         // mengambil data dari table pegawai sesuai pencarian data
         $pengadaan = Jadwal::where('pengadaan_id', 'like', "%" . $cari1 . "%")
             ->join('pengadaans', 'pengadaan_id', '=', 'pengadaans.id')
@@ -101,7 +100,7 @@ class JadwalController extends Controller
 
         // $pejabat = Pejabat::all();
         // mengirim data pegawai ke view index
-        return view('admin.pengadaan1',['pengadaan' => $pengadaan]);
+        return view('admin.pengadaan1', ['pengadaan' => $pengadaan]);
         // dd($pengadaan1);
     }
     /**
@@ -119,18 +118,18 @@ class JadwalController extends Controller
     public function show1(Jadwal $jadwal)
     // public function show(Request $request,$id)
     {
-        // $pengadaan = Pengadaan::all();
-        // $jadwal = Jadwal::all();
-        // $jadwal = $jadwal = DB::table('jadwals')
-        // ->join('pengadaans', 'pengadaan_id', '=', 'pengadaans.id')
-        // ->select('jadwals.*', 'pengadaans.jenis_pengadaan',)
-        // ->get();
-        // return view('admin.input_pengadaan', compact('pengadaan'));
-        // return view('admin.detail', compact('pengadaan'));
-        // $pengadaan1 = Pengadaan::find($id);
-        // return view('admin.pengadaan1',compact('pengadaans'))
-        // return view('print.nota_dinas1',compact('jadwal'))
-        // ->renderSections()['content']
+            // $pengadaan = Pengadaan::all();
+            // $jadwal = Jadwal::all();
+            // $jadwal = $jadwal = DB::table('jadwals')
+            // ->join('pengadaans', 'pengadaan_id', '=', 'pengadaans.id')
+            // ->select('jadwals.*', 'pengadaans.jenis_pengadaan',)
+            // ->get();
+            // return view('admin.input_pengadaan', compact('pengadaan'));
+            // return view('admin.detail', compact('pengadaan'));
+            // $pengadaan1 = Pengadaan::find($id);
+            // return view('admin.pengadaan1',compact('pengadaans'))
+            // return view('print.nota_dinas1',compact('jadwal'))
+            // ->renderSections()['content']
         ;
         // dd($pengadaan);
         dd($jadwal);
@@ -177,6 +176,4 @@ class JadwalController extends Controller
             ->with('success', 'Jadwal Berhasil Dihapus!');
         //
     }
-
-    
 }
