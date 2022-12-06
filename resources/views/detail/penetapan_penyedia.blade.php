@@ -66,7 +66,7 @@
                     </td>
                     <td width="150">
                         <center>
-                            <font size="2">020/{{$pengadaan1->nomor}}/114.6/2022</font>
+                            <font size="2">020/{{$pengadaan->nomor}}/114.6/2022</font>
                     </td>
                 <tr>
             </table>
@@ -74,49 +74,49 @@
             <table border="0" align="center" font-size="2">
                 <tr>
                     //memanggil tanggal dan no.pengadaan
-                    <td width="560">Berdasarkan Berita Acara Evaluasi Dokumen Prakualifikasi Tanggal {{$pengadaan1->deskripsi_tanggal}} Nomor : 020/{{$pengadaan1->nomor}}/114.6/2022 dan Berita Acara Klarifikasi/Negosiasi Penawaran Tanggal 1 September 2022 Nomor : 020/654.9/114.6/2022, Pekerjaan Pengadaan {{$pengadaan1->pengadaan->jenis_pengadaan}}, dengan ini Pejabat Pengadaan Dinas Komunikasi dan Informatika Provinsi Jawa Timur menetapkan penyedia jasa tersebut di bawah ini untuk sebagai Penyedia Barang/Jasa dengan nilai HPS sebesar Rp. {{$pengadaan1->pengadaan->total_hps}},- ({{$pengadaan1->pengadaan->deskripsi_hps}}) :</td>
+                    <td width="560">Berdasarkan Berita Acara Evaluasi Dokumen Prakualifikasi Tanggal {{$pengadaan->deskripsi_tanggal}} Nomor : 020/{{$pengadaan->nomor}}/114.6/2022 dan Berita Acara Klarifikasi/Negosiasi Penawaran Tanggal 1 September 2022 Nomor : 020/654.9/114.6/2022, Pekerjaan Pengadaan {{$pengadaan->pengadaan->jenis_pengadaan}}, dengan ini Pejabat Pengadaan Dinas Komunikasi dan Informatika Provinsi Jawa Timur menetapkan penyedia jasa tersebut di bawah ini untuk sebagai Penyedia Barang/Jasa dengan nilai HPS sebesar Rp. {{$pengadaan->pengadaan->total_hps}},- ({{$pengadaan->pengadaan->deskripsi_hps}}) :</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
                 <tr>
                     <td width="190">Nama Perusahaan</td>
                     <td width="10">:</td>
-                    <td width="360">{{$pengadaan1->pengadaan->pelaksana->pt_pelaksana}}</td>
+                    <td width="360">{{$pengadaan->pengadaan->pelaksana->pt_pelaksana}}</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
                 <tr>
                     <td width="190">Nama Penanggung Jawab</td>
                     <td width="10">:</td>
-                    <td width="360">{{$pengadaan1->pengadaan->pelaksana->nama_pelaksana}}</td>
+                    <td width="360">{{$pengadaan->pengadaan->pelaksana->nama_pelaksana}}</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
                 <tr>
                     <td width="190">Alamat Perusahaan</td>
                     <td width="10">:</td>
-                    <td width="360">{{$pengadaan1->pengadaan->pelaksana->alamat}}</td>
+                    <td width="360">{{$pengadaan->pengadaan->pelaksana->alamat}}</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
                 <tr>
                     <td width="190">Nomor Pokok Wajib Pajak</td>
                     <td width="10">:</td>
-                    <td width="360">{{$pengadaan1->pengadaan->pelaksana->npwp}}</td>
+                    <td width="360">{{$pengadaan->pengadaan->pelaksana->npwp}}</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
                 <tr>
                     <td width="190">Harga Penawaran</td>
                     <td width="10">:</td>
-                    <td width="360">Rp. {{$pengadaan1->pengadaan->nilai_negosiasi}},-</td>
+                    <td width="360">Rp. {{$pengadaan->pengadaan->nilai_negosiasi}},-</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
                 <tr>
                     <td width="190">Setelah Negosiasi</td>
                     <td width="10"> </td>
-                    <td width="360">({{$pengadaan1->pengadaan->deskripsi_negosiasi}})</td>
+                    <td width="360">({{$pengadaan->pengadaan->deskripsi_negosiasi}})</td>
                 </tr>
             </table>
             <br>
@@ -129,7 +129,7 @@
             <table border="0" align="center">
                 <tr>
                     <td width="300"> </td>
-                    <td>Surabaya, {{$pengadaan1->tanggal}}</td>
+                    <td>Surabaya, {{$pengadaan->tanggal->isoFormat('D MMMM Y')}}</td>
                     <td width="50"> </td>
                 </tr>
             </table>

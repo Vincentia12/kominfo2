@@ -36,12 +36,12 @@
                 <tr>
                     <td width="100">Nomor</td>
                     <td width="30">:</td>
-                    <td width="430">020/{{$pengadaan1->nomor}}/114.6/2022</td>
+                    <td width="430">020/{{$pengadaan->nomor}}/114.6/2022</td>
                 <tr>
                 <tr>
                     <td width="100">Tanggal</td>
                     <td width="30">:</td>
-                    <td width="430">{{$pengadaan1->tanggal}}</td>
+                    <td width="430">{{$pengadaan->tanggal->isoFormat('D MMMM Y')}}</td>
                 <tr>
             </table>
             <br>
@@ -81,7 +81,7 @@
                 <thead>
                     <tr height="25">
                         <td width="30px" scope="col"> </td>
-                        <td width="400px" scope="col">{{$pengadaan1->pengadaan->jenis_pengadaan}}</td>
+                        <td width="400px" scope="col">{{$pengadaan->pengadaan->jenis_pengadaan}}</td>
                         <td width="100px" scope="col"> </td>
                         <td width="70px" scope="col"> </td>
                         <td width="100px" scope="col"> </td>

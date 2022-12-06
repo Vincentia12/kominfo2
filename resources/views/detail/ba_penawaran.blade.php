@@ -66,14 +66,14 @@
                     </td>
                     <td width="150">
                         <center>
-                            <font size="2">020/{{$pengadaan1->nomor}}/114.6/2022</font>
+                            <font size="2">020/{{$pengadaan->nomor}}/114.6/2022</font>
                     </td>
                 <tr>
             </table>
             <br>
             <table border="0" align="center" font-size="2">
                 <tr>
-                    <td width="560">Pada hari ini {{$pengadaan1->deskripsi_tanggal}} kami yang bertanda tangan dibawah ini adalah Pejabat Pengadaan di Lingkungan Dinas Komunikasi Dan Informatika Provinsi Jawa Timur yang dibentuk dengan Keputusan Kepala Dinas Komunikasi Dan Informatika Provinsi Jawa Timur selaku Pengguna Anggaran tanggal {{ $pengadaan1->tanggal}} Nomor : 188/19/114.1/2022, melaksanakan Pembukaan Penawaran untuk pelaksanaan {{$pengadaan1->pengadaan->jenis_pengadaan}}, dibiayai dari dana APBD Tahun Anggaran 2022 pada DPA Dinas Komunikasi dan Informatika Provinsi Jawa Timur Kode Rekening {{$pengadaan1->pengadaan->pelaksana->kode_rekening}} dengan Harga Perkiraan Sendiri (HPS) sebesar Rp. {{$pengadaan1->pengadaan->total_hps}},- ({{$pengadaan1->pengadaan->deskripsi_hps}}).</td>
+                    <td width="560">Pada hari ini {{$pengadaan->deskripsi_tanggal}} kami yang bertanda tangan dibawah ini adalah Pejabat Pengadaan di Lingkungan Dinas Komunikasi Dan Informatika Provinsi Jawa Timur yang dibentuk dengan Keputusan Kepala Dinas Komunikasi Dan Informatika Provinsi Jawa Timur selaku Pengguna Anggaran tanggal {{$pengadaan->tanggal->isoFormat('D MMMM Y')}} Nomor : 188/19/114.1/2022, melaksanakan Pembukaan Penawaran untuk pelaksanaan {{$pengadaan->pengadaan->jenis_pengadaan}}, dibiayai dari dana APBD Tahun Anggaran 2022 pada DPA Dinas Komunikasi dan Informatika Provinsi Jawa Timur Kode Rekening {{$pengadaan->pengadaan->pelaksana->kode_rekening}} dengan Harga Perkiraan Sendiri (HPS) sebesar Rp. {{$pengadaan->pengadaan->total_hps}},- ({{$pengadaan->pengadaan->deskripsi_hps}}).</td>
                 </tr>
             </table>
             <br>
@@ -154,9 +154,9 @@
                 <tr>
                     <td width="35"> </td>
                     <td width="30"> </td>
-                    <td width="250">{{$pengadaan1->pengadaan->pelaksana->pt_pelaksana}}</td>
+                    <td width="250">{{$pengadaan->pengadaan->pelaksana->pt_pelaksana}}</td>
                     <td>:</td>
-                    <td width="250">{{$pengadaan1->pengadaan->pelaksana->nama_pelaksana}}</td>
+                    <td width="250">{{$pengadaan->pengadaan->pelaksana->nama_pelaksana}}</td>
                 </tr>
             </table>
             <br>
@@ -179,7 +179,7 @@
                 <tbody>
                     <tr align="center" height="100">
                         <td scope="row">1</td>
-                        <td>{{$pengadaan1->pengadaan->pelaksana->pt_pelaksana}}</td>
+                        <td>{{$pengadaan->pengadaan->pelaksana->pt_pelaksana}}</td>
                         <td>Ada</td>
                         <td>Ada</td>
                         <td>Lengkap</td>

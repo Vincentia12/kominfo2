@@ -31,13 +31,13 @@
                     <td width="560"><center><b><u>BERITA ACARA PEMBAYARAN</u></b></td>
                 <tr>
                 <tr>
-                    <td width="560"><center>Nomor : 020/{{$pengadaan1->nomor}}/114.6/2022</td>
+                    <td width="560"><center>Nomor : 020/{{$pengadaan->nomor}}/114.6/2022</td>
                 <tr>
             </table>
             <br>
             <table border="0" align="center">
                 <tr>
-                    <td width="560">Pada hari ini {{$pengadaan1->deskripsi_tanggal}}, kami yang bertanda tangan dibawah ini :</td>
+                    <td width="560">Pada hari ini {{$pengadaan->deskripsi_tanggal}}, kami yang bertanda tangan dibawah ini :</td>
                 <tr>
             </table>
             <br>
@@ -85,7 +85,7 @@
                     <td width="10">II.</td>
                     <td width="150">Nama</td>
                     <td>:</td>
-                    <td width="400">{{$pengadaan1->pengadaan->pelaksana->nama_pelaksana}}</td>
+                    <td width="400">{{$pengadaan->pengadaan->pelaksana->nama_pelaksana}}</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
@@ -93,7 +93,7 @@
                     <td width="15"> </td>
                     <td width="150">Jabatan</td>
                     <td>:</td>
-                    <td width="400">{{$pengadaan1->pengadaan->pelaksana->jabatan_pelaksana}} {{$pengadaan1->pengadaan->pelaksana->pt_pelaksana}}</td>
+                    <td width="400">{{$pengadaan->pengadaan->pelaksana->jabatan_pelaksana}} {{$pengadaan->pengadaan->pelaksana->pt_pelaksana}}</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
@@ -101,7 +101,7 @@
                     <td width="15"> </td>
                     <td width="150">Alamat</td>
                     <td>:</td>
-                    <td width="400">{{$pengadaan1->pengadaan->pelaksana->alamat}}</td>
+                    <td width="400">{{$pengadaan->pengadaan->pelaksana->alamat}}</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
@@ -129,7 +129,7 @@
                     <td width="20">a.</td>
                     <td width="100">Pekerjaan</td>
                     <td width="10">:</td>
-                    <td width="410">{{$pengadaan1->pengadaan->jenis_pengadaan}}</td>
+                    <td width="410">{{$pengadaan->pengadaan->jenis_pengadaan}}</td>
                 </tr>
             </table>
             {{--  <table border="0" align="center" font-size="2">
@@ -210,7 +210,7 @@
                     <td width="20">f.</td>
                     <td width="100">Kwitansi</td>
                     <td width="10">:</td>
-                    <td width="410">Nomor : 020/{{$pengadaan1->nomor}}/114.6/2022</td>
+                    <td width="410">Nomor : 020/{{$pengadaan->nomor}}/114.6/2022</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
@@ -219,7 +219,7 @@
                     <td width="20"> </td>
                     <td width="100">Kontrak</td>
                     <td width="10"> </td>
-                    <td width="410">Tanggal : {{ $pengadaan1->tanggal}}</td>
+                    <td width="410">Tanggal : {{$pengadaan->tanggal->isoFormat('D MMMM Y')}}</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
@@ -228,7 +228,7 @@
                     <td width="20">g.</td>
                     <td width="100">Nilai</td>
                     <td width="10">:</td>
-                    <td width="410">Rp.{{$pengadaan1->pengadaan->nilai_negosiasi}},-</td>
+                    <td width="410">Rp.{{$pengadaan->pengadaan->nilai_negosiasi}},-</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
@@ -244,7 +244,7 @@
             <table border="0" align="center" font-size="2">
                 <tr>
                     <td width="20">2.</td>
-                    <td width="540">PIHAK KEDUA telah mencapai kemajuan Hasil {{$pengadaan1->pengadaan->jenis_pengadaan}}</td>
+                    <td width="540">PIHAK KEDUA telah mencapai kemajuan Hasil {{$pengadaan->pengadaan->jenis_pengadaan}}</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
@@ -260,7 +260,7 @@
                     <td width="20">a.</td>
                     <td width="400">Nilai Kontrak Pekerjaan</td>
                     <td width="10">:</td>
-                    <td width="110">Rp.{{$pengadaan1->pengadaan->nilai_negosiasi}},-</td>
+                    <td width="110">Rp.{{$pengadaan->pengadaan->nilai_negosiasi}},-</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
@@ -289,7 +289,7 @@
                     <td width="20">d.</td>
                     <td width="400">Pembayaran termin saat ini</td>
                     <td width="10">:</td>
-                    <td width="110">Rp.{{$pengadaan1->pengadaan->nilai_negosiasi}},-</td>
+                    <td width="110">Rp.{{$pengadaan->pengadaan->nilai_negosiasi}},-</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
@@ -312,7 +312,7 @@
             <table border="0" align="center" font-size="2">
                 <tr>
                     <td width="25"> </td>
-                    <td width="540">Rp. {{$pengadaan1->pengadaan->nilai_negosiasi}},- (Terbilang : {{$pengadaan1->pengadaan->deskripsi_negosiasi}})</td>
+                    <td width="540">Rp. {{$pengadaan->pengadaan->nilai_negosiasi}},- (Terbilang : {{$pengadaan->pengadaan->deskripsi_negosiasi}})</td>
                 </tr>
             </table>
             <br>

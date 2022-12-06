@@ -45,7 +45,7 @@
                 <tr>
                     <td width="110">Tanggal</td>
                     <td width="30">:</td>
-                    <td width="430">{{$pengadaan1->tanggal}}</td>
+                    <td width="430">{{$pengadaan->tanggal->isoFormat('D MMMM Y')}}</td>
                 <tr>
             </table>
             <br>
@@ -64,7 +64,7 @@
                 <thead>
                     <tr>
                         <td width="31px"> </td>
-                        <td width="800px">{{$pengadaan1->pengadaan->jenis_pengadaan}}</td>
+                        <td width="800px">{{$pengadaan->pengadaan->jenis_pengadaan}}</td>
                     </tr>
                 </thead>
             </table>
@@ -72,7 +72,7 @@
                 <thead>
                     <tr>
                         <td width="30px" align="center">{{$brg->pengadaan_id}}</td>
-                        <td width="570px">{{$pengadaan1->pengadaan->jenis_pengadaan}}</td>
+                        <td width="570px">{{$pengadaan->pengadaan->jenis_pengadaan}}</td>
                         <td width="100px" scope="col"> </td>
                         <td width="100px" scope="col"> </td>
                     </tr>
