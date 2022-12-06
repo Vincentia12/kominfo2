@@ -32,7 +32,7 @@ return new class extends Migration
             $table->string('jabatan_pelaksana');
             $table->string('kode_rekening');
             $table->string('npwp');
-            $table->bigInteger('tlp');
+            $table->string('tlp');
             $table->timestamps();
             // $table->integer('npwp',20);
             // $table->integer('tlp',20);

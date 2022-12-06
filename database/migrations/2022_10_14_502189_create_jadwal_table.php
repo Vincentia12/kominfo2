@@ -29,7 +29,6 @@ return new class extends Migration
             // $table->foreignId('pelaksana_id')->constrained();
             $table->string('kegiatan');
             $table->string('alokasi');
-            $table->string('hari');
             $table->date('tanggal');
             $table->bigInteger('nomor');
             $table->text('deskripsi_tgl');
@@ -44,6 +43,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('jadwals   ');
+        Schema::dropIfExists('jadwals');
     }
 };

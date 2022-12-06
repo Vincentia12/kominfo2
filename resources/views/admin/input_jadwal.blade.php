@@ -57,7 +57,6 @@
               <th>Jenis Pengadaan</th>
               <th>Kegiatan/th</th>
               <th>Alokasi</th>
-              <th>Hari</th>
               <th>Tanggal</th>
               <th>Nomor</th>
               <th>Deskripsi Tanggal</th>
@@ -72,7 +71,6 @@
               <td>{{ $list->pengadaan->jenis_pengadaan }}</td>
               <td>{{ $list->kegiatan }}</td>
               <td>{{ $list->alokasi }}</td>
-              <td>{{ $list->hari }}</td>
               <td>{{ $list->tanggal }}</td>
               <td>{{ $list->nomor }}</td>
               <td>{{ $list->deskripsi_tgl }}</td>
@@ -175,22 +173,6 @@
             <input type="number" class="form-control" id="alokasi" name="alokasi" placeholder="Alokasi Waktu">
             <small class="text-danger">{{ $errors->first('alokasi') }}</small>
           </div>
-
-          <div class="mb-4">
-            <label for="message-text" class="col-form-label">Hari</label>
-            <select class="form-control" name="hari" id="hari" placeholder="Pilih Hari">
-              <option value="">Pilih Hari</option>
-              <option value=""></option>
-              <option value="Senin">Senin</option>
-              <option value="Selasa">Selasa</option>
-              <option value="Rabu">Rabu</option>
-              <option value="Kamis">Kamis</option>
-              <option value="Jumat">Jumat</option>
-              <option value="Sabtu">Sabtu</option>
-              <option value="Minggu">Minggu</option>
-            </select>
-            <small class="text-danger">{{ $errors->first('hari') }}</small>
-          </div>
           <div class="mb-4">
             <label for="message-text" class="col-form-label">Tanggal</label>
             <input type="date" class="form-control" id="tanggal" name="tanggal" placeholder="10/10/2022">
@@ -292,25 +274,6 @@
             <input type="text" class="form-control" id="alokasi" name="alokasi" value="{{ $jdwl->alokasi }}" placeholder="10000000">
             <small class="text-danger">{{ $errors->first('alokasi') }}</small>
           </div>
-
-          <div class="mb-4">
-            <label for="message-text" class="col-form-label">Hari</label>
-            <select class="form-control" name="hari">
-              <option value="{{$jdwl->hari}}">-{{ $jdwl->hari }} </option>
-              <option><br></option>
-
-              <option value="">Pilih Hari</option>
-              <option value=""></option>
-              <option value="Senin">Senin</option>
-              <option value="Selasa">Selasa</option>
-              <option value="Rabu">Rabu</option>
-              <option value="Kamis">Kamis</option>
-              <option value="Jumat">Jumat</option>
-              <option value="Sabtu">Sabtu</option>
-              <option value="Minggu">Minggu</option>
-            </select>
-            <small class="text-danger">{{ $errors->first('hari') }}</small>
-          </div>
           <div class="mb-4">
             <label for="message-text" class="col-form-label">Tanggal</label>
             <input type="date" class="form-control" id="tanggal" name="tanggal" value="{{old("$jdwl->tanggal")}}" placeholder="10.000.000">
@@ -390,16 +353,6 @@
                 <td>Alokasi</td>
                 <td>:</td>
                 <td>{{ $jd->alokasi }}</td>
-              </tr>
-            </div>
-          </div>
-          <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-              <tr>
-                <td>Hari</td>
-                <td>:</td>
-                {{-- <td>{{ $jd->hari }}</td> --}}
-                <td>{{ $jd->tanggal->format('D')}}</td>
               </tr>
             </div>
           </div>
