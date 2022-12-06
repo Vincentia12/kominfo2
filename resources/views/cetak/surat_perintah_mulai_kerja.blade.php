@@ -57,7 +57,7 @@
                     <font size="3">:</font>
                 </td>
                 <td style="text-align: center">
-                    <font size="3">020/654.{{$pengadaan1->jadwal}} /114.6/2022</font>
+                    <font size="3">020/654.{{$pengadaan->nomor}} /114.6/{{$pengadaan->created_at->isoFormat('Y')}}</font>
                 </td>
                 </td>
             <tr>
@@ -69,7 +69,7 @@
         <table>
             <tr>
                 <td width="8"></td>
-                <td style="text-align: left ;text-align: justify; text-indent: 45px;">Pada hari ini {{$pengadaan1->hari}}, Tanggal {{$pengadaan1->deskripsi_tgl}}. Kami yang bertanda tangan dibawah ini :</td>
+                <td style="text-align: left ;text-align: justify; text-indent: 45px;">Pada hari ini {{$pengadaan->tanggal->isoFormat('dddd')}}, Tanggal {{$pengadaan->deskripsi_tgl}}. Kami yang bertanda tangan dibawah ini :</td>
             </tr>
         </table>
     </div>
@@ -151,7 +151,7 @@
                 <td width="8"></td>
                 <td width="100">Nama</td>
                 <td>:</td>
-                <td width="370"> {{$pengadaan1->pengadaan->pelaksana->nama_pelaksana}}</td>
+                <td width="370"> {{$pengadaan->pengadaan->pelaksana->nama_pelaksana}}</td>
             </tr>
         </table>
     </div>
@@ -161,7 +161,7 @@
                 <td width="8"></td>
                 <td width="100">Jabatan</td>
                 <td>:</td>
-                <td width="370">{{$pengadaan1->pengadaan->pelaksana->jabatan_pelaksana}}</td>
+                <td width="370">{{$pengadaan->pengadaan->pelaksana->jabatan_pelaksana}}</td>
             </tr>
         </table>
     </div>
@@ -171,7 +171,7 @@
                 <td width="8"></td>
                 <td width="100">Nama Perusahaan</td>
                 <td>:</td>
-                <td width="370">{{$pengadaan1->pengadaan->pelaksana->pt_pelaksana}}</td>
+                <td width="370">{{$pengadaan->pengadaan->pelaksana->pt_pelaksana}}</td>
             </tr>
         </table>
     </div>
@@ -181,7 +181,7 @@
                 <td width="8"></td>
                 <td width="100">Alamat Kantor</td>
                 <td>:</td>
-                <td width="370">{{$pengadaan1->pengadaan->pelaksana->alamat}}</td>
+                <td width="370">{{$pengadaan->pengadaan->pelaksana->alamat}} {{$pengadaan->pengadaan->pelaksana->kota}}</td>
             </tr>
         </table>
     </div>
@@ -204,7 +204,7 @@
                 <td width="15">1.</td>
                 <td width="130">Pekerjaan</td>
                 <td>:</td>
-                <td width="370">{{$pengadaan1->pengadaan->jenis_pengadaan}}</td>
+                <td width="370">{{$pengadaan->pengadaan->jenis_pengadaan}}</td>
             </tr>
         </table>
     </div>
@@ -215,7 +215,7 @@
                 <td width="15">2.</td>
                 <td width="130">Tanggal Mulai Kerja </td>
                 <td>:</td>
-                <td width="370">{{$pengadaan1->tanggal}}</td>
+                <td width="370">{{$pengadaan->tanggal->isoFormat('D MMMM Y')}}</td>
             </tr>
         </table>
     </div>
@@ -237,7 +237,7 @@
                 <td width="15">4.</td>
                 <td width="130">Waktu penyelesaian </td>
                 <td>:</td>
-                <td width="370">Selama {{$pengadaan1->alokasi}} hari kalender dan pekerjaan harus sudah selesai pada tanggal 20 September 2022</td>
+                <td width="370">Selama {{$pengadaan->alokasi}} hari kalender dan pekerjaan harus sudah selesai pada tanggal 20 September 2022</td>
             </tr>
         </table>
     </div>
@@ -260,7 +260,7 @@
             <tr>
                 <td width="340"> </td>
                 <td>Ditetapkan di : Surabaya <br>
-                    Pada tanggal : {{$pengadaan1->tanggal}}</td>
+                    Pada tanggal : {{$pengadaan->created_at->isoFormat('D MMMM Y')}}</td>
                 {{-- <td width="50"> </td> --}}
             </tr>
         </table>
@@ -290,7 +290,7 @@
         <table style="text-align: center" border="0" font-size="0">
             <tr>
                 <td width="20"> </td>
-                <td width="250">{{$pengadaan1->pengadaan->pelaksana->pt_pelaksana}}</td>
+                <td width="250">{{$pengadaan->pengadaan->pelaksana->pt_pelaksana}}</td>
                 <td width="250">Dinas Komunikasi dan Informatika Provinsi Jawa Timur</td>
                 <td width="20"> </td>
             </tr>
@@ -301,7 +301,7 @@
         <table style="text-align: center" border="0" font-size="0">
             <tr>
                 <td width="20"> </td>
-                <td width="250"><u>{{$pengadaan1->pengadaan->pelaksana->nama_pelaksana}}</u></td>
+                <td width="250"><u>{{$pengadaan->pengadaan->pelaksana->nama_pelaksana}}</u></td>
                 <td width="250"><u>ADI KURNIAWAN.S.Kom.,M.Kom</u></td>
                 <td width="20"> </td>
             </tr>
@@ -311,7 +311,7 @@
         <table style="text-align: center" border="0" font-size="0">
             <tr>
                 <td width="20"> </td>
-                <td width="250">{{$pengadaan1->pengadaan->pelaksana->jabatan_pelaksana}} </td>
+                <td width="250">{{$pengadaan->pengadaan->pelaksana->jabatan_pelaksana}} </td>
                 <td width="250">NIP. 19890618 201403 1 002</td>
                 <td width="20"> </td>
             </tr>

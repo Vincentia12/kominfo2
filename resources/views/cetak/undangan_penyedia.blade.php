@@ -42,7 +42,7 @@
             <tr>
                 <td width="280"> </td>
                 <!-- diubah. menggunakan kolom craete at tapi aku blm bisa ngubahnya -->
-                <td>Surabaya, 22 Agustus 2022</td>
+                <td>Surabaya, {{$pengadaan->created_at->isoFormat('D MMMM Y')}}</td>
                 <td width="50"> </td>
             </tr>
             <tr>
@@ -59,10 +59,10 @@
                 <td width="80">Nomor</td>
                 <td>:</td>
                 <!-- diubah -->
-                <td width="175">020/{{$pengadaan1->nomor}}/114.6/2022</td>
+                <td width="175">020/{{$pengadaan->nomor}}/114.6/2022</td>
                 <td width="50">Yth. Sdr. </td>
                 <!-- diubah -->
-                <td width="175">{{$pengadaan1->pengadaan->pelaksana->jabatan_pelaksana}} {{$pengadaan1->pengadaan->pelaksana->pt_pelaksana}}</td>
+                <td width="175">{{$pengadaan->pengadaan->pelaksana->jabatan_pelaksana}} {{$pengadaan->pengadaan->pelaksana->pt_pelaksana}}</td>
             </tr>
             <tr>
                 <td width="80">Sifat</td>
@@ -70,7 +70,7 @@
                 <td width="175">Segera</td>
                 <td> </td>
                 <!-- diubah -->
-                <td>{{$pengadaan1->pengadaan->pelaksana->alamat}}</td>
+                <td>{{$pengadaan->pengadaan->pelaksana->alamat}}</td>
             </tr>
             <tr>
                 <td width="80">Lampiran</td>
@@ -84,7 +84,7 @@
                 <td>:</td>
                 <td width="175">Penunjukan Penyedia <br><u> Barang/Jasa</u></td>
                 <td></td>
-                <td><b><u>SURABAYA</u></b></td>
+                <td style="text-transform: uppercase; letter-spacing: 3px;"><b><u>{{$pengadaan->pengadaan->pelaksana->kota}}</u></b></td>
             </tr>
         </table>
     </div>
@@ -94,7 +94,7 @@
         <table class="table" border="0" align="" font-size="1">
             <tr>
                 <td width="8"></td>
-                <td style="text-align: left ;text-align: justify; text-indent: 45px;">Sesuai dengan Surat Penawaran Saudara tanggal 24 Agustus 2022 Nomor : 233/PEN/PN/IX/2022 dan Nota Dinas tanggal 5 September 2022 Nomor : 020/654.10/114.6/2022 perihal Penyampaian Berita Acara Proses Pengadaan Langsung maka Pekerjaan Pengadaan {{$pengadaan1->pengadaan->jenis_pengadaan}} kami menunjuk :</td>
+                <td style="text-align: left ;text-align: justify; text-indent: 45px;">Sesuai dengan Surat Penawaran Saudara tanggal 24 Agustus 2022 Nomor : 233/PEN/PN/IX/2022 dan Nota Dinas tanggal 5 September 2022 Nomor : 020/654.10/114.6/2022 perihal Penyampaian Berita Acara Proses Pengadaan Langsung maka Pekerjaan Pengadaan {{$pengadaan->pengadaan->jenis_pengadaan}} kami menunjuk :</td>
 
             </tr>
         </table>
@@ -107,32 +107,32 @@
                 <td width="70">Nama Perusahaan</td>
                 <td>:</td>
                 <!-- diubah -->
-                <td>{{ $pengadaan1->pengadaan->pelaksana->pt_pelaksana }}</td>
+                <td>{{ $pengadaan->pengadaan->pelaksana->pt_pelaksana }}</td>
             </tr>
             <tr>
                 <td width="30"></td>
                 <td width="120">Nama Penanggung Jawab</td>
                 <td>:</td>
                 <!-- diubah -->
-                <td>{{ $pengadaan1->pengadaan->pelaksana->nama_pelaksana }}</td>
+                <td>{{ $pengadaan->pengadaan->pelaksana->nama_pelaksana }}</td>
             </tr>
             <tr>
                 <td width="30"></td>
                 <td width="120">Alamat</td>
                 <td>:</td>
-                <td>{{ $pengadaan1->pengadaan->pelaksana->alamat }}</td>
+                <td>{{ $pengadaan->pengadaan->pelaksana->alamat }} {{ $pengadaan->pengadaan->pelaksana->kota }}</td>
             </tr>
             <tr>
                 <td width="30"></td>
                 <td width="120">NPWP</td>
                 <td>:</td>
-                <td>{{ $pengadaan1->pengadaan->pelaksana->npwp }}</td>
+                <td>{{ $pengadaan->pengadaan->pelaksana->npwp }}</td>
             </tr>
             <tr>
                 <td width="30"></td>
                 <td width="120">Harga Penawaran Setelah Negosiasi</td>
                 <td>:</td>
-                <td>Rp. {{ $pengadaan1->pengadaan->nilai_negosiasi}},-({{ $pengadaan1->pengadaan->deskripsi_negosiasi}})</td>
+                <td>Rp. {{ $pengadaan->pengadaan->nilai_negosiasi}},-({{ $pengadaan->pengadaan->deskripsi_negosiasi}})</td>
             </tr>
         </table>
     </div>
@@ -171,7 +171,7 @@
             <br>
             <tr>
                 <td width="300"> </td>
-                <td width="250">I WAYAN RUDY ARTHA, S.Kom</td>
+                <td width="250"><u>I WAYAN RUDY ARTHA, S.Kom</u></td>
                 {{-- <td width="50"> </td> --}}
             </tr>
             <tr>

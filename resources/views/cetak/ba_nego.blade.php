@@ -57,7 +57,7 @@
                     <font size="3">:</font>
                 </td>
                 <td style="text-align: center">
-                    <font size="3">020/654.{{$pengadaan1->jadwal}} /114.6/2022</font>
+                    <font size="3">020/654.{{$pengadaan->nomor}} /114.6/2022</font>
                 </td>
                 </td>
             <tr>
@@ -69,7 +69,7 @@
         <table>
             <tr>
                 <td width="8"></td>
-                <td style="text-align: left ;text-align: justify; text-indent: 45px;">Pada hari ini {{$pengadaan1->hari}}, Tanggal {{$pengadaan1->deskripsi_tgl}} kami yang bertanda tangan dibawah ini adalah Pejabat Pengadaan di Lingkungan Dinas Komunikasi Dan Informatika Provinsi Jawa Timur yang dibentuk dengan Keputusan Kepala Dinas Komunikasi Dan Informatika Provinsi Jawa Timur selaku Pengguna Anggaran tanggal {{$pengadaan1->tanggal}} Nomor : 188/19/114.1/2022, melaksanakan klarifikasi dan negosiasi untuk pelaksanaan {{$pengadaan1->pengadaan->jenis_pengadaan}}, dibiayai dari dana APBD Tahun Anggaran 2022 pada DPA Dinas Komunikasi dan Informatika Provinsi Jawa Timur Kode Rekening 2.20.02.1.01.5.1.02.01.01.0029 dengan Harga Perkiraan Sendiri (HPS) sebesar Rp. {{$pengadaan1->pengadaan->total_hps}},- ({{$pengadaan1->pengadaan->deskripsi_hps}}).</td>
+                <td style="text-align: left ;text-align: justify; text-indent: 45px;">Pada hari ini {{$pengadaan->tanggal->isoFormat('dddd')}}, Tanggal {{$pengadaan->deskripsi_tgl}} kami yang bertanda tangan dibawah ini adalah Pejabat Pengadaan di Lingkungan Dinas Komunikasi Dan Informatika Provinsi Jawa Timur yang dibentuk dengan Keputusan Kepala Dinas Komunikasi Dan Informatika Provinsi Jawa Timur selaku Pengguna Anggaran tanggal 3 Januari 2022 Nomor : 188/19/114.1/2022, melaksanakan klarifikasi dan negosiasi untuk pelaksanaan {{$pengadaan->pengadaan->jenis_pengadaan}}, dibiayai dari dana APBD Tahun Anggaran {{$pengadaan->tanggal->isoFormat('Y')}} pada DPA Dinas Komunikasi dan Informatika Provinsi Jawa Timur Kode Rekening 2.20.02.1.01.5.1.02.01.01.0029 dengan Harga Perkiraan Sendiri (HPS) sebesar Rp. {{$pengadaan->pengadaan->total_hps}},- ({{$pengadaan->pengadaan->deskripsi_hps}}).</td>
             </tr>
         </table>
     </div>
@@ -79,7 +79,7 @@
         <table>
             <tr>
                 <td width="8"></td>
-                <td style="text-align: left ;text-align: justify;">Melakukan klarifikasi dan negosiasi terhadap penawaran yang diajukan oleh : {{$pengadaan1->pengadaan->pelaksana->pt_pelaksana}} {{$pengadaan1->pengadaan->pelaksana->alamat}} dengan hasil terlampir.</td>
+                <td style="text-align: left ;text-align: justify;">Melakukan klarifikasi dan negosiasi terhadap penawaran yang diajukan oleh : {{$pengadaan->pengadaan->pelaksana->pt_pelaksana}} {{$pengadaan->pengadaan->pelaksana->alamat}} {{$pengadaan->pengadaan->pelaksana->kota}} dengan hasil terlampir.</td>
             </tr>
         </table>
     </div>
@@ -100,7 +100,7 @@
                 <td width="8"></td>
                 <td width="180">Nama Perusahaan</td>
                 <td>:</td>
-                <td width="370">{{$pengadaan1->pengadaan->pelaksana->pt_pelaksana}}</td>
+                <td width="370">{{$pengadaan->pengadaan->pelaksana->pt_pelaksana}}</td>
             </tr>
         </table>
     </div>
@@ -110,7 +110,7 @@
                 <td width="8"></td>
                 <td width="180">Nama Penanggung Jawab</td>
                 <td>:</td>
-                <td width="370">{{$pengadaan1->pengadaan->pelaksana->nama_pelaksana}}</td>
+                <td width="370">{{$pengadaan->pengadaan->pelaksana->nama_pelaksana}}</td>
             </tr>
         </table>
     </div>
@@ -120,7 +120,7 @@
                 <td width="8"></td>
                 <td width="180">Alamat Perusahaan</td>
                 <td>:</td>
-                <td width="370">{{$pengadaan1->pengadaan->pelaksana->alamat}}</td>
+                <td width="370">{{$pengadaan->pengadaan->pelaksana->alamat}} {{$pengadaan->pengadaan->pelaksana->kota}}</td>
             </tr>
         </table>
     </div>
@@ -131,7 +131,7 @@
                 <td width="8"></td>
                 <td width="180">Nomomr Pokok Wajib Pajak</td>
                 <td>:</td>
-                <td width="370">{{$pengadaan1->pengadaan->pelaksana->npwp}}</td>
+                <td width="370">{{$pengadaan->pengadaan->pelaksana->npwp}}</td>
             </tr>
         </table>
     </div>
@@ -141,7 +141,7 @@
                 <td width="8"></td>
                 <td width="180">Pekerjaan</td>
                 <td>:</td>
-                <td width="370">{{$pengadaan1->pengadaan->jenis_pengadaan}}</td>
+                <td width="370">{{$pengadaan->pengadaan->jenis_pengadaan}}</td>
             </tr>
         </table>
     </div>
@@ -151,7 +151,7 @@
                 <td width="8"></td>
                 <td width="180">Dengan Harga</td>
                 <td>:</td>
-                <td width="370">RP. {{$pengadaan1->pengadaan->nilai_negosiasi}},- ({{$pengadaan1->pengadaan->deskripsi_negosiasi}})</td>
+                <td width="370">RP. {{$pengadaan->pengadaan->nilai_negosiasi}},- ({{$pengadaan->pengadaan->deskripsi_negosiasi}})</td>
             </tr>
         </table>
     </div>
@@ -191,7 +191,7 @@
         <table style="text-align: center" border="0" font-size="0">
             <tr>
                 <td width="20"> </td>
-                <td width="250">{{$pengadaan1->pengadaan->pelaksana->pt_pelaksana}}</td>
+                <td width="250">{{$pengadaan->pengadaan->pelaksana->pt_pelaksana}}</td>
                 <td width="250"> </td>
                 <td width="20"> </td>
             </tr>
@@ -202,7 +202,7 @@
         <table style="text-align: center" border="0" font-size="0">
             <tr>
                 <td width="20"> </td>
-                <td width="250"><u>{{$pengadaan1->pengadaan->pelaksana->nama_pelaksana}}</u></td>
+                <td width="250"><u>{{$pengadaan->pengadaan->pelaksana->nama_pelaksana}}</u></td>
                 <td width="250"><u>ADI KURNIAWAN.S.Kom.,M.Kom</u></td>
                 <td width="20"> </td>
             </tr>

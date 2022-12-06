@@ -271,12 +271,12 @@
           </div>
           <div class="mb-4">
             <label for="message-text" class="col-form-label">Alokasi</label>
-            <input type="text" class="form-control" id="alokasi" name="alokasi" value="{{ $jdwl->alokasi }}" placeholder="10000000">
+            <input type="text" class="form-control" id="alokasi" name="alokasi" value="{{ $jdwl->alokasi }}">
             <small class="text-danger">{{ $errors->first('alokasi') }}</small>
           </div>
           <div class="mb-4">
             <label for="message-text" class="col-form-label">Tanggal</label>
-            <input type="date" class="form-control" id="tanggal" name="tanggal" value="{{old("$jdwl->tanggal")}}" placeholder="10.000.000">
+            <input type="date" class="form-control" id="tanggal" name="tanggal" value="{{ $jdwl->tanggal }}">
             <small class="text-danger">{{ $errors->first('tanggal') }}</small>
           </div>
           <div class="mb-4">

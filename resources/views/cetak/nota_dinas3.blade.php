@@ -37,13 +37,13 @@
             <tr>
                 <td>Tanggal</td>
                 <td>:</td>
-                <td>{{ $pengadaan1->tanggal}}</td>
+                <td>{{$pengadaan->tanggal->isoFormat('D MMMM Y')}}</td>
                 {{-- <td width="475">11 Agustus 2022</td> --}}
             </tr>
             <tr>
                 <td>Nomor</td>
                 <td>:</td>
-                <td>020/{{$pengadaan1->nomor}}/114.6/2022</td>
+                <td>020/654.{{$pengadaan->nomor}}/114.6/{{$pengadaan->tanggal->isoFormat('Y')}}</td>
             </tr>
             <tr>
                 <td>Sifat</td>
@@ -70,7 +70,7 @@
         <table>
             <tr>
                 <td width="8"></td>
-                <td style="text-align: left ;text-align: justify; text-indent: 45px;">Sesuai dengan Berita Acara Hasil Pengadaan Langsung Nomor : 020/ 654.10/114.6/2022 tanggal 20 Juli 2022 untuk pengadaan{{$pengadaan1->pengadaan->jenis_pengadaan}} Printer maka bersama ini kami sampaikan administrasi proses pengadaan langsung yang telah selesai dilaksanakan terhadap :</td>
+                <td style="text-align: left ;text-align: justify; text-indent: 45px;">Sesuai dengan Berita Acara Hasil Pengadaan Langsung Nomor : 020/ 654.10/114.6/2022 tanggal 20 Juli 2022 untuk pengadaan{{$pengadaan->pengadaan->jenis_pengadaan}} Printer maka bersama ini kami sampaikan administrasi proses pengadaan langsung yang telah selesai dilaksanakan terhadap :</td>
             </tr>
         </table>
     </div>
@@ -82,22 +82,22 @@
                 <td width="120">Nama Perusahaan</td>
                 <td>:</td>
                 <!-- diubah -->
-                <td>{{ $pengadaan1->pengadaan->pelaksana->pt_pelaksana }}</td>
+                <td>{{ $pengadaan->pengadaan->pelaksana->pt_pelaksana }}</td>
             </tr>
             <tr>
                 <td width="120">Alamat</td>
                 <td>:</td>
-                <td>{{ $pengadaan1->pengadaan->pelaksana->alamat }}</td>
+                <td>{{ $pengadaan->pengadaan->pelaksana->alamat }} {{ $pengadaan->pengadaan->pelaksana->kota }}</td>
             </tr>
             <tr>
                 <td width="120">NPWP</td>
                 <td>:</td>
-                <td>{{ $pengadaan1->pengadaan->pelaksana->npwp }}</td>
+                <td>{{ $pengadaan->pengadaan->pelaksana->npwp }}</td>
             </tr>
             <tr>
                 <td width="120">Harga Penawaran Setelah Negosiasi</td>
                 <td>:</td>
-                <td>Rp. {{ $pengadaan1->pengadaan->nilai_negosiasi}},-({{ $pengadaan1->pengadaan->deskripsi_negosiasi}})</td>
+                <td>Rp. {{ $pengadaan->pengadaan->nilai_negosiasi}},-({{ $pengadaan->pengadaan->deskripsi_negosiasi}})</td>
             </tr>
         </table>
     </div>
@@ -127,7 +127,7 @@
             <br>
             <tr>
                 <td width="300"> </td>
-                <td width="250">ADI KURNIAWAN.S.Kom.,M.Kom</td>
+                <td width="250"><u>ADI KURNIAWAN.S.Kom.,M.Kom</u></td>
                 {{-- <td width="50"> </td> --}}
             </tr>
             <tr>

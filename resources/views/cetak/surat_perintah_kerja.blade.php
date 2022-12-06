@@ -41,8 +41,8 @@
         {{-- judul --}}
         <div style="text-align: center">
             {{-- <font color="black">  --}}
-                <p align="center"><u><b> SURAT PERINTAH KERJA </b></u> <br>
-                    Nomor : 020/{{$pengadaan1->nomor}}/114.6/2022 </p>
+            <p align="center"><u><b> SURAT PERINTAH KERJA </b></u> <br>
+                Nomor : 020/654.{{$pengadaan->nomor}}/114.6/2022 </p>
             {{-- </font> --}}
         </div>
     </div>
@@ -52,7 +52,7 @@
         <div>
             <table font-size="1" border="0">
                 <tr>
-                    <td style="text-indent: 45px; ">Pada hari ini {{$pengadaan1->hari}} {{$pengadaan1->deskripsi_tgl}}. Kami yang bertanda tangan dibawah ini :</td>
+                    <td style="text-indent: 45px; ">Pada hari ini {{$pengadaan->created_at->isoFormat('dddd')}} {{$pengadaan->deskripsi_tgl}}. Kami yang bertanda tangan dibawah ini :</td>
                 </tr>
                 {{-- <tr>
                     <td>Kami yang bertanda tangan dibawah ini :</td>
@@ -64,15 +64,15 @@
             <table border="0">
                 <tr>
                     <td>1.</td>
-                    <td >Nama</td>
+                    <td>Nama</td>
                     <td>:</td>
                     {{-- Ambil dari tabel pejabat --}}
                     <td>I WAYAN RUDY ARTHA, S.Kom</td>
                     <td>NIP. 19770517 200901 1 005</td>
                 </tr>
                 <tr>
-                    <td > </td>
-                    <td >Jabatan</td>
+                    <td> </td>
+                    <td>Jabatan</td>
                     <td width="3">:</td>
                     <td colspan="2">Pejabat Pembuat Komitmen Dinas Komunikasi Dan Informatika Provinsi Jawa Timur</td>
                 </tr>
@@ -89,25 +89,25 @@
                     <td>2.</td>
                     <td>Nama</td>
                     <td>:</td>
-                    <td colspan="2">{{$pengadaan1->pengadaan->pelaksana->nama_pelaksana}}</td>
+                    <td colspan="2">{{$pengadaan->pengadaan->pelaksana->nama_pelaksana}}</td>
                 </tr>
                 <tr>
-                    <td > </td>
-                    <td >Jabatan</td>
+                    <td> </td>
+                    <td>Jabatan</td>
                     <td width="3">:</td>
-                    <td colspan="2">{{$pengadaan1->pengadaan->pelaksana->jabatan_pelaksana}}</td>
+                    <td colspan="2">{{$pengadaan->pengadaan->pelaksana->jabatan_pelaksana}}</td>
                 </tr>
                 <tr>
-                    <td > </td>
-                    <td >Nama Perusahaan</td>
+                    <td> </td>
+                    <td>Nama Perusahaan</td>
                     <td width="3">:</td>
-                    <td colspan="2">{{$pengadaan1->pengadaan->pelaksana->pt_pelaksana}}</td>
+                    <td colspan="2">{{$pengadaan->pengadaan->pelaksana->pt_pelaksana}}</td>
                 </tr>
                 <tr>
                     <td> </td>
                     <td>Alamat Kantor</td>
                     <td>:</td>
-                    <td colspan="2">{{$pengadaan1->pengadaan->pelaksana->alamat}}</td>
+                    <td colspan="2">{{$pengadaan->pengadaan->pelaksana->alamat}} {{$pengadaan->pengadaan->pelaksana->kota}}</td>
                 </tr>
                 <tr>
                     <td colspan="5">Bertindak untuk dan atas nama Pemerintah Provinsi Jawa Timur, selanjutnya disebut PIHAK KESATU</td>
@@ -127,7 +127,7 @@
                 <tr>
                     <td>2.</td>
                     {{-- no surat lain --}}
-                    <td>Surat Penawaran Harga Nomor  : 233/PEN/PN/IX/2022 Tanggal 24 Agustus 2022</td>
+                    <td>Surat Penawaran Harga Nomor : 233/PEN/PN/IX/2022 Tanggal 24 Agustus 2022</td>
                 </tr>
                 <tr>
                     <td>3.</td>
@@ -172,7 +172,7 @@
                 </thead>
                 <tr>
                     <td>1</td>
-                    <td>{{$pengadaan1->pengadaan->jenis_pengadaan}}</td>
+                    <td>{{$pengadaan->pengadaan->jenis_pengadaan}}</td>
                     <td></td>
                     <td></td>
                     <td></td>
@@ -182,68 +182,68 @@
                 <tbody>
                     @php $no = 1; @endphp
                     @foreach ($barang as $brg)
-                        <tr>
-                            {{-- <td>{{$no++}}</td> --}}
-                            <td></td>
-                            <td></td>
-                            {{-- <td>{{$brg->pengadaan->jenis_pengadaan}}</td> --}}
-                            <td>{{$brg->barang}}</td>
-                            <td>{{$brg->jumlah_barang}}</td>
-                            <td>{{$brg->satuan}}</td>
-                            <td>{{$brg->harga_satuan}}</td>
-                            @php
-                            // $jumlahbarang = $barang["jumlah_barang"];
-                            $jumlahbarang = $brg->jumlah_barang;
-                                $hargabarang = $brg->harga_satuan;
-                                // $hargabarang = $barang["harga_barang"];
+                    <tr>
+                        {{-- <td>{{$no++}}</td> --}}
+                        <td></td>
+                        <td></td>
+                        {{-- <td>{{$brg->pengadaan->jenis_pengadaan}}</td> --}}
+                        <td>{{$brg->barang}}</td>
+                        <td>{{$brg->jumlah_barang}}</td>
+                        <td>{{$brg->satuan}}</td>
+                        <td>{{$brg->harga_satuan}}</td>
+                        @php
+                        // $jumlahbarang = $barang["jumlah_barang"];
+                        $jumlahbarang = $brg->jumlah_barang;
+                        $hargabarang = $brg->harga_satuan;
+                        // $hargabarang = $barang["harga_barang"];
 
-                                $total = $jumlahbarang * $hargabarang;
-                            @endphp
-                            <td>{{$total}}</td>
-                        </tr>
-                        @endforeach
-                        <tr>
-                            <td style="text-align:right" colspan="6">Total</td>
-                            {{-- @php
+                        $total = $jumlahbarang * $hargabarang;
+                        @endphp
+                        <td>{{$total}}</td>
+                    </tr>
+                    @endforeach
+                    <tr>
+                        <td style="text-align:right" colspan="6">Total</td>
+                        {{-- @php
                             use App\Models\Jadwal;
 
                                 // $sum = Jadwal::sum('harga_satuan');
                                 $sum = sum($total);
                             @endphp
                             <td>{{$sum}}</td> --}}
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td style="text-align:right" colspan="6">PPN 11%</td>
-                            {{-- @php
-                            $nilainego = $pengadaan1->pengadaan->nilai_negosiasi;
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:right" colspan="6">PPN 11%</td>
+                        {{-- @php
+                            $nilainego = $pengadaan->pengadaan->nilai_negosiasi;
                             $nilaippn = 11%;
                                 $ppn = $nilainego - $nilaippn;
                             @endphp
                             <td>{{$ppn}}</td> --}}
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td style="text-align:right" colspan="6">Jumlah Total</td>
-                            <td>{{$pengadaan1->pengadaan->nilai_negosiasi}}</td>
-                        </tr>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:right" colspan="6">Jumlah Total</td>
+                        <td>{{$pengadaan->pengadaan->nilai_negosiasi}}</td>
+                    </tr>
                 </tbody>
             </table>
             <table>
                 <tr>
                     <td>6.</td>
-                    <td colspan="2">Pembayaran dengan Sumber Dana APBD Provinsi Jawa Timur Tahun Anggaran 2022, dibebankan pada DPA - SKPD Dinas Komunikasi dan Informatika Provinsi Jawa Timur Tahun Anggaran 2022, Kode Rekening {{$pengadaan1->pengadaan->pelaksana->kode_rekening}}</td>
+                    <td colspan="2">Pembayaran dengan Sumber Dana APBD Provinsi Jawa Timur Tahun Anggaran 2022, dibebankan pada DPA - SKPD Dinas Komunikasi dan Informatika Provinsi Jawa Timur Tahun Anggaran 2022, Kode Rekening {{$pengadaan->pengadaan->pelaksana->kode_rekening}}</td>
                 </tr>
                 <tr>
                     <td>7.</td>
-                    <td colspan="2">Jangka Waktu Pelaksanaan 7 (Tujuh) hari kalender, tanggal pelaksanaan yaitu Tanggal            13 September – 20 September 2022</td>
+                    <td colspan="2">Jangka Waktu Pelaksanaan 7 (Tujuh) hari kalender, tanggal pelaksanaan yaitu Tanggal 13 September – 20 September 2022</td>
                 </tr>
                 <tr>
                     <td>8.</td>
                     <td colspan="2">Instruksi kepada PIHAK KEDUA :</td>
                 </tr>
                 <tr>
-                    <td rowspan="3">    </td>
+                    <td rowspan="3"> </td>
                     <td width="3">A.</td>
                     <td>Penagihan hanya dapat dilakukan setelah penyelesaian pekerjaan yang diperintahkan dalam SPK ini dan dibuktikan dengan Berita Acara Serah Terima.</td>
                 </tr>
@@ -263,7 +263,7 @@
         </div>
         <br>
         {{-- Pejabat --}}
-        <div > 
+        <div>
             <table border="0" style="text-align: center;">
                 <tr>
                     <td colspan="3" width=525></td>
@@ -279,18 +279,18 @@
                     <td width="180">PIHAK KESATU</td>
                 </tr>
                 <tr>
-                    <td width="180">{{$pengadaan1->pengadaan->pelaksana->pt_pelaksana}}</td>
+                    <td width="180">{{$pengadaan->pengadaan->pelaksana->pt_pelaksana}}</td>
                     <td width="165"></td>
                     <td width="180">PEJABAT PEMBUAT KOMITMEN</td>
                 </tr>
                 <br><br><br><br><br>
                 <tr>
-                    <td width="180"><u>{{$pengadaan1->pengadaan->pelaksana->nama_pelaksana}}</u></td>
+                    <td width="180"><u>{{$pengadaan->pengadaan->pelaksana->nama_pelaksana}}</u></td>
                     <td width="165"></td>
                     <td width="180"><u>I WAYAN RUDY ARTHA, S.Kom</u></td>
                 </tr>
                 <tr>
-                    <td width="180">{{$pengadaan1->pengadaan->pelaksana->jabatan_pelaksana}}</td>
+                    <td width="180">{{$pengadaan->pengadaan->pelaksana->jabatan_pelaksana}}</td>
                     <td width="165"></td>
                     <td width="180">NIP. 19770517 200901 1 005</td>
                 </tr>
@@ -319,6 +319,6 @@
                 </tr>
             </table>
         </div>
-        
+
     </div>
-</div> 
+</div>
