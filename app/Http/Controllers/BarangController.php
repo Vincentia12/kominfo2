@@ -6,6 +6,8 @@ use App\Models\barang;
 use App\Models\pengadaan;
 use App\Models\pelaksana;
 use App\Models\jadwal;
+// use App\Models\Trigger;
+use App\Models\Triggers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -52,6 +54,7 @@ class BarangController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    
     public function create()
     {
         // $pengadaans = pengadaan::all();
@@ -78,29 +81,28 @@ class BarangController extends Controller
         ]);
 
         Barang::create($request->post());
+        Triggers::create($request->post());
+        // Triggers::create([
+        //     'hash' => $request->hash
+        // ]);
 
         return redirect()->route('barang.index')
             ->with('success', 'Data Barang Berhasil Ditambahkan');
-        // return redirect()->to('input_barang');
-        // $pengadaans =   pengadaan::create($request->except([
-
-
-        //     'barang',
-        //     'jumlah_barang',
-        //     'satuan',
-        //     'harga_satuan'
-        // ]));
-
-        // $request['pengadaan_id'] = $pengadaans->id;
-        // $barangs = Barang::create($request->only([
+        // $jumlah = 'jumlah_barang * harga_satuan';
+        // Barang::create($request->only([
+        // // $barangs = Barang::create($request->only([
         //     'pengadaan_id',
         //     'barang',
         //     'jumlah_barang',
         //     'satuan',
-        //     'harga_satuan'
+        //     'harga_satuan',
+        //     // 'jumlah_harga' => $jumlah
         // ]));
 
-        // return back()->with('success', ' Post baru berhasil dibuat.');
+
+        // return redirect()->route('barang.index')
+        // // return redirect()->route('barang.barang')
+        //     ->with('success', 'Data Barang Berhasil Ditambahkan');
     }
 
     /**

@@ -100,7 +100,7 @@
                             <td>{{ $p2->nilai_negosiasi }}</td>
                             <td>{{ $p2->kegiatan }}</td>
                             <td>{{ $p2->alokasi }}</td>
-                            <td>{{ $p2->hari }}</td>
+                            <td>{{ $p2->tanggal }}</td>
                             <td>{{ $p2->tanggal }}</td>
                             <td>{{ $p2->nomor }}</td>
                             <td>{{ $p2->deskripsi_tgl }}</td>

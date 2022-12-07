@@ -42,6 +42,7 @@
         <div style="text-align: center">
             {{-- <font color="black">  --}}
             <p align="center"><u><b> SURAT PERINTAH KERJA </b></u> <br>
+                {{-- Nomor : 020/654.{{$pengadaan->nomor}}/114.6/2022 </p> --}}
                 Nomor : 020/654.{{$pengadaan->nomor}}/114.6/2022 </p>
             {{-- </font> --}}
         </div>
@@ -89,25 +90,25 @@
                     <td>2.</td>
                     <td>Nama</td>
                     <td>:</td>
-                    <td colspan="2">{{$pengadaan->pengadaan->pelaksana->nama_pelaksana}}</td>
+                    {{-- <td colspan="2">{{$pengadaan->pengadaan->pelaksana->nama_pelaksana}}</td> --}}
                 </tr>
                 <tr>
                     <td> </td>
                     <td>Jabatan</td>
                     <td width="3">:</td>
-                    <td colspan="2">{{$pengadaan->pengadaan->pelaksana->jabatan_pelaksana}}</td>
+                    {{-- <td colspan="2">{{$pengadaan->pengadaan->pelaksana->jabatan_pelaksana}}</td> --}}
                 </tr>
                 <tr>
                     <td> </td>
                     <td>Nama Perusahaan</td>
                     <td width="3">:</td>
-                    <td colspan="2">{{$pengadaan->pengadaan->pelaksana->pt_pelaksana}}</td>
+                    {{-- <td colspan="2">{{$pengadaan->pengadaan->pelaksana->pt_pelaksana}}</td> --}}
                 </tr>
                 <tr>
                     <td> </td>
                     <td>Alamat Kantor</td>
                     <td>:</td>
-                    <td colspan="2">{{$pengadaan->pengadaan->pelaksana->alamat}} {{$pengadaan->pengadaan->pelaksana->kota}}</td>
+                    {{-- <td colspan="2">{{$pengadaan->pengadaan->pelaksana->alamat}} {{$pengadaan->pengadaan->pelaksana->kota}}</td> --}}
                 </tr>
                 <tr>
                     <td colspan="5">Bertindak untuk dan atas nama Pemerintah Provinsi Jawa Timur, selanjutnya disebut PIHAK KESATU</td>
@@ -173,6 +174,7 @@
                 <tr>
                     <td>1</td>
                     <td>{{$pengadaan->pengadaan->jenis_pengadaan}}</td>
+                    {{-- <td>{{$barang->jenis_pengadaan}}</td> --}}
                     <td></td>
                     <td></td>
                     <td></td>
@@ -191,36 +193,53 @@
                         <td>{{$brg->jumlah_barang}}</td>
                         <td>{{$brg->satuan}}</td>
                         <td>{{$brg->harga_satuan}}</td>
-                        @php
+                        {{-- @php
                         // $jumlahbarang = $barang["jumlah_barang"];
                         $jumlahbarang = $brg->jumlah_barang;
                         $hargabarang = $brg->harga_satuan;
                         // $hargabarang = $barang["harga_barang"];
 
-                        $total = $jumlahbarang * $hargabarang;
-                        @endphp
-                        <td>{{$total}}</td>
+                        $jumlah_harga = $jumlahbarang * $hargabarang;
+                        @endphp --}}
+                        <td>{{$brg->jumlah_harga}}</td>
                     </tr>
                     @endforeach
                     <tr>
                         <td style="text-align:right" colspan="6">Total</td>
-                        {{-- @php
+                        @php
                             use App\Models\Jadwal;
+// $jadwal = Jadwal::find($id);
+// $jadwal = Jadwal::all();
+        // $sum = DB::table('barangs')
+        //     ->where('barangs.pengadaan_id', 'like', "%" . $jadwal->pengadaan_id . "%")
+        //     ->sum('jumlah_harga')
+        //     ->get()
+        //     ;
 
-                                // $sum = Jadwal::sum('harga_satuan');
-                                $sum = sum($total);
+//                             // use App\Models\Barang;
+
+//                                 // $sum = Barang::sum('jumlah_harga');
+                                // $sum = DB::table('barangs');
+// $pengadaan = Jadwal::all();
+                                $sum = DB::table('barangs')
+            // ->where('barangs.pengadaan_id', 'like', "%" . $pengadaan->pengadaan_id . "%")
+            ->sum('jumlah_harga');
+
+//             return $sum;
                             @endphp
-                            <td>{{$sum}}</td> --}}
+                            {{-- <td>{{dd($jadwal)}}</td> --}}
+                            <td>{{$sum}}</td>
                         <td></td>
                     </tr>
                     <tr>
                         <td style="text-align:right" colspan="6">PPN 11%</td>
                         {{-- @php
-                            $nilainego = $pengadaan->pengadaan->nilai_negosiasi;
+                        
+                            $nilainego = $brg->jumlah_hasil;
                             $nilaippn = 11%;
                                 $ppn = $nilainego - $nilaippn;
-                            @endphp
-                            <td>{{$ppn}}</td> --}}
+                            @endphp --}}
+                            {{-- <td>{{$ppn}}</td> --}}
                         <td></td>
                     </tr>
                     <tr>

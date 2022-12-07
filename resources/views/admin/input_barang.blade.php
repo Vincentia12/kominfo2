@@ -37,6 +37,7 @@
                 @endif
                 <form method="POST" action="postbarang" id="postbarang">
                     @csrf
+                    <input type="hidden" name="hash" id="" value="{{ csrf_token() }}">
                     <div class="mb-4">
                         <label for="recipient-name" class="col-form-label">Jenis Pengadaan</label>
                         <select class="form-control" name="pengadaan_id" id="pengadaan_id" placeholder="Pilih Pengadaan">

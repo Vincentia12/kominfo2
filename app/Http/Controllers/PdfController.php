@@ -377,22 +377,25 @@ class PdfController extends Controller
 
         $pengadaan = Jadwal::find($id);
         $barang = DB::table('barangs')
-            // ->join('pengadaans.id', '=', 'barangs.pengadaan_id')
-            // ->join('pelaksanas.pelaksana_id', '=', 'pelaksanas.id')
-            ->where('barangs.pengadaan_id', 'like', "%" . $pengadaan->pengadaan_id . "%")
+        ->where('barangs.pengadaan_id', 'like', "%" . $pengadaan->pengadaan_id . "%")
+        // ->join('pengadaans','pengadaans.id', '=', 'barangs.pengadaan_id')
+        // ->join('jadwals','jadwals.pengadaan_id', '=', 'pengadaans.id')
             // ->select('barangs.harga_satuan', '*', 'barangs.jumlah_barang')
             ->get();
-        $pejabat = DB::table('pejabats')
-            ->where('id', '=', 1)
-            ->get();
+        // $sum = DB::table('barangs')
+        //     ->where('barangs.pengadaan_id', 'like', "%" . $pengadaan->pengadaan_id . "%")
+        //     ->sum('jumlah_harga');
+        // $pejabat = DB::table('pejabats')
+        //     ->where('id', '=', 1)
+        //     ->get();
         // $total = DB::table('barangs')
         // ->get();
-
+// dd($barang, $sum);
         $pdf = PDF::loadview(
             'cetak/surat_perintah_kerja',
             ['pengadaan' => $pengadaan],
             ['barang' => $barang],
-            // ['total' => $total],
+            // ['sum' => $sum],
             // ['pejabat' => $pejabat],
         )->setPaper('f4', 'potrait');
         // )->setPaper('f4', 'legal');

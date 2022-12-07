@@ -18,7 +18,8 @@ class Barang extends Model
         'barang',
         'jumlah_barang',
         'satuan',
-        'harga_satuan'
+        'harga_satuan',
+        'jumlah_harga'
     ];
 
     public function pengadaan()
