@@ -211,7 +211,7 @@
                             $sum = DB::table('barangs')
                                 ->where('barangs.pengadaan_id', 'like', "%" . $png . "%")
                             ->sum('jumlah_harga');
-                            // $ppn = $sum - 11%;
+                            $ppn = $sum * 0.11;
                             @endphp
                             <td>{{$sum}}</td>
                         <td></td>
@@ -224,8 +224,8 @@
                             $nilaippn = 11%;
                                 $ppn = $nilainego - $nilaippn;
                             @endphp --}}
-                            {{-- <td>{{$ppn}}</td> --}}
-                        <td></td>
+                            <td>{{$ppn}}</td>
+                        {{-- <td></td> --}}
                     </tr>
                     <tr>
                         <td style="text-align:right" colspan="6">Jumlah Total</td>
