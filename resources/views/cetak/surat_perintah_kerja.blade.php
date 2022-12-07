@@ -207,27 +207,12 @@
                     <tr>
                         <td style="text-align:right" colspan="6">Total</td>
                         @php
-                            use App\Models\Jadwal;
-// $jadwal = Jadwal::find($id);
-// $jadwal = Jadwal::all();
-        // $sum = DB::table('barangs')
-        //     ->where('barangs.pengadaan_id', 'like', "%" . $jadwal->pengadaan_id . "%")
-        //     ->sum('jumlah_harga')
-        //     ->get()
-        //     ;
-
-//                             // use App\Models\Barang;
-
-//                                 // $sum = Barang::sum('jumlah_harga');
-                                // $sum = DB::table('barangs');
-// $pengadaan = Jadwal::all();
-                                $sum = DB::table('barangs')
-            // ->where('barangs.pengadaan_id', 'like', "%" . $pengadaan->pengadaan_id . "%")
-            ->sum('jumlah_harga');
-
-//             return $sum;
+                            $png = $pengadaan->pengadaan_id;
+                            $sum = DB::table('barangs')
+                                ->where('barangs.pengadaan_id', 'like', "%" . $png . "%")
+                            ->sum('jumlah_harga');
+                            // $ppn = $sum - 11%;
                             @endphp
-                            {{-- <td>{{dd($jadwal)}}</td> --}}
                             <td>{{$sum}}</td>
                         <td></td>
                     </tr>
