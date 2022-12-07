@@ -163,6 +163,7 @@
               <option value="Surat Perintah Kerja">Surat Perintah Kerja</option>
               <option value="Surat Perintah Mulai Kerja (SPMK)">Surat Perintah Mulai Kerja (SPMK)</option>
               <option value="BA. Serah Terima Hasil Pekerjaan">BA. Serah Terima Hasil Pekerjaan</option>
+              <option value="Laporan Proses Pengadaan Barang/Jasa">Laporan Proses Pengadaan Barang/Jasa</option>
               <option value="BA. Penyerahan Barang/Jasa">BA. Penyerahan Barang/Jasa</option>
               <option value="BA. Hasil Pemeriksaan Administratif">BA. Hasil Pemeriksaan Administratif</option>
               <option value="BA. Hasil Pembayaran">BA. Hasil Pembayaran</option>
@@ -264,6 +265,7 @@
               <option value="Surat Perintah Kerja">Surat Perintah Kerja</option>
               <option value="Surat Perintah Mulai Kerja (SPMK)">Surat Perintah Mulai Kerja (SPMK)</option>
               <option value="BA. Serah Terima Hasil Pekerjaan">BA. Serah Terima Hasil Pekerjaan</option>
+              <option value="Laporan Proses Pengadaan Barang/Jasa">Laporan Proses Pengadaan Barang/Jasa</option>
               <option value="BA. Penyerahan Barang/Jasa">BA. Penyerahan Barang/Jasa</option>
               <option value="BA. Hasil Pemeriksaan Administratif">BA. Hasil Pemeriksaan Administratif</option>
               <option value="BA. Hasil Pembayaran">BA. Hasil Pembayaran</option>

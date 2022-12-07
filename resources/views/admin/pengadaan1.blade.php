@@ -170,6 +170,10 @@
                                 <a class="btn btn-info" href="{{ route('pengadaan1.show23',$p1->id) }}">Detail</a>
                                 <a class="btn btn-danger " href="{{route('pengadaan1.print23',$p1->id)}}">Print</a>
 
+                                @elseif($p1->kegiatan == 'Laporan Proses Pengadaan Barang/Jasa')
+                                <a class="btn btn-info" href="{{ route('pengadaan1.show27',$p1->id) }}">Detail</a>
+                                <a class="btn btn-danger " href="{{route('pengadaan1.print27',$p1->id)}}">Print</a>
+
                                 @elseif($p1->kegiatan == 'BA. Penyerahan Barang/Jasa')
                                 <a class="btn btn-info" href="{{ route('pengadaan1.show24',$p1->id) }}">Detail</a>
                                 <a class="btn btn-danger " href="{{route('pengadaan1.print24',$p1->id)}}">Print</a>

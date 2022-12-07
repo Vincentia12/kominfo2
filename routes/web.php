@@ -137,6 +137,7 @@ Route::get('/pengadaan1/show23/{id}', [PengadaanController::class, 'show23'])->n
 Route::get('/pengadaan1/show24/{id}', [PengadaanController::class, 'show24'])->name('pengadaan1.show24');
 Route::get('/pengadaan1/show25/{id}', [PengadaanController::class, 'show25'])->name('pengadaan1.show25');
 Route::get('/pengadaan1/show26/{id}', [PengadaanController::class, 'show26'])->name('pengadaan1.show26');
+Route::get('/pengadaan1/show27/{id}', [PengadaanController::class, 'show27'])->name('pengadaan1.show27');
 // Route::get('/lihat', PengadaanController::class, 'show1')->name('show1');
 
 Route::get('/pengadaan2/show1/{id}', [PengadaanController::class, 'show1'])->name('pengadaan2.show1');
@@ -204,6 +205,7 @@ Route::get('pengadaan1/print23/{id}', [PdfController::class, 'ba_serah_terima'])
 Route::get('pengadaan1/print24/{id}', [PdfController::class, 'ba_peny_barang'])->name('pengadaan1.print24');
 //25
 Route::get('pengadaan1/print26/{id}', [PdfController::class, 'ba_pembayaran'])->name('pengadaan1.print26');
+Route::get('pengadaan1/print27/{id}', [PdfController::class, 'lap_proses_pengadaan'])->name('pengadaan1.print27');
 Route::get('print_notadinas4', [PdfController::class, 'nota_dinas4']);
 Route::get('ba_pekerjaan', [PdfController::class, 'ba_pekerjaan']);
 

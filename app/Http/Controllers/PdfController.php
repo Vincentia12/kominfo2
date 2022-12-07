@@ -426,6 +426,20 @@ class PdfController extends Controller
         return $pdf->download('BeritaAcara_SerahTerima.pdf');
     }
 
+    // Laporan Proses Pengadaan Barang/Jasa 
+    public function lap_proses_pengadaan(Request $request, $id)
+    {
+
+        $pengadaan = Jadwal::find($id);
+
+        $pdf = PDF::loadview(
+            'cetak/lap_proses_pengadaan',
+            ['pengadaan' => $pengadaan],
+        )->setPaper('f4', 'potrait');
+        // )->setPaper('f4', 'legal');
+        return $pdf->download('LaporanProses_PengadaanBarang/Jasa.pdf');
+    }
+
     // BA. Penyerahan Barang/Jasa
     public function ba_peny_barang(Request $request, $id)
     {
