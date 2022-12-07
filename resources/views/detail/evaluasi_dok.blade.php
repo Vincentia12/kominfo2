@@ -34,7 +34,7 @@
             <tr>
                 <td width="100">PEKERJAAN</td>
                 <td width="30">:</td>
-                <td width="430">{{$pengadaan1->pengadaan->jenis_pengadaan}}</td>
+                <td width="430">{{$pengadaan->pengadaan->jenis_pengadaan}}</td>
             <tr>
             <tr>
                 <td width="100">KEPERLUAN</td>
@@ -44,7 +44,7 @@
             <tr>
                 <td width="100">Tanggal</td>
                 <td width="30">:</td>
-                <td width="430">{{$pengadaan1->tanggal}}</td>
+                <td width="430">{{$pengadaan->tanggal->isoFormat('D MMMM Y')}}</td>
             <tr>
         </table>
     </div>
@@ -89,7 +89,7 @@
             </tr>
             <tr>
                 <td rowspan="2" > 1 </td>
-                <td rowspan="2" > {{$pengadaan1->pengadaan->pelaksana->pt_pelaksana}} </td>
+                <td rowspan="2" > {{$pengadaan->pengadaan->pelaksana->pt_pelaksana}} </td>
                 <td rowspan="2" > <a href='https://postimages.org/' target='_blank'><img src='https://i.postimg.cc/tCSLJGtT/check.jpg' width="50" height="30" border='0' alt='check'/></a> </td>
                 <td rowspan="2" > <a href='https://postimages.org/' target='_blank'><img src='https://i.postimg.cc/tCSLJGtT/check.jpg' width="50" height="30" border='0' alt='check'/></a> </td>
                 <td rowspan="2" > <a href='https://postimages.org/' target='_blank'><img src='https://i.postimg.cc/tCSLJGtT/check.jpg' width="50" height="30" border='0' alt='check'/></a> </td>

@@ -67,14 +67,14 @@
                 <tr>
                     <td width="80">Tanggal</td>
                     <td>:</td>
-                    <td width="475">{{ $pengadaan1->tanggal}}</td>
+                    <td width="475">{{$pengadaan->tanggal->isoFormat('D MMMM Y')}}</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
                 <tr>
                     <td width="80">Nomor</td>
                     <td>:</td>
-                    <td width="475">020/{{$pengadaan1->nomor}}/114.6/2022</td>
+                    <td width="475">020/{{$pengadaan->nomor}}/114.6/2022</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
@@ -101,7 +101,7 @@
             <br>
             <table border="0" align="center" font-size="2">
                 <tr>
-                    <td width="565">Sesuai dengan Berita Acara Hasil Pengadaan Langsung Nomor : 020/{{$pengadaan1->nomor}}/114.6/2022 tanggal {{ $pengadaan1->tanggal}} untuk pengadaan Belanja Alat/Bahan Kapasitas Kelembagaan Statistik Sektoral Toner Printer maka bersama ini kami sampaikan administrasi proses pengadaan langsung yang telah selesai dilaksanakan terhadap :</td>
+                    <td width="565">Sesuai dengan Berita Acara Hasil Pengadaan Langsung Nomor : 020/{{$pengadaan->nomor}}/114.6/2022 tanggal {{$pengadaan->tanggal->isoFormat('D MMMM Y')}} untuk pengadaan Belanja Alat/Bahan Kapasitas Kelembagaan Statistik Sektoral Toner Printer maka bersama ini kami sampaikan administrasi proses pengadaan langsung yang telah selesai dilaksanakan terhadap :</td>
                 </tr>
             </table>
             <br>

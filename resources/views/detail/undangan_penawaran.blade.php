@@ -50,7 +50,7 @@
             <table border="0" align="center">
                 <tr>
                     <td width="300"> </td>
-                    <td>Surabaya, {{$pengadaan1->tanggal}}</td>
+                    <td>Surabaya, {{$pengadaan->tanggal->isoFormat('D MMMM Y')}}</td>
                     <td width="50"> </td>
                 </tr>
                 <tr>
@@ -64,8 +64,8 @@
                 <tr>
                     <td width="80">Nomor</td>
                     <td>:</td>
-                    <td width="175">020/{{$pengadaan1->nomor}}/114.6/2022</td>
-                    <td>Yth. Sdr. {{$pengadaan1->pengadaan->pelaksana->jabatan_pelaksana}} {{$pengadaan1->pengadaan->pelaksana->pt_pelaksana}}</td>
+                    <td width="175">020/{{$pengadaan->nomor}}/114.6/2022</td>
+                    <td>Yth. Sdr. {{$pengadaan->pengadaan->pelaksana->jabatan_pelaksana}} {{$pengadaan->pengadaan->pelaksana->pt_pelaksana}}</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
@@ -74,7 +74,7 @@
                     <td>:</td>
                     <td width="175">Segera</td>
                     <td width="160"> </td>
-                    <td>{{$pengadaan1->pengadaan->pelaksana->alamat}}</td>
+                    <td>{{$pengadaan->pengadaan->pelaksana->alamat}}</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
@@ -111,7 +111,7 @@
                 <tr>
                     <td width="150">Paket Pekerjaan</td>
                     <td>:</td>
-                    <td width="405">{{$pengadaan1->pengadaan->jenis_pengadaan}}</td>
+                    <td width="405">{{$pengadaan->pengadaan->jenis_pengadaan}}</td>
                 </tr>
             </table>
             {{--  <table border="0" align="center" font-size="2">
@@ -146,14 +146,14 @@
                 <tr>
                     <td width="150">Nilai HPS</td>
                     <td>:</td>
-                    <td width="405">Rp. {{$pengadaan1->pengadaan->total_hps}},-</td>
+                    <td width="405">Rp. {{$pengadaan->pengadaan->total_hps}},-</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
                 <tr>
                     <td width="155"> </td>
                     <td> </td>
-                    <td width="405">({{$pengadaan1->pengadaan->deskripsi_hps}})</td>
+                    <td width="405">({{$pengadaan->pengadaan->deskripsi_hps}})</td>
                 </tr>
             </table>
             <br>

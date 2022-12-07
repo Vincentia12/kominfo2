@@ -31,13 +31,13 @@
                     <td width="560"><center><b><u>LAPORAN PROSES PENGADAAN BARANG/JASA</u></b></td>
                 <tr>
                 <tr>
-                    <td width="560"><center>Nomor : 020/{{$pengadaan1->nomor}}/114.6/2022</td>
+                    <td width="560"><center>Nomor : 020/{{$pengadaan->nomor}}/114.6/2022</td>
                 <tr>
             </table>
             <br>
             <table border="0" align="center">
                 <tr>
-                    <td width="560">Pada hari ini {{$pengadaan1->deskripsi_tanggal}}, kami yang bertanda tangan dibawah ini :</td>
+                    <td width="560">Pada hari ini {{$pengadaan->deskripsi_tanggal}}, kami yang bertanda tangan dibawah ini :</td>
                 <tr>
             </table>
             <br>
@@ -137,7 +137,7 @@
                     <td width="15"> </td>
                     <td width="200">Kwitansi Kontrak nomor</td>
                     <td>:</td>
-                    <td width="350">020/{{$pengadaan1->nomor}}/114.6/2022</td>
+                    <td width="350">020/{{$pengadaan->nomor}}/114.6/2022</td>
                 </tr>
                 <tr>
                     <td width="15"> </td>
@@ -149,7 +149,7 @@
                     <td width="15"> </td>
                     <td width="200">Pekerjaan</td>
                     <td>:</td>
-                    <td width="350">{{$pengadaan1->pengadaan->jenis_pengadaan}}</td>
+                    <td width="350">{{$pengadaan->pengadaan->jenis_pengadaan}}</td>
                 </tr>
                 {{--  <tr>
                     <td width="15"> </td>
@@ -182,7 +182,7 @@
             <table border="0" align="center">
                 <tr>
                     <td width="300"> </td>
-                    <td>Surabaya, {{$pengadaan1->tanggal}}</td>
+                    <td>Surabaya, {{$pengadaan->tanggal}}</td>
                     <td width="50"> </td>
                 </tr>
             </table>

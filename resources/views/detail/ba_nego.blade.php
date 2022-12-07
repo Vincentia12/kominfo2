@@ -66,20 +66,20 @@
                     </td>
                     <td width="150">
                         <center>
-                            <font size="2">020/{{$pengadaan1->nomor}}/114.6/2022</font>
+                            <font size="2">020/{{$pengadaan->nomor}}/114.6/2022</font>
                     </td>
                 <tr>
             </table>
             <br>
             <table border="0" align="center" font-size="2">
                 <tr>
-                    <td width="560">Pada hari ini {{$pengadaan1->deskripsi_tanggal}} kami yang bertanda tangan dibawah ini adalah Pejabat Pengadaan di Lingkungan Dinas Komunikasi Dan Informatika Provinsi Jawa Timur yang dibentuk dengan Keputusan Kepala Dinas Komunikasi Dan Informatika Provinsi Jawa Timur selaku Pengguna Anggaran tanggal {{ $pengadaan1->tanggal}} Nomor : 188/19/114.1/2022, melaksanakan klarifikasi dan negosiasi untuk pelaksanaan {{ $pengadaan1->pengadaan->jenis_pengadaan}} , dibiayai dari dana APBD Tahun Anggaran 2022 pada DPA Dinas Komunikasi dan Informatika Provinsi Jawa Timur Kode Rekening {{$pengadaan1->pengadaan->pelaksana->kode_rekening}} dengan Harga Perkiraan Sendiri (HPS) sebesar Rp. {{$pengadaan1->pengadaan->total_hps}},- ({{$pengadaan1->pengadaan->deskripsi_hps}}).</td>
+                    <td width="560">Pada hari ini {{$pengadaan->deskripsi_tanggal}} kami yang bertanda tangan dibawah ini adalah Pejabat Pengadaan di Lingkungan Dinas Komunikasi Dan Informatika Provinsi Jawa Timur yang dibentuk dengan Keputusan Kepala Dinas Komunikasi Dan Informatika Provinsi Jawa Timur selaku Pengguna Anggaran tanggal {{$pengadaan->tanggal->isoFormat('D MMMM Y')}} Nomor : 188/19/114.1/2022, melaksanakan klarifikasi dan negosiasi untuk pelaksanaan {{ $pengadaan->pengadaan->jenis_pengadaan}} , dibiayai dari dana APBD Tahun Anggaran 2022 pada DPA Dinas Komunikasi dan Informatika Provinsi Jawa Timur Kode Rekening {{$pengadaan->pengadaan->pelaksana->kode_rekening}} dengan Harga Perkiraan Sendiri (HPS) sebesar Rp. {{$pengadaan->pengadaan->total_hps}},- ({{$pengadaan->pengadaan->deskripsi_hps}}).</td>
                 </tr>
             </table>
             <br>
             <table border="0" align="center" font-size="2">
                 <tr>
-                    <td width="560">Melakukan klarifikasi dan negosiasi terhadap penawaran yang diajukan oleh : {{$pengadaan1->pengadaan->pt_pelaksana}} {{$pengadaan1->pengadaan->pelaksana->alamat}} dengan hasil terlampir.</td>
+                    <td width="560">Melakukan klarifikasi dan negosiasi terhadap penawaran yang diajukan oleh : {{$pengadaan->pengadaan->pt_pelaksana}} {{$pengadaan->pengadaan->pelaksana->alamat}} dengan hasil terlampir.</td>
                 </tr>
             </table>
             <br>
@@ -92,35 +92,35 @@
                 <tr>
                     <td width="190">Nama Perusahaan</td>
                     <td width="10">:</td>
-                    <td width="360">{{$pengadaan1->pengadaan->pt_pelaksana}}</td>
+                    <td width="360">{{$pengadaan->pengadaan->pt_pelaksana}}</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
                 <tr>
                     <td width="190">Nama Penanggung Jawab</td>
                     <td width="10">:</td>
-                    <td width="360">{{$pengadaan1->pengadaan->pelaksana->nama_pelaksana}}</td>
+                    <td width="360">{{$pengadaan->pengadaan->pelaksana->nama_pelaksana}}</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
                 <tr>
                     <td width="190">Alamat Perusahaan</td>
                     <td width="10">:</td>
-                    <td width="360">{{$pengadaan1->pengadaan->pelaksana->alamat}}</td>
+                    <td width="360">{{$pengadaan->pengadaan->pelaksana->alamat}}</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
                 <tr>
                     <td width="190">Nomor Pokok Wajib Pajak</td>
                     <td width="10">:</td>
-                    <td width="360">{{$pengadaan1->pengadaan->pelaksana->npwp}}</td>
+                    <td width="360">{{$pengadaan->pengadaan->pelaksana->npwp}}</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
                 <tr>
                     <td width="190">Pekerjaan</td>
                     <td width="10">:</td>
-                    <td width="360">{{ $pengadaan1->pengadaan->jenis_pengadaan}}</td>
+                    <td width="360">{{ $pengadaan->pengadaan->jenis_pengadaan}}</td>
                 </tr>
             </table>
             {{--  <table border="0" align="center" font-size="2">
@@ -134,14 +134,14 @@
                 <tr>
                     <td width="190">Dengan Harga</td>
                     <td width="10">:</td>
-                    <td width="360">Rp. {{$pengadaan1->pengadaan->total_hps}},-</td>
+                    <td width="360">Rp. {{$pengadaan->pengadaan->total_hps}},-</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
                 <tr>
                     <td width="190"> </td>
                     <td width="10"> </td>
-                    <td width="360">({{$pengadaan1->pengadaan->deskripsi_hps}})</td>
+                    <td width="360">({{$pengadaan->pengadaan->deskripsi_hps}})</td>
                 </tr>
             </table>
             <br>
@@ -201,15 +201,15 @@
             <table width="565px" border="1" align="center">
                 <tbody>
                     <tr>
-                        <td width="258px" scope="col">PEKERJAAN : {{ $pengadaan1->pengadaan->jenis_pengadaan}}</td>
-                        <td width="258px" scope="col">Nomor : 020/{{$pengadaan1->nomor}}/114.6/2022 Tanggal : {{ $pengadaan1->tanggal}}</td>
+                        <td width="258px" scope="col">PEKERJAAN : {{ $pengadaan->pengadaan->jenis_pengadaan}}</td>
+                        <td width="258px" scope="col">Nomor : 020/{{$pengadaan->nomor}}/114.6/2022 Tanggal : {{$pengadaan->tanggal->isoFormat('D MMMM Y')}}</td>
                     </tr>
                 </tbody>
             </table>
             <br>
             <table border="0" align="center" font-size="2">
                 <tr>
-                    <td width="565">Pada hari ini {{$pengadaan1->deskripsi_tanggal}}, dimulai pukul 10.00 WIB sampai dengan selesai, dengan mengambil tempat di Ruang Argopuro Dinas Komunikasi Dan Informatika Provinsi Jawa Timur telah disusun Berita Acara Hasil Pengadaan Langsung untuk Pekerjaan tersebut diatas.</td>
+                    <td width="565">Pada hari ini {{$pengadaan->deskripsi_tanggal}}, dimulai pukul 10.00 WIB sampai dengan selesai, dengan mengambil tempat di Ruang Argopuro Dinas Komunikasi Dan Informatika Provinsi Jawa Timur telah disusun Berita Acara Hasil Pengadaan Langsung untuk Pekerjaan tersebut diatas.</td>
                 </tr>
             </table>
             <br>
@@ -222,7 +222,7 @@
             <table border="0" align="center">
                 <tr>
                     <td width="30"> </td>
-                    <td width="530">{{ $pengadaan1->pengadaan->jenis_pengadaan}}</td>
+                    <td width="530">{{ $pengadaan->pengadaan->jenis_pengadaan}}</td>
                 <tr>
             </table>
             <table border="0" align="center">
@@ -236,7 +236,7 @@
                     <td width="65"> </td>
                     <td width="200">Nama Perusahaan</td>
                     <td>:</td>
-                    <td width="300">{{$pengadaan1->pengadaan->pelaksana->pt_pelaksana}}</td>
+                    <td width="300">{{$pengadaan->pengadaan->pelaksana->pt_pelaksana}}</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
@@ -244,7 +244,7 @@
                     <td width="65"> </td>
                     <td width="200">Alamat</td>
                     <td>:</td>
-                    <td width="300">{{$pengadaan1->pengadaan->pelaksana->alamat}}</td>
+                    <td width="300">{{$pengadaan->pengadaan->pelaksana->alamat}}</td>
                 </tr>
             </table>
             <table border="0" align="center">
@@ -285,7 +285,7 @@
                     <td width="30">2.</td>
                     <td width="200">Harga Penawaran</td>
                     <td>:</td>
-                    <td width="300">Rp. {{$pengadaan1->pengadaan->harga_penawaran}},-</td>
+                    <td width="300">Rp. {{$pengadaan->pengadaan->harga_penawaran}},-</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
@@ -294,7 +294,7 @@
                     <td width="30"> </td>
                     <td width="200"> </td>
                     <td> </td>
-                    <td width="300">{{$pengadaan1->pengadaan->deskripsi_penawaran}}</td>
+                    <td width="300">{{$pengadaan->pengadaan->deskripsi_penawaran}}</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
@@ -303,7 +303,7 @@
                     <td width="30"> </td>
                     <td width="200">Harga Penawaran setelah Koreksi Aritmatik</td>
                     <td>:</td>
-                    <td width="300">Rp. {{$pengadaan1->pengadaan->harga_penawaran}},-</td>
+                    <td width="300">Rp. {{$pengadaan->pengadaan->harga_penawaran}},-</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
@@ -312,7 +312,7 @@
                     <td width="30"> </td>
                     <td width="200"> </td>
                     <td> </td>
-                    <td width="300">{{$pengadaan1->pengadaan->deskripsi_penawaran}}</td>
+                    <td width="300">{{$pengadaan->pengadaan->deskripsi_penawaran}}</td>
                 </tr>
             </table>
             <br>
@@ -426,7 +426,7 @@
                     <td width="30">-</td>
                     <td width="200">Harga Penawaran</td>
                     <td>:</td>
-                    <td width="300">Rp. {{$pengadaan1->pengadaan->harga_penawaran}},-</td>
+                    <td width="300">Rp. {{$pengadaan->pengadaan->harga_penawaran}},-</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
@@ -435,7 +435,7 @@
                     <td width="30"> </td>
                     <td width="200"> </td>
                     <td> </td>
-                    <td width="300">({{$pengadaan1->pengadaan->deskripsi_penawaran}})</td>
+                    <td width="300">({{$pengadaan->pengadaan->deskripsi_penawaran}})</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
@@ -444,7 +444,7 @@
                     <td width="30">-</td>
                     <td width="200">Harga Penawaran setelah Negosiasi</td>
                     <td>:</td>
-                    <td width="300">Rp. {{$pengadaan1->pengadaan->nilai_negosiasi}},-</td>
+                    <td width="300">Rp. {{$pengadaan->pengadaan->nilai_negosiasi}},-</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
@@ -453,7 +453,7 @@
                     <td width="30"> </td>
                     <td width="200"> </td>
                     <td> </td>
-                    <td width="300">({{$pengadaan1->pengadaan->deskripsi_negosiasi}})</td>
+                    <td width="300">({{$pengadaan->pengadaan->deskripsi_negosiasi}})</td>
                 </tr>
             </table>
             <br>

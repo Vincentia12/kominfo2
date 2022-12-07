@@ -60,7 +60,7 @@
                     <td width="100"> </td>
                     <td width="150">Nomor Bukti</td>
                     <td width="10">:</td>
-                    <td width="310">020/{{$pengadaan1->nomor}}/114.6/2022</td>
+                    <td width="310">020/{{$pengadaan->nomor}}/114.6/2022</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
@@ -92,21 +92,21 @@
                 <tr>
                     <td width="150">Jumlah uang</td>
                     <td width="10">:</td>
-                    <td width="390">Rp. {{$pengadaan1->pengadaan->nilai_negosiasi}},-</td>
+                    <td width="390">Rp. {{$pengadaan->pengadaan->nilai_negosiasi}},-</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
                 <tr>
                     <td width="150">Terbilang</td>
                     <td width="10">:</td>
-                    <td width="390">({{$pengadaan1->pengadaan->deskripsi_negosiasi}})</td>
+                    <td width="390">({{$pengadaan->pengadaan->deskripsi_negosiasi}})</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
                 <tr>
                     <td width="150">Untuk Pembayaran</td>
                     <td width="10">:</td>
-                    <td width="390">{{$pengadaan1->pengadaan->jenis_pengadaan}}</td>
+                    <td width="390">{{$pengadaan->pengadaan->jenis_pengadaan}}</td>
                 </tr>
             </table>
             <br>
@@ -138,7 +138,7 @@
                 <tbody>
                     <tr>
                         <th scope="row"> </th>
-                        <td>{{$pengadaan1->pengadaan->jenis_pengadaan}}</td>
+                        <td>{{$pengadaan->pengadaan->jenis_pengadaan}}</td>
                         <td> </td>
                         <td> </td>
                         <td> </td>
@@ -224,13 +224,13 @@
             <table border="0" align="center" font-size="2">
                 <tr>
                     <td width="40">1.</td>
-                    <td width="520">Pembayaran dengan Sumber Dana APBD Provinsi Jawa Timur Tahun Anggaran 2022, dibebankan pada DP A - SKPD Dinas Komunikasi dan Informatika Provinsi Jawa Timur Tahun Anggaran 2022 Kode Rekening {{$pengadaan1->pengadaan->pelaksana->kode_rekening}}</td>
+                    <td width="520">Pembayaran dengan Sumber Dana APBD Provinsi Jawa Timur Tahun Anggaran 2022, dibebankan pada DP A - SKPD Dinas Komunikasi dan Informatika Provinsi Jawa Timur Tahun Anggaran 2022 Kode Rekening {{$pengadaan->pengadaan->pelaksana->kode_rekening}}</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
                 <tr>
                     <td width="40">2.</td>
-                    <td width="520">Jangka Waktu Pelaksanaan {{$pengadaan1->alokasi}} hari kalender, tanggal pelaksanaan yaitu Tanggal {{$pengadaan1->tanggal}}</td>
+                    <td width="520">Jangka Waktu Pelaksanaan {{$pengadaan->alokasi}} hari kalender, tanggal pelaksanaan yaitu Tanggal {{$pengadaan->tanggal->isoFormat('D MMMM Y')}}</td>
                 </tr>
             </table>
             <br>
@@ -244,7 +244,7 @@
             <table border="0" align="center" font-size="2">
                 <tr align="center">
                     <td width="280"> </td>
-                    <td width="280">Surabaya, {{$pengadaan1->tanggal}}</td>
+                    <td width="280">Surabaya, {{$pengadaan->tanggal->isoFormat('D MMMM Y')}}</td>
                 </tr>
             </table>
             <br>

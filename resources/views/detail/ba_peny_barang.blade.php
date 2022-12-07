@@ -41,7 +41,7 @@
             <br>
             <table border="0" align="center">
                 <tr>
-                    <td width="560">Pada hari ini {{$pengadaan1->deskripsi_tanggal}}, kami yang bertanda tangan dibawah ini :</td>
+                    <td width="560">Pada hari ini {{$pengadaan->deskripsi_tanggal}}, kami yang bertanda tangan dibawah ini :</td>
                 <tr>
             </table>
             <br>
@@ -122,7 +122,7 @@
             <table border="0" align="center" font-size="2">
                 <tr>
                     <td width="15"> </td>
-                    <td width="550">{{$pengadaan1->pengadaan->jenis_pengadaan}} hasil pekerjaan sesuai dengan Kwitansi Kontrak nomor : 020/{{$pengadaan1->nomor}}/114.6/2022, Tanggal  {{ $pengadaan1->tanggal}};</td>
+                    <td width="550">{{$pengadaan->pengadaan->jenis_pengadaan}} hasil pekerjaan sesuai dengan Kwitansi Kontrak nomor : 020/{{$pengadaan->nomor}}/114.6/2022, Tanggal  {{$pengadaan->tanggal->isoFormat('D MMMM Y')}};</td>
                 </tr>
             </table>
             <br>

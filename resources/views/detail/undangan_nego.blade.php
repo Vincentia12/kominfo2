@@ -50,7 +50,7 @@
             <table border="0" align="center">
                 <tr>
                     <td width="300"> </td>
-                    <td>Surabaya, {{$pengadaan1->tanggal}}</td>
+                    <td>Surabaya, {{$pengadaan->tanggal->isoFormat('D MMMM Y')}}</td>
                     <td width="50"> </td>
                 </tr>
                 <tr>
@@ -64,8 +64,8 @@
                 <tr>
                     <td width="80">Nomor</td>
                     <td>:</td>
-                    <td width="175">020/{{$pengadaan1->nomor}}/114.6/2022</td>
-                    <td>Yth. Sdr. {{$pengadaan1->pengadaan->pelaksana->jabatan_pelaksana}} {{$pengadaan1->pengadaan->pelaksana->pt_pelaksana}}</td>
+                    <td width="175">020/{{$pengadaan->nomor}}/114.6/2022</td>
+                    <td>Yth. Sdr. {{$pengadaan->pengadaan->pelaksana->jabatan_pelaksana}} {{$pengadaan->pengadaan->pelaksana->pt_pelaksana}}</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
@@ -74,7 +74,7 @@
                     <td>:</td>
                     <td width="175">Penting</td>
                     <td width="160"> </td>
-                    <td>{{$pengadaan1->pengadaan->pelaksana->alamat}}</td>
+                    <td>{{$pengadaan->pengadaan->pelaksana->alamat}}</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
@@ -104,7 +104,7 @@
             <br>
             <table border="0" align="center" font-size="2">
                 <tr>
-                    <td width="560">Mengharap dengan hormat kehadiran Saudara dalam acara Klarifikasi dan Negosiasi pengadaan {{$pengadaan1->pengadaan->jenis_pengadaan}} yang akan diadakan pada :</td>
+                    <td width="560">Mengharap dengan hormat kehadiran Saudara dalam acara Klarifikasi dan Negosiasi pengadaan {{$pengadaan->pengadaan->jenis_pengadaan}} yang akan diadakan pada :</td>
                 </tr>
             </table>
             <br>

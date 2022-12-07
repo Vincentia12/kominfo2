@@ -31,13 +31,13 @@
                     <td width="560"><center><b><u>BERITA ACARA SERAH TERIMA HASIL PEKERJAAN</u></b></td>
                 <tr>
                 <tr>
-                    <td width="560"><center>Nomor : 020/{{$pengadaan1->nomor}}/114.6/2022</td>
+                    <td width="560"><center>Nomor : 020/{{$pengadaan->nomor}}/114.6/2022</td>
                 <tr>
             </table>
             <br>
             <table border="0" align="center">
                 <tr>
-                    <td width="560">Pada hari ini {{$pengadaan1->deskripsi_tanggal}}, kami yang bertanda tangan dibawah ini :</td>
+                    <td width="560">Pada hari ini {{$pengadaan->deskripsi_tanggal}}, kami yang bertanda tangan dibawah ini :</td>
                 <tr>
             </table>
             <br>
@@ -93,7 +93,7 @@
                     <td width="10">II.</td>
                     <td width="150">Nama</td>
                     <td>:</td>
-                    <td width="400">{{$pengadaan1->pengadaan->pelaksana->nama_pelaksana}}</td>
+                    <td width="400">{{$pengadaan->pengadaan->pelaksana->nama_pelaksana}}</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
@@ -101,7 +101,7 @@
                     <td width="15"> </td>
                     <td width="150">Jabatan</td>
                     <td>:</td>
-                    <td width="400">{{$pengadaan1->pengadaan->pelaksana->jabatan_pelaksana}}</td>
+                    <td width="400">{{$pengadaan->pengadaan->pelaksana->jabatan_pelaksana}}</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
@@ -109,7 +109,7 @@
                     <td width="15"> </td>
                     <td width="150">Alamat</td>
                     <td>:</td>
-                    <td width="400">{{$pengadaan1->pengadaan->pelaksana->alamat}}</td>
+                    <td width="400">{{$pengadaan->pengadaan->pelaksana->alamat}}</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
@@ -136,19 +136,19 @@
                     <td width="15"> </td>
                     <td width="200">Kwitansi Kontrak nomor</td>
                     <td>:</td>
-                    <td width="350">020/{{$pengadaan1->nomor}}/114.6/2022</td>
+                    <td width="350">020/{{$pengadaan->nomor}}/114.6/2022</td>
                 </tr>
                 <tr>
                     <td width="15"> </td>
                     <td width="200">Tanggal</td>
                     <td>:</td>
-                    <td width="350">{{$pengadaan1->tanggal}}</td>
+                    <td width="350">{{$pengadaan->tanggal->isoFormat('D MMMM Y')}}</td>
                 </tr>
                 <tr>
                     <td width="15"> </td>
                     <td width="200">Pekerjaan</td>
                     <td>:</td>
-                    <td width="350">{{$pengadaan1->pengadaan->jenis_pengadaan}}</td>
+                    <td width="350">{{$pengadaan->pengadaan->jenis_pengadaan}}</td>
                 </tr>
                 {{--  <tr>
                     <td width="15"> </td>
@@ -213,7 +213,7 @@
             <table border="0" align="center">
                 <tr>
                     <td width="300"> </td>
-                    <td>{{$pengadaan1->tanggal}}</td>
+                    <td>{{$pengadaan->tanggal->isoFormat('D MMMM Y')}}</td>
                     <td width="50"> </td>
                 </tr>
             </table>
