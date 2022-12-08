@@ -103,7 +103,8 @@
                             <td>{{ $p2->alokasi }}</td>
                             <td>{{ date('l', strtotime($p2->tanggal)) }}</td>
                             <td>{{ date('d F Y', strtotime($p2->tanggal)) }}</td>
-                            <td>{{ $p2->nomor }}</td>
+                            {{-- <td>{{ $p2->nomor }}</td> --}}
+                            <td>020/{{$p2->nomor}}/114.6/{{date('Y', strtotime($p2->tanggal))}}</td>
                             <td>{{ $p2->deskripsi_tgl }}</td>
                             <td>
                                 @if ($p2->kegiatan == 'Nota Dinas dari KPA ke PPK')

@@ -56,7 +56,7 @@
               {{-- <th>Pelaksana</th>
               <th>Jenis Pengadaan</th> --}}
               <th>Pelaksana Pengadaan</th>
-              <th>Kegiatan/th</th>
+              <th>Kegiatan</th>
               <th>Alokasi</th>
               <th>Hari</th>
               <th>Tanggal</th>
@@ -76,7 +76,8 @@
               <td>{{ $list->alokasi }}</td>
               <td>{{ $list->tanggal->isoFormat('dddd') }}</td>
               <td>{{ $list->tanggal->isoFormat('D MMMM Y') }}</td>
-              <td>{{ $list->nomor }}</td>
+              {{-- <td>{{ $list->nomor }}</td> --}}
+              <td>020/{{$list->nomor}}/114.6/{{$list->tanggal->format('Y')}}</td>
               <td>{{ $list->deskripsi_tgl }}</td>
 
               <td>
@@ -347,7 +348,7 @@
           <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
               <tr>
-                <td>Kegiatan/th</td>
+                <td>Kegiatan</td>
                 <td>:</td>
                 <td>{{ $jd->kegiatan }}</td>
               </tr>
@@ -365,11 +366,24 @@
           <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
               <tr>
+                <td>Hari</td>
+                <td>:</td>
+                {{-- <td>{{ date_format($jd->tanggal "Y") }}</td> --}}
+                {{-- <td>{{ \Carbon\Carbon::parse($jd->tanggal)->format('D')}}</td> --}}
+                {{-- <td>{{ $jd->tanggal->format('d:m:Y')}}</td> --}}
+                <td>{{ $list->tanggal->isoFormat('dddd') }}</td>
+              </tr>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+              <tr>
                 <td>Tanggal</td>
                 <td>:</td>
                 {{-- <td>{{ date_format($jd->tanggal "Y") }}</td> --}}
                 {{-- <td>{{ \Carbon\Carbon::parse($jd->tanggal)->format('D')}}</td> --}}
-                <td>{{ $jd->tanggal->format('d:m:Y')}}</td>
+                {{-- <td>{{ $jd->tanggal->format('d:m:Y')}}</td> --}}
+                <td>{{ $jd->tanggal->isoFormat('D MMMM Y') }}</td>
               </tr>
             </div>
           </div>
@@ -378,7 +392,8 @@
               <tr>
                 <td>Nomor</td>
                 <td>:</td>
-                <td>{{ $jd->nomor }}</td>
+                {{-- <td>{{ $jd->nomor }}</td> --}}
+                <td>020/{{$jd->nomor}}/114.6/{{$jd->tanggal->format('Y')}}</td>
               </tr>
             </div>
           </div>
