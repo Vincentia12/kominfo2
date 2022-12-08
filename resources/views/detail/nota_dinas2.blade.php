@@ -89,6 +89,7 @@
                     {{-- <td width="475">Pemrosesan Administrasi Pengadaan {{ $jadwal->jenis_pengadaan }}</td> --}}
                 </tr>
             </table>
+            <hr>
             <!-- <table border="0" align="center" font-size="2">
                 <tr>
                     <td width="80"> </td>
@@ -99,7 +100,7 @@
             <br>
             <table border="0" align="center" font-size="2">
                 <tr>
-                    <td width="565">Bersama ini ini diberitahukan, bahwa DPA-SKPD Bagian Data dan Statistik pada Dinas Komunikasi dan Informatika Provinsi Jawa Timur Tahun Anggaran {{$pengadaan->tanggal->isoFormat('D MMMM Y')}}, kode rekening {{ $pengadaan->pengadaan->pelaksana->kode_rekening}} pengadaan {{ $pengadaan->pengadaan->jenis_pengadaan}} keperluan Dinas Komunikasi dan Informatika Provinsi Jawa Timur dengan rincian sebagai berikut :</td>
+                    <td width="565" style="text-indent: 45px; text-align: justify;">Bersama ini ini diberitahukan, bahwa DPA-SKPD Bagian Data dan Statistik pada Dinas Komunikasi dan Informatika Provinsi Jawa Timur Tahun Anggaran {{$pengadaan->tanggal->isoFormat('D MMMM Y')}}, kode rekening {{ $pengadaan->pengadaan->pelaksana->kode_rekening}} pengadaan {{ $pengadaan->pengadaan->jenis_pengadaan}} keperluan Dinas Komunikasi dan Informatika Provinsi Jawa Timur dengan rincian sebagai berikut :</td>
                 </tr>
             </table>
             <br>
@@ -129,12 +130,12 @@
             <br>
             <table border="0" align="center" font-size="2">
                 <tr>
-                    <td width="565">Sehubungan dengan hal tersebut diatas, untuk penyedia Barang/Jasa ditunjuk {{$pengadaan->pengadaan->pelaksana->pt_pelaksana}}, {{$pengadaan->pengadaan->pelaksana->alamat}}. Untuk itu diminta bantuannya untuk segera diproses sesuai prosedur yang berlaku.</td>
+                    <td width="565" style="text-indent: 45px; text-align: justify;">Sehubungan dengan hal tersebut diatas, untuk penyedia Barang/Jasa ditunjuk {{$pengadaan->pengadaan->pelaksana->pt_pelaksana}}, {{$pengadaan->pengadaan->pelaksana->alamat}}. Untuk itu diminta bantuannya untuk segera diproses sesuai prosedur yang berlaku.</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
                 <tr>
-                    <td width="565">Demikian untuk pelaksanaannya.</td>
+                    <td width="565" style="text-indent: 45px;">Demikian untuk pelaksanaannya.</td>
                 </tr>
             </table>
             <br>

@@ -46,13 +46,13 @@
             </table>
             <table border="0" align="center">
                 <tr>
-                    <td width="300"> </td>
+                    <td width="270"> </td>
                     <!-- diubah. menggunakan kolom craete at tapi aku blm bisa ngubahnya -->
                     <td>Surabaya, {{$pengadaan->tanggal->isoFormat('D MMMM Y')}}</td>
                     <td width="50"> </td>
                 </tr>
                 <tr>
-                    <td width="300"> </td>
+                    <td width="270"> </td>
                     <td>Kepada</td>
                     <td width="50"> </td>
                 </tr>
@@ -63,87 +63,74 @@
                     <td width="80">Nomor</td>
                     <td>:</td>
                     <!-- diubah -->
-                    <td width="175">020/{{$pengadaan->nomor}}/114.6/2022</td>
-                    <td width="110"> </td>
+                    <td width="250">020/{{$pengadaan->nomor}}/114.6/{{$pengadaan->tanggal->isoFormat('Y')}}</td>
+                    <td width="80">Yth. Sdr. </td>
                     <!-- diubah -->
-                    <td>Yth. Sdr. {{$pengadaan->pengadaan->pelaksana->jabatan_pelaksana}} {{$pengadaan->pengadaan->pelaksana->pt_pelaksana}}</td>
+                    <td width="250">{{$pengadaan->pengadaan->pelaksana->jabatan_pelaksana}} {{$pengadaan->pengadaan->pelaksana->pt_pelaksana}}</td>
                 </tr>
-            </table>
-            <table border="0" align="center" font-size="2">
                 <tr>
                     <td width="80">Sifat</td>
                     <td>:</td>
                     <td width="175">Segera</td>
-                    <td width="70"> </td>
+                    <td> </td>
                     <!-- diubah -->
                     <td>{{$pengadaan->pengadaan->pelaksana->alamat}}</td>
                 </tr>
-            </table>
-            <table border="0" align="center" font-size="2">
                 <tr>
                     <td width="80">Lampiran</td>
                     <td>:</td>
-                    <td width="265">-</td>
-                    <td width="70"> </td>
-                    <td width="140">di</td>
+                    <td width="175">-</td>
+                    <td> </td>
+                    <td>di</td>
                 </tr>
-            </table>
-            <table border="0" align="center" font-size="2">
                 <tr>
                     <td width="80">Perihal</td>
                     <td>:</td>
-                    <td width="335">Undangan Persiapan </td>
-                    <td width="140">SURABAYA</td>
-                </tr>
-            </table>
-            <table border="0" align="center" font-size="2">
-                <tr>
-                    <td width="80"> </td>
-                    <td width="5"> </td>
-                    <td width="475">Pengadaan Langsung</td>
+                    <td width="175">Undangan Persiapan <br><u> Pengadaan Langsung</u></td>
+                    <td></td>
+                    <td><u><b>SURABAYA</b></u></td>
                 </tr>
             </table>
             <br>
             <table border="0" align="center" font-size="2">
                 <tr>
-                    <td width="560">Diberitahukan bahwa SKPD Dinas Komunikasi Dan Informatika Provinsi Jawa Timur akan melaksanakan Pengadaan Langsung, untuk :</td>
+                    <td width="670" style="text-indent: 45px; text-align: justify;">Diberitahukan bahwa SKPD Dinas Komunikasi Dan Informatika Provinsi Jawa Timur akan melaksanakan Pengadaan Langsung, untuk :</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
                 <tr>
-                    <td width="150">Paket Pekerjaan</td>
-                    <td>:</td>
+                    <td width="140">Paket Pekerjaan</td>
+                    <td width="10">:</td>
                     <!-- diubah -->
-                    <td width="405">{{ $pengadaan->pengadaan->jenis_pengadaan }}</td>
+                    <td width="520" style="text-align: justify;">{{ $pengadaan->pengadaan->jenis_pengadaan }}</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
                 <tr>
-                    <td width="150">Lingkup pekerjaan</td>
-                    <td>:</td>
-                    <td width="405">PK melalui Pejabat Pengadaan mengundang Penyedia</td>
+                    <td width="140">Lingkup pekerjaan</td>
+                    <td width="10">:</td>
+                    <td width="520" style="text-align: justify;">PK melalui Pejabat Pengadaan mengundang Penyedia</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
                 <tr>
-                    <td width="155"> </td>
-                    <td> </td>
-                    <td width="405"> Barang untuk menyampaikan penawaran atas paket pengadaan barang yang tercantum dalam Spesifikasi Teknis, Daftar Kuantitas dan Harga serta nomor pekerjaan yang tercantum dalam LDP. Penyedia Barang yang ditunjuk berkewajiban untuk menyelesaikan pekerjaan dalam jangka waktu dan perkiraan batas akhir waktu penyelesaian yang tercantum dalam LDP.</td>
+                    <td width="140"> </td>
+                    <td width="10"> </td>
+                    <td width="520" style="text-align: justify;"> Barang untuk menyampaikan penawaran atas paket pengadaan barang yang tercantum dalam Spesifikasi Teknis, Daftar Kuantitas dan Harga serta nomor pekerjaan yang tercantum dalam LDP. Penyedia Barang yang ditunjuk berkewajiban untuk menyelesaikan pekerjaan dalam jangka waktu dan perkiraan batas akhir waktu penyelesaian yang tercantum dalam LDP.</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
                 <tr>
-                    <td width="150">Sumber Dana</td>
-                    <td>:</td>
-                    <td width="405">APBD Provinsi Jawa Timur Tahun Anggaran 2022</td>
+                    <td width="140">Sumber Dana</td>
+                    <td width="10">:</td>
+                    <td width="520" style="text-align: justify;"> APBD Provinsi Jawa Timur Tahun Anggaran 2022</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
                 <tr>
-                    <td width="150">Nilai HPS</td>
-                    <td>:</td>
-                    <!-- diubah -->
-                    <td width="405">Rp. {{$pengadaan->pengadaan->total_hps}},-</td>
+                    <td width="140">Nilai HPS</td>
+                    <td width="10">:</td>
+                    <td width="520" style="text-align: justify;">Rp. {{$pengadaan->pengadaan->total_hps}},- {{$pengadaan->pengadaan->deskripsi_hps}}</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
@@ -151,57 +138,51 @@
                     <td width="155"> </td>
                     <td> </td>
                     <!-- diubah -->
-                    <td width="405">{{$pengadaan->pengadaan->deskripsi_hps}}</td>
+                    <td width="405"></td>
                 </tr>
             </table>
             <br>
             <table border="0" align="center" font-size="2">
                 <tr>
-                    <td width="560">Apabila saudara berminat untuk mengikuti paket pengadaan langsung tersebut diharap untuk menyerahkan formulir kualifikasi sebagaimana terlampir yang diisi dengan jelas dan benar, Formulir Kualifikasi tersebut paling lambat diserahkan pada :</td>
+                    <td width="670" style="text-indent: 45px; text-align: justify;">Apabila saudara berminat untuk mengikuti paket pengadaan langsung tersebut diharap untuk menyerahkan formulir kualifikasi sebagaimana terlampir yang diisi dengan jelas dan benar, Formulir Kualifikasi tersebut paling lambat diserahkan pada :</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
                 <tr>
-                    <td width="100">Hari/Tanggal</td>
-                    <td>:</td>
-                    <!-- diubah -->
-                    <td width="455">{{ $pengadaan->hari }}/{{$pengadaan->tanggal->isoFormat('D MMMM Y')}}</td>
+                    <td width="140">Hari/Tanggal</td>
+                    <td width="10">:</td>
+                    <td width="520" style="text-align: justify;">{{ $pengadaan->tanggal->isoFormat('dddd')}} / {{$pengadaan->tanggal->isoFormat('D MMMM Y')}}</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
                 <tr>
-                    <td width="100">Jam</td>
-                    <td>:</td>
-                    <td width="455">10.00 WIB</td>
+                    <td width="140">Jam</td>
+                    <td width="10">:</td>
+                    <td width="520" style="text-align: justify;">10.00 WIB</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
                 <tr>
-                    <td width="100">Tempat</td>
-                    <td>:</td>
-                    <td width="455">Ruang Argopuro lt.II Dinas Komunikasi Dan Informatika</td>
+                    <td width="140">Tempat</td>
+                    <td width="10">:</td>
+                    <td width="520" style="text-align: justify;">Ruang Argopuro lt.II Dinas Komunikasi Dan Informatika Provinsi Jawa Timur Jl. Ahmad Yani 242 - 244 Surabaya</td>
+                </tr>
+            </table>
+            <br>
+            <table border="0" align="center" font-size="2">
+                <tr>
+                    <td width="670" style="text-indent: 45px; text-align: justify;">Apabila sampai dengan jam tersebut diatas saudara tidak menyampaikan formulir prakualifikasi tersebut maka dianggap tidak berminat mengikuti pengadaan langsung. Apabila perusahaan saudara dianggap mampu maka akan diundang mengikuti proses pengadaan langsung untuk pekerjaan tersebut diatas.</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
                 <tr>
-                    <td width="105"> </td>
-                    <td> </td>
-                    <td width="455">Provinsi Jawa Timur Jl. Ahmad Yani 242 - 244 Surabaya</td>
+                    <td width="670" style="text-align: justify;">Demikian disampaikan atas perhatian dan partisipasi Saudara diucapkan terima kasih.</td>
                 </tr>
             </table>
-            <table border="0" align="center" font-size="2">
-                <tr>
-                    <td width="560">Apabila sampai dengan jam tersebut diatas saudara tidak menyampaikan formulir prakualifikasi tersebut maka dianggap tidak berminat mengikuti pengadaan langsung. Apabila perusahaan saudara dianggap mampu maka akan diundang mengikuti proses pengadaan langsung untuk pekerjaan tersebut diatas.</td>
-                </tr>
-            </table>
-            <table border="0" align="center" font-size="2">
-                <tr>
-                    <td width="560">Demikian disampaikan atas perhatian dan partisipasi Saudara diucapkan terima kasih.</td>
-                </tr>
-            </table>
+            <br>
             <table border="0" align="center">
                 <tr>
-                    <td width="300"> </td>
+                    <td width="510"> </td>
                     <td>PEJABAT PENGADAAN</td>
                     <td width="50"> </td>
                 </tr>
@@ -211,14 +192,16 @@
             <br>
             <table border="0" align="center">
                 <tr>
-                    <td width="300"> </td>
-                    <td>ADI KURNIAWAN.S.Kom.,M.Kom</td>
-                    <td width="50"> </td>
+                    <td width="500"> </td>
+                    <td width="260"><u>ADI KURNIAWAN.S.Kom.,M.Kom</u></td>
+
                 </tr>
+            </table>
+            <table border="0" align="center">
                 <tr>
-                    <td width="300"> </td>
+                    <td width="480"> </td>
                     <td>NIP. 19890618 201403 1 002</td>
-                    <td width="50"> </td>
+
                 </tr>
             </table>
         </div>

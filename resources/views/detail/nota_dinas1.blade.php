@@ -95,6 +95,7 @@
                     {{-- <td width="475">Pemrosesan Administrasi Pengadaan {{ $pengadaan->jenis_pengadaan}}</td> --}}
                 </tr>
             </table>
+            <hr>
             {{-- <table border="0" align="center" font-size="2">
                     <tr>
                         <td width="80"> </td>
@@ -102,7 +103,6 @@
                         <td width="475">Informatika Provinsi Jawa Timur</td>
                     </tr>
                 </table> --}}
-            <br>
             <table border="0" align="center" font-size="2">
                 <tr>
                     <td width="565" style="text-indent: 45px; text-align: justify;">Bersama ini ini diberitahukan, bahwa DPA-SKPD Bagian Data dan Statistik pada Dinas Komunikasi dan Informatika Provinsi Jawa Timur Tahun Anggaran {{ $pengadaan->tanggal->isoFormat('D MMMM Y')}}, kode rekening {{ $pengadaan->pengadaan->pelaksana->kode_rekening}} pengadaan {{ $pengadaan->pengadaan->jenis_pengadaan}} keperluan Dinas Komunikasi dan Informatika Provinsi Jawa Timur dengan rincian sebagai berikut :</td>
