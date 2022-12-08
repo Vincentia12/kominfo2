@@ -30,22 +30,22 @@
                 <tr>
                     <td>
                         <img src="{{asset('img/logo_jatim.png')}}" width="70" height="70">
-                    </td>
-                    <td>
-                        <center>
-                            <font size="3"><b>PEMERINTAH PROVINSI JAWA TIMUR</b></font><br>
-                            <font size="3">DINAS KOMUNIKASI DAN INFORMATIKA</font><br>
-                            <font size="3">Jl. Ahmad Yani 242-244 Telp. (031) 8294608 Fax. (031) 8294517</font><br>
-                            <font size="3">Website : http://www.jatimprov.go.id </font><br>
-                            <font size="2">Email:kominfo@jatimprov.go.id</font><br>
-                            <font size="3">S U R A B A Y A-60235</font><br>
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="2">
-                        <hr>
-                    </td>
-                </tr>
+            </td>
+            <td>
+                <center>
+                    <font size="3"><b>PEMERINTAH PROVINSI JAWA TIMUR</b></font><br>
+                    <font size="3">DINAS KOMUNIKASI DAN INFORMATIKA</font><br>
+                    <font size="3">Jl. Ahmad Yani 242-244 Telp. (031) 8294608 Fax. (031) 8294517</font><br>
+                    <font size="3">Website : http://www.jatimprov.go.id </font><br>
+                    <font size="2">Email:kominfo@jatimprov.go.id</font><br>
+                    <font size="3">S U R A B A Y A-60235</font><br>
+            </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <hr>
+                </td>
+            </tr>
             </table> --}}
             <table border="0" align="center">
                 <tbody>
@@ -54,7 +54,6 @@
                             <center>
                                 <font size="3"><b>DINAS KOMUNIKASI DAN INFORMATIKA</b></font><br>
                                 <font size="3"><b>PROVINSI JAWA TIMUR<b /></font><br>
-                                <font size="3"><u>NOTA DINAS<u /></font><br>
                         </td>
                     </tr>
                     <tr>
@@ -67,7 +66,7 @@
             <table border="0" align="center">
                 <tr>
                     <td width="560">
-                        <center><b>BERITA ACARA PENJELASAN PEKERJAAN</b>
+                        <center><b><u>BERITA ACARA PENJELASAN PEKERJAAN</u></b>
                     </td>
                 <tr>
             </table>
@@ -83,49 +82,46 @@
                     </td>
                     <td width="150">
                         <center>
-                            <font size="2">020/{{$pengadaan->nomor}}/114.6/2022</font>
+                            <font size="2">020/{{$pengadaan->nomor}}/114.6/{{$pengadaan->tanggal->isoFormat('Y')}}</font>
                     </td>
                 <tr>
             </table>
             <br>
             <table border="0" align="center" font-size="2">
                 <tr>
-                    <td width="560">Pada hari ini {{$pengadaan->deskripsi_tanggal}}, dimulai pukul 10.00 WIB sampai dengan selesai, Pejabat Pengadaan di Lingkungan Dinas Komunikasi dan Informatika Provinsi Jawa Timur yang dibentuk dengan Keputusan Kepala Dinas Komunikasi Dan Informatika Provinsi Jawa Timur tanggal {{$pengadaan->tanggal->isoFormat('D MMMM Y')}} Nomor : 188/19/114.1/2022, telah mengadakan rapat penjelasan untuk pengadaan {{$pengadaan->pengadaan->jenis_pengadaan}} keperluan Dinas Komunikasi dan Informatika Provinsi Jawa Timur.</td>
+                    <td width="670" style="text-indent: 45px; text-align: justify;">Pada hari ini {{$pengadaan->tanggal->isoFormat('dddd')}} Tanggal {{$pengadaan->deskripsi_tgl}}, dimulai pukul 10.00 WIB sampai dengan selesai, Pejabat Pengadaan di Lingkungan Dinas Komunikasi dan Informatika Provinsi Jawa Timur yang dibentuk dengan Keputusan Kepala Dinas Komunikasi Dan Informatika Provinsi Jawa Timur tanggal 3 Januari 2022 Nomor : 188/19/114.1/2022, telah mengadakan rapat penjelasan untuk pengadaan {{$pengadaan->pengadaan->jenis_pengadaan}} keperluan Dinas Komunikasi dan Informatika Provinsi Jawa Timur.</td>
                 </tr>
             </table>
             <br>
             <table border="0" align="center" font-size="2">
                 <tr>
-                    <td width="560">Dalam rapat penjelasan tersebut tersusun pokok acara sebagai berikut :</td>
+                    <td width="670">Dalam rapat penjelasan tersebut tersusun pokok acara sebagai berikut :</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
                 <tr>
-                    <td width="30">1.</td>
-                    <td width="530">Pembukaan oleh Pejabat Pengadaan kepada semua yang hadir.</td>
+                    <td>1.</td>
+                    <td width="13"></td>
+                    <td width="640" style="text-align: justify;">Pembukaan oleh Pejabat Pengadaan kepada semua yang hadir.</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
                 <tr>
-                    <td width="30">2.</td>
-                    <td width="530">Penjelasan seluruh isi Dokumen Pengadaan Langsung.</td>
+                    <td>2.</td>
+                    <td width="13"></td>
+                    <td width="640" style="text-align: justify;">Penjelasan seluruh isi Dokumen Pengadaan Langsung.</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
                 <tr>
-                    <td width="30">3.</td>
-                    <td width="530">Nilai HPS/OE untuk pekerjaan ini adalah Rp. {{$pengadaan->pengadaan->total_hps}},-</td>
+                    <td>3.</td>
+                    <td width="13"></td>
+                    <td width="640" style="text-align: justify;">Nilai HPS/OE untuk pekerjaan ini adalah Rp. {{$pengadaan->pengadaan->total_hps}},- {{$pengadaan->pengadaan->deskripsi_hps}}).</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
                 <tr>
-                    <td width="30"> </td>
-                    <td width="530">({{$pengadaan->pengadaan->deskripsi_hps}}).</td>
-                </tr>
-            </table>
-            <table border="0" align="center" font-size="2">
-                <tr>
-                    <td width="560">Pokok-Pokok Penjelasan lainnya antara lain sebagai berikut :</td>
+                    <td width="670">Pokok-Pokok Penjelasan lainnya antara lain sebagai berikut :</td>
                 </tr>
             </table>
             <br>
@@ -143,144 +139,119 @@
                     </td>
                 <tr>
             </table>
+            <!-- A -->
             <br>
             <table border="0" align="center">
                 <tr>
-                    <td width="30"><b>A.</b></td>
-                    <td width="530"><b>UMUM</b></td>
+                    <td width="8"><b>A.</b></td>
+                    <td colspan="2"><b>UMUM</b></td>
+                </tr>
                 <tr>
-            </table>
-            <table border="0" align="center" font-size="2">
+                    <td>1.</td>
+                    <td>Lingkup Pekerjaan.....................................................................................................................................</td>
+                    <td width="5">Jelas</td>
+                </tr>
                 <tr>
-                    <td width="30">1.</td>
-                    <td width="490">Lingkup Pekerjaan.................................................................................................</td>
-                    <td width="40">Jelas</td>
+                    <td>2.</td>
+                    <td>Sumber Dana..............................................................................................................................................</td>
+                    <td>Jelas</td>
+                </tr>
+                <tr>
+                    <td>3.</td>
+                    <td>Peserta Pengadaan...................................................................................................................................</td>
+                    <td>Jelas</td>
+                </tr>
+                <tr>
+                    <td>4.</td>
+                    <td>Larangan Korupsi, Kolusi, dan Nepotisme (KKN) serta Penipuan..............................................</td>
+                    <td>Jelas</td>
+                </tr>
+                <tr>
+                    <td>5.</td>
+                    <td>Larangan Pertentangan Kepentingan.................................................................................................</td>
+                    <td>Jelas</td>
                 </tr>
             </table>
-            <table border="0" align="center" font-size="2">
-                <tr>
-                    <td width="30">2.</td>
-                    <td width="490">Sumber Dana..........................................................................................................</td>
-                    <td width="40">Jelas</td>
-                </tr>
-            </table>
-            <table border="0" align="center" font-size="2">
-                <tr>
-                    <td width="30">3.</td>
-                    <td width="490">Peserta Pengadaan...............................................................................................</td>
-                    <td width="40">Jelas</td>
-                </tr>
-            </table>
-            <table border="0" align="center" font-size="2">
-                <tr>
-                    <td width="30">4.</td>
-                    <td width="490">Larangan Korupsi, Kolusi, dan Nepotisme (KKN) serta Penipuan.........</td>
-                    <td width="40">Jelas</td>
-                </tr>
-            </table>
-            <table border="0" align="center" font-size="2">
-                <tr>
-                    <td width="30">5.</td>
-                    <td width="490">Larangan Pertentangan Kepentingan............................................................</td>
-                    <td width="40">Jelas</td>
-                </tr>
-            </table>
+
+            <!-- B -->
             <br>
             <table border="0" align="center">
                 <tr>
-                    <td width="30"><b>B.</b></td>
-                    <td width="530"><b>DOKUMEN PENGADAAN</b></td>
+                    <td width="8"><b>B.</b></td>
+                    <td colspan="2"><b>DOKUMEN PENGADAAN</b></td>
+                </tr>
                 <tr>
-            </table>
-            <table border="0" align="center" font-size="2">
+                    <td>1.</td>
+                    <td>Dokumen Penawaran...............................................................................................................................</td>
+                    <td width="5">Jelas</td>
+                </tr>
                 <tr>
-                    <td width="30">1.</td>
-                    <td width="490">Dokumen Penawaran...........................................................................................</td>
-                    <td width="40">Jelas</td>
+                    <td>2.</td>
+                    <td>Harga Penawaran......................................................................................................................................</td>
+                    <td>Jelas</td>
+                </tr>
+                <tr>
+                    <td>3.</td>
+                    <td>Mata Uang Penawaran dan Cara Pembayaran.................................................................................</td>
+                    <td>Jelas</td>
+                </tr>
+                <tr>
+                    <td>4.</td>
+                    <td>Masa Berlaku Penawaran dan Jangka Waktu Pelaksanaan.........................................................</td>
+                    <td>Jelas</td>
+                </tr>
+                <tr>
+                    <td>5.</td>
+                    <td>Pakta Integritas...........................................................................................................................................</td>
+                    <td>Jelas</td>
+                </tr>
+                <tr>
+                    <td>6.</td>
+                    <td>Bentuk Dokumen Penawaran.................................................................................................................</td>
+                    <td>Jelas</td>
                 </tr>
             </table>
-            <table border="0" align="center" font-size="2">
-                <tr>
-                    <td width="30">2.</td>
-                    <td width="490">Harga Penawaran..................................................................................................</td>
-                    <td width="40">Jelas</td>
-                </tr>
-            </table>
-            <table border="0" align="center" font-size="2">
-                <tr>
-                    <td width="30">3.</td>
-                    <td width="490">Mata Uang Penawaran dan Cara Pembayaran............................................</td>
-                    <td width="40">Jelas</td>
-                </tr>
-            </table>
-            <table border="0" align="center" font-size="2">
-                <tr>
-                    <td width="30">4.</td>
-                    <td width="490">Masa Berlaku Penawaran dan Jangka Waktu Pelaksanaan....................</td>
-                    <td width="40">Jelas</td>
-                </tr>
-            </table>
-            <table border="0" align="center" font-size="2">
-                <tr>
-                    <td width="30">5.</td>
-                    <td width="490">Pakta Integritas......................................................................................................</td>
-                    <td width="40">Jelas</td>
-                </tr>
-            </table>
-            <table border="0" align="center" font-size="2">
-                <tr>
-                    <td width="30">5.</td>
-                    <td width="490">Bentuk Dokumen Penawaran............................................................................</td>
-                    <td width="40">Jelas</td>
-                </tr>
-            </table>
+
+            <!-- C -->
             <br>
             <table border="0" align="center">
                 <tr>
-                    <td width="30"><b>C.</b></td>
-                    <td width="530"><b>PEMASUKAN DOKUMEN PENAWARAN</b></td>
+                    <td width="8"><b>C.</b></td>
+                    <td colspan="2"><b>PEMASUKAN DOKUMEN PENAWARAN</b></td>
+                </tr>
                 <tr>
-            </table>
-            <table border="0" align="center" font-size="2">
+                    <td>1.</td>
+                    <td>Penyampulan dan Penandaan Sampul Penawaran........................................................................</td>
+                    <td width="5">Jelas</td>
+                </tr>
                 <tr>
-                    <td width="30">1.</td>
-                    <td width="490">Penyampulan dan Penandaan Sampul Penawaran...................................</td>
-                    <td width="40">Jelas</td>
+                    <td>2.</td>
+                    <td>Penyampaian Dokumen Penawaran.....................................................................................................</td>
+                    <td>Jelas</td>
+                </tr>
+                <tr>
+                    <td>3.</td>
+                    <td>Batas Akhir Waktu Pemasukan Penawaran.......................................................................................</td>
+                    <td>Jelas</td>
                 </tr>
             </table>
-            <table border="0" align="center" font-size="2">
-                <tr>
-                    <td width="30">2.</td>
-                    <td width="490">Penyampaian Dokumen Penawaran...............................................................</td>
-                    <td width="40">Jelas</td>
-                </tr>
-            </table>
-            <table border="0" align="center" font-size="2">
-                <tr>
-                    <td width="30">3.</td>
-                    <td width="490">Batas Akhir Waktu Pemasukan Penawaran.................................................</td>
-                    <td width="40">Jelas</td>
-                </tr>
-            </table>
+
+            <!-- D -->
             <br>
             <table border="0" align="center">
                 <tr>
-                    <td width="30"><b>D.</b></td>
-                    <td width="530"><b>PEMBUKAAN DAN EVALUASI PENAWARAN</b></td>
-                <tr>
-            </table>
-            <table border="0" align="center" font-size="2">
-                <tr>
-                    <td width="30">1.</td>
-                    <td width="490">Pembukaan Penawaran.......................................................................................</td>
-                    <td width="40">Jelas</td>
+                    <td width="8"><b>D.</b></td>
+                    <td colspan="2"><b>PEMBUKAAN DAN EVALUASI PENAWARAN</b></td>
                 </tr>
-            </table>
-            <table border="0" align="center" font-size="2">
                 <tr>
-                    <td width="30">2.</td>
-                    <td width="490">Evaluasi Penawaran.............................................................................................</td>
-                    <td width="40">Jelas</td>
+                    <td>1.</td>
+                    <td>Pembukaan Penawaran............................................................................................................................</td>
+                    <td width="5">Jelas</td>
+                </tr>
+                <tr>
+                    <td>2.</td>
+                    <td>Evaluasi Penawaran...................................................................................................................................</td>
+                    <td>Jelas</td>
                 </tr>
             </table>
             <br>
@@ -293,7 +264,7 @@
         <div class="card-body">
             <table border="0" align="center">
                 <tr>
-                    <td width="560">Demikian Berita Acara Penjelasan dalam rangka Pengadaan Langsung untuk pengadaan {{ $pengadaan->pengadaan->jenis_pengadaan}} keperluan Dinas Komunikasi dan Informatika Provinsi Jawa Timur Jl. Ahmad Yani 242 - 244 Surabaya, dibuat dengan sesungguhnya sebagai pertemuan Pejabat Pengadaan dengan peserta Pengadaan Langsung dan merupakan kelengkapan yang tidak terpisahkan dari Dokumen Pengadaan pekerjaan ini.</td>
+                    <td width="670" style="text-indent: 45px; text-align: justify;">Demikian Berita Acara Penjelasan dalam rangka Pengadaan Langsung untuk pengadaan {{ $pengadaan->pengadaan->jenis_pengadaan}} keperluan Dinas Komunikasi dan Informatika Provinsi Jawa Timur Jl. Ahmad Yani 242 - 244 Surabaya, dibuat dengan sesungguhnya sebagai pertemuan Pejabat Pengadaan dengan peserta Pengadaan Langsung dan merupakan kelengkapan yang tidak terpisahkan dari Dokumen Pengadaan pekerjaan ini.</td>
                 <tr>
             </table>
             <br>
@@ -307,10 +278,10 @@
             <table width="565px" border="1" align="center">
                 <thead>
                     <tr align="center">
-                        <th width="50px" scope="col">No</th>
-                        <th width="200px" scope="col">Nama</th>
-                        <th width="165px" scope="col">Jabatan</th>
-                        <th width="100px" scope="col">Tanda Tangan</th>
+                        <th style="background-color: lightgrey;" width="50px" scope="col">No</th>
+                        <th style="background-color: lightgrey;" width="200px" scope="col">Nama</th>
+                        <th style="background-color: lightgrey;" width="165px" scope="col">Jabatan</th>
+                        <th style="background-color: lightgrey;" width="100px" scope="col">Tanda Tangan</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -333,10 +304,10 @@
             <table width="565px" border="1" align="center">
                 <thead>
                     <tr align="center">
-                        <th width="50px" scope="col">No</th>
-                        <th width="200px" scope="col">Nama</th>
-                        <th width="165px" scope="col">Jabatan</th>
-                        <th width="100px" scope="col">Tanda Tangan</th>
+                        <th style="background-color: lightgrey;" width="50px" scope="col">No</th>
+                        <th style="background-color: lightgrey;" width="200px" scope="col">Nama</th>
+                        <th style="background-color: lightgrey;" width="165px" scope="col">Jabatan</th>
+                        <th style="background-color: lightgrey;" width="100px" scope="col">Tanda Tangan</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -359,10 +330,10 @@
             <table width="565px" border="1" align="center">
                 <thead>
                     <tr align="center">
-                        <th width="50px" scope="col">No</th>
-                        <th width="200px" scope="col">Nama</th>
-                        <th width="165px" scope="col">Jabatan</th>
-                        <th width="100px" scope="col">Tanda Tangan</th>
+                        <th style="background-color: lightgrey;" width="50px" scope="col">No</th>
+                        <th style="background-color: lightgrey;" width="200px" scope="col">Nama</th>
+                        <th style="background-color: lightgrey;" width="165px" scope="col">Jabatan</th>
+                        <th style="background-color: lightgrey;" width="100px" scope="col">Tanda Tangan</th>
                     </tr>
                 </thead>
                 <tbody>
