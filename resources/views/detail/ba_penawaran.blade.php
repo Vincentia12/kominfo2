@@ -66,111 +66,93 @@
                     </td>
                     <td width="150">
                         <center>
-                            <font size="2">020/{{$pengadaan->nomor}}/114.6/2022</font>
+                            <font size="2">020/{{$pengadaan->nomor}}/114.6/{{$pengadaan->tanggal->isoFormat('Y')}}</font>
                     </td>
                 <tr>
             </table>
             <br>
             <table border="0" align="center" font-size="2">
                 <tr>
-                    <td width="560">Pada hari ini {{$pengadaan->deskripsi_tanggal}} kami yang bertanda tangan dibawah ini adalah Pejabat Pengadaan di Lingkungan Dinas Komunikasi Dan Informatika Provinsi Jawa Timur yang dibentuk dengan Keputusan Kepala Dinas Komunikasi Dan Informatika Provinsi Jawa Timur selaku Pengguna Anggaran tanggal {{$pengadaan->tanggal->isoFormat('D MMMM Y')}} Nomor : 188/19/114.1/2022, melaksanakan Pembukaan Penawaran untuk pelaksanaan {{$pengadaan->pengadaan->jenis_pengadaan}}, dibiayai dari dana APBD Tahun Anggaran 2022 pada DPA Dinas Komunikasi dan Informatika Provinsi Jawa Timur Kode Rekening {{$pengadaan->pengadaan->pelaksana->kode_rekening}} dengan Harga Perkiraan Sendiri (HPS) sebesar Rp. {{$pengadaan->pengadaan->total_hps}},- ({{$pengadaan->pengadaan->deskripsi_hps}}).</td>
+                    <td width="700" style="text-indent: 45px; text-align: justify;">Pada hari ini {{$pengadaan->tanggal->isoFormat('dddd')}} Tanggal {{$pengadaan->deskripsi_tgl}} kami yang bertanda tangan dibawah ini adalah Pejabat Pengadaan di Lingkungan Dinas Komunikasi Dan Informatika Provinsi Jawa Timur yang dibentuk dengan Keputusan Kepala Dinas Komunikasi Dan Informatika Provinsi Jawa Timur selaku Pengguna Anggaran tanggal {{$pengadaan->tanggal->isoFormat('D MMMM Y')}} Nomor : 188/19/114.1/2022, melaksanakan Pembukaan Penawaran untuk pelaksanaan {{$pengadaan->pengadaan->jenis_pengadaan}}, dibiayai dari dana APBD Tahun Anggaran {{$pengadaan->tanggal->isoFormat('Y')}} pada DPA Dinas Komunikasi dan Informatika Provinsi Jawa Timur Kode Rekening {{$pengadaan->pengadaan->pelaksana->kode_rekening}} dengan Harga Perkiraan Sendiri (HPS) sebesar Rp. {{$pengadaan->pengadaan->total_hps}},- ({{$pengadaan->pengadaan->deskripsi_hps}}).</td>
                 </tr>
             </table>
             <br>
             <table border="0" align="center">
                 <tr>
                     <td width="30"><b>I.</b></td>
-                    <td width="530"><b>Personalia dan organisasi rapat :</b></td>
+                    <td colspan="3"><b>Personalia dan organisasi rapat :</b></td>
                 <tr>
-            </table>
-            <table border="0" align="center" font-size="2">
                 <tr>
-                    <td width="35"> </td>
+                    <td width="30"> </td>
                     <td width="200">Rapat dipimpin oleh</td>
                     <td>:</td>
-                    <td width="330">ADI KURNIAWAN.S.Kom.,M.Kom</td>
+                    <td width="470">ADI KURNIAWAN.S.Kom.,M.Kom</td>
                 </tr>
-            </table>
-            <table border="0" align="center" font-size="2">
                 <tr>
-                    <td width="35"> </td>
+                    <td width="30"> </td>
                     <td width="200">Jabatan</td>
                     <td>:</td>
-                    <td width="330">Pejabat Pengadaan Barang/Jasa di</td>
+                    <td width="470">Pejabat Pengadaan Barang/Jasa di lingkungan Dinas Komunikasi dan Informatika Provinsi Jawa Timur Tahun Anggaran 2022</td>
                 </tr>
             </table>
+
             <table border="0" align="center" font-size="2">
                 <tr>
-                    <td width="35"> </td>
-                    <td width="200"> </td>
-                    <td> </td>
-                    <td width="330">lingkungan Dinas Komunikasi dan Informatika Provinsi Jawa Timur Tahun Anggaran 2022</td>
-                </tr>
-            </table>
-            <table border="0" align="center" font-size="2">
-                <tr>
-                    <td width="35"> </td>
-                    <td width="200">dan dihadiri oleh</td>
+                    <td width="30"> </td>
+                    <td width="130">dan dihadiri oleh </td>
                     <td>:</td>
-                    <td width="330"> </td>
+                    <td width="540"> </td>
+                </tr>
+
+            </table>
+            <table border="0" align="center" font-size="2">
+                <tr>
+                    <td width="30"> </td>
+                    <td width="35">A.</td>
+                    <td>PPK</td>
+                    <td>:</td>
+                    <td width="602"> </td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
                 <tr>
-                    <td width="35"> </td>
-                    <td width="30">A.</td>
-                    <td width="170">PPK</td>
-                    <td width="330">:</td>
-                </tr>
-            </table>
-            <table border="0" align="center" font-size="2">
-                <tr>
-                    <td width="35"> </td>
                     <td width="30"> </td>
                     <td width="250">I WAYAN RUDY ARTHA, S.Kom</td>
                     <td>:</td>
-                    <td width="250">Pejabat Pembuat Komitmen di</td>
-                </tr>
-            </table>
-            <table border="0" align="center" font-size="2">
-                <tr>
-                    <td width="35"> </td>
-                    <td width="30"> </td>
-                    <td width="250"> </td>
-                    <td> </td>
-                    <td width="250">lingkungan Dinas Komunikasi dan Informatika Provinsi Jawa Timur Tahun Anggaran 2022</td>
+                    <td width="420" style="text-align: justify;">Pejabat Pembuat Komitmen di lingkungan Dinas Komunikasi dan Informatika Provinsi Jawa Timur Tahun Anggaran {{$pengadaan->tanggal->isoFormat('Y')}}</td>
                 </tr>
             </table>
             <br>
             <table border="0" align="center" font-size="2">
                 <tr>
-                    <td width="35"> </td>
-                    <td width="30">B.</td>
-                    <td width="170">Penyedia Barang/Jasa</td>
-                    <td width="330">:</td>
+                    <td width="30"> </td>
+                    <td width="35">B.</td>
+                    <td>Penyedia Barang/Jasa</td>
+                    <td>:</td>
+                    <td width="480"> </td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
                 <tr>
-                    <td width="35"> </td>
                     <td width="30"> </td>
-                    <td width="250">{{$pengadaan->pengadaan->pelaksana->pt_pelaksana}}</td>
+                    <td width="35">1.</td>
+                    <td width="210">{{$pengadaan->pengadaan->pelaksana->pt_pelaksana}}</td>
                     <td>:</td>
-                    <td width="250">{{$pengadaan->pengadaan->pelaksana->nama_pelaksana}}</td>
+                    <td width="430">{{$pengadaan->pengadaan->pelaksana->nama_pelaksana}}</td>
                 </tr>
             </table>
             <br>
             <table border="0" align="center">
                 <tr>
                     <td width="30"><b>II.</b></td>
-                    <td width="530"><b>Hasil Pembukaan Penawaran sebagai berikut :</b></td>
+                    <td width="680"><b>Hasil Pembukaan Penawaran sebagai berikut :</b></td>
                 <tr>
             </table>
-            <table width="565px" border="1" align="center">
+            <table width="712px" border="1" align="center">
                 <thead>
                     <tr align="center">
                         <th width="30px" scope="col">No</th>
-                        <th width="200px" scope="col">Nama Perusahaan</th>
+                        <th width="350px" scope="col">Nama Perusahaan</th>
                         <th width="95px" scope="col">Surat Penawaran</th>
                         <th width="95px" scope="col">Dokumen Teknis</th>
                         <th width="95px" scope="col">Keterangan</th>
@@ -189,13 +171,13 @@
             <br>
             <table border="0" align="center" font-size="2">
                 <tr>
-                    <td width="560">Demikian Berita Acara ini dibuat untuk dipergunakan sebagai bahan pertimbangan dalam pelaksanaan Pengadaan Langsung.</td>
+                    <td width="700" style="text-indent: 45px; text-align: justify;">Demikian Berita Acara ini dibuat untuk dipergunakan sebagai bahan pertimbangan dalam pelaksanaan Pengadaan Langsung.</td>
                 </tr>
             </table>
             <br>
             <table border="0" align="center">
                 <tr>
-                    <td width="300"> </td>
+                    <td width="510"> </td>
                     <td>PEJABAT PENGADAAN</td>
                     <td width="50"> </td>
                 </tr>
@@ -205,14 +187,16 @@
             <br>
             <table border="0" align="center">
                 <tr>
-                    <td width="300"> </td>
-                    <td>ADI KURNIAWAN.S.Kom.,M.Kom</td>
-                    <td width="50"> </td>
+                    <td width="500"> </td>
+                    <td width="260"><u>ADI KURNIAWAN.S.Kom.,M.Kom</u></td>
+
                 </tr>
+            </table>
+            <table border="0" align="center">
                 <tr>
-                    <td width="300"> </td>
+                    <td width="480"> </td>
                     <td>NIP. 19890618 201403 1 002</td>
-                    <td width="50"> </td>
+
                 </tr>
             </table>
         </div>
