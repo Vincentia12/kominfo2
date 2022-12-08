@@ -90,31 +90,74 @@
                     <td>2.</td>
                     <td>Nama</td>
                     <td>:</td>
-                    {{-- <td colspan="2">{{$pengadaan->pengadaan->pelaksana->nama_pelaksana}}</td> --}}
+                    <td colspan="2">{{$pengadaan->pengadaan->pelaksana->nama_pelaksana}}</td>
                 </tr>
                 <tr>
                     <td> </td>
                     <td>Jabatan</td>
                     <td width="3">:</td>
-                    {{-- <td colspan="2">{{$pengadaan->pengadaan->pelaksana->jabatan_pelaksana}}</td> --}}
+                    <td colspan="2">{{$pengadaan->pengadaan->pelaksana->jabatan_pelaksana}}</td>
                 </tr>
                 <tr>
                     <td> </td>
                     <td>Nama Perusahaan</td>
                     <td width="3">:</td>
-                    {{-- <td colspan="2">{{$pengadaan->pengadaan->pelaksana->pt_pelaksana}}</td> --}}
+                    <td colspan="2">{{$pengadaan->pengadaan->pelaksana->pt_pelaksana}}</td>
                 </tr>
                 <tr>
                     <td> </td>
                     <td>Alamat Kantor</td>
                     <td>:</td>
-                    {{-- <td colspan="2">{{$pengadaan->pengadaan->pelaksana->alamat}} {{$pengadaan->pengadaan->pelaksana->kota}}</td> --}}
+                    <td colspan="2">{{$pengadaan->pengadaan->pelaksana->alamat}} {{$pengadaan->pengadaan->pelaksana->kota}}</td>
                 </tr>
                 <tr>
                     <td colspan="5">Bertindak untuk dan atas nama Pemerintah Provinsi Jawa Timur, selanjutnya disebut PIHAK KESATU</td>
                 </tr>
             </table>
         </div>
+                    @php
+                    use App\Models\Jadwal;
+
+                        $png = $pengadaan->pengadaan_id;
+                        // $jdwl = DB::table('jadwals')
+                        //         ->where('jadwals.pengadaan_id', 'like', "%" . $png . "%")
+                        //         // ->where('jadwals.kegiatan', '=', 'Surat Undangan Permintaan Penawaran Harga')
+                        //         ->get();
+                        $SuratUndanganPermintaanPenawaranHarga = Jadwal::where('jadwals.pengadaan_id', 'like', "%" . $png . "%")
+                            ->where('jadwals.kegiatan', '=', 'Surat Undangan Permintaan Penawaran Harga')
+                        ->get();
+                        $SuratPenawaranHarga = Jadwal::where('jadwals.pengadaan_id', 'like', "%" . $png . "%")
+                            ->where('jadwals.kegiatan', '=', 'Surat Penawaran Harga')
+                        ->get();
+                        $BeritaAcaraHasilKlarifikasiNegosiasi = Jadwal::where('jadwals.pengadaan_id', 'like', "%" . $png . "%")
+                            ->where('jadwals.kegiatan', '=', 'BA. Klarifikasi/egosiasi')
+                        ->get();
+                        $BeritaAcaraHasilPengadaanLangsung = Jadwal::where('jadwals.pengadaan_id', 'like', "%" . $png . "%")
+                            ->where('jadwals.kegiatan', '=', 'BA. Hasil Pengadaan Langsung')
+                        ->get();
+                        $SuratPerintahMulaiKerja = Jadwal::where('jadwals.pengadaan_id', 'like', "%" . $png . "%")
+                            ->where('jadwals.kegiatan', '=', 'Surat Perintah Mulai Kerja (SPMK)')
+                        ->get();
+                        $BeritaAcaraSerahTerimaHasilPekerjaan = Jadwal::where('jadwals.pengadaan_id', 'like', "%" . $png . "%")
+                            ->where('jadwals.kegiatan', '=', 'BA Serah Terima Hasil Pekerjaan')
+                        ->get();
+                        //     if ($jdwl->kegiatan = 'Surat Undangan Permintaan Penawaran Harga') {
+                        //     $idlain = DB::table('jadwals')
+                        //         // ->where('jadwals.pengadaan_id', '=', $jdwl->id )
+                        //     ->get();
+                        //     // $idlain = Jadwal::all();
+                        //     // Jadwal::all();
+                        // }else {
+                        //     # code...
+                        // }
+                        
+                        // if ($jdwl->kegiatan = 'Surat Undangan Permintaan Penawaran Harga')
+                        //     elseif (condition) {
+                        //         # code...
+                        //     }
+                        // endif
+                        // return $jdwl;
+                    @endphp
         <div>
             <table border="0">
                 <tr>
@@ -123,22 +166,47 @@
                 <tr>
                     <td width="3">1.</td>
                     {{-- no surat lain --}}
-                    <td>Surat Permintaan Penawaran Nomor : 020/654.5/114.6/2022 Tanggal 22 Agustus 2022</td>
+                    {{-- <td>{{dd($jdwl->nomor)}}</td> --}}
+                    {{-- <td>{{dd($jdwl)}}</td> --}}
+                   
+                        <td>Surat Permintaan Penawaran Nomor : 
+                            @foreach ($SuratUndanganPermintaanPenawaranHarga as $supph)
+                            020/{{$supph->nomor}}/114.6/ambiltgl Tanggal {{$supph->tanggal}}
+                            @endforeach
+                        </td>
+                        {{-- <td>{{$j->nomor}}</td> --}}
+                    {{-- <td>{{$jdwl['nomor']}}</td> --}}
+                    {{-- <td>{{[$jdwl->nomor]}}</td> --}}
+                    {{-- <td>Surat Permintaan Penawaran Nomor : 020/654.5/114.6/2022 Tanggal 22 Agustus 2022</td> --}}
                 </tr>
                 <tr>
                     <td>2.</td>
                     {{-- no surat lain --}}
-                    <td>Surat Penawaran Harga Nomor : 233/PEN/PN/IX/2022 Tanggal 24 Agustus 2022</td>
+                        <td>Surat Penawaran Harga Nomor : 
+                            @foreach ($SuratPenawaranHarga as $sph)
+                            {{$sph->nomor}} Tanggal {{$sph->tanggl}}
+                            @endforeach
+                        </td>
+                    {{-- <td>Surat Penawaran Harga Nomor : 233/PEN/PN/IX/2022 Tanggal 24 Agustus 2022</td> --}}
                 </tr>
                 <tr>
                     <td>3.</td>
                     {{-- no surat lain --}}
-                    <td>Berita Acara Hasil Klarifikasi dan Negosiasi Nomor : 020/654.9/114.6/2022 Tanggal 1 September 2022</td>
+                    <td>Berita Acara Hasil Klarifikasi dan Negosiasi Nomor : 
+                        @foreach ($BeritaAcaraHasilKlarifikasiNegosiasi as $bahkn)
+                        {{$bahkn->nomor}} Tanggal {{$bahkn->tanggl}}
+                        @endforeach
+                    </td>
+                    {{-- <td>Berita Acara Hasil Klarifikasi dan Negosiasi Nomor : 020/654.9/114.6/2022 Tanggal 1 September 2022</td> --}}
                 </tr>
                 <tr>
                     <td>4.</td>
                     {{-- no surat lain --}}
-                    <td>Berita Acara Hasil Pengadaan Langsung Nomor : 020/654.10/114.6/2022 Tanggal 5 September 2022</td>
+                    <td>Berita Acara Hasil Pengadaan Langsung Nomor : 
+                        @foreach ($BeritaAcaraHasilPengadaanLangsung as $bahpl)
+                        {{$bahpl->nomor}} Tanggal {{$bahpl->tanggl}}
+                        @endforeach
+                    </td>
                 </tr>
                 <tr>
                     <td colspan="2">Maka PIHAK KESATU menerbitkan Surat Perintah Kerja, dengan ketentuan </td>
@@ -212,20 +280,12 @@
                                 ->where('barangs.pengadaan_id', 'like', "%" . $png . "%")
                             ->sum('jumlah_harga');
                             $ppn = $sum * 0.11;
-                            @endphp
-                            <td>{{$sum}}</td>
-                        <td></td>
+                        @endphp
+                        <td>{{$sum}}</td>
                     </tr>
                     <tr>
                         <td style="text-align:right" colspan="6">PPN 11%</td>
-                        {{-- @php
-                        
-                            $nilainego = $brg->jumlah_hasil;
-                            $nilaippn = 11%;
-                                $ppn = $nilainego - $nilaippn;
-                            @endphp --}}
-                            <td>{{$ppn}}</td>
-                        {{-- <td></td> --}}
+                        <td>{{$ppn}}</td>
                     </tr>
                     <tr>
                         <td style="text-align:right" colspan="6">Jumlah Total</td>
@@ -240,7 +300,14 @@
                 </tr>
                 <tr>
                     <td>7.</td>
-                    <td colspan="2">Jangka Waktu Pelaksanaan 7 (Tujuh) hari kalender, tanggal pelaksanaan yaitu Tanggal 13 September – 20 September 2022</td>
+                    <td colspan="2">Jangka Waktu Pelaksanaan 
+                        @foreach ($SuratPerintahMulaiKerja as $spmk)
+                            {{$spmk->alokasi}} hari kalender, tanggal pelaksanaan yaitu Tanggal {{$spmk->tanggal}} 
+                        @endforeach - 
+                        @foreach ($BeritaAcaraSerahTerimaHasilPekerjaan as $basrhp)
+                            {{$basrhp->tanggal}}
+                        @endforeach
+                    </td>
                 </tr>
                 <tr>
                     <td>8.</td>
@@ -294,7 +361,7 @@
                     <td width="180"><u>I WAYAN RUDY ARTHA, S.Kom</u></td>
                 </tr>
                 <tr>
-                    <td width="180">{{$pengadaan->pengadaan->pelaksana->jabatan_pelaksana}}</td>
+                    <td width="180">NIP. {{$pengadaan->pengadaan->pelaksana->jabatan_pelaksana}}</td>
                     <td width="165"></td>
                     <td width="180">NIP. 19770517 200901 1 005</td>
                 </tr>

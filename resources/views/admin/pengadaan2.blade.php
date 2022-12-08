@@ -120,7 +120,7 @@
                                 <a class="btn btn-info" href="{{ route('pengadaan2.show3',$p2->id) }}">Detail</a>
                                 <a class="btn btn-danger " href="{{route('pengadaan2.print3',$p2->id)}}">Print</a>
 
-                                @elseif($p2->kegiatan == 'PAKTA INTEGRITAS')
+                                @elseif($p2->kegiatan == 'Pakta Integritas')
                                 <a class="btn btn-info" href="{{ route('pengadaan2.show4',$p2->id) }}">Detail</a>
                                 <a class="btn btn-danger " href="{{route('pengadaan2.print4',$p2->id)}}">Print</a>
 

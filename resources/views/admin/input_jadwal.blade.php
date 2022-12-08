@@ -143,7 +143,7 @@
               <option value="Nota Dinas dari KPA ke PPK">Nota Dinas dari KPA ke PPK</option>
               <option value="Nota Dinas dari PPK ke Pejabat Pengadaan + Lampiran OE (HPS)">Nota Dinas dari PPK ke Pejabat Pengadaan + Lampiran OE (HPS)</option>
               <option value="Surat Undangan, Pengambilan Dokumen Kualifikasi dan Dokumen Pengadaan Langsung kepada Penyedia Barang/Jasa">Surat Undangan, Pengambilan Dokumen Kualifikasi dan Dokumen Pengadaan Langsung kepada Penyedia Barang/Jasa</option>
-              <option value="PAKTA  INTEGRITAS">PAKTA INTEGRITAS</option>
+              <option value="Pakta Integritas">Pakta Integritas</option>
               <option value="Surat Pernyataan Minat">Surat Pernyataan Minat</option>
               <option value="Pemasukan Dokumen Kualifikasi">Pemasukan Dokumen Kualifikasi</option>
               <option value="Daftar Hadir Pengembalian Dokumen Prakualifikasi">Daftar Hadir Pengembalian Dokumen Prakualifikasi</option>
@@ -245,7 +245,7 @@
               <option value="Nota Dinas dari KPA ke PPK">Nota Dinas dari KPA ke PPK</option>
               <option value="Nota Dinas dari PPK ke Pejabat Pengadaan + Lampiran OE (HPS)">Nota Dinas dari PPK ke Pejabat Pengadaan + Lampiran OE (HPS)</option>
               <option value="Surat Undangan, Pengambilan Dokumen Kualifikasi dan Dokumen Pengadaan Langsung kepada Penyedia Barang/Jasa">Surat Undangan, Pengambilan Dokumen Kualifikasi dan Dokumen Pengadaan Langsung kepada Penyedia Barang/Jasa</option>
-              <option value="PAKTA INTEGRITAS">PAKTA INTEGRITAS</option>
+              <option value="Pakta Integritas">Pakta Integritas</option>
               <option value="Surat Pernyataan Minat">Surat Pernyataan Minat</option>
               <option value="Pemasukan Dokumen Kualifikasi">Pemasukan Dokumen Kualifikasi</option>
               <option value="Daftar Hadir Pengembalian Dokumen Prakualifikasi">Daftar Hadir Pengembalian Dokumen Prakualifikasi</option>
