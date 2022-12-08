@@ -29,71 +29,73 @@
                             <hr>
                         </td>
                     </tr>
-                </table>
-                {{-- <br> --}}
-                <table border="0" align="center" font-size="2">
-                    <center><font size="3"><u>NOTA DINAS</u></font><br></center>
-                    <br>
-                    <tr>
-                        <td width="80">Kepada</td>
-                        <td>:</td>
-                        <td width="475">Yth. Sdr. Pejabat Pembuat Komitmen Dinas Komunikasi dan</td>
-                    </tr>
-                </table>
-                <table border="0" align="center" font-size="2">
-                    <tr>
-                        <td width="80"> </td>
-                        <td width="5"> </td>
-                        <td width="475">Informatika Provinsi Jawa Timur</td>
-                    </tr>
-                </table>
-                <table border="0" align="center" font-size="2">
-                    <tr>
-                        <td width="80">Dari</td>
-                        <td>:</td>
-                        <td width="475">Kuasa Pengguna Anggaran</td>
-                    </tr>
-                </table>
-                <table border="0" align="center" font-size="2">
-                    <tr>
-                        <td width="80">Tanggal</td>
-                        <td>:</td>
-                        <td width="475">{{$pengadaan->tanggal->isoFormat('D MMMM Y')}}</td>
-                        {{-- <td width="475">{{ $pengadaan->tanggal}}</td> --}}
-                        {{-- <td width="475">11 Agustus 2022</td> --}}
-                    </tr>
-                </table>
-                <table border="0" align="center" font-size="2">
-                    <tr>
-                        <td width="80">Nomor</td>
-                        <td>:</td>
-                        <td width="475">020/{{$pengadaan->nomor}}/114.6/2022</td>
-                    </tr>
-                </table>
-                <table border="0" align="center" font-size="2">
-                    <tr>
-                        <td width="80">Sifat</td>
-                        <td>:</td>
-                        <td width="475">Segera</td>
-                    </tr>
-                </table>
-                <table border="0" align="center" font-size="2">
-                    <tr>
-                        <td width="80">Lampiran</td>
-                        <td>:</td>
-                        <td width="475">1 (satu) berkas</td>
-                    </tr>
-                </table>
-                <table border="0" align="center" font-size="2">
-                    <tr>
-                        <td width="80">Perihal</td>
-                        <td>:</td>
-                        {{-- <td width="475">Pemrosesan Administrasi Pengadaan</td> --}}
-                        <td width="475">Pemrosesan Administrasi Pengadaan {{ $pengadaan->pengadaan->jenis_pengadaan}}</td>
-                        {{-- <td width="475">Pemrosesan Administrasi Pengadaan {{ $pengadaan->jenis_pengadaan}}</td> --}}
-                    </tr>
-                </table>
-                {{-- <table border="0" align="center" font-size="2">
+            </table>
+            {{-- <br> --}}
+            <table border="0" align="center" font-size="2">
+                <center>
+                    <font size="3"><u>NOTA DINAS</u></font><br>
+                </center>
+                <br>
+                <tr>
+                    <td width="80">Kepada</td>
+                    <td>:</td>
+                    <td width="475">Yth. Sdr. Pejabat Pembuat Komitmen Dinas Komunikasi dan</td>
+                </tr>
+            </table>
+            <table border="0" align="center" font-size="2">
+                <tr>
+                    <td width="80"> </td>
+                    <td width="5"> </td>
+                    <td width="475">Informatika Provinsi Jawa Timur</td>
+                </tr>
+            </table>
+            <table border="0" align="center" font-size="2">
+                <tr>
+                    <td width="80">Dari</td>
+                    <td>:</td>
+                    <td width="475">Kuasa Pengguna Anggaran</td>
+                </tr>
+            </table>
+            <table border="0" align="center" font-size="2">
+                <tr>
+                    <td width="80">Tanggal</td>
+                    <td>:</td>
+                    <td width="475">{{$pengadaan->tanggal->isoFormat('D MMMM Y')}}</td>
+                    {{-- <td width="475">{{ $pengadaan->tanggal}}</td> --}}
+                    {{-- <td width="475">11 Agustus 2022</td> --}}
+                </tr>
+            </table>
+            <table border="0" align="center" font-size="2">
+                <tr>
+                    <td width="80">Nomor</td>
+                    <td>:</td>
+                    <td width="475">020/{{$pengadaan->nomor}}/114.6/{{$pengadaan->tanggal->isoFormat('Y')}}</td>
+                </tr>
+            </table>
+            <table border="0" align="center" font-size="2">
+                <tr>
+                    <td width="80">Sifat</td>
+                    <td>:</td>
+                    <td width="475">Segera</td>
+                </tr>
+            </table>
+            <table border="0" align="center" font-size="2">
+                <tr>
+                    <td width="80">Lampiran</td>
+                    <td>:</td>
+                    <td width="475">1 (satu) berkas</td>
+                </tr>
+            </table>
+            <table border="0" align="center" font-size="2">
+                <tr>
+                    <td width="80">Perihal</td>
+                    <td>:</td>
+                    {{-- <td width="475">Pemrosesan Administrasi Pengadaan</td> --}}
+                    <td width="475">Pemrosesan Administrasi Pengadaan {{ $pengadaan->pengadaan->jenis_pengadaan}}</td>
+                    {{-- <td width="475">Pemrosesan Administrasi Pengadaan {{ $pengadaan->jenis_pengadaan}}</td> --}}
+                </tr>
+            </table>
+            {{-- <table border="0" align="center" font-size="2">
                     <tr>
                         <td width="80"> </td>
                         <td width="5"> </td>
@@ -103,7 +105,7 @@
             <br>
             <table border="0" align="center" font-size="2">
                 <tr>
-                    <td width="565">Bersama ini ini diberitahukan, bahwa DPA-SKPD Bagian Data dan Statistik pada Dinas Komunikasi dan Informatika Provinsi Jawa Timur Tahun Anggaran {{ $pengadaan->tanggal}}, kode rekening {{ $pengadaan->pengadaan->pelaksana->kode_rekening}} pengadaan {{ $pengadaan->pengadaan->jenis_pengadaan}} keperluan Dinas Komunikasi dan Informatika Provinsi Jawa Timur dengan rincian sebagai berikut :</td>
+                    <td width="565" style="text-indent: 45px; text-align: justify;">Bersama ini ini diberitahukan, bahwa DPA-SKPD Bagian Data dan Statistik pada Dinas Komunikasi dan Informatika Provinsi Jawa Timur Tahun Anggaran {{ $pengadaan->tanggal->isoFormat('D MMMM Y')}}, kode rekening {{ $pengadaan->pengadaan->pelaksana->kode_rekening}} pengadaan {{ $pengadaan->pengadaan->jenis_pengadaan}} keperluan Dinas Komunikasi dan Informatika Provinsi Jawa Timur dengan rincian sebagai berikut :</td>
                 </tr>
             </table>
             <br>
@@ -120,11 +122,11 @@
                 </thead>
                 <tbody>
                     @foreach ($barang as $brg)
-                        
+
                     <tr>
                         <th scope="row">{{$brg->pengadaan_id}}</th>
                         <td>{{$brg->barang}}</td>
-                        <td align="center">{{$brg->jumlah_barang}}<//td>
+                        <td align="center">{{$brg->jumlah_barang}}</ /td>
                         <td align="center">{{$brg->satuan}}</td>
                         <td align="center">{{$brg->harga_satuan}}</td>
                     </tr>
@@ -134,12 +136,12 @@
             <br>
             <table border="0" align="center" font-size="2">
                 <tr>
-                    <td width="565">Untuk itu diminta bantuannya untuk segera diproses sesuai prosedur yang berlaku.</td>
+                    <td width="565" style="text-indent: 45px; text-align: justify;">Untuk itu diminta bantuannya untuk segera diproses sesuai prosedur yang berlaku.</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
                 <tr>
-                    <td width="565">Demikian untuk pelaksanaannya.</td>
+                    <td width="565" style="text-indent: 45px; text-align:justify;">Demikian untuk pelaksanaannya.</td>
                 </tr>
             </table>
             <br>
@@ -164,7 +166,7 @@
                 <tr>
                     <td width="300"> </td>
                     <td>NIP. 19650909 199403 2 006</td>
-                    {{-- <td>NIP. {{ $pejabat->nip_kuasa_pengguna }}</td>  --}}
+                    {{-- <td>NIP. {{ $pejabat->nip_kuasa_pengguna }}</td> --}}
                     <td width="50"> </td>
                 </tr>
             </table>
@@ -178,6 +180,6 @@
 </div>
 
 
-    
 
-    @endsection
+
+@endsection

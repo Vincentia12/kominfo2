@@ -260,7 +260,7 @@
         <table style="text-align: center" border="0" font-size="0">
             <tr>
                 <td width="20"> </td>
-                <td width="250">NIP. 19650909 199403 2 006</td>
+                <td width="250">NIP. 19650909 199403 2 006 </td>
                 <td width="250">NIP. 19770517 200901 1 005</td>
                 <td width="20"> </td>
             </tr>
