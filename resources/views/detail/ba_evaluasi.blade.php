@@ -50,7 +50,7 @@
             <table border="0" align="center">
                 <tr>
                     <td width="560">
-                        <center><b>BERITA ACARA PENJELASAN PEKERJAAN</b>
+                        <center><b><u>BERITA ACARA EVALUASI DOKUMEN PRAKUALIFIKASI</u></b>
                     </td>
                 <tr>
             </table>
@@ -66,65 +66,59 @@
                     </td>
                     <td width="150">
                         <center>
-                            <font size="2">020/{{$pengadaan->nomor}}/114.6/2022</font>
+                            <font size="2">020/{{$pengadaan->nomor}}/114.6/{{$pengadaan->tanggal->isoFormat('Y')}}</font>
                     </td>
                 <tr>
             </table>
             <br>
             <table border="0" align="center" font-size="2">
                 <tr>
-                    <td width="560">Pada hari ini {{$pengadaan->deskripsi_tanggal}}, dimulai pukul 10.00 WIB sampai dengan selesai, Pejabat Pengadaan di Lingkungan Dinas Komunikasi dan Informatika Provinsi Jawa Timur yang dibentuk dengan Keputusan Kepala Dinas Komunikasi Dan Informatika Provinsi Jawa Timur tanggal {{$pengadaan->tanggal->isoFormat('D MMMM Y')}} Nomor : 188/19/114.1/2022, telah mengadakan rapat penjelasan untuk pengadaan Belanja Alat/Bahan Kapasitas Kelembagaan Statistik Sektoral Toner Printer keperluan Dinas Komunikasi dan Informatika Provinsi Jawa Timur.</td>
+                    <td width="670" style="text-indent: 45px; text-align: justify;">Pada hari ini {{$pengadaan->tanggal->isoFormat('dddd')}} Tanggal {{$pengadaan->deskripsi_tgl}}, dimulai pukul 10.00 WIB sampai dengan selesai, Pejabat Pengadaan di Lingkungan Dinas Komunikasi dan Informatika Provinsi Jawa Timur yang dibentuk dengan Keputusan Kepala Dinas Komunikasi Dan Informatika Provinsi Jawa Timur tanggal {{$pengadaan->tanggal->isoFormat('D MMMM Y')}} Nomor : 188/19/114.1/2022, telah mengadakan rapat penjelasan untuk pengadaan Belanja Alat/Bahan Kapasitas Kelembagaan Statistik Sektoral Toner Printer keperluan Dinas Komunikasi dan Informatika Provinsi Jawa Timur.</td>
                 </tr>
             </table>
             <br>
             <table border="0" align="center">
                 <tr>
-                    <td width="200">NAMA PERUSAHAAN</td>
-                    <td>:</td>
-                    <td width="355">{{$pengadaan->pengadaan->pelaksana->pt_pelaksana}}</td>
+                    <td width="250">NAMA PERUSAHAAN</td>
+                    <td width="10">:</td>
+                    <td width="410" style="text-align: justify;">{{$pengadaan->pengadaan->pelaksana->pt_pelaksana}}</td>
                 </tr>
             </table>
             <table border="0" align="center">
                 <tr>
-                    <td width="200">ALAMAT</td>
-                    <td>:</td>
-                    <td width="355">{{$pengadaan->pengadaan->pelaksana->alamat}}</td>
+                    <td width="250">ALAMAT</td>
+                    <td width="10">:</td>
+                    <td width="410" style="text-align: justify;">{{$pengadaan->pengadaan->pelaksana->alamat}}, {{$pengadaan->pengadaan->pelaksana->kota}}</td>
                 </tr>
             </table>
-            {{--  <table border="0" align="center">
-                <tr>
-                    <td width="205"> </td>
-                    <td> </td>
-                    <td width="355">Mojoroto, S U R A B A Y A – Jawa Timur</td>
-                </tr>
-            </table>  --}}
             <table border="0" align="center">
                 <tr>
-                    <td width="200">NOMOR POKOK WAJIB PAJAK</td>
-                    <td>:</td>
-                    <td width="355">{{$pengadaan->pengadaan->pelaksana->npwp}}</td>
+                    <td width="250">NOMOR POKOK WAJIB PAJAK</td>
+                    <td width="10">:</td>
+                    <td width="410" style="text-align: justify;">{{$pengadaan->pengadaan->pelaksana->npwp}}</td>
                 </tr>
             </table>
             <br>
             <table border="0" align="center" font-size="2">
                 <tr>
-                    <td width="560">Dengan hasil sebagai berikut :</td>
+                    <td width="670">Dengan hasil sebagai berikut :</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
                 <tr>
-                    <td width="560">Setelah mengadakan penelitian dan penilaian secara seksama terhadap dokumen prakualifikasi yang diserahkan penyedia barang/jasa, maka Pejabat Pengadaan Barang/Jasa di Lingkungan Dinas Komunikasi dan Informatika provinsi Jawa Timur memutuskan bahwa calon penyedia barang/jasa tersebut memenuhi syarat untuk melanjutkan kegiatan penunjukan langsung selanjutnya.</td>
+                    <td width="670" style="text-align: justify;">Setelah mengadakan penelitian dan penilaian secara seksama terhadap dokumen prakualifikasi yang diserahkan penyedia barang/jasa, maka Pejabat Pengadaan Barang/Jasa di Lingkungan Dinas Komunikasi dan Informatika provinsi Jawa Timur memutuskan bahwa calon penyedia barang/jasa tersebut memenuhi syarat untuk melanjutkan kegiatan penunjukan langsung selanjutnya.</td>
                 </tr>
             </table>
             <br>
             <table border="0" align="center" font-size="2">
                 <tr>
-                    <td width="560">Demikian Berita Acara evaluasi dokumen prakualifikasi ini dibuat untuk dipergunakan sebagai bahan pertimbangan dalam pelaksanaan selanjutnya.</td>
+                    <td width="670" style="text-align: justify;">Demikian Berita Acara evaluasi dokumen prakualifikasi ini dibuat untuk dipergunakan sebagai bahan pertimbangan dalam pelaksanaan selanjutnya.</td>
                 </tr>
             </table>
+            <br>
             <table border="0" align="center">
                 <tr>
-                    <td width="300"> </td>
+                    <td width="480"> </td>
                     <td>PEJABAT PENGADAAN</td>
                     <td width="50"> </td>
                 </tr>
@@ -134,12 +128,12 @@
             <br>
             <table border="0" align="center">
                 <tr>
-                    <td width="300"> </td>
-                    <td>ADI KURNIAWAN.S.Kom.,M.Kom</td>
+                    <td width="480"> </td>
+                    <td><u>ADI KURNIAWAN.S.Kom.,M.Kom</u></td>
                     <td width="50"> </td>
                 </tr>
                 <tr>
-                    <td width="300"> </td>
+                    <td width="480"> </td>
                     <td>NIP. 19890618 201403 1 002</td>
                     <td width="50"> </td>
                 </tr>
