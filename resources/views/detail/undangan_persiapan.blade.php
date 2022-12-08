@@ -48,7 +48,7 @@
                 <tr>
                     <td width="270"> </td>
                     <!-- diubah. menggunakan kolom craete at tapi aku blm bisa ngubahnya -->
-                    <td>Surabaya, {{$pengadaan->tanggal->isoFormat('D MMMM Y')}}</td>
+                    <td>Surabaya, {{$pengadaan->created_at->isoFormat('D MMMM Y')}}</td>
                     <td width="50"> </td>
                 </tr>
                 <tr>
@@ -88,7 +88,7 @@
                     <td>:</td>
                     <td width="175">Undangan Persiapan <br><u> Pengadaan Langsung</u></td>
                     <td></td>
-                    <td><u><b>SURABAYA</b></u></td>
+                    <td><u><b>{{$pengadaan->pengadaan->pelaksana->kota}}</b></u></td>
                 </tr>
             </table>
             <br>

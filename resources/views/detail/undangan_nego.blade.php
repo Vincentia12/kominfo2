@@ -49,12 +49,13 @@
             </table>
             <table border="0" align="center">
                 <tr>
-                    <td width="300"> </td>
-                    <td>Surabaya, {{$pengadaan->tanggal->isoFormat('D MMMM Y')}}</td>
+                    <td width="270"> </td>
+                    <!-- diubah. menggunakan kolom craete at tapi aku blm bisa ngubahnya -->
+                    <td>Surabaya, {{$pengadaan->created_at->isoFormat('D MMMM Y')}}</td>
                     <td width="50"> </td>
                 </tr>
                 <tr>
-                    <td width="300"> </td>
+                    <td width="270"> </td>
                     <td>Kepada</td>
                     <td width="50"> </td>
                 </tr>
@@ -64,63 +65,55 @@
                 <tr>
                     <td width="80">Nomor</td>
                     <td>:</td>
-                    <td width="175">020/{{$pengadaan->nomor}}/114.6/2022</td>
-                    <td>Yth. Sdr. {{$pengadaan->pengadaan->pelaksana->jabatan_pelaksana}} {{$pengadaan->pengadaan->pelaksana->pt_pelaksana}}</td>
+                    <!-- diubah -->
+                    <td width="250">020/{{$pengadaan->nomor}}/114.6/{{$pengadaan->tanggal->isoFormat('Y')}}</td>
+                    <td width="80">Yth. Sdr. </td>
+                    <!-- diubah -->
+                    <td width="250">{{$pengadaan->pengadaan->pelaksana->jabatan_pelaksana}} {{$pengadaan->pengadaan->pelaksana->pt_pelaksana}}</td>
                 </tr>
-            </table>
-            <table border="0" align="center" font-size="2">
                 <tr>
                     <td width="80">Sifat</td>
                     <td>:</td>
-                    <td width="175">Penting</td>
-                    <td width="160"> </td>
+                    <td width="175">Segera</td>
+                    <td> </td>
+                    <!-- diubah -->
                     <td>{{$pengadaan->pengadaan->pelaksana->alamat}}</td>
                 </tr>
-            </table>
-            <table border="0" align="center" font-size="2">
                 <tr>
                     <td width="80">Lampiran</td>
                     <td>:</td>
-                    <td width="265">-</td>
-                    <td width="70"> </td>
-                    <td width="140">di</td>
+                    <td width="175">-</td>
+                    <td> </td>
+                    <td>di</td>
                 </tr>
-            </table>
-            <table border="0" align="center" font-size="2">
                 <tr>
                     <td width="80">Perihal</td>
                     <td>:</td>
-                    <td width="335">Undangan</td>
-                    <td width="140">SURABAYA</td>
+                    <td width="175">Undangan <br><u> Klarifikasi/Negosiasi</u></td>
+                    <td></td>
+                    <td><u><b>{{$pengadaan->pengadaan->pelaksana->kota}}</b></u></td>
                 </tr>
             </table>
-            <table border="0" align="center" font-size="2">
-                <tr>
-                    <td width="80"> </td>
-                    <td width="5"> </td>
-                    <td width="475">Klarifikasi/Negosiasi</td>
-                </tr>
-            </table>
+
             <br>
             <table border="0" align="center" font-size="2">
                 <tr>
-                    <td width="560">Mengharap dengan hormat kehadiran Saudara dalam acara Klarifikasi dan Negosiasi pengadaan {{$pengadaan->pengadaan->jenis_pengadaan}} yang akan diadakan pada :</td>
+                    <td width="670" style="text-indent: 45px; text-align: justify;">Mengharap dengan hormat kehadiran Saudara dalam acara Klarifikasi dan Negosiasi pengadaan {{$pengadaan->pengadaan->jenis_pengadaan}} yang akan diadakan pada :</td>
                 </tr>
             </table>
             <br>
-            //memanggil tanggal dan no.pengadaan
             <table border="0" align="center" font-size="2">
                 <tr>
                     <td width="100">Hari</td>
                     <td width="10">:</td>
-                    <td width="450">Kamis</td>
+                    <td width="450">{{$pengadaan->tanggal->isoFormat('dddd')}}</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
                 <tr>
                     <td width="100">Tanggal</td>
                     <td width="10">:</td>
-                    <td width="450">1 September 2022</td>
+                    <td width="450">{{$pengadaan->tanggal->isoFormat('D MMMM Y')}}</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
@@ -164,7 +157,7 @@
             <table border="0" align="center">
                 <tr>
                     <td width="300"> </td>
-                    <td>ADI KURNIAWAN.S.Kom.,M.Kom</td>
+                    <td><u>ADI KURNIAWAN.S.Kom.,M.Kom</u></td>
                     <td width="50"> </td>
                 </tr>
                 <tr>
