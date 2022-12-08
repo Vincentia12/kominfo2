@@ -117,6 +117,7 @@
         </div>
                     @php
                     use App\Models\Jadwal;
+                    use App\Models\pejabat;
 
                         $png = $pengadaan->pengadaan_id;
                         // $jdwl = DB::table('jadwals')
@@ -141,6 +142,7 @@
                         $BeritaAcaraSerahTerimaHasilPekerjaan = Jadwal::where('jadwals.pengadaan_id', 'like', "%" . $png . "%")
                             ->where('jadwals.kegiatan', '=', 'BA Serah Terima Hasil Pekerjaan')
                         ->get();
+                        $pejabat = Pejabat::all();
                         //     if ($jdwl->kegiatan = 'Surat Undangan Permintaan Penawaran Harga') {
                         //     $idlain = DB::table('jadwals')
                         //         // ->where('jadwals.pengadaan_id', '=', $jdwl->id )
@@ -336,6 +338,7 @@
         {{-- Pejabat --}}
         <div>
             <table border="0" style="text-align: center;">
+                @foreach ($pejabat as $pjb)
                 <tr>
                     <td colspan="3" width=525></td>
                 </tr>
@@ -358,12 +361,14 @@
                 <tr>
                     <td width="180"><u>{{$pengadaan->pengadaan->pelaksana->nama_pelaksana}}</u></td>
                     <td width="165"></td>
-                    <td width="180"><u>I WAYAN RUDY ARTHA, S.Kom</u></td>
+                    <td width="180"><u>{{$pjb->pejabat_pembuatan_komitmen}}</u></td>
+                    {{-- <td width="180"><u>I WAYAN RUDY ARTHA, S.Kom</u></td> --}}
                 </tr>
                 <tr>
                     <td width="180">NIP. {{$pengadaan->pengadaan->pelaksana->jabatan_pelaksana}}</td>
                     <td width="165"></td>
-                    <td width="180">NIP. 19770517 200901 1 005</td>
+                    <td width="180">NIP. {{$pjb->nip_pejabat_komitmen}}</td>
+                    {{-- <td width="180">NIP. 19770517 200901 1 005</td> --}}
                 </tr>
             </table>
             <table style="text-align: center;" border="0">
@@ -380,14 +385,17 @@
                 <br><br><br><br><br>
                 <tr>
                     <td width="160"></td>
-                    <td width="195"><u>Dra. Ec. NIRMALA DEWI, MM</u></td>
+                    <td width="195"><u>{{$pjb->kuasa_pengguna_anggaran}}</u></td>
+                    {{-- <td width="195"><u>Dra. Ec. NIRMALA DEWI, MM</u></td> --}}
                     <td width="160"></td>
                 </tr>
                 <tr>
                     <td width="160"></td>
-                    <td width="195">NIP. 19650909 199403 2 006</td>
+                    <td width="195">NIP. {{$pjb->nip_kuasa_pengguna}}</td>
+                    {{-- <td width="195">NIP. 19650909 199403 2 006</td> --}}
                     <td width="160"></td>
                 </tr>
+                @endforeach
             </table>
         </div>
 
