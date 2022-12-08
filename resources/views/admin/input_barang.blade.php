@@ -42,8 +42,9 @@
                         <label for="recipient-name" class="col-form-label">Jenis Pengadaan</label>
                         <select class="form-control" name="pengadaan_id" id="pengadaan_id" placeholder="Pilih Pengadaan">
                             <option value="">Pilih Jenis Pengadaan</option>
+                            <option value=""></option>
                             @foreach ($pengadaan as $item)
-                            <option value="{{$item->id}}">{{$item->pelaksana->pt_pelaksana}} Pengadaan {{ $item->jenis_pengadaan }}</option>
+                            <option value="{{$item->id}}">-{{$item->pelaksana->pt_pelaksana}} Pengadaan {{ $item->jenis_pengadaan }}</option>
                             @endforeach
                         </select>
                         <small class="text-danger">{{ $errors->first('jenis_pengadaan') }}</small>
@@ -61,16 +62,16 @@
                     <div class="mb-4">
                         <label for="message-text" class="col-form-label">Satuan</label>
                         <select class="form-control" name="satuan" id="satuan" placeholder="Pilih">
-                            <option>Buah</option>
-                            <option>Pack</option>
-                            <option>Lusin</option>
-                            <option>Karton</option>
+                            <option value="Buah">Buah</option>
+                            <option value="Pack">Pack</option>
+                            <option value="Lusin">Lusin</option>
+                            <option value="Karton">Karton</option>
                         </select>
                         <small class="text-danger">{{ $errors->first('satuan') }}</small>
                     </div>
                     <div class="mb-4">
                         <label for="message-text" class="col-form-label">Harga Satuan</label>
-                        <input type="text" class="form-control" id="harga_satuan" name="harga_satuan" placeholder="1.200.000">
+                        <input type="text" class="form-control" id="harga_satuan" name="harga_satuan" placeholder="1200000">
                         <small class="text-danger">{{ $errors->first('harga_satuan') }}</small>
                     </div>
                     <div class="modal-footer mt-3">
@@ -108,10 +109,10 @@
 
                         <select class="form-control" name="pengadaan_id">
                             <option value="{{$item->id}}">{{$item->pelaksana->pt_pelaksana}} Pengadaan {{ $item->jenis_pengadaan }}</option>
-                            {{-- <option value="{{$br->pengadaan_id}}">{{ $br->pengadaan->jenis_pengadaan }} </option> --}}
                             <option><br></option>
 
                             <option value="">Pilih PT</option>
+                            <option value=""></option>
                             @foreach ($pengadaan as $item)
                             <option value="{{$item->id}}">-{{$item->pelaksana->pt_pelaksana}} Pengadaan {{ $item->jenis_pengadaan }}</option>
                             @endforeach
@@ -132,10 +133,10 @@
                     <div class="mb-4">
                         <label for="message-text" class="col-form-label">Satuan</label>
                         <select class="form-control" name="satuan" id="satuan" value="{{ $br->satuan }}" placeholder="Pilih">
-                            <option>Buah</option>
-                            <option>Pack</option>
-                            <option>Lusin</option>
-                            <option>Karton</option>
+                            <option value="Buah">Buah</option>
+                            <option value="Pack">Pack</option>
+                            <option value="Lusin">Lusin</option>
+                            <option value="Karton">Karton</option>
                         </select>
                         <small class="text-danger">{{ $errors->first('satuan') }}</small>
                     </div>
@@ -190,7 +191,6 @@
                                 <td>Jenis Pengadaan</td>
                                 <td>:</td>
                                 <td>{{ $detail->pengadaan->jenis_pengadaan }}</td>
-                                {{-- <td>{{ $detail->pengadaan->nilai_negosiasi }}</td> --}}
                             </tr>
                         </div>
                     </div>
@@ -230,6 +230,15 @@
                             </tr>
                         </div>
                     </div>
+                    <div class="col-xs-12 col-sm-12 col-md-12">
+                        <div class="form-group">
+                            <tr>
+                                <td>Jumlah Harga</td>
+                                <td>:</td>
+                                <td>{{ $detail->jumlah_harga }}</td>
+                            </tr>
+                        </div>
+                    </div>
                 </table>
             </div>
             <div class="modal-footer mt-3">
@@ -250,25 +259,6 @@
                     <p>{{ $message }}</p>
                 </div>
                 @endif
-                {{-- <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end"> --}}
-                {{-- <div class="d-lg-table align-items-center justify-content-end">
-                    <ul>
-                   
-                    <div class="justify-content-between ">
-                        <h2 class="col-10">Data Masukan Barang</h2>
-                    </div>
-                   
-                    </ul>
-                    <ul>
-                 
-                    <div class="text-right">
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalBarang">
-                            Tambah Data Barang
-                        </button>
-                    </div>
-                  
-                    </ul>
-                </div> --}}
                 <br>
                 <div class="row ">
                     <div class="col-md-8 mb-4">
@@ -287,29 +277,30 @@
                 <br>
 
                 <table id="data1" class="table table-bordered" cellspacing="0">
-                    {{-- <table id="data1" class="table table-bordered" cellspacing="0" width="100%"> --}}
-                    {{-- <table class="table table-bordered " id="data1" style="width:100%"> --}}
-                    {{-- <table class="table table-bordered" id="example"> --}}
                     <thead>
                         <tr>
-                            <th>Jenis Pengadaan</th>
+                            {{-- <th>Pelaksana</th>
+                            <th>Jenis Pengadaan</th> --}}
+                            <th>Pelaksana Pengadaan</th>
                             <th>Barang</th>
                             <th>Jumlah Barang</th>
                             <th>Satuan</th>
                             <th>Harga Barang</th>
-                            <th> Action</th>
-
+                            <th>Jumlah Harga</th>
+                            <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
                         @foreach ($barang as $brng)
                         <tr>
-                            <td>{{ $brng->pengadaan->jenis_pengadaan }}</td>
+                            {{-- <td>{{ $brng->pengadaan->pelaksana->pt_pelaksana}}</td>
+                            <td>{{ $brng->pengadaan->jenis_pengadaan }}</td> --}}
+                            <td>{{ $brng->pengadaan->pelaksana->pt_pelaksana}} Pengadaan {{ $brng->pengadaan->jenis_pengadaan }}</td>
                             <td>{{ $brng->barang }}</td>
                             <td>{{ $brng->jumlah_barang }}</td>
                             <td>{{ $brng->satuan }}</td>
                             <td>{{ $brng->harga_satuan }}</td>
-
+                            <td>{{ $brng->jumlah_harga}}</td>
                             <td>
 
                                 <form action="{{ route('barang.destroy',$brng->id) }}" method="POST">

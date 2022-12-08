@@ -53,8 +53,9 @@
         <table id="data1" class="table table-bordered" cellspacing="0">
           <thead>
             <tr>
-              {{-- <th>Pelaksana</th> --}}
-              <th>Jenis Pengadaan</th>
+              {{-- <th>Pelaksana</th>
+              <th>Jenis Pengadaan</th> --}}
+              <th>Pelaksana Pengadaan</th>
               <th>Kegiatan/th</th>
               <th>Alokasi</th>
               <th>Tanggal</th>
@@ -67,8 +68,9 @@
           <tbody>
             @foreach ($jadwal as $list)
             <tr>
-              {{-- <td>{{ $list->pengadaan->pelaksana->pt_pelaksana }}</td> --}}
-              <td>{{ $list->pengadaan->jenis_pengadaan }}</td>
+              {{-- <td>{{ $list->pengadaan->pelaksana->pt_pelaksana }}</td>
+              <td>{{ $list->pengadaan->jenis_pengadaan }}</td> --}}
+              <td>{{ $list->pengadaan->pelaksana->pt_pelaksana}} Pengadaan {{ $list->pengadaan->jenis_pengadaan }}</td>
               <td>{{ $list->kegiatan }}</td>
               <td>{{ $list->alokasi }}</td>
               <td>{{ $list->tanggal }}</td>
