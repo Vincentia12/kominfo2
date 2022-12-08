@@ -77,7 +77,7 @@
                 </div>
                 @endif
 
-                <table class="table table-bordered" id="" style="width:100%">
+                <table class="table table-bordered" id="data1" style="width:100%">
                     <thead>
                         <tr>
                             <th>Pelaksana</th>

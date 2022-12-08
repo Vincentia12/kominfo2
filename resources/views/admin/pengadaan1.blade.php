@@ -46,7 +46,7 @@
                 {{-- <div class="mb-4"> --}}
                 {{-- <table id="datatable1" class="table table-bordered" style="width:100%"> --}}
                 {{-- <table id="data1" class="table table-bordered" cellspacing="0"> --}}
-                <table id="datatable1" class="table table-bordered" cellspacing="0">
+                <table id="data1" class="table table-bordered" cellspacing="0">
                     <thead>
                         <tr>
                             <th>Pelaksana</th>
