@@ -51,7 +51,8 @@ class PengadaanController extends Controller
             // ->join('barangs', 'pengadaans.id', '=', 'barangs.pengadaan_id')
             ->join('jadwals', 'pengadaans.id', '=', 'jadwals.pengadaan_id')
             // ->groupBy('jadwals.pengadaan_id')
-            ->paginate();
+            // ->paginate();
+            ->get();
         // }
 
         // $pilihan = Pengadaan::all();
@@ -60,16 +61,20 @@ class PengadaanController extends Controller
             // ->join('pelaksanas', 'pelaksana_id', '=', 'pelaksanas.id')
             ->join('pengadaans', 'pengadaans.pelaksana_id', '=', 'pelaksanas.id')
             ->where('pengadaans.nilai_negosiasi', '<=', 50)
-            ->paginate();
+            // ->paginate();
+            ->get();
 
-        $pejabat = Pejabat::all();
+        // $pejabat = Pejabat::all();
+        // $time = jadwal::get('tanggal');
+        // $tanggal = Carbon::parse($time)->translatedFormat('l D F Y');
 
         return view(
             'admin.pengadaan1',
             ['pengadaan' => $pengadaan],
             ['pilihan' => $pilihan],
+            // ['tanggal' =>$tanggal]
             // ['pejabat' => $pejabat],
-            ['pejabat' => $pejabat]
+            // ['pejabat' => $pejabat]
         );
         // )->with('i', (request()->input('page', 1) - 1) * 5);
         // dd($pengadaan, $pilihan);
@@ -83,13 +88,14 @@ class PengadaanController extends Controller
         $pengadaan = Jadwal::where('pengadaan_id', 'like', "%" . $cari1 . "%")
             ->join('pengadaans', 'jadwals.pengadaan_id', '=', 'pengadaans.id')
             ->join('pelaksanas', 'pengadaans.pelaksana_id', '=', 'pelaksanas.id')
-            ->paginate();
-        // ->get();
+            // ->paginate();
+        ->get();
         $pilihan = DB::table('pelaksanas')
             // ->join('pelaksanas', 'pelaksana_id', '=', 'pelaksanas.id')
             ->join('pengadaans', 'pengadaans.pelaksana_id', '=', 'pelaksanas.id')
             ->where('pengadaans.nilai_negosiasi', '<=', 50)
-            ->paginate();
+            // ->paginate();
+            ->get();
 
         // $pejabat = Pejabat::all();
         // mengirim data pegawai ke view index
@@ -110,23 +116,15 @@ class PengadaanController extends Controller
             // ->join('barangs', 'pengadaans.id', '=', 'barangs.pengadaan_id')
             ->join('jadwals', 'pengadaans.id', '=', 'jadwals.pengadaan_id')
             // ->groupBy('jadwals.pengadaan_id')
-            ->paginate();
-        // $pengadaan2 = DB::table('pengadaans')
-        //     // ->select('*')
-        //     // ->join('pengadaans', 'pelaksanas.id', '=', 'pengadaans.pelaksana_id')
-        //     ->join('pelaksanas', 'pelaksana_id', '=', 'pelaksanas.id')
-        //     ->where('nilai_negosiasi', '>', 50)
-        //     ->join('jadwals', 'pengadaans.id', '=', 'jadwals.pengadaan_id')
-        //     ->groupBy('jadwals.pengadaan_id')
-        //     // ->get();
-        //     // ->paginate(10);
-        //     ->paginate();
+            // ->paginate();
+            ->get();
 
         $pilihan = DB::table('pelaksanas')
             // ->join('pelaksanas', 'pelaksana_id', '=', 'pelaksanas.id')
             ->join('pengadaans', 'pengadaans.pelaksana_id', '=', 'pelaksanas.id')
             ->where('pengadaans.nilai_negosiasi', '>', 50)
-            ->paginate();
+            // ->paginate();
+            ->get();
 
         $pejabat = Pejabat::all();
 
@@ -149,13 +147,15 @@ class PengadaanController extends Controller
         $pengadaan = Jadwal::where('pengadaan_id', 'like', "%" . $cari2 . "%")
             ->join('pengadaans', 'jadwals.pengadaan_id', '=', 'pengadaans.id')
             ->join('pelaksanas', 'pengadaans.pelaksana_id', '=', 'pelaksanas.id')
-            ->paginate();
+            // ->paginate();
+            ->get();
 
         $pilihan = DB::table('pelaksanas')
             // ->join('pelaksanas', 'pelaksana_id', '=', 'pelaksanas.id')
             ->join('pengadaans', 'pengadaans.pelaksana_id', '=', 'pelaksanas.id')
             ->where('pengadaans.nilai_negosiasi', '>', 50)
-            ->paginate();
+            // ->paginate();
+            ->get();
 
         // $pejabat = Pejabat::all();
         // mengirim data pegawai ke view index

@@ -47,8 +47,6 @@ class PdfController extends Controller
 
         // $pejabat = Pejabat::all();
 
-
-
         // dd($pengadaan, $barang );
         $pdf = PDF::loadview(
             // $pdf = word::loadview(

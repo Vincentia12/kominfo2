@@ -77,7 +77,8 @@
                 </div>
                 @endif
 
-                <table class="table table-bordered" id="data1" style="width:100%">
+                {{-- <table class="table table-bordered" id="data1" style="width:100%"> --}}
+                <table class="table table-bordered" id="" style="width:100%">
                     <thead>
                         <tr>
                             <th>Pelaksana</th>
@@ -100,8 +101,8 @@
                             <td>{{ $p2->nilai_negosiasi }}</td>
                             <td>{{ $p2->kegiatan }}</td>
                             <td>{{ $p2->alokasi }}</td>
-                            <td>{{ $p2->tanggal }}</td>
-                            <td>{{ $p2->tanggal }}</td>
+                            <td>{{ date('l', strtotime($p2->tanggal)) }}</td>
+                            <td>{{ date('d F Y', strtotime($p2->tanggal)) }}</td>
                             <td>{{ $p2->nomor }}</td>
                             <td>{{ $p2->deskripsi_tgl }}</td>
                             <td>
@@ -110,13 +111,10 @@
                                 <a class="btn btn-danger" href="{{route('pengadaan2.print1',$p2->id)}}">Print</a>
 
                                 @elseif($p2->kegiatan == 'Nota Dinas dari PPK ke Pejabat Pengadaan + Lampiran OE (HPS)')
-                                <!-- {{-- <a class="btn btn-info" href="{{ route('show1',$p2->id) }}">Detail</a> --}} -->
                                 <a class="btn btn-info" href="{{ route('pengadaan2.show2',$p2->id) }}">Detail</a>
                                 <a class="btn btn-danger" href="{{route('pengadaan2.print2',$p2->id)}}">Print</a>
-                                <!-- {{-- <a class="btn btn-info" name="show1">Detail</a> --}} -->
-                                <!-- {{-- url('/print_notadinas1') --}} -->
+
                                 @elseif($p2->kegiatan == 'Surat Undangan, Pengambilan Dokumen Kualifikasi dan Dokumen Pengadaan Langsung kepada Penyedia Barang/Jasa')
-                                <!-- {{-- <a class="btn btn-info" href="{{ route('show1',$p2->id) }}">Detail</a> --}} -->
                                 <a class="btn btn-info" href="{{ route('pengadaan2.show3',$p2->id) }}">Detail</a>
                                 <a class="btn btn-danger " href="{{route('pengadaan2.print3',$p2->id)}}">Print</a>
 
@@ -204,35 +202,11 @@
 
                                 @elseif($p2->kegiatan == 'BA. Hasil Pembayaran')
                                 <a class="btn btn-info" href="{{ route('pengadaan2.show26',$p2->id) }}">Detail</a>
-                                <!-- {{-- <a class="btn btn-info" name="show1">Detail</a> --}} -->
-                                <!-- {{-- url('/print_notadinas1') --}} -->
+
                                 @else
                                 You don't have a post!
                                 @endif
                             </td>
-                            {{-- <td>{{ ++$i }}</td> --}}
-                            {{-- <td>{{ $p2->jenis_pengadaan}}</td>
-                            <td>{{ $p2->pt_pelaksana }}</td>
-                            <td>{{ $p2->nilai_negosiasi }}</td> --}}
-                            {{-- <td>{{ $aset->alamat_aset }}</td>
-                            <td>{{ $aset->status_aset }}</td> --}}
-
-                            {{-- <td>{{ $aset->keterangan_aset }}</td> --}}
-                            {{-- <td> --}}
-
-                            {{-- <form action="{{ route('pengadaan.destroy1',$p2->id) }}" method="POST"> --}}
-
-                            {{-- <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modalDetailPengadaan2{{$p2->id}}">
-                            Detail
-                            </button> --}}
-                            {{-- <a class="btn btn-info" href="{{ route('pengadaan.show',$pengadaan->id) }}">Detail</a>
-                            <a class="btn btn-primary" href="{{ route('pengadaan.edit',$pengadaan->id) }}">Edit</a> --}}
-                            @csrf
-                            @method('DELETE')
-
-                            {{-- <button type="submit" class="btn btn-danger">Delete</button> --}}
-                            {{-- </form> --}}
-                            {{-- </td> --}}
                         </tr>
                         @endforeach
                     </tbody>

@@ -44,9 +44,11 @@
                 </div>
                 @endif
                 {{-- <div class="mb-4"> --}}
+                <table class="table table-bordered" id="" style="width:100%">
+                {{-- <table class="table table-bordered" id="data1" style="width:100%"> --}}
                 {{-- <table id="datatable1" class="table table-bordered" style="width:100%"> --}}
                 {{-- <table id="data1" class="table table-bordered" cellspacing="0"> --}}
-                <table id="data1" class="table table-bordered" cellspacing="0">
+                {{-- <table id="datatable1" class="table table-bordered" cellspacing="0"> --}}
                     <thead>
                         <tr>
                             <th>Pelaksana</th>
@@ -54,14 +56,10 @@
                             <th>Nilai Negosiasi</th>
                             <th>Kegiatan</th>
                             <th>Alokasi</th>
-                            <!-- <th>Hari</th> -->
+                            <th>Hari</th>
                             <th>Tanggal</th>
                             <th>Nomor</th>
                             <th>Deskripsi Tanggal</th>
-                            {{-- <th>NO</th> --}}
-                            {{-- <th>Id Pengadaan</th> --}}
-
-                            {{-- <th>Kegiatan</th> --}}
                             <th width="280px">Action</th>
                         </tr>
                     </thead>
@@ -75,27 +73,27 @@
                             <td>{{ $p1->nilai_negosiasi }}</td>
                             <td>{{ $p1->kegiatan }}</td>
                             <td>{{ $p1->alokasi }}</td>
-                            <td>{{ $p1->tanggal }}</td>
+                            {{-- <td>{{ $pengadaan1->tanggal->format('yyy mm dd') }}</td> --}}
+                            {{-- <td>{{ $tanggal }}</td> --}}
+                            {{-- <td>{{ isoFormat('l d F Y', strtotime($pengadaan->tanggal)) }}</td> --}}
+                            <td>{{ date('l', strtotime($p1->tanggal)) }}</td>
+                            <td>{{ date('d F Y', strtotime($p1->tanggal)) }}</td>
                             <td>{{ $p1->nomor }}</td>
                             <td>{{ $p1->deskripsi_tgl }}</td>
                             <td>
                                 @if ($p1->kegiatan == 'Nota Dinas dari KPA ke PPK')
                                 <a class="btn btn-info" href="{{ route('pengadaan1.show1',$p1->id) }}">Detail</a>
-                                {{-- <a class="btn btn-info" href="pengadaan1/notadinas1/">Print</a> --}}
                                 <a class="btn btn-danger " href="{{route('pengadaan1.print1',$p1->id)}}">Print</a>
-                                {{-- <a class="btn btn-info" href="{{ route('show',$p1->id) }}">Detail</a> --}}
+
                                 @elseif($p1->kegiatan == 'Nota Dinas dari PPK ke Pejabat Pengadaan + Lampiran OE (HPS)')
-                                <!-- {{-- <a class="btn btn-info" href="{{ route('show1',$p1->id) }}">Detail</a> --}} -->
                                 <a class="btn btn-info" href="{{ route('pengadaan1.show2',$p1->id) }}">Detail</a>
                                 <a class="btn btn-danger" href="{{route('pengadaan1.print2',$p1->id)}}">Print</a>
-                                <!-- {{-- <a class="btn btn-info" name="show1">Detail</a> --}} -->
-                                <!-- {{-- url('/print_notadinas1') --}} -->
+                                
                                 @elseif($p1->kegiatan == 'Surat Undangan, Pengambilan Dokumen Kualifikasi dan Dokumen Pengadaan Langsung kepada Penyedia Barang/Jasa')
-                                <!-- {{-- <a class="btn btn-info" href="{{ route('show1',$p1->id) }}">Detail</a> --}} -->
                                 <a class="btn btn-info" href="{{ route('pengadaan1.show3',$p1->id) }}">Detail</a>
                                 <a class="btn btn-danger " href="{{route('pengadaan1.print3',$p1->id)}}">Print</a>
 
-                                @elseif($p2->kegiatan == 'Pakta Integritas')
+                                @elseif($p1->kegiatan == 'Pakta Integritas')
                                 <a class="btn btn-info" href="{{ route('pengadaan1.show4',$p1->id) }}">Detail</a>
                                 <a class="btn btn-danger " href="{{route('pengadaan1.print4',$p1->id)}}">Print</a>
 
@@ -184,58 +182,19 @@
                                 @elseif($p1->kegiatan == 'BA. Hasil Pembayaran')
                                 <a class="btn btn-info" href="{{ route('pengadaan1.show26',$p1->id) }}">Detail</a>
                                 <a class="btn btn-danger " href="{{route('pengadaan1.print26',$p1->id)}}">Print</a>
-                                <!-- {{-- <a class="btn btn-info" name="show1">Detail</a> --}} -->
-                                <!-- {{-- url('/print_notadinas1') --}} -->
+
                                 @else
                                 You don't have a post!
                                 @endif
-                                {{-- <a href="#" value="{{ action() }}" class="btn btn-xs btn-info modalMd" title="Show Data" data-toggle="modal" data-target="#modalMd"><span class="glyphicon glyphicon-eye-open"></span></a> --}}
-                                {{-- <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modalDetailPengadaan1-{{$jd1->pengadaan_id}}"> --}}
-                                {{-- <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modalprint-{{$p1->id}}">
-                                print
-                                </button> --}}
-                                <!-- {{-- <a class="btn btn-info" href="{{ route('pengadaan1.show',$p1->id) }}">Detail</a> --}} -->
-                                <!-- {{-- <a class="btn btn-primary" href="{{ route('pengadaan.edit',$pengadaan->id) }}">Edit</a> --}} -->
-                                @csrf
-                                @method('DELETE')
 
-                                {{-- <button type="submit" class="btn btn-danger">Delete</button> --}}
-                                {{-- </form> --}}
                             </td>
                         </tr>
                         @endforeach
-                        {{-- @endif --}}
                     </tbody>
                 </table>
-                {{-- </div> --}}
-                {{-- </div> --}}
             </div>
         </div>
     </div>
 
     @endsection
 
-    <script>
-        $(document).ready(function() {
-            // DataTable initialisation
-            $('#datatable1').DataTable({
-                "paging": true,
-                "autoWidth": true,
-                "columnDefs": [{
-                    "targets": 3,
-                    "render": function(data, type, full, meta) {
-                        var cellText = $(data).text(); //Stripping html tags !!!
-                        if (type === 'display' && (cellText == "Done" || data == 'Done')) {
-                            var rowIndex = meta.row + 1;
-                            var colIndex = meta.col + 1;
-                            $('#example tbody tr:nth-child(' + rowIndex + ')').addClass('lightRed');
-                            $('#example tbody tr:nth-child(' + rowIndex + ') td:nth-child(' + colIndex + ')').addClass('red');
-                            return data;
-                        } else {
-                            return data;
-                        }
-                    }
-                }]
-            });
-        });
-    </script>

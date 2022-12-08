@@ -58,6 +58,7 @@
               <th>Pelaksana Pengadaan</th>
               <th>Kegiatan/th</th>
               <th>Alokasi</th>
+              <th>Hari</th>
               <th>Tanggal</th>
               <th>Nomor</th>
               <th>Deskripsi Tanggal</th>
@@ -73,7 +74,8 @@
               <td>{{ $list->pengadaan->pelaksana->pt_pelaksana}} Pengadaan {{ $list->pengadaan->jenis_pengadaan }}</td>
               <td>{{ $list->kegiatan }}</td>
               <td>{{ $list->alokasi }}</td>
-              <td>{{ $list->tanggal }}</td>
+              <td>{{ $list->tanggal->isoFormat('dddd') }}</td>
+              <td>{{ $list->tanggal->isoFormat('D MMMM Y') }}</td>
               <td>{{ $list->nomor }}</td>
               <td>{{ $list->deskripsi_tgl }}</td>
 
