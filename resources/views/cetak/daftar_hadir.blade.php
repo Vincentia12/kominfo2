@@ -37,30 +37,47 @@
 
     <br><br>
     <div class="row">
-        <table width="565px" border="1" align="center">
-            <thead>
+        <table width="565px" border="1" align="center"
+        style="color: #333333;border-color: #333333;border-collapse: collapse;"
+        >
+            <thead style="background-color: lightgrey;">
                 <tr align="center">
-                    <th width="30px" style="background-color: lightgrey;" scope="col">No</th>
-                    <th width="121" style="background-color: lightgrey;" scope="col">Nama Perusahaan</th>
-                    <th width="121" style="background-color: lightgrey;" scope="col">Alamat dan No.Telepon</th>
-                    <th width="121" style="background-color: lightgrey;" scope="col">Tanggal</th>
-                    <th width="121" style="background-color: lightgrey;" scope="col">Tanda Tangan</th>
+                    <th width="30px" scope="col">No</th>
+                    <th width="121" scope="col">Nama Perusahaan</th>
+                    <th width="130" scope="col">Alamat dan No.Telepon</th>
+                    <th width="115" scope="col">Tanggal</th>
+                    <th width="121" scope="col">Tanda Tangan</th>
                 </tr>
                 <tr align="center">
-                    <th width="30px" style="background-color: lightgrey;" scope="col">1</th>
-                    <th width="121" style="background-color: lightgrey;" scope="col">2</th>
-                    <th width="121" style="background-color: lightgrey;" scope="col">3</th>
-                    <th width="121" style="background-color: lightgrey;" scope="col">4</th>
-                    <th width="121" style="background-color: lightgrey;" scope="col">5</th>
+                    <th width="30px" scope="col">1</th>
+                    <th width="121" scope="col">2</th>
+                    <th width="121" scope="col">3</th>
+                    <th width="121" scope="col">4</th>
+                    <th width="121" scope="col">5</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr height="100">
-                    <th scope="row">1</th>
+            <tbody align="center">
+                <tr>
+                    <td height="10"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                {{-- <tr style="vertical-align:top"> --}}
+                    <th height="50" scope="row">1</th>
                     <td>{{$pengadaan->pengadaan->pelaksana->pt_pelaksana}}</td>
                     <td>{{$pengadaan->pengadaan->pelaksana->alamat}}, {{$pengadaan->pengadaan->pelaksana->kota}}</td>
                     <td>{{$pengadaan->tanggal->isoFormat('D MMMM Y')}}</td>
                     <td> </td>
+                </tr>
+                <tr>
+                    <td height="10"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
                 </tr>
             </tbody>
         </table>

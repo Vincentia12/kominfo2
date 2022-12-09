@@ -23,63 +23,69 @@
 </div>
 @endif
 
-<div class="col-12 grid-margin stretch-card">
+<div class="grid-margin stretch-card">
     <div class="card shadow">
         <div class="card-body">
-            <table border="0" align="center">
-                <tr>
-                    <td>
-                        <center>
-                            <font size="3"><b>PEJABAT PENGADAAN BARANG/JASA DILINGKUNGAN</b></font><br>
-                            <font size="3"><b>DINAS KOMUNIKASI DAN INFORMATIKA PROVINSI JAWA TIMUR</b></font><br>
-                            <font size="3"><b>PROVINSI JAWA TIMUR</b></font><br>
-                    </td>
-                </tr>
-                <tr>
-                    <td width="555" colspan="2">
-                        <hr>
-                    </td>
-                </tr>
-            </table>
+            <center>
+                <font size="3"><b>PEJABAT PENGADAAN BARANG/JASA DILINGKUNGAN</b></font><br>
+                <font size="3"><b>DINAS KOMUNIKASI DAN INFORMATIKA PROVINSI JAWA TIMUR</b></font><br>
+                <font size="3"><b>PROVINSI JAWA TIMUR</b></font><br>
+            </center>
+            <hr width="650" colspan="3">
             <br>
             <br>
-            <table border="0" align="center">
+            {{-- <table border="1" align="center">
                 <tr>
-                    <td>
+                    <td> --}}
                         <center>
                             <font size="3"><b>DAFTAR HADIR</b></font><br><br>
                             <font size="3"><b>PENGEMBALIAN DOKUMEN PRAKUALIFIKASI</b></font><br>
                             <font size="2"><b>{{$pengadaan->pengadaan->jenis_pengadaan}}</b></font><br>
                             <!-- <font size="2"><b>Statistik Sektoral Toner Printer</b></font><br> -->
-                    </td>
+                        </center>
+                    {{-- </td>
                 </tr>
-            </table>
+            </table> --}}
             <br>
             <br>
-            <table width="565px" border="1" align="center">
-                <thead>
+            <table width="685" border="1" align="center" >
+                <thead style="background-color: lightgrey;">
                     <tr align="center">
                         <th width="30px" scope="col">No</th>
                         <th width="121" scope="col">Nama Perusahaan</th>
-                        <th width="121" scope="col">Alamat dan No.Telepon</th>
+                        <th width="160" scope="col">Alamat dan No.Telepon</th>
                         <th width="121" scope="col">Tanggal</th>
-                        <th width="121" scope="col">Tanda Tangan</th>
+                        <th width="111" scope="col">Tanda Tangan</th>
                     </tr>
                     <tr align="center">
-                        <th width="30px" scope="col">1</th>
-                        <th width="121" scope="col">2</th>
-                        <th width="121" scope="col">3</th>
-                        <th width="121" scope="col">4</th>
-                        <th width="121" scope="col">5</th>
+                        <th scope="col">1</th>
+                        <th scope="col">2</th>
+                        <th scope="col">3</th>
+                        <th scope="col">4</th>
+                        <th scope="col">5</th>
                     </tr>
                 </thead>
                 <tbody>
+                    <tr>
+                        <td height="15"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
                     <tr height="100">
-                        <th scope="row">1</th>
+                        <td >1</td>
                         <td>{{$pengadaan->pengadaan->pelaksana->pt_pelaksana}}</td>
                         <td>{{$pengadaan->pengadaan->pelaksana->alamat}}</td>
                         <td>{{$pengadaan->tanggal->isoFormat('D MMMM Y')}}</td>
                         <td> </td>
+                    </tr>
+                    <tr>
+                        <td height="15"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
                     </tr>
                 </tbody>
             </table>
@@ -102,6 +108,7 @@
             <br>
             <br>
             <br>
+            <br>
             <table border="0" align="center">
                 <tr>
                     <td width="300"> </td>
@@ -121,8 +128,8 @@
 
 <div class="col-12 grid-margin stretch-card">
     <div class="modal-footer mt-3">
-        <button type="back" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
-        <a type="submit" class="btn btn-primary " href="{{ url('/print_notadinas4')  }}">Cetak PDF <i class="fa fa-save"></i></a>
+        <button onclick="history.back()" type="back" class="btn btn-secondary" data-dismiss="modal">Kembali</button>
+        {{-- <a type="submit" class="btn btn-primary " href="{{ url('/print_notadinas4')  }}">Cetak PDF <i class="fa fa-save"></i></a> --}}
     </div>
 </div>
 
