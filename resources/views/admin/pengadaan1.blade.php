@@ -1,7 +1,7 @@
 @extends('layouts/index')
-@section('input-data', 'active')
+{{-- @section('input-data', 'active')
 @section('input-data-collapse', 'collapsed')
-@section('input-sudah', 'active')
+@section('input-sudah', 'active') --}}
 @section('content')
 
 @if ($errors->any())
@@ -84,19 +84,19 @@
                             <td>
                                 @if ($p1->kegiatan == 'Nota Dinas dari KPA ke PPK')
                                 <a class="btn btn-info" href="{{ route('pengadaan1.show1',$p1->id) }}">Detail</a>
-                                <a class="btn btn-danger " href="{{route('pengadaan1.print1',$p1->id)}}">Print</a>
+                                <a class="btn btn-danger " href="{{route('pengadaan1.print1',$p1->id)}}">Cetak PDF <i class="fa fa-save"></i></a>
 
                                 @elseif($p1->kegiatan == 'Nota Dinas dari PPK ke Pejabat Pengadaan + Lampiran OE (HPS)')
                                 <a class="btn btn-info" href="{{ route('pengadaan1.show2',$p1->id) }}">Detail</a>
-                                <a class="btn btn-danger" href="{{route('pengadaan1.print2',$p1->id)}}">Print</a>
+                                <a class="btn btn-danger" href="{{route('pengadaan1.print2',$p1->id)}}">Cetak PDF <i class="fa fa-save"></i></a>
                                 
                                 @elseif($p1->kegiatan == 'Surat Undangan, Pengambilan Dokumen Kualifikasi dan Dokumen Pengadaan Langsung kepada Penyedia Barang/Jasa')
                                 <a class="btn btn-info" href="{{ route('pengadaan1.show3',$p1->id) }}">Detail</a>
-                                <a class="btn btn-danger " href="{{route('pengadaan1.print3',$p1->id)}}">Print</a>
+                                <a class="btn btn-danger " href="{{route('pengadaan1.print3',$p1->id)}}">Cetak PDF <i class="fa fa-save"></i></a>
 
                                 @elseif($p1->kegiatan == 'Pakta Integritas')
                                 <a class="btn btn-info" href="{{ route('pengadaan1.show4',$p1->id) }}">Detail</a>
-                                <a class="btn btn-danger " href="{{route('pengadaan1.print4',$p1->id)}}">Print</a>
+                                <a class="btn btn-danger " href="{{route('pengadaan1.print4',$p1->id)}}">Cetak PDF <i class="fa fa-save"></i></a>
 
                                 @elseif($p1->kegiatan == 'Surat Pernyataan Minat')
                                 <a class="btn btn-info" href="{{ route('pengadaan1.show5',$p1->id) }}">Detail</a>
@@ -106,38 +106,38 @@
 
                                 @elseif($p1->kegiatan == 'Daftar Hadir Pengembalian Dokumen Prakualifikasi')
                                 <a class="btn btn-info" href="{{ route('pengadaan1.show7',$p1->id) }}">Detail</a>
-                                <a class="btn btn-danger " href="{{route('pengadaan1.print7',$p1->id)}}">Print</a>
+                                <a class="btn btn-danger " href="{{route('pengadaan1.print7',$p1->id)}}">Cetak PDF <i class="fa fa-save"></i></a>
 
                                 @elseif($p1->kegiatan == 'BA. Evaluasi Dokumen Prakualifikasi')
                                 <a class="btn btn-info" href="{{ route('pengadaan1.show8',$p1->id) }}">Detail</a>
-                                <a class="btn btn-danger " href="{{route('pengadaan1.print8',$p1->id)}}">Print</a>
+                                <a class="btn btn-danger " href="{{route('pengadaan1.print8',$p1->id)}}">Cetak PDF <i class="fa fa-save"></i></a>
 
                                 @elseif($p1->kegiatan == 'Lampiran BA. Evaluasi Dokumen Prakualifikasi')
                                 <a class="btn btn-info" href="{{ route('pengadaan1.show9',$p1->id) }}">Detail</a>
-                                <a class="btn btn-danger " href="{{route('pengadaan1.print9',$p1->id)}}">Print</a>
+                                <a class="btn btn-danger " href="{{route('pengadaan1.print9',$p1->id)}}">Cetak PDF <i class="fa fa-save"></i></a>
 
                                 @elseif($p1->kegiatan == 'Surat Undangan Permintaan Penawaran Harga')
                                 <a class="btn btn-info" href="{{ route('pengadaan1.show10',$p1->id) }}">Detail</a>
-                                <a class="btn btn-danger " href="{{route('pengadaan1.print10',$p1->id)}}">Print</a>
+                                <a class="btn btn-danger " href="{{route('pengadaan1.print10',$p1->id)}}">Cetak PDF <i class="fa fa-save"></i></a>
 
                                 @elseif($p1->kegiatan == 'BA. Penjelasan Pekerjaan')
                                 <a class="btn btn-info" href="{{ route('pengadaan1.show11',$p1->id) }}">Detail</a>
-                                <a class="btn btn-danger " href="{{route('pengadaan1.print11',$p1->id)}}">Print</a>
+                                <a class="btn btn-danger " href="{{route('pengadaan1.print11',$p1->id)}}">Cetak PDF <i class="fa fa-save"></i></a>
 
                                 @elseif($p1->kegiatan == 'Pemasukan Penawaran')
                                 <a class="btn btn-info" href="{{ route('pengadaan1.show12',$p1->id) }}">Detail</a>
 
                                 @elseif($p1->kegiatan == 'BA. Pembukaan Penawaran')
                                 <a class="btn btn-info" href="{{ route('pengadaan1.show13',$p1->id) }}">Detail</a>
-                                <a class="btn btn-danger " href="{{route('pengadaan1.print13',$p1->id)}}">Print</a>
+                                <a class="btn btn-danger " href="{{route('pengadaan1.print13',$p1->id)}}">Cetak PDF <i class="fa fa-save"></i></a>
 
                                 @elseif($p1->kegiatan == 'Surat Undangan Klarifikasi/Negosiasi')
                                 <a class="btn btn-info" href="{{ route('pengadaan1.show14',$p1->id) }}">Detail</a>
-                                <a class="btn btn-danger " href="{{route('pengadaan1.print14',$p1->id)}}">Print</a>
+                                <a class="btn btn-danger " href="{{route('pengadaan1.print14',$p1->id)}}">Cetak PDF <i class="fa fa-save"></i></a>
 
                                 @elseif($p1->kegiatan == 'BA. Klarifikasi/Negosiasi')
                                 <a class="btn btn-info" href="{{ route('pengadaan1.show15',$p1->id) }}">Detail</a>
-                                <a class="btn btn-danger " href="{{route('pengadaan1.print15',$p1->id)}}">Print</a>
+                                <a class="btn btn-danger " href="{{route('pengadaan1.print15',$p1->id)}}">Cetak PDF <i class="fa fa-save"></i></a>
 
                                 @elseif($p1->kegiatan == 'Lampiran BA. Klarifikasi/Negosiasi')
                                 <a class="btn btn-info" href="{{ route('pengadaan1.show16',$p1->id) }}">Detail</a>
@@ -147,42 +147,42 @@
 
                                 @elseif($p1->kegiatan == 'Nota Dinas dari Pejabat Pengadaan ke PPK')
                                 <a class="btn btn-info" href="{{ route('pengadaan1.show18',$p1->id) }}">Detail</a>
-                                <a class="btn btn-danger " href="{{route('pengadaan1.print18',$p1->id)}}">Print</a>
+                                <a class="btn btn-danger " href="{{route('pengadaan1.print18',$p1->id)}}">Cetak PDF <i class="fa fa-save"></i></a>
 
                                 @elseif($p1->kegiatan == 'Penetapan Penyedia Jasa')
                                 <a class="btn btn-info" href="{{ route('pengadaan1.show19',$p1->id) }}">Detail</a>
-                                <a class="btn btn-danger " href="{{route('pengadaan1.print19',$p1->id)}}">Print</a>
+                                <a class="btn btn-danger " href="{{route('pengadaan1.print19',$p1->id)}}">Cetak PDF <i class="fa fa-save"></i></a>
 
                                 @elseif($p1->kegiatan == 'Penunjukan Penyedia Barang/Jasa')
                                 <a class="btn btn-info" href="{{ route('pengadaan1.show20',$p1->id) }}">Detail</a>
-                                <a class="btn btn-danger " href="{{route('pengadaan1.print20',$p1->id)}}">Print</a>
+                                <a class="btn btn-danger " href="{{route('pengadaan1.print20',$p1->id)}}">Cetak PDF <i class="fa fa-save"></i></a>
 
                                 @elseif($p1->kegiatan == 'Surat Perintah Kerja')
                                 <a class="btn btn-info" href="{{ route('pengadaan1.show21',$p1->id) }}">Detail</a>
-                                <a class="btn btn-danger " href="{{route('pengadaan1.print21',$p1->id)}}">Print</a>
+                                <a class="btn btn-danger " href="{{route('pengadaan1.print21',$p1->id)}}">Cetak PDF <i class="fa fa-save"></i></a>
 
                                 @elseif($p1->kegiatan == 'Surat Perintah Mulai Kerja (SPMK)')
                                 <a class="btn btn-info" href="{{ route('pengadaan1.show22',$p1->id) }}">Detail</a>
-                                <a class="btn btn-danger " href="{{route('pengadaan1.print22',$p1->id)}}">Print</a>
+                                <a class="btn btn-danger " href="{{route('pengadaan1.print22',$p1->id)}}">Cetak PDF <i class="fa fa-save"></i></a>
 
                                 @elseif($p1->kegiatan == 'BA. Serah Terima Hasil Pekerjaan')
                                 <a class="btn btn-info" href="{{ route('pengadaan1.show23',$p1->id) }}">Detail</a>
-                                <a class="btn btn-danger " href="{{route('pengadaan1.print23',$p1->id)}}">Print</a>
+                                <a class="btn btn-danger " href="{{route('pengadaan1.print23',$p1->id)}}">Cetak PDF <i class="fa fa-save"></i></a>
 
                                 @elseif($p1->kegiatan == 'Laporan Proses Pengadaan Barang/Jasa')
                                 <a class="btn btn-info" href="{{ route('pengadaan1.show27',$p1->id) }}">Detail</a>
-                                <a class="btn btn-danger " href="{{route('pengadaan1.print27',$p1->id)}}">Print</a>
+                                <a class="btn btn-danger " href="{{route('pengadaan1.print27',$p1->id)}}">Cetak PDF <i class="fa fa-save"></i></a>
 
                                 @elseif($p1->kegiatan == 'BA. Penyerahan Barang/Jasa')
                                 <a class="btn btn-info" href="{{ route('pengadaan1.show24',$p1->id) }}">Detail</a>
-                                <a class="btn btn-danger " href="{{route('pengadaan1.print24',$p1->id)}}">Print</a>
+                                <a class="btn btn-danger " href="{{route('pengadaan1.print24',$p1->id)}}">Cetak PDF <i class="fa fa-save"></i></a>
 
                                 @elseif($p1->kegiatan == 'BA. Hasil Pemeriksaan Administratif')
                                 <a class="btn btn-info" href="{{ route('pengadaan1.show25',$p1->id) }}">Detail</a>
 
                                 @elseif($p1->kegiatan == 'BA. Hasil Pembayaran')
                                 <a class="btn btn-info" href="{{ route('pengadaan1.show26',$p1->id) }}">Detail</a>
-                                <a class="btn btn-danger " href="{{route('pengadaan1.print26',$p1->id)}}">Print</a>
+                                <a class="btn btn-danger " href="{{route('pengadaan1.print26',$p1->id)}}">Cetak PDF <i class="fa fa-save"></i></a>
 
                                 @else
                                 You don't have a post!
