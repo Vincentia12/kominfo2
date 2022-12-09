@@ -99,7 +99,8 @@
                                 <a class="btn btn-danger " href="{{route('pengadaan1.print4',$p1->id)}}">Cetak PDF <i class="fa fa-save"></i></a>
 
                                 @elseif($p1->kegiatan == 'Surat Pernyataan Minat')
-                                <a class="btn btn-info" href="{{ route('pengadaan1.show5',$p1->id) }}">Detail</a>
+                                <P>Surat Pernyataan Minat Dari Pelaksana</P>
+                                {{-- <a class="btn btn-info" href="{{ route('pengadaan1.show5',$p1->id) }}">Detail</a> --}}
 
                                 @elseif($p1->kegiatan == 'Pemasukan Dokumen Kualifikasi')
                                 <a class="btn btn-info" href="{{ route('pengadaan1.show6',$p1->id) }}">Detail</a>
