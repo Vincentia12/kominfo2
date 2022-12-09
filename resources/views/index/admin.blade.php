@@ -52,7 +52,9 @@
                     <div>
                     <tr>
                         <th>tahun:</th>
-                        <th>{{$p->tahun_sk}}</th>
+                        <th>{{date('Y', strtotime($p->tanggal_sk))}}</th>
+                        {{-- <th>{{$p->tanggal_sk->format('Y')}}</th> --}}
+                        {{-- <th>{{$p->tahun_sk}}</th> --}}
                     </tr></div>
                     <div>
                     <tr>
@@ -118,69 +120,6 @@
 
 </div>
 
-<!-- {{-- 
-<div class="card-body">
-    <a href="/pegawai/tambah" class="btn btn-primary">Input Pegawai Baru</a>
-    <br/>
-    <br/>
-    <table class="table table-bordered table-hover table-striped">
-        <thead>
-            <tr>
-                <th>Nama</th>
-                <th>Alamat</th>
-                <th>OPSI</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach($pelaksanas as $p)
-            <tr>
-                <td>{{ $p->pt_pelaksana }}</td>
-                <td>{{ $p->nama }}</td>
-                <td>
-                    <a href="/pegawai/edit/{{ $p->id }}" class="btn btn-warning">Edit</a>
-                    <a href="/pegawai/hapus/{{ $p->id }}" class="btn btn-danger">Hapus</a>
-                </td>
-            </tr>
-            @endforeach
-        </tbody>
-    </table>
-</div> --}} -->
-
-{{-- Diagram --}}
-<div class="row">
-    <div class="col grid-margin stretch-card">
-        <div class="card shadow">
-            <div class="card-body">
-                <div class="chartjs-size-monitor">
-                    <div class="chartjs-size-monitor-expand">
-                        <div class=""></div>
-                    </div>
-                    <div class="chartjs-size-monitor-shrink">
-                        <div class=""></div>
-                    </div>
-                </div>
-                <div class="d-flex justify-content-between">
-                    <p class="card-title">Sales Report</p>
-                    <a href="#" class="text-info">View all</a>
-                </div>
-                <p class="font-weight-500">The total text of sessions within the date range. It is the period time a user is actively engaged with your website, page or app, etc</p>
-                <div id="sales-legend" class="chartjs-legend mt-4 mb-2">
-                    <ul class="1-legend">
-                        <li>
-                            <span style="background-color: rgb(152, 189, 255);"></span>Offline Sales
-                        </li>
-                        <li>
-                            <span style="background-color: rgb(75, 73, 172);"></span>Online Sales
-                        </li>
-                    </ul>
-                </div>
-                {{-- tempalte1/js/dashboard.js --}}
-                <canvas id="sales-chart" width="441" height="220" style="display: block; height: 147px; width: 294px;" class="chartjs-render-monitor"></canvas>
-            </div>
-        </div>
-    </div>
-</div>
-
 <!-- Modal Edit Pejabat -->
 <div class="modal fade" id="modalSaya" tabindex="-1" role="dialog" aria-labelledby="modalSayaLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-scrollable" role="document">
@@ -203,17 +142,17 @@
                 <form method="POST" action="{{ url('pejabat/update', $pejabat->id ) }}">
                     @csrf
                     
-                    <div class="mb-4">
-                        <label for="recipient-name" class="col-form-label">Tahun SK</label>
+                    {{-- <div class="mb-4">
+                        <label for="recipient-name" class="col-form-label">Tahun SK</label> --}}
                         {{-- <input type="text" class="form-control" id="recipient-name" name="tahun_sk" value="{{ $value->tahun_sk }}" placeholder="Tahun SK"> --}}
                         {{-- <input type="text" class="form-control" id="recipient-name" name="tahun_sk" value="{{ $p->tahun_sk }}" placeholder="Tahun SK"> --}}
-                        <input type="text" class="form-control" id="recipient-name" name="tahun_sk" value="{{ $pejabat->tahun_sk }}" placeholder="Tahun SK">
-                    </div>
+                        {{-- <input type="text" class="form-control" id="recipient-name" name="tahun_sk" value="{{ $pejabat->tahun_sk }}" placeholder="Tahun SK">
+                    </div> --}}
                     <div class="mb-4">
                         <label for="recipient-name" class="col-form-label">Tanggal SK</label>
                         {{-- <input type="text" class="form-control" id="recipient-name" name="tanggal_sk" value="{{ $value->tanggal_sk }}" placeholder="Tanggal SK"> --}}
                         {{-- <input type="text" class="form-control" id="recipient-name" name="tanggal_sk" value="{{ $p->tanggal_sk }}" placeholder="Tanggal SK"> --}}
-                        <input type="text" class="form-control" id="recipient-name" name="tanggal_sk" value="{{ $pejabat->tanggal_sk }}" placeholder="Tanggal SK">
+                        <input type="date" class="form-control" id="recipient-name" name="tanggal_sk" value="{{ $pejabat->tanggal_sk }}" placeholder="Tanggal SK">
                     </div>
                     <div class="mb-4">
                         <label for="recipient-name" class="col-form-label">Nomor SK</label>
@@ -279,7 +218,41 @@
         </div>
     </div>
 </div>
-{{-- @endforeach --}}
+
+{{-- Diagram --}}
+<div class="row">
+    <div class="col grid-margin stretch-card">
+        <div class="card shadow">
+            <div class="card-body">
+                <div class="chartjs-size-monitor">
+                    <div class="chartjs-size-monitor-expand">
+                        <div class=""></div>
+                    </div>
+                    <div class="chartjs-size-monitor-shrink">
+                        <div class=""></div>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <p class="card-title">Sales Report</p>
+                    <a href="#" class="text-info">View all</a>
+                </div>
+                <p class="font-weight-500">The total text of sessions within the date range. It is the period time a user is actively engaged with your website, page or app, etc</p>
+                <div id="sales-legend" class="chartjs-legend mt-4 mb-2">
+                    <ul class="1-legend">
+                        <li>
+                            <span style="background-color: rgb(152, 189, 255);"></span>Offline Sales
+                        </li>
+                        <li>
+                            <span style="background-color: rgb(75, 73, 172);"></span>Online Sales
+                        </li>
+                    </ul>
+                </div>
+                {{-- tempalte1/js/dashboard.js --}}
+                <canvas id="sales-chart" width="441" height="220" style="display: block; height: 147px; width: 294px;" class="chartjs-render-monitor"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
 
 <!-- Content Row -->
 @endsection

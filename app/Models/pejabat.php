@@ -4,10 +4,15 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Carbon;
 
 class Pejabat extends Model
 {
     use HasFactory;
+
+    protected $table = "pejabats";
+    protected $primarykay = "id";
+    protected $dates = ['tanggal'];
 
     protected $fillable = [
         // 'id',
@@ -23,8 +28,10 @@ class Pejabat extends Model
         'bpp',
         'nip_bpp'
     ];
-
-    // protected $table = "pejabats";
-    // protected $primarykay = "id";
     
+    public function getCreatedTanggalAttribute()
+    {
+        return Carbon::parse($this->attributes['tanggal'])
+            ->translatedFormat('l, d F Y');
+    }
 }

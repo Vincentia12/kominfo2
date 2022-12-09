@@ -43,7 +43,7 @@
             {{-- <font color="black">  --}}
             <p align="center"><u><b> SURAT PERINTAH KERJA </b></u> <br>
                 {{-- Nomor : 020/654.{{$pengadaan->nomor}}/114.6/2022 </p> --}}
-                Nomor : 020/654.{{$pengadaan->nomor}}/114.6/2022 </p>
+                Nomor : 020/654.{{$pengadaan->nomor}}/114.6/{{$pengadaan->tanggal->format('Y')}} </p>
             {{-- </font> --}}
         </div>
     </div>
@@ -173,7 +173,7 @@
                    
                         <td>Surat Permintaan Penawaran Nomor : 
                             @foreach ($SuratUndanganPermintaanPenawaranHarga as $supph)
-                            020/{{$supph->nomor}}/114.6/ambiltgl Tanggal {{$supph->tanggal}}
+                            020/{{$supph->nomor}}/114.6/{{$supph->tanggal->format('Y')}} Tanggal {{$supph->tanggal}}
                             @endforeach
                         </td>
                         {{-- <td>{{$j->nomor}}</td> --}}
@@ -196,7 +196,7 @@
                     {{-- no surat lain --}}
                     <td>Berita Acara Hasil Klarifikasi dan Negosiasi Nomor : 
                         @foreach ($BeritaAcaraHasilKlarifikasiNegosiasi as $bahkn)
-                        {{$bahkn->nomor}} Tanggal {{$bahkn->tanggl}}
+                        020/{{$bahkn->nomor}}/114.6/{{$bahkn->tanggal->format('Y')}} Tanggal {{$bahkn->tanggl}}
                         @endforeach
                     </td>
                     {{-- <td>Berita Acara Hasil Klarifikasi dan Negosiasi Nomor : 020/654.9/114.6/2022 Tanggal 1 September 2022</td> --}}
@@ -206,7 +206,7 @@
                     {{-- no surat lain --}}
                     <td>Berita Acara Hasil Pengadaan Langsung Nomor : 
                         @foreach ($BeritaAcaraHasilPengadaanLangsung as $bahpl)
-                        {{$bahpl->nomor}} Tanggal {{$bahpl->tanggl}}
+                        020/{{$bahpl->nomor}}/114.6/{{$bahpl->tanggal->format('Y')}} Tanggal {{$bahpl->tanggl}}
                         @endforeach
                     </td>
                 </tr>
@@ -296,10 +296,16 @@
                 </tbody>
             </table>
             <table>
+                @foreach ($pejabat as $pj)
                 <tr>
                     <td>6.</td>
-                    <td colspan="2">Pembayaran dengan Sumber Dana APBD Provinsi Jawa Timur Tahun Anggaran 2022, dibebankan pada DPA - SKPD Dinas Komunikasi dan Informatika Provinsi Jawa Timur Tahun Anggaran 2022, Kode Rekening {{$pengadaan->pengadaan->pelaksana->kode_rekening}}</td>
+                    <td colspan="2">Pembayaran dengan Sumber Dana APBD Provinsi Jawa Timur Tahun Anggaran {{date('Y', strtotime($pj->tanggal_sk))}}, 
+                    {{-- <td colspan="2">Pembayaran dengan Sumber Dana APBD Provinsi Jawa Timur Tahun Anggaran {{$pj->tahun_sk}},  --}}
+                        dibebankan pada DPA - SKPD Dinas Komunikasi dan Informatika Provinsi Jawa Timur Tahun Anggaran {{date('Y', strtotime($pj->tanggal_sk))}}, 
+                        {{-- dibebankan pada DPA - SKPD Dinas Komunikasi dan Informatika Provinsi Jawa Timur Tahun Anggaran {{$pj->tanggal_sk->isoFormat('Y')}},  --}}
+                        Kode Rekening {{$pengadaan->pengadaan->pelaksana->kode_rekening}}</td>
                 </tr>
+                @endforeach
                 <tr>
                     <td>7.</td>
                     <td colspan="2">Jangka Waktu Pelaksanaan 

@@ -260,7 +260,7 @@
               <option value="BA. Penjelasan Pekerjaan">BA. Penjelasan Pekerjaan</option>
               <option value="Pemasukan Penawaran">Pemasukan Penawaran</option>
               <option value="BA. Pembukaan Penawaran">BA. Pembukaan Penawaran</option>
-              <option value="Surat Undangan Klarifikasi/Negosias">Surat Undangan Klarifikasi/Negosiasi</option>
+              <option value="Surat Undangan Klarifikasi/Negosiasi">Surat Undangan Klarifikasi/Negosiasi</option>
               <option value="BA. Klarifikasi/Negosiasi">BA. Klarifikasi/Negosiasi</option>
               <option value="Lampiran BA. Klarifikasi/Negosiasi">Lampiran BA. Klarifikasi/Negosiasi</option>
               <option value="BA. Hasil Pengadaan Langsung">BA. Hasil Pengadaan Langsung</option>
@@ -282,9 +282,10 @@
             <small class="text-danger">{{ $errors->first('alokasi') }}</small>
           </div>
           <div class="mb-4">
-            <label for="message-text" class="col-form-label">Tanggal</label>
-            <input type="date" class="form-control" id="tanggal" name="tanggal" value="{{ $jdwl->tanggal }}">
-            <small class="text-danger">{{ $errors->first('tanggal') }}</small>
+            <label for="recipient-name" class="col-form-label">Tanggal</label>
+            {{-- <input type="date" class="form-control" id="tanggal" name="tanggal" value="{{ $jdwl->tanggal }}"> --}}
+            <input type="date" class="form-control" id="recipient-name" name="tanggal" value="{{ $jdwl->tanggal }}" placeholder="Tanggal">
+            {{-- <small class="text-danger">{{ $errors->first('tanggal') }}</small> --}}
           </div>
           <div class="mb-4">
             <label for="message-text" class="col-form-label">Nomor</label>
@@ -298,7 +299,7 @@
           </div>
           <div class="modal-footer mt-3">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
-            <button type="submit" class="btn btn-primary ">Simpan <i class="fa fa-save"></i></button>
+            <button type="submit" class="btn btn-primary "><i class="fa fa-save"></i> Update Data</button>
           </div>
         </form>
       </div>
