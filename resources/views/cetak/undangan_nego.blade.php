@@ -84,7 +84,7 @@
                 <td>:</td>
                 <td width="175">Undangan <br><u> Klarifikasi/Negosiasi</u></td>
                 <td></td>
-                <td><b><u>SURABAYA</u></b></td>
+                <td><b><u>{{$pengadaan->pengadaan->pelaksana->kota}}</u></b></td>
             </tr>
         </table>
     </div>
@@ -124,8 +124,8 @@
             </tr>
             <tr>
                 <td width="60"></td>
-                <td width="70">Tempat</td>
-                <td>:</td>
+                <td width="70" style="vertical-align: top;">Tempat</td>
+                <td style="vertical-align: top;">:</td>
                 <td>Ruang Argopuro lt.II Dinas Komunikasi Dan Informatika Provinsi Jawa Timur Jl. Ahmad Yani 242 - 244 Surabaya</td>
             </tr>
         </table>
@@ -142,12 +142,16 @@
 
     <br>
     <br>
+    @php
+    use App\Models\pejabat;
+    $pejabat = Pejabat::all();
+    @endphp
     <div style="text-align:center ;">
+        @foreach ($pejabat as $pjb)
         <table style="text-align: center" border="0" font-size="0">
             <tr>
                 <td width="300"> </td>
                 <td>PEJABAT PENGADAAN</td>
-                {{-- <td width="50"> </td> --}}
             </tr>
             <br>
             <br>
@@ -155,14 +159,13 @@
             <br>
             <tr>
                 <td width="300"> </td>
-                <td width="250">ADI KURNIAWAN.S.Kom.,M.Kom</td>
-                {{-- <td width="50"> </td> --}}
+                <td width="250">{{$pjb->pejabat_pengadaan}}</td>
             </tr>
             <tr>
                 <td width="300"> </td>
-                <td>NIP. 19890618 201403 1 002</td>
-                {{-- <td width="50"> </td> --}}
+                <td>NIP. {{$pjb->nip_pejabat_pengadaan}}</td>
             </tr>
         </table>
+        @endforeach
     </div>
 </div>

@@ -38,7 +38,12 @@
     </div>
 
     <div class="row">
+        @php
+        use App\Models\pejabat;
+        $pejabat = Pejabat::all();
+        @endphp
         <table border="0" align="center">
+            @foreach ($pejabat as $pjb)
             <tr>
                 <td style="text-align: center">
                     <u><b> BERITA ACARA KLARIFIKASI / NEGOSIASI</b></u>
@@ -57,7 +62,7 @@
                     <font size="3">:</font>
                 </td>
                 <td style="text-align: center">
-                    <font size="3">020/654.{{$pengadaan->nomor}} /114.6/2022</font>
+                    <font size="3">020/654.{{$pengadaan->nomor}} /114.6/{{$pengadaan->tanggal->isoFormat('Y')}}</font>
                 </td>
                 </td>
             <tr>
@@ -69,7 +74,7 @@
         <table>
             <tr>
                 <td width="8"></td>
-                <td style="text-align: left ;text-align: justify; text-indent: 45px;">Pada hari ini {{$pengadaan->tanggal->isoFormat('dddd')}}, Tanggal {{$pengadaan->deskripsi_tgl}} kami yang bertanda tangan dibawah ini adalah Pejabat Pengadaan di Lingkungan Dinas Komunikasi Dan Informatika Provinsi Jawa Timur yang dibentuk dengan Keputusan Kepala Dinas Komunikasi Dan Informatika Provinsi Jawa Timur selaku Pengguna Anggaran tanggal 3 Januari 2022 Nomor : 188/19/114.1/2022, melaksanakan klarifikasi dan negosiasi untuk pelaksanaan {{$pengadaan->pengadaan->jenis_pengadaan}}, dibiayai dari dana APBD Tahun Anggaran {{$pengadaan->tanggal->isoFormat('Y')}} pada DPA Dinas Komunikasi dan Informatika Provinsi Jawa Timur Kode Rekening 2.20.02.1.01.5.1.02.01.01.0029 dengan Harga Perkiraan Sendiri (HPS) sebesar Rp. {{$pengadaan->pengadaan->total_hps}},- ({{$pengadaan->pengadaan->deskripsi_hps}}).</td>
+                <td style="text-align: left ;text-align: justify; text-indent: 45px;">Pada hari ini {{$pengadaan->tanggal->isoFormat('dddd')}}, Tanggal {{$pengadaan->deskripsi_tgl}} kami yang bertanda tangan dibawah ini adalah Pejabat Pengadaan di Lingkungan Dinas Komunikasi Dan Informatika Provinsi Jawa Timur yang dibentuk dengan Keputusan Kepala Dinas Komunikasi Dan Informatika Provinsi Jawa Timur selaku Pengguna Anggaran tanggal {{date('D Y', strtotime($pjb->tanggal_sk))}} Nomor : {{$pjb->nomor_sk}}, melaksanakan klarifikasi dan negosiasi untuk pelaksanaan {{$pengadaan->pengadaan->jenis_pengadaan}}, dibiayai dari dana APBD Tahun Anggaran {{$pengadaan->tanggal->isoFormat('Y')}} pada DPA Dinas Komunikasi dan Informatika Provinsi Jawa Timur Kode Rekening 2.20.02.1.01.5.1.02.01.01.0029 dengan Harga Perkiraan Sendiri (HPS) sebesar Rp. {{$pengadaan->pengadaan->total_hps}},- ({{$pengadaan->pengadaan->deskripsi_hps}}).</td>
             </tr>
         </table>
     </div>
@@ -97,30 +102,27 @@
     <div>
         <table border="0" align="center">
             <tr>
-                <td width="8"></td>
                 <td width="180">Nama Perusahaan</td>
                 <td>:</td>
-                <td width="370">{{$pengadaan->pengadaan->pelaksana->pt_pelaksana}}</td>
+                <td width="330">{{$pengadaan->pengadaan->pelaksana->pt_pelaksana}}</td>
             </tr>
         </table>
     </div>
     <div>
         <table border="0" align="center">
             <tr>
-                <td width="8"></td>
                 <td width="180">Nama Penanggung Jawab</td>
                 <td>:</td>
-                <td width="370">{{$pengadaan->pengadaan->pelaksana->nama_pelaksana}}</td>
+                <td width="330">{{$pengadaan->pengadaan->pelaksana->nama_pelaksana}}</td>
             </tr>
         </table>
     </div>
     <div>
         <table border="0" align="center">
             <tr>
-                <td width="8"></td>
                 <td width="180">Alamat Perusahaan</td>
                 <td>:</td>
-                <td width="370">{{$pengadaan->pengadaan->pelaksana->alamat}} {{$pengadaan->pengadaan->pelaksana->kota}}</td>
+                <td width="330">{{$pengadaan->pengadaan->pelaksana->alamat}}, {{$pengadaan->pengadaan->pelaksana->kota}}</td>
             </tr>
         </table>
     </div>
@@ -128,35 +130,30 @@
     <div>
         <table border="0" align="center">
             <tr>
-                <td width="8"></td>
                 <td width="180">Nomomr Pokok Wajib Pajak</td>
                 <td>:</td>
-                <td width="370">{{$pengadaan->pengadaan->pelaksana->npwp}}</td>
+                <td width="330">{{$pengadaan->pengadaan->pelaksana->npwp}}</td>
             </tr>
         </table>
     </div>
     <div>
         <table border="0" align="center">
             <tr>
-                <td width="8"></td>
-                <td width="180">Pekerjaan</td>
-                <td>:</td>
-                <td width="370">{{$pengadaan->pengadaan->jenis_pengadaan}}</td>
+                <td width="180" style="vertical-align: top;">Pekerjaan</td>
+                <td style="vertical-align: top;">:</td>
+                <td width="330" style="text-align: justify;">{{$pengadaan->pengadaan->jenis_pengadaan}}</td>
             </tr>
         </table>
     </div>
     <div>
         <table border="0" align="center">
             <tr>
-                <td width="8"></td>
                 <td width="180">Dengan Harga</td>
                 <td>:</td>
-                <td width="370">RP. {{$pengadaan->pengadaan->nilai_negosiasi}},- ({{$pengadaan->pengadaan->deskripsi_negosiasi}})</td>
+                <td width="330">RP. {{$pengadaan->pengadaan->nilai_negosiasi}},- ({{$pengadaan->pengadaan->deskripsi_negosiasi}})</td>
             </tr>
         </table>
     </div>
-
-    <br>
     <div class="row">
         <table>
             <tr>
@@ -203,7 +200,7 @@
             <tr>
                 <td width="20"> </td>
                 <td width="250"><u>{{$pengadaan->pengadaan->pelaksana->nama_pelaksana}}</u></td>
-                <td width="250"><u>ADI KURNIAWAN.S.Kom.,M.Kom</u></td>
+                <td width="250"><u>{{$pjb->pejabat_pengadaan}}</u></td>
                 <td width="20"> </td>
             </tr>
         </table>
@@ -213,11 +210,12 @@
             <tr>
                 <td width="20"> </td>
                 <td width="250"> </td>
-                <td width="250">NIP. 19890618 201403 1 002</td>
+                <td width="250">NIP. {{$pjb->nip_pejabat_pengadaan}}</td>
                 <td width="20"> </td>
             </tr>
         </table>
     </div>
+    @endforeach
 
 
 </div>

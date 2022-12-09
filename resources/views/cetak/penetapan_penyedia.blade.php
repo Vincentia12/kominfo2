@@ -64,12 +64,49 @@
         </table>
     </div>
 
+    @php
+    use App\Models\Jadwal;
+    use App\Models\pejabat;
+
+    $png = $pengadaan->pengadaan_id;
+    // $jdwl = DB::table('jadwals')
+    // ->where('jadwals.pengadaan_id', 'like', "%" . $png . "%")
+    // // ->where('jadwals.kegiatan', '=', 'Surat Undangan Permintaan Penawaran Harga')
+    // ->get();
+    $BeritaAcaraEvaluasiaDokumenPrakualifikasi = Jadwal::where('jadwals.pengadaan_id', 'like', "%" . $png . "%")
+    ->where('jadwals.kegiatan', '=', 'BA. Evaluasi Dokumen Prakualifikasi')
+    ->get();
+
+    $BeritaAcaraHasilKlarifikasiNegosiasi = Jadwal::where('jadwals.pengadaan_id', 'like', "%" . $png . "%")
+    ->where('jadwals.kegiatan', '=', 'BA. Klarifikasi/egosiasi')
+    ->get();
+    $pejabat = Pejabat::all();
+    // if ($jdwl->kegiatan = 'Surat Undangan Permintaan Penawaran Harga') {
+    // $idlain = DB::table('jadwals')
+    // // ->where('jadwals.pengadaan_id', '=', $jdwl->id )
+    // ->get();
+    // // $idlain = Jadwal::all();
+    // // Jadwal::all();
+    // }else {
+    // # code...
+    // }
+
+    // if ($jdwl->kegiatan = 'Surat Undangan Permintaan Penawaran Harga')
+    // elseif (condition) {
+    // # code...
+    // }
+    // endif
+    // return $jdwl;
+    @endphp
+
+
+
     <br>
     <div class="row">
         <table>
             <tr>
                 <td width="8"></td>
-                <td style="text-align: left ;text-align: justify; text-indent: 45px;">Berdasarkan Berita Acara Evaluasi Dokumen Prakualifikasi Tanggal 18 Agustus 2022 Nomor : 020/654.4/114.6/2022 dan Berita Acara Klarifikasi/Negosiasi Penawaran Tanggal 1 September 2022 Nomor : 020/654.9/114.6/2022, Pekerjaan Pengadaan {{$pengadaan->pengadaan->jenis_pengadaan}} , dengan ini Pejabat Pengadaan Dinas Komunikasi dan Informatika Provinsi Jawa Timur menetapkan penyedia jasa tersebut di bawah ini untuk sebagai Penyedia Barang/Jasa dengan nilai HPS sebesar Rp. {{$pengadaan->pengadaan->total_hps}},- ({{$pengadaan->pengadaan->deskripsi_hps}}) :</td>
+                <td style="text-align: left ;text-align: justify; text-indent: 45px;"> @foreach ($BeritaAcaraEvaluasiaDokumenPrakualifikasi as $baedp) Berdasarkan Berita Acara Evaluasi Dokumen Prakualifikasi Tanggal {{$baedp->tanggal}} Nomor : 020/{{$baedp->nomor}}/114.6/{{$baedp->tanggal->format('Y')}} @endforeach dan @foreach ($BeritaAcaraHasilKlarifikasiNegosiasi as $bahk) Berita Acara Klarifikasi/Negosiasi Penawaran Tanggal {{$bahk->tanggal}} Nomor : 020/{{$bahk->nomor}}/114.6/{{$bahk->tanggal->format('Y')}} @endforeach, Pekerjaan Pengadaan {{$pengadaan->pengadaan->jenis_pengadaan}} , dengan ini Pejabat Pengadaan Dinas Komunikasi dan Informatika Provinsi Jawa Timur menetapkan penyedia jasa tersebut di bawah ini untuk sebagai Penyedia Barang/Jasa dengan nilai HPS sebesar Rp. {{$pengadaan->pengadaan->total_hps}},- ({{$pengadaan->pengadaan->deskripsi_hps}}) :</td>
             </tr>
         </table>
     </div>
@@ -95,7 +132,7 @@
                 <td width="30"></td>
                 <td width="120">Alamat</td>
                 <td>:</td>
-                <td>{{ $pengadaan->pengadaan->pelaksana->alamat }} {{ $pengadaan->pengadaan->pelaksana->kota }}</td>
+                <td>{{ $pengadaan->pengadaan->pelaksana->alamat }}, {{ $pengadaan->pengadaan->pelaksana->kota }}</td>
             </tr>
             <tr>
                 <td width="30"></td>
@@ -143,24 +180,18 @@
     <br><br><br><br>
 
     <table border="0" align="center">
+        @foreach ($pejabat as $pjb)
         <tr>
             <td width="290"> </td>
-            <td><u>ADI KURNIAWAN.S.Kom.,M.Kom</u></td>
+            <td><u>{{$pjb->pejabat_pengadaan}}</u></td>
         </tr>
-        <!-- <tr>
-            <td width="300"> </td>
-            <td>NIP. 19890618 201403 1 002</td>
-        </tr> -->
     </table>
     <table border="0" align="center">
         <tr>
             <td width="290"> </td>
-            <td>NIP. 19890618 201403 1 002</td>
+            <td>NIP. {{$pjb->nip_pejabat_pengadaan}}</td>
         </tr>
-        <!-- <tr>
-            <td width="300"> </td>
-            <td>NIP. 19890618 201403 1 002</td>
-        </tr> -->
+        @endforeach
     </table>
 
 
