@@ -73,7 +73,7 @@
     </div>
     <br>
     <div class="row">
-        <table width="565px" border="1" align="center">
+        <table width="565px" border="1" align="center" style="color: #333333;border-color: #333333;border-collapse: collapse;">
             <thead>
                 <tr align="center">
                     {{-- <th width="50px" scope="col">id pengadaan</th> --}}
@@ -122,7 +122,7 @@
     <div style="text-align: center">
         <table style="width: 50%; text-align: left; float: right;">
             <tr>
-                <td>KUASA PENGGUNA ANGGARAN</td>
+                <td style="text-align: center">KUASA PENGGUNA ANGGARAN</td>
             </tr>
         </table>
         <br>
@@ -132,7 +132,7 @@
         <table style="width: 50%; text-align: left; float: right;">
             @foreach ($pejabat as $pjb)
             <tr>
-                <td>
+                <td style="text-align: center">
                     <!-- <u> Dra. Ec. NIRMALA DEWI, M.M</u> -->
                     <u> {{$pjb->kuasa_pengguna_anggaran}}</u>
                     <br>
