@@ -40,25 +40,25 @@
         <table width="565px" border="1" align="center">
             <thead>
                 <tr align="center">
-                    <th width="30px" scope="col">No</th>
-                    <th width="121" scope="col">Nama Perusahaan</th>
-                    <th width="121" scope="col">Alamat dan No.Telepon</th>
-                    <th width="121" scope="col">Tanggal</th>
-                    <th width="121" scope="col">Tanda Tangan</th>
+                    <th width="30px" style="background-color: lightgrey;" scope="col">No</th>
+                    <th width="121" style="background-color: lightgrey;" scope="col">Nama Perusahaan</th>
+                    <th width="121" style="background-color: lightgrey;" scope="col">Alamat dan No.Telepon</th>
+                    <th width="121" style="background-color: lightgrey;" scope="col">Tanggal</th>
+                    <th width="121" style="background-color: lightgrey;" scope="col">Tanda Tangan</th>
                 </tr>
                 <tr align="center">
-                    <th width="30px" scope="col">1</th>
-                    <th width="121" scope="col">2</th>
-                    <th width="121" scope="col">3</th>
-                    <th width="121" scope="col">4</th>
-                    <th width="121" scope="col">5</th>
+                    <th width="30px" style="background-color: lightgrey;" scope="col">1</th>
+                    <th width="121" style="background-color: lightgrey;" scope="col">2</th>
+                    <th width="121" style="background-color: lightgrey;" scope="col">3</th>
+                    <th width="121" style="background-color: lightgrey;" scope="col">4</th>
+                    <th width="121" style="background-color: lightgrey;" scope="col">5</th>
                 </tr>
             </thead>
             <tbody>
                 <tr height="100">
                     <th scope="row">1</th>
                     <td>{{$pengadaan->pengadaan->pelaksana->pt_pelaksana}}</td>
-                    <td>{{$pengadaan->pengadaan->pelaksana->alamat}}</td>
+                    <td>{{$pengadaan->pengadaan->pelaksana->alamat}}, {{$pengadaan->pengadaan->pelaksana->kota}}</td>
                     <td>{{$pengadaan->tanggal->isoFormat('D MMMM Y')}}</td>
                     <td> </td>
                 </tr>
@@ -71,13 +71,17 @@
         <div style="text-align: center">
             <table font-size="3" style="width: 36%; text-align: left; float: right;">
                 <tr>
-                    <td>Surabaya, {{$pengadaan->tanggal->isoFormat('D MMMM Y')}}</td>
+                    <td>Surabaya, {{$pengadaan->created_at->isoFormat('D MMMM Y')}}</td>
                 </tr>
             </table>
         </div>
     </div>
-
+    @php
+    use App\Models\pejabat;
+    $pejabat = Pejabat::all();
+    @endphp
     <br><br>
+    @foreach ($pejabat as $pjb)
     <table border="0" align="center">
         <tr>
             <td width="290"> </td>
@@ -90,23 +94,16 @@
     <table border="0" align="center">
         <tr>
             <td width="290"> </td>
-            <td><u>ADI KURNIAWAN.S.Kom.,M.Kom</u></td>
+            <td><u>{{$pjb->pejabat_pengadaan}}</u></td>
         </tr>
-        <!-- <tr>
-            <td width="300"> </td>
-            <td>NIP. 19890618 201403 1 002</td>
-        </tr> -->
     </table>
     <table border="0" align="center">
         <tr>
             <td width="290"> </td>
-            <td>NIP. 19890618 201403 1 002</td>
+            <td>NIP. {{$pjb->nip_pejabat_pengadaan}}</td>
         </tr>
-        <!-- <tr>
-            <td width="300"> </td>
-            <td>NIP. 19890618 201403 1 002</td>
-        </tr> -->
+
     </table>
 
-
+    @endforeach
 </div>

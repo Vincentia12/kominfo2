@@ -58,21 +58,26 @@
                     <font size="3">:</font>
                 </td>
                 <td style="text-align: center">
-                    <font size="3">020/654.6 /114.6/{{$pengadaan->tanggal->isoFormat('Y')}}</font>
+                    <font size="3">020/{{$pengadaan->nomor}}/114.6/{{$pengadaan->tanggal->isoFormat('Y')}}</font>
                 </td>
                 </td>
             <tr>
         </table>
     </div>
-
+    @php
+    use App\Models\pejabat;
+    $pejabat = Pejabat::all();
+    @endphp
     <br><br>
     <div class="row">
         <table>
+            @foreach ($pejabat as $pjb)
             <tr>
                 <td width="8"></td>
-                <td style="text-align: left ;text-align: justify; text-indent: 45px;">Pada hari ini {{$pengadaan->tanggal->isoFormat('dddd')}} Tanggal Delapan Belas, Bulan Agustus Tahun Dua Ribu Dua Puluh Dua, bertempat di Ruang Argopuro Dinas Komunikasi Dan Informatika Provinsi Jawa Timur, kami yang bertanda tangan dibawah ini adalah Pejabat Pengadaan di Lingkungan Dinas Komunikasi Dan Informatika Provinsi Jawa Timur Tahun Anggaran {{$pengadaan->tanggal->isoFormat('Y')}} yang dibentuk dengan Keputusan Kepala Dinas Komunikasi Dan Informatika Provinsi Jawa Timur tanggal 3 Januari 2022 Nomor : 188/19/114.1/{{$pengadaan->tanggal->isoFormat('Y')}}, telah melakukan penilaian dokumen prakualifikasi penunjukan langsung Belanja Alat/Bahan Kapasitas Kelembagaan Statistik Sektoral Toner Printer , dibiayai dari dana APBD Tahun Anggaran {{$pengadaan->tanggal->isoFormat('Y')}} pada DPA Dinas Komunikasi dan Informatika Provinsi Jawa Timur Kode Rekening 2.20.02.1.01.5.1.02.01.01.0029 yang telah diserahkan oleh :</td>
+                <td style="text-align: left ;text-align: justify; text-indent: 45px;">Pada hari ini {{$pengadaan->tanggal->isoFormat('dddd')}} Tanggal {{$pengadaan->deskripsi_tgl}}, bertempat di Ruang Argopuro Dinas Komunikasi Dan Informatika Provinsi Jawa Timur, kami yang bertanda tangan dibawah ini adalah Pejabat Pengadaan di Lingkungan Dinas Komunikasi Dan Informatika Provinsi Jawa Timur Tahun Anggaran {{$pengadaan->tanggal->isoFormat('Y')}} yang dibentuk dengan Keputusan Kepala Dinas Komunikasi Dan Informatika Provinsi Jawa Timur tanggal {{date('D MMM Y', strtotime($pjb->tanggal_sk))}} Nomor : {{$pjb->nomor_sk}}, telah melakukan penilaian dokumen prakualifikasi penunjukan langsung Belanja Alat/Bahan Kapasitas Kelembagaan Statistik Sektoral Toner Printer , dibiayai dari dana APBD Tahun Anggaran {{date('Y', strtotime($pjb->tanggal_sk))}} pada DPA Dinas Komunikasi dan Informatika Provinsi Jawa Timur Kode Rekening {{$pengadaan->pengadaan->pelaksana->kode_rekening}} yang telah diserahkan oleh :</td>
             </tr>
         </table>
+        @endforeach
     </div>
 
     <br>
@@ -92,7 +97,7 @@
                 <td width="8"></td>
                 <td width="180">ALAMAT</td>
                 <td>:</td>
-                <td width="370">{{$pengadaan->pengadaan->pelaksana->alamat}}</td>
+                <td width="370">{{$pengadaan->pengadaan->pelaksana->alamat}}, {{$pengadaan->pengadaan->pelaksana->kota}}</td>
             </tr>
         </table>
     </div>
@@ -139,10 +144,10 @@
     <br><br>
     <div style="text-align:center ;">
         <table style="text-align: center" border="0" font-size="0">
+            @foreach ($pejabat as $pjb)
             <tr>
                 <td width="300"> </td>
                 <td>PEJABAT PENGADAAN</td>
-                {{-- <td width="50"> </td> --}}
             </tr>
             <br>
             <br>
@@ -151,14 +156,13 @@
             <br>
             <tr>
                 <td width="300"> </td>
-                <td width="250"><u>ADI KURNIAWAN.S.Kom.,M.Kom</u></td>
-                {{-- <td width="50"> </td> --}}
+                <td width="250"><u>{{$pjb->pejabat_pengadaan}}</u></td>
             </tr>
             <tr>
                 <td width="300"> </td>
-                <td>NIP. 19890618 201403 1 002</td>
-                {{-- <td width="50"> </td> --}}
+                <td>NIP. {{$pjb->nip_pejabat_pengadaan}}</td>
             </tr>
+            @endforeach
         </table>
     </div>
 

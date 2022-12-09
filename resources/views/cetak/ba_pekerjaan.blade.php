@@ -40,25 +40,29 @@
         </div>
         {{-- judul --}}
         <div style="text-align: center">
-            {{-- <font color="black">  --}}
             <p align="center"><u><b> BERITA ACARA PENJELASAN PEKERJAAN </b></u> <br>
-                Nomor : 020/{{$pengadaan->nomor}}/114.6/2022 </p>
-            {{-- </font> --}}
+                Nomor : 020/{{$pengadaan->nomor}}/114.6/{{$pengadaan->tanggal->isoFormat('Y')}} </p>
         </div>
     </div>
 
+    @php
+    use App\Models\pejabat;
+    $pejabat = Pejabat::all();
+    @endphp
     {{-- isi --}}
     <div style="text-align: center;">
         <div>
             <table font-size="1">
+                @foreach ($pejabat as $pjb)
                 <tr>
                     <td style="text-indent: 45px;  text-align:justify">
-                        Pada hari ini {{$pengadaan->tanggal->isoFormat('dddd')}} {{$pengadaan->deskripsi_tgl}}, dimulai pukul 10.00 WIB sampai dengan selesai, Pejabat Pengadaan di Lingkungan Dinas Komunikasi dan Informatika Provinsi Jawa Timur yang dibentuk dengan Keputusan Kepala Dinas Komunikasi Dan Informatika Provinsi Jawa Timur
+                        Pada hari ini {{$pengadaan->tanggal->isoFormat('dddd')}} Tanggal {{$pengadaan->deskripsi_tgl}}, dimulai pukul 10.00 WIB sampai dengan selesai, Pejabat Pengadaan di Lingkungan Dinas Komunikasi dan Informatika Provinsi Jawa Timur yang dibentuk dengan Keputusan Kepala Dinas Komunikasi Dan Informatika Provinsi Jawa Timur
                         {{-- dari tabel pejabat --}}
-                        tanggal 3 Januari 2022 Nomor : 188/19/114.1/2022,
+                        tanggal {{date('D Y', strtotime($pjb->tanggal_sk))}} Nomor : {{$pjb->nomor_sk}},
                         telah mengadakan rapat penjelasan untuk pengadaan {{$pengadaan->pengadaan->jenis_pengadaan}} keperluan Dinas Komunikasi dan Informatika Provinsi Jawa Timur.
                     </td>
                 </tr>
+                @endforeach
             </table>
         </div>
         <br>
@@ -76,7 +80,7 @@
                     <td>Penjelasan seluruh isi Dokumen Pengadaan Langsung.</td>
                 </tr>
                 <tr>
-                    <td>3.</td>
+                    <td style="vertical-align: top;">3.</td>
                     <td>Nilai HPS/OE untuk pekerjaan ini adalah Rp. {{$pengadaan->pengadaan->total_hps}},- ({{$pengadaan->pengadaan->deskripsi_hps}}).</td>
                 </tr>
                 <tr>
@@ -90,13 +94,12 @@
                 <tr>
                     <td colspan="3" style="text-align: center;">
                         <font color="black">
-                            {{-- <p align="center"> --}}
                             <b> DOKUMEN PENGADAAN <br>BAB I INSTRUKSI KEPADA PESERTA PENGADAAN (LKPP) </b>
-                            {{-- </p> --}}
                         </font>
                     </td>
                 </tr>
                 <br>
+
                 {{-- A --}}
                 <tr>
                     <td width="8">A.</td>
@@ -211,6 +214,7 @@
         {{-- Pejabat 1 --}}
         <div>
             <table>
+                @foreach ($pejabat as $pjb)
                 <tr style="text-align: center;">
                     <td width="550">
                         <b> PIHAK PEJABAT PEMBUAT KOMITMEN </b>
@@ -226,7 +230,7 @@
                 </tr>
                 <tr>
                     <td height="100">1</td>
-                    <td>I WAYAN RUDY ARTHA, S.Kom</td>
+                    <td>{{$pjb->pejabat_pembuatan_komitmen}}</td>
                     <td>Pejabat Pembuat Komitmen</td>
                     <td></td>
                 </tr>
@@ -251,7 +255,7 @@
                 </tr>
                 <tr>
                     <td height="100">1</td>
-                    <td>ADI KURNIAWAN.S.Kom.,M.Kom</td>
+                    <td>{{$pjb->pejabat_pengadaan}}</td>
                     <td>Pejabat Pengadaan</td>
                     <td></td>
                 </tr>
@@ -280,6 +284,7 @@
                     <td>{{$pengadaan->pengadaan->pelaksana->pt_pelaksana}}</td>
                     <td></td>
                 </tr>
+                @endforeach
             </table>
         </div>
     </div>

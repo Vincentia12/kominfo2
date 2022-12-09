@@ -36,7 +36,6 @@
         </table>
         <hr>
     </div>
-
     <div>
         <table>
             <tr>
@@ -84,7 +83,7 @@
                 <td>:</td>
                 <td width="175">Undangan Permintaan <br><u> Penawaran Harga</u></td>
                 <td></td>
-                <td><u>SURABAYA</u></td>
+                <td><u>{{$pengadaan->pengadaan->pelaksana->kota}}</u></td>
             </tr>
         </table>
     </div>
@@ -100,7 +99,12 @@
         </table>
     </div>
     {{-- <br> --}}
+    @php
+    use App\Models\pejabat;
+    $pejabat = Pejabat::all();
+    @endphp
     <div style="text-align:center ;">
+        @foreach ($pejabat as $pjb)
         <table class="table" border="0" align="center" font-size="1">
             <tr>
                 <td width="8"></td>
@@ -111,21 +115,15 @@
             </tr>
             <tr>
                 <td width="8"></td>
-                <td width="50">Lingkup pekerjaan</td>
+                <td width="50" style="vertical-align: top;">Lingkup pekerjaan</td>
                 <td>:</td>
-                <td>PK melalui Pejabat Pengadaan mengundang Penyedia</td>
-            </tr>
-            <tr>
-                <td width="8"></td>
-                <td width="50"> </td>
-                <td> </td>
-                <td style="text-align: justify;"> Barang untuk menyampaikan penawaran atas paket pengadaan barang yang tercantum dalam Spesifikasi Teknis, Daftar Kuantitas dan Harga serta nomor pekerjaan yang tercantum dalam LDP. Penyedia Barang yang ditunjuk berkewajiban untuk menyelesaikan pekerjaan dalam jangka waktu dan perkiraan batas akhir waktu penyelesaian yang tercantum dalam LDP.</td>
+                <td style="text-align: justify;">PK melalui Pejabat Pengadaan mengundang Penyedia Barang untuk menyampaikan penawaran atas paket pengadaan barang yang tercantum dalam Spesifikasi Teknis, Daftar Kuantitas dan Harga serta nomor pekerjaan yang tercantum dalam LDP. Penyedia Barang yang ditunjuk berkewajiban untuk menyelesaikan pekerjaan dalam jangka waktu dan perkiraan batas akhir waktu penyelesaian yang tercantum dalam LDP.</td>
             </tr>
             <tr>
                 <td width="8"></td>
                 <td width="50">Sumber Dana</td>
                 <td>:</td>
-                <td>APBD Provinsi Jawa Timur Tahun Anggaran {{$pengadaan->tanggal->isoFormat('Y')}}</td>
+                <td>APBD Provinsi Jawa Timur Tahun Anggaran {{date('Y', strtotime($pjb->tanggal_sk))}}</td>
             </tr>
             <tr>
                 <td width="8"></td>
@@ -135,8 +133,8 @@
                 <td>Rp. {{$pengadaan->pengadaan->total_hps}},- ({{$pengadaan->pengadaan->deskripsi_hps}})</td>
             </tr>
         </table>
+        @endforeach
     </div>
-    <br>
     <div>
         <table class="table" border="0" align="" font-size="1">
             <tr>
@@ -181,25 +179,25 @@
     </div>
     <br>
     <div style="text-align:center ;">
+
         <table style="text-align: center" border="0" font-size="0">
+            @foreach ($pejabat as $pjb)
             <tr>
                 <td width="300"> </td>
                 <td>PEJABAT PENGADAAN</td>
-                {{-- <td width="50"> </td> --}}
             </tr>
             <br>
             <br>
             <br>
             <tr>
                 <td width="300"> </td>
-                <td width="250"><u>ADI KURNIAWAN.S.Kom.,M.Kom</u></td>
-                {{-- <td width="50"> </td> --}}
+                <td width="250"><u>{{$pjb->pejabat_pengadaan}}</u></td>
             </tr>
             <tr>
                 <td width="300"> </td>
-                <td>NIP. 19890618 201403 1 002</td>
-                {{-- <td width="50"> </td> --}}
+                <td>NIP. {{$pjb->nip_pejabat_pengadaan}}</td>
             </tr>
+            @endforeach
         </table>
     </div>
 </div>

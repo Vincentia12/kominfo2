@@ -114,12 +114,16 @@
         </table>
     </div>
     <br>
+    @php
+    use App\Models\pejabat;
+    $pejabat = Pejabat::all();
+    @endphp
     <div>
         <table style="text-align: center;" border="0" font-size="0">
+            @foreach ($pejabat as $pjb)
             <tr>
                 <td width="400"> </td>
                 <td style="text-indent: 45px;">PEJABAT PENGADAAN</td>
-                {{-- <td width="50"> </td> --}}
             </tr>
             <br>
             <br>
@@ -127,14 +131,13 @@
             <br>
             <tr>
                 <td width="400"> </td>
-                <td width="250" style="text-indent: 45px;"><u>ADI KURNIAWAN.S.Kom.,M.Kom</u></td>
-                {{-- <td width="50"> </td> --}}
+                <td width="250" style="text-indent: 45px;"><u>{{$pjb->pejabat_pengadaan}}</u></td>
             </tr>
             <tr>
                 <td width="450"> </td>
-                <td style="text-indent: 45px;">NIP. 19890618 201403 1 002</td>
-                {{-- <td width="50"> </td> --}}
+                <td style="text-indent: 45px;">NIP. {{$pjb->nip_pejabat_pengadaan}}</td>
             </tr>
+            @endforeach
         </table>
     </div>
 </div>
