@@ -70,7 +70,7 @@
     </div>
     <br>
     <div class="row">
-        <table width="565px" border="1" align="center">
+        <table width="565px" border="1" align="center" style="color: #333333;border-color: #333333;border-collapse: collapse;">
             <thead>
                 <tr align="center">
                     {{-- <th width="50px" scope="col">id pengadaan</th> --}}

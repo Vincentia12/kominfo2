@@ -15,21 +15,14 @@
 <div class="col-12 grid-margin stretch-card">
     <div class="card shadow">
         <div class="card-body">
-            <table border="0" align="center">
-                <tr>
-                    <td>
-                        <center>
-                            <font size="3"><b>DINAS KOMUNIKASI DAN INFORMATIKA</b></font><br>
-                            <font size="3"><b>PROVINSI JAWA TIMUR<b /></font><br>
-                            <font size="3"><u>NOTA DINAS<u /></font><br>
-                    </td>
-                </tr>
-                <tr>
-                    <td width="555" colspan="2">
-                        <hr>
-                    </td>
-                </tr>
-            </table>
+            <div style="text-align: center">
+                <font color="black" border="0" align="center" font-size="2">
+                    <p align="center"><b> DINAS KOMUNIKASI DAN INFORMATIKA </b></p>
+                    <p align="center"><b> PROVINSI JAWA TIMUR </b></p>
+                </font>
+                <hr width="630" colspan="2">
+                <p align="center"><u><b> NOTA DINAS </b></u></p>
+            </div>
             <br>
             <table border="0" align="center" font-size="2">
                 <tr>
@@ -89,15 +82,7 @@
                     {{-- <td width="475">Pemrosesan Administrasi Pengadaan {{ $jadwal->jenis_pengadaan }}</td> --}}
                 </tr>
             </table>
-            <hr>
-            <!-- <table border="0" align="center" font-size="2">
-                <tr>
-                    <td width="80"> </td>
-                    <td width="5"> </td>
-                    {{-- <td width="475">Kapasitas Kelembagaan Statistik Sektoral Toner Printer</td> --}}
-                </tr>
-            </table> -->
-            <br>
+            <hr width="630" colspan="2">
             <table border="0" align="center" font-size="2">
                 <tr>
                     <td width="565" style="text-indent: 45px; text-align: justify;">Bersama ini ini diberitahukan, bahwa DPA-SKPD Bagian Data dan Statistik pada Dinas Komunikasi dan Informatika Provinsi Jawa Timur Tahun Anggaran {{$pengadaan->tanggal->isoFormat('D MMMM Y')}}, kode rekening {{ $pengadaan->pengadaan->pelaksana->kode_rekening}} pengadaan {{ $pengadaan->pengadaan->jenis_pengadaan}} keperluan Dinas Komunikasi dan Informatika Provinsi Jawa Timur dengan rincian sebagai berikut :</td>
@@ -169,9 +154,12 @@
 
 <div class="col-12 grid-margin stretch-card">
     <div class="modal-footer mt-3">
+        <button onclick="history.back()" type="back" class="btn btn-secondary" data-dismiss="modal">Kembali</button>
+    </div>
+    {{-- <div class="modal-footer mt-3">
         <button type="back" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
         <a type="submit" class="btn btn-primary " href="{{ url('/print_notadinas2')  }}">Cetak PDF <i class="fa fa-save"></i></a>
-    </div>
+    </div> --}}
 </div>
 
 @endsection
