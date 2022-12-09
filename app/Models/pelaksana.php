@@ -16,7 +16,7 @@ class Pelaksana extends Model
         'kota',
         'nama_pelaksana',
         'jabatan_pelaksana',
-        'kode_rekening',
+        // 'kode_rekening',
         'npwp',
         'tlp'
     ];

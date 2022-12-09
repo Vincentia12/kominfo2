@@ -49,7 +49,7 @@ class PelaksanaController extends Controller
             'kota' => 'required',
             'nama_pelaksana' => 'required',
             'jabatan_pelaksana' => 'required',
-            'kode_rekening' => 'required',
+            // 'kode_rekening' => 'required',
             'npwp' => 'required',
             'tlp' => 'required'
         ]);

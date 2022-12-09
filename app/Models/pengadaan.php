@@ -14,6 +14,7 @@ class Pengadaan extends Model
         // 'id', 
         'pelaksana_id',
         'jenis_pengadaan',
+        'kode_rekening',
         'total_hps',
         'deskripsi_hps',
         'harga_penawaran',

@@ -196,6 +196,7 @@ class PengadaanController extends Controller
             // 'id' => 'required',
             'pelaksana_id' => 'required',
             'jenis_pengadaan' => 'required',
+            'kode_rekening' => 'required',
             'total_hps' => 'required',
             'deskripsi_hps' => 'required',
             'harga_penawaran' => 'required',

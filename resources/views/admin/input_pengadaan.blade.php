@@ -145,6 +145,11 @@
             <small class="text-danger">{{ $errors->first('jenis_pengadaan') }}</small>
           </div>
           <div class="mb-4">
+            <label for="message-text" class="col-form-label">Kode Rekening</label>
+            <input type="text" class="form-control" id="kode_rekening" name="kode_rekening" value="{{ old('kode_rekening') }}" placeholder="Kode Rekening">
+            <small class="text-danger">{{ $errors->first('kode_rekening') }}</small>
+        </div>
+          <div class="mb-4">
             <label for="message-text" class="col-form-label">Biaya HPS (Harga Perkiraan Sendiri)</label>
             <input type="text" class="form-control" id="total_hps" name="total_hps" value="{{ old('total_hps') }}" placeholder="10.000.000">
             <small class="text-danger">{{ $errors->first('total_hps') }}</small>
@@ -307,6 +312,15 @@
           </div>
           <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
+                <tr>
+                    <td>Kode Rekening</td>
+                    <td>:</td>
+                    <td>{{ $pg->kode_rekening }}</td>
+                </tr>
+            </div>
+        </div>
+          <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
               <tr>
                 <td>Biaya HPS (Harga Perkiraan Sendiri)</td>
                 <td>:</td>
@@ -320,62 +334,62 @@
                 <td>Deskripsi HPS (Harga Perkiraan Sendiri)</td>
                 <td>:</td>
                 <td>{{ $pg->deskripsi_hps }}</td>
-          </tr>
-      </div>
-    </div> --}}
-    <div class="col-xs-12 col-sm-12 col-md-12">
-      <div class="form-group">
-        <tr>
-          <td>Deskripsi HPS (Harga Perkiraan Sendiri)</td>
-          <td>:</td>
-          <td>{{ $pg->deskripsi_hps }}</td>
-        </tr>
+              </tr>
+            </div>
+          </div> --}}
+          <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+              <tr>
+                <td>Deskripsi HPS (Harga Perkiraan Sendiri)</td>
+                <td>:</td>
+                <td>{{ $pg->deskripsi_hps }}</td>
+              </tr>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+              <tr>
+                <td>Harga Penawaran</td>
+                <td>:</td>
+                <td>{{ $pg->harga_penawaran }}</td>
+              </tr>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+              <tr>
+                <td>Deskripsi Harga Penawaran</td>
+                <td>:</td>
+                <td>{{ $pg->deskripsi_penawaran }}</td>
+              </tr>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+              <tr>
+                <td>Nilai Negosiasi</td>
+                <td>:</td>
+                <td>{{ $pg->nilai_negosiasi }}</td>
+              </tr>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+              <tr>
+                <td>Deskripsi Negosiasi</td>
+                <td>:</td>
+                <td>{{ $pg->deskripsi_negosiasi }}</td>
+              </tr>
+            </div>
+          </div>
+        </table>
+        
+      <div class="modal-footer mt-3">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+        {{-- <button type="submit" class="btn btn-primary ">Simpan <i class="fa fa-save"></i></button> --}}
       </div>
     </div>
-    <div class="col-xs-12 col-sm-12 col-md-12">
-      <div class="form-group">
-        <tr>
-          <td>Harga Penawaran</td>
-          <td>:</td>
-          <td>{{ $pg->harga_penawaran }}</td>
-        </tr>
-      </div>
-    </div>
-    <div class="col-xs-12 col-sm-12 col-md-12">
-      <div class="form-group">
-        <tr>
-          <td>Deskripsi Harga Penawaran</td>
-          <td>:</td>
-          <td>{{ $pg->deskripsi_penawaran }}</td>
-        </tr>
-      </div>
-    </div>
-    <div class="col-xs-12 col-sm-12 col-md-12">
-      <div class="form-group">
-        <tr>
-          <td>Nilai Negosiasi</td>
-          <td>:</td>
-          <td>{{ $pg->nilai_negosiasi }}</td>
-        </tr>
-      </div>
-    </div>
-    <div class="col-xs-12 col-sm-12 col-md-12">
-      <div class="form-group">
-        <tr>
-          <td>Deskripsi Negosiasi</td>
-          <td>:</td>
-          <td>{{ $pg->deskripsi_negosiasi }}</td>
-        </tr>
-      </div>
-    </div>
-    </table>
   </div>
-  <div class="modal-footer mt-3">
-    <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
-    {{-- <button type="submit" class="btn btn-primary ">Simpan <i class="fa fa-save"></i></button> --}}
-  </div>
-</div>
-</div>
 </div>
 @endforeach
 
