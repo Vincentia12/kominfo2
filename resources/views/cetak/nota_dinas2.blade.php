@@ -21,22 +21,20 @@
     <div class="row" style="font-family: Arial;">
         <table>
             <tr>
-                {{-- <td style="text-indent: 45px;">Kepada</td> --}}
                 <td>Kepada</td>
                 <td>:</td>
-                <td>Yth. Sdr. Pejabat Pembuat Komitmen Dinas Komunikasi dan Informatika Provinsi Jawa Timur</td>
+                <td>Yth. Sdr. Panitia Pengadaan Dinas Komunikasi dan Informatika Provinsi Jawa Timur</td>
             </tr>
 
             <tr>
                 <td>Dari</td>
                 <td>:</td>
-                <td>Kuasa Pengguna Anggaran</td>
+                <td>Pejabat Pembuat Komitmen</td>
             </tr>
             <tr>
                 <td>Tanggal</td>
                 <td>:</td>
                 <td>{{$pengadaan->tanggal->isoFormat('D MMMM Y')}}</td>
-                {{-- <td width="475">11 Agustus 2022</td> --}}
             </tr>
             <tr>
                 <td>Nomor</td>
@@ -56,9 +54,7 @@
             <tr>
                 <td>Perihal</td>
                 <td>:</td>
-                {{-- <td width="475">Pemrosesan Administrasi Pengadaan</td> --}}
                 <td>Pemrosesan Administrasi Pengadaan {{ $pengadaan->pengadaan->jenis_pengadaan}}</td>
-                {{-- <td width="475">Pemrosesan Administrasi Pengadaan {{ $pengadaan->jenis_pengadaan}}</td> --}}
             </tr>
         </table>
         <br>
@@ -68,7 +64,7 @@
         <br>
         <table font-size="2">
             <tr>
-                <td style="text-indent: 45px;">Bersama ini ini diberitahukan, bahwa DPA-SKPD Bagian Data dan Statistik pada Dinas Komunikasi dan Informatika Provinsi Jawa Timur Tahun Anggaran {{$pengadaan->tanggal->isoFormat('Y')}}, kode rekening {{ $pengadaan->pengadaan->pelaksana->kode_rekening}} pengadaan {{ $pengadaan->pengadaan->jenis_pengadaan}} keperluan Dinas Komunikasi dan Informatika Provinsi Jawa Timur dengan rincian sebagai berikut :</td>
+                <td style="text-indent: 45px; text-align:justify;">Bersama ini ini diberitahukan, bahwa DPA-SKPD Bagian Data dan Statistik pada Dinas Komunikasi dan Informatika Provinsi Jawa Timur Tahun Anggaran {{$pengadaan->tanggal->isoFormat('Y')}}, kode rekening {{ $pengadaan->pengadaan->pelaksana->kode_rekening}} pengadaan {{ $pengadaan->pengadaan->jenis_pengadaan}} keperluan Dinas Komunikasi dan Informatika Provinsi Jawa Timur dengan rincian sebagai berikut :</td>
             </tr>
         </table>
     </div>
@@ -105,7 +101,7 @@
     <div>
         <table font-size="2">
             <tr>
-                <td style="text-indent: 45px;">Sehubungan dengan hal tersebut diatas, untuk penyedia Barang/Jasa ditunjuk {{$pengadaan->pengadaan->pelaksana->pt_pelaksana}}, {{$pengadaan->pengadaan->pelaksana->alamat}}. Untuk itu diminta bantuannya untuk segera diproses sesuai prosedur yang berlaku.</td>
+                <td style="text-indent: 45px; text-align:justify">Sehubungan dengan hal tersebut diatas, untuk penyedia Barang/Jasa ditunjuk {{$pengadaan->pengadaan->pelaksana->pt_pelaksana}}, {{$pengadaan->pengadaan->pelaksana->alamat}}. Untuk itu diminta bantuannya untuk segera diproses sesuai prosedur yang berlaku.</td>
             </tr>
             <tr>
                 <td style="text-indent: 45px;">Demikian untuk pelaksanaannya.</td>
@@ -113,6 +109,10 @@
         </table>
         <br>
     </div>
+    @php
+    use App\Models\pejabat;
+    $pejabat = Pejabat::all();
+    @endphp
     <div style="text-align: center">
         <table style="width: 50%; text-align: left; float: right;">
             <tr>
@@ -125,13 +125,15 @@
         <br>
         <br>
         <table style="width: 50%; text-align: left; float: right;">
+            @foreach ($pejabat as $pjb)
             <tr>
                 <td>
-                    <u>I WAYAN RUDY ARTHA, S.KOM</u>
+                    <u>{{$pjb->pejabat_pembuatan_komitmen}}</u>
                     <br>
-                    NIP. 19770517 200901 1 005
+                    NIP. {{$pjb->nip_pejabat_komitmen}}
                 </td>
             </tr>
+            @endforeach
         </table>
     </div>
 </div>

@@ -52,7 +52,6 @@
             </tr>
         </table>
     </div>
-    {{-- <br> --}}
     <div style="text-align:center ;">
         <table class="table" border="0" align="center" font-size="1">
             <tr>
@@ -88,18 +87,14 @@
             </tr>
         </table>
     </div>
-    {{-- <br> --}}
-    {{-- <div > --}}
     <div style="text-align:center ; ">
         <table class="table" border="0" align="center" font-size="1">
             <tr>
                 <td width="8"></td>
                 <td style="text-align: left ;text-align: justify; text-indent: 45px;">Diberitahukan bahwa SKPD Dinas Komunikasi Dan Informatika Provinsi Jawa Timur akan melaksanakan Pengadaan Langsung, untuk :</td>
-                {{-- <td width="23"></td> --}}
             </tr>
         </table>
     </div>
-    {{-- <br> --}}
     <div style="text-align:center ;">
         <table class="table" border="0" align="center" font-size="1">
             <tr>
@@ -178,27 +173,30 @@
         </table>
     </div>
     <br>
+    @php
+    use App\Models\pejabat;
+    $pejabat = Pejabat::all();
+    @endphp
     {{-- //ttd pejabat --}}
     <div style="text-align:center ;">
         <table style="text-align: center" border="0" font-size="0">
+            @foreach ($pejabat as $pjb)
             <tr>
                 <td width="300"> </td>
                 <td>PEJABAT PENGADAAN</td>
-                {{-- <td width="50"> </td> --}}
             </tr>
             <br>
             <br>
             <br>
             <tr>
                 <td width="300"> </td>
-                <td width="250"><u>ADI KURNIAWAN.S.Kom.,M.Kom</u></td>
-                {{-- <td width="50"> </td> --}}
+                <td width="250"><u>{{$pjb->pejabat_pengadaan}}</u></td>
             </tr>
             <tr>
                 <td width="300"> </td>
-                <td>NIP. 19890618 201403 1 002</td>
-                {{-- <td width="50"> </td> --}}
+                <td>NIP. {{$pjb->nip_pejabat_pengadaan}}</td>
             </tr>
+            @endforeach
         </table>
     </div>
 </div>

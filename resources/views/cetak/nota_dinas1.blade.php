@@ -8,7 +8,8 @@
     </ul>
 </div>
 @endif
-{{-- {{$pejabat}} --}}
+
+
 <div class="col-12 grid-margin stretch-card">
     <div style="text-align: center">
         <font color="black">
@@ -36,8 +37,7 @@
                 <td>Tanggal</td>
                 <td>:</td>
                 <td>{{$pengadaan->tanggal->isoFormat('D MMMM Y')}}</td>
-                {{-- <td>{{ $pengadaan->tanggal}}</td> --}}
-                {{-- <td width="475">11 Agustus 2022</td> --}}
+
             </tr>
             <tr>
                 <td>Nomor</td>
@@ -57,9 +57,7 @@
             <tr>
                 <td>Perihal</td>
                 <td>:</td>
-                {{-- <td width="475">Pemrosesan Administrasi Pengadaan</td> --}}
                 <td>Pemrosesan Administrasi Pengadaan {{ $pengadaan->pengadaan->jenis_pengadaan}}</td>
-                {{-- <td width="475">Pemrosesan Administrasi Pengadaan {{ $pengadaan->jenis_pengadaan}}</td> --}}
             </tr>
         </table>
         <br>
@@ -100,7 +98,6 @@
                     <td align="center">{{$brg->satuan}}</td>
                     <td align="center">{{$brg->harga_satuan}}</td>
                 </tr>
-                {{-- <i class="fa fa-xing 1" aria-hidden="true"></i>    --}}
                 @endforeach
             </tbody>
         </table>
@@ -109,13 +106,17 @@
     <div>
         <table font-size="2">
             <tr>
-                <td style="text-indent: 45px; text-align:justify;">Sehubungan dengan hal tersebut diatas, untuk penyedia Barang/Jasa ditunjuk {{$pengadaan->pengadaan->pelaksana->pt_pelaksana}} {{$pengadaan->pengadaan->pelaksana->alamat}} {{$pengadaan->pengadaan->pelaksana->kota}}. Untuk itu diminta bantuannya untuk segera diproses sesuai prosedur yang berlaku.</td>
+                <td style="text-indent: 45px; text-align:justify;">Sehubungan dengan hal tersebut diatas, untuk penyedia Barang/Jasa ditunjuk {{$pengadaan->pengadaan->pelaksana->pt_pelaksana}} {{$pengadaan->pengadaan->pelaksana->alamat}}, {{$pengadaan->pengadaan->pelaksana->kota}}. Untuk itu diminta bantuannya untuk segera diproses sesuai prosedur yang berlaku.</td>
             </tr>
             <tr>
                 <td style="text-indent: 45px;">Demikian untuk pelaksanaannya.</td>
             </tr>
         </table>
     </div>
+    @php
+    use App\Models\pejabat;
+    $pejabat = Pejabat::all();
+    @endphp
     <br>
     <br>
     <div style="text-align: center">
@@ -129,15 +130,17 @@
         <br>
         <br>
         <table style="width: 50%; text-align: left; float: right;">
+            @foreach ($pejabat as $pjb)
             <tr>
                 <td>
-                    <u> Dra. Ec. NIRMALA DEWI, M.M</u>
-                    {{-- NIP. {{ $pejabat->kuasa_pengguna_anggaran }} --}}
+                    <!-- <u> Dra. Ec. NIRMALA DEWI, M.M</u> -->
+                    <u> {{$pjb->kuasa_pengguna_anggaran}}</u>
                     <br>
-                    NIP. 19650909 199403 2 006
-                    {{-- NIP. {{ $pejabat->nip_kuasa_pengguna }} --}}
+                    NIP. {{$pjb->nip_kuasa_pengguna}}
+
                 </td>
             </tr>
+            @endforeach
         </table>
     </div>
 </div>
