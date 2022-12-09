@@ -43,7 +43,7 @@
                 </tr>
                 <tr>
                     <td colspan="2">
-                        <hr>
+                        <hr width="630" colspan="2">
                     </td>
                 </tr>
             </table>
@@ -143,8 +143,9 @@
 </div>
 <div class="col-12 grid-margin stretch-card">
     <div class="modal-footer mt-3">
-        <button type="back" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
-        <a type="submit" class="btn btn-primary " href="{{ url('/print_notadinas4')  }}">Cetak PDF <i class="fa fa-save"></i></a>
+        <button onclick="history.back()" type="back" class="btn btn-secondary" data-dismiss="modal">Kembali</button>
+        {{-- <button type="back" class="btn btn-secondary" data-dismiss="modal">Tutup</button> --}}
+        {{-- <a type="submit" class="btn btn-primary " href="{{ url('/print_notadinas4')  }}">Cetak PDF <i class="fa fa-save"></i></a> --}}
     </div>
 </div>
 
