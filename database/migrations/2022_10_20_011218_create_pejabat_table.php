@@ -26,7 +26,7 @@ return new class extends Migration
             // $table->timestamps();
 
             $table->id();
-            $table->Integer('tahun_sk');
+            // $table->Integer('tahun_sk');
             $table->date('tanggal_sk');
             $table->string('nomor_sk');
             $table->string('kuasa_pengguna_anggaran');
