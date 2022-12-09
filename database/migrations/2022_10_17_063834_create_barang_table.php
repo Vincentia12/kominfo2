@@ -14,14 +14,6 @@ return new class extends Migration
     public function up()
     {
         Schema::create('barangs', function (Blueprint $table) {
-            // $table->id();
-            // $table->foreignId('pengadaan_id')->constrained();
-            // $table->string('barang');
-            // $table->string('jumlah_barang');
-            // $table->string('satuan');
-            // $table->string('harga_satuan');
-            // $table->timestamps();
-
             $table->id();
             $table->foreignId('pengadaan_id')->constrained();
             $table->string('barang');
@@ -30,7 +22,6 @@ return new class extends Migration
             $table->string('harga_satuan');
             $table->string('jumlah_harga');
             $table->timestamps();
-            // $table->integer('harga_satuan');
         });
     }
 

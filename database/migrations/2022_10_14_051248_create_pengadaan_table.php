@@ -14,20 +14,10 @@ return new class extends Migration
     public function up()
     {
         Schema::create('pengadaans', function (Blueprint $table) {
-            // $table->id();
-            // $table->foreignId('pelaksana_id')->constrained();
-            // $table->string('jenis_pengadaan');
-            // $table->string('total_hps');
-            // $table->string('deskripsi_hps');
-            // $table->string('harga_penawaran');
-            // $table->string('deskripsi_penawaran');
-            // $table->string('nilai_negosiasi');
-            // $table->string('deskripsi_negosiasi');
-            // $table->timestamps();
-
             $table->id();
             $table->foreignId('pelaksana_id')->constrained();
             $table->string('jenis_pengadaan');
+            $table->string('kode_rekening');
             $table->string('total_hps');
             $table->text('deskripsi_hps');
             $table->string('harga_penawaran');

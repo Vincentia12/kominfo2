@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\User;
+use Illuminate\Database\Migrations\Migration;
 
 class DatabaseSeeder extends Seeder
 {
@@ -18,11 +19,11 @@ class DatabaseSeeder extends Seeder
         //\App\Models\User::factory(10)->create();
 
         
-        \App\Models\User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
+        // \App\Models\User::factory()->create([
+        //     'name' => 'Test User',
+        //     'email' => 'test@example.com',
             
-        ]);
+        // ]);
 
         \App\Models\User::factory()->create([
             'name' => 'ADMIN',
@@ -45,5 +46,11 @@ class DatabaseSeeder extends Seeder
             'nip_bpp' => '19850120 201001 2 016',
             
         ]);
+
+        // DB::insert([
+        // // \App\Models\Triggers::create([
+        //     'CREATE TRIGGER `jumlah_harga` AFTER INSERT ON `triggers`
+        //     FOR EACH ROW UPDATE barangs SET jumlah_harga = harga_satuan*jumlah_barang',
+        // ]);
     }
 }

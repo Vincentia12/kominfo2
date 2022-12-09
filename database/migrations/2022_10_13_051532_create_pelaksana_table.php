@@ -14,28 +14,16 @@ return new class extends Migration
     public function up()
     {
         Schema::create('pelaksanas', function (Blueprint $table) {
-            // $table->id();
-            // $table->string('pt_pelaksana');
-            // $table->string('alamat');
-            // $table->string('nama_pelaksana');
-            // $table->string('jabatan_pelaksana');
-            // $table->string('kode_rekening');
-            // $table->string('npwp');
-            // $table->char('tlp');
-            // $table->timestamps();
-
             $table->id();
             $table->string('pt_pelaksana');
             $table->string('alamat');
             $table->string('kota');
             $table->string('nama_pelaksana');
             $table->string('jabatan_pelaksana');
-            $table->string('kode_rekening');
+            // $table->string('kode_rekening');
             $table->string('npwp');
             $table->string('tlp');
             $table->timestamps();
-            // $table->integer('npwp',20);
-            // $table->integer('tlp',20);
         });
     }
 

@@ -14,23 +14,13 @@ return new class extends Migration
     public function up()
     {
         Schema::create('jadwals', function (Blueprint $table) {
-            // $table->id();
-            // $table->foreignId('pengadaan_id')->constrained();
-            // $table->string('kegiatan');
-            // $table->string('alokasi');
-            // $table->string('hari');
-            // $table->date('tanggal');
-            // $table->string('nomor');
-            // $table->string('deskripsi_tgl');
-            // $table->timestamps();
-
             $table->id();
             $table->foreignId('pengadaan_id')->constrained();
             // $table->foreignId('pelaksana_id')->constrained();
             $table->string('kegiatan');
             $table->string('alokasi');
             $table->date('tanggal');
-            $table->bigInteger('nomor');
+            $table->string('nomor');
             $table->text('deskripsi_tgl');
             $table->timestamps();
         });
