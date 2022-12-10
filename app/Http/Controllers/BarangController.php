@@ -138,6 +138,7 @@ class BarangController extends Controller
     public function update(Request $request, $id)
     {
         $barang = Barang::find($id)->update($request->all());
+        Triggers::create($request->post());
 
         return back()->with('success', ' Data telah diperbaharui!');
         //
