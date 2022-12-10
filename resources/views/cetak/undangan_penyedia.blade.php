@@ -94,28 +94,10 @@
     use App\Models\pejabat;
 
     $png = $pengadaan->pengadaan_id;
-    $SuratUndanganPermintaanPenawaranHarga = Jadwal::where('jadwals.pengadaan_id', 'like', "%" . $png . "%")
-    ->where('jadwals.kegiatan', '=', 'Surat Undangan Permintaan Penawaran Harga')
+    $NotaDinasDariPejabatPengadaanPPK = Jadwal::where('jadwals.pengadaan_id', 'like', "%" . $png . "%")
+    ->where('jadwals.kegiatan', '=', 'Nota Dinas dari Pejabat Pengadaan ke PPK')
     ->get();
 
-    $SuratUndanganPermintaanPenawaranHarga = Jadwal::where('jadwals.pengadaan_id', 'like', "%" . $png . "%")
-    ->where('jadwals.kegiatan', '=', 'Surat Undangan Permintaan Penawaran Harga')
-    ->get();
-    $SuratPenawaranHarga = Jadwal::where('jadwals.pengadaan_id', 'like', "%" . $png . "%")
-    ->where('jadwals.kegiatan', '=', 'Surat Penawaran Harga')
-    ->get();
-    $BeritaAcaraHasilKlarifikasiNegosiasi = Jadwal::where('jadwals.pengadaan_id', 'like', "%" . $png . "%")
-    ->where('jadwals.kegiatan', '=', 'BA. Klarifikasi/egosiasi')
-    ->get();
-    $BeritaAcaraHasilPengadaanLangsung = Jadwal::where('jadwals.pengadaan_id', 'like', "%" . $png . "%")
-    ->where('jadwals.kegiatan', '=', 'BA. Hasil Pengadaan Langsung')
-    ->get();
-    $SuratPerintahMulaiKerja = Jadwal::where('jadwals.pengadaan_id', 'like', "%" . $png . "%")
-    ->where('jadwals.kegiatan', '=', 'Surat Perintah Mulai Kerja (SPMK)')
-    ->get();
-    $BeritaAcaraSerahTerimaHasilPekerjaan = Jadwal::where('jadwals.pengadaan_id', 'like', "%" . $png . "%")
-    ->where('jadwals.kegiatan', '=', 'BA Serah Terima Hasil Pekerjaan')
-    ->get();
     $pejabat = Pejabat::all();
 
     @endphp
@@ -125,7 +107,7 @@
         <table class="table" border="0" align="" font-size="1">
             <tr>
                 <td width="8"></td>
-                <td style="text-align: left ;text-align: justify; text-indent: 45px;">Sesuai dengan Surat Penawaran Saudara tanggal 24 Agustus 2022 Nomor : 233/PEN/PN/IX/2022 dan Nota Dinas tanggal 5 September 2022 Nomor : 020/654.10/114.6/2022 perihal Penyampaian Berita Acara Proses Pengadaan Langsung maka Pekerjaan Pengadaan {{$pengadaan->pengadaan->jenis_pengadaan}} kami menunjuk :</td>
+                <td style="text-align: left ;text-align: justify; text-indent: 45px;">Sesuai dengan Surat Penawaran Saudara tanggal 24 Agustus 2022 Nomor : 233/PEN/PN/IX/2022 dan Nota Dinas @foreach ($NotaDinasDariPejabatPengadaanPPK as $ndpp) tanggal {{$ndpp->tanggal}} Nomor : 020/{{$ndpp->nomor}}/114.6/{{$ndpp->tanggal->format('Y')}} @endforeach perihal Penyampaian Berita Acara Proses Pengadaan Langsung maka Pekerjaan Pengadaan {{$pengadaan->pengadaan->jenis_pengadaan}} kami menunjuk :</td>
 
             </tr>
         </table>
@@ -151,7 +133,7 @@
                 <td width="30"></td>
                 <td width="120">Alamat</td>
                 <td>:</td>
-                <td>{{ $pengadaan->pengadaan->pelaksana->alamat }} {{ $pengadaan->pengadaan->pelaksana->kota }}</td>
+                <td>{{ $pengadaan->pengadaan->pelaksana->alamat }}, {{ $pengadaan->pengadaan->pelaksana->kota }}</td>
             </tr>
             <tr>
                 <td width="30"></td>
@@ -189,12 +171,12 @@
 
     <br>
     <br>
+    @foreach ($pejabat as $pjb)
     <div style="text-align:center ;">
         <table style="text-align: center" border="0" font-size="0">
             <tr>
                 <td width="300"> </td>
                 <td>PEJABAT PEMBUAT KOMITMEN</td>
-                {{-- <td width="50"> </td> --}}
             </tr>
             <br>
             <br>
@@ -202,14 +184,13 @@
             <br>
             <tr>
                 <td width="300"> </td>
-                <td width="250"><u>I WAYAN RUDY ARTHA, S.Kom</u></td>
-                {{-- <td width="50"> </td> --}}
+                <td width="250"><u>{{$pjb->pejabat_pembuatan_komitmen}}</u></td>
             </tr>
             <tr>
                 <td width="300"> </td>
-                <td>NIP. 19770517 200901 1 005</td>
-                {{-- <td width="50"> </td> --}}
+                <td>NIP. {{$pjb->nip_pejabat_komitmen}}</td>
             </tr>
         </table>
     </div>
+    @endforeach
 </div>

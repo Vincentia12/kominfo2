@@ -48,6 +48,20 @@
             </tr>
         </table>
     </div>
+    @php
+    use App\Models\Jadwal;
+    use App\Models\pejabat;
+
+    $png = $pengadaan->pengadaan_id;
+
+    $KuitansiKontrak = Jadwal::where('jadwals.pengadaan_id', 'like', "%" . $png . "%")
+    ->where('jadwals.kegiatan', '=', 'Kuitansi Kontrak')
+    ->get();
+
+    $pejabat = Pejabat::all();
+
+    @endphp
+    @foreach ($pejabat as $pjb)
 
     <div>
         <table border="0" align="">
@@ -56,7 +70,7 @@
                 <td width="15">I.</td>
                 <td width="100">Nama</td>
                 <td>:</td>
-                <td width="370">I WAYAN RUDY ARTHA, S.Kom</td>
+                <td width="370">{{$pjb->pejabat_pembuatan_komitmen}}</td>
             </tr>
         </table>
     </div>
@@ -66,7 +80,7 @@
                 <td width="43"></td>
                 <td width="100">NIP</td>
                 <td>:</td>
-                <td width="370">19770517 200901 1 005</td>
+                <td width="370">{{$pjb->nip_pejabat_komitmen}}</td>
             </tr>
         </table>
     </div>
@@ -80,6 +94,8 @@
             </tr>
         </table>
     </div>
+
+
     <div>
         <table border="0" align="">
             <tr>
@@ -130,6 +146,7 @@
             </tr>
         </table>
     </div>
+    @endforeach
     <div>
         <table border="0" align="">
             <tr>

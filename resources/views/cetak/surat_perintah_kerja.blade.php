@@ -197,7 +197,7 @@
                     {{-- no surat lain --}}
                     <td>Berita Acara Hasil Klarifikasi dan Negosiasi Nomor :
                         @foreach ($BeritaAcaraHasilKlarifikasiNegosiasi as $bahkn)
-                        020/{{$bahkn->nomor}}/114.6/{{$bahkn->tanggal->format('Y')}} Tanggal {{$bahkn->tanggl}}
+                        020/{{$bahkn->nomor}}/114.6/{{$bahkn->tanggal->format('Y')}} Tanggal {{$bahkn->tanggal}}
                         @endforeach
                     </td>
                     {{-- <td>Berita Acara Hasil Klarifikasi dan Negosiasi Nomor : 020/654.9/114.6/2022 Tanggal 1 September 2022</td> --}}
@@ -207,7 +207,7 @@
                     {{-- no surat lain --}}
                     <td>Berita Acara Hasil Pengadaan Langsung Nomor :
                         @foreach ($BeritaAcaraHasilPengadaanLangsung as $bahpl)
-                        020/{{$bahpl->nomor}}/114.6/{{$bahpl->tanggal->format('Y')}} Tanggal {{$bahpl->tanggl}}
+                        020/{{$bahpl->nomor}}/114.6/{{$bahpl->tanggal->format('Y')}} Tanggal {{$bahpl->tanggal}}
                         @endforeach
                     </td>
                 </tr>

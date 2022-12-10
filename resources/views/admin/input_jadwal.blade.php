@@ -165,6 +165,7 @@
               <option value="Nota Dinas dari Pejabat Pengadaan ke PPK">Nota Dinas dari Pejabat Pengadaan ke PPK</option>
               <option value="Penetapan Penyedia Jasa">Penetapan Penyedia Jasa</option>
               <option value="Penunjukan Penyedia Barang/Jasa">Penunjukan Penyedia Barang/Jasa</option>
+              <option value="Kuitansi Kontrak">Kuitansi Kontrak</option>
               <option value="Surat Perintah Kerja">Surat Perintah Kerja</option>
               <option value="Surat Perintah Mulai Kerja (SPMK)">Surat Perintah Mulai Kerja (SPMK)</option>
               <option value="BA. Serah Terima Hasil Pekerjaan">BA. Serah Terima Hasil Pekerjaan</option>
@@ -172,7 +173,6 @@
               <option value="BA. Penyerahan Barang/Jasa">BA. Penyerahan Barang/Jasa</option>
               <option value="BA. Hasil Pemeriksaan Administratif">BA. Hasil Pemeriksaan Administratif</option>
               <option value="BA. Hasil Pembayaran">BA. Hasil Pembayaran</option>
-              <option value="Kuitansi Kontrak">Kuitansi Kontrak</option>
             </select>
           </div>
           <div class="mb-4">
@@ -191,27 +191,27 @@
               <label for="message-text" class="col-form-label">Nomor</label>
               <input type="text" class="form-control" id="nomor" name="nomor" placeholder="020/655.8/114.6/2022">
               <small class="text-danger">{{ $errors->first('nomor') }}</small>
-            </div>
-          @else --}}
-          <div class="mb-4">
-            <label for="message-text" class="col-form-label">Nomor</label>
-            <input type="text" class="form-control" id="nomor" name="nomor" placeholder="020/655.8/114.6/2022">
-            <small class="text-danger">{{ $errors->first('nomor') }}</small>
-          </div>
-          {{-- @endif --}}
-          <div class="mb-4">
-            <label for="message-text" class="col-form-label">Deskripsi Tanggal</label>
-            <input type="text" class="form-control" id="deskripsi_tgl" name="deskripsi_tgl" placeholder="Delapan Agustus Dua Ribu Dua Puluh Dua">
-            <small class="text-danger">{{ $errors->first('deskripsi_tgl') }}</small>
-          </div>
-          <div class="modal-footer mt-3">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
-            <button type="submit" class="btn btn-primary ">Simpan <i class="fa fa-save"></i></button>
-          </div>
-        </form>
       </div>
+      @else --}}
+      <div class="mb-4">
+        <label for="message-text" class="col-form-label">Nomor</label>
+        <input type="text" class="form-control" id="nomor" name="nomor" placeholder="020/655.8/114.6/2022">
+        <small class="text-danger">{{ $errors->first('nomor') }}</small>
+      </div>
+      {{-- @endif --}}
+      <div class="mb-4">
+        <label for="message-text" class="col-form-label">Deskripsi Tanggal</label>
+        <input type="text" class="form-control" id="deskripsi_tgl" name="deskripsi_tgl" placeholder="Delapan Agustus Dua Ribu Dua Puluh Dua">
+        <small class="text-danger">{{ $errors->first('deskripsi_tgl') }}</small>
+      </div>
+      <div class="modal-footer mt-3">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+        <button type="submit" class="btn btn-primary ">Simpan <i class="fa fa-save"></i></button>
+      </div>
+      </form>
     </div>
   </div>
+</div>
 </div>
 
 <!-- Modal Edit Jadwal -->
@@ -277,6 +277,7 @@
               <option value="Nota Dinas dari Pejabat Pengadaan ke PPK">Nota Dinas dari Pejabat Pengadaan ke PPK</option>
               <option value="Penetapan Penyedia Jasa">Penetapan Penyedia Jasa</option>
               <option value="Penunjukan Penyedia Barang/Jasa">Penunjukan Penyedia Barang/Jasa</option>
+              <option value="Kuitansi Kontrak">Kuitansi Kontrak</option>
               <option value="Surat Perintah Kerja">Surat Perintah Kerja</option>
               <option value="Surat Perintah Mulai Kerja (SPMK)">Surat Perintah Mulai Kerja (SPMK)</option>
               <option value="BA. Serah Terima Hasil Pekerjaan">BA. Serah Terima Hasil Pekerjaan</option>
@@ -284,7 +285,7 @@
               <option value="BA. Penyerahan Barang/Jasa">BA. Penyerahan Barang/Jasa</option>
               <option value="BA. Hasil Pemeriksaan Administratif">BA. Hasil Pemeriksaan Administratif</option>
               <option value="BA. Hasil Pembayaran">BA. Hasil Pembayaran</option>
-              <option value="Kuitansi Kontrak">Kuitansi Kontrak</option>
+
             </select>
           </div>
           <div class="mb-4">

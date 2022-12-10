@@ -39,6 +39,19 @@
         </table>
     </div>
 
+    @php
+    use App\Models\Jadwal;
+    use App\Models\pejabat;
+
+    $png = $pengadaan->pengadaan_id;
+
+    $KuitansiKontrak = Jadwal::where('jadwals.pengadaan_id', 'like', "%" . $png . "%")
+    ->where('jadwals.kegiatan', '=', 'Kuitansi Kontrak')
+    ->get();
+    $pejabat = Pejabat::all();
+
+    @endphp
+
     <br>
     <div class="row">
         <table>
@@ -48,7 +61,7 @@
             </tr>
         </table>
     </div>
-
+    @foreach ($pejabat as $pjb)
     <div>
         <table border="0" align="">
             <tr>
@@ -56,7 +69,7 @@
                 <td width="15">I.</td>
                 <td width="100">Nama</td>
                 <td>:</td>
-                <td width="370">I WAYAN RUDY ARTHA, S.Kom</td>
+                <td width="370">{{$pjb->pejabat_pembuatan_komitmen}}</td>
             </tr>
         </table>
     </div>
@@ -66,7 +79,7 @@
                 <td width="43"></td>
                 <td width="100">NIP</td>
                 <td>:</td>
-                <td width="370">19770517 200901 1 005</td>
+                <td width="370">{{$pjb->nip_pejabat_komitmen}}</td>
             </tr>
         </table>
     </div>
@@ -90,6 +103,7 @@
             </tr>
         </table>
     </div>
+    @endforeach
     <div>
         <table border="0" align="">
             <tr>
@@ -126,7 +140,7 @@
                 <td width="43"></td>
                 <td width="100">Alamat</td>
                 <td>:</td>
-                <td width="370">{{$pengadaan->pengadaan->pelaksana->alamat}} {{$pengadaan->pengadaan->pelaksana->kota}}</td>
+                <td width="370">{{$pengadaan->pengadaan->pelaksana->alamat}}, {{$pengadaan->pengadaan->pelaksana->kota}}</td>
             </tr>
         </table>
     </div>
@@ -137,9 +151,6 @@
                 <td width="470">Yang selanjutnya disebut <b>PIHAK KEDUA</b> </td>
         </table>
     </div>
-
-
-    <br>
     <div>
         <table border="0" align="">
             <tr>
@@ -177,7 +188,7 @@
                 <td width="15">b.</td>
                 <td width="120">Lokasi</td>
                 <td>:</td>
-                <td style="text-align: left ;text-align: justify;">Surabaya</td>
+                <td style="text-align: left ;text-align: justify;">{{$pengadaan->pengadaan->pelaksana->kota}}</td>
             </tr>
         </table>
     </div>
@@ -216,9 +227,24 @@
     </div>
     <div>
         <table border="0" align="">
+            @foreach ($KuitansiKontrak as $kk)
             <tr>
                 <td width="43"></td>
                 <td width="15">f.</td>
+                <td width="120">Kwitansi Kontrak</td>
+                <td>:</td>
+                <td style="text-align: left ;text-align: justify;">
+                    Nomor : 020/{{$kk->nomor}}/114.6/{{$kk->tanggal->format('Y')}}
+                </td>
+            </tr>
+            @endforeach
+        </table>
+    </div>
+    <div>
+        <table border="0" align="">
+            <tr>
+                <td width="43"></td>
+                <td width="15">g.</td>
                 <td width="120">Nilai Kontrak</td>
                 <td>:</td>
                 <td style="text-align: left ;text-align: justify;">
@@ -247,7 +273,7 @@
             <tr>
                 <td width="43"></td>
                 <td width="15">a.</td>
-                <td width="120">Nilai Kontrak Pekerjaan</td>
+                <td width="200">Nilai Kontrak Pekerjaan</td>
                 <td>:</td>
                 <td style="text-align: left ;text-align: justify;">Rp.
                     {{$pengadaan->pengadaan->nilai_negosiasi}},-
@@ -260,7 +286,7 @@
             <tr>
                 <td width="43"></td>
                 <td width="15">b.</td>
-                <td width="120">Jumlah yang telah dibayarkan</td>
+                <td width="200">Jumlah yang telah dibayarkan</td>
                 <td>:</td>
                 <td style="text-align: left ;text-align: justify;">Rp. ,-
                 </td>
@@ -272,7 +298,7 @@
             <tr>
                 <td width="43"></td>
                 <td width="15">c.</td>
-                <td width="120">Nilai kontrak yang masih tersedia</td>
+                <td width="200">Nilai kontrak yang masih tersedia</td>
                 <td>:</td>
                 <td style="text-align: left ;text-align: justify;">Rp. ,-</td>
             </tr>
@@ -283,7 +309,7 @@
             <tr>
                 <td width="43"></td>
                 <td width="15">d.</td>
-                <td width="120">Pembayaran termin saat ini</td>
+                <td width="200">Pembayaran termin saat ini</td>
                 <td>:</td>
                 <td style="text-align: left ;text-align: justify;">Rp.
                     {{$pengadaan->pengadaan->nilai_negosiasi}},-
@@ -296,7 +322,7 @@
             <tr>
                 <td width="43"></td>
                 <td width="15">e.</td>
-                <td width="120">Sisa nilai kontrak s/d saat ini</td>
+                <td width="200">Sisa nilai kontrak s/d saat ini</td>
                 <td>:</td>
                 <td style="text-align: left ;text-align: justify;">Rp. ,-</td>
             </tr>
@@ -315,16 +341,10 @@
             </tr>
         </table>
     </div>
-
-
-
-
-
-
-
-
-
     <br>
+    <br>
+    <br>
+    @foreach ($pejabat as $pjb)
     <div>
         <table border="0" style="text-align: center;">
             <tr>
@@ -339,12 +359,12 @@
             <tr>
                 <td width="180"><u>{{$pengadaan->pengadaan->pelaksana->nama_pelaksana}}</u></td>
                 <td width="165"></td>
-                <td width="180"><u>I WAYAN RUDY ARTHA, S.Kom</u></td>
+                <td width="180"><u>{{$pjb->pejabat_pembuatan_komitmen}}</u></td>
             </tr>
             <tr>
                 <td width="180">{{$pengadaan->pengadaan->pelaksana->jabatan_pelaksana}}</td>
                 <td width="165"></td>
-                <td width="180">NIP. 19770517 200901 1 005</td>
+                <td width="180">NIP. {{$pjb->nip_pejabat_komitmen}}</td>
             </tr>
         </table>
         <table style="text-align: center;" border="0">
@@ -361,16 +381,17 @@
             <br><br><br><br><br>
             <tr>
                 <td width="160"></td>
-                <td width="195"><u>Dra. Ec. NIRMALA DEWI, MM</u></td>
+                <td width="195"><u>{{$pjb->kuasa_pengguna_anggaran}}</u></td>
                 <td width="160"></td>
             </tr>
             <tr>
                 <td width="160"></td>
-                <td width="195">NIP. 19650909 199403 2 006</td>
+                <td width="195">NIP. {{$pjb->nip_kuasa_pengguna}}</td>
                 <td width="160"></td>
             </tr>
         </table>
     </div>
+    @endforeach
 
 
 
