@@ -71,7 +71,7 @@
                     </div>
                     <div class="mb-4">
                         <label for="message-text" class="col-form-label">Harga Satuan</label>
-                        <input type="text" class="form-control" id="harga_satuan" name="harga_satuan" placeholder="1200000">
+                        <input type="number" class="form-control" id="harga_satuan" name="harga_satuan" placeholder="1200000">
                         <small class="text-danger">{{ $errors->first('harga_satuan') }}</small>
                     </div>
                     <div class="modal-footer mt-3">
@@ -104,6 +104,7 @@
                 @endif
                 <form method="POST" action="{{ url('barang/update', $br->id) }}">
                     @csrf
+                    <input type="hidden" name="hash" id="" value="{{ csrf_token() }}">
                     <div class="mb-4">
                         <label for="message-text" class="col-form-label">Jenis Pengadaan</label>
 
@@ -226,7 +227,7 @@
                             <tr>
                                 <td>Harga Satuan</td>
                                 <td>:</td>
-                                <td>{{ $detail->harga_satuan }}</td>
+                                <td>Rp. {{number_format($detail->harga_satuan) }}</td>
                             </tr>
                         </div>
                     </div>
@@ -235,7 +236,7 @@
                             <tr>
                                 <td>Jumlah Harga</td>
                                 <td>:</td>
-                                <td>{{ $detail->jumlah_harga }}</td>
+                                <td>Rp. {{number_format($detail->jumlah_harga) }}</td>
                             </tr>
                         </div>
                     </div>
@@ -299,10 +300,9 @@
                             <td>{{ $brng->barang }}</td>
                             <td>{{ $brng->jumlah_barang }}</td>
                             <td>{{ $brng->satuan }}</td>
-                            <td>{{ $brng->harga_satuan }}</td>
-                            <td>{{ $brng->jumlah_harga}}</td>
+                            <td>Rp. {{number_format($brng->harga_satuan) }}</td>
+                            <td>Rp. {{number_format($brng->jumlah_harga) }}</td>
                             <td>
-
                                 <form action="{{ route('barang.destroy',$brng->id) }}" method="POST">
                                     <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#modalDetailBarang{{$brng->id}}">
                                         Detail

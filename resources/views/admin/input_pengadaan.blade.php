@@ -70,7 +70,8 @@
             <tr>
               <td>{{ $p->pelaksana->pt_pelaksana }}</td>
               <td>{{ $p->jenis_pengadaan }}</td>
-              <td>{{ $p->nilai_negosiasi}}</td>
+              <td>{{$p->nilai_negosiasi}}</td>
+              {{-- <td>Rp. {{number_format($p->nilai_negosiasi)}}</td> --}}
               <td>
 
                 <form action="{{ route('pengadaan.destroy',$p->id) }}" method="POST">
@@ -325,6 +326,7 @@
                 <td>Biaya HPS (Harga Perkiraan Sendiri)</td>
                 <td>:</td>
                 <td>{{ $pg->total_hps }}</td>
+                {{-- <td>Rp. {{number_format($pg->total_hps) }}</td> --}}
               </tr>
             </div>
           </div>
@@ -351,7 +353,8 @@
               <tr>
                 <td>Harga Penawaran</td>
                 <td>:</td>
-                <td>{{ $pg->harga_penawaran }}</td>
+                <td>{{$pg->harga_penawaran }}</td>
+                {{-- <td>Rp. {{number_format($pg->harga_penawaran) }}</td> --}}
               </tr>
             </div>
           </div>
@@ -369,7 +372,8 @@
               <tr>
                 <td>Nilai Negosiasi</td>
                 <td>:</td>
-                <td>{{ $pg->nilai_negosiasi }}</td>
+                <td>{{$pg->nilai_negosiasi }}</td>
+                {{-- <td>Rp. {{number_format($pg->nilai_negosiasi) }}</td> --}}
               </tr>
             </div>
           </div>

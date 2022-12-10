@@ -185,11 +185,20 @@
             <input type="date" class="form-control" id="tanggal" name="tanggal" placeholder="10/10/2022">
             <small class="text-danger">{{ $errors->first('tanggal') }}</small>
           </div>
+          {{-- @if ('kegiatan' == 'Surat Pernyataan Minat')
+            <p>Masukkan Nomor Surat Dari perusahaan</p>
+            <div class="mb-4">
+              <label for="message-text" class="col-form-label">Nomor</label>
+              <input type="text" class="form-control" id="nomor" name="nomor" placeholder="020/655.8/114.6/2022">
+              <small class="text-danger">{{ $errors->first('nomor') }}</small>
+            </div>
+          @else --}}
           <div class="mb-4">
             <label for="message-text" class="col-form-label">Nomor</label>
             <input type="text" class="form-control" id="nomor" name="nomor" placeholder="020/655.8/114.6/2022">
             <small class="text-danger">{{ $errors->first('nomor') }}</small>
           </div>
+          {{-- @endif --}}
           <div class="mb-4">
             <label for="message-text" class="col-form-label">Deskripsi Tanggal</label>
             <input type="text" class="form-control" id="deskripsi_tgl" name="deskripsi_tgl" placeholder="Delapan Agustus Dua Ribu Dua Puluh Dua">
