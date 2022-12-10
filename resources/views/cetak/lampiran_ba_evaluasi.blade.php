@@ -40,8 +40,12 @@
         </table>
     </div>
     <br>
-    <div>
-        <table style="text-align: center" border="1" font-size="0">
+    <div class="center">
+        <table width="auto" border="1" font-size="1"
+        style="text-align: center;
+        color: #333333;border-color: #333333;border-collapse: collapse;
+        ">
+        <thead style="background-color: lightgrey;">
             <tr>
                 <td rowspan="3"> NO </td>
                 <td rowspan="3"> Nama Perusahaan </td>
@@ -78,23 +82,27 @@
                 <td> 12 </td>
                 <td> 13 </td>
             </tr>
+        </thead>
+        <tbody>
             <tr>
-                <td rowspan="2"> 1 </td>
-                <td rowspan="2"> {{$pengadaan->pengadaan->pelaksana->pt_pelaksana}} </td>
-                <td rowspan="2"> <a href='https://postimages.org/' target='_blank'><img src='https://i.postimg.cc/tCSLJGtT/check.jpg' width="50" height="30" border='0' alt='check' /></a> </td>
-                <td rowspan="2"> <a href='https://postimages.org/' target='_blank'><img src='https://i.postimg.cc/tCSLJGtT/check.jpg' width="50" height="30" border='0' alt='check' /></a> </td>
-                <td rowspan="2"> <a href='https://postimages.org/' target='_blank'><img src='https://i.postimg.cc/tCSLJGtT/check.jpg' width="50" height="30" border='0' alt='check' /></a> </td>
-                <td rowspan="2"> <a href='https://postimages.org/' target='_blank'><img src='https://i.postimg.cc/tCSLJGtT/check.jpg' width="50" height="30" border='0' alt='check' /></a> </td>
-                <td rowspan="2"> <a href='https://postimages.org/' target='_blank'><img src='https://i.postimg.cc/tCSLJGtT/check.jpg' width="50" height="30" border='0' alt='check' /></a> </td>
-                <td rowspan="2"> <a href='https://postimages.org/' target='_blank'><img src='https://i.postimg.cc/tCSLJGtT/check.jpg' width="50" height="30" border='0' alt='check' /></a> </td>
-                <td rowspan="2"> <a href='https://postimages.org/' target='_blank'><img src='https://i.postimg.cc/tCSLJGtT/check.jpg' width="50" height="30" border='0' alt='check' /></a> </td>
-                <td rowspan="2"> <a href='https://postimages.org/' target='_blank'><img src='https://i.postimg.cc/tCSLJGtT/check.jpg' width="50" height="30" border='0' alt='check' /></a> </td>
-                <td rowspan="2"> <a href='https://postimages.org/' target='_blank'><img src='https://i.postimg.cc/tCSLJGtT/check.jpg' width="50" height="30" border='0' alt='check' /></a> </td>
-                <td rowspan="2"> <a href='https://postimages.org/' target='_blank'><img src='https://i.postimg.cc/tCSLJGtT/check.jpg' width="50" height="30" border='0' alt='check' /></a> </td>
-                <td rowspan="2"> LULUS </td>
+                <td > 1 </td>
+                <td > {{$pengadaan->pengadaan->pelaksana->pt_pelaksana}} </td>
+                <td > <a href='https://postimages.org/' target='_blank'><img src='https://i.postimg.cc/tCSLJGtT/check.jpg' width="50" height="30" border='0' alt='check' /></a> </td>
+                <td > <a href='https://postimages.org/' target='_blank'><img src='https://i.postimg.cc/tCSLJGtT/check.jpg' width="50" height="30" border='0' alt='check' /></a> </td>
+                <td > <a href='https://postimages.org/' target='_blank'><img src='https://i.postimg.cc/tCSLJGtT/check.jpg' width="50" height="30" border='0' alt='check' /></a> </td>
+                <td > <a href='https://postimages.org/' target='_blank'><img src='https://i.postimg.cc/tCSLJGtT/check.jpg' width="50" height="30" border='0' alt='check' /></a> </td>
+                <td > <a href='https://postimages.org/' target='_blank'><img src='https://i.postimg.cc/tCSLJGtT/check.jpg' width="50" height="30" border='0' alt='check' /></a> </td>
+                <td > <a href='https://postimages.org/' target='_blank'><img src='https://i.postimg.cc/tCSLJGtT/check.jpg' width="50" height="30" border='0' alt='check' /></a> </td>
+                <td > <a href='https://postimages.org/' target='_blank'><img src='https://i.postimg.cc/tCSLJGtT/check.jpg' width="50" height="30" border='0' alt='check' /></a> </td>
+                <td > <a href='https://postimages.org/' target='_blank'><img src='https://i.postimg.cc/tCSLJGtT/check.jpg' width="50" height="30" border='0' alt='check' /></a> </td>
+                <td > <a href='https://postimages.org/' target='_blank'><img src='https://i.postimg.cc/tCSLJGtT/check.jpg' width="50" height="30" border='0' alt='check' /></a> </td>
+                <td > <a href='https://postimages.org/' target='_blank'><img src='https://i.postimg.cc/tCSLJGtT/check.jpg' width="50" height="30" border='0' alt='check' /></a> </td>
+                <td > LULUS </td>
             </tr>
+        </tbody>
         </table>
     </div>
+    <br><br>
     <div>
         <table>
             <tr>
@@ -125,6 +133,7 @@
                 <td width="400"> </td>
                 <td style="text-indent: 45px;">PEJABAT PENGADAAN</td>
             </tr>
+            <br>
             <br>
             <br>
             <br>

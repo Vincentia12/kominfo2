@@ -442,7 +442,7 @@ class PengadaanController extends Controller
 
 
         return view(
-            'detail.evaluasi_dok',
+            'detail.lampiran_ba_evaluasi',
             ['pengadaan' => $pengadaan],
             ['barang' => $barang],
             ['pejabat' => $pejabat],
