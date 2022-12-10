@@ -418,13 +418,28 @@ class PdfController extends Controller
     {
 
         $pengadaan = Jadwal::find($id);
+        $barang = DB::table('barangs')
+            ->where('barangs.pengadaan_id', 'like', "%" . $pengadaan->pengadaan_id . "%")
+            ->get();
+        // $pejabat = DB::table('pejabats')
+        //     ->where('id', '=', 1)
+        // ->get();
 
+        // $pejabat = Pejabat::all();
+
+
+
+        // dd($pengadaan, $barang );
         $pdf = PDF::loadview(
+            // $pdf = word::loadview(
             'cetak/ba_serah_terima',
             ['pengadaan' => $pengadaan],
+            ['barang' => $barang],
+            // ['pejabat' => $pejabat],
+            // );
         )->setPaper('f4', 'potrait');
-        // )->setPaper('f4', 'legal');
-        return $pdf->download('BeritaAcara_SerahTerima.pdf');
+        return $pdf->download('Berita Acara Serah Terima Hsil Pekerjaan.pdf');
+        // dd($pdf);
     }
 
     // Laporan Proses Pengadaan Barang/Jasa 

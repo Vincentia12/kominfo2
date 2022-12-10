@@ -48,7 +48,20 @@
             </tr>
         </table>
     </div>
+    @php
+    use App\Models\Jadwal;
+    use App\Models\pejabat;
 
+    $png = $pengadaan->pengadaan_id;
+
+    $KuitansiKontrak = Jadwal::where('jadwals.pengadaan_id', 'like', "%" . $png . "%")
+    ->where('jadwals.kegiatan', '=', 'Kuitansi Kontrak')
+    ->get();
+
+    $pejabat = Pejabat::all();
+
+    @endphp
+    @foreach ($pejabat as $pjb)
     <div>
         <table border="0" align="">
             <tr>
@@ -56,7 +69,7 @@
                 <td width="15">I.</td>
                 <td width="100">Nama</td>
                 <td>:</td>
-                <td width="370">I WAYAN RUDY ARTHA, S.Kom</td>
+                <td width="370">{{$pjb->pejabat_pembuatan_komitmen}}</td>
             </tr>
         </table>
     </div>
@@ -66,10 +79,11 @@
                 <td width="43"></td>
                 <td width="100">NIP</td>
                 <td>:</td>
-                <td width="370">19770517 200901 1 005</td>
+                <td width="370">{{$pjb->nip_pejabat_komitmen}}</td>
             </tr>
         </table>
     </div>
+    @endforeach
     <div>
         <table border="0" align="">
             <tr>
@@ -126,7 +140,7 @@
                 <td width="43"></td>
                 <td width="100">Alamat</td>
                 <td>:</td>
-                <td width="370">{{$pengadaan->pengadaan->pelaksana->alamat}} {{$pengadaan->pengadaan->pelaksana->kota}}</td>
+                <td width="370">{{$pengadaan->pengadaan->pelaksana->alamat}}, {{$pengadaan->pengadaan->pelaksana->kota}}</td>
             </tr>
         </table>
     </div>
@@ -160,12 +174,13 @@
         </table>
     </div>
     <div>
+        @foreach ($KuitansiKontrak as $kk)
         <table border="0" align="">
             <tr>
                 <td width="43"></td>
                 <td width="120">Kuitansi Kontrak nomor</td>
                 <td>:</td>
-                <td width="370"> 020/654.14/114.6/2022</td>
+                <td width="370"> 020/{{$kk->nomor}}/114.6/{{$kk->tanggal->format('Y')}}</td>
             </tr>
         </table>
     </div>
@@ -175,10 +190,11 @@
                 <td width="43"></td>
                 <td width="120">Tanggal</td>
                 <td>:</td>
-                <td width="370"> 020/654.14/114.6/2022</td>
+                <td width="370"> {{$kk->tanggal->format('d F Y')}}</td>
             </tr>
         </table>
     </div>
+    @endforeach
     <div>
         <table border="0" align="">
             <tr>
@@ -292,6 +308,133 @@
                 <td width="250">NIP. 19770517 200901 1 005</td>
                 <td width="20"> </td>
             </tr>
+        </table>
+    </div>
+
+    <br><br>
+
+    <!-- lampiran -->
+    <div style="text-align:center ;">
+        <table style="text-align: center" border="0" font-size="0">
+            <tr>
+                <td width="8"></td>
+                <td>Lampiran Berita Acara Serah Terima Hasil Pekerjaan</td>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <table border="0" font-size="0">
+            <tr>
+                <td width="8"></td>
+                <td>Nomor</td>
+                <td width="10">:</td>
+                <td width="250">020/{{$pengadaan->nomor}} /114.6/{{$pengadaan->tanggal->isoFormat('Y')}}</td>
+            </tr>
+            <tr>
+                <td width="8"></td>
+                <td>Tanggal</td>
+                <td width="10">:</td>
+                <td width="250">{{$pengadaan->tanggal->isoFormat('D MMMM Y')}}</td>
+            </tr>
+        </table>
+    </div>
+    <br>
+    <div>
+        <table border="1" align="center" style="color: #000000; border-color: #000000; border-collapse: collapse;">
+            <thead>
+                <tr>
+                    <td>
+                        <center><b>NO.</b></center>
+                    </td>
+                    <td>
+                        <center><b>JENIS BARANG / PEKERJAAN</b> </center>
+                    </td>
+                    <td>
+                        <center><b>KUANTITAS</b> </center>
+                    </td>
+                    <td>
+                        <center><b>SATUAN</b> </center>
+                    </td>
+                    <td>
+                        <center><b>HARGA SATUAN (Rp.)</b> </center>
+                    </td>
+                    <td>
+                        <center><b>JUMLAH HARGA (Rp.)</b> </center>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: lightgrey;">
+                        <center><b>1</b></center>
+                    </td>
+                    <td style="background-color: lightgrey;">
+                        <center><b>2</b></center>
+                    </td>
+                    <td style="background-color: lightgrey;">
+                        <center><b>3</b></center>
+                    </td>
+                    <td style="background-color: lightgrey;">
+                        <center><b>4</b></center>
+                    </td>
+                    <td style="background-color: lightgrey;">
+                        <center><b>5</b></center>
+                    </td>
+                    <td style="background-color: lightgrey;">
+                        <center><b>6</b></center>
+                    </td>
+                </tr>
+                <tr colspan="7">PENGADAAN BELANJA ALAT/BAHAN UNTUK KEGIATAN KANTOR</tr>
+            </thead>
+            <tr>
+                <td>1</td>
+                <td>{{$pengadaan->pengadaan->jenis_pengadaan}}</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tbody>
+                @php $no = 1; @endphp
+                @foreach ($barang as $brg)
+                <tr>
+                    <td></td>
+                    <td>{{$brg->barang}}</td>
+                    <td>{{$brg->jumlah_barang}}</td>
+                    <td>{{$brg->satuan}}</td>
+                    <td>{{$brg->harga_satuan}}</td>
+                    {{-- @php
+                        // $jumlahbarang = $barang["jumlah_barang"];
+                        $jumlahbarang = $brg->jumlah_barang;
+                        $hargabarang = $brg->harga_satuan;
+                        // $hargabarang = $barang["harga_barang"];
+
+                        $jumlah_harga = $jumlahbarang * $hargabarang;
+                        @endphp --}}
+                    <td>{{$brg->jumlah_harga}}</td>
+                </tr>
+                @endforeach
+                <tr>
+                    <td style="text-align:right" colspan="4"><b>Total</b></td>
+                    @php
+                    $png = $pengadaan->pengadaan_id;
+                    $sum = DB::table('barangs')
+                    ->where('barangs.pengadaan_id', 'like', "%" . $png . "%")
+                    ->sum('jumlah_harga');
+                    $ppn = $sum * 0.11;
+                    @endphp
+                    <td></td>
+                    <td>{{$sum}}</td>
+                </tr>
+                <tr>
+                    <td style="text-align:right" colspan="4"><b>PPN 11%</b></td>
+                    <td></td>
+                    <td>{{$ppn}}</td>
+                </tr>
+                <tr>
+                    <td style="text-align:right" colspan="4"><b> Jumlah Total</b></td>
+                    <td></td>
+                    <td>{{$pengadaan->pengadaan->nilai_negosiasi}}</td>
+                </tr>
+            </tbody>
         </table>
     </div>
 
