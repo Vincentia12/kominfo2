@@ -289,13 +289,15 @@
             </tr>
         </table>
     </div>
+
     <br><br><br>
+    @foreach ($pejabat as $pjb)
     <div style="text-align:center ;">
         <table style="text-align: center" border="0" font-size="0">
             <tr>
                 <td width="20"> </td>
                 <td width="250"><u>{{$pengadaan->pengadaan->pelaksana->nama_pelaksana}}</u></td>
-                <td width="250"><u>I WAYAN RUDY ARTHA, S.Kom</u></td>
+                <td width="250"><u>{{$pjb->pejabat_pembuatan_komitmen}}</u></td>
                 <td width="20"> </td>
             </tr>
         </table>
@@ -305,11 +307,12 @@
             <tr>
                 <td width="20"> </td>
                 <td width="250">{{$pengadaan->pengadaan->pelaksana->jabatan_pelaksana}} </td>
-                <td width="250">NIP. 19770517 200901 1 005</td>
+                <td width="250">NIP. {{$pjb->nip_pejabat_komitmen}}</td>
                 <td width="20"> </td>
             </tr>
         </table>
     </div>
+    @endforeach
 
     <br><br>
 
@@ -346,14 +349,11 @@
                     <td>
                         <center><b>NO.</b></center>
                     </td>
-                    <td>
-                        <center><b>JENIS BARANG / PEKERJAAN</b> </center>
+                    <td colspan="2">
+                        <center><b>Banyaknya</b> </center>
                     </td>
                     <td>
-                        <center><b>KUANTITAS</b> </center>
-                    </td>
-                    <td>
-                        <center><b>SATUAN</b> </center>
+                        <center><b>Uraian dan Spesifikasi</b> </center>
                     </td>
                     <td>
                         <center><b>HARGA SATUAN (Rp.)</b> </center>
@@ -363,32 +363,29 @@
                     </td>
                 </tr>
                 <tr>
-                    <td style="background-color: lightgrey;">
-                        <center><b>1</b></center>
+                    <td height="20">
+
                     </td>
-                    <td style="background-color: lightgrey;">
-                        <center><b>2</b></center>
+                    <td>
+
                     </td>
-                    <td style="background-color: lightgrey;">
-                        <center><b>3</b></center>
+                    <td>
                     </td>
-                    <td style="background-color: lightgrey;">
-                        <center><b>4</b></center>
+
+                    <td>
                     </td>
-                    <td style="background-color: lightgrey;">
-                        <center><b>5</b></center>
+                    <td>
+
                     </td>
-                    <td style="background-color: lightgrey;">
-                        <center><b>6</b></center>
+                    <td>
+
                     </td>
                 </tr>
                 <tr colspan="7">PENGADAAN BELANJA ALAT/BAHAN UNTUK KEGIATAN KANTOR</tr>
             </thead>
             <tr>
                 <td>1</td>
-                <td>{{$pengadaan->pengadaan->jenis_pengadaan}}</td>
-                <td></td>
-                <td></td>
+                <td colspan="3">{{$pengadaan->pengadaan->jenis_pengadaan}}</td>
                 <td></td>
                 <td></td>
             </tr>
@@ -397,10 +394,11 @@
                 @foreach ($barang as $brg)
                 <tr>
                     <td></td>
-                    <td>{{$brg->barang}}</td>
+
                     <td>{{$brg->jumlah_barang}}</td>
                     <td>{{$brg->satuan}}</td>
-                    <td>{{$brg->harga_satuan}}</td>
+                    <td>{{$brg->barang}}</td>
+                    <td>{{$brg->harga_satuan}},-</td>
                     {{-- @php
                         // $jumlahbarang = $barang["jumlah_barang"];
                         $jumlahbarang = $brg->jumlah_barang;
@@ -409,7 +407,7 @@
 
                         $jumlah_harga = $jumlahbarang * $hargabarang;
                         @endphp --}}
-                    <td>{{$brg->jumlah_harga}}</td>
+                    <td>{{$brg->jumlah_harga}},-</td>
                 </tr>
                 @endforeach
                 <tr>
@@ -422,21 +420,60 @@
                     $ppn = $sum * 0.11;
                     @endphp
                     <td></td>
-                    <td>{{$sum}}</td>
+                    <td>{{$sum}},-</td>
                 </tr>
                 <tr>
                     <td style="text-align:right" colspan="4"><b>PPN 11%</b></td>
                     <td></td>
-                    <td>{{$ppn}}</td>
+                    <td>{{$ppn}},-</td>
                 </tr>
                 <tr>
                     <td style="text-align:right" colspan="4"><b> Jumlah Total</b></td>
                     <td></td>
-                    <td>{{$pengadaan->pengadaan->nilai_negosiasi}}</td>
+                    <td>{{$pengadaan->pengadaan->nilai_negosiasi}},-</td>
+                </tr>
+                <tr>
+                    <td colspan="6">Terbilang : =={{$pengadaan->pengadaan->deskripsi_negosiasi}}==</td>
                 </tr>
             </tbody>
         </table>
     </div>
+
+    <br>
+    <br>
+    <div style="text-align:center ;">
+        <table style="text-align: center" border="0" font-size="0">
+            <tr>
+                <td width="20"> </td>
+                <td width="250"><b>PIHAK KEDUA</b></td>
+                <td width="250"><b>PIHAK KESATU</b></td>
+                <td width="20"> </td>
+            </tr>
+        </table>
+    </div>
+    <br><br><br>
+    @foreach ($pejabat as $pjb)
+    <div style="text-align:center ;">
+        <table style="text-align: center" border="0" font-size="0">
+            <tr>
+                <td width="20"> </td>
+                <td width="250"><u>{{$pengadaan->pengadaan->pelaksana->nama_pelaksana}}</u></td>
+                <td width="250"><u>{{$pjb->pejabat_pembuatan_komitmen}}</u></td>
+                <td width="20"> </td>
+            </tr>
+        </table>
+    </div>
+    <div style="text-align:center ;">
+        <table style="text-align: center" border="0" font-size="0">
+            <tr>
+                <td width="20"> </td>
+                <td width="250">{{$pengadaan->pengadaan->pelaksana->jabatan_pelaksana}} </td>
+                <td width="250">NIP. {{$pjb->nip_pejabat_komitmen}}</td>
+                <td width="20"> </td>
+            </tr>
+        </table>
+    </div>
+    @endforeach
 
 
 
