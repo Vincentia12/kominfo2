@@ -47,6 +47,23 @@
         </table>
     </div>
 
+    @php
+    use App\Models\Jadwal;
+    use App\Models\pejabat;
+
+    $png = $pengadaan->pengadaan_id;
+
+    $KuitansiKontrak = Jadwal::where('jadwals.pengadaan_id', 'like', "%" . $png . "%")
+    ->where('jadwals.kegiatan', '=', 'Kuitansi Kontrak')
+    ->get();
+    $BeritaAcaraSerahTerimaHasilPekerjaan = Jadwal::where('jadwals.pengadaan_id', 'like', "%" . $png . "%")
+    ->where('jadwals.kegiatan', '=', 'BA Serah Terima Hasil Pekerjaan')
+    ->get();
+
+    $pejabat = Pejabat::all();
+
+    @endphp
+
     <div class="row">
         <table border="0" align="center">
             <tr>
@@ -74,13 +91,14 @@
         </table>
     </div>
 
+    @foreach ($pejabat as $pjb)
     <div>
         <table border="0" align="">
             <tr>
                 <td width="8"></td>
                 <td width="100">Nama</td>
                 <td>:</td>
-                <td width="370">I WAYAN RUDY ARTHA, S.Kom</td>
+                <td width="370">{{$pjb->pejabat_pembuatan_komitmen}}</td>
             </tr>
         </table>
     </div>
@@ -90,7 +108,7 @@
                 <td width="8"></td>
                 <td width="100">NIP</td>
                 <td>:</td>
-                <td width="370">19770517 200901 1 005</td>
+                <td width="370">{{$pjb->nip_pejabat_komitmen}}</td>
             </tr>
         </table>
     </div>
@@ -114,6 +132,7 @@
             </tr>
         </table>
     </div>
+    @endforeach
 
     <br>
     <div class="row">
@@ -127,11 +146,13 @@
     </div>
     <div class="row">
         <table>
+            @foreach ($KuitansiKontrak as $kk)
             <tr>
                 <td width="8"></td>
-                <td style="text-align: left ;text-align: justify;">Berdasarkan Kwitansi Kontrak Nomor : 020/654.14/114.6/2022 tanggal Dua Puluh Enam Bulan Jui Tahun 2022 dengan ini:
+                <td style="text-align: left ;text-align: justify;">Berdasarkan Kwitansi Kontrak Nomor : 020/020/{{$kk->nomor}}/114.6/{{$kk->tanggal->format('Y')}} tanggal {{$kk->deskripsi_tgl}} Tahun {{$kk->tanggal->format('Y')}} dengan ini:
                 </td>
             </tr>
+            @endforeach
         </table>
     </div>
 
@@ -181,7 +202,7 @@
                 <td width="8"></td>
                 <td width="100">Alamat Kantor</td>
                 <td>:</td>
-                <td width="370">{{$pengadaan->pengadaan->pelaksana->alamat}} {{$pengadaan->pengadaan->pelaksana->kota}}</td>
+                <td width="370">{{$pengadaan->pengadaan->pelaksana->alamat}}, {{$pengadaan->pengadaan->pelaksana->kota}}</td>
             </tr>
         </table>
     </div>
@@ -191,7 +212,7 @@
         <table>
             <tr>
                 <td width="8"></td>
-                <td style="text-align: left ;text-align: justify; text-indent: 45px;">Yang bertindak untuk dan atas nama Perusahaan CV. PATRIA NUGRAHA, yang selanjutnya disebut <b>PIHAK KEDUA</b> Untuk segera memulai pelaksanaan pekerjaan dengan memperhatikan ketentuan-ketentuan sebagaI berikut :
+                <td style="text-align: left ;text-align: justify; text-indent: 45px;">Yang bertindak untuk dan atas nama Perusahaan {{$pengadaan->pengadaan->pelaksana->pt_pelaksana}}, yang selanjutnya disebut <b>PIHAK KEDUA</b> Untuk segera memulai pelaksanaan pekerjaan dengan memperhatikan ketentuan-ketentuan sebagaI berikut :
                 </td>
             </tr>
         </table>
@@ -237,7 +258,7 @@
                 <td width="15">4.</td>
                 <td width="130">Waktu penyelesaian </td>
                 <td>:</td>
-                <td width="370">Selama {{$pengadaan->alokasi}} hari kalender dan pekerjaan harus sudah selesai pada tanggal 20 September 2022</td>
+                <td width="370">Selama {{$pengadaan->alokasi}} hari kalender dan pekerjaan harus sudah selesai pada tanggal @foreach ($BeritaAcaraSerahTerimaHasilPekerjaan as $basrhp) {{$pengadaan->tanggal->format('Y')}} @endforeach</td>
             </tr>
         </table>
     </div>
@@ -296,13 +317,14 @@
             </tr>
         </table>
     </div>
+    @foreach ($pejabat as $pjb)
     <br><br><br>
     <div style="text-align:center ;">
         <table style="text-align: center" border="0" font-size="0">
             <tr>
                 <td width="20"> </td>
                 <td width="250"><u>{{$pengadaan->pengadaan->pelaksana->nama_pelaksana}}</u></td>
-                <td width="250"><u>ADI KURNIAWAN.S.Kom.,M.Kom</u></td>
+                <td width="250"><u>{{$pjb->pejabat_pengadaan}}</u></td>
                 <td width="20"> </td>
             </tr>
         </table>
@@ -312,11 +334,12 @@
             <tr>
                 <td width="20"> </td>
                 <td width="250">{{$pengadaan->pengadaan->pelaksana->jabatan_pelaksana}} </td>
-                <td width="250">NIP. 19890618 201403 1 002</td>
+                <td width="250">NIP. {{$pjb->nip_pejabat_pengadaan}}</td>
                 <td width="20"> </td>
             </tr>
         </table>
     </div>
+    @endforeach
 
 
 
