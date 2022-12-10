@@ -152,10 +152,10 @@ Route::get('/pengadaan2/show8/{id}', [PengadaanController::class, 'show8'])->nam
 Route::get('/pengadaan2/show9/{id}', [PengadaanController::class, 'show9'])->name('pengadaan2.show9');
 Route::get('/pengadaan2/show10/{id}', [PengadaanController::class, 'show10'])->name('pengadaan2.show10');
 Route::get('/pengadaan2/show11/{id}', [PengadaanController::class, 'show11'])->name('pengadaan2.show11');
-Route::get('/pengadaan2/show12/{id}', [PengadaanController::class, 'show11'])->name('pengadaan2.show12');
-Route::get('/pengadaan2/show13/{id}', [PengadaanController::class, 'show11'])->name('pengadaan2.show13');
-Route::get('/pengadaan2/show14/{id}', [PengadaanController::class, 'show11'])->name('pengadaan2.show14');
-Route::get('/pengadaan2/show15/{id}', [PengadaanController::class, 'show11'])->name('pengadaan2.show15');
+Route::get('/pengadaan2/show12/{id}', [PengadaanController::class, 'show12'])->name('pengadaan2.show12');
+Route::get('/pengadaan2/show13/{id}', [PengadaanController::class, 'show13'])->name('pengadaan2.show13');
+Route::get('/pengadaan2/show14/{id}', [PengadaanController::class, 'show14'])->name('pengadaan2.show14');
+Route::get('/pengadaan2/show15/{id}', [PengadaanController::class, 'show15'])->name('pengadaan2.show15');
 Route::get('/pengadaan2/show16/{id}', [PengadaanController::class, 'show16'])->name('pengadaan2.show16');
 Route::get('/pengadaan2/show17/{id}', [PengadaanController::class, 'show17'])->name('pengadaan2.show17');
 Route::get('/pengadaan2/show18/{id}', [PengadaanController::class, 'show18'])->name('pengadaan2.show18');
