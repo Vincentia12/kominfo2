@@ -42,8 +42,9 @@
         <div style="text-align: center">
             {{-- <font color="black">  --}}
             <p align="center"><u><b> SURAT PERINTAH KERJA </b></u> <br>
-                {{-- Nomor : 020/654.{{$pengadaan->nomor}}/114.6/2022 </p> --}}
-                Nomor : 020/654.{{$pengadaan->nomor}}/114.6/{{$pengadaan->tanggal->format('Y')}} </p>
+                {{-- Nomor : 020/654.{{$pengadaan->nomor}}/114.6/2022
+            </p> --}}
+            Nomor : 020/654.{{$pengadaan->nomor}}/114.6/{{$pengadaan->tanggal->format('Y')}} </p>
             {{-- </font> --}}
         </div>
     </div>
@@ -115,51 +116,51 @@
                 </tr>
             </table>
         </div>
-                    @php
-                    use App\Models\Jadwal;
-                    use App\Models\pejabat;
+        @php
+        use App\Models\Jadwal;
+        use App\Models\pejabat;
 
-                        $png = $pengadaan->pengadaan_id;
-                        // $jdwl = DB::table('jadwals')
-                        //         ->where('jadwals.pengadaan_id', 'like', "%" . $png . "%")
-                        //         // ->where('jadwals.kegiatan', '=', 'Surat Undangan Permintaan Penawaran Harga')
-                        //         ->get();
-                        $SuratUndanganPermintaanPenawaranHarga = Jadwal::where('jadwals.pengadaan_id', 'like', "%" . $png . "%")
-                            ->where('jadwals.kegiatan', '=', 'Surat Undangan Permintaan Penawaran Harga')
-                        ->get();
-                        $SuratPenawaranHarga = Jadwal::where('jadwals.pengadaan_id', 'like', "%" . $png . "%")
-                            ->where('jadwals.kegiatan', '=', 'Surat Penawaran Harga')
-                        ->get();
-                        $BeritaAcaraHasilKlarifikasiNegosiasi = Jadwal::where('jadwals.pengadaan_id', 'like', "%" . $png . "%")
-                            ->where('jadwals.kegiatan', '=', 'BA. Klarifikasi/egosiasi')
-                        ->get();
-                        $BeritaAcaraHasilPengadaanLangsung = Jadwal::where('jadwals.pengadaan_id', 'like', "%" . $png . "%")
-                            ->where('jadwals.kegiatan', '=', 'BA. Hasil Pengadaan Langsung')
-                        ->get();
-                        $SuratPerintahMulaiKerja = Jadwal::where('jadwals.pengadaan_id', 'like', "%" . $png . "%")
-                            ->where('jadwals.kegiatan', '=', 'Surat Perintah Mulai Kerja (SPMK)')
-                        ->get();
-                        $BeritaAcaraSerahTerimaHasilPekerjaan = Jadwal::where('jadwals.pengadaan_id', 'like', "%" . $png . "%")
-                            ->where('jadwals.kegiatan', '=', 'BA Serah Terima Hasil Pekerjaan')
-                        ->get();
-                        $pejabat = Pejabat::all();
-                        //     if ($jdwl->kegiatan = 'Surat Undangan Permintaan Penawaran Harga') {
-                        //     $idlain = DB::table('jadwals')
-                        //         // ->where('jadwals.pengadaan_id', '=', $jdwl->id )
-                        //     ->get();
-                        //     // $idlain = Jadwal::all();
-                        //     // Jadwal::all();
-                        // }else {
-                        //     # code...
-                        // }
-                        
-                        // if ($jdwl->kegiatan = 'Surat Undangan Permintaan Penawaran Harga')
-                        //     elseif (condition) {
-                        //         # code...
-                        //     }
-                        // endif
-                        // return $jdwl;
-                    @endphp
+        $png = $pengadaan->pengadaan_id;
+        // $jdwl = DB::table('jadwals')
+        // ->where('jadwals.pengadaan_id', 'like', "%" . $png . "%")
+        // // ->where('jadwals.kegiatan', '=', 'Surat Undangan Permintaan Penawaran Harga')
+        // ->get();
+        $SuratUndanganPermintaanPenawaranHarga = Jadwal::where('jadwals.pengadaan_id', 'like', "%" . $png . "%")
+        ->where('jadwals.kegiatan', '=', 'Surat Undangan Permintaan Penawaran Harga')
+        ->get();
+        $SuratPenawaranHarga = Jadwal::where('jadwals.pengadaan_id', 'like', "%" . $png . "%")
+        ->where('jadwals.kegiatan', '=', 'Surat Penawaran Harga')
+        ->get();
+        $BeritaAcaraHasilKlarifikasiNegosiasi = Jadwal::where('jadwals.pengadaan_id', 'like', "%" . $png . "%")
+        ->where('jadwals.kegiatan', '=', 'BA. Klarifikasi/egosiasi')
+        ->get();
+        $BeritaAcaraHasilPengadaanLangsung = Jadwal::where('jadwals.pengadaan_id', 'like', "%" . $png . "%")
+        ->where('jadwals.kegiatan', '=', 'BA. Hasil Pengadaan Langsung')
+        ->get();
+        $SuratPerintahMulaiKerja = Jadwal::where('jadwals.pengadaan_id', 'like', "%" . $png . "%")
+        ->where('jadwals.kegiatan', '=', 'Surat Perintah Mulai Kerja (SPMK)')
+        ->get();
+        $BeritaAcaraSerahTerimaHasilPekerjaan = Jadwal::where('jadwals.pengadaan_id', 'like', "%" . $png . "%")
+        ->where('jadwals.kegiatan', '=', 'BA Serah Terima Hasil Pekerjaan')
+        ->get();
+        $pejabat = Pejabat::all();
+        // if ($jdwl->kegiatan = 'Surat Undangan Permintaan Penawaran Harga') {
+        // $idlain = DB::table('jadwals')
+        // // ->where('jadwals.pengadaan_id', '=', $jdwl->id )
+        // ->get();
+        // // $idlain = Jadwal::all();
+        // // Jadwal::all();
+        // }else {
+        // # code...
+        // }
+
+        // if ($jdwl->kegiatan = 'Surat Undangan Permintaan Penawaran Harga')
+        // elseif (condition) {
+        // # code...
+        // }
+        // endif
+        // return $jdwl;
+        @endphp
         <div>
             <table border="0">
                 <tr>
@@ -170,13 +171,13 @@
                     {{-- no surat lain --}}
                     {{-- <td>{{dd($jdwl->nomor)}}</td> --}}
                     {{-- <td>{{dd($jdwl)}}</td> --}}
-                   
-                        <td>Surat Permintaan Penawaran Nomor : 
-                            @foreach ($SuratUndanganPermintaanPenawaranHarga as $supph)
-                            020/{{$supph->nomor}}/114.6/{{$supph->tanggal->format('Y')}} Tanggal {{$supph->tanggal}}
-                            @endforeach
-                        </td>
-                        {{-- <td>{{$j->nomor}}</td> --}}
+
+                    <td>Surat Permintaan Penawaran Nomor :
+                        @foreach ($SuratUndanganPermintaanPenawaranHarga as $supph)
+                        020/{{$supph->nomor}}/114.6/{{$supph->tanggal->format('Y')}} Tanggal {{$supph->tanggal}}
+                        @endforeach
+                    </td>
+                    {{-- <td>{{$j->nomor}}</td> --}}
                     {{-- <td>{{$jdwl['nomor']}}</td> --}}
                     {{-- <td>{{[$jdwl->nomor]}}</td> --}}
                     {{-- <td>Surat Permintaan Penawaran Nomor : 020/654.5/114.6/2022 Tanggal 22 Agustus 2022</td> --}}
@@ -184,17 +185,17 @@
                 <tr>
                     <td>2.</td>
                     {{-- no surat lain --}}
-                        <td>Surat Penawaran Harga Nomor : 
-                            @foreach ($SuratPenawaranHarga as $sph)
-                            {{$sph->nomor}} Tanggal {{$sph->tanggl}}
-                            @endforeach
-                        </td>
+                    <td>Surat Penawaran Harga Nomor :
+                        @foreach ($SuratPenawaranHarga as $sph)
+                        {{$sph->nomor}} Tanggal {{$sph->tanggl}}
+                        @endforeach
+                    </td>
                     {{-- <td>Surat Penawaran Harga Nomor : 233/PEN/PN/IX/2022 Tanggal 24 Agustus 2022</td> --}}
                 </tr>
                 <tr>
                     <td>3.</td>
                     {{-- no surat lain --}}
-                    <td>Berita Acara Hasil Klarifikasi dan Negosiasi Nomor : 
+                    <td>Berita Acara Hasil Klarifikasi dan Negosiasi Nomor :
                         @foreach ($BeritaAcaraHasilKlarifikasiNegosiasi as $bahkn)
                         020/{{$bahkn->nomor}}/114.6/{{$bahkn->tanggal->format('Y')}} Tanggal {{$bahkn->tanggl}}
                         @endforeach
@@ -204,7 +205,7 @@
                 <tr>
                     <td>4.</td>
                     {{-- no surat lain --}}
-                    <td>Berita Acara Hasil Pengadaan Langsung Nomor : 
+                    <td>Berita Acara Hasil Pengadaan Langsung Nomor :
                         @foreach ($BeritaAcaraHasilPengadaanLangsung as $bahpl)
                         020/{{$bahpl->nomor}}/114.6/{{$bahpl->tanggal->format('Y')}} Tanggal {{$bahpl->tanggl}}
                         @endforeach
@@ -219,7 +220,7 @@
                     <td>Lingkup Pekerjaan :</td>
                 </tr>
             </table>
-            <table border="1">
+            <table border="1" align="center" style="color: #333333;border-color: #333333;border-collapse: collapse;">
                 <thead>
                     <tr>
                         <td>NO</td>
@@ -277,11 +278,11 @@
                     <tr>
                         <td style="text-align:right" colspan="6">Total</td>
                         @php
-                            $png = $pengadaan->pengadaan_id;
-                            $sum = DB::table('barangs')
-                                ->where('barangs.pengadaan_id', 'like', "%" . $png . "%")
-                            ->sum('jumlah_harga');
-                            $ppn = $sum * 0.11;
+                        $png = $pengadaan->pengadaan_id;
+                        $sum = DB::table('barangs')
+                        ->where('barangs.pengadaan_id', 'like', "%" . $png . "%")
+                        ->sum('jumlah_harga');
+                        $ppn = $sum * 0.11;
                         @endphp
                         <td>{{$sum}}</td>
                     </tr>
@@ -299,21 +300,22 @@
                 @foreach ($pejabat as $pj)
                 <tr>
                     <td>6.</td>
-                    <td colspan="2">Pembayaran dengan Sumber Dana APBD Provinsi Jawa Timur Tahun Anggaran {{date('Y', strtotime($pj->tanggal_sk))}}, 
-                    {{-- <td colspan="2">Pembayaran dengan Sumber Dana APBD Provinsi Jawa Timur Tahun Anggaran {{$pj->tahun_sk}},  --}}
-                        dibebankan pada DPA - SKPD Dinas Komunikasi dan Informatika Provinsi Jawa Timur Tahun Anggaran {{date('Y', strtotime($pj->tanggal_sk))}}, 
-                        {{-- dibebankan pada DPA - SKPD Dinas Komunikasi dan Informatika Provinsi Jawa Timur Tahun Anggaran {{$pj->tanggal_sk->isoFormat('Y')}},  --}}
-                        Kode Rekening {{$pengadaan->pengadaan->pelaksana->kode_rekening}}</td>
+                    <td colspan="2">Pembayaran dengan Sumber Dana APBD Provinsi Jawa Timur Tahun Anggaran {{date('Y', strtotime($pj->tanggal_sk))}},
+                        {{-- <td colspan="2">Pembayaran dengan Sumber Dana APBD Provinsi Jawa Timur Tahun Anggaran {{$pj->tahun_sk}}, --}}
+                        dibebankan pada DPA - SKPD Dinas Komunikasi dan Informatika Provinsi Jawa Timur Tahun Anggaran {{date('Y', strtotime($pj->tanggal_sk))}},
+                        {{-- dibebankan pada DPA - SKPD Dinas Komunikasi dan Informatika Provinsi Jawa Timur Tahun Anggaran {{$pj->tanggal_sk->isoFormat('Y')}}, --}}
+                        Kode Rekening {{$pengadaan->pengadaan->pelaksana->kode_rekening}}
+                    </td>
                 </tr>
                 @endforeach
                 <tr>
                     <td>7.</td>
-                    <td colspan="2">Jangka Waktu Pelaksanaan 
+                    <td colspan="2">Jangka Waktu Pelaksanaan
                         @foreach ($SuratPerintahMulaiKerja as $spmk)
-                            {{$spmk->alokasi}} hari kalender, tanggal pelaksanaan yaitu Tanggal {{$spmk->tanggal}} 
-                        @endforeach - 
+                        {{$spmk->alokasi}} hari kalender, tanggal pelaksanaan yaitu Tanggal {{$spmk->tanggal}}
+                        @endforeach -
                         @foreach ($BeritaAcaraSerahTerimaHasilPekerjaan as $basrhp)
-                            {{$basrhp->tanggal}}
+                        {{$basrhp->tanggal}}
                         @endforeach
                     </td>
                 </tr>

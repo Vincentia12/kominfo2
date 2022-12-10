@@ -172,6 +172,7 @@
               <option value="BA. Penyerahan Barang/Jasa">BA. Penyerahan Barang/Jasa</option>
               <option value="BA. Hasil Pemeriksaan Administratif">BA. Hasil Pemeriksaan Administratif</option>
               <option value="BA. Hasil Pembayaran">BA. Hasil Pembayaran</option>
+              <option value="Kuitansi Kontrak">Kuitansi Kontrak</option>
             </select>
           </div>
           <div class="mb-4">
@@ -274,6 +275,7 @@
               <option value="BA. Penyerahan Barang/Jasa">BA. Penyerahan Barang/Jasa</option>
               <option value="BA. Hasil Pemeriksaan Administratif">BA. Hasil Pemeriksaan Administratif</option>
               <option value="BA. Hasil Pembayaran">BA. Hasil Pembayaran</option>
+              <option value="Kuitansi Kontrak">Kuitansi Kontrak</option>
             </select>
           </div>
           <div class="mb-4">

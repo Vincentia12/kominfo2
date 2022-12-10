@@ -59,7 +59,7 @@
                 <td width="80">Nomor</td>
                 <td>:</td>
                 <!-- diubah -->
-                <td width="175">020/{{$pengadaan->nomor}}/114.6/2022</td>
+                <td width="175">020/{{$pengadaan->nomor}}/114.6/{{$pengadaan->created_at->isoFormat('Y')}}</td>
                 <td width="50">Yth. Sdr. </td>
                 <!-- diubah -->
                 <td width="175">{{$pengadaan->pengadaan->pelaksana->jabatan_pelaksana}} {{$pengadaan->pengadaan->pelaksana->pt_pelaksana}}</td>
@@ -88,6 +88,37 @@
             </tr>
         </table>
     </div>
+
+    @php
+    use App\Models\Jadwal;
+    use App\Models\pejabat;
+
+    $png = $pengadaan->pengadaan_id;
+    $SuratUndanganPermintaanPenawaranHarga = Jadwal::where('jadwals.pengadaan_id', 'like', "%" . $png . "%")
+    ->where('jadwals.kegiatan', '=', 'Surat Undangan Permintaan Penawaran Harga')
+    ->get();
+
+    $SuratUndanganPermintaanPenawaranHarga = Jadwal::where('jadwals.pengadaan_id', 'like', "%" . $png . "%")
+    ->where('jadwals.kegiatan', '=', 'Surat Undangan Permintaan Penawaran Harga')
+    ->get();
+    $SuratPenawaranHarga = Jadwal::where('jadwals.pengadaan_id', 'like', "%" . $png . "%")
+    ->where('jadwals.kegiatan', '=', 'Surat Penawaran Harga')
+    ->get();
+    $BeritaAcaraHasilKlarifikasiNegosiasi = Jadwal::where('jadwals.pengadaan_id', 'like', "%" . $png . "%")
+    ->where('jadwals.kegiatan', '=', 'BA. Klarifikasi/egosiasi')
+    ->get();
+    $BeritaAcaraHasilPengadaanLangsung = Jadwal::where('jadwals.pengadaan_id', 'like', "%" . $png . "%")
+    ->where('jadwals.kegiatan', '=', 'BA. Hasil Pengadaan Langsung')
+    ->get();
+    $SuratPerintahMulaiKerja = Jadwal::where('jadwals.pengadaan_id', 'like', "%" . $png . "%")
+    ->where('jadwals.kegiatan', '=', 'Surat Perintah Mulai Kerja (SPMK)')
+    ->get();
+    $BeritaAcaraSerahTerimaHasilPekerjaan = Jadwal::where('jadwals.pengadaan_id', 'like', "%" . $png . "%")
+    ->where('jadwals.kegiatan', '=', 'BA Serah Terima Hasil Pekerjaan')
+    ->get();
+    $pejabat = Pejabat::all();
+
+    @endphp
 
     <br><br><br>
     <div class="row">

@@ -78,7 +78,7 @@
     ->get();
 
     $BeritaAcaraHasilKlarifikasiNegosiasi = Jadwal::where('jadwals.pengadaan_id', 'like', "%" . $png . "%")
-    ->where('jadwals.kegiatan', '=', 'BA. Klarifikasi/egosiasi')
+    ->where('jadwals.kegiatan', '=', 'BA. Klarifikasi/negosiasi')
     ->get();
     $pejabat = Pejabat::all();
     // if ($jdwl->kegiatan = 'Surat Undangan Permintaan Penawaran Harga') {

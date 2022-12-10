@@ -375,9 +375,9 @@ class PdfController extends Controller
 
         $pengadaan = Jadwal::find($id);
         $barang = DB::table('barangs')
-        ->where('barangs.pengadaan_id', 'like', "%" . $pengadaan->pengadaan_id . "%")
-        // ->join('pengadaans','pengadaans.id', '=', 'barangs.pengadaan_id')
-        // ->join('jadwals','jadwals.pengadaan_id', '=', 'pengadaans.id')
+            ->where('barangs.pengadaan_id', 'like', "%" . $pengadaan->pengadaan_id . "%")
+            // ->join('pengadaans','pengadaans.id', '=', 'barangs.pengadaan_id')
+            // ->join('jadwals','jadwals.pengadaan_id', '=', 'pengadaans.id')
             // ->select('barangs.harga_satuan', '*', 'barangs.jumlah_barang')
             ->get();
         // $sum = DB::table('barangs')
@@ -388,7 +388,7 @@ class PdfController extends Controller
         //     ->get();
         // $total = DB::table('barangs')
         // ->get();
-// dd($barang, $sum);
+        // dd($barang, $sum);
         $pdf = PDF::loadview(
             'cetak/surat_perintah_kerja',
             ['pengadaan' => $pengadaan],
@@ -469,5 +469,21 @@ class PdfController extends Controller
         )->setPaper('f4', 'potrait');
         // )->setPaper('f4', 'legal');
         return $pdf->download('BeritaAcara_HasilPembayaran.pdf');
+    }
+
+    // Kuitansi Kontrak
+    public function kuitansi_kontrak(Request $request, $id)
+    {
+
+        $pengadaan = Jadwal::find($id);
+        $barang = DB::table('barangs')
+            ->where('barangs.pengadaan_id', 'like', "%" . $pengadaan->pengadaan_id . "%")
+            ->get();
+        $pdf = PDF::loadview(
+            'cetak/kuitansi_kontrak',
+            ['pengadaan' => $pengadaan],
+            ['barang' => $barang],
+        )->setPaper('f4', 'potrait');
+        return $pdf->download('Kuitansi Kontrak.pdf');
     }
 }

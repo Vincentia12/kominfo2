@@ -45,10 +45,10 @@
                 @endif
                 {{-- <div class="mb-4"> --}}
                 <table class="table table-bordered" id="" style="width:100%">
-                {{-- <table class="table table-bordered" id="data1" style="width:100%"> --}}
-                {{-- <table id="datatable1" class="table table-bordered" style="width:100%"> --}}
-                {{-- <table id="data1" class="table table-bordered" cellspacing="0"> --}}
-                {{-- <table id="datatable1" class="table table-bordered" cellspacing="0"> --}}
+                    {{-- <table class="table table-bordered" id="data1" style="width:100%"> --}}
+                    {{-- <table id="datatable1" class="table table-bordered" style="width:100%"> --}}
+                    {{-- <table id="data1" class="table table-bordered" cellspacing="0"> --}}
+                    {{-- <table id="datatable1" class="table table-bordered" cellspacing="0"> --}}
                     <thead>
                         <tr>
                             <th>Pelaksana</th>
@@ -89,7 +89,7 @@
                                 @elseif($p1->kegiatan == 'Nota Dinas dari PPK ke Pejabat Pengadaan + Lampiran OE (HPS)')
                                 <a class="btn btn-info" href="{{ route('pengadaan1.show2',$p1->id) }}">Detail</a>
                                 <a class="btn btn-danger" href="{{route('pengadaan1.print2',$p1->id)}}">Cetak PDF <i class="fa fa-save"></i></a>
-                                
+
                                 @elseif($p1->kegiatan == 'Surat Undangan, Pengambilan Dokumen Kualifikasi dan Dokumen Pengadaan Langsung kepada Penyedia Barang/Jasa')
                                 <a class="btn btn-info" href="{{ route('pengadaan1.show3',$p1->id) }}">Detail</a>
                                 <a class="btn btn-danger " href="{{route('pengadaan1.print3',$p1->id)}}">Cetak PDF <i class="fa fa-save"></i></a>
@@ -185,6 +185,10 @@
                                 <a class="btn btn-info" href="{{ route('pengadaan1.show26',$p1->id) }}">Detail</a>
                                 <a class="btn btn-danger " href="{{route('pengadaan1.print26',$p1->id)}}">Cetak PDF <i class="fa fa-save"></i></a>
 
+                                @elseif($p1->kegiatan == 'Kuitansi Kontrak')
+                                <a class="btn btn-info" href="{{ route('pengadaan1.show28',$p1->id) }}">Detail</a>
+                                <a class="btn btn-danger " href="{{route('pengadaan1.print28',$p1->id)}}">Cetak PDF <i class="fa fa-save"></i></a>
+
                                 @else
                                 You don't have a post!
                                 @endif
@@ -199,4 +203,3 @@
     </div>
 
     @endsection
-

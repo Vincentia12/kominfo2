@@ -37,8 +37,7 @@
             <tr>
                 <td>Tanggal</td>
                 <td>:</td>
-                <td>{{$pengadaan->tanggal->isoFormat('D MMMM Y')}}</td>
-                {{-- <td width="475">11 Agustus 2022</td> --}}
+                <td>{{$pengadaan->created_at->isoFormat('D MMMM Y')}}</td>
             </tr>
             <tr>
                 <td>Nomor</td>

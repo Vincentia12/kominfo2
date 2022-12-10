@@ -57,7 +57,7 @@
                     <font size="3">:</font>
                 </td>
                 <td style="text-align: center">
-                    <font size="3">020/654.{{$pengadaan->nomor}} /114.6/{{$pengadaan->created_at->isoFormat('Y')}}</font>
+                    <font size="3">020/654.{{$pengadaan->nomor}} /114.6/{{$pengadaan->tanggal->isoFormat('Y')}}</font>
                 </td>
                 </td>
             <tr>
