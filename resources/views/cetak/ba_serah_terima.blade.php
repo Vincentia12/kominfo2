@@ -61,25 +61,37 @@
     $pejabat = Pejabat::all();
 
     @endphp
+    <br>
     @foreach ($pejabat as $pjb)
     <div>
         <table border="0" align="">
             <tr>
-                <td width="25"></td>
-                <td width="15">I.</td>
+                <td width="8"></td>
+                <td width="5">I.</td>
                 <td width="100">Nama</td>
                 <td>:</td>
                 <td width="370">{{$pjb->pejabat_pembuatan_komitmen}}</td>
             </tr>
-        </table>
-    </div>
-    <div>
-        <table border="0" align="">
             <tr>
-                <td width="43"></td>
+                <td width="8"></td>
+                <td width="5"></td>
                 <td width="100">NIP</td>
                 <td>:</td>
                 <td width="370">{{$pjb->nip_pejabat_komitmen}}</td>
+            </tr>
+            <tr>
+                <td width="8"></td>
+                <td width="5"></td>
+                <td width="100">Jabatan</td>
+                <td>:</td>
+                <td width="370">Pejabat Pembuat Komitmen</td>
+            </tr>
+            <tr>
+                <td width="8"></td>
+                <td width="5"></td>
+                <td width="100">Alamat</td>
+                <td>:</td>
+                <td width="370">Jl. A. Yani No. 242-244 Surabaya</td>
             </tr>
         </table>
     </div>
@@ -87,77 +99,43 @@
     <div>
         <table border="0" align="">
             <tr>
-                <td width="43"></td>
-                <td width="100">Jabatan</td>
-                <td>:</td>
-                <td width="370">Pejabat Pembuat Komitmen</td>
+                <td width="8"></td>
+                <td width="470" colspan="4">Yang selanjutnya disebut <b>PIHAK KESATU</b> </td>
             </tr>
-        </table>
-    </div>
-    <div>
-        <table border="0" align="">
+            <tr><br></tr>
             <tr>
-                <td width="43"></td>
-                <td width="100">Alamat</td>
-                <td>:</td>
-                <td width="370">Jl. A. Yani No. 242-244 Surabaya</td>
-            </tr>
-        </table>
-    </div>
-    <div>
-        <table border="0" align="">
-            <tr>
-                <td width="43"></td>
-                <td width="470">Yang selanjutnya disebut <b>PIHAK KESATU</b> </td>
-        </table>
-    </div>
-
-    <br>
-    <div>
-        <table border="0" align="">
-            <tr>
-                <td width="25"></td>
-                <td width="15">II.</td>
+                <td width="8"></td>
+                <td width="5">II.</td>
                 <td width="100">Nama</td>
-                <td>:</td>
+                <td width="5">:</td>
                 <td width="370">{{$pengadaan->pengadaan->pelaksana->nama_pelaksana}}</td>
             </tr>
-        </table>
-    </div>
-    <div>
-        <table border="0" align="">
             <tr>
-                <td width="43"></td>
+                <td width="8"></td>
+                <td width="5"></td>
                 <td width="100">Jabatan</td>
                 <td>:</td>
                 <td width="370">{{$pengadaan->pengadaan->pelaksana->jabatan_pelaksana}}</td>
             </tr>
-        </table>
-    </div>
-    <div>
-        <table border="0" align="">
             <tr>
-                <td width="43"></td>
+                <td width="8"></td>
+                <td width="5"></td>
                 <td width="100">Alamat</td>
                 <td>:</td>
                 <td width="370">{{$pengadaan->pengadaan->pelaksana->alamat}}, {{$pengadaan->pengadaan->pelaksana->kota}}</td>
             </tr>
-        </table>
-    </div>
-    <div>
-        <table border="0" align="">
             <tr>
-                <td width="43"></td>
-                <td width="470">Yang selanjutnya disebut <b>PIHAK KEDUA</b> </td>
+                <td width="8"></td>
+                <td width="5"></td>
+                <td width="470" colspan="4">Yang selanjutnya disebut <b>PIHAK KEDUA</b> </td>
         </table>
     </div>
-
 
     <br>
     <div>
         <table border="0" align="">
             <tr>
-                <td width="25"></td>
+                <td width="8"></td>
                 <td width="160">Dengan ini menyatakan bahwa :</td>
             </tr>
         </table>
@@ -167,52 +145,58 @@
     <div>
         <table border="0" align="">
             <tr>
-                <td width="25"></td>
-                <td width="15">1.</td>
-                <td width="370"> <b>PIHAK KEDUA</b> telah menyerahkan pekerjaan sesuai dengan :</td>
+                <td width="8"></td>
+                <td width="5"></td>
+                <td width="5">1.</td>
+                <td width="370" colspan="3"> <b>PIHAK KEDUA</b> telah menyerahkan pekerjaan sesuai dengan :</td>
             </tr>
-        </table>
-    </div>
-    <div>
-        @foreach ($KuitansiKontrak as $kk)
-        <table border="0" align="">
+            @foreach ($KuitansiKontrak as $kk)
             <tr>
-                <td width="43"></td>
+                <td width="8"></td>
+                <td width="5"></td>
                 <td width="120">Kuitansi Kontrak nomor</td>
-                <td>:</td>
+                <td width="5">:</td>
                 <td width="370"> 020/{{$kk->nomor}}/114.6/{{$kk->tanggal->format('Y')}}</td>
             </tr>
-        </table>
-    </div>
-    <div>
-        <table border="0" align="">
             <tr>
-                <td width="43"></td>
+                <td width="8"></td>
+                <td width="5"></td>
                 <td width="120">Tanggal</td>
-                <td>:</td>
+                <td width="5">:</td>
                 <td width="370"> {{$kk->tanggal->format('d F Y')}}</td>
             </tr>
-        </table>
-    </div>
-    @endforeach
-    <div>
-        <table border="0" align="">
+            @endforeach
             <tr>
-                <td width="43"></td>
-                <td width="120">Pekerjaan</td>
-                <td>:</td>
+                <td width="8"></td>
+                <td width="5"></td>
+                <td width="5"></td>
+                <td width="100">Pekerjaan</td>
+                <td width="5">:</td>
                 <td width="370"> {{$pengadaan->pengadaan->jenis_pengadaan}}</td>
             </tr>
-        </table>
-    </div>
-
-    <br>
-    <div>
-        <table border="0" align="">
             <tr>
-                <td width="25"></td>
-                <td width="15">2.</td>
-                <td style="text-align: left ;text-align: justify;"><b>PIHAK KESATU</b> telah memeriksa dan menerima dengan baik kemajuan hasil pekerjaan tersebut, dengan rincian jumlah, jenis dan spesifikasi barang/jasa sebagaimana daftar terlampir.</td>
+                <td width="8"></td>
+                <td width="5"></td>
+                <td width="5" style="vertical-align:top">2.</td>
+                <td style="text-align: left ;text-align: justify;" colspan="3"><b>PIHAK KESATU</b> telah memeriksa dan menerima dengan baik kemajuan hasil pekerjaan tersebut, dengan rincian jumlah, jenis dan spesifikasi barang/jasa sebagaimana daftar terlampir.</td>
+            </tr>
+            <tr>
+                <td width="8"></td>
+                <td width="5"></td>
+                <td width="5" style="vertical-align:top">3.</td>
+                <td style="text-align: left ;text-align: justify;" colspan="3">Apabila dikemudian hari berdasarkan hasil audit terjadi :</td>
+            </tr>
+            <tr>
+                <td width="8"></td>
+                <td width="5"></td>
+                <td width="5"></td>
+                <td width="5" style="vertical-align:top; text-align: left ;text-align: justify;" colspan="3">a. Ketidaksesuaian perhitungan volume hasil pekerjaan dengan kontrak; dan/atau</td>
+            </tr>
+            <tr>
+                <td width="8"></td>
+                <td width="5"></td>
+                <td width="5"></td>
+                <td width="5" style="vertical-align:top; text-align: left ;text-align: justify;" colspan="3">b. Penyerahan barang/jasa yang kualitasnya tidak sesuai dengan kontrak;</td>
             </tr>
         </table>
     </div>
@@ -221,36 +205,8 @@
     <div>
         <table border="0" align="">
             <tr>
-                <td width="25"></td>
-                <td width="15">3.</td>
-                <td style="text-align: left ;text-align: justify;">Apabila dikemudian hari berdasarkan hasil audit terjadi :</td>
-            </tr>
-        </table>
-    </div>
-    <div>
-        <table border="0" align="">
-            <tr>
-                <td width="43"></td>
-                <td width="30">a.</td>
-                <td style="text-align: left ;text-align: justify;">Ketidaksesuaian perhitungan volume hasil pekerjaan dengan kontrak; dan/atau</td>
-            </tr>
-        </table>
-    </div>
-    <div>
-        <table border="0" align="">
-            <tr>
-                <td width="43"></td>
-                <td width="30">b.</td>
-                <td style="text-align: left ;text-align: justify;">Penyerahan barang/jasa yang kualitasnya tidak sesuai dengan kontrak;</td>
-            </tr>
-        </table>
-    </div>
-
-    <br>
-    <div>
-        <table border="0" align="">
-            <tr>
-                <td width="25"></td>
+                <td width="8"></td>
+                <td width="5"></td>
                 <td style="text-align: left ;text-align: justify;">Maka penyedia dikenakan ganti kerugian sebesar nilai kerugian yang ditimbulkan .</td>
             </tr>
         </table>
@@ -260,8 +216,9 @@
     <div>
         <table border="0" align="">
             <tr>
+                <td width="8"></td>
                 <td width="25"></td>
-                <td width="15"></td>
+                <td width="5"></td>
                 <td style="text-align: left ;text-align: justify;">Demikian Berita Acara ini dibuat untuk dipergunakan seperlunya.</td>
             </tr>
         </table>
@@ -290,7 +247,7 @@
         </table>
     </div>
 
-    <br><br><br>
+    <br><br><br><br><br>
     @foreach ($pejabat as $pjb)
     <div style="text-align:center ;">
         <table style="text-align: center" border="0" font-size="0">
@@ -343,75 +300,42 @@
     </div>
     <br>
     <div>
-        <table border="1" align="center" style="color: #000000; border-color: #000000; border-collapse: collapse;">
+        <table border="1" align="center" style="color: #000000; border-color: #000000; border-collapse: collapse;" width="555">
             <thead>
                 <tr>
-                    <td>
-                        <center><b>NO.</b></center>
-                    </td>
-                    <td colspan="2">
-                        <center><b>Banyaknya</b> </center>
-                    </td>
-                    <td>
-                        <center><b>Uraian dan Spesifikasi</b> </center>
-                    </td>
-                    <td>
-                        <center><b>HARGA SATUAN (Rp.)</b> </center>
-                    </td>
-                    <td>
-                        <center><b>JUMLAH HARGA (Rp.)</b> </center>
-                    </td>
+                    <th><b>NO.</b></th>
+                    <th colspan="2"><b>Banyaknya</b></th>
+                    <th><b>Uraian dan Spesifikasi</b></th>
+                    <th><b>HARGA SATUAN (Rp.)</b></th>
+                    <th><b>JUMLAH HARGA (Rp.)</b></th>
                 </tr>
                 <tr>
-                    <td height="20">
-
-                    </td>
-                    <td>
-
-                    </td>
-                    <td>
-                    </td>
-
-                    <td>
-                    </td>
-                    <td>
-
-                    </td>
-                    <td>
-
-                    </td>
+                    <td height="20"></td>
+                    <td colspan="2"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
                 </tr>
                 <tr colspan="7">PENGADAAN BELANJA ALAT/BAHAN UNTUK KEGIATAN KANTOR</tr>
             </thead>
             <tr>
                 <td>1</td>
-                <td colspan="3">{{$pengadaan->pengadaan->jenis_pengadaan}}</td>
-                <td></td>
-                <td></td>
+                <td colspan="5">{{$pengadaan->pengadaan->jenis_pengadaan}}</td>
             </tr>
             <tbody>
                 @php $no = 1; @endphp
                 @foreach ($barang as $brg)
                 <tr>
                     <td></td>
-
-                    <td>{{$brg->jumlah_barang}}</td>
-                    <td>{{$brg->satuan}}</td>
-                    <td>{{$brg->barang}}</td>
-                    <td>{{$brg->harga_satuan}},-</td>
-                    {{-- @php
-                        // $jumlahbarang = $barang["jumlah_barang"];
-                        $jumlahbarang = $brg->jumlah_barang;
-                        $hargabarang = $brg->harga_satuan;
-                        // $hargabarang = $barang["harga_barang"];
-
-                        $jumlah_harga = $jumlahbarang * $hargabarang;
-                        @endphp --}}
-                    <td>{{$brg->jumlah_harga}},-</td>
+                    <td align="center">{{$brg->jumlah_barang}}</td>
+                    <td align="center">{{$brg->satuan}}</td>
+                    <td align="center">{{$brg->barang}}</td>
+                    <td align="center">Rp. {{number_format($brg->harga_satuan)}},-</td>
+                    <td>Rp. {{number_format($brg->jumlah_harga)}},-</td>
                 </tr>
                 @endforeach
                 <tr>
-                    <td style="text-align:right" colspan="4"><b>Total</b></td>
+                    <td style="text-align:right" colspan="5"><b>Total</b></td>
                     @php
                     $png = $pengadaan->pengadaan_id;
                     $sum = DB::table('barangs')
@@ -419,18 +343,15 @@
                     ->sum('jumlah_harga');
                     $ppn = $sum * 0.11;
                     @endphp
-                    <td></td>
-                    <td>{{$sum}},-</td>
+                    <td>Rp. {{number_format($sum)}},-</td>
                 </tr>
                 <tr>
-                    <td style="text-align:right" colspan="4"><b>PPN 11%</b></td>
-                    <td></td>
-                    <td>{{$ppn}},-</td>
+                    <td style="text-align:right" colspan="5"><b>PPN 11%</b></td>
+                    <td>Rp. {{number_format($ppn)}},-</td>
                 </tr>
                 <tr>
-                    <td style="text-align:right" colspan="4"><b> Jumlah Total</b></td>
-                    <td></td>
-                    <td>{{$pengadaan->pengadaan->nilai_negosiasi}},-</td>
+                    <td style="text-align:right" colspan="5"><b> Jumlah Total</b></td>
+                    <td>Rp. {{number_format($pengadaan->pengadaan->nilai_negosiasi)}},-</td>
                 </tr>
                 <tr>
                     <td colspan="6">Terbilang : =={{$pengadaan->pengadaan->deskripsi_negosiasi}}==</td>
@@ -451,7 +372,7 @@
             </tr>
         </table>
     </div>
-    <br><br><br>
+    <br><br><br><br>
     @foreach ($pejabat as $pjb)
     <div style="text-align:center ;">
         <table style="text-align: center" border="0" font-size="0">
