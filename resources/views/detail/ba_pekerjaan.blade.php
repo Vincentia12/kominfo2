@@ -22,31 +22,13 @@
     </ul>
 </div>
 @endif
-
+@php
+    use App\Models\pejabat;
+    $pejabat = Pejabat::all();
+@endphp
 <div class="col-12 grid-margin stretch-card">
     <div class="card shadow">
         <div class="card-body">
-            {{-- <table border="0" align="center">
-                <tr>
-                    <td>
-                        <img src="{{asset('img/logo_jatim.png')}}" width="70" height="70">
-            </td>
-            <td>
-                <center>
-                    <font size="3"><b>PEMERINTAH PROVINSI JAWA TIMUR</b></font><br>
-                    <font size="3">DINAS KOMUNIKASI DAN INFORMATIKA</font><br>
-                    <font size="3">Jl. Ahmad Yani 242-244 Telp. (031) 8294608 Fax. (031) 8294517</font><br>
-                    <font size="3">Website : http://www.jatimprov.go.id </font><br>
-                    <font size="2">Email:kominfo@jatimprov.go.id</font><br>
-                    <font size="3">S U R A B A Y A-60235</font><br>
-            </td>
-            </tr>
-            <tr>
-                <td colspan="2">
-                    <hr>
-                </td>
-            </tr>
-            </table> --}}
             <table border="0" align="center">
                 <tbody>
                     <tr>
@@ -89,7 +71,7 @@
             <br>
             <table border="0" align="center" font-size="2">
                 <tr>
-                    <td width="670" style="text-indent: 45px; text-align: justify;">Pada hari ini {{$pengadaan->tanggal->isoFormat('dddd')}} Tanggal {{$pengadaan->deskripsi_tgl}}, dimulai pukul 10.00 WIB sampai dengan selesai, Pejabat Pengadaan di Lingkungan Dinas Komunikasi dan Informatika Provinsi Jawa Timur yang dibentuk dengan Keputusan Kepala Dinas Komunikasi Dan Informatika Provinsi Jawa Timur tanggal 3 Januari 2022 Nomor : 188/19/114.1/2022, telah mengadakan rapat penjelasan untuk pengadaan {{$pengadaan->pengadaan->jenis_pengadaan}} keperluan Dinas Komunikasi dan Informatika Provinsi Jawa Timur.</td>
+                    <td width="670" style="text-indent: 45px; text-align: justify;">Pada hari ini {{$pengadaan->tanggal->isoFormat('dddd')}} Tanggal {{$pengadaan->deskripsi_tgl}}, dimulai pukul 10.00 WIB sampai dengan selesai, Pejabat Pengadaan di Lingkungan Dinas Komunikasi dan Informatika Provinsi Jawa Timur yang dibentuk dengan Keputusan Kepala Dinas Komunikasi Dan Informatika Provinsi Jawa Timur tanggal @foreach ($pejabat as $pejabat) {{$pejabat->tanggal_sk->isoFormat('D MMMM Y')}} Nomor : {{$pejabat->nomor_sk}}@endforeach , telah mengadakan rapat penjelasan untuk pengadaan {{$pengadaan->pengadaan->jenis_pengadaan}} keperluan Dinas Komunikasi dan Informatika Provinsi Jawa Timur.</td>
                 </tr>
             </table>
             <br>
@@ -116,7 +98,7 @@
                 <tr>
                     <td>3.</td>
                     <td width="13"></td>
-                    <td width="640" style="text-align: justify;">Nilai HPS/OE untuk pekerjaan ini adalah Rp. {{$pengadaan->pengadaan->total_hps}},- {{$pengadaan->pengadaan->deskripsi_hps}}).</td>
+                    <td width="640" style="text-align: justify;">Nilai HPS/OE untuk pekerjaan ini adalah Rp. {{number_format($pengadaan->pengadaan->total_hps)}},- {{$pengadaan->pengadaan->deskripsi_hps}}).</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
@@ -352,8 +334,7 @@
 
 <div class="col-12 grid-margin stretch-card">
     <div class="modal-footer mt-3">
-        <button type="back" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
-        <a type="submit" class="btn btn-primary " href="{{ url('/print_notadinas4')  }}">Cetak PDF <i class="fa fa-save"></i></a>
+        <button onclick="history.back()" type="back" class="btn btn-secondary" data-dismiss="modal">Kembali</button>
     </div>
 </div>
 

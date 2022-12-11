@@ -221,7 +221,7 @@
                     </td>
                 </tr>
             </table>
-            <table border="1">
+            <table border="1" style="color: #333333;border-color: #333333;border-collapse: collapse;">
                 <tr style="text-align: center;">
                     <td>NO</td>
                     <td width="200">Nama</td>
@@ -246,7 +246,7 @@
                     </td>
                 </tr>
             </table>
-            <table border="1">
+            <table border="1" style="color: #333333;border-color: #333333;border-collapse: collapse;">
                 <tr style="text-align: center;">
                     <td>NO</td>
                     <td width="200">Nama</td>
@@ -271,7 +271,7 @@
                     </td>
                 </tr>
             </table>
-            <table border="1">
+            <table border="1" style="color: #333333;border-color: #333333;border-collapse: collapse;">
                 <tr style="text-align: center;">
                     <td>NO</td>
                     <td width="200">Nama</td>
