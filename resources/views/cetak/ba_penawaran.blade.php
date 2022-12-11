@@ -30,16 +30,14 @@
                                 <br> Jl. Ahmad Yani 242-244 Telp. (031) 8294608 Fax. (031) 8294517
                                 <br> Website : http://www.jatimprov.go.id
                                 <br> Email:kominfo@jatimprov.go.id
-                                <br> S U R A B A Y A-60235
+                                <br> S U R A B A Y A-60210
                             </p>
                         </font>
                     </td>
                 </tr>
             </table>
             <hr>
-        </div>
         {{-- judul --}}
-        <div style="text-align: center">
             <p align="center"><u><b> BERITA ACARA PEMBUKAAN PENAWARAN </b></u> <br>
                 Nomor : 020/{{$pengadaan->nomor}}/114.6/{{$pengadaan->tanggal->isoFormat('Y')}} </p>
         </div>
@@ -63,82 +61,87 @@
         </div>
         <br>
         <div>
-            <table border="0">
+            <table border="0" align="center" >
                 <tr>
-                    <td>I.</td>
-                    <td colspan="3">Personalia dan organisasi rapat :</td>
+                    <td width="10" style="vertical-align:top"><b>I.</b></td>
+                    <td colspan="4" style="vertical-align:top"><b>Personalia dan organisasi rapat :</b></td>
+                <tr>
+                <tr>
+                    <td width="10" style="vertical-align:top"> </td>
+                    <td width="200" style="vertical-align:top" colspan="2">Rapat dipimpin oleh</td>
+                    <td style="vertical-align:top">:</td>
+                    <td width="290" style="vertical-align:top">@foreach ($pejabat as $pejabat){{$pejabat->pejabat_pengadaan}}@endforeach</td>
                 </tr>
                 <tr>
-                    <td rowspan="3"> </td>
-                    <td width="193">Rapat dipimpin oleh</td>
-                    <td width="3">:</td>
-                    <td>{{$pjb->pejabat_pengadaan}}</td>
+                    <td width="10"> </td>
+                    <td width="200" style="vertical-align:top" colspan="2">Jabatan</td>
+                    <td style="vertical-align:top">:</td>
+                    <td width="290" style="vertical-align:top; text-align: justify; ">Pejabat Pengadaan Barang/Jasa di lingkungan Dinas Komunikasi dan Informatika Provinsi Jawa Timur Tahun Anggaran {{$pengadaan->tanggal->isoFormat('Y')}}</td>
                 </tr>
                 <tr>
-                    <td style="vertical-align: top;">Jabatan</td>
-                    <td style="vertical-align: top;">:</td>
-                    <td>Pejabat Pengadaan Barang/Jasa di lingkungan Dinas Komunikasi dan Informatika Provinsi Jawa Timur Tahun Anggaran {{$pengadaan->tanggal->isoFormat('Y')}}</td>
-                </tr>
-            </table>
-            <table border="0">
-                <tr>
-                    <td> </td>
-                    <td> </td>
-                    <td colspan="4">dan dihadiri oleh :</td>
-                </tr>
-            </table>
-            <table border="0">
-                <tr>
-                    <td rowspan="4"> </td>
-                    <td rowspan="4"> </td>
-                    <td>A.</td>
-                    <td>PPK</td>
-                    <td width="3">:</td>
-                    <td></td>
+                    <td width="10"> </td>
+                    <td width="110" colspan="4">dan dihadiri oleh:</td>
+                    {{-- <td width="540"> </td> --}}
                 </tr>
                 <tr>
-                    <td></td>
-                    <td width="180" style="vertical-align: top;">{{$pjb->pejabat_pembuatan_komitmen}}</td>
-                    <td style="vertical-align: top;">:</td>
-                    <td>Pejabat Pembuat Komitmen di lingkungan Dinas Komunikasi dan Informatika Provinsi Jawa Timur Tahun Anggaran {{$pengadaan->tanggal->isoFormat('Y')}} </td>
+                    <td width="10"> </td>
+                    <td width="10">A.</td>
+                    <td colspan="3">PPK:</td>
+                    {{-- <td width="602"> </td> --}}
                 </tr>
                 <tr>
-                    <td>B.</td>
-                    <td>Penyedia Barang/Jasa</td>
-                    <td>:</td>
-                    <td></td>
+                    <td width="10"> </td>
+                    <td width="10"> </td>
+                    <td width="200" style="vertical-align:top">I WAYAN RUDY ARTHA, S.Kom</td>
+                    <td style="vertical-align:top">:</td>
+                    <td width="290" style="text-align: justify; vertical-align:top">Pejabat Pembuat Komitmen di lingkungan Dinas Komunikasi dan Informatika Provinsi Jawa Timur Tahun Anggaran {{$pengadaan->tanggal->isoFormat('Y')}}</td>
                 </tr>
                 <tr>
-                    <td></td>
-                    <td>{{$pengadaan->pengadaan->pelaksana->pt_pelaksana}}</td>
-                    <td>:</td>
-                    <td>{{$pengadaan->pengadaan->pelaksana->nama_pelaksana}}</td>
+                    <td width="10"> </td>
+                    <td width="10" style="vertical-align:top">B.</td>
+                    <td style="vertical-align:top" colspan="3">Penyedia Barang/Jasa:</td>
+                    {{-- <td width="480"> </td> --}}
+                </tr>
+                <tr>
+                    <td width="10"> </td>
+                    <td width="10">1.</td>
+                    <td width="200">{{$pengadaan->pengadaan->pelaksana->pt_pelaksana}}</td>
+                    <td style="text-align: justify; vertical-align:top">:</td>
+                    <td width="290">{{$pengadaan->pengadaan->pelaksana->nama_pelaksana}}</td>
                 </tr>
             </table>
         </div>
-        <br>
         <div>
-            <table>
+            <table align="center">
                 <tr>
-                    <td>II.</td>
-                    <td>Hasil Pembukaan Penawaran sebagai berikut</td>
-                    <td>:</td>
-                </tr>
-            </table>
-            <table style="text-align: center;" border="1">
+                    <td width="10"><b>II.</b></td>
+                    <td width="520"><b>Hasil Pembukaan Penawaran sebagai berikut :</b></td>
                 <tr>
-                    <td style="background-color: lightgrey;">No.</td>
-                    <td width="160" style="background-color: lightgrey;">NAMA PERUSAHAAN</td>
-                    <td width="120" style="background-color: lightgrey;">SURAT PENAWARAN</td>
-                    <td width="115" style="background-color: lightgrey;">DOKUMEN TEKNIS</td>
-                    <td width="105" style="background-color: lightgrey;">KETERANGAN</td>
-                </tr>
                 <tr>
-                    <td>1.</td>
-                    <td style="text-align:left">{{$pengadaan->pengadaan->pelaksana->pt_pelaksana}}</td>
-                    <td>Ada</td>
-                    <td>Ada</td>
-                    <td>Lengkap</td>
+                    <td width="10"></td>
+                    <td>
+                        {{-- Garis Tabel --}}
+                        <table width="520" border="1" align="center" style="color: #333333;border-color: #333333;border-collapse: collapse;">
+                            <thead style="background-color: lightgrey;">
+                                <tr align="center">
+                                    <th width="30px" scope="col">No</th>
+                                    <th width="350px" scope="col">Nama Perusahaan</th>
+                                    <th width="95px" scope="col">Surat Penawaran</th>
+                                    <th width="95px" scope="col">Dokumen Teknis</th>
+                                    <th width="95px" scope="col">Keterangan</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr align="center" height="100">
+                                    <td scope="row">1</td>
+                                    <td>{{$pengadaan->pengadaan->pelaksana->pt_pelaksana}}</td>
+                                    <td>Ada</td>
+                                    <td>Ada</td>
+                                    <td>Lengkap</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
                 </tr>
             </table>
         </div>
