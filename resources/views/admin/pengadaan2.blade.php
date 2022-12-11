@@ -61,7 +61,7 @@
                         <tr>
                             <td>{{ $p2->pt_pelaksana }}</td>
                             <td>{{ $p2->jenis_pengadaan }}</td>
-                            <td>{{ $p2->nilai_negosiasi }}</td>
+                            <td>RP. {{number_format( $p2->nilai_negosiasi) }}</td>
                             <td>{{ $p2->kegiatan }}</td>
                             <td>{{ $p2->alokasi }}</td>
                             <td>{{ date('l', strtotime($p2->tanggal)) }}</td>

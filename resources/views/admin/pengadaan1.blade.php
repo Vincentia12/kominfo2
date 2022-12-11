@@ -70,7 +70,7 @@
                         <tr>
                             <td>{{ $p1->pt_pelaksana }}</td>
                             <td>{{ $p1->jenis_pengadaan }}</td>
-                            <td>{{ $p1->nilai_negosiasi }}</td>
+                            <td>RP. {{number_format( $p1->nilai_negosiasi )}}</td>
                             <td>{{ $p1->kegiatan }}</td>
                             <td>{{ $p1->alokasi }}</td>
                             {{-- <td>{{ $pengadaan1->tanggal->format('yyy mm dd') }}</td> --}}

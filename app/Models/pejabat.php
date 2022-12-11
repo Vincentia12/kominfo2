@@ -12,7 +12,7 @@ class Pejabat extends Model
 
     protected $table = "pejabats";
     protected $primarykay = "id";
-    protected $dates = ['tanggal'];
+    protected $dates = ['tanggal_sk'];
 
     protected $fillable = [
         // 'id',
@@ -33,7 +33,7 @@ class Pejabat extends Model
     
     public function getCreatedTanggalAttribute()
     {
-        return Carbon::parse($this->attributes['tanggal'])
+        return Carbon::parse($this->attributes['tanggal_sk'])
             ->translatedFormat('l, d F Y');
     }
 }
