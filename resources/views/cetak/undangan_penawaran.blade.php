@@ -189,6 +189,7 @@
             <br>
             <br>
             <br>
+            <br>
             <tr>
                 <td width="300"> </td>
                 <td width="250"><u>{{$pjb->pejabat_pengadaan}}</u></td>

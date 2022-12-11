@@ -91,7 +91,7 @@
                         <td width="175">Undangan Permintaan <br><u> Penawaran Harga</u>
                         </td>
                         <td></td>
-                        <td><u><b>SURABAYA</b></u></td>
+                        <td><u><b>{{$pengadaan->pengadaan->pelaksana->kota}}</b></u></td>
                     </tr>
                 </table>
             </table>
@@ -103,64 +103,57 @@
             </table>
             <table border="0" align="center" font-size="2">
                 <tr>
-                    <td width="140">Paket Pekerjaan</td>
-                    <td width="10">:</td>
+                    <td width="140" style="vertical-align:top">Paket Pekerjaan</td>
+                    <td width="10" style="vertical-align:top">:</td>
                     <!-- diubah -->
                     <td width="520" style="text-align: justify;">{{ $pengadaan->pengadaan->jenis_pengadaan }}</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
                 <tr>
-                    <td width="140">Lingkup pekerjaan</td>
-                    <td width="10">:</td>
-                    <td width="520" style="text-align: justify;">PK melalui Pejabat Pengadaan mengundang Penyedia</td>
+                    <td width="140" style="vertical-align:top">Lingkup pekerjaan</td>
+                    <td width="10" style="vertical-align:top">:</td>
+                    <td width="520" style="text-align: justify;">PK melalui Pejabat Pengadaan mengundang Penyedia Barang untuk menyampaikan penawaran atas paket pengadaan barang yang tercantum dalam Spesifikasi Teknis, Daftar Kuantitas dan Harga serta nomor pekerjaan yang tercantum dalam LDP. Penyedia Barang yang ditunjuk berkewajiban untuk menyelesaikan pekerjaan dalam jangka waktu dan perkiraan batas akhir waktu penyelesaian yang tercantum dalam LDP.</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
                 <tr>
-                    <td width="140"> </td>
-                    <td width="10"> </td>
-                    <td width="520" style="text-align: justify;"> Barang untuk menyampaikan penawaran atas paket pengadaan barang yang tercantum dalam Spesifikasi Teknis, Daftar Kuantitas dan Harga serta nomor pekerjaan yang tercantum dalam LDP. Penyedia Barang yang ditunjuk berkewajiban untuk menyelesaikan pekerjaan dalam jangka waktu dan perkiraan batas akhir waktu penyelesaian yang tercantum dalam LDP.</td>
+                    <td width="140" style="vertical-align:top">Sumber Dana</td>
+                    <td width="10" style="vertical-align:top">:</td>
+                    <td width="520" style="text-align: justify;"> APBD Provinsi Jawa Timur Tahun Anggaran {{$pengadaan->tanggal->isoFormat('Y')}}</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
                 <tr>
-                    <td width="140">Sumber Dana</td>
-                    <td width="10">:</td>
-                    <td width="520" style="text-align: justify;"> APBD Provinsi Jawa Timur Tahun Anggaran 2022</td>
-                </tr>
-            </table>
-            <table border="0" align="center" font-size="2">
-                <tr>
-                    <td width="140">Nilai HPS</td>
-                    <td width="10">:</td>
+                    <td width="140" style="vertical-align:top">Nilai HPS</td>
+                    <td width="10" style="vertical-align:top">:</td>
                     <td width="520" style="text-align: justify;">Rp. {{$pengadaan->pengadaan->total_hps}},- {{$pengadaan->pengadaan->deskripsi_hps}}</td>
                 </tr>
             </table>
             <br>
             <table border="0" align="center" font-size="2">
                 <tr>
-                    <td width="670" style="text-align: justify;">Diharap saudara untuk menyampaikan dokumen penawaran paling lambat pada :</td>
+                    <td width="670" style="text-align: justify; text-indent: 45px;">Diharap saudara untuk menyampaikan dokumen penawaran paling lambat pada :</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
                 <tr>
-                    <td width="140">Hari/Tanggal</td>
-                    <td width="10">:</td>
+                    <td width="140" style="vertical-align:top">Hari/Tanggal</td>
+                    <td width="10" style="vertical-align:top">:</td>
                     <td width="520" style="text-align: justify;">{{ $pengadaan->tanggal->isoFormat('dddd')}} / {{$pengadaan->tanggal->isoFormat('D MMMM Y')}}</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
                 <tr>
-                    <td width="140">Jam</td>
-                    <td width="10">:</td>
+                    <td width="140" style="vertical-align:top">Jam</td>
+                    <td width="10" style="vertical-align:top">:</td>
                     <td width="520" style="text-align: justify;">10.00 WIB</td>
                 </tr>
             </table>
             <table border="0" align="center" font-size="2">
                 <tr>
-                    <td width="140">Tempat</td>
-                    <td width="10">:</td>
+                    <td width="140" style="vertical-align:top">Tempat</td>
+                    <td width="10" style="vertical-align:top">:</td>
                     <td width="520" style="text-align: justify;">Ruang Argopuro lt.II Dinas Komunikasi Dan Informatika Provinsi Jawa Timur Jl. Ahmad Yani 242 - 244 Surabaya</td>
                 </tr>
             </table>
@@ -176,38 +169,41 @@
                 </tr>
             </table>
             <br>
-            <table border="0" align="center">
-                <tr>
-                    <td width="510"> </td>
-                    <td>PEJABAT PENGADAAN</td>
-                    <td width="50"> </td>
-                </tr>
-            </table>
-            <br>
-            <br>
-            <br>
-            <table border="0" align="center">
-                <tr>
-                    <td width="500"> </td>
-                    <td width="260"><u>ADI KURNIAWAN.S.Kom.,M.Kom</u></td>
-
-                </tr>
-            </table>
-            <table border="0" align="center">
-                <tr>
-                    <td width="480"> </td>
-                    <td>NIP. 19890618 201403 1 002</td>
-
-                </tr>
-            </table>
+            <div class="center">
+            @php
+            use App\Models\pejabat;
+            $pejabat = Pejabat::all();
+            @endphp
+            @foreach ($pejabat as $pejabat)
+                <table border="0" align="center" width="650">
+                    <tr>
+                        <td width="325"> </td>
+                        <td width="325" align="center">PEJABAT PENGADAAN</td>
+                        {{-- <td width="50"> </td> --}}
+                    </tr>
+                </table>
+                <br>
+                <br>
+                <br>
+                <table border="0" align="center" width="650">
+                    <tr>
+                        <td  width="325"> </td>
+                        <td  width="325" align="center"><u>{{$pejabat->pejabat_pengadaan}}</u></td>
+                    </tr>
+                    <tr>
+                        <td  width="325"> </td>
+                        <td  width="325" align="center">NIP. {{$pejabat->nip_pejabat_pengadaan}}</td>
+                    </tr>
+                </table>
+            @endforeach
+            </div>
         </div>
     </div>
 </div>
 
 <div class="col-12 grid-margin stretch-card">
     <div class="modal-footer mt-3">
-        <button type="back" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
-        <a type="submit" class="btn btn-primary " href="{{ url('/print_notadinas4')  }}">Cetak PDF <i class="fa fa-save"></i></a>
+        <button onclick="history.back()" type="back" class="btn btn-secondary" data-dismiss="modal">Kembali</button>
     </div>
 </div>
 
