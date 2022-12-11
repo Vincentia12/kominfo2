@@ -372,4 +372,11 @@
         </div>
     </div>
 </div>
+
+<div class="col-12 grid-margin stretch-card">
+    <div class="modal-footer mt-3">
+        <button onclick="history.back()" type="back" class="btn btn-secondary" data-dismiss="modal">Kembali</button>
+    </div>
+</div>
+
 @endsection
