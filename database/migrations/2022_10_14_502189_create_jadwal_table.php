@@ -18,7 +18,7 @@ return new class extends Migration
             $table->foreignId('pengadaan_id')->constrained();
             // $table->foreignId('pelaksana_id')->constrained();
             $table->string('kegiatan');
-            $table->string('alokasi');
+            $table->integer('alokasi');
             $table->date('tanggal');
             $table->string('nomor');
             $table->text('deskripsi_tgl');

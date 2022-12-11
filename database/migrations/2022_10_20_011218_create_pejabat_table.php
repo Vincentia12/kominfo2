@@ -26,6 +26,8 @@ return new class extends Migration
             $table->string('nip_pejabat_pengadaan');
             $table->string('bpp');
             $table->string('nip_bpp');
+            $table->string('pengurus_barang');
+            $table->string('nip_pengurus_barang');
             $table->timestamps();
         });
     }

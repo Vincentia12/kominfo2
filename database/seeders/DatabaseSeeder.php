@@ -44,7 +44,8 @@ class DatabaseSeeder extends Seeder
             'nip_pejabat_pengadaan' => '19890618 201403 1 002',
             'bpp' => 'SISCA AGUSTIA PUTRI, S.Sos',
             'nip_bpp' => '19850120 201001 2 016',
-            
+            'pengurus_barang' => 'AGUS SUNARYO',
+            'nip_pengurus_barang' => '19660717 201001 1 003',
         ]);
 
         // DB::insert([

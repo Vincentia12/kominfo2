@@ -110,6 +110,11 @@
                                 <td>{{ $pjb->bpp }}</td>
                                 <td>{{ $pjb->nip_bpp }}</td>
                             </tr>
+                            <tr>
+                                <td>Pengurus Barang Persediaan</td>
+                                <td>{{ $pjb->pengurus_barang }}</td>
+                                <td>{{ $pjb->nip_pengurus_barang }}</td>
+                            </tr>
                             @endforeach
                         </tbody>
                     </table>

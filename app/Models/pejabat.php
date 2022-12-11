@@ -26,7 +26,9 @@ class Pejabat extends Model
         'pejabat_pengadaan',
         'nip_pejabat_pengadaan',
         'bpp',
-        'nip_bpp'
+        'nip_bpp',
+        'pengurus_barang',
+        'nip_pengurus_barang'
     ];
     
     public function getCreatedTanggalAttribute()
