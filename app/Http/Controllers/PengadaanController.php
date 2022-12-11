@@ -47,7 +47,8 @@ class PengadaanController extends Controller
     {
         $pengadaan = DB::table('pengadaans')
             ->join('pelaksanas', 'pelaksana_id', '=', 'pelaksanas.id')
-            ->where('nilai_negosiasi', '<=', 50)
+            ->where('nilai_negosiasi', '<=', 50000000)
+            // ->where('nilai_negosiasi', '<=', 50)
             // ->join('barangs', 'pengadaans.id', '=', 'barangs.pengadaan_id')
             ->join('jadwals', 'pengadaans.id', '=', 'jadwals.pengadaan_id')
             // ->groupBy('jadwals.pengadaan_id')
@@ -60,7 +61,8 @@ class PengadaanController extends Controller
         $pilihan = DB::table('pelaksanas')
             // ->join('pelaksanas', 'pelaksana_id', '=', 'pelaksanas.id')
             ->join('pengadaans', 'pengadaans.pelaksana_id', '=', 'pelaksanas.id')
-            ->where('pengadaans.nilai_negosiasi', '<=', 50)
+            ->where('pengadaans.nilai_negosiasi', '<=', 50000000)
+            // ->where('pengadaans.nilai_negosiasi', '<=', 50)
             // ->paginate();
             ->get();
 
@@ -93,7 +95,8 @@ class PengadaanController extends Controller
         $pilihan = DB::table('pelaksanas')
             // ->join('pelaksanas', 'pelaksana_id', '=', 'pelaksanas.id')
             ->join('pengadaans', 'pengadaans.pelaksana_id', '=', 'pelaksanas.id')
-            ->where('pengadaans.nilai_negosiasi', '<=', 50)
+            ->where('pengadaans.nilai_negosiasi', '<=', 50000000)
+            // ->where('pengadaans.nilai_negosiasi', '<=', 50)
             // ->paginate();
             ->get();
 
@@ -112,7 +115,8 @@ class PengadaanController extends Controller
     {
         $pengadaan = DB::table('pengadaans')
             ->join('pelaksanas', 'pelaksana_id', '=', 'pelaksanas.id')
-            ->where('nilai_negosiasi', '>', 50)
+            ->where('nilai_negosiasi', '>', 50000000)
+            // ->where('nilai_negosiasi', '>', 50)
             // ->join('barangs', 'pengadaans.id', '=', 'barangs.pengadaan_id')
             ->join('jadwals', 'pengadaans.id', '=', 'jadwals.pengadaan_id')
             // ->groupBy('jadwals.pengadaan_id')
@@ -122,7 +126,8 @@ class PengadaanController extends Controller
         $pilihan = DB::table('pelaksanas')
             // ->join('pelaksanas', 'pelaksana_id', '=', 'pelaksanas.id')
             ->join('pengadaans', 'pengadaans.pelaksana_id', '=', 'pelaksanas.id')
-            ->where('pengadaans.nilai_negosiasi', '>', 50)
+            ->where('pengadaans.nilai_negosiasi', '>', 50000000)
+            // ->where('pengadaans.nilai_negosiasi', '>', 50)
             // ->paginate();
             ->get();
 
@@ -153,7 +158,8 @@ class PengadaanController extends Controller
         $pilihan = DB::table('pelaksanas')
             // ->join('pelaksanas', 'pelaksana_id', '=', 'pelaksanas.id')
             ->join('pengadaans', 'pengadaans.pelaksana_id', '=', 'pelaksanas.id')
-            ->where('pengadaans.nilai_negosiasi', '>', 50)
+            ->where('pengadaans.nilai_negosiasi', '>', 50000000)
+            // ->where('pengadaans.nilai_negosiasi', '>', 50)
             // ->paginate();
             ->get();
 
@@ -209,42 +215,6 @@ class PengadaanController extends Controller
 
         return redirect()->route('pengadaan.index')
             ->with('success', 'Data Pelaksana Berhasil Ditambahkan');
-        // return redirect()->to('input_jadwal');
-        // return redirect()->route('home')
-        //                 ->with('success','Aset Berhasil Dihapus!');
-
-
-        // return redirect()->route('jadwals.index')
-        //                 ->with('success','Data Pelaksana Berhasil Disimpan!');
-
-        // $pelaksana =   Pelaksana::create($request->except([
-
-        //     'jenis_pengadaan',
-        //     'tanggal_acara',
-        //     'deskripsi_tgl_acara',
-        //     'waktu_acara',
-        //     'tempat_acara',
-        //     'total_hps',
-        //     'deskripsi_hps',
-        //     'nilai_negosiasi',
-        //     'deskripsi_nilai_nego',        
-        // ]));
-
-        // $request['pelaksana_id'] = $pelaksana->id;
-        // $pengadaan = Pengadaan::create($request->only([
-        //     'pelaksana_id',
-        //     'jenis_pengadaan',
-        //     'tanggal_acara',
-        //     'deskripsi_tgl_acara',
-        //     'waktu_acara',
-        //     'tempat_acara',
-        //     'total_hps',
-        //     'deskripsi_hps',
-        //     'nilai_negosiasi',
-        //     'deskripsi_nilai_nego'        
-        // ]));
-
-        // return back()->with('success',' Post baru berhasil dibuat.');
     }
 
     /**

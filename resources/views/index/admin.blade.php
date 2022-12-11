@@ -13,11 +13,12 @@
     <div class="col-md-6 mb-4 stretch-card transparent">
         <div class="card card-tale">
             <div class="card-body">
-                <h4 class="mb-4 pt-2">Input Pelaksana</h4>
+                {{-- <h4 class="mb-4 pt-2">Input Pelaksana</h4> --}}
+                <h4 class="mb-4 pt-2">Input Perusahaan</h4>
                 <div class="pt-2">
                     <a href="/input_pelaksana" type="button" class="btn btn-outline-danger" style="color: white; border-color: white">
                         <i class="ti-upload btn-icon-prepend"></i>
-                        Input Pelaksana
+                        Input Perusahaan
                     </a>
                 </div>
             </div>

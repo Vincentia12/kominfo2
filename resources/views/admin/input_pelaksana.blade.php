@@ -38,13 +38,14 @@
                 <div class="row ">
                     <div class="col-md-8 mb-4">
                         <div class="justify-content-between ">
-                            <h2 class="col-10">Data Masukan Pelaksana</h2>
+                            {{-- <h2 class="col-10">Data Masukan Pelaksana</h2> --}}
+                            <h2 class="col-10">Data Penyedia Barang/Jasa</h2>
                         </div>
                     </div>
                     <div class="col-md-4 mb-4">
                         <div class="text-right ">
                             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalPelaksana">
-                                Tambah Data Pelaksana
+                                Tambah Data Perusahaan
                             </button>
                         </div>
                     </div>
@@ -57,7 +58,7 @@
                     {{-- <table class="table table-bordered" id="example"> --}}
                     <thead>
                         <tr>
-                            <th>Nama CV Pelaksana</th>
+                            <th>Nama Perusahaan</th>
                             <th>Alamat</th>
                             <th>Telephone</th>
                             <th> Action</th>
@@ -116,7 +117,7 @@
     <div class="modal-dialog modal-dialog-scrollable" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title"><b>Input Data Pelaksana</b></h5>
+                <h5 class="modal-title"><b>Input Data Perusahaan</b></h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -188,7 +189,7 @@
         <div class="modal-dialog modal-dialog-scrollable" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title"><b>Edit Data Pelaksana</b></h5>
+                    <h5 class="modal-title"><b>Edit Data Perusahaan</b></h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -258,7 +259,7 @@
         <div class="modal-dialog modal-xl-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title"><b>Detail Data Pelaksana</b></h5>
+                    <h5 class="modal-title"><b>Detail Data Perusahaan</b></h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>

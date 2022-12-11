@@ -136,7 +136,8 @@
             </a>
             <div class="collapse" id="input">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="/input_pelaksana">Input Pelaksana</a></li>
+                {{-- <li class="nav-item"> <a class="nav-link" href="/input_pelaksana">Input Pelaksana</a></li> --}}
+                <li class="nav-item"> <a class="nav-link" href="/input_pelaksana">Input Perusahaan</a></li>
                 <li class="nav-item"> <a class="nav-link" href="/input_pengadaan">Input Pengadaan</a></li>
                 <li class="nav-item"> <a class="nav-link" href="/input_barang">Input Barang</a></li>
                 <li class="nav-item"> <a class="nav-link" href="/input_jadwal">Input Jadwal</a></li>
