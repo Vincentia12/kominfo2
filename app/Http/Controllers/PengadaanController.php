@@ -674,15 +674,41 @@ class PengadaanController extends Controller
     }
 
     // BA. Serah Terima Hasil Pekerjaan
-    public function show23(Pengadaan $pengadaan) // public function show(Request $request,$id)
+    public function show23($id) // public function show(Request $request,$id)
     {
-        return view('detail.undangan_penyedia', compact('pengadaan'));
+        $pengadaan = Jadwal::find($id);
+        $barang = DB::table('barangs')
+            ->where('barangs.pengadaan_id', 'like', "%" . $pengadaan->pengadaan_id . "%")
+            ->get();
+        $pejabat = DB::table('pejabats')
+            ->where('id', '=', 1)
+            ->get();
+
+        return view(
+            'detail.ba_serah_terima',
+            ['pengadaan' => $pengadaan],
+            ['barang' => $barang],
+            ['pejabat' => $pejabat],
+        );
     }
 
     // BA. Penyerahan Barang/Jasa
-    public function show24(Pengadaan $pengadaan) // public function show(Request $request,$id)
+    public function show24($id) // public function show(Request $request,$id)
     {
-        return view('detail.undangan_penyedia', compact('pengadaan'));
+        $pengadaan = Jadwal::find($id);
+        $barang = DB::table('barangs')
+            ->where('barangs.pengadaan_id', 'like', "%" . $pengadaan->pengadaan_id . "%")
+            ->get();
+        $pejabat = DB::table('pejabats')
+            ->where('id', '=', 1)
+            ->get();
+
+        return view(
+            'detail.ba_peny_barang',
+            ['pengadaan' => $pengadaan],
+            ['barang' => $barang],
+            ['pejabat' => $pejabat],
+        );
     }
 
     // BA. Hasil Pemeriksaan Administratif
@@ -692,9 +718,22 @@ class PengadaanController extends Controller
     }
 
     // BA. Hasil Pembayaran
-    public function show26(Pengadaan $pengadaan) // public function show(Request $request,$id)
+    public function show26($id) // public function show(Request $request,$id)
     {
-        return view('detail.undangan_penyedia', compact('pengadaan'));
+        $pengadaan = Jadwal::find($id);
+        $barang = DB::table('barangs')
+            ->where('barangs.pengadaan_id', 'like', "%" . $pengadaan->pengadaan_id . "%")
+            ->get();
+        $pejabat = DB::table('pejabats')
+            ->where('id', '=', 1)
+            ->get();
+
+        return view(
+            'detail.ba_pembayaran',
+            ['pengadaan' => $pengadaan],
+            ['barang' => $barang],
+            ['pejabat' => $pejabat],
+        );
     }
 
     // Laporan Proses Pengadaan Barang/Jasa
@@ -712,7 +751,29 @@ class PengadaanController extends Controller
 
 
         return view(
-            'lap_proses_pengadaan',
+            'detail.lap_proses_pengadaan',
+            ['pengadaan' => $pengadaan],
+            ['barang' => $barang],
+            ['pejabat' => $pejabat],
+        );
+    }
+    
+    // kuintasi_kontrak
+    public function show28($id) // public function show(Request $request,$id)
+    {
+        $pengadaan = Jadwal::find($id);
+        $barang = DB::table('barangs')
+            ->where('barangs.pengadaan_id', 'like', "%" . $pengadaan->pengadaan_id . "%")
+            ->get();
+        $pejabat = DB::table('pejabats')
+            ->where('id', '=', 1)
+            ->get();
+
+        // $pejabat = Pejabat::all();
+
+
+        return view(
+            'detail.kuintasi_kontrak',
             ['pengadaan' => $pengadaan],
             ['barang' => $barang],
             ['pejabat' => $pejabat],
