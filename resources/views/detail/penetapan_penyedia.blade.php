@@ -103,14 +103,9 @@
                     <td width="300">{{$pengadaan->pengadaan->pelaksana->npwp}}</td>
                 </tr>
                 <tr>
-                    <td width="190">Harga Penawaran</td>
+                    <td width="190">Harga Penawaran Setelah Negosiasi</td>
                     <td width="10">:</td>
-                    <td width="300">Rp. {{$pengadaan->pengadaan->nilai_negosiasi}},-</td>
-                </tr>
-                <tr>
-                    <td width="190">Setelah Negosiasi</td>
-                    <td width="10"> </td>
-                    <td width="300">({{$pengadaan->pengadaan->deskripsi_negosiasi}})</td>
+                    <td width="300">Rp. {{number_format($pengadaan->pengadaan->nilai_negosiasi)}},-({{$pengadaan->pengadaan->deskripsi_negosiasi}})</td>
                 </tr>
             </table>
             <br>
@@ -120,7 +115,7 @@
                 </tr>
             </table>
             <br>
-            <table border="1" align="center">
+            <table border="0" align="center">
                 <tr>
                     <td width="300"> </td>
                     <td width="250" align="center">Surabaya, {{$pengadaan->tanggal->isoFormat('D MMMM Y')}}</td>
@@ -135,7 +130,7 @@
             <br>
             <br>
             <br>
-            <table border="1" align="center">
+            <table border="0" align="center">
                 <tr>
                     <td width="300"> </td>
                     <td width="250" align="center"><u>{{$pejabat->pejabat_pengadaan}}</u></td>

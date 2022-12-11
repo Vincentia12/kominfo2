@@ -128,7 +128,7 @@
                 
                 <td width="200">Harga Penawaran Setelah Negosiasi</td>
                 <td>:</td>
-                <td>Rp. {{ $pengadaan->pengadaan->nilai_negosiasi}},-({{ $pengadaan->pengadaan->deskripsi_negosiasi}})</td>
+                <td>Rp. {{number_format($pengadaan->pengadaan->nilai_negosiasi)}},-({{ $pengadaan->pengadaan->deskripsi_negosiasi}})</td>
             </tr>
         </table>
     </div>
