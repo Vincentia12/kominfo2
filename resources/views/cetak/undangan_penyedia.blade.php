@@ -107,7 +107,7 @@
         <table class="table" border="0" align="" font-size="1">
             <tr>
                 <td width="8"></td>
-                <td style="text-align: left ;text-align: justify; text-indent: 45px;">Sesuai dengan Surat Penawaran Saudara tanggal 24 Agustus 2022 Nomor : 233/PEN/PN/IX/2022 dan Nota Dinas @foreach ($NotaDinasDariPejabatPengadaanPPK as $ndpp) tanggal {{$ndpp->tanggal}} Nomor : 020/{{$ndpp->nomor}}/114.6/{{$ndpp->tanggal->format('Y')}} @endforeach perihal Penyampaian Berita Acara Proses Pengadaan Langsung maka Pekerjaan Pengadaan {{$pengadaan->pengadaan->jenis_pengadaan}} kami menunjuk :</td>
+                <td style="text-align: left ;text-align: justify; text-indent: 45px;">Sesuai dengan Surat Penawaran Saudara tanggal 24 Agustus 2022 Nomor : 233/PEN/PN/IX/2022 dan Nota Dinas @foreach ($NotaDinasDariPejabatPengadaanPPK as $ndpp) tanggal {{$ndpp->tanggal->isoFormat('D MMMM Y')}} Nomor : 020/{{$ndpp->nomor}}/114.6/{{$ndpp->tanggal->format('Y')}} @endforeach perihal Penyampaian Berita Acara Proses Pengadaan Langsung maka Pekerjaan Pengadaan {{$pengadaan->pengadaan->jenis_pengadaan}} kami menunjuk:</td>
 
             </tr>
         </table>
@@ -145,7 +145,7 @@
                 <td width="30"></td>
                 <td width="120">Harga Penawaran Setelah Negosiasi</td>
                 <td>:</td>
-                <td>Rp. {{ $pengadaan->pengadaan->nilai_negosiasi}},-({{ $pengadaan->pengadaan->deskripsi_negosiasi}})</td>
+                <td>Rp. {{ number_format($pengadaan->pengadaan->nilai_negosiasi)}},-({{ $pengadaan->pengadaan->deskripsi_negosiasi}})</td>
             </tr>
         </table>
     </div>
