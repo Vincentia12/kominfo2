@@ -52,7 +52,7 @@
             </tr>
         </table>
     </div>
-    {{-- <br> --}}
+    <br>
     <div style="text-align:center ;">
         <table class="table" border="0" align="center" font-size="1">
             <tr>
@@ -139,7 +139,6 @@
             </tr>
         </table>
     </div>
-
     <br>
     <br>
     @php

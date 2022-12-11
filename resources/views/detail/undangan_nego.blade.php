@@ -108,29 +108,21 @@
                     <td width="10">:</td>
                     <td width="450">{{$pengadaan->tanggal->isoFormat('dddd')}}</td>
                 </tr>
-            </table>
-            <table border="0" align="center" font-size="2">
                 <tr>
                     <td width="100">Tanggal</td>
                     <td width="10">:</td>
                     <td width="450">{{$pengadaan->tanggal->isoFormat('D MMMM Y')}}</td>
                 </tr>
-            </table>
-            <table border="0" align="center" font-size="2">
                 <tr>
                     <td width="100">Pukul</td>
                     <td width="10">:</td>
                     <td width="450">10.00 WIB</td>
                 </tr>
-            </table>
-            <table border="0" align="center" font-size="2">
                 <tr>
                     <td width="100">Tempat</td>
                     <td width="10">:</td>
                     <td width="450">Ruang Argopuro Dinas Komunikasi Dan Informatika Provinsi</td>
                 </tr>
-            </table>
-            <table border="0" align="center" font-size="2">
                 <tr>
                     <td width="100"> </td>
                     <td width="10"> </td>
@@ -146,34 +138,36 @@
             <br>
             <table border="0" align="center">
                 <tr>
-                    <td width="300"> </td>
-                    <td>PEJABAT PENGADAAN</td>
-                    <td width="50"> </td>
+                    <td width="470"> </td>
+                    <td width="250" align="center">PEJABAT PENGADAAN</td>
                 </tr>
             </table>
             <br>
             <br>
             <br>
-            <table border="0" align="center">
-                <tr>
-                    <td width="300"> </td>
-                    <td><u>ADI KURNIAWAN.S.Kom.,M.Kom</u></td>
-                    <td width="50"> </td>
-                </tr>
-                <tr>
-                    <td width="300"> </td>
-                    <td>NIP. 19890618 201403 1 002</td>
-                    <td width="50"> </td>
-                </tr>
-            </table>
+            @php
+                use App\Models\pejabat;
+                $pejabat = Pejabat::all();
+            @endphp
+            @foreach ($pejabat as $pejabat)
+                <table border="0" align="center">
+                    <tr>
+                        <td width="470"> </td>
+                        <td width="250" align="center"><u>{{$pejabat->pejabat_pengadaan}}</u></td>
+                    </tr>
+                    <tr>
+                        <td width="470"> </td>
+                        <td align="center">NIP. {{$pejabat->nip_pejabat_pengadaan}}</td>
+                    </tr>
+                </table>
+            @endforeach
         </div>
     </div>
 </div>
 
 <div class="col-12 grid-margin stretch-card">
     <div class="modal-footer mt-3">
-        <button type="back" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
-        <a type="submit" class="btn btn-primary " href="{{ url('/print_notadinas4')  }}">Cetak PDF <i class="fa fa-save"></i></a>
+        <button onclick="history.back()" type="back" class="btn btn-secondary" data-dismiss="modal">Kembali</button>
     </div>
 </div>
 
