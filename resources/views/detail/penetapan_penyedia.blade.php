@@ -22,7 +22,10 @@
     </ul>
 </div>
 @endif
-
+@php
+    use App\Models\pejabat;
+    $pejabat = Pejabat::all();
+@endphp
 <div class="col-12 grid-margin stretch-card">
     <div class="card shadow">
         <div class="card-body">
@@ -73,96 +76,83 @@
             <br>
             <table border="0" align="center" font-size="2">
                 <tr>
-                    //memanggil tanggal dan no.pengadaan
-                    <td width="560">Berdasarkan Berita Acara Evaluasi Dokumen Prakualifikasi Tanggal {{$pengadaan->deskripsi_tanggal}} Nomor : 020/{{$pengadaan->nomor}}/114.6/2022 dan Berita Acara Klarifikasi/Negosiasi Penawaran Tanggal 1 September 2022 Nomor : 020/654.9/114.6/2022, Pekerjaan Pengadaan {{$pengadaan->pengadaan->jenis_pengadaan}}, dengan ini Pejabat Pengadaan Dinas Komunikasi dan Informatika Provinsi Jawa Timur menetapkan penyedia jasa tersebut di bawah ini untuk sebagai Penyedia Barang/Jasa dengan nilai HPS sebesar Rp. {{$pengadaan->pengadaan->total_hps}},- ({{$pengadaan->pengadaan->deskripsi_hps}}) :</td>
+                    {{-- //memanggil tanggal dan no.pengadaan --}}
+                    <td width="560" style="text-indent: 45px; text-align: justify;">Berdasarkan Berita Acara Evaluasi Dokumen Prakualifikasi Tanggal {{$pengadaan->deskripsi_tgl}} Nomor : 020/{{$pengadaan->nomor}}/114.6/{{$pengadaan->tanggal->isoFormat('Y')}} dan Berita Acara Klarifikasi/Negosiasi Penawaran Tanggal @foreach($pejabat as $pejabat) {{$pejabat->tanggal_sk->isoFormat('D MMMM Y')}} Nomor : {{$pejabat->nomor_sk}}, Pekerjaan Pengadaan {{$pengadaan->pengadaan->jenis_pengadaan}}, dengan ini Pejabat Pengadaan Dinas Komunikasi dan Informatika Provinsi Jawa Timur menetapkan penyedia jasa tersebut di bawah ini untuk sebagai Penyedia Barang/Jasa dengan nilai HPS sebesar Rp. {{$pengadaan->pengadaan->total_hps}},- ({{$pengadaan->pengadaan->deskripsi_hps}}) :</td>
                 </tr>
             </table>
+            <br>
             <table border="0" align="center" font-size="2">
                 <tr>
                     <td width="190">Nama Perusahaan</td>
                     <td width="10">:</td>
-                    <td width="360">{{$pengadaan->pengadaan->pelaksana->pt_pelaksana}}</td>
+                    <td width="300">{{$pengadaan->pengadaan->pelaksana->pt_pelaksana}}</td>
                 </tr>
-            </table>
-            <table border="0" align="center" font-size="2">
                 <tr>
                     <td width="190">Nama Penanggung Jawab</td>
                     <td width="10">:</td>
-                    <td width="360">{{$pengadaan->pengadaan->pelaksana->nama_pelaksana}}</td>
+                    <td width="300">{{$pengadaan->pengadaan->pelaksana->nama_pelaksana}}</td>
                 </tr>
-            </table>
-            <table border="0" align="center" font-size="2">
                 <tr>
                     <td width="190">Alamat Perusahaan</td>
                     <td width="10">:</td>
-                    <td width="360">{{$pengadaan->pengadaan->pelaksana->alamat}}</td>
+                    <td width="300">{{$pengadaan->pengadaan->pelaksana->alamat}}</td>
                 </tr>
-            </table>
-            <table border="0" align="center" font-size="2">
                 <tr>
                     <td width="190">Nomor Pokok Wajib Pajak</td>
                     <td width="10">:</td>
-                    <td width="360">{{$pengadaan->pengadaan->pelaksana->npwp}}</td>
+                    <td width="300">{{$pengadaan->pengadaan->pelaksana->npwp}}</td>
                 </tr>
-            </table>
-            <table border="0" align="center" font-size="2">
                 <tr>
                     <td width="190">Harga Penawaran</td>
                     <td width="10">:</td>
-                    <td width="360">Rp. {{$pengadaan->pengadaan->nilai_negosiasi}},-</td>
+                    <td width="300">Rp. {{$pengadaan->pengadaan->nilai_negosiasi}},-</td>
                 </tr>
-            </table>
-            <table border="0" align="center" font-size="2">
                 <tr>
                     <td width="190">Setelah Negosiasi</td>
                     <td width="10"> </td>
-                    <td width="360">({{$pengadaan->pengadaan->deskripsi_negosiasi}})</td>
+                    <td width="300">({{$pengadaan->pengadaan->deskripsi_negosiasi}})</td>
                 </tr>
             </table>
             <br>
             <table border="0" align="center" font-size="2">
                 <tr>
-                    <td width="560">Demikian Berita Acara ini dibuat untuk dipergunakan sebagai bahan pertimbangan dalam pelaksanaan pengadaan langsung.</td>
+                    <td width="560" style="text-indent: 45px; text-align: justify;">Demikian atas perhatiannya diucapkan terima kasih.</td>
                 </tr>
             </table>
             <br>
-            <table border="0" align="center">
+            <table border="1" align="center">
                 <tr>
                     <td width="300"> </td>
-                    <td>Surabaya, {{$pengadaan->tanggal->isoFormat('D MMMM Y')}}</td>
-                    <td width="50"> </td>
+                    <td width="250" align="center">Surabaya, {{$pengadaan->tanggal->isoFormat('D MMMM Y')}}</td>
                 </tr>
-            </table>
-            <table border="0" align="center">
                 <tr>
                     <td width="300"> </td>
-                    <td>PEJABAT PENGADAAN</td>
-                    <td width="50"> </td>
+                    <td align="center">PEJABAT PENGADAAN</td>
                 </tr>
             </table>
             <br>
             <br>
             <br>
-            <table border="0" align="center">
+            <br>
+            <br>
+            <table border="1" align="center">
                 <tr>
                     <td width="300"> </td>
-                    <td>ADI KURNIAWAN.S.Kom.,M.Kom</td>
-                    <td width="50"> </td>
+                    <td width="250" align="center"><u>{{$pejabat->pejabat_pengadaan}}</u></td>
                 </tr>
                 <tr>
                     <td width="300"> </td>
-                    <td>NIP. 19890618 201403 1 002</td>
-                    <td width="50"> </td>
+                    <td align="center">NIP. {{$pejabat->nip_pejabat_pengadaan}}</td>
                 </tr>
             </table>
+        @endforeach
         </div>
     </div>
 </div>
 
 <div class="col-12 grid-margin stretch-card">
     <div class="modal-footer mt-3">
-        <button type="back" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
-        <a type="submit" class="btn btn-primary " href="{{ url('/print_notadinas4')  }}">Cetak PDF <i class="fa fa-save"></i></a>
+        <button onclick="history.back()" type="back" class="btn btn-secondary" data-dismiss="modal">Kembali</button>
     </div>
 </div>
 
