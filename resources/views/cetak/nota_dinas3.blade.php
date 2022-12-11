@@ -85,8 +85,7 @@
         <table>
             <tr>
                 <td width="8"></td>
-                <td style="text-align: left ;text-align: justify; text-indent: 45px;"> @foreach ($BeritaAcaraHasilPengadaanLangsung as $bahpl) Sesuai dengan Berita Acara Hasil Pengadaan Langsung Nomor : 020/{{$bahpl->nomor}}/114.6/{{$bahpl->tanggal->format('Y')}} Tanggal {{$bahpl->tanggal}}
-                    @endforeach untuk pengadaan{{$pengadaan->pengadaan->jenis_pengadaan}} Printer maka bersama ini kami sampaikan administrasi proses pengadaan langsung yang telah selesai dilaksanakan terhadap :</td>
+                <td style="text-align: left ;text-align: justify; text-indent: 45px;"> @foreach ($BeritaAcaraHasilPengadaanLangsung as $bahpl) Sesuai dengan Berita Acara Hasil Pengadaan Langsung Nomor : 020/{{$bahpl->nomor}}/114.6/{{$bahpl->tanggal->format('Y')}} Tanggal {{$bahpl->tanggal}}@endforeach untuk pengadaan{{$pengadaan->pengadaan->jenis_pengadaan}} Printer maka bersama ini kami sampaikan administrasi proses pengadaan langsung yang telah selesai dilaksanakan terhadap :</td>
             </tr>
         </table>
     </div>
@@ -113,7 +112,7 @@
             <tr>
                 <td width="120">Harga Penawaran Setelah Negosiasi</td>
                 <td>:</td>
-                <td>Rp. {{ $pengadaan->pengadaan->nilai_negosiasi}},-({{ $pengadaan->pengadaan->deskripsi_negosiasi}})</td>
+                <td>Rp. {{ number_format($pengadaan->pengadaan->nilai_negosiasi)}},-({{ $pengadaan->pengadaan->deskripsi_negosiasi}})</td>
             </tr>
         </table>
     </div>

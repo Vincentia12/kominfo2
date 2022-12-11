@@ -26,170 +26,133 @@
 <div class="col-12 grid-margin stretch-card">
     <div class="card shadow">
         <div class="card-body">
-            <table border="0" align="center">
+            <div style="text-align: center">
+                <font color="black" border="0" align="center" font-size="2">
+                    <p align="center"><b> DINAS KOMUNIKASI DAN INFORMATIKA </b></p>
+                    <p align="center"><b> PROVINSI JAWA TIMUR </b></p>
+                </font>
+                <hr width="630" colspan="2">
+                <p align="center"><u><b> NOTA DINAS </b></u></p>
+            </div>
+            <br>
+            <div style="font-family: Arial;">
+                <table border="0" align="center" font-size="2">
+                    <tr>
+                        <td width="80">Kepada</td>
+                        <td>:</td>
+                        <td width="475">Yth. Sdr. Panitia Pengadaan Dinas Komunikasi dan</td>
+                    </tr>
+                    <tr>
+                        <td width="80">Dari</td>
+                        <td>:</td>
+                        <td width="475">Pejabat Pengadaan</td>
+                    </tr>
+                    <tr>
+                        <td>Tanggal</td>
+                        <td>:</td>
+                        <td>{{$pengadaan->tanggal->isoFormat('D MMMM Y')}}</td>
+        
+                    </tr>
+                    <tr>
+                        <td>Nomor</td>
+                        <td>:</td>
+                        <td>020/{{$pengadaan->nomor}}/114.6/{{$pengadaan->tanggal->format('Y')}}</td>
+                    </tr>
+                    <tr>
+                        <td>Sifat</td>
+                        <td>:</td>
+                        <td>Segera</td>
+                    </tr>
+                    <tr>
+                        <td>Lampiran</td>
+                        <td>:</td>
+                        <td>1 (satu) berkas</td>
+                    </tr>
+                    <tr>
+                        <td width="80">Perihal</td>
+                        <td>:</td>
+                        <td width="475">Penyampaian Berita Acara Proses Pengadaan Langsung</td>
+                    </tr>
+                </table>
+                <br>
+            </div>
+            <hr width="630" colspan="2">
+            @php
+            use App\Models\Jadwal;
+            use App\Models\pejabat;
+        
+            $png = $pengadaan->pengadaan_id;
+        
+            $BeritaAcaraHasilPengadaanLangsung = Jadwal::where('jadwals.pengadaan_id', 'like', "%" . $png . "%")
+            ->where('jadwals.kegiatan', '=', 'BA. Hasil Pengadaan Langsung')
+            ->get();
+            $pejabat = Pejabat::all();
+        
+            @endphp
+            <br>
+            
+            <table border="0" align="center" font-size="2" width="600">
                 <tr>
-                    <td>
-                        <center>
-                            <font size="3"><b>DINAS KOMUNIKASI DAN INFORMATIKA</b></font><br>
-                            <font size="3"><b>PROVINSI JAWA TIMUR<b /></font><br>
-                            <font size="3"><u>NOTA DINAS<u /></font><br>
-                    </td>
-                </tr>
-                <tr>
-                    <td width="555" colspan="2">
-                        <hr>
-                    </td>
+                    <td style="text-align: left ;text-align: justify; text-indent: 45px;"> @foreach ($BeritaAcaraHasilPengadaanLangsung as $bahpl) Sesuai dengan Berita Acara Hasil Pengadaan Langsung Nomor : 020/{{$bahpl->nomor}}/114.6/{{$bahpl->tanggal->format('Y')}} Tanggal {{$bahpl->tanggal}}@endforeach untuk pengadaan{{$pengadaan->pengadaan->jenis_pengadaan}} Printer maka bersama ini kami sampaikan administrasi proses pengadaan langsung yang telah selesai dilaksanakan terhadap:</td>
                 </tr>
             </table>
             <br>
             <table border="0" align="center" font-size="2">
                 <tr>
-                    <td width="80">Kepada</td>
-                    <td>:</td>
-                    <td width="475">Yth. Sdr. Panitia Pengadaan Dinas Komunikasi dan</td>
-                </tr>
-            </table>
-            <table border="0" align="center" font-size="2">
-                <tr>
-                    <td width="80"> </td>
-                    <td width="5"> </td>
-                    <td width="475">Informatika Provinsi Jawa Timur</td>
-                </tr>
-            </table>
-            <table border="0" align="center" font-size="2">
-                <tr>
-                    <td width="80">Dari</td>
-                    <td>:</td>
-                    <td width="475">Pejabat Pengadaan</td>
-                </tr>
-            </table>
-            <table border="0" align="center" font-size="2">
-                <tr>
-                    <td width="80">Tanggal</td>
-                    <td>:</td>
-                    <td width="475">{{$pengadaan->tanggal->isoFormat('D MMMM Y')}}</td>
-                </tr>
-            </table>
-            <table border="0" align="center" font-size="2">
-                <tr>
-                    <td width="80">Nomor</td>
-                    <td>:</td>
-                    <td width="475">020/{{$pengadaan->nomor}}/114.6/2022</td>
-                </tr>
-            </table>
-            <table border="0" align="center" font-size="2">
-                <tr>
-                    <td width="80">Sifat</td>
-                    <td>:</td>
-                    <td width="475">Segera</td>
-                </tr>
-            </table>
-            <table border="0" align="center" font-size="2">
-                <tr>
-                    <td width="80">Lampiran</td>
-                    <td>:</td>
-                    <td width="475">1 (satu) berkas</td>
-                </tr>
-            </table>
-            <table border="0" align="center" font-size="2">
-                <tr>
-                    <td width="80">Perihal</td>
-                    <td>:</td>
-                    <td width="475">Penyampaian Berita Acara Proses Pengadaan Langsung</td>
-                </tr>
-            </table>
-            <br>
-            <table border="0" align="center" font-size="2">
-                <tr>
-                    <td width="565">Sesuai dengan Berita Acara Hasil Pengadaan Langsung Nomor : 020/{{$pengadaan->nomor}}/114.6/2022 tanggal {{$pengadaan->tanggal->isoFormat('D MMMM Y')}} untuk pengadaan Belanja Alat/Bahan Kapasitas Kelembagaan Statistik Sektoral Toner Printer maka bersama ini kami sampaikan administrasi proses pengadaan langsung yang telah selesai dilaksanakan terhadap :</td>
-                </tr>
-            </table>
-            <br>
-            <table border="0" align="center" font-size="2">
-                <tr>
-                    <td width="565">Demikian atas perhatiannya diucapkan terima kasih.</td>
-                </tr>
-            </table>
-            <table border="0" align="center" font-size="2">
-                <tr>
-                    <td width="50"> </td>
                     <td width="150">Nama Perusahaan</td>
-                    <td width="20">:</td>
-                    <td width="345">CV. PATRIA NUGRAHA</td>
+                    <td>:</td>
+                    <td>{{ $pengadaan->pengadaan->pelaksana->pt_pelaksana }}</td>
                 </tr>
-            </table>
-            <table border="0" align="center" font-size="2">
                 <tr>
-                    <td width="50"> </td>
                     <td width="150">Alamat</td>
-                    <td width="20">:</td>
-                    <td width="345">Jalan Kanwa No. 22-A, SURABAYA</td>
+                    <td>:</td>
+                    <td>{{ $pengadaan->pengadaan->pelaksana->alamat }}, {{ $pengadaan->pengadaan->pelaksana->kota }}</td>
                 </tr>
-            </table>
-            <table border="0" align="center" font-size="2">
                 <tr>
-                    <td width="50"> </td>
                     <td width="150">NPWP</td>
-                    <td width="20">:</td>
-                    <td width="345">01.510.544.8-609.000</td>
+                    <td>:</td>
+                    <td>{{ $pengadaan->pengadaan->pelaksana->npwp }}</td>
+                </tr>
+                <tr>
+                    <td width="150">Harga Penawaran Setelah Negosiasi</td>
+                    <td>:</td>
+                    <td>Rp. {{ number_format($pengadaan->pengadaan->nilai_negosiasi)}},-({{ $pengadaan->pengadaan->deskripsi_negosiasi}})</td>
                 </tr>
             </table>
-            <table border="0" align="center" font-size="2">
+            <br>
+            <table border="0" align="center" font-size="1" width="600">
                 <tr>
-                    <td width="50"> </td>
-                    <td width="150">Harga Penawaran</td>
-                    <td width="20">:</td>
-                    <td width="345">Rp. 5.546.670,- (Lima Juta Lima Ratus Empat</td>
-                </tr>
-            </table>
-            <table border="0" align="center" font-size="2">
-                <tr>
-                    <td width="50"> </td>
-                    <td width="150">Setelah Negosiasi</td>
-                    <td width="20"> </td>
-                    <td width="345">Puluh Enam Ribu Enam Ratus Tujuh Puluh</td>
-                </tr>
-            </table>
-            <table border="0" align="center" font-size="2">
-                <tr>
-                    <td width="50"> </td>
-                    <td width="150"> </td>
-                    <td width="20"> </td>
-                    <td width="345">Rupiah)</td>
+                    <td style="text-align: left ;text-align: justify; text-indent: 45px;">Demikian atas perhatiannya diucapkan terima kasih.</td>
                 </tr>
             </table>
             <br>
             <table border="0" align="center">
                 <tr>
-                    <td width="300"> </td>
-                    <td>PEJABAT PENGADAAN</td>
-                    <td width="50"> </td>
+                    <td width="350"> </td>
+                    <td align="center" width="260">PEJABAT PENGADAAN</td>
                 </tr>
             </table>
             <br>
             <br>
             <br>
-            <table border="0" align="center">
-                <tr>
-                    <td width="300"> </td>
-                    <td>ADI KURNIAWAN.S.Kom.,M.Kom</td>
-                    <td width="50"> </td>
-                </tr>
-            </table>
-            <table border="0" align="center">
-                <tr>
-                    <td width="300"> </td>
-                    <td>NIP. 19890618 201403 1 002</td>
-                    <td width="50"> </td>
-                </tr>
-            </table>
+            @foreach ($pejabat as $pejabat)
+                <table border="0" align="center">
+                    <tr>
+                        <td width="350"> </td>
+                        <td align="center" width="260"><u>{{$pejabat->pejabat_pengadaan}}</u></td>
+                    </tr>
+                    <tr>
+                        <td width="350"> </td>
+                        <td align="center">NIP. {{$pejabat->nip_pejabat_pengadaan}}</td>
+                    </tr>
+                </table>
+            @endforeach
         </div>
     </div>
 </div>
 <div class="col-12 grid-margin stretch-card">
     <div class="modal-footer mt-3">
-        <button type="back" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
-        <a type="submit" class="btn btn-primary " href="{{ url('/print_notadinas4')  }}">Cetak PDF <i class="fa fa-save"></i></a>
+        <button onclick="history.back()" type="back" class="btn btn-secondary" data-dismiss="modal">Kembali</button>
     </div>
 </div>
 
