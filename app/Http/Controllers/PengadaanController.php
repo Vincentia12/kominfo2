@@ -655,9 +655,22 @@ class PengadaanController extends Controller
     }
 
     // Surat Perintah Mulai Kerja (SPMK)
-    public function show22(Pengadaan $pengadaan) // public function show(Request $request,$id)
+    public function show22($id) // public function show(Request $request,$id)
     {
-        return view('detail.undangan_penyedia', compact('pengadaan'));
+        $pengadaan = Jadwal::find($id);
+        $barang = DB::table('barangs')
+            ->where('barangs.pengadaan_id', 'like', "%" . $pengadaan->pengadaan_id . "%")
+            ->get();
+        $pejabat = DB::table('pejabats')
+            ->where('id', '=', 1)
+            ->get();
+
+        return view(
+            'detail.surat_perintah_mulai_kerja',
+            ['pengadaan' => $pengadaan],
+            ['barang' => $barang],
+            ['pejabat' => $pejabat],
+        );
     }
 
     // BA. Serah Terima Hasil Pekerjaan
