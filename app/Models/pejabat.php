@@ -16,7 +16,7 @@ class Pejabat extends Model
 
     protected $fillable = [
         // 'id',
-        'tahun_sk',
+        // 'tahun_sk',
         'tanggal_sk',
         'nomor_sk',
         'kuasa_pengguna_anggaran',

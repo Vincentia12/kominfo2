@@ -25,6 +25,7 @@ class Pengadaan extends Model
 
     protected $table = "pengadaans";
     protected $primarykay = "id";
+    protected $dates = ['tanggal'];
 
     public function barang()
     {
