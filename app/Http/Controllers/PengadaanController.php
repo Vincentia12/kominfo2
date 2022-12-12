@@ -773,7 +773,7 @@ class PengadaanController extends Controller
 
 
         return view(
-            'detail.kuintasi_kontrak',
+            'detail.kuitansi_kontrak',
             ['pengadaan' => $pengadaan],
             ['barang' => $barang],
             ['pejabat' => $pejabat],

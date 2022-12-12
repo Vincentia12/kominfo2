@@ -165,7 +165,6 @@
               <option value="Nota Dinas dari Pejabat Pengadaan ke PPK">Nota Dinas dari Pejabat Pengadaan ke PPK</option>
               <option value="Penetapan Penyedia Jasa">Penetapan Penyedia Jasa</option>
               <option value="Penunjukan Penyedia Barang/Jasa">Penunjukan Penyedia Barang/Jasa</option>
-              <option value="Kuitansi Kontrak">Kuitansi Kontrak</option>
               <option value="Surat Perintah Kerja">Surat Perintah Kerja</option>
               <option value="Surat Perintah Mulai Kerja (SPMK)">Surat Perintah Mulai Kerja (SPMK)</option>
               <option value="BA. Serah Terima Hasil Pekerjaan">BA. Serah Terima Hasil Pekerjaan</option>
@@ -173,6 +172,7 @@
               <option value="BA. Penyerahan Barang/Jasa">BA. Penyerahan Barang/Jasa</option>
               <option value="BA. Hasil Pemeriksaan Administratif">BA. Hasil Pemeriksaan Administratif</option>
               <option value="BA. Hasil Pembayaran">BA. Hasil Pembayaran</option>
+              <option value="Kuitansi Kontrak">Kuitansi Kontrak</option>
             </select>
           </div>
           <div class="mb-4">
