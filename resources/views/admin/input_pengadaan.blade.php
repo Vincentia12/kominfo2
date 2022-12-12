@@ -152,7 +152,7 @@
         </div>
           <div class="mb-4">
             <label for="message-text" class="col-form-label">Biaya HPS (Harga Perkiraan Sendiri)</label>
-            <input type="text" class="form-control" id="total_hps" name="total_hps" value="{{ old('total_hps') }}" placeholder="10.000.000">
+            <input type="text" class="form-control" id="total_hps" name="total_hps" value="{{ old('total_hps') }}" placeholder="10000000">
             <small class="text-danger">{{ $errors->first('total_hps') }}</small>
           </div>
           <div class="mb-4">
@@ -162,7 +162,7 @@
           </div>
           <div class="mb-4">
             <label for="message-text" class="col-form-label">Harga Penawaran</label>
-            <input type="text" class="form-control" id="harga_penawaran" name="harga_penawaran" value="{{ old('harga_penawaran') }}" placeholder="10.000.000">
+            <input type="text" class="form-control" id="harga_penawaran" name="harga_penawaran" value="{{ old('harga_penawaran') }}" placeholder="10000000">
             <small class="text-danger">{{ $errors->first('harga_penawaran') }}</small>
           </div>
           <div class="mb-4">
@@ -172,7 +172,7 @@
           </div>
           <div class="mb-4">
             <label for="message-text" class="col-form-label">Nilai Negosiasi</label>
-            <input type="text" class="form-control" id="nilai_negosiasi" name="nilai_negosiasi" value="{{ old('nilai_negosiasi') }}" placeholder="10.000.000">
+            <input type="text" class="form-control" id="nilai_negosiasi" name="nilai_negosiasi" value="{{ old('nilai_negosiasi') }}" placeholder="10000000">
             <small class="text-danger">{{ $errors->first('nilai_negosiasi') }}</small>
           </div>
           <div class="mb-4">
@@ -233,7 +233,7 @@
           </div>
           <div class="mb-4">
             <label for="message-text" class="col-form-label">Biaya HPS (Harga Perkiraan Sendiri)</label>
-            <input type="text" class="form-control" id="total_hps" name="total_hps" value="{{ $pgn->total_hps }}" placeholder="10.000.000">
+            <input type="text" class="form-control" id="total_hps" name="total_hps" value="{{ $pgn->total_hps }}" placeholder="10000000">
             <small class="text-danger">{{ $errors->first('total_hps') }}</small>
           </div>
           <div class="mb-4">
@@ -243,7 +243,7 @@
           </div>
           <div class="mb-4">
             <label for="message-text" class="col-form-label">Harga Penawaran</label>
-            <input type="text" class="form-control" id="harga_penawaran" name="harga_penawaran" value="{{ $pgn->harga_penawaran }}" placeholder="10.000.000">
+            <input type="text" class="form-control" id="harga_penawaran" name="harga_penawaran" value="{{ $pgn->harga_penawaran }}" placeholder="10000000">
             <small class="text-danger">{{ $errors->first('harga_penawaran') }}</small>
           </div>
           <div class="mb-4">
@@ -253,7 +253,7 @@
           </div>
           <div class="mb-4">
             <label for="message-text" class="col-form-label">Nilai Negosiasi</label>
-            <input type="text" class="form-control" id="nilai_negosiasi" name="nilai_negosiasi" value="{{ $pgn->nilai_negosiasi }}" placeholder="10.000.000">
+            <input type="text" class="form-control" id="nilai_negosiasi" name="nilai_negosiasi" value="{{ $pgn->nilai_negosiasi }}" placeholder="10000000">
             <small class="text-danger">{{ $errors->first('nilai_negosiasi') }}</small>
           </div>
           <div class="mb-4">

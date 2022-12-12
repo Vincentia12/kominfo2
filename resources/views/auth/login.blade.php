@@ -112,7 +112,7 @@
 </head>
 
 <body>
-    <img src="{{ asset('img/login.jpeg') }}" id="bg" alt="">
+    <img src="{{ asset('img/login2.jpeg') }}" id="bg" alt="">
 
     <div class="container col-lg-6">
 
@@ -124,7 +124,7 @@
                    
                                 <div class="p-5">
                                     <div class="text-center">
-                                        <img src="img/kominfo.png" alt="logo" width="100px" height="100px">
+                                        <img src="img/loginn2.jpeg" alt="logo" width="150px" height="100px">
                                     </div><br>
                                     {{-- <form class="user"> --}}
                                     <form method="POST" action="{{ route('login') }}" >
