@@ -26,344 +26,311 @@
 <div class="col-12 grid-margin stretch-card">
     <div class="card shadow">
         <div class="card-body">
-            <table border="0" align="center">
-                <tr>
-                    <td width="560"><center><b><u>BERITA ACARA PEMBAYARAN</u></b></td>
-                <tr>
-                <tr>
-                    <td width="560"><center>Nomor : 020/{{$pengadaan->nomor}}/114.6/2022</td>
-                <tr>
-            </table>
-            <br>
-            <table border="0" align="center">
-                <tr>
-                    <td width="560">Pada hari ini {{$pengadaan->deskripsi_tanggal}}, kami yang bertanda tangan dibawah ini :</td>
-                <tr>
-            </table>
-            <br>
-            <table border="0" align="center" font-size="2">
-                <tr>
-                    <td width="10">I.</td>
-                    <td width="150">Nama</td>
-                    <td>:</td>
-                    <td width="400">I WAYAN RUDY ARTHA, S.Kom</td>
-                </tr>
-            </table>
-            <table border="0" align="center" font-size="2">
-                <tr>
-                    <td width="15"> </td>
-                    <td width="150">NIP</td>
-                    <td>:</td>
-                    <td width="400">19770517 200901 1 005</td>
-                </tr>
-            </table>
-            <table border="0" align="center" font-size="2">
-                <tr>
-                    <td width="15"> </td>
-                    <td width="150">Jabatan</td>
-                    <td>:</td>
-                    <td width="400">Pejabat Pembuat Komitmen</td>
-                </tr>
-            </table>
-            <table border="0" align="center" font-size="2">
-                <tr>
-                    <td width="15"> </td>
-                    <td width="150">Alamat</td>
-                    <td>:</td>
-                    <td width="400">Jl. Ahmad Yani 242 - 244 Surabaya</td>
-                </tr>
-            </table>
-            <table border="0" align="center" font-size="2">
-                <tr>
-                    <td width="15"> </td>
-                    <td width="555">Yang selanjutnya disebut <b>PIHAK KESATU</b></td>
-                </tr>
-            </table>
-            <br>
-            <table border="0" align="center" font-size="2">
-                <tr>
-                    <td width="10">II.</td>
-                    <td width="150">Nama</td>
-                    <td>:</td>
-                    <td width="400">{{$pengadaan->pengadaan->pelaksana->nama_pelaksana}}</td>
-                </tr>
-            </table>
-            <table border="0" align="center" font-size="2">
-                <tr>
-                    <td width="15"> </td>
-                    <td width="150">Jabatan</td>
-                    <td>:</td>
-                    <td width="400">{{$pengadaan->pengadaan->pelaksana->jabatan_pelaksana}} {{$pengadaan->pengadaan->pelaksana->pt_pelaksana}}</td>
-                </tr>
-            </table>
-            <table border="0" align="center" font-size="2">
-                <tr>
-                    <td width="15"> </td>
-                    <td width="150">Alamat</td>
-                    <td>:</td>
-                    <td width="400">{{$pengadaan->pengadaan->pelaksana->alamat}}</td>
-                </tr>
-            </table>
-            <table border="0" align="center" font-size="2">
-                <tr>
-                    <td width="15"> </td>
-                    <td width="555">Yang selanjutnya disebut <b>PIHAK KEDUA</b></td>
-                </tr>
-            </table>
-            <br>
-            <table border="0" align="center">
-                <tr>
-                    <td width="560">Dengan ini menyatakan bahwa : </td>
-                <tr>
-            </table>
-            <br>
-            <table border="0" align="center" font-size="2">
-                <tr>
-                    <td width="20">1.</td>
-                    <td width="540">Telah  Melaksanakan Pekerjaan :</td>
-                </tr>
-            </table>
-            <table border="0" align="center" font-size="2">
-                <tr>
-                    <td width="25"> </td>
-                    <td width="20">a.</td>
-                    <td width="100">Pekerjaan</td>
-                    <td width="10">:</td>
-                    <td width="410">{{$pengadaan->pengadaan->jenis_pengadaan}}</td>
-                </tr>
-            </table>
-            {{--  <table border="0" align="center" font-size="2">
-                <tr>
-                    <td width="25"> </td>
-                    <td width="20"> </td>
-                    <td width="100"> </td>
-                    <td width="10"> </td>
-                    <td width="410">Statistik Sektoral Toner Printer</td>
-                </tr>
-            </table>  --}}
-            <table border="0" align="center" font-size="2">
-                <tr>
-                    <td width="25"> </td>
-                    <td width="20">b.</td>
-                    <td width="100">Lokasi</td>
-                    <td width="10">:</td>
-                    <td width="410">Surabaya</td>
-                </tr>
-            </table>
-            <table border="0" align="center" font-size="2">
-                <tr>
-                    <td width="25"> </td>
-                    <td width="20">c.</td>
-                    <td width="100">Departemen/</td>
-                    <td width="10">:</td>
-                    <td width="410">Dinas Komunikasi dan Informatika Provinsi</td>
-                </tr>
-            </table>
-            <table border="0" align="center" font-size="2">
-                <tr>
-                    <td width="25"> </td>
-                    <td width="20"> </td>
-                    <td width="100">Lembaga</td>
-                    <td width="10"> </td>
-                    <td width="410">Jawa Timur</td>
-                </tr>
-            </table>
-            <table border="0" align="center" font-size="2">
-                <tr>
-                    <td width="25"> </td>
-                    <td width="20">d.</td>
-                    <td width="100">Sumber</td>
-                    <td width="10">:</td>
-                    <td width="410">APBD</td>
-                </tr>
-            </table>
-            <table border="0" align="center" font-size="2">
-                <tr>
-                    <td width="25"> </td>
-                    <td width="20"> </td>
-                    <td width="100">Dana</td>
-                    <td width="10"> </td>
-                    <td width="410"> </td>
-                </tr>
-            </table>
-            <table border="0" align="center" font-size="2">
-                <tr>
-                    <td width="25"> </td>
-                    <td width="20">e.</td>
-                    <td width="100">Pelaksanaan</td>
-                    <td width="10">:</td>
-                    <td width="410">7 ( Tujuh ) hari Kalender</td>
-                </tr>
-            </table>
-            <table border="0" align="center" font-size="2">
-                <tr>
-                    <td width="25"> </td>
-                    <td width="20"> </td>
-                    <td width="100">Pekerjaan</td>
-                    <td width="10"> </td>
-                    <td width="410"> </td>
-                </tr>
-            </table>
-            <table border="0" align="center" font-size="2">
-                <tr>
-                    <td width="25"> </td>
-                    <td width="20">f.</td>
-                    <td width="100">Kwitansi</td>
-                    <td width="10">:</td>
-                    <td width="410">Nomor : 020/{{$pengadaan->nomor}}/114.6/2022</td>
-                </tr>
-            </table>
-            <table border="0" align="center" font-size="2">
-                <tr>
-                    <td width="25"> </td>
-                    <td width="20"> </td>
-                    <td width="100">Kontrak</td>
-                    <td width="10"> </td>
-                    <td width="410">Tanggal : {{$pengadaan->tanggal->isoFormat('D MMMM Y')}}</td>
-                </tr>
-            </table>
-            <table border="0" align="center" font-size="2">
-                <tr>
-                    <td width="25"> </td>
-                    <td width="20">g.</td>
-                    <td width="100">Nilai</td>
-                    <td width="10">:</td>
-                    <td width="410">Rp.{{$pengadaan->pengadaan->nilai_negosiasi}},-</td>
-                </tr>
-            </table>
-            <table border="0" align="center" font-size="2">
-                <tr>
-                    <td width="25"> </td>
-                    <td width="20"> </td>
-                    <td width="100">Kontrak</td>
-                    <td width="10"> </td>
-                    <td width="410"> </td>
-                </tr>
-            </table>
-            <br>
-            <table border="0" align="center" font-size="2">
-                <tr>
-                    <td width="20">2.</td>
-                    <td width="540">PIHAK KEDUA telah mencapai kemajuan Hasil {{$pengadaan->pengadaan->jenis_pengadaan}}</td>
-                </tr>
-            </table>
-            <table border="0" align="center" font-size="2">
-                <tr>
-                    <td width="25"> </td>
-                    <td width="540">, dengan perhitungan nilai kontrak sebagai berikut :</td>
-                </tr>
-            </table>
-            <br>
-            <table border="0" align="center" font-size="2">
-                <tr>
-                    <td width="25"> </td>
-                    <td width="20">a.</td>
-                    <td width="400">Nilai Kontrak Pekerjaan</td>
-                    <td width="10">:</td>
-                    <td width="110">Rp.{{$pengadaan->pengadaan->nilai_negosiasi}},-</td>
-                </tr>
-            </table>
-            <table border="0" align="center" font-size="2">
-                <tr>
-                    <td width="25"> </td>
-                    <td width="20">b.</td>
-                    <td width="400">Jumlah yang telah dibayarkan</td>
-                    <td width="10">:</td>
-                    <td width="100">Rp.</td>
-                    <td width="10">,-</td>
-                </tr>
-            </table>
-            <table border="0" align="center" font-size="2">
-                <tr>
-                    <td width="25"> </td>
-                    <td width="20">c.</td>
-                    <td width="400">Nilai kontrak yang masih tersedia</td>
-                    <td width="10">:</td>
-                    <td width="100">Rp.</td>
-                    <td width="10">,-</td>
-                </tr>
-            </table>
-            <table border="0" align="center" font-size="2">
-                <tr>
-                    <td width="25"> </td>
-                    <td width="20">d.</td>
-                    <td width="400">Pembayaran termin saat ini</td>
-                    <td width="10">:</td>
-                    <td width="110">Rp.{{$pengadaan->pengadaan->nilai_negosiasi}},-</td>
-                </tr>
-            </table>
-            <table border="0" align="center" font-size="2">
-                <tr>
-                    <td width="25"> </td>
-                    <td width="20">e.</td>
-                    <td width="400">Sisa nilai kontrak s/d saat ini</td>
-                    <td width="10">:</td>
-                    <td width="100">Rp.</td>
-                    <td width="10">,-</td>
-                </tr>
-            </table>
-            <br>
-            <table border="0" align="center" font-size="2">
-                <tr>
-                    <td width="20">3.</td>
-                    <td width="540">Pada pembayaran ini PIHAK KEDUA berhak dibayarkan sebesar</td>
-                </tr>
-            </table>
-            <table border="0" align="center" font-size="2">
-                <tr>
-                    <td width="25"> </td>
-                    <td width="540">Rp. {{$pengadaan->pengadaan->nilai_negosiasi}},- (Terbilang : {{$pengadaan->pengadaan->deskripsi_negosiasi}})</td>
-                </tr>
-            </table>
-            <br>
-            <br>
-            <table border="0" align="center" font-size="2">
-                <tr align="center">
-                    <td width="280">PIHAK KEDUA</td>
-                    <td width="280">PIHAK KESATU</td>
-                </tr>
-            </table>
-            <br>
-            <br>
-            <br>
-            <table border="0" align="center" font-size="2">
-                <tr align="center">
-                    <td width="280">MANUHUTU ARMAND FX</td>
-                    <td width="280">I WAYAN RUDY ARTHA, S.Kom</td>
-                </tr>
-            </table>
-            <table border="0" align="center" font-size="2">
-                <tr align="center">
-                    <td width="280">Direktur</td>
-                    <td width="280">NIP. 19770517 200901 1 005</td>
-                </tr>
-            </table>
-            <br>
-            <table border="0" align="center" font-size="2">
-                <tr align="center">
-                    <td width="560">Menyetujui</td>
-                </tr>
-            </table>
-            <table border="0" align="center" font-size="2">
-                <tr align="center">
-                    <td width="560">KUASA PENGGUNA ANGGARAN</td>
-                </tr>
-            </table>
-            <br>
-            <br>
-            <br>
-            <table border="0" align="center" font-size="2">
-                <tr align="center">
-                    <td width="560">Drs. Ec. NIRMALA DEWI, M.M</td>
-                </tr>
-            </table>
-            <table border="0" align="center" font-size="2">
-                <tr align="center">
-                    <td width="560">NIP. 19650909 199403 2 006</td>
-                </tr>
-            </table>
-            <br>
+            <div class="row">
+                <table  border="0" align="center">
+                    <tr>
+                        <td style="vertical-align:top" style="text-align: center">
+                            <u><b>BERITA ACARA PEMBAYARAN</b></u>
+                        </td>
+                    <tr>
+                </table>
+            </div>
+            <div class="row">
+                <table border="0" align="center">
+                    <tr>
+                        <td style="vertical-align:top" style="text-align: center">
+                            <font size="3">Nomor</font>
+                        </td>
+                        <td style="vertical-align:top" style="text-align: center">
+                            <font size="3">:</font>
+                        </td>
+                        <td style="vertical-align:top" style="text-align: center">
+                            <font size="3">020/654.{{$pengadaan->nomor}} /114.6/{{$pengadaan->tanggal->isoFormat('Y')}}</font>
+                        </td>
+                        </td>
+                    <tr>
+                </table>
+            </div>
+            @php
+                use App\Models\Jadwal;
+                use App\Models\pejabat;
+
+                $png = $pengadaan->pengadaan_id;
+
+                $KuitansiKontrak = Jadwal::where('jadwals.pengadaan_id', 'like', "%" . $png . "%")
+                ->where('jadwals.kegiatan', '=', 'Kuitansi Kontrak')
+                ->get();
+                $pejabat = Pejabat::all();
+            @endphp
+            <div class="row">
+                <table width="700" align="center">
+                    <tr>
+                        <td style="vertical-align:top" width="8"></td>
+                        <td style="vertical-align:top" style="text-align: left ;text-align: justify; text-indent: 45px;">Pada hari ini {{$pengadaan->tanggal->isoFormat('dddd')}}, Tanggal {{$pengadaan->deskripsi_tgl}}. Kami yang bertanda tangan dibawah ini :</td>
+                    </tr>
+                </table>
+            </div>
+            @foreach ($pejabat as $pjb)
+            <div>
+                <table width="700" align="center" border="0" align="" font-size="1">
+                    <tr>
+                        <td style="vertical-align:top" width="15" rowspan="5"></td>
+                        <td style="vertical-align:top" width="15">I.</td>
+                        <td style="vertical-align:top" width="250">Nama</td>
+                        <td style="vertical-align:top" width="5">:</td>
+                        <td style="vertical-align:top" width="370">{{$pjb->pejabat_pembuatan_komitmen}}</td>
+                    </tr>
+                    <tr>
+                        <td style="vertical-align:top" width="15"></td>
+                        <td style="vertical-align:top" width="250">NIP</td>
+                        <td style="vertical-align:top" width="5">:</td>
+                        <td style="vertical-align:top" width="370">{{$pjb->nip_pejabat_komitmen}}</td>
+                    </tr>
+                    <tr>
+                        <td style="vertical-align:top" width="15"></td>
+                        <td style="vertical-align:top" width="250">Jabatan</td>
+                        <td style="vertical-align:top" width="5">:</td>
+                        <td style="vertical-align:top" width="370">Pejabat Pembuat Komitmen</td>
+                    </tr>
+                    <tr>
+                        <td style="vertical-align:top" width="15"></td>
+                        <td style="vertical-align:top" width="250">Alamat</td>
+                        <td style="vertical-align:top" width="5">:</td>
+                        <td style="vertical-align:top" width="370">Jl. A. Yani No. 242-244 Surabaya</td>
+                    </tr>
+                    <tr>
+                        <td style="vertical-align:top" width="15"></td>
+                        <td style="vertical-align:top" colspan="3">Yang selanjutnya disebut <b>PIHAK KESATU</b> </td>
+                    </tr>
+                @endforeach
+                    {{-- <tr>
+                        <td style="vertical-align:top" width="15"></td>
+                        <td style="vertical-align:top" height="15" colspan="4"></td>
+                    </tr> --}}
+                    <tr>
+                        <td style="vertical-align:top" width="15" rowspan="4"></td>
+                        <td style="vertical-align:top" width="15">II.</td>
+                        <td style="vertical-align:top" width="250">Nama</td>
+                        <td style="vertical-align:top" width="5">:</td>
+                        <td style="vertical-align:top" width="370">{{$pengadaan->pengadaan->pelaksana->nama_pelaksana}}</td>
+                    </tr>
+                    <tr>
+                        <td style="vertical-align:top" width="15"></td>
+                        <td style="vertical-align:top" width="250">Jabatan</td>
+                        <td style="vertical-align:top" width="5">:</td>
+                        <td style="vertical-align:top" width="370">{{$pengadaan->pengadaan->pelaksana->jabatan_pelaksana}}</td>
+                    </tr>
+                    <tr>
+                        <td style="vertical-align:top" width="15"></td>
+                        <td style="vertical-align:top" width="250">Alamat</td>
+                        <td style="vertical-align:top" width="5">:</td>
+                        <td style="vertical-align:top" width="370">{{$pengadaan->pengadaan->pelaksana->alamat}}, {{$pengadaan->pengadaan->pelaksana->kota}}</td>
+                    </tr>
+                    <tr>
+                        <td style="vertical-align:top" width="15"></td>
+                        <td style="vertical-align:top" width="470" colspan="3">Yang selanjutnya disebut <b>PIHAK KEDUA</b> </td>
+                    </tr>
+                </table>
+            </div>
+            <div>
+                <table width="700" align="center" border="0" align="">
+                    <tr>
+                        <td style="vertical-align:top" width="15"></td>
+                        <td style="vertical-align:top" colspan="5">Dengan ini menyatakan bahwa :</td>
+                    </tr>
+                    <tr>
+                        <td style="vertical-align:top" width="15"></td>
+                        <td style="vertical-align:top" width="15">1.</td>
+                        <td style="vertical-align:top" colspan="4"> Telah Melaksanakan Pekerjaan :</td>
+                    </tr>
+                    <tr>
+                        <td style="vertical-align:top" width="15"></td>
+                        <td style="vertical-align:top" width="15"></td>
+                        <td style="vertical-align:top" width="15">a.</td>
+                        <td style="vertical-align:top" width="250">Pekerjaan</td>
+                        <td style="vertical-align:top" width="5">:</td>
+                        <td style="vertical-align:top" style="text-align: left ;text-align: justify;">{{$pengadaan->pengadaan->jenis_pengadaan}}</td>
+                    </tr>
+                    <tr>
+                        <td style="vertical-align:top" width="15"></td>
+                        <td style="vertical-align:top" width="15"></td>
+                        <td style="vertical-align:top" width="15">b.</td>
+                        <td style="vertical-align:top" width="250">Lokasi</td>
+                        <td style="vertical-align:top" width="5">:</td>
+                        <td style="vertical-align:top" style="text-align: left ;text-align: justify;">{{$pengadaan->pengadaan->pelaksana->kota}}</td>
+                    </tr>
+                    <tr>
+                        <td style="vertical-align:top" width="15"></td>
+                        <td style="vertical-align:top" width="15"></td>
+                        <td style="vertical-align:top" width="15">c.</td>
+                        <td style="vertical-align:top" width="250">Departemen/Lembaga</td>
+                        <td style="vertical-align:top" width="5">:</td>
+                        <td style="vertical-align:top" style="text-align: left ;text-align: justify;">Dinas Komunikasi dan Informatika Provinsi Jawa Timur</td>
+                    </tr>
+                    <tr>
+                        <td style="vertical-align:top" width="15"></td>
+                        <td style="vertical-align:top" width="15"></td>
+                        <td style="vertical-align:top" width="15">d.</td>
+                        <td style="vertical-align:top" width="250">Sumber Dana</td>
+                        <td style="vertical-align:top" width="5">:</td>
+                        <td style="vertical-align:top" style="text-align: left ;text-align: justify;">APBD</td>
+                    </tr>
+                    <tr>
+                        <td style="vertical-align:top" width="15"></td>
+                        <td style="vertical-align:top" width="15"></td>
+                        <td style="vertical-align:top" width="15">e.</td>
+                        <td style="vertical-align:top" width="250">Pelaksanaan Pekerjaan</td>
+                        <td style="vertical-align:top" width="5">:</td>
+                        <td style="vertical-align:top" style="text-align: left ;text-align: justify;">{{$pengadaan->alokasi}} hari Kalender</td>
+                    </tr>
+                    @foreach ($KuitansiKontrak as $kk)
+                    <tr>
+                        <td style="vertical-align:top" width="15"></td>
+                        <td style="vertical-align:top" width="15"></td>
+                        <td style="vertical-align:top" width="15">f.</td>
+                        <td style="vertical-align:top" width="250">Kwitansi Kontrak</td>
+                        <td style="vertical-align:top" width="5">:</td>
+                        <td style="vertical-align:top" style="text-align: left ;text-align: justify;">
+                            Nomor : 020/{{$kk->nomor}}/114.6/{{$kk->tanggal->format('Y')}}
+                        </td>
+                    </tr>
+                    @endforeach
+                    <tr>
+                        <td style="vertical-align:top" width="15"></td>
+                        <td style="vertical-align:top" width="15"></td>
+                        <td style="vertical-align:top" width="15">g.</td>
+                        <td style="vertical-align:top" width="250">Nilai Kontrak</td>
+                        <td style="vertical-align:top" width="5">:</td>
+                        <td style="vertical-align:top" style="text-align: left ;text-align: justify;">
+                            Rp.
+                            {{number_format($pengadaan->pengadaan->nilai_negosiasi)}},-
+                        </td>
+                    </tr>
+                    {{-- <tr>
+                        <td style="vertical-align:top" width="15" ></td>
+                        <td style="vertical-align:top" height="20" colspan="5"></td>
+                    </tr> --}}
+                    <tr>
+                        <td style="vertical-align:top" width="15"></td>
+                        <td style="vertical-align:top" width="15">2.</td>
+                        <td style="vertical-align:top" style="text-align: left ;text-align: justify;" colspan="4">PIHAK KEDUA telah mencapai kemajuan Hasil Belanja {{$pengadaan->pengadaan->jenis_pengadaan}} , dengan perhitungan nilai kontrak sebagai berikut :</td>
+                    </tr>
+                    <tr>
+                        <td style="vertical-align:top" width="15"></td>
+                        <td style="vertical-align:top" width="15"></td>
+                        <td style="vertical-align:top" width="15">a.</td>
+                        <td style="vertical-align:top" width="250">Nilai Kontrak Pekerjaan</td>
+                        <td style="vertical-align:top" width="5">:</td>
+                        <td style="vertical-align:top" style="text-align: left ;text-align: justify;">Rp.
+                            {{number_format($pengadaan->pengadaan->nilai_negosiasi)}},-
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="vertical-align:top" width="15"></td>
+                        <td style="vertical-align:top" width="15"></td>
+                        <td style="vertical-align:top" width="15">b.</td>
+                        <td style="vertical-align:top" width="250">Jumlah yang telah dibayarkan</td>
+                        <td style="vertical-align:top" width="5">:</td>
+                        <td style="vertical-align:top" style="text-align: left ;text-align: justify;">Rp. ,-
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="vertical-align:top" width="15"></td>
+                        <td style="vertical-align:top" width="15"></td>
+                        <td style="vertical-align:top" width="15">c.</td>
+                        <td style="vertical-align:top" width="250">Nilai kontrak yang masih tersedia</td>
+                        <td style="vertical-align:top" width="5">:</td>
+                        <td style="vertical-align:top" style="text-align: left ;text-align: justify;">Rp. ,-</td>
+                    </tr>
+                    <tr>
+                        <td style="vertical-align:top" width="15"></td>
+                        <td style="vertical-align:top" width="15"></td>
+                        <td style="vertical-align:top" width="15">d.</td>
+                        <td style="vertical-align:top" width="250">Pembayaran termin saat ini</td>
+                        <td style="vertical-align:top" width="5">:</td>
+                        <td style="vertical-align:top" style="text-align: left ;text-align: justify;">Rp.
+                            {{number_format($pengadaan->pengadaan->nilai_negosiasi)}},-
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="vertical-align:top" width="15"></td>
+                        <td style="vertical-align:top" width="15"></td>
+                        <td style="vertical-align:top" width="15">e.</td>
+                        <td style="vertical-align:top" width="250">Sisa nilai kontrak s/d saat ini</td>
+                        <td style="vertical-align:top" width="5">:</td>
+                        <td style="vertical-align:top" style="text-align: left ;text-align: justify;">Rp. ,-</td>
+                    </tr>
+                    {{-- <tr>
+                        <td style="vertical-align:top" width="15" ></td>
+                        <td style="vertical-align:top" height="20" colspan="5"></td>
+                    </tr> --}}
+                    <tr>
+                        <td style="vertical-align:top" width="25"></td>
+                        <td style="vertical-align:top" width="15">3.</td>
+                        <td style="vertical-align:top" style="text-align: left ;text-align: justify;" colspan="4">Pada pembayaran ini PIHAK KEDUA berhak dibayarkan sebesar Rp.
+                            {{number_format($pengadaan->pengadaan->nilai_negosiasi)}},- (Terbilang : {{$pengadaan->pengadaan->deskripsi_negosiasi}} )
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            @foreach ($pejabat as $pjb)
+            <div>
+                <table width="700" align="center" border="0" style="text-align: center;">
+                    <tr>
+                        <td style="vertical-align:top" colspan="3" width=525></td>
+                    </tr>
+                    <tr>
+                        <td style="vertical-align:top" width="250"><b>PIHAK KEDUA</b></td>
+                        <td style="vertical-align:top" width="165"></td>
+                        <td style="vertical-align:top" width="250"><b>PIHAK KESATU</b></td>
+                    </tr>
+                    <tr>
+                        <td height="50"></td>
+                    </tr>
+                    <tr>
+                        <td style="vertical-align:top" width="250"><u>{{$pengadaan->pengadaan->pelaksana->nama_pelaksana}}</u></td>
+                        <td style="vertical-align:top" width="165"></td>
+                        <td style="vertical-align:top" width="250"><u>{{$pjb->pejabat_pembuatan_komitmen}}</u></td>
+                    </tr>
+                    <tr>
+                        <td style="vertical-align:top" width="250">{{$pengadaan->pengadaan->pelaksana->jabatan_pelaksana}}</td>
+                        <td style="vertical-align:top" width="165"></td>
+                        <td style="vertical-align:top" width="250">NIP. {{$pjb->nip_pejabat_komitmen}}</td>
+                    </tr>
+                </table>
+                <table width="700" align="center" style="text-align: center;" border="0">
+                    <tr>
+                        <td style="vertical-align:top" width="160"></td>
+                        <td style="vertical-align:top" width="195">Menyetujui</td>
+                        <td style="vertical-align:top" width="160"></td>
+                    </tr>
+                    <tr>
+                        <td style="vertical-align:top" width="160"></td>
+                        <td style="vertical-align:top" width="195">KUASA PENGGUNA ANGGARAN</td>
+                        <td style="vertical-align:top" width="160"></td>
+                    </tr>
+                    <tr>
+                        <td height="50"></td>
+                    </tr>
+                    <tr>
+                        <td style="vertical-align:top" width="160"></td>
+                        <td style="vertical-align:top" width="195"><u>{{$pjb->kuasa_pengguna_anggaran}}</u></td>
+                        <td style="vertical-align:top" width="160"></td>
+                    </tr>
+                    <tr>
+                        <td style="vertical-align:top" width="160"></td>
+                        <td style="vertical-align:top" width="195">NIP. {{$pjb->nip_kuasa_pengguna}}</td>
+                        <td style="vertical-align:top" width="160"></td>
+                    </tr>
+                </table>
+            </div>
+            @endforeach
         </div>
+    </div>
+</div>
+<div class="col-12 grid-margin stretch-card">
+    <div class="modal-footer mt-3">
+        <button onclick="history.back()" type="back" class="btn btn-secondary" data-dismiss="modal">Kembali</button>
     </div>
 </div>
 @endsection
