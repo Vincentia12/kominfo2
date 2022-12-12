@@ -15,7 +15,7 @@
     <div class="row">
         <table border="0" align="center">
             <tr>
-                <td style="text-align: center">
+                <td style="vertical-align:top" style="text-align: center">
                     <u><b>LAPORAN PROSES PENGADAAN BARANG/JASA</b></u>
                 </td>
             <tr>
@@ -38,14 +38,14 @@
     <div class="row">
         <table border="0" align="center">
             <tr>
-                <td style="text-align: center">
+                <td style="vertical-align:top" style="text-align: center">
                     <font size="3">Nomor</font>
                 </td>
-                <td style="text-align: center">
+                <td style="vertical-align:top" style="text-align: center">
                     <font size="3">:</font>
                 </td>
-                <td style="text-align: center">
-                    <font size="3">020/654.{{$pengadaan->nomor}} /114.6/{{$pengadaan->tanggal->isoFormat('Y')}}</font>
+                <td style="vertical-align:top" style="text-align: center">
+                    <font size="3">020/{{$pengadaan->nomor}} /114.6/{{$pengadaan->tanggal->isoFormat('Y')}}</font>
                 </td>
                 </td>
             <tr>
@@ -56,8 +56,8 @@
     <div class="row">
         <table>
             <tr>
-                <td width="8"></td>
-                <td style="text-align: left ;text-align: justify; text-indent: 45px;">Pada hari ini {{$pengadaan->tanggal->isoFormat('dddd')}}, Tanggal {{$pengadaan->deskripsi_tgl}} Kami yang bertanda tangan dibawah ini :</td>
+                <td style="vertical-align:top" width="8"></td>
+                <td style="vertical-align:top" style="text-align: left ;text-align: justify; text-indent: 45px;">Pada hari ini {{$pengadaan->tanggal->isoFormat('dddd')}}, Tanggal {{$pengadaan->deskripsi_tgl}} Kami yang bertanda tangan dibawah ini :</td>
             </tr>
         </table>
     </div>
@@ -66,49 +66,49 @@
     <div>
         <table border="0" align="">
             <tr>
-                <td width="25"></td>
-                <td width="15">I.</td>
-                <td width="100">Nama</td>
-                <td>:</td>
-                <td width="370">{{$pjb->pejabat_pembuatan_komitmen}}</td>
+                <td style="vertical-align:top" width="25"></td>
+                <td style="vertical-align:top" width="15">I.</td>
+                <td style="vertical-align:top" width="100">Nama</td>
+                <td style="vertical-align:top">:</td>
+                <td style="vertical-align:top" width="370">{{$pjb->pejabat_pembuatan_komitmen}}</td>
             </tr>
         </table>
     </div>
     <div>
         <table border="0" align="">
             <tr>
-                <td width="43"></td>
-                <td width="100">NIP</td>
-                <td>:</td>
-                <td width="370">{{$pjb->nip_pejabat_komitmen}}</td>
+                <td style="vertical-align:top" width="43"></td>
+                <td style="vertical-align:top" width="100">NIP</td>
+                <td style="vertical-align:top">:</td>
+                <td style="vertical-align:top" width="370">{{$pjb->nip_pejabat_komitmen}}</td>
             </tr>
         </table>
     </div>
     <div>
         <table border="0" align="">
             <tr>
-                <td width="43"></td>
-                <td width="100">Jabatan</td>
-                <td>:</td>
-                <td width="370">Pejabat Pembuat Komitmen</td>
+                <td style="vertical-align:top" width="43"></td>
+                <td style="vertical-align:top" width="100">Jabatan</td>
+                <td style="vertical-align:top">:</td>
+                <td style="vertical-align:top" width="370">Pejabat Pembuat Komitmen</td>
             </tr>
         </table>
     </div>
     <div>
         <table border="0" align="">
             <tr>
-                <td width="43"></td>
-                <td width="100">Alamat</td>
-                <td>:</td>
-                <td width="370">Jl. A. Yani No. 242-244 Surabaya</td>
+                <td style="vertical-align:top" width="43"></td>
+                <td style="vertical-align:top" width="100">Alamat</td>
+                <td style="vertical-align:top">:</td>
+                <td style="vertical-align:top" width="370">Jl. A. Yani No. 242-244 Surabaya</td>
             </tr>
         </table>
     </div>
     <div>
         <table border="0" align="">
             <tr>
-                <td width="43"></td>
-                <td width="470">Yang selanjutnya disebut <b>PIHAK KESATU</b> </td>
+                <td style="vertical-align:top" width="43"></td>
+                <td style="vertical-align:top" width="470">Yang selanjutnya disebut <b>PIHAK KESATU</b> </td>
         </table>
     </div>
 
@@ -116,49 +116,49 @@
     <div>
         <table border="0" align="">
             <tr>
-                <td width="25"></td>
-                <td width="15">II.</td>
-                <td width="100">Nama</td>
-                <td>:</td>
-                <td width="370">{{$pjb->kuasa_pengguna_anggaran}}</td>
+                <td style="vertical-align:top" width="25"></td>
+                <td style="vertical-align:top" width="15">II.</td>
+                <td style="vertical-align:top" width="100">Nama</td>
+                <td style="vertical-align:top">:</td>
+                <td style="vertical-align:top" width="370">{{$pjb->kuasa_pengguna_anggaran}}</td>
             </tr>
         </table>
     </div>
     <div>
         <table border="0" align="">
             <tr>
-                <td width="43"></td>
-                <td width="100">NIP</td>
-                <td>:</td>
-                <td width="370">{{$pjb->nip_kuasa_pengguna}}</td>
+                <td style="vertical-align:top" width="43"></td>
+                <td style="vertical-align:top" width="100">NIP</td>
+                <td style="vertical-align:top">:</td>
+                <td style="vertical-align:top" width="370">{{$pjb->nip_kuasa_pengguna}}</td>
             </tr>
         </table>
     </div>
     <div>
         <table border="0" align="">
             <tr>
-                <td width="43"></td>
-                <td width="100">Jabatan</td>
-                <td>:</td>
-                <td width="370">Kuasa Pengguna Anggaran</td>
+                <td style="vertical-align:top" width="43"></td>
+                <td style="vertical-align:top" width="100">Jabatan</td>
+                <td style="vertical-align:top">:</td>
+                <td style="vertical-align:top" width="370">Kuasa Pengguna Anggaran</td>
             </tr>
         </table>
     </div>
     <div>
         <table border="0" align="">
             <tr>
-                <td width="43"></td>
-                <td width="100">Alamat</td>
-                <td>:</td>
-                <td width="370">Jl. Ahmad Yani 242 - 244 Surabaya</td>
+                <td style="vertical-align:top" width="43"></td>
+                <td style="vertical-align:top" width="100">Alamat</td>
+                <td style="vertical-align:top">:</td>
+                <td style="vertical-align:top" width="370">Jl. Ahmad Yani 242 - 244 Surabaya</td>
             </tr>
         </table>
     </div>
     <div>
         <table border="0" align="">
             <tr>
-                <td width="43"></td>
-                <td width="470">Yang selanjutnya disebut <b>PIHAK KEDUA</b> </td>
+                <td style="vertical-align:top" width="43"></td>
+                <td style="vertical-align:top" width="470">Yang selanjutnya disebut <b>PIHAK KEDUA</b> </td>
         </table>
     </div>
     @endforeach
@@ -168,8 +168,8 @@
     <div>
         <table border="0" align="">
             <tr>
-                <td width="25"></td>
-                <td width="160">Dengan ini menyatakan bahwa :</td>
+                <td style="vertical-align:top" width="25"></td>
+                <td style="vertical-align:top" width="160">Dengan ini menyatakan bahwa :</td>
             </tr>
         </table>
     </div>
@@ -178,9 +178,9 @@
     <div>
         <table border="0" align="">
             <tr>
-                <td width="25"></td>
-                <td width="15">1.</td>
-                <td width="370"> <b>PIHAK KESATU</b> telah melaporkan pekerjaan sesuai dengan :</td>
+                <td style="vertical-align:top" width="25"></td>
+                <td style="vertical-align:top" width="15">1.</td>
+                <td style="vertical-align:top" width="370"> <b>PIHAK KESATU</b> telah melaporkan pekerjaan sesuai dengan :</td>
             </tr>
         </table>
     </div>
@@ -188,20 +188,20 @@
     <div>
         <table border="0" align="">
             <tr>
-                <td width="43"></td>
-                <td width="120">Kuitansi Kontrak nomor</td>
-                <td>:</td>
-                <td width="370"> 020/{{$kk->nomor}}/114.6/{{$kk->tanggal->format('Y')}}</td>
+                <td style="vertical-align:top" width="43"></td>
+                <td style="vertical-align:top" width="120">Kuitansi Kontrak nomor</td>
+                <td style="vertical-align:top">:</td>
+                <td style="vertical-align:top" width="370"> 020/{{$kk->nomor}}/114.6/{{$kk->tanggal->format('Y')}}</td>
             </tr>
         </table>
     </div>
     <div>
         <table border="0" align="">
             <tr>
-                <td width="43"></td>
-                <td width="120">Tanggal</td>
-                <td>:</td>
-                <td width="370"> {{$kk->tanggal}}</td>
+                <td style="vertical-align:top" width="43"></td>
+                <td style="vertical-align:top" width="120">Tanggal</td>
+                <td style="vertical-align:top">:</td>
+                <td style="vertical-align:top" width="370"> {{$kk->tanggal->isoFormat('D MMMM Y')}}</td>
             </tr>
         </table>
     </div>
@@ -209,10 +209,10 @@
     <div>
         <table border="0" align="">
             <tr>
-                <td width="43"></td>
-                <td width="120">Pekerjaan</td>
-                <td>:</td>
-                <td width="370"> {{$pengadaan->pengadaan->jenis_pengadaan}}</td>
+                <td style="vertical-align:top" width="43"></td>
+                <td style="vertical-align:top" width="120">Pekerjaan</td>
+                <td style="vertical-align:top">:</td>
+                <td style="vertical-align:top" width="370"> {{$pengadaan->pengadaan->jenis_pengadaan}}</td>
             </tr>
         </table>
     </div>
@@ -221,9 +221,9 @@
     <div>
         <table border="0" align="">
             <tr>
-                <td width="25"></td>
-                <td width="15" style="vertical-align: top;">2.</td>
-                <td style="text-align: left ;text-align: justify;"><b>PIHAK KEDUA</b> telah memeriksa dan menerima dengan baik kemajuan hasil pekerjaan tersebut, dengan rincian jumlah, jenis dan spesifikasi barang/jasa sebagaimana daftar terlampir.</td>
+                <td style="vertical-align:top" width="25"></td>
+                <td style="vertical-align:top" width="15" style="vertical-align: top;">2.</td>
+                <td style="vertical-align:top" style="text-align: left ;text-align: justify;"><b>PIHAK KEDUA</b> telah memeriksa dan menerima dengan baik kemajuan hasil pekerjaan tersebut, dengan rincian jumlah, jenis dan spesifikasi barang/jasa sebagaimana daftar terlampir.</td>
             </tr>
         </table>
     </div>
@@ -232,9 +232,9 @@
     <div>
         <table border="0" align="">
             <tr>
-                <td width="25"></td>
-                <td width="15"></td>
-                <td style="text-align: left ;text-align: justify;">Demikian Berita Acara ini dibuat untuk dipergunakan seperlunya.
+                <td style="vertical-align:top" width="25"></td>
+                <td style="vertical-align:top" width="15"></td>
+                <td style="vertical-align:top" style="text-align: left ;text-align: justify;">Demikian Berita Acara ini dibuat untuk dipergunakan seperlunya.
                 </td>
             </tr>
         </table>
@@ -244,9 +244,9 @@
     <div>
         <table border="0" font-size="0">
             <tr>
-                <td width="340"> </td>
-                <td>Surabaya, {{$pengadaan->created_at->isoFormat('D MMMM Y')}}</td>
-                {{-- <td width="50"> </td> --}}
+                <td style="vertical-align:top" width="340"> </td>
+                <td style="vertical-align:top">Surabaya, {{$pengadaan->created_at->isoFormat('D MMMM Y')}}</td>
+                {{-- <td style="vertical-align:top" width="50"> </td> --}}
             </tr>
         </table>
     </div>
@@ -256,57 +256,53 @@
     <div style="text-align:center ;">
         <table style="text-align: center" border="0" font-size="0">
             <tr>
-                <td width="20"> </td>
-                <td width="250"><b>PIHAK KEDUA</b></td>
-                <td width="250"><b>PIHAK KESATU</b></td>
-                <td width="20"> </td>
+                <td style="vertical-align:top" width="20"> </td>
+                <td style="vertical-align:top" width="250"><b>PIHAK KEDUA</b></td>
+                <td style="vertical-align:top" width="250"><b>PIHAK KESATU</b></td>
+                <td style="vertical-align:top" width="20"> </td>
             </tr>
         </table>
     </div>
-    <br><br><br>
+    <br><br><br><br>
     <div style="text-align:center ;">
         <table style="text-align: center" border="0" font-size="0">
             <tr>
-                <td width="20"> </td>
-                <td width="250"><u>{{$pjb->kuasa_pengguna_anggaran}}</u></td>
-                <td width="250"><u>{{$pjb->pejabat_pembuatan_komitmen}}</u></td>
-                <td width="20"> </td>
+                <td style="vertical-align:top" width="20"> </td>
+                <td style="vertical-align:top" width="250"><u>{{$pjb->kuasa_pengguna_anggaran}}</u></td>
+                <td style="vertical-align:top" width="250"><u>{{$pjb->pejabat_pembuatan_komitmen}}</u></td>
+                <td style="vertical-align:top" width="20"> </td>
             </tr>
-        </table>
-    </div>
-    <div style="text-align:center ;">
-        <table style="text-align: center" border="0" font-size="0">
             <tr>
-                <td width="20"> </td>
-                <td width="250">NIP. {{$pjb->nip_kuasa_pengguna}} </td>
-                <td width="250">NIP. {{$pjb->nip_pejabat_komitmen}}</td>
-                <td width="20"> </td>
+                <td style="vertical-align:top" width="20"> </td>
+                <td style="vertical-align:top" width="250">NIP. {{$pjb->nip_kuasa_pengguna}} </td>
+                <td style="vertical-align:top" width="250">NIP. {{$pjb->nip_pejabat_komitmen}}</td>
+                <td style="vertical-align:top" width="20"> </td>
             </tr>
         </table>
     </div>
     @endforeach
-    <br><br><br><br><br>
+    <br><br><br><br>
     <div style="text-align:center ;">
         <table style="text-align: center" border="0" font-size="0">
             <tr>
-                <td width="8"></td>
-                <td>Lampiran Laporan Proses Pengadaan Barang/Jasa</td>
+                <td style="vertical-align:top" width="8"></td>
+                <td style="vertical-align:top">Lampiran Laporan Proses Pengadaan Barang/Jasa</td>
             </tr>
         </table>
     </div>
     <div>
         <table border="0" font-size="0">
             <tr>
-                <td width="8"></td>
-                <td>Nomor</td>
-                <td width="10">:</td>
-                <td width="250">020/{{$pengadaan->nomor}} /114.6/{{$pengadaan->tanggal->isoFormat('Y')}}</td>
+                <td style="vertical-align:top" width="8"></td>
+                <td style="vertical-align:top">Nomor</td>
+                <td style="vertical-align:top" width="10">:</td>
+                <td style="vertical-align:top" width="250">020/{{$pengadaan->nomor}} /114.6/{{$pengadaan->tanggal->isoFormat('Y')}}</td>
             </tr>
             <tr>
-                <td width="8"></td>
-                <td>Tanggal</td>
-                <td width="10">:</td>
-                <td width="250">{{$pengadaan->tanggal->isoFormat('D MMMM Y')}}</td>
+                <td style="vertical-align:top" width="8"></td>
+                <td style="vertical-align:top">Tanggal</td>
+                <td style="vertical-align:top" width="10">:</td>
+                <td style="vertical-align:top" width="250">{{$pengadaan->tanggal->isoFormat('D MMMM Y')}}</td>
             </tr>
         </table>
     </div>
@@ -315,84 +311,72 @@
         <table border="1" align="center" style="color: #000000; border-color: #000000; border-collapse: collapse;">
             <thead>
                 <tr>
-                    <td>
+                    <td style="vertical-align:top">
                         <center><b>NO.</b></center>
                     </td>
-                    <td>
+                    <td style="vertical-align:top">
                         <center><b>PEKERJAAN</b> </center>
                     </td>
-                    <td>
+                    <td style="vertical-align:top">
                         <center><b>KUANTITAS</b> </center>
                     </td>
-                    <td>
+                    <td style="vertical-align:top">
                         <center><b>SATUAN</b> </center>
                     </td>
-                    <td>
+                    <td style="vertical-align:top">
                         <center><b>HARGA SATUAN</b> </center>
                     </td>
-                    <td>
+                    <td style="vertical-align:top">
                         <center><b>JUMLAH HARGA</b> </center>
                     </td>
                 </tr>
                 <tr>
-                    <td style="background-color: lightgrey;">
+                    <td style="vertical-align:top" style="background-color: lightgrey;">
                         <center><b>1</b></center>
                     </td>
-                    <td style="background-color: lightgrey;">
+                    <td style="vertical-align:top" style="background-color: lightgrey;">
                         <center><b>2</b></center>
                     </td>
-                    <td style="background-color: lightgrey;">
+                    <td style="vertical-align:top" style="background-color: lightgrey;">
                         <center><b>3</b></center>
                     </td>
-                    <td style="background-color: lightgrey;">
+                    <td style="vertical-align:top" style="background-color: lightgrey;">
                         <center><b>4</b></center>
                     </td>
-                    <td style="background-color: lightgrey;">
+                    <td style="vertical-align:top" style="background-color: lightgrey;">
                         <center><b>5</b></center>
                     </td>
-                    <td style="background-color: lightgrey;">
+                    <td style="vertical-align:top" style="background-color: lightgrey;">
                         <center><b>6</b></center>
                     </td>
                 </tr>
             </thead>
             <tr>
-                <td height="20"></td>
-                <td height="20"></td>
-                <td height="20"></td>
-                <td height="20"></td>
-                <td height="20"></td>
-                <td height="20"></td>
+                <td style="vertical-align:top" height="20"></td>
+                <td style="vertical-align:top" height="20"></td>
+                <td style="vertical-align:top" height="20"></td>
+                <td style="vertical-align:top" height="20"></td>
+                <td style="vertical-align:top" height="20"></td>
+                <td style="vertical-align:top" height="20"></td>
             </tr>
             <tr>
-                <td>1</td>
-                <td>{{$pengadaan->pengadaan->jenis_pengadaan}}</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td style="vertical-align:top">1</td>
+                <td style="vertical-align:top" colspan="5">{{$pengadaan->pengadaan->jenis_pengadaan}}</td>
             </tr>
             <tbody>
                 @php $no = 1; @endphp
                 @foreach ($barang as $brg)
                 <tr>
                     <td></td>
-                    <td>{{$brg->barang}}</td>
-                    <td>{{$brg->jumlah_barang}}</td>
-                    <td>{{$brg->satuan}}</td>
-                    <td>{{$brg->harga_satuan}}</td>
-                    {{-- @php
-                        // $jumlahbarang = $barang["jumlah_barang"];
-                        $jumlahbarang = $brg->jumlah_barang;
-                        $hargabarang = $brg->harga_satuan;
-                        // $hargabarang = $barang["harga_barang"];
-
-                        $jumlah_harga = $jumlahbarang * $hargabarang;
-                        @endphp --}}
-                    <td>{{$brg->jumlah_harga}}</td>
+                    <td style="vertical-align:top">{{$brg->barang}}</td>
+                    <td style="vertical-align:top">{{$brg->jumlah_barang}}</td>
+                    <td style="vertical-align:top">{{$brg->satuan}}</td>
+                    <td style="vertical-align:top">Rp. {{number_format($brg->harga_satuan)}}</td>
+                    <td style="vertical-align:top">Rp. {{number_format($brg->jumlah_harga)}}</td>
                 </tr>
                 @endforeach
                 <tr>
-                    <td style="text-align:right" colspan="4"><b>Total</b></td>
+                    <td style="vertical-align:top" style="text-align:right" colspan="5"><b>Total</b></td>
                     @php
                     $png = $pengadaan->pengadaan_id;
                     $sum = DB::table('barangs')
@@ -400,18 +384,15 @@
                     ->sum('jumlah_harga');
                     $ppn = $sum * 0.11;
                     @endphp
-                    <td></td>
-                    <td>{{$sum}}</td>
+                    <td style="vertical-align:top">Rp. {{number_format($sum)}}</td>
                 </tr>
                 <tr>
-                    <td style="text-align:right" colspan="4"><b>PPN 11%</b></td>
-                    <td></td>
-                    <td>{{$ppn}}</td>
+                    <td style="vertical-align:top" style="text-align:right" colspan="5"><b>PPN 11%</b></td>
+                    <td style="vertical-align:top">Rp. {{number_format($ppn)}}</td>
                 </tr>
                 <tr>
-                    <td style="text-align:right" colspan="4"><b> Jumlah Total</b></td>
-                    <td></td>
-                    <td>{{$pengadaan->pengadaan->nilai_negosiasi}}</td>
+                    <td style="vertical-align:top" style="text-align:right" colspan="5"><b> Jumlah Total</b></td>
+                    <td style="vertical-align:top">Rp. {{number_format($pengadaan->pengadaan->nilai_negosiasi)}}</td>
                 </tr>
             </tbody>
         </table>
@@ -422,31 +403,27 @@
     <div style="text-align:center ;">
         <table style="text-align: center" border="0" font-size="0">
             <tr>
-                <td width="20"> </td>
-                <td width="250"><b>PIHAK KEDUA</b></td>
-                <td width="250"><b>PIHAK KESATU</b></td>
-                <td width="20"> </td>
+                <td style="vertical-align:top" width="20"> </td>
+                <td style="vertical-align:top" width="250"><b>PIHAK KEDUA</b></td>
+                <td style="vertical-align:top" width="250"><b>PIHAK KESATU</b></td>
+                <td style="vertical-align:top" width="20"> </td>
             </tr>
         </table>
     </div>
-    <br><br><br>
+    <br><br><br><br>
     <div style="text-align:center ;">
         <table style="text-align: center" border="0" font-size="0">
             <tr>
-                <td width="20"> </td>
-                <td width="250"><u>{{$pjb->kuasa_pengguna_anggaran}}</u></td>
-                <td width="250"><u>{{$pjb->pejabat_pembuatan_komitmen}}</u></td>
-                <td width="20"> </td>
+                <td style="vertical-align:top" width="20"> </td>
+                <td style="vertical-align:top" width="250"><u>{{$pjb->kuasa_pengguna_anggaran}}</u></td>
+                <td style="vertical-align:top" width="250"><u>{{$pjb->pejabat_pembuatan_komitmen}}</u></td>
+                <td style="vertical-align:top" width="20"> </td>
             </tr>
-        </table>
-    </div>
-    <div style="text-align:center ;">
-        <table style="text-align: center" border="0" font-size="0">
             <tr>
-                <td width="20"> </td>
-                <td width="250">NIP. {{$pjb->nip_kuasa_pengguna}} </td>
-                <td width="250">NIP. {{$pjb->nip_pejabat_komitmen}}</td>
-                <td width="20"> </td>
+                <td style="vertical-align:top" width="20"> </td>
+                <td style="vertical-align:top" width="250">NIP. {{$pjb->nip_kuasa_pengguna}} </td>
+                <td style="vertical-align:top" width="250">NIP. {{$pjb->nip_pejabat_komitmen}}</td>
+                <td style="vertical-align:top" width="20"> </td>
             </tr>
         </table>
     </div>
