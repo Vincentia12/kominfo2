@@ -91,7 +91,7 @@ class PengadaanController extends Controller
             ->join('pengadaans', 'jadwals.pengadaan_id', '=', 'pengadaans.id')
             ->join('pelaksanas', 'pengadaans.pelaksana_id', '=', 'pelaksanas.id')
             // ->paginate();
-        ->get();
+            ->get();
         $pilihan = DB::table('pelaksanas')
             // ->join('pelaksanas', 'pelaksana_id', '=', 'pelaksanas.id')
             ->join('pengadaans', 'pengadaans.pelaksana_id', '=', 'pelaksanas.id')
@@ -757,7 +757,7 @@ class PengadaanController extends Controller
             ['pejabat' => $pejabat],
         );
     }
-    
+
     // kuintasi_kontrak
     public function show28($id) // public function show(Request $request,$id)
     {
@@ -774,6 +774,28 @@ class PengadaanController extends Controller
 
         return view(
             'detail.kuitansi_kontrak',
+            ['pengadaan' => $pengadaan],
+            ['barang' => $barang],
+            ['pejabat' => $pejabat],
+        );
+    }
+
+    //TERM OF REFFERENC (TOR)
+    public function show31($id) // public function show(Request $request,$id)
+    {
+        $pengadaan = Jadwal::find($id);
+        $barang = DB::table('barangs')
+            ->where('barangs.pengadaan_id', 'like', "%" . $pengadaan->pengadaan_id . "%")
+            ->get();
+        $pejabat = DB::table('pejabats')
+            ->where('id', '=', 1)
+            ->get();
+
+        // $pejabat = Pejabat::all();
+
+
+        return view(
+            'detail.tor',
             ['pengadaan' => $pengadaan],
             ['barang' => $barang],
             ['pejabat' => $pejabat],
