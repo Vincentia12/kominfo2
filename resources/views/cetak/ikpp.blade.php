@@ -1906,6 +1906,94 @@
             </td>
         <tr>
     </table>
+    <table border="2">
+        <tr>
+            <td width="245" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top;">
+                1)
+            </td>
+            <td width="10" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="261" style="vertical-align:top; text-align:justify">
+                Paniatia Pengadaan/Pejabat Pengadaan menilai persyaratan teknis dengan membandingkan pemenuhan persyaratan teknis sebagaimana yang ditetapkan dalam Pengadaan Langsung.
+            </td>
+        <tr>
+        <tr>
+            <td width="245" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top;">
+                2)
+            </td>
+            <td width="10" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="261" style="vertical-align:top; text-align:justify">
+                Penilaian syarat teknis minimal dilakukan terhadap :
+            </td>
+        </tr>
+    </table>
+    <table border="2">
+        <tr>
+            <td width="275" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top;">
+                a)
+            </td>
+            <td width="10" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="230" style="vertical-align:top; text-align:justify">
+                Spesifikasi teknis barang yang ditawarkan berdasarkan contoh, brosur dan gambar-gambar sebagaimana ditetapkan dalam Dokumen Pengadaan ini;
+            </td>
+        <tr>
+        <tr>
+            <td width="275" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top;">
+                b)
+            </td>
+            <td width="10" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="230" style="vertical-align:top; text-align:justify">
+                Jadwal waktu penyerahan sebagai-mana ditetapkan dalam Pengadaan Langsung;
+            </td>
+        <tr>
+        <tr>
+            <td width="275" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top;">
+                c)
+            </td>
+            <td width="10" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="230" style="vertical-align:top; text-align:justify">
+                Identitas (jenis, tipe dan merek) yang ditawarkan tercantum dengan lengkap dan jelas (apabila dipersyaratkan);
+            </td>
+        <tr>
+        <tr>
+            <td width="275" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top;">
+                d)
+            </td>
+            <td width="10" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="230" style="vertical-align:top; text-align:justify">
+                Apabila ada evaluasi teknis terdapat hal-hal yang kurang jelas atau meragukan, Panitia Pengadaan-/Pejabat Pengadaan Dinas Komunikasi dan Informatika Provinsi Jawa Timur melakukan klarifikasi dengan peserta. Dalam klarifikasi, peserta tidak diperkenankan mengubah substansi penawaran. Hasil klarifikasi dapat menggugurkan penawaran.
+            </td>
+        <tr>
+    </table>
 
 
     @php
