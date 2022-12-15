@@ -60,7 +60,7 @@
                     <div>
                     <tr>
                         <th>Tanggal:</th>
-                        <th>{{$p->tanggal_sk}}</th>
+                        <th>{{$p->tanggal_sk->isoFormat('D MMMM Y')}}</th>
                     </tr></div>
                     <div>
                     <tr>

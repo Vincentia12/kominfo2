@@ -4,7 +4,7 @@
 @section('input-sudah', 'active')
 @section('content')
 
-<!-- Content Row --> --}}
+<!-- Content Row -->
 
 @if ($errors->any())
 <div class="alert alert-danger">
