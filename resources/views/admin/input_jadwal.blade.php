@@ -196,7 +196,7 @@
       @else --}}
       <div class="mb-4">
         <label for="message-text" class="col-form-label">Nomor</label>
-        <input type="text" class="form-control" id="nomor" name="nomor" placeholder="020/655.8/114.6/2022">
+        <input type="text" class="form-control" id="nomor" name="nomor" placeholder=".../655.8/.../....">
         <small class="text-danger">{{ $errors->first('nomor') }}</small>
       </div>
       {{-- @endif --}}
@@ -299,7 +299,7 @@
             <label for="recipient-name" class="col-form-label">Tanggal</label>
             {{-- <input type="date" class="form-control" id="tanggal" name="tanggal" value="{{ $jdwl->tanggal }}"> --}}
             <input type="date" class="form-control" id="recipient-name" name="tanggal" value="{{ $jdwl->tanggal }}" placeholder="Tanggal">
-            {{-- <small class="text-danger">{{ $errors->first('tanggal') }}</small> --}}
+            <small class="text-danger">{{ $errors->first('tanggal') }}</small>
           </div>
           <div class="mb-4">
             <label for="message-text" class="col-form-label">Nomor</label>
@@ -383,9 +383,6 @@
               <tr>
                 <td>Hari</td>
                 <td>:</td>
-                {{-- <td>{{ date_format($jd->tanggal "Y") }}</td> --}}
-                {{-- <td>{{ \Carbon\Carbon::parse($jd->tanggal)->format('D')}}</td> --}}
-                {{-- <td>{{ $jd->tanggal->format('d:m:Y')}}</td> --}}
                 <td>{{ $list->tanggal->isoFormat('dddd') }}</td>
               </tr>
             </div>
@@ -395,9 +392,6 @@
               <tr>
                 <td>Tanggal</td>
                 <td>:</td>
-                {{-- <td>{{ date_format($jd->tanggal "Y") }}</td> --}}
-                {{-- <td>{{ \Carbon\Carbon::parse($jd->tanggal)->format('D')}}</td> --}}
-                {{-- <td>{{ $jd->tanggal->format('d:m:Y')}}</td> --}}
                 <td>{{ $jd->tanggal->isoFormat('D MMMM Y') }}</td>
               </tr>
             </div>

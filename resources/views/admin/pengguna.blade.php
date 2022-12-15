@@ -57,7 +57,8 @@
             </div>
         @endif
 
-      <div class="card-header text-center text-white " style="background-color: #40B9CB;">{{ __('Register') }}</div>
+      <div class="card-header text-center text-white " style="background-color: #4075e8;">{{ __('Register') }}</div>
+      {{-- <div class="card-header text-center text-white btn-primary">{{ __('Register') }}</div> --}}
       <br>
         <form action="/save" method="POST" enctype="multipart/form-data">
         {{-- <form method="POST" enctype="multipart/form-data"> --}}

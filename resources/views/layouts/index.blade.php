@@ -48,7 +48,7 @@
         </button>
 
         <!-- {{-- search --}} -->
-        <ul class="navbar-nav mr-lg-2">
+        {{-- <ul class="navbar-nav mr-lg-2">
           <li class="nav-item nav-search d-none d-lg-block">
             <div class="input-group">
               <div class="input-group-prepend hover-cursor" id="navbar-search-icon">
@@ -59,7 +59,7 @@
               <input type="text" class="form-control" id="navbar-search-input" placeholder="Search now" aria-label="search" aria-describedby="search">
             </div>
           </li>
-        </ul>
+        </ul> --}}
 
         <ul class="navbar-nav navbar-nav-right">
 
@@ -84,12 +84,6 @@
 
               {{--Seting Profile --}}
               <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
-
-                <!-- {{-- Settings --}} -->
-                <a href="/setting" class="dropdown-item">
-                  <i class="ti-settings text-primary"></i>
-                  Settings
-                </a>
 
                 <!-- {{-- Logout --}} -->
                 <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
@@ -117,6 +111,7 @@
 
       <!-- partial:partials/_sidebar.html -->
       <nav class="sidebar sidebar-offcanvas" id="sidebar">
+      {{-- <nav class="sidebar sidebar-oncanvas" id="sidebar"> --}}
         <ul class="nav">
           
           {{-- Dashboard --}}
