@@ -22,7 +22,7 @@
 
     <!-- Section A -->
     <br>
-    <table border="2">
+    <table border="0">
         <tr>
             <td width="10" style="vertical-align:top; text-transform: uppercase;">
                 <b>a.</b>
@@ -37,7 +37,7 @@
     </table>
 
     <!-- A1 -->
-    <table border="2">
+    <table border="0">
         <tr>
             <td width="30" style="vertical-align:top; text-transform: uppercase;">
                 <b> </b>
@@ -119,7 +119,7 @@
     </table>
 
     <!-- A2 -->
-    <table border="2">
+    <table border="0">
         <tr>
             <td width="30" style="vertical-align:top; text-transform: uppercase;">
                 <b> </b>
@@ -143,7 +143,7 @@
     </table>
 
     <!-- A3 -->
-    <table border="2">
+    <table border="0">
         <tr>
             <td width="30" style="vertical-align:top; text-transform: uppercase;">
                 <b> </b>
@@ -173,7 +173,7 @@
     </table>
 
     <!-- A4 -->
-    <table border="2">
+    <table border="0">
         <tr>
             <td width="30" style="vertical-align:top; text-transform: uppercase;">
                 <b> </b>
@@ -201,7 +201,7 @@
             </td>
         <tr>
     </table>
-    <table border="2">
+    <table border="0">
         <tr>
             <td width="212" style="vertical-align:top; text-transform: uppercase;">
                 <b> </b>
@@ -232,7 +232,7 @@
         <tr>
 
     </table>
-    <table border="2">
+    <table border="0">
         <tr>
             <td width="30" style="vertical-align:top; text-transform: uppercase;">
                 <b> </b>
@@ -261,7 +261,7 @@
         <tr>
 
     </table>
-    <table border="2">
+    <table border="0">
         <tr>
             <td width="212" style="vertical-align:top; text-transform: uppercase;">
                 <b> </b>
@@ -320,7 +320,7 @@
         <tr>
 
     </table>
-    <table border="2">
+    <table border="0">
         <tr>
             <td width="30" style="vertical-align:top; text-transform: uppercase;">
                 <b> </b>
@@ -351,7 +351,7 @@
     </table>
 
     <!-- A5 -->
-    <table border="2">
+    <table border="0">
         <tr>
             <td width="30" style="vertical-align:top; text-transform: uppercase;">
                 <b> </b>
@@ -457,7 +457,7 @@
             </td>
         <tr>
     </table>
-    <table border="2">
+    <table border="0">
         <tr>
             <td width="212" style="vertical-align:top; text-transform: uppercase;">
                 <b> </b>
@@ -488,7 +488,7 @@
         <tr>
 
     </table>
-    <table border="2">
+    <table border="0">
         <tr>
             <td width="30" style="vertical-align:top; text-transform: uppercase;">
                 <b> </b>
@@ -519,7 +519,7 @@
 
     <!-- Section B -->
     <br><br>
-    <table border="2">
+    <table border="0">
         <tr>
             <td width="10" style="vertical-align:top; text-transform: uppercase;">
                 <b>b.</b>
@@ -534,7 +534,7 @@
     </table>
 
     <!-- B1 -->
-    <table border="2">
+    <table border="0">
         <tr>
             <td width="30" style="vertical-align:top; text-transform: uppercase;">
                 <b> </b>
@@ -562,7 +562,7 @@
             </td>
         <tr>
     </table>
-    <table border="2">
+    <table border="0">
         <tr>
             <td width="212" style="vertical-align:top; text-transform: uppercase;">
                 <b> </b>
@@ -578,7 +578,7 @@
             </td>
         <tr>
     </table>
-    <table border="2">
+    <table border="0">
         <tr>
             <td width="245" style="vertical-align:top; text-transform: uppercase;">
                 <b> </b>
@@ -652,7 +652,7 @@
             </td>
         </tr>
     </table>
-    <table border="2">
+    <table border="0">
         <tr>
             <td width="275" style="vertical-align:top; text-transform: uppercase;">
                 <b> </b>
@@ -724,7 +724,7 @@
             </td>
         <tr>
     </table>
-    <table border="2">
+    <table border="0">
         <tr>
             <td width="212" style="vertical-align:top; text-transform: uppercase;">
                 <b> </b>
@@ -740,7 +740,7 @@
             </td>
         <tr>
     </table>
-    <table border="2">
+    <table border="0">
         <tr>
             <td width="212" style="vertical-align:top; text-transform: uppercase;">
                 <b> </b>
@@ -756,7 +756,7 @@
             </td>
         <tr>
     </table>
-    <table border="2">
+    <table border="0">
         <tr>
             <td width="245" style="vertical-align:top; text-transform: uppercase;">
                 <b> </b>
@@ -856,7 +856,7 @@
             </td>
         <tr>
     </table>
-    <table border="2">
+    <table border="0">
         <tr>
             <td width="212" style="vertical-align:top; text-transform: uppercase;">
                 <b> </b>
@@ -874,7 +874,7 @@
     </table>
 
     <!-- B2 -->
-    <table border="2">
+    <table border="0">
         <tr>
             <td width="30" style="vertical-align:top; text-transform: uppercase;">
                 <b> </b>
@@ -930,7 +930,7 @@
     </table>
 
     <!-- B3 -->
-    <table border="2">
+    <table border="0">
         <tr>
             <td width="30" style="vertical-align:top; text-transform: uppercase;">
                 <b> </b>
@@ -986,7 +986,7 @@
     </table>
 
     <!-- B4 -->
-    <table border="2">
+    <table border="0">
         <tr>
             <td width="30" style="vertical-align:top; text-transform: uppercase;">
                 <b> </b>
@@ -1042,7 +1042,7 @@
     </table>
 
     <!-- B5 -->
-    <table border="2">
+    <table border="0">
         <tr>
             <td width="30" style="vertical-align:top; text-transform: uppercase;">
                 <b> </b>
@@ -1098,7 +1098,7 @@
     </table>
 
     <!-- B6 -->
-    <table border="2">
+    <table border="0">
         <tr>
             <td width="30" style="vertical-align:top; text-transform: uppercase;">
                 <b> </b>
@@ -1123,7 +1123,7 @@
 
     <!-- Section C -->
     <br><br>
-    <table border="2">
+    <table border="0">
         <tr>
             <td width="10" style="vertical-align:top; text-transform: uppercase;">
                 <b>c.</b>
@@ -1138,7 +1138,7 @@
     </table>
 
     <!-- C1 -->
-    <table border="2">
+    <table border="0">
         <tr>
             <td width="30" style="vertical-align:top; text-transform: uppercase;">
                 <b> </b>
@@ -1192,7 +1192,7 @@
             </td>
         <tr>
     </table>
-    <table border="2">
+    <table border="0">
         <tr>
             <td width="212" style="vertical-align:top; text-transform: uppercase;">
                 <b> </b>
@@ -1250,7 +1250,7 @@
             </td>
         <tr>
     </table>
-    <table border="2">
+    <table border="0">
         <tr>
             <td width="30" style="vertical-align:top; text-transform: uppercase;">
                 <b> </b>
@@ -1280,7 +1280,7 @@
     </table>
 
     <!-- C2 -->
-    <table border="2">
+    <table border="0">
         <tr>
             <td width="30" style="vertical-align:top; text-transform: uppercase;">
                 <b> </b>
@@ -1302,7 +1302,7 @@
             </td>
         <tr>
     </table>
-    <table border="2">
+    <table border="0">
         <tr>
             <td width="30" style="vertical-align:top; text-transform: uppercase;">
                 <b> </b>
@@ -1327,7 +1327,7 @@
 
     <!-- Section D -->
     <br><br>
-    <table border="2">
+    <table border="0">
         <tr>
             <td width="10" style="vertical-align:top; text-transform: uppercase;">
                 <b>d.</b>
@@ -1342,7 +1342,7 @@
     </table>
 
     <!-- D1 -->
-    <table border="2">
+    <table border="0">
         <tr>
             <td width="30" style="vertical-align:top; text-transform: uppercase;">
                 <b> </b>
@@ -1422,7 +1422,7 @@
             </td>
         <tr>
     </table>
-    <table border="2">
+    <table border="0">
         <tr>
             <td width="212" style="vertical-align:top; text-transform: uppercase;">
                 <b> </b>
@@ -1480,7 +1480,7 @@
             </td>
         <tr>
     </table>
-    <table border="2">
+    <table border="0">
         <tr>
             <td width="30" style="vertical-align:top; text-transform: uppercase;">
                 <b> </b>
@@ -1536,7 +1536,7 @@
     </table>
 
     <!-- D2 -->
-    <table border="2">
+    <table border="0">
         <tr>
             <td width="30" style="vertical-align:top; text-transform: uppercase;">
                 <b> </b>
@@ -1616,7 +1616,7 @@
             </td>
         <tr>
     </table>
-    <table border="2">
+    <table border="0">
         <tr>
             <td width="212" style="vertical-align:top; text-transform: uppercase;">
                 <b> </b>
@@ -1660,7 +1660,7 @@
             </td>
         <tr>
     </table>
-    <table border="2">
+    <table border="0">
         <tr>
             <td width="30" style="vertical-align:top; text-transform: uppercase;">
                 <b> </b>
@@ -1688,7 +1688,7 @@
             </td>
         <tr>
     </table>
-    <table border="2">
+    <table border="0">
         <tr>
             <td width="212" style="vertical-align:top; text-transform: uppercase;">
                 <b> </b>
@@ -1732,7 +1732,7 @@
             </td>
         <tr>
     </table>
-    <table border="2">
+    <table border="0">
         <tr>
             <td width="245" style="vertical-align:top; text-transform: uppercase;">
                 <b> </b>
@@ -1762,7 +1762,7 @@
             </td>
         </tr>
     </table>
-    <table border="2">
+    <table border="0">
         <tr>
             <td width="212" style="vertical-align:top; text-transform: uppercase;">
                 <b> </b>
@@ -1792,7 +1792,7 @@
             </td>
         <tr>
     </table>
-    <table border="2">
+    <table border="0">
         <tr>
             <td width="245" style="vertical-align:top; text-transform: uppercase;">
                 <b> </b>
@@ -1822,7 +1822,7 @@
             </td>
         </tr>
     </table>
-    <table border="2">
+    <table border="0">
         <tr>
             <td width="30" style="vertical-align:top; text-transform: uppercase;">
                 <b> </b>
@@ -1876,7 +1876,7 @@
             </td>
         <tr>
     </table>
-    <table border="2">
+    <table border="0">
         <tr>
             <td width="212" style="vertical-align:top; text-transform: uppercase;">
                 <b> </b>
@@ -1906,7 +1906,7 @@
             </td>
         <tr>
     </table>
-    <table border="2">
+    <table border="0">
         <tr>
             <td width="245" style="vertical-align:top; text-transform: uppercase;">
                 <b> </b>
@@ -1936,7 +1936,7 @@
             </td>
         </tr>
     </table>
-    <table border="2">
+    <table border="0">
         <tr>
             <td width="275" style="vertical-align:top; text-transform: uppercase;">
                 <b> </b>
@@ -1991,6 +1991,113 @@
             </td>
             <td width="230" style="vertical-align:top; text-align:justify">
                 Apabila ada evaluasi teknis terdapat hal-hal yang kurang jelas atau meragukan, Panitia Pengadaan-/Pejabat Pengadaan Dinas Komunikasi dan Informatika Provinsi Jawa Timur melakukan klarifikasi dengan peserta. Dalam klarifikasi, peserta tidak diperkenankan mengubah substansi penawaran. Hasil klarifikasi dapat menggugurkan penawaran.
+            </td>
+        <tr>
+    </table>
+    <table border="0">
+        <tr>
+            <td width="30" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="100" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top;">
+                2.7
+            </td>
+            <td width="10" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="325" style="vertical-align:top; text-align:justify">
+                Evaluasi Harga
+            </td>
+        <tr>
+    </table>
+    <table border="0">
+        <tr>
+            <td width="212" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top;">
+                a.
+            </td>
+            <td width="10" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="293" style="vertical-align:top; text-align:justify">
+                Unsur-unsur yang perlu dievaluasi adalah hal-hal yang pokok atau penting, dengan
+                ketentuan :
+            </td>
+        <tr>
+    </table>
+    <table border="0">
+        <tr>
+            <td width="245" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top;">
+                1)
+            </td>
+            <td width="10" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="261" style="vertical-align:top; text-align:justify">
+                Total harga penawaran dibandingkan terhadap nilai total HPS :
+            </td>
+        <tr>
+    </table>
+    <table border="0">
+        <tr>
+            <td width="275" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top;">
+                a)
+            </td>
+            <td width="10" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="230" style="vertical-align:top; text-align:justify">
+                Apabila total harga penawaran atau penawaran terkoreksi melebihi nilai total HPS, dinyatakan gugur; dan
+            </td>
+        <tr>
+        <tr>
+            <td width="275" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top;">
+                b)
+            </td>
+            <td width="10" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="230" style="vertical-align:top; text-align:justify">
+                Apabila harga penawaran atau harga penawaran terkoreksi diatas nilai total HPS, pengadaan dinyatakan gagal.
+            </td>
+        <tr>
+    </table>
+    <table border="0">
+        <tr>
+            <td width="245" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top;">
+                2)
+            </td>
+            <td width="10" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="261" style="vertical-align:top; text-align:justify">
+                Harga satuan yang lainnya legih besar dari 110 % (seratus sepuluh persen) dari harga satuan yang tercantum dalam HPS, dilakukan klarifikasi. Harga satuan penawaran tersebut dinyatakan timpang dan hanya berlaku untuk volume sesuai dengan Daftar Kuantitas dan Harga.
             </td>
         <tr>
     </table>
