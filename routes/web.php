@@ -190,7 +190,7 @@ Route::get('pengadaan1/print1/{id}', [PdfController::class, 'nota_dinas1'])->nam
 Route::get('pengadaan1/print2/{id}', [PdfController::class, 'nota_dinas2'])->name('pengadaan1.print2');
 Route::get('pengadaan1/print3/{id}', [PdfController::class, 'undangan_persiapan'])->name('pengadaan1.print3');
 Route::get('pengadaan1/print4/{id}', [PdfController::class, 'pakta_integritas'])->name('pengadaan1.print4');
-//5
+Route::get('pengadaan1/print5/{id}', [PdfController::class, 'pernyataan_minat'])->name('pengadaan1.print5');
 //6
 Route::get('pengadaan1/print7/{id}', [PdfController::class, 'daftar_hadir'])->name('pengadaan1.print7');
 Route::get('pengadaan1/print8/{id}', [PdfController::class, 'ba_evaluasi'])->name('pengadaan1.print8');

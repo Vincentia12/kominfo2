@@ -168,6 +168,21 @@ class PdfController extends Controller
     }
 
     //Surat Pernyataan Minat
+    public function pernyataan_minat(Request $request, $id)
+    {
+
+        $pengadaan = Jadwal::find($id);
+        $barang = DB::table('barangs')
+            ->where('barangs.pengadaan_id', 'like', "%" . $pengadaan->pengadaan_id . "%")
+            ->get();
+        $pdf = PDF::loadview(
+            'cetak/pernyataan_minat',
+            ['pengadaan' => $pengadaan],
+            ['barang' => $barang],
+        )->setPaper('f4', 'potrait');
+        return $pdf->download('Surat Pernyataan Minat.pdf');
+    }
+
     //Pemasukan Dokumen Kualifikasi
 
     // Daftar Hadir Pengembalian Dokumen Prakualifikasi
