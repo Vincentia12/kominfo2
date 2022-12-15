@@ -593,6 +593,284 @@
                 Tanggal ;
             </td>
         <tr>
+        <tr>
+            <td width="245" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top;">
+                2)
+            </td>
+            <td width="10" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="261" style="vertical-align:top; text-align:justify">
+                Masa berlaku penawaran;
+            </td>
+        </tr>
+        <tr>
+            <td width="245" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top;">
+                3)
+            </td>
+            <td width="10" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="261" style="vertical-align:top; text-align:justify">
+                Harga penawaran;
+            </td>
+
+        </tr>
+        <tr>
+            <td width="245" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top;">
+                4)
+            </td>
+            <td width="10" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="261" style="vertical-align:top; text-align:justify">
+                Jangka waktu pelaksanaan pekerjaan; dan
+            </td>
+
+        </tr>
+        <tr>
+            <td width="245" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top;">
+                5)
+            </td>
+            <td width="10" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="261" style="vertical-align:top; text-align:justify">
+                Tanda tangan:
+            </td>
+        </tr>
+    </table>
+    <table border="2">
+        <tr>
+            <td width="275" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top;">
+                (a)
+            </td>
+            <td width="10" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="230" style="vertical-align:top; text-align:justify">
+                Direktur utama / pimpinan perusahaan;
+            </td>
+        <tr>
+        <tr>
+            <td width="275" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top;">
+                (b)
+            </td>
+            <td width="10" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="230" style="vertical-align:top; text-align:justify">
+                Penerima kuasa dari direktur utama/pimpinan perusahaan yang penerima kuasanya tercantum dalam akte pendirian atau perubahannya;
+            </td>
+        <tr>
+        <tr>
+            <td width="275" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top;">
+                (c)
+            </td>
+            <td width="10" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="230" style="vertical-align:top; text-align:justify">
+                Kepala cabang perusahaan yang diangkat oleh kantor pusat yang dibuktikan dengan dokumen otentik;
+            </td>
+        <tr>
+        <tr>
+            <td width="275" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top;">
+                (d)
+            </td>
+            <td width="10" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="230" style="vertical-align:top; text-align:justify">
+                Pejabat yang menurut perjanjian kerjasama bentuk mewakili perusahaan yang bekerjasama; atau
+            </td>
+        <tr>
+        <tr>
+            <td width="275" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top;">
+                (e)
+            </td>
+            <td width="10" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="230" style="vertical-align:top; text-align:justify">
+                Peserta perorangan.
+            </td>
+        <tr>
+    </table>
+    <table border="2">
+        <tr>
+            <td width="212" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top;">
+                (b)
+            </td>
+            <td width="10" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="293" style="vertical-align:top; text-align:justify">
+                Daftar kuantitas dan harga
+            </td>
+        <tr>
+    </table>
+    <table border="2">
+        <tr>
+            <td width="212" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top;">
+                (c)
+            </td>
+            <td width="10" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="293" style="vertical-align:top; text-align:justify">
+                Dokumen penawaran teknis yang terdiri dari :
+            </td>
+        <tr>
+    </table>
+    <table border="2">
+        <tr>
+            <td width="245" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top;">
+                1)
+            </td>
+            <td width="10" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="261" style="vertical-align:top; text-align:justify">
+                Spesifikasi teknis yang ditawarkan berdasarkan contoh, brosur dan gambar gambar;
+            </td>
+        <tr>
+        <tr>
+            <td width="245" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top;">
+                2)
+            </td>
+            <td width="10" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="261" style="vertical-align:top; text-align:justify">
+                Jadwal waktu penyerahan/pengiriman barang;
+            </td>
+        <tr>
+        <tr>
+            <td width="245" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top;">
+                3)
+            </td>
+            <td width="10" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="261" style="vertical-align:top; text-align:justify">
+                Identitas (jenis, tipe dan merk) yang ditawarkan tercantum dengan lengkap dan jelas (apabila dipersyaratkan)
+            </td>
+        <tr>
+        <tr>
+            <td width="245" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top;">
+                4)
+            </td>
+            <td width="10" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="261" style="vertical-align:top; text-align:justify">
+                Jaminan purna jual (apabila dipersyaratkan);
+            </td>
+        <tr>
+        <tr>
+            <td width="245" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top;">
+                5)
+            </td>
+            <td width="10" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="261" style="vertical-align:top; text-align:justify">
+                Asuransi (apabila dipersyaratkan);
+            </td>
+        <tr>
+        <tr>
+            <td width="245" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top;">
+                6)
+            </td>
+            <td width="10" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="261" style="vertical-align:top; text-align:justify">
+                Tenaga teknis (apabila dipersyaratkan)
+            </td>
+        <tr>
+        <tr>
+            <td width="245" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top;">
+                7)
+            </td>
+            <td width="10" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="261" style="vertical-align:top; text-align:justify">
+                Bagian pekerjaan yang akan disubkontrakkan.
+            </td>
+        <tr>
+    </table>
+    <table border="2">
+        <tr>
+            <td width="212" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top;">
+                (d)
+            </td>
+            <td width="10" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="293" style="vertical-align:top; text-align:justify">
+                Dokumen lain yang dipersyaratkan
+            </td>
+        <tr>
     </table>
 
 
