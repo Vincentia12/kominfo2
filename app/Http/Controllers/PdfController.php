@@ -531,6 +531,22 @@ class PdfController extends Controller
         return $pdf->download('Kuitansi Kontrak.pdf');
     }
 
+    //Intruksi Kepada Peserta Pengadaan (IKPP)
+    public function ikpp(Request $request, $id)
+    {
+
+        $pengadaan = Jadwal::find($id);
+        $barang = DB::table('barangs')
+            ->where('barangs.pengadaan_id', 'like', "%" . $pengadaan->pengadaan_id . "%")
+            ->get();
+        $pdf = PDF::loadview(
+            'cetak/ikpp',
+            ['pengadaan' => $pengadaan],
+            ['barang' => $barang],
+        )->setPaper('f4', 'potrait');
+        return $pdf->download('Intruksi Kepada Peserta Pengadaan (IKPP).pdf');
+    }
+
     //Term Of Refference (TOR)
     public function tor(Request $request, $id)
     {

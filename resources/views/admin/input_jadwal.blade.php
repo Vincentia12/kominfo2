@@ -173,6 +173,7 @@
               <option value="BA. Hasil Pemeriksaan Administratif">BA. Hasil Pemeriksaan Administratif</option>
               <option value="BA. Hasil Pembayaran">BA. Hasil Pembayaran</option>
               <option value="Kuitansi Kontrak">Kuitansi Kontrak</option>
+              <option value="Intruksi Kepada Peserta Pengadaan (IKPP)">Intruksi Kepada Peserta Pengadaan (IKPP)</option>
               <option value="Term Of Refference (TOR)">Term Of Refference (TOR)</option>
             </select>
           </div>
@@ -286,6 +287,7 @@
               <option value="BA. Penyerahan Barang/Jasa">BA. Penyerahan Barang/Jasa</option>
               <option value="BA. Hasil Pemeriksaan Administratif">BA. Hasil Pemeriksaan Administratif</option>
               <option value="BA. Hasil Pembayaran">BA. Hasil Pembayaran</option>
+              <option value="Intruksi Kepada Peserta Pengadaan (IKPP)">Intruksi Kepada Peserta Pengadaan (IKPP)</option>
               <option value="Term Of Refference (TOR)">Term Of Refference (TOR)</option>
 
             </select>

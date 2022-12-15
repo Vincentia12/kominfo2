@@ -780,6 +780,28 @@ class PengadaanController extends Controller
         );
     }
 
+    //INSTRUKSI KEPADA PESERTA PENGADAAN (IKPP)
+    public function show30($id) // public function show(Request $request,$id)
+    {
+        $pengadaan = Jadwal::find($id);
+        $barang = DB::table('barangs')
+            ->where('barangs.pengadaan_id', 'like', "%" . $pengadaan->pengadaan_id . "%")
+            ->get();
+        $pejabat = DB::table('pejabats')
+            ->where('id', '=', 1)
+            ->get();
+
+        // $pejabat = Pejabat::all();
+
+
+        return view(
+            'detail.ikpp',
+            ['pengadaan' => $pengadaan],
+            ['barang' => $barang],
+            ['pejabat' => $pejabat],
+        );
+    }
+
     //TERM OF REFFERENC (TOR)
     public function show31($id) // public function show(Request $request,$id)
     {
