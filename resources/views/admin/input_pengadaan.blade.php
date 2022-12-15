@@ -3,12 +3,6 @@
 @section('input-data-collapse', 'collapsed')
 @section('input-sudah', 'active')
 @section('content')
-{{-- <!-- @section('judul')
-{{'Input Data / Belum Tersertifikasi'}}
-@endsection -->
-<!-- @section('title')
-{{'Input Data yang Belum Tersertifikasi'}}
-@endsection -->
 
 <!-- Content Row --> --}}
 
@@ -53,9 +47,6 @@
         <br>
 
         <table id="data1" class="table table-bordered" cellspacing="0">
-          {{-- <table id="data1" class="table table-bordered" cellspacing="0" width="100%"> --}}
-          {{-- <table class="table table-bordered " id="data1" style="width:100%"> --}}
-          {{-- <table class="table table-bordered" id="example"> --}}
           <thead>
             <tr>
               <th>Pelaksana/Nama Perusahaan</th>
@@ -70,8 +61,7 @@
             <tr>
               <td>{{ $p->pelaksana->pt_pelaksana }}</td>
               <td>{{ $p->jenis_pengadaan }}</td>
-              <td>{{$p->nilai_negosiasi}}</td>
-              {{-- <td>Rp. {{number_format($p->nilai_negosiasi)}}</td> --}}
+              <td>Rp. {{number_format($p->nilai_negosiasi)}}</td>
               <td>
 
                 <form action="{{ route('pengadaan.destroy',$p->id) }}" method="POST">
@@ -325,20 +315,10 @@
               <tr>
                 <td>Biaya HPS (Harga Perkiraan Sendiri)</td>
                 <td>:</td>
-                <td>{{ $pg->total_hps }}</td>
-                {{-- <td>Rp. {{number_format($pg->total_hps) }}</td> --}}
+                <td>Rp. {{number_format($pg->total_hps) }}</td>
               </tr>
             </div>
           </div>
-          {{-- <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-              <tr>
-                <td>Deskripsi HPS (Harga Perkiraan Sendiri)</td>
-                <td>:</td>
-                <td>{{ $pg->deskripsi_hps }}</td>
-              </tr>
-            </div>
-          </div> --}}
           <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
               <tr>
@@ -353,8 +333,7 @@
               <tr>
                 <td>Harga Penawaran</td>
                 <td>:</td>
-                <td>{{$pg->harga_penawaran }}</td>
-                {{-- <td>Rp. {{number_format($pg->harga_penawaran) }}</td> --}}
+                <td>Rp. {{number_format($pg->harga_penawaran) }}</td>
               </tr>
             </div>
           </div>
@@ -372,8 +351,7 @@
               <tr>
                 <td>Nilai Negosiasi</td>
                 <td>:</td>
-                <td>{{$pg->nilai_negosiasi }}</td>
-                {{-- <td>Rp. {{number_format($pg->nilai_negosiasi) }}</td> --}}
+                <td>Rp. {{number_format($pg->nilai_negosiasi) }}</td>
               </tr>
             </div>
           </div>
@@ -398,117 +376,3 @@
 @endforeach
 
 @endsection
-
-{{-- <style>
-  li {
-    list-style-type: none;
-  }
-
-  .collapsible {
-    background-color: #ffffff;
-    color: black;
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 15px;
-    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.5);
-  }
-
-  form .input:hover {
-    color: darkgrey;
-    background-color: white;
-    transition: 0.3s;
-  }
-
-  form .input {
-    font-family: "Roboto", sans-serif;
-    outline: 0;
-    color: grey;
-    background: #ffffff;
-    background-color: #e8e8e8;
-    width: 100%;
-    border: 0;
-    margin: 0 0 5px;
-    padding: 15px;
-    box-sizing: border-box;
-    border-radius: 3px;
-    transition: 0.3s;
-  }
-
-  form .inputselect:hover {
-    color: darkgrey;
-    background-color: white;
-    transition: 0.3s;
-  }
-
-  form .inputselect {
-    font-family: "Roboto", sans-serif;
-    outline: 0;
-    color: grey;
-    background: #ffffff;
-    background-color: #e8e8e8;
-    width: 100%;
-    border: 0;
-    margin: 0 0 5px;
-    padding: 15px;
-    box-sizing: border-box;
-    border-radius: 3px;
-    transition: 0.3s;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    content: "▼";
-    font-family: "Roboto", sans-serif;
-    outline: 0;
-    color: grey;
-    background: #ffffff;
-    width: 100%;
-    border: 0;
-    margin: 0 0 5px;
-    padding: 15px;
-    box-sizing: border-box;
-    border-radius: 3px;
-    transition: 0.3s;
-
-    background-image:
-      linear-gradient(45deg, transparent 50%, grey 50%),
-      linear-gradient(135deg, grey 50%, transparent 50%);
-
-    background-position:
-      calc(100% - 20px) calc(1em + 8px),
-      calc(100% - 15px) calc(1em + 8px),
-      100% 0;
-    background-size:
-      5px 5px,
-      5px 5px,
-      2.5em 2.5em;
-    background-repeat: no-repeat;
-  }
-
-  .content {
-    padding: 1rem;
-    /* padding: 0 18px; */
-    display: none;
-    overflow: hidden;
-    background-color: #f1f1f1;
-  }
-</style>
-
-<script>
-  var coll = document.getElementsByClassName("collapsible");
-  var i;
-
-  for (i = 0; i < coll.length; i++) {
-    coll[i].addEventListener("click", function() {
-      this.classList.toggle("active");
-      var content = this.nextElementSibling;
-      if (content.style.display === "block") {
-        content.style.display = "none";
-      } else {
-        content.style.display = "block";
-      }
-    });
-  }
-</script> --}}
