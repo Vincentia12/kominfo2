@@ -873,6 +873,457 @@
         <tr>
     </table>
 
+    <!-- B2 -->
+    <table border="2">
+        <tr>
+            <td width="30" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top; text-transform: uppercase;">
+                <b>2.</b>
+            </td>
+            <td width="10" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="100" style="vertical-align:top;">
+                <b>Harga Penawaran</b>
+            </td>
+            <td width="10" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top;">
+                2.1
+            </td>
+            <td width="10" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="325" style="vertical-align:top; text-align:justify">
+                Harga penawaran ditulis dengan jelas dalam angka dan huruf.
+            </td>
+        <tr>
+        <tr>
+            <td width="30" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="100" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top;">
+                2.2
+            </td>
+            <td width="10" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="325" style="vertical-align:top; text-align:justify">
+                Untuk kontrak harga satuan seerta kontrak gabungan harga satuan dan lump sum, peserta mencantumkan harga satuan dan harga total untuk tiap mata pembayaran/pekerjaan dalam Daftar Kuantitas dan Harga. Jika harga satuan ditulis nol atau tidak dicantumkan maka pekerjaan dalam mata pembayaran tersebut dianggap telah termasuk dalam harga satuan pekerjaan yang lain dan pekerjaan tersebut tetap harus dilaksanakan. <i>(untuk kontrak lump sum, peserta mencantumkan harga satuan untuk tiap mata pembayaran/pekerjaan Dalam Daftar Kuantitas dan Harga, apabila dipersyaratkan)</i>
+            </td>
+        <tr>
+    </table>
+
+    <!-- B3 -->
+    <table border="2">
+        <tr>
+            <td width="30" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top; text-transform: uppercase;">
+                <b>3.</b>
+            </td>
+            <td width="10" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="100" style="vertical-align:top;">
+                <b>Mata Uang Penawaran dan Cara Pembayaran</b>
+            </td>
+            <td width="10" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top;">
+                3.1
+            </td>
+            <td width="10" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="325" style="vertical-align:top; text-align:justify">
+                Semua harga dalam penawaran harus dalam bentuk mata uang rupiah.
+            </td>
+        <tr>
+        <tr>
+            <td width="30" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="100" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top;">
+                3.2
+            </td>
+            <td width="10" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="325" style="vertical-align:top; text-align:justify">
+                Pembayaran atas pelaksanaan pengadaan barang ini dilakukan sesuai dengan cara yang ditetapkan dalam LDP dan diuraikan dalam Syarat-syarat Umum/Khusus Kontrak.
+            </td>
+        <tr>
+    </table>
+
+    <!-- B4 -->
+    <table border="2">
+        <tr>
+            <td width="30" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top; text-transform: uppercase;">
+                <b>4.</b>
+            </td>
+            <td width="10" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="100" style="vertical-align:top;">
+                <b>Masa Berlaku Penawaran dan Jangka Waktu Pelaksanaan</b>
+            </td>
+            <td width="10" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top;">
+                4.1
+            </td>
+            <td width="10" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="325" style="vertical-align:top; text-align:justify">
+                Masa berlaku penawaran sesuai dengan ketentuan dalam LDP.
+            </td>
+        <tr>
+        <tr>
+            <td width="30" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="100" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top;">
+                4.2
+            </td>
+            <td width="10" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="325" style="vertical-align:top; text-align:justify">
+                Apabila evaluasi belum selesai dilaksanakan, sebelum akhir masa berlakunya penawaran, Panitia Penagadaan/Pejabat Pengadaan Dinas Komunikasi dan Informatika Provinsi Jawa Timur dapat meminta kepada seluruh peserta secara tertulis untuk memperpanjang masa berlakunya penawaran tersebut dalam jangka waktu tertentu.
+            </td>
+        <tr>
+    </table>
+
+    <!-- B5 -->
+    <table border="2">
+        <tr>
+            <td width="30" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top; text-transform: uppercase;">
+                <b>5.</b>
+            </td>
+            <td width="10" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="100" style="vertical-align:top;">
+                <b>Pakta Integritas</b>
+            </td>
+            <td width="10" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top;">
+                5.1
+            </td>
+            <td width="10" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="325" style="vertical-align:top; text-align:justify">
+                Pakti integritas berisi ikrar untuk mencegah dan tidak melakukan dan akan melaporkan terjadinya kolusi, korupsi dan nepotisme (KKN) dalam pengadaan barang.
+            </td>
+        <tr>
+        <tr>
+            <td width="30" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="100" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top;">
+                5.2
+            </td>
+            <td width="10" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="325" style="vertical-align:top; text-align:justify">
+                Pakta integritas dimasukkan dalam Dokumen Penawaran.
+            </td>
+        <tr>
+    </table>
+
+    <!-- B6 -->
+    <table border="2">
+        <tr>
+            <td width="30" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top; text-transform: uppercase;">
+                <b>6.</b>
+            </td>
+            <td width="10" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="100" style="vertical-align:top; text-align:justify">
+                <b>Bentuk Dokumen Penawaran</b>
+            </td>
+            <td width="10" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="359" style="vertical-align:top; text-align:justify">
+                Dokumen Penawaran disampaikan sebanyak 2 (dua) rangkap, yang terdiri dari dokumen asli 1 (satu) rangkap dan salinannya 1 (satu) rangkap serta dio tandai <b>“ASLI”</b> dan <b>“REKAMAN”</b>. Jika terdapat ketidaksesuaian antara dokumen asli dan rekaman, maka dokumen asli yang berlaku.
+            </td>
+        <tr>
+    </table>
+
+    <!-- Section C -->
+    <br><br>
+    <table border="2">
+        <tr>
+            <td width="10" style="vertical-align:top; text-transform: uppercase;">
+                <b>c.</b>
+            </td>
+            <td width="10" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="510" style="vertical-align:top; text-transform: uppercase;">
+                <b>PEMASUKAN DOKUMEN PENAWARAN</b>
+            </td>
+        <tr>
+    </table>
+
+    <!-- C1 -->
+    <table border="2">
+        <tr>
+            <td width="30" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top; text-transform: uppercase;">
+                <b>1.</b>
+            </td>
+            <td width="10" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="100" style="vertical-align:top;">
+                <b>Penyampulan dan Penandaan Sampul Penawaran</b>
+            </td>
+            <td width="10" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top;">
+                1.1
+            </td>
+            <td width="10" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="325" style="vertical-align:top; text-align:justify">
+                Penyampulan Dokumen Penawaran dengan menggunakan metode 1 (satu) sampul.
+            </td>
+        <tr>
+        <tr>
+            <td width="30" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="100" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top;">
+                1.2
+            </td>
+            <td width="10" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="325" style="vertical-align:top; text-align:justify">
+                Dokumen penawaran terdiri dari ;
+            </td>
+        <tr>
+    </table>
+    <table border="2">
+        <tr>
+            <td width="212" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top;">
+                (a)
+            </td>
+            <td width="10" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="293" style="vertical-align:top; text-align:justify">
+                Surat Penawaran;
+            </td>
+        <tr>
+        <tr>
+            <td width="212" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top;">
+                (b)
+            </td>
+            <td width="10" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="293" style="vertical-align:top; text-align:justify">
+                Daftar Kuantitas,
+            </td>
+        <tr>
+        <tr>
+            <td width="212" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top;">
+                (c)
+            </td>
+            <td width="10" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="293" style="vertical-align:top; text-align:justify">
+                Penawaran Teknis; dan
+            </td>
+        <tr>
+        <tr>
+            <td width="212" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top;">
+                (d)
+            </td>
+            <td width="10" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="293" style="vertical-align:top; text-align:justify">
+                Syarat lain yang dipersyaratkan.
+            </td>
+        <tr>
+    </table>
+    <table border="2">
+        <tr>
+            <td width="30" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="100" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top;">
+                1.3
+            </td>
+            <td width="10" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="325" style="vertical-align:top; text-align:justify">
+                Peserta memasukkan Dokumen Penawaran asli dan salinannya ke dalam 2 (dua) sampul yang masing masing ditandai <b>“ASLI”</b> dan <b>“REKAMAN”</b>, kemudian kedua sampul tersebut dimasukkan ke dalam 1 (satu) sampul untuk mendapat kerahasiaannya.
+            </td>
+        <tr>
+    </table>
+
+    <!-- C2 -->
+    <table border="2">
+        <tr>
+            <td width="30" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top; text-transform: uppercase;">
+                <b>2.</b>
+            </td>
+            <td width="10" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="100" style="vertical-align:top; text-align:justify">
+                <b>Penyampaian Dokumen Penawaran</b>
+            </td>
+            <td width="10" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="359" style="vertical-align:top; text-align:justify">
+                Peserta menyampaikan langsung Dokumen Penawaran kepada Panitia Pengadaan/Pejabat Pengadaan Dinas Komunikasi dan Informatika Provinsi Jawa Timur sesuai jadwal yang ditentukan dalam undangan.
+            </td>
+        <tr>
+    </table>
+    <table border="2">
+        <tr>
+            <td width="30" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top; text-transform: uppercase;">
+                <b>3.</b>
+            </td>
+            <td width="10" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="100" style="vertical-align:top;">
+                <b>Batas Akhir Waktu Pemasukan Penawaran</b>
+            </td>
+            <td width="10" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="359" style="vertical-align:top; text-align:justify">
+                Penawaran harus disampaikan kepada atau harus sudah diterima oleh Panitia Pengadaan/Pejabat Pengadaan paling lambat ditempat dan pada waktu yang ditentukan dalam undangan
+            </td>
+        <tr>
+    </table>
 
 
     @php
