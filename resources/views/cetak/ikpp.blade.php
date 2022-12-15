@@ -1325,6 +1325,216 @@
         <tr>
     </table>
 
+    <!-- Section D -->
+    <br><br>
+    <table border="2">
+        <tr>
+            <td width="10" style="vertical-align:top; text-transform: uppercase;">
+                <b>d.</b>
+            </td>
+            <td width="10" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="510" style="vertical-align:top; text-transform: uppercase;">
+                <b>PEMBUKAAN DAN EVALUASI PENAWARAN</b>
+            </td>
+        <tr>
+    </table>
+
+    <!-- D1 -->
+    <table border="2">
+        <tr>
+            <td width="30" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top; text-transform: uppercase;">
+                <b>1.</b>
+            </td>
+            <td width="10" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="100" style="vertical-align:top;">
+                <b>Pembukaan Penawaran</b>
+            </td>
+            <td width="10" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top;">
+                1.1
+            </td>
+            <td width="10" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="325" style="vertical-align:top; text-align:justify">
+                Pembukaan Dokumen Penawaran dilakukan pada hari yang sama setelah batas akhir pemasukan penawaran.
+            </td>
+        <tr>
+        <tr>
+            <td width="30" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="100" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top;">
+                1.2
+            </td>
+            <td width="10" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="325" style="vertical-align:top; text-align:justify">
+                Panitia Pengadaan/Pejabat Pengadaan Dinas Komunikasi dan Informatika Provinsi Jawa Timur membuka Dokumen Penawaran di hadapan peserta kemudian dijadikan lampiran Berita Acara Pembukaan Dokumen Penawaran.
+            </td>
+        <tr>
+        <tr>
+            <td width="30" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="100" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top;">
+                1.3
+            </td>
+            <td width="10" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="325" style="vertical-align:top; text-align:justify">
+                Panitia Pengadaan/Pejabat Pengadaan Dinas Komunikasi dan Informatika Provinsi Jawa Timur memeriksa dan menunjukkan dihadapan peserta mengenai kelengkapan Dokumen Penawaran yang meliputi :
+            </td>
+        <tr>
+    </table>
+    <table border="2">
+        <tr>
+            <td width="212" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top;">
+                (a)
+            </td>
+            <td width="10" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="293" style="vertical-align:top; text-align:justify">
+                Surat penawaran yang didalamnya tercantum masa berlaku penawaran dan harga penawaran;
+            </td>
+        <tr>
+        <tr>
+            <td width="212" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top;">
+                (b)
+            </td>
+            <td width="10" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="293" style="vertical-align:top; text-align:justify">
+                Daftar kuantitas dan harga;
+            </td>
+        <tr>
+        <tr>
+            <td width="212" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top;">
+                (c)
+            </td>
+            <td width="10" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="293" style="vertical-align:top; text-align:justify">
+                Surat kuasa dari direktur utama/pimpinan perusahaan kepada penerima kuasa yang namanya tercantum dalam akta pendirian atau perubahannya (apabila dikuasakan);
+            </td>
+        <tr>
+        <tr>
+            <td width="212" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top;">
+                (d)
+            </td>
+            <td width="10" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="293" style="vertical-align:top; text-align:justify">
+                Dokumen lain yang dipersyaratkan.
+            </td>
+        <tr>
+    </table>
+    <table border="2">
+        <tr>
+            <td width="30" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="100" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top;">
+                1.4
+            </td>
+            <td width="10" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="325" style="vertical-align:top; text-align:justify">
+                Panitia Pengadaan/Pejabat Pengadaan Dinas Komunikasi dan Informatika Provinsi Jawa Timur membuat Berita Acara Pembukaan Penawaran.
+            </td>
+        <tr>
+        <tr>
+            <td width="30" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="100" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top;">
+                1.5
+            </td>
+            <td width="10" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="325" style="vertical-align:top; text-align:justify">
+                Setelah dibacakan dengan jelas, Berita Acara ditandatangani Panitia Pengadaan/Pejabat Pengadaan Dinas Komunikasi dan Informatika Provinsi Jawa Timur.
+            </td>
+        <tr>
+    </table>
+
 
     @php
     use App\Models\Jadwal;
