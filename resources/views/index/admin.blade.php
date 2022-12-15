@@ -81,7 +81,8 @@
                     </div>
                     @endif
 
-                    <table class="table table-bordered" style="width:100%">
+                    {{-- <table class="table table-bordered" style="width:100%"> --}}
+                    <table class="table table-bordered">
                         <thead>
                             <tr>
                                 <th> Jenis Pejabat </th>
@@ -112,7 +113,7 @@
                                 <td>{{ $pjb->nip_bpp }}</td>
                             </tr>
                             <tr>
-                                <td>Pengurus Barang Persediaan</td>
+                                <td>Pengurus Barang Persediaan <br> Bidang Data dan Statistik</td>
                                 <td>{{ $pjb->pengurus_barang }}</td>
                                 <td>{{ $pjb->nip_pengurus_barang }}</td>
                             </tr>
@@ -226,7 +227,7 @@
 </div>
 
 {{-- Diagram --}}
-<div class="row">
+{{-- <div class="row">
     <div class="col grid-margin stretch-card">
         <div class="card shadow">
             <div class="card-body">
@@ -253,12 +254,13 @@
                         </li>
                     </ul>
                 </div>
-                {{-- tempalte1/js/dashboard.js --}}
-                <canvas id="sales-chart" width="441" height="220" style="display: block; height: 147px; width: 294px;" class="chartjs-render-monitor"></canvas>
+                <!-- tempalte1/js/dashboard.js -->
+                <canvas id="north-america-chart" width="441" height="220" style="display: block; height: 147px; width: 294px;" class="chartjs-render-monitor"></canvas>
+                <!-- <canvas id="sales-chart" width="441" height="220" style="display: block; height: 147px; width: 294px;" class="chartjs-render-monitor"></canvas> -->
             </div>
         </div>
     </div>
-</div>
+</div> --}}
 
 <!-- Content Row -->
 @endsection
