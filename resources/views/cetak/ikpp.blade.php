@@ -1535,6 +1535,378 @@
         <tr>
     </table>
 
+    <!-- D2 -->
+    <table border="2">
+        <tr>
+            <td width="30" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top; text-transform: uppercase;">
+                <b>2.</b>
+            </td>
+            <td width="10" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="100" style="vertical-align:top;">
+                <b>Evaluasi Penawaran</b>
+            </td>
+            <td width="10" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top;">
+                2.1
+            </td>
+            <td width="10" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="325" style="vertical-align:top; text-align:justify">
+                Evaluasi penawaran dilakukan dengan metode evaluasi sistem gugur.
+            </td>
+        <tr>
+        <tr>
+            <td width="30" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="100" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top;">
+                2.2
+            </td>
+            <td width="10" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="325" style="vertical-align:top; text-align:justify">
+                Penawaran setelah koreksi aritmatika yang melebihi nilai total HPS dinyatakan.
+            </td>
+        <tr>
+        <tr>
+            <td width="30" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="100" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top;">
+                2.3
+            </td>
+            <td width="10" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="325" style="vertical-align:top; text-align:justify">
+                Anggota Panitia Pengadaan/Pejabat Pengadaan Dinas Komunikasi dan Informatika Provinsi Jawa Timur melakukan evaluasi penawaran yang meliputi :
+            </td>
+        <tr>
+    </table>
+    <table border="2">
+        <tr>
+            <td width="212" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top;">
+                (a)
+            </td>
+            <td width="10" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="293" style="vertical-align:top; text-align:justify">
+                Evaluasi administrasi;
+            </td>
+        <tr>
+        <tr>
+            <td width="212" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top;">
+                (b)
+            </td>
+            <td width="10" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="293" style="vertical-align:top; text-align:justify">
+                Evaluasi teknis; dan
+            </td>
+        <tr>
+        <tr>
+            <td width="212" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top;">
+                (c)
+            </td>
+            <td width="10" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="293" style="vertical-align:top; text-align:justify">
+                Evaluasi harga.
+            </td>
+        <tr>
+    </table>
+    <table border="2">
+        <tr>
+            <td width="30" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="100" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top;">
+                2.4
+            </td>
+            <td width="10" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="325" style="vertical-align:top; text-align:justify">
+                Ketentuan umum dalam melakukan evaluasi sebagai berikut :
+            </td>
+        <tr>
+    </table>
+    <table border="2">
+        <tr>
+            <td width="212" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top;">
+                a.
+            </td>
+            <td width="10" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="293" style="vertical-align:top; text-align:justify">
+                Anggota Panitia Pengadaan/Pejabat Pengadaan Dinas Komunikasi dan Informatika Provinsi Jawa Timur dilarang mSembilanbah, mengurangi, mengganti dan-/atau mengubah isi Dokumen Pengadaan ini.
+            </td>
+        <tr>
+        <tr>
+            <td width="212" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top;">
+                b.
+            </td>
+            <td width="10" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="293" style="vertical-align:top; text-align:justify">
+                Penawaran yang memenuhi syarat adalah penawaran sesuai dengan ketentuan, syarat-syarat dan spesifikasi teknis yang ditetapkan dalam Dokumen Pengadaan ini, tanpa ada penyimpangan yang bersifat penting/pokok atau penawaran bersyarat;
+            </td>
+        <tr>
+        <tr>
+            <td width="212" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top;">
+                c.
+            </td>
+            <td width="10" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="293" style="vertical-align:top; text-align:justify">
+                Penyimpangan yang bersifat penting/pokok atau penawaran bersyarat adalah :
+            </td>
+        <tr>
+    </table>
+    <table border="2">
+        <tr>
+            <td width="245" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top;">
+                1)
+            </td>
+            <td width="10" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="261" style="vertical-align:top; text-align:justify">
+                Penyimpangan dari Dokumen Pengadaan ini yang mempengaruhi lingkup, kualitas dan hasil/kinerja pekerjaan; dan/atau
+            </td>
+        <tr>
+        <tr>
+            <td width="245" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top;">
+                2)
+            </td>
+            <td width="10" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="261" style="vertical-align:top; text-align:justify">
+                Penawaran dari peserta dengan persyaratan tambahan yang akan menimbulkan persaingan usaha tidak sehat dan/atau tidak adil diantara peserta yang memenuhi syarat.
+            </td>
+        </tr>
+    </table>
+    <table border="2">
+        <tr>
+            <td width="212" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top;">
+                d.
+            </td>
+            <td width="10" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="293" style="vertical-align:top; text-align:justify">
+                Para pihak dilarang mempengaruhi atau melakukan intervensi kepada Panitia Pengadaan/Pejabat Pengadaan Dinas Komunikasi dan Informatika Provinsi Jawa Timur selama proses evaluasi.
+            </td>
+        <tr>
+        <tr>
+            <td width="212" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top;">
+                e.
+            </td>
+            <td width="10" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="293" style="vertical-align:top; text-align:justify">
+                Anggota Panitia Pengadaan/Pejabat Pengadaan Dinas Komunikasi dan Informatika Provinsi Jawa Timur dilarang menggugurkan penawaran dengan alasan :
+            </td>
+        <tr>
+    </table>
+    <table border="2">
+        <tr>
+            <td width="245" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top;">
+                1)
+            </td>
+            <td width="10" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="261" style="vertical-align:top; text-align:justify">
+                Ketidakhadiran dalam pembukaan penawaran; dan/atau
+            </td>
+        <tr>
+        <tr>
+            <td width="245" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top;">
+                2)
+            </td>
+            <td width="10" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="261" style="vertical-align:top; text-align:justify">
+                Kesalahan yang tidak substansial, misalnya warna sampul dan/atau surat penawaran tidak berkop perusahaan.
+            </td>
+        </tr>
+    </table>
+    <table border="2">
+        <tr>
+            <td width="30" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="100" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top;">
+                2.5
+            </td>
+            <td width="10" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="325" style="vertical-align:top; text-align:justify">
+                Apabila peserta tidak memenuhi persyaratan evaluasi, maka pengadaan langsung dinyatakan gagal dan akan dikembalikan ke Pejabat Pembuat Komitmen untuk mengajukan Penyedia Barang/Jasa yang lainnya.
+            </td>
+        <tr>
+        <tr>
+            <td width="30" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="100" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top;">
+                2.6
+            </td>
+            <td width="10" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="325" style="vertical-align:top; text-align:justify">
+                Evaluasi Teknis
+            </td>
+        <tr>
+    </table>
+    <table border="2">
+        <tr>
+            <td width="212" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top;">
+                a.
+            </td>
+            <td width="10" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="293" style="vertical-align:top; text-align:justify">
+                Unsur-unsur yang dievaluasi sesuai dengan yang ditetapkan;
+            </td>
+        <tr>
+        <tr>
+            <td width="212" style="vertical-align:top; text-transform: uppercase;">
+                <b> </b>
+            </td>
+            <td width="10" style="vertical-align:top;">
+                b.
+            </td>
+            <td width="10" style="vertical-align:top;">
+                <b> </b>
+            </td>
+            <td width="293" style="vertical-align:top; text-align:justify">
+                Evaluasi teknis dilakukan dengan sistem gugur, dengan ketentuan:
+            </td>
+        <tr>
+    </table>
+
 
     @php
     use App\Models\Jadwal;
