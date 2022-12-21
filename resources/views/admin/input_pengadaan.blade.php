@@ -33,7 +33,7 @@
         <div class="row ">
           <div class="col-md-8 mb-4">
             <div class="justify-content-between ">
-              <h2 class="col-10">Data Masukan Jadwal</h2>
+              <h2 class="col-10">Data Masukan Pengadaan</h2>
             </div>
           </div>
           <div class="col-md-4 mb-4">

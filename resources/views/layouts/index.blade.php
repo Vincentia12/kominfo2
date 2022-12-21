@@ -28,7 +28,7 @@
   <link rel="stylesheet" href="{{ asset('template1/css/vertical-layout-light/style.css') }}">
   <!-- endinject -->
   <link rel="shortcut icon" href="{{ asset('template1/images/favicon.png') }}" />
-  
+
 </head>
 
 <body id="page-top">
@@ -39,7 +39,7 @@
       <!-- {{-- logo --}} -->
       <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
         <a class="navbar-brand brand-logo" href="home"><img src="{{ asset('img/logo-kominfo.png') }}" class="mr-5" alt="logo" width="150px" /></a>
-        <a class="navbar-brand brand-logo-mini" href="home"><img src="{{ asset('img/kominfo.png') }}" alt="logo" /></a>
+        <a class="navbar-brand brand-logo-mini" href="home"><img src="{{ asset('img/pds.png') }}" alt="logo" width="150px" /></a>
       </div>
 
       <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
@@ -68,36 +68,36 @@
             {{-- <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown"> --}}
 
             @guest
-              @if (Route::has('login'))
-                <li class="nav-item">
-                  <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                </li>
-              @endif
+            @if (Route::has('login'))
+          <li class="nav-item">
+            <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+          </li>
+          @endif
 
-              @else
+          @else
 
-                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
-                  {{-- <img class="img-profile rounded-circle" src="{{ asset('template/img/undraw_profile.svg')}}"> --}}
-                  <img src="{{ asset('template1/images/faces/face28.jpg') }}" alt="profile" />
-                  <span class="mr-2 d-none d-lg-inline small">{{ Auth::user()->name }}</span>
-                </a>
+          <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
+            {{-- <img class="img-profile rounded-circle" src="{{ asset('template/img/undraw_profile.svg')}}"> --}}
+            <img src="{{ asset('template1/images/faces/face28.jpg') }}" alt="profile" />
+            <span class="mr-2 d-none d-lg-inline small">{{ Auth::user()->name }}</span>
+          </a>
 
-              {{--Seting Profile --}}
-              <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
+          {{--Seting Profile --}}
+          <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
 
-                <!-- {{-- Logout --}} -->
-                <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+            <!-- {{-- Logout --}} -->
+            <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                 document.getElementById('logout-form').submit();">
-                  <i class="ti-power-off text-primary"></i>
-                  {{ __('Logout') }}
-                </a>
+              <i class="ti-power-off text-primary"></i>
+              {{ __('Logout') }}
+            </a>
 
-                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                  @csrf
-                </form>
-              </div>
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+              @csrf
+            </form>
+          </div>
 
-            @endguest
+          @endguest
           </li>
         </ul>
 
@@ -111,9 +111,9 @@
 
       <!-- partial:partials/_sidebar.html -->
       <nav class="sidebar sidebar-offcanvas" id="sidebar">
-      {{-- <nav class="sidebar sidebar-oncanvas" id="sidebar"> --}}
+        {{-- <nav class="sidebar sidebar-oncanvas" id="sidebar"> --}}
         <ul class="nav">
-          
+
           {{-- Dashboard --}}
           <li class="nav-item">
             <a class="nav-link" href="/home">
@@ -194,11 +194,11 @@
 
                 @guest
                 @if (Route::has('login'))
-      
+
                 <div class="col-12 col-xl-8 mb-4 mb-xl-0">
                   <h3 class="font-weight-bold">Welcome XXX</h3>
                   <h6 class="font-weight-normal mb-0">Selamat Datang di Sistem Informasi Keuangan Bidang Data dan Statistik <br> Dinas Komunikasi dan Informatika Provinsi Jawa Timur
-      
+
                   </h6>
                 </div>
                 @endif
@@ -219,37 +219,37 @@
             </div>
           </div>
 
-        @yield('content')
-        
+          @yield('content')
+
+        </div>
       </div>
     </div>
-  </div>
 
-  <!-- container-scroller -->
-  <!-- plugins:js -->
-  <script src="{{ asset('template1/vendors/js/vendor.bundle.base.js') }}"></script>
-  <!-- endinject -->
-  <!-- Plugin js for this page -->
-  <script src="{{ asset('template1/vendors/chart.js/Chart.min.js') }}"></script>
-  <script src="{{ asset('template1/vendors/datatables.net/jquery.dataTables.js') }}"></script>
-  <script src="{{ asset('template1/vendors/datatables.net-bs4/dataTables.bootstrap4.js') }}"></script>
-  <script src="{{ asset('template1/js/dataTables.select.min.js') }}"></script>
-  <!-- End plugin js for this page -->
+    <!-- container-scroller -->
+    <!-- plugins:js -->
+    <script src="{{ asset('template1/vendors/js/vendor.bundle.base.js') }}"></script>
+    <!-- endinject -->
+    <!-- Plugin js for this page -->
+    <script src="{{ asset('template1/vendors/chart.js/Chart.min.js') }}"></script>
+    <script src="{{ asset('template1/vendors/datatables.net/jquery.dataTables.js') }}"></script>
+    <script src="{{ asset('template1/vendors/datatables.net-bs4/dataTables.bootstrap4.js') }}"></script>
+    <script src="{{ asset('template1/js/dataTables.select.min.js') }}"></script>
+    <!-- End plugin js for this page -->
 
-  <!-- inject:js -->
-  <script src="{{ asset('template1/js/off-canvas.js') }}"></script>
-  <script src="{{ asset('template1/js/hoverable-collapse.js') }}"></script>
-  <script src="{{ asset('template1/js/template.js') }}"></script>
-  <script src="{{ asset('template1/js/settings.js') }}"></script>
-  <script src="{{ asset('template1/js/todolist.js') }}"></script>
-  <!-- endinject -->
+    <!-- inject:js -->
+    <script src="{{ asset('template1/js/off-canvas.js') }}"></script>
+    <script src="{{ asset('template1/js/hoverable-collapse.js') }}"></script>
+    <script src="{{ asset('template1/js/template.js') }}"></script>
+    <script src="{{ asset('template1/js/settings.js') }}"></script>
+    <script src="{{ asset('template1/js/todolist.js') }}"></script>
+    <!-- endinject -->
 
-  <!-- Custom js for this page-->
-  <script src="{{ asset('template1/js/dashboard.js') }}"></script>
-  <script src="{{ asset('template1/js/Chart.roundedBarCharts.js') }}"></script>
-  <!-- End custom js for this page-->
+    <!-- Custom js for this page-->
+    <script src="{{ asset('template1/js/dashboard.js') }}"></script>
+    <script src="{{ asset('template1/js/Chart.roundedBarCharts.js') }}"></script>
+    <!-- End custom js for this page-->
 
-{{-- <script>
+    {{-- <script>
     var coll = document.getElementsByClassName("collapsible");
     var i;
 
@@ -266,56 +266,54 @@
     }
 </script> --}}
 
-{{-- <script>
+    {{-- <script>
   var myChart = new Chart(
     document.getElementById('myChart'),
     config
   );
 </script>
-<script>
+<!-- <script>
   //message with toastr
   @if(session()->has('success'))
 
   toastr.success('{{ session('success') }}', 'BERHASIL!');
 
-  @elseif(session()->has('error'))
+    @elseif(session()->has('error'))
 
-  toastr.error('{{ session('error') }}', 'GAGAL!');
+    toastr.error('{{ session('error') }}', 'GAGAL!');
 
-  @endif
-</script>
-<script>
-  $(document).ready(function () {
-    $('#search').DataTable();
-  });
-</script> --}}
+    @endif
+    </script>
+    <script>
+      $(document).ready(function() {
+        $('#search').DataTable();
+      });
+    </script> --}}
 
-<script>
-  $(document).ready(function() {
-  // DataTable initialisation
-  $('#data1').DataTable({
-      "paging": true,
-      "autoWidth": true,
-      "columnDefs": [
-      {
-          "targets": 3,
-          "render": function(data, type, full, meta) {
-          var cellText = $(data).text(); //Stripping html tags !!!
-          if (type === 'display' &&  (cellText == "Done" || data=='Done')) {
-              var rowIndex = meta.row+1;
-              var colIndex = meta.col+1;
-              $('#example tbody tr:nth-child('+rowIndex+')').addClass('lightRed');
-              $('#example tbody tr:nth-child('+rowIndex+') td:nth-child('+colIndex+')').addClass('red');
-              return data;
-          } else {
-              return data;
-          }
-          }
-      }
-      ]
-  });
-  });
-</script>
+    <script>
+      $(document).ready(function() {
+        // DataTable initialisation
+        $('#data1').DataTable({
+          "paging": true,
+          "autoWidth": true,
+          "columnDefs": [{
+            "targets": 3,
+            "render": function(data, type, full, meta) {
+              var cellText = $(data).text(); //Stripping html tags !!!
+              if (type === 'display' && (cellText == "Done" || data == 'Done')) {
+                var rowIndex = meta.row + 1;
+                var colIndex = meta.col + 1;
+                $('#example tbody tr:nth-child(' + rowIndex + ')').addClass('lightRed');
+                $('#example tbody tr:nth-child(' + rowIndex + ') td:nth-child(' + colIndex + ')').addClass('red');
+                return data;
+              } else {
+                return data;
+              }
+            }
+          }]
+        });
+      });
+    </script> -->
 
 
 </body>
