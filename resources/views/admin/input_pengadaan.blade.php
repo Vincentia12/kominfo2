@@ -20,7 +20,7 @@
 
 
 {{-- Tabel Pengadaan --}}
-<div class="col-12 grid-margin stretch-card">
+<!-- <div class="col-12 grid-margin stretch-card">
   <div class="card shadow">
     <div class="card-body">
       <div class="table-responsive">
@@ -65,6 +65,7 @@
               <td>
 
                 <form action="{{ route('pengadaan.destroy',$p->id) }}" method="POST">
+
                   <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modalDetailPengadaan{{$p->id}}">
                     Detail
                   </button>
@@ -98,7 +99,79 @@
       </div>
     </div>
   </div>
+</div> -->
+
+<div class="stretch-card">
+  <div class="card shadow">
+    <div class="card-body">
+      <div class="table-responsive">
+        @if ($message = Session::get('success'))
+        <div class="alert alert-success">
+          <p>{{ $message }}</p>
+        </div>
+        @endif
+        <br>
+        <div class="row ">
+          <div class="col-md-8 mb-4">
+            <div class="justify-content-between ">
+              <h2 class="col-10">Data Masukan Jadwal</h2>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="text-right ">
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalPengadaan">
+                Tambah Data Pengadaan
+              </button>
+            </div>
+          </div>
+        </div>
+        <br>
+
+        <table id="data1" class="table table-bordered" cellspacing="0">
+          <thead>
+            <tr>
+              <th>Pelaksana/Nama Perusahaan</th>
+              <th>Jenis Pengadaan</th>
+              <th>Nilai Negosiasi</th>
+              <th> Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            @foreach ($pengadaan as $p)
+            <tr>
+              <td>{{ $p->pelaksana->pt_pelaksana }}</td>
+              <td>{{ $p->jenis_pengadaan }}</td>
+              <td>Rp. {{number_format($p->nilai_negosiasi)}}</td>
+              <td>
+
+                <form action="{{ route('pengadaan.destroy',$p->id) }}" method="POST">
+                  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#modalDetailPengadaan{{$p->id}}">
+                    Detail
+                  </button>
+
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalEditPengadaan{{$p->id}}">
+                    Edit
+                  </button>
+
+                  @csrf
+                  @method('DELETE')
+                  <button type="submit" class="btn btn-danger btn-lg">
+                    Hapus
+                  </button>
+                </form>
+              </td>
+            </tr>
+            @endforeach
+          </tbody>
+        </table>
+      </div>
+      <br>
+      <a href="/input_jadwal" class="btn btn-light">Kembali</a>
+      <a href="#" type="submit" class="btn btn-primary mr-2">Selesai</a>
+    </div>
+  </div>
 </div>
+
 
 {{-- Modal Tambah Penadaan --}}
 <div class="modal fade" id="modalPengadaan" tabindex="-1" role="dialog" aria-labelledby="modalPengadaanLabel" aria-hidden="true">
@@ -139,7 +212,7 @@
             <label for="message-text" class="col-form-label">Kode Rekening</label>
             <input type="text" class="form-control" id="kode_rekening" name="kode_rekening" value="{{ old('kode_rekening') }}" placeholder="Kode Rekening">
             <small class="text-danger">{{ $errors->first('kode_rekening') }}</small>
-        </div>
+          </div>
           <div class="mb-4">
             <label for="message-text" class="col-form-label">Biaya HPS (Harga Perkiraan Sendiri)</label>
             <input type="text" class="form-control" id="total_hps" name="total_hps" value="{{ old('total_hps') }}" placeholder="10000000">
@@ -183,7 +256,7 @@
 
 {{-- Modal Edit pengadaan --}}
 @foreach ( $pengadaan as $pgn )
-<div class="modal fade" id="modalEditPelaksana{{$pgn->id}}" tabindex="-1" role="dialog" aria-labelledby="modalEditPelaksanaLabel" aria-hidden="true">
+<div class="modal fade" id="modalEditPengadaan{{$pgn->id}}" tabindex="-1" role="dialog" aria-labelledby="modalEditPengadaanLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-scrollable" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -263,7 +336,7 @@
 </div>
 @endforeach
 
-{{-- Modal Detail Pelaksana --}}
+{{-- Modal Detail Pengadaan --}}
 @foreach ( $pengadaan as $pg )
 <div class="modal fade" id="modalDetailPengadaan{{$pg->id}}" tabindex="-1" role="dialog" aria-labelledby="modalEditPelaksanaLabel" aria-hidden="true">
   <div class="modal-dialog modal-xl-dialog-centered" role="document">
@@ -303,13 +376,13 @@
           </div>
           <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <tr>
-                    <td>Kode Rekening</td>
-                    <td>:</td>
-                    <td>{{ $pg->kode_rekening }}</td>
-                </tr>
+              <tr>
+                <td>Kode Rekening</td>
+                <td>:</td>
+                <td>{{ $pg->kode_rekening }}</td>
+              </tr>
             </div>
-        </div>
+          </div>
           <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
               <tr>
@@ -365,10 +438,11 @@
             </div>
           </div>
         </table>
-        
-      <div class="modal-footer mt-3">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
-        {{-- <button type="submit" class="btn btn-primary ">Simpan <i class="fa fa-save"></i></button> --}}
+
+        <div class="modal-footer mt-3">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+          {{-- <button type="submit" class="btn btn-primary ">Simpan <i class="fa fa-save"></i></button> --}}
+        </div>
       </div>
     </div>
   </div>

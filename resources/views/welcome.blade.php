@@ -5,15 +5,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>SELAMAT DATANG DI SISTEM INFORMASI KEUANGAN DINAS KOMUNIKASI & INFORMATIKA PROVINSI JAWA TIMUR</title>
+    <title>SELAMAT DATANG DI SISTEM DOKUMEN PENGADAAN DINAS KOMUNIKASI & INFORMATIKA PROVINSI JAWA TIMUR</title>
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
     <!-- Custom fonts for this template-->
     <link href="{{ asset('template/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
-    <link
-        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
     <!-- Custom styles for this template-->
     <link href="{{ asset('template/css/sb-admin-2.min.css') }}" rel="stylesheet">
@@ -42,13 +40,13 @@
 
 <body>
     {{-- background="{{ asset('template/')}} --}}
-    <img src="{{ asset('img/bg1.jpg') }}" id="bg" class="img-fluid" >
+    <img src="{{ asset('img/bg1.jpg') }}" id="bg" class="img-fluid">
 
     <div class="card-img-overlay text-center d-flex flex-column h-100">
         <div class="my-auto">
             <!-- <h5 class="card-title">Card title</h5> -->
             <h1 class="text-center mb-5 text-white"><b> SELAMAT DATANG DI <br> SISTEM INFORMASI KEUANGAN <br> DINAS KOMUNIKASI & INFORMATIKA
-                PROVINSI JAWA TIMUR</b> </h1>
+                    PROVINSI JAWA TIMUR</b> </h1>
             {{-- <button type="button" class="btn btn-info "> --}}
             <a class="btn btn-lg btn-primary mt-5" href="{{ route('login') }}"> Masuk</a>
             {{-- </button> --}}
@@ -62,17 +60,17 @@
                 <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
                     @auth
                         <a href="{{ url('/home') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Dashboard</a>
-                    @else
-                        <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
-        
-                         @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
-                        @endif 
-                     @endauth
-                </div>
-            @endif 
+    @else
+    <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
 
-        </div> --}}
+    @if (Route::has('register'))
+    <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
+    @endif
+    @endauth
+    </div>
+    @endif
+
+    </div> --}}
 </body>
 
 </html>

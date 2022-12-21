@@ -77,7 +77,7 @@
                                 <form action="{{ route('pelaksana.destroy',$p->id) }}" method="POST">
 
                                     {{-- <a class="btn btn-info btn-lg" href="{{ route('pelaksana.show',$p->id) }}">
-                                        Detail
+                                    Detail
                                     </a> --}}
                                     <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modalDetailPelaksana{{$p->id}}">
                                         Detail
@@ -159,192 +159,192 @@
                     {{-- <div class="mb-4">
                         <label for="message-text" class="col-form-label">Kode Rekening</label>
                         <input type="text" class="form-control" id="kode_rekening" name="kode_rekening" value="{{ old('kode_rekening') }}" placeholder="Kode Rekening">
-                        <small class="text-danger">{{ $errors->first('kode_rekening') }}</small>
-                    </div> --}}
-                    <div class="mb-4">
-                        <label for="message-text" class="col-form-label">NPWP</label>
-                        <input type="text" class="form-control" id="npwp" name="npwp" value="{{ old('npwp') }}" placeholder="NPWP">
-                        <small class="text-danger">{{ $errors->first('npwp') }}</small>
-                    </div>
-                    <div class="mb-4">
-                        <label for="message-text" class="col-form-label">Telephone</label>
-                        <input type="text" class="form-control" id="tlp" name="tlp" value="{{ old('tlp') }}" placeholder="Telephone">
-                        <small class="text-danger">{{ $errors->first('tlp') }}</small>
-                    </div>
-
-
-                    <div class="modal-footer mt-3">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
-                        <button type="submit" class="btn btn-primary ">Simpan <i class="fa fa-save"></i></button>
-                    </div>
-                </form>
+                    <small class="text-danger">{{ $errors->first('kode_rekening') }}</small>
+            </div> --}}
+            <div class="mb-4">
+                <label for="message-text" class="col-form-label">NPWP</label>
+                <input type="text" class="form-control" id="npwp" name="npwp" value="{{ old('npwp') }}" placeholder="NPWP">
+                <small class="text-danger">{{ $errors->first('npwp') }}</small>
             </div>
+            <div class="mb-4">
+                <label for="message-text" class="col-form-label">Telephone</label>
+                <input type="text" class="form-control" id="tlp" name="tlp" value="{{ old('tlp') }}" placeholder="Telephone">
+                <small class="text-danger">{{ $errors->first('tlp') }}</small>
+            </div>
+
+
+            <div class="modal-footer mt-3">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                <button type="submit" class="btn btn-primary ">Simpan <i class="fa fa-save"></i></button>
+            </div>
+            </form>
         </div>
     </div>
+</div>
 </div>
 
 {{-- Modal Edit Pelaksana --}}
 @foreach ( $pelaksana as $plk )
-    <div class="modal fade" id="modalEditPelaksana{{$plk->id}}" tabindex="-1" role="dialog" aria-labelledby="modalEditPelaksanaLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-scrollable" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title"><b>Edit Data Perusahaan</b></h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
+<div class="modal fade" id="modalEditPelaksana{{$plk->id}}" tabindex="-1" role="dialog" aria-labelledby="modalEditPelaksanaLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title"><b>Edit Data Perusahaan</b></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                @csrf
+                @if (session()->has('message'))
+                <div class="alert alert-success">
+                    {{ session()->get('message') }}
                 </div>
-                <div class="modal-body">
-                    @csrf
-                    @if (session()->has('message'))
-                    <div class="alert alert-success">
-                        {{ session()->get('message') }}
-                    </div>
-                    @endif
-                    <form method="POST" action="{{ url('pelaksana/update', $plk->id) }}">
+                @endif
+                <form method="POST" action="{{ url('pelaksana/update', $plk->id) }}">
                     {{-- <form method="POST" action=""> --}}
-                        @csrf
-                        {{-- @method('PUT') --}}
-                        <div class="mb-4">
-                            <label for="message-text" class="col-form-label">Nama CV Pelaksana</label>
-                            <input type="text" class="form-control" id="pt_pelaksana" name="pt_pelaksana" value="{{ $plk->pt_pelaksana }}" placeholder="CV Pelaksana">
-                            <small class="text-danger">{{ $errors->first('pt_pelaksana') }}</small>
-                        </div>
-                        <div class="mb-4">
-                            <label for="message-text" class="col-form-label">Alamat</label>
-                            <input type="text" class="form-control" id="alamat" name="alamat" value="{{ $plk->alamat }}" placeholder="Alamat">
-                            <small class="text-danger">{{ $errors->first('alamat') }}</small>
-                        </div>
-                        <div class="mb-4">
-                            <label for="message-text" class="col-form-label">Nama Penanggung Jawab Pelaksana</label>
-                            <input type="text" class="form-control" id="nama_pelaksana" name="nama_pelaksana" value="{{ $plk->nama_pelaksana }}" placeholder="Nama Pelaksana">
-                            <small class="text-danger">{{ $errors->first('nama_pelaksana') }}</small>
-                        </div>
-                        <div class="mb-4">
-                            <label for="message-text" class="col-form-label">Jabatan Penanggung Jawab Pelaksana</label>
-                            <input type="text" class="form-control" id="jabatan_pelaksana" name="jabatan_pelaksana" value="{{ $plk->jabatan_pelaksana }}" placeholder="Jabatan Pelaksana">
-                            <small class="text-danger">{{ $errors->first('jabatan_pelaksana') }}</small>
-                        </div>
-                        {{-- <div class="mb-4">
+                    @csrf
+                    {{-- @method('PUT') --}}
+                    <div class="mb-4">
+                        <label for="message-text" class="col-form-label">Nama CV Pelaksana</label>
+                        <input type="text" class="form-control" id="pt_pelaksana" name="pt_pelaksana" value="{{ $plk->pt_pelaksana }}" placeholder="CV Pelaksana">
+                        <small class="text-danger">{{ $errors->first('pt_pelaksana') }}</small>
+                    </div>
+                    <div class="mb-4">
+                        <label for="message-text" class="col-form-label">Alamat</label>
+                        <input type="text" class="form-control" id="alamat" name="alamat" value="{{ $plk->alamat }}" placeholder="Alamat">
+                        <small class="text-danger">{{ $errors->first('alamat') }}</small>
+                    </div>
+                    <div class="mb-4">
+                        <label for="message-text" class="col-form-label">Nama Penanggung Jawab Pelaksana</label>
+                        <input type="text" class="form-control" id="nama_pelaksana" name="nama_pelaksana" value="{{ $plk->nama_pelaksana }}" placeholder="Nama Pelaksana">
+                        <small class="text-danger">{{ $errors->first('nama_pelaksana') }}</small>
+                    </div>
+                    <div class="mb-4">
+                        <label for="message-text" class="col-form-label">Jabatan Penanggung Jawab Pelaksana</label>
+                        <input type="text" class="form-control" id="jabatan_pelaksana" name="jabatan_pelaksana" value="{{ $plk->jabatan_pelaksana }}" placeholder="Jabatan Pelaksana">
+                        <small class="text-danger">{{ $errors->first('jabatan_pelaksana') }}</small>
+                    </div>
+                    {{-- <div class="mb-4">
                             <label for="message-text" class="col-form-label">Kode Rekening</label>
                             <input type="text" class="form-control" id="kode_rekening" name="kode_rekening" value="{{ $plk->kode_rekening }}" placeholder="Kode Rekening">
-                            <small class="text-danger">{{ $errors->first('kode_rekening') }}</small>
-                        </div> --}}
-                        <div class="mb-4">
-                            <label for="message-text" class="col-form-label">NPWP</label>
-                            <input type="text" class="form-control" id="npwp" name="npwp" value="{{ $plk->npwp }}" placeholder="NPWP">
-                            <small class="text-danger">{{ $errors->first('npwp') }}</small>
-                        </div>
-                        <div class="mb-4">
-                            <label for="message-text" class="col-form-label">Telephone</label>
-                            <input type="text" class="form-control" id="tlp" name="tlp" value="{{ $plk->tlp }}" placeholder="Telephone">
-                            <small class="text-danger">{{ $errors->first('tlp') }}</small>
-                        </div>
-
-
-                        <div class="modal-footer mt-3">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
-                            <button type="submit" class="btn btn-primary ">Simpan <i class="fa fa-save"></i></button>
-                        </div>
-                    </form>
-                </div>
+                    <small class="text-danger">{{ $errors->first('kode_rekening') }}</small>
+            </div> --}}
+            <div class="mb-4">
+                <label for="message-text" class="col-form-label">NPWP</label>
+                <input type="text" class="form-control" id="npwp" name="npwp" value="{{ $plk->npwp }}" placeholder="NPWP">
+                <small class="text-danger">{{ $errors->first('npwp') }}</small>
             </div>
+            <div class="mb-4">
+                <label for="message-text" class="col-form-label">Telephone</label>
+                <input type="text" class="form-control" id="tlp" name="tlp" value="{{ $plk->tlp }}" placeholder="Telephone">
+                <small class="text-danger">{{ $errors->first('tlp') }}</small>
+            </div>
+
+
+            <div class="modal-footer mt-3">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                <button type="submit" class="btn btn-primary ">Simpan <i class="fa fa-save"></i></button>
+            </div>
+            </form>
         </div>
     </div>
+</div>
+</div>
 @endforeach
 
 {{-- Modal Detail Pelaksana --}}
 @foreach ( $pelaksana as $pl )
-    <div class="modal fade" id="modalDetailPelaksana{{$pl->id}}" tabindex="-1" role="dialog" aria-labelledby="modalEditPelaksanaLabel" aria-hidden="true">
-        <div class="modal-dialog modal-xl-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title"><b>Detail Data Perusahaan</b></h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
+<div class="modal fade" id="modalDetailPelaksana{{$pl->id}}" tabindex="-1" role="dialog" aria-labelledby="modalEditPelaksanaLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title"><b>Detail Data Perusahaan</b></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                @csrf
+                @if (session()->has('message'))
+                <div class="alert alert-success">
+                    {{ session()->get('message') }}
                 </div>
-                <div class="modal-body">
-                    @csrf
-                    @if (session()->has('message'))
-                    <div class="alert alert-success">
-                        {{ session()->get('message') }}
+                @endif
+                <table class="" style="margin:20px auto;" id="dataTable" width="100%" cellspacing="0">
+                    {{-- <div class="col-xs-12 col-sm-12 col-md-12"> --}}
+                    <div class="mb-4">
+                        <div class="form-group">
+                            <tr>
+                                <td>Nama CV Pelaksana</td>
+                                <td>:</td>
+                                <td>{{ $pl->pt_pelaksana }}</td>
+                            </tr>
+                        </div>
                     </div>
-                    @endif
-                    <table class="" style="margin:20px auto;" id="dataTable" width="100%" cellspacing="0">
-                        {{-- <div class="col-xs-12 col-sm-12 col-md-12"> --}}
-                        <div class="mb-4">
-                            <div class="form-group">
-                                <tr>
-                                    <td>Nama CV Pelaksana</td>
-                                    <td>:</td>
-                                    <td>{{ $pl->pt_pelaksana }}</td>
-                                </tr>
-                            </div>
+                    <div class="col-xs-12 col-sm-12 col-md-12">
+                        <div class="form-group">
+                            <tr>
+                                <td>Alamat</td>
+                                <td>:</td>
+                                <td>{{ $pl->alamat }}</td>
+                            </tr>
                         </div>
-                        <div class="col-xs-12 col-sm-12 col-md-12">
-                            <div class="form-group">
-                                <tr>
-                                    <td>Alamat</td>
-                                    <td>:</td>
-                                    <td>{{ $pl->alamat }}</td>
-                                </tr>
-                            </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-12">
+                        <div class="form-group">
+                            <tr>
+                                <td>Nama Penanggung Jawab Pelaksana</td>
+                                <td>:</td>
+                                <td>{{ $pl->nama_pelaksana }}</td>
+                            </tr>
                         </div>
-                        <div class="col-xs-12 col-sm-12 col-md-12">
-                            <div class="form-group">
-                                <tr>
-                                    <td>Nama Penanggung Jawab Pelaksana</td>
-                                    <td>:</td>
-                                    <td>{{ $pl->nama_pelaksana }}</td>
-                                </tr>
-                            </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-12">
+                        <div class="form-group">
+                            <tr>
+                                <td>Jabatan Penanggung Jawab Pelaksana</td>
+                                <td>:</td>
+                                <td>{{ $pl->jabatan_pelaksana }}</td>
+                            </tr>
                         </div>
-                        <div class="col-xs-12 col-sm-12 col-md-12">
-                            <div class="form-group">
-                                <tr>
-                                    <td>Jabatan Penanggung Jawab Pelaksana</td>
-                                    <td>:</td>
-                                    <td>{{ $pl->jabatan_pelaksana }}</td>
-                                </tr>
-                            </div>
-                        </div>
-                        {{-- <div class="col-xs-12 col-sm-12 col-md-12">
+                    </div>
+                    {{-- <div class="col-xs-12 col-sm-12 col-md-12">
                             <div class="form-group">
                                 <tr>
                                     <td>Kode Rekening</td>
                                     <td>:</td>
                                     <td>{{ $pl->kode_rekening }}</td>
-                                </tr>
-                            </div>
-                        </div> --}}
-                        <div class="col-xs-12 col-sm-12 col-md-12">
-                            <div class="form-group">
-                                <tr>
-                                    <td>NPWP</td>
-                                    <td>:</td>
-                                    <td>{{ $pl->npwp }}</td>
-                                </tr>
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-sm-12 col-md-12">
-                            <div class="form-group">
-                                <tr>
-                                    <td>Telephone</td>
-                                    <td>:</td>
-                                    <td>{{ $pl->tlp }}</td>
-                                </tr>
-                            </div>
-                        </div>
-                    </table>
-                </div>
-                <div class="modal-footer mt-3">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
-                    {{-- <button type="submit" class="btn btn-primary ">Simpan <i class="fa fa-save"></i></button> --}}
-                </div>
+                    </tr>
+            </div>
+        </div> --}}
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <tr>
+                    <td>NPWP</td>
+                    <td>:</td>
+                    <td>{{ $pl->npwp }}</td>
+                </tr>
             </div>
         </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <tr>
+                    <td>Telephone</td>
+                    <td>:</td>
+                    <td>{{ $pl->tlp }}</td>
+                </tr>
+            </div>
+        </div>
+        </table>
     </div>
+    <div class="modal-footer mt-3">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+        {{-- <button type="submit" class="btn btn-primary ">Simpan <i class="fa fa-save"></i></button> --}}
+    </div>
+</div>
+</div>
+</div>
 @endforeach
 
 
